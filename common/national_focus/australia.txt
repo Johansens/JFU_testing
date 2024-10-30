@@ -1268,7 +1268,6 @@
 		search_filters = {  }
 
 		completion_reward = {
-			#Starts with recon and engineers
 			hidden_effect = {
 				if = {
 					limit = {
@@ -1278,17 +1277,24 @@
 						name = "Rats of Tobruk"
 						division_names_group = AST_INF_01
 						regiments = {
-							infantry = { x = 0 y = 0 }
-							infantry = { x = 0 y = 1 }
-							infantry = { x = 0 y = 2 }
-							infantry = { x = 1 y = 0 }
+							infantry = { x = 0 y = 0 } 
+							infantry = { x = 0 y = 1 } 
+							infantry = { x = 0 y = 2 } 
+							infantry = { x = 0 y = 3 } 
+							infantry = { x = 0 y = 4 }    
+							infantry = { x = 1 y = 0 } 
 							infantry = { x = 1 y = 1 }
-							infantry = { x = 1 y = 2 }
+							infantry = { x = 1 y = 2 } 
+							infantry = { x = 1 y = 3 }
+							infantry = { x = 1 y = 4 }
 							infantry = { x = 2 y = 0 }
-							infantry = { x = 2 y = 1 }
-							infantry = { x = 2 y = 2 }
-							infantry = { x = 3 y = 0 }
-							infantry = { x = 3 y = 1 }
+							infantry = { x = 2 y = 1 } 
+							infantry = { x = 2 y = 2 } 
+							infantry = { x = 2 y = 3 }
+							artillery_brigade = { x = 3 y = 0 } 
+							artillery_brigade = { x = 3 y = 1 }
+							artillery_brigade = { x = 3 y = 3 }
+							artillery_brigade = { x = 3 y = 2 }
 						}
 						support = {
 					        recon = { x = 0 y = 0 }
@@ -1301,17 +1307,24 @@
 							name = "Rats of Tobruk"
 							division_names_group = AST_INF_01
 							regiments = {
-								infantry = { x = 0 y = 0 }
-								infantry = { x = 0 y = 1 }
-								infantry = { x = 0 y = 2 }
-								infantry = { x = 1 y = 0 }
-								infantry = { x = 1 y = 1 }
-								infantry = { x = 1 y = 2 }
-								infantry = { x = 2 y = 0 }
-								infantry = { x = 2 y = 1 }
-								infantry = { x = 2 y = 2 }
-								infantry = { x = 3 y = 0 }
-								infantry = { x = 3 y = 1 }
+							infantry = { x = 0 y = 0 } 
+							infantry = { x = 0 y = 1 } 
+							infantry = { x = 0 y = 2 } 
+							infantry = { x = 0 y = 3 } 
+							infantry = { x = 0 y = 4 }    
+							infantry = { x = 1 y = 0 } 
+							infantry = { x = 1 y = 1 }
+							infantry = { x = 1 y = 2 } 
+							infantry = { x = 1 y = 3 }
+							infantry = { x = 1 y = 4 }
+							infantry = { x = 2 y = 0 }
+							infantry = { x = 2 y = 1 } 
+							infantry = { x = 2 y = 2 } 
+							infantry = { x = 2 y = 3 }
+							artillery_brigade = { x = 3 y = 0 } 
+							artillery_brigade = { x = 3 y = 1 }
+							artillery_brigade = { x = 3 y = 3 }
+							artillery_brigade = { x = 3 y = 2 }
 							}
 							support = {
 						        recon = { x = 0 y = 0 }
@@ -1344,6 +1357,7 @@
 					}
 				}
 			}
+			custom_effect_tooltip = AST_rats_of_tobruk_tt
 		}
 	}
 

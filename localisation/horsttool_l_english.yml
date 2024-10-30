@@ -792,6 +792,7 @@
  RAJ_agrarian_society_medium_up_tt:0 "Modify §YAgrarian Society§! by \nRecruitable Population factor §G+5%§!"
  RAJ_agrarian_society_big_up_tt:0 "Modify §YAgrarian Society§! by \nRecruitable Population factor §G+10%§!"
 
+ AST_rats_of_tobruk_tt:0 "Spawns 4 40w division in eather Tobruk oder Sydney"
  AST_great_despression_NSA_tt:0 "Modify §YAustralian Economy§! by \nConsumer Goods Factories factor: §Y-10.0%§! \nStability: §G+10.00%§! \nFactory Output §G+10.00%§! \nDockyard Output §G+10.00%§!"
  AST_great_despression_CCC_tt:0 "Modify §YAustralian Economy§! by \nConsumer Goods Factories factor: §Y-20.0%§! \nFactory Output §G+5.00%§! \nDockyard Output §G+5.00%§!"
  AST_great_despression_INV_tt:0 "Modify §YAustralian Economy§! by \nConsumer Goods Factories factor: §Y-15.0%§! \nStability: §G+5.00%§! \nFactory Output §G+7.00%§! \nDockyard Output §G+7.00%§!"

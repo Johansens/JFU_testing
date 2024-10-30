@@ -719,6 +719,7 @@ RAJ_agrarian_society_small_up_tt:0 "Modifiziere §YAgrarische Gesellschaft§! um
 RAJ_agrarian_society_medium_up_tt:0 "Modifiziere §YAgrarische Gesellschaft§! um \nRekrutierbare Bevölkerungsfaktor §G+5%§!"
 RAJ_agrarian_society_big_up_tt:0 "Modifiziere §YAgrarische Gesellschaft§! um \nRekrutierbare Bevölkerungsfaktor §G+10%§!"
 
+ AST_rats_of_tobruk_tt:0 "Generiert 4 40 Breite Divisionen in Tobruk oder Sydney"
 AST_great_despression_NSA_tt:0 "Modifiziere §YAustralische Wirtschaft§! um \nFaktor der Verbrauchsgüterfabriken: §Y-10.0%§! \nStabilität: §G+10.00%§! \nFabrikproduktion §G+10.00%§! \nWerftproduktion §G+10.00%§!"
 AST_great_despression_CCC_tt:0 "Modifiziere §YAustralische Wirtschaft§! um \nFaktor der Verbrauchsgüterfabriken: §Y-20.0%§! \nFabrikproduktion §G+5.00%§! \nWerftproduktion §G+5.00%§!"
 AST_great_despression_INV_tt:0 "Modifiziere §YAustralische Wirtschaft§! um \nFaktor der Verbrauchsgüterfabriken: §Y-15.0%§! \nStabilität: §G+5.00%§! \nFabrikproduktion §G+7.00%§! \nWerftproduktion §G+7.00%§!"
