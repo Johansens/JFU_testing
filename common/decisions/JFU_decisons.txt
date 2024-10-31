@@ -859,6 +859,7 @@ political_actions1 = {
 		available = { 
 			date > 1941.4.1
 		}
+		visible = { NOT = { has_war_with = JAP } }
 		cost  = 0
 		complete_effect = {
 			declare_war_on = {
