@@ -39,7 +39,7 @@ every_possible_country = {
 
 every_possible_country = {
 	limit = {
-		NOT = { OR = { allies = yes ai_country = yes tag = GER tag = SPR } }
+		NOT = { OR = { allies = yes ai_country = yes tag = GER tag = SPR tag = FIN } }
 		is_dynamic_country = no
 		NOT = {
 			has_allowed_idea_with_traits = { idea = fascist_demagogue characters = yes }

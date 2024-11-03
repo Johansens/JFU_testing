@@ -1332,7 +1332,7 @@
 	
 	
 	focus = {
-		id = MAN_motorized
+		id = MAN_motorized_focus
 		icon = GFX_goal_generic_army_motorized
 		x = 0
 		y = 1
@@ -1354,16 +1354,16 @@
 	}
 	
 	focus = {
-		id = MAN_mechanized
+		id = MAN_mechanized_focus
 		icon = GFX_goal_generic_build_tank
 		x = 0
 		y = 1
 
 		cost = 5
 
-		prerequisite = { focus = MAN_motorized }
+		prerequisite = { focus = MAN_motorized_focus }
 		
-		relative_position_id = MAN_motorized
+		relative_position_id = MAN_motorized_focus
 		
 
 		completion_reward = {
@@ -1383,9 +1383,9 @@
 
 		cost = 5
 
-		prerequisite = { focus = MAN_motorized }
+		prerequisite = { focus = MAN_motorized_focus }
 		
-		relative_position_id = MAN_motorized
+		relative_position_id = MAN_motorized_focus
 		
 
 
@@ -1407,9 +1407,9 @@
 
 		cost = 5
 
-		prerequisite = { focus = MAN_motorized }
+		prerequisite = { focus = MAN_motorized_focus }
 
-		relative_position_id = MAN_motorized
+		relative_position_id = MAN_motorized_focus
 
 		completion_reward = {
 			761 = { 
@@ -1431,8 +1431,8 @@
 
 		cost = 5
 
-		prerequisite = { focus = MAN_motorized }
-		relative_position_id = MAN_motorized
+		prerequisite = { focus = MAN_motorized_focus }
+		relative_position_id = MAN_motorized_focus
 
 		completion_reward = {
 			761 = { 

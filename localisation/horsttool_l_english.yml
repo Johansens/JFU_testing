@@ -290,8 +290,8 @@
  MAN_poppy2:0 "Distribute Golden Bat Cigarettes"
  MAN_shanxi2:0 "Prepare for War with Shanxi"
  MAN_shanxi:0 "South Chahar Border Exercises"
- MAN_motorized:0 "Motorize Our Army"
- MAN_mechanized:0 "Study Japanese Armored Cars"
+ MAN_motorized_focus:0 "Motorize Our Army"
+ MAN_mechanized_focus:0 "Study Japanese Armored Cars"
  MAN_armorf:0 "Reverse Engineer Japanese Tanks"
  MAN_tankplant_p:0 "Porsche Tank Plant"
  MAN_tankplant_h:0 "Henschel Tank Plant"
@@ -747,7 +747,11 @@
  NOR_monarcist_full_controlled_goverment:0 "Full Monarchist Controlled"
  NOR_army_buffs_2:0 "Ruge's Plan"
  NOR_coredef:0 "Protect the homeland" 
- 
+ nor_operation_crofter:0 "Operation Crofter"
+ nor_operation_crofter_desc:0 "It is time to embark on a way one trip back to Norway. We will liberate our homeland against the German menace or die trying!"
+ nor_prepare_operation_crofter:0 "Preparing Operation Crofter"
+ nor_prepare_operation_crofter_desc:0 "We must carefully plan our liberation - there won't be going back once the ships are out."
+
  aus_industrial_effort:0 "Industrial Effort"
  aus_industrial_effort_desc:0 "Focus all our political efforts on building up the civilian industry in a great leap forward."
  aus_industrial_effort_2:0 "Industrial Effort II"
@@ -760,6 +764,8 @@
  aus_production_effort_desc:0 "If you can build tractors, you can build tanks! We must not allow our military production capacity to lag behind."
  aus_construction_effort_2:0 "Construction Effort II"
  aus_construction_effort_2_desc:0 "Continuing to expand our factories will allow us to speed up production of goods for trade and further construction efforts."
+ aus_construction_effort_3:0 "Construction Effort III"
+ aus_construction_effort_3_desc:0 "Continuing to expand our factories will allow us to speed up production of goods for trade and further construction efforts." 
  aus_production_effort_2:0 "Armament Effort II"
  aus_production_effort_2_desc:0 "Trying to adapt civilian factories to produce military equipment is inefficient. We should focus on preparing military production now."
  aus_production_effort_3:0 "Armament Effort III"
@@ -875,10 +881,10 @@
  
  ROM_NDI_focus_tt:0 "§RThis modifer will get removed up on entering any war§!"
 
- SPR_economy_nr_tt:0 "Modify §YSpanish Economy§! by \nConsumer Goods Factories factor: §Y-15.0%§!,\nWeekly Stability: §G+0.20%§!"
+ SPR_economy_nr_tt:0 "Modify §YSpanish Economy§! by \nConsumer Goods Factories factor: §Y-15.0%§!,\nWeekly Stability: §G+0.10%§!"
  SPR_economy_fea_tt:0 "Modify §YSpanish Economy§! by \nConsumer Goods Factories factor: §Y-5.0%§!,\nConstuction Speed: §G+6.00%§!\nFactory Output: §G+12.00%§!\nDockyard Output: §G+12.00%§!\n§YMilitary Factory§! construction speed: §G+10.00%§!"
  SPR_economy_a_tt:0 "Modify §YSpanish Economy§! by \n§YInfrastructure§! construction speed: §G+10.00%§!,"
- SPR_economy_sa_tt:0 "Modify §YSpanish Economy§! by \nConsumer Goods Factories factor: §Y-15.0%§!,\nConstuction Speed: §G+6.00%§!\nFactory Output: §G+12.00%§!\nDockyard Output: §G+12.00%§!\nWeekly Stability: §R-0.20%§!"
+ SPR_economy_sa_tt:0 "Modify §YSpanish Economy§! by \nConsumer Goods Factories factor: §Y-15.0%§!,\nConstuction Speed: §G+6.00%§!\nFactory Output: §G+12.00%§!\nDockyard Output: §G+12.00%§!\nWeekly Stability: §R-0.10%§!"
  SPR_economy_stwi_tt:0 "Modify §YSpanish Economy§! by \nConsumer Goods Factories factor: §Y-5.0%§!,\nConstuction Speed: §G+6.00%§!\nFactory Output: §G+14.00%§!\nDockyard Output: §G+14.00%§!"
  SPR_economy_eagt_tt:0 "Modify §YSpanish Economy§! by \nConstruction speed: §G+10.00%§!," 
  SPR_economy_tdtw_tt:0 "Modify §YSpanish Economy§! by \nConsumer Goods Factories factor: §Y-10.0%§!,\nConstuction Speed: §G+8.00%§!\nFactory Output: §G+24.00%§!\nDockyard Output: §G+14.00%§!"
@@ -1256,7 +1262,7 @@
  USA_mio_trait_medium_tank_organization:0 "Medium Tank Designer"
  USA_mio_trait_mobile_tank_destroyers:0 "Tank Destroyer Designer"
  generic_mio_initial_trait_sov_cas_designer:0 "CAS Aircraft Designer"
-
+ USA_mio_trait_lockeed_aircraft:0 "Medium Aircraft Designer"
 
 
 

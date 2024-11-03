@@ -1318,6 +1318,16 @@ ideas = {
 			modifier = {
 				surrender_limit = 0.1
 			}						
+		}
+		NOR_crofter = {
+			picture = generic_victors_of_ww1 
+			modifier = {
+				army_core_attack_factor = 0.10
+				army_core_defence_factor = 0.1
+				amphibious_invasion = 0.2
+				winter_attrition_factor = -0.25
+				out_of_supply_factor = -0.25
+			}
 		}		
 	}
 	hidden_ideas = {

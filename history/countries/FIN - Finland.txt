@@ -125,7 +125,6 @@ recruit_character = GER_nikolaus_von_falkenhorst #Defined in the German char fil
 recruit_character = FIN_ake_henrik_gartz
 recruit_character = FIN_aimo_lahti
 recruit_character = FIN_antti_hackzell
-recruit_character = FIN_rudolf_holsti
 recruit_character = FIN_aimo_cajander
 recruit_character = FIN_urho_kekkonen
 recruit_character = FIN_ralf_torngren
