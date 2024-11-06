@@ -2523,6 +2523,31 @@ pregrinded_effect = {
 		MEX_lazaro_cardenas = {
 			add_unit_leader_trait = commando
 		}
+		MEX_abelardo_rodriguez = { add_skill_level = 1 }
+		MEX_abelardo_rodriguez = { add_attack = 2 }
+		MEX_abelardo_rodriguez = {
+			add_unit_leader_trait = trickster
+			add_unit_leader_trait = pre_grinded
+			add_unit_leader_trait = trait_engineer
+			add_unit_leader_trait = panzer_leader
+			add_unit_leader_trait = panzer_expert
+			add_unit_leader_trait = hill_fighter
+			add_unit_leader_trait = guerilla_fighter
+			add_unit_leader_trait = expert_improviser					
+		}
+		MEX_luis_farell = {
+			add_unit_leader_trait = trickster
+			add_unit_leader_trait = pre_grinded
+			add_unit_leader_trait = guerilla_fighter
+			add_unit_leader_trait = panzer_leader
+			add_unit_leader_trait = combined_arms_expert
+			add_unit_leader_trait = hill_fighter	
+			add_unit_leader_trait = organizer				
+		}
+		MEX_luis_farell = { promote_leader = yes }
+		MEX_luis_farell = {
+			add_unit_leader_trait = logistics_wizard
+		}
 	}
 	RAJ = {
 		RAJ_frank_messervy = { add_skill_level = 1 }
@@ -2677,7 +2702,22 @@ JFU_update_generals = {
 			add_unit_leader_trait = aggressive_assaulter
 			add_unit_leader_trait = trait_mountaineer		
 		}
-
+		MEX_luis_farell = { add_attack = 3 }
+		MEX_luis_farell = { add_defense = 3 }
+		MEX_luis_farell = { add_logistics = 3 }	
+		MEX_luis_farell = {
+			add_unit_leader_trait = thorough_planner
+			add_unit_leader_trait = aggressive_assaulter
+			add_unit_leader_trait = jungle_rat
+		}
+		MEX_abelardo_rodriguez = { add_attack = 4 }
+		MEX_abelardo_rodriguez = { add_defense = 1 }
+		MEX_abelardo_rodriguez = { add_planning = 2 }
+		MEX_abelardo_rodriguez = { add_logistics = 4 }
+		MEX_abelardo_rodriguez = {
+			add_unit_leader_trait = ranger	
+			add_unit_leader_trait = expert_improviser				
+		}
 	}
 	BRA = {
 		BRA_eurico_gaspar_dutra = { add_attack = 4 }
