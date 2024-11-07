@@ -4,20 +4,14 @@ state = {
 	manpower = 369000
 	
 	state_category = rural
-	
-	resources = {
-		oil = 2 # was: 2
-	}
 
 	history = {
 
-		owner = OMA
-		add_core_of = OMA
+		owner = ENG
+		add_core_of = SWE
 
 		buildings = {
 			infrastructure = 1
-			arms_factory = 1
-			industrial_complex = 1 
 			10760 = {
 				naval_base = 3
 			}

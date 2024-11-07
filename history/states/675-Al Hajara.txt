@@ -6,18 +6,18 @@ state={
 	state_category = wasteland
 
 	history={
-		owner = IRQ
+		owner = ENG
 		victory_points = {
 			12413 1 
 		}
 		buildings = {
 			infrastructure = 1
 		}
-		add_core_of = IRQ
+		add_core_of = ENG
 	}
 	
 	provinces={
-		1631 4951 10744 12413 12879 
+		2010 7448 7916 12831 12248 7584 10737 1631 4951 10744 10755 10852 12413 12879 
 	}
 
 	local_supplies=0.0 

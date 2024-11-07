@@ -11,17 +11,8 @@ state = {
 	history = {
 
 		owner = BEL
-		add_core_of = COG
+		add_core_of = SWE
 
-		IF = {
-			limit = {
-				has_dlc = "Gotterdammerung"
-			}
-			transfer_state_to = COG
-			add_dynamic_modifier = {
-				modifier = COG_state_loyal_to_free_congo_modifier
-			}
-		}
 
 		victory_points = {
 			4941 1 # Albertville

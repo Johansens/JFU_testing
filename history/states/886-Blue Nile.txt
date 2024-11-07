@@ -5,13 +5,13 @@ state = {
 	state_category = pastoral
 	history = {
 		owner = ENG
-		add_core_of = SUD
+		add_core_of = SWE
 		buildings = {
 			infrastructure = 1
 		}
 	}
-	provinces = {
-		1914 4918 10743 10784 12862 12887 
+	provinces = { 
+		1914 4918 7041  10743 10784 12862 12887 
 	}
 	
 	buildings_max_level_factor = 1.000
