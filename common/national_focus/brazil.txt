@@ -1521,7 +1521,7 @@ focus_tree = {
 	focus = {
 		id = BRA_support_the_landowners
 		icon = GFX_focus_BRA_support_sugar_barons
-		prerequisite = { focus = BRA_reward_army_loyalty focus = BRA_reinvigorate_the_navy }
+		prerequisite = { focus = BRA_reward_army_loyalty }
 		x = -1
 		y = 1
 		relative_position_id = BRA_reward_army_loyalty
