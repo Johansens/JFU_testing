@@ -3824,32 +3824,6 @@ country_event = {
 	}
 }
 
-# We have been assigned a new monarch - event for PAP
-country_event = {
-	id = WW_hungary.78
-	title = WW_hungary.78.t 
-	desc = WW_hungary.78.desc
-	picture = GFX_report_event_military_planning
-	
-	is_triggered_only = yes
-
-	# oki
-	option = { 
-		name = WW_hungary.78.a
-
-		add_country_leader_role = {
-			character =  ITA_papa_pio_xii # optional if inside character scope
-			promote_leader = yes
-			country_leader = {
-				ideology = oligarchism
-				expire = 1958.12.16
-				traits = { supreme_pontiff grand_master_of_the_equestrian_order_of_the_holy_sepulcher_of_jerusalem }
-			}
-		}
-
-	}
-}
-
 # We have been assigned a new monarch - event for SPM
 country_event = {
 	id = WW_hungary.79
