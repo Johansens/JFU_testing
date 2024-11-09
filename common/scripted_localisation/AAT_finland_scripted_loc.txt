@@ -26,12 +26,6 @@ defined_text = {
 defined_text = {
 	name = GetConvoyTooltip
 	text = {
-		trigger = {
-			has_completed_focus = FIN_the_merchant_fleet #Focus grants bonuses
-		}
-		localization_key = FIN_the_merchant_fleet_dynamic_modifier_tt
-	}
-	text = {
 		localization_key = generic_null
 	}
 }
