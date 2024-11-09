@@ -14,13 +14,82 @@ ITA_fiat_organization = {
 	icon = GFX_idea_fiat
 	
 	allowed = {	
-		tag = ITA 
+		OR = {
+			tag = ITA 
+			AND = {
+				tag = GRE 
+				has_dlc = "Battle for the Bosporus"
+			}
+			AND = {
+				tag = BUL 
+				has_dlc = "Battle for the Bosporus"
+			}
+			AND = {
+				tag = ETH 
+				has_dlc = "By Blood Alone"
+			}
+			AND = {
+				tag = BRA
+				has_dlc = "Trial of Allegiance"
+			}
+		}
 	}
 
 	visible = {
+		IF = {
+			limit = { FROM = { original_tag = ETH } }
+			FROM = { has_country_flag = ETH_ITA_sends_army_designers }
+		}
 	}
 	
 	available = {
+		# When in a Foreign MIO, countries need to be at peace with original country
+		IF = {
+			limit = {
+				FROM = { NOT = { original_tag = ITA } }
+			}
+			FROM = { NOT = { has_war_with = ITA } }
+		}
+		ELSE = { #original_tag = ITA
+			FROM = {
+				controls_state = 158 #PIEMONT (Torino)
+			}
+			ITA_is_northern_designer = yes
+		}
+
+		IF = {
+			limit = { FROM = { original_tag = GRE } }
+			FROM = {
+				has_completed_focus = GRE_rapprochement_with_the_italians
+			}
+		}
+		IF = {
+			limit = { FROM = { original_tag = BUL } }
+			custom_trigger_tooltip = {
+				tooltip = has_invited_mio_tt
+				FROM = {
+					has_country_flag = has_invited_fiat_mio_flag
+				}
+			}
+			FROM = {
+				OR = {
+					is_subject = no
+					is_subject_of = ITA
+				}
+				#is_in_faction_with = ITA
+				NOT = { has_completed_focus = BUL_nationalization }
+			}
+		}
+		IF = {
+			limit = {
+				FROM = {
+					original_tag = BRA
+				}
+			}
+			FROM = {
+				has_completed_focus = BRA_italian_trucks
+			}
+		}
 	}
 	
 	add_trait = { 
@@ -30,6 +99,10 @@ ITA_fiat_organization = {
 		special_trait_background = yes
 
 		position = { x=9 y=0 }
+
+		visible = {
+			FROM = { original_tag = ITA }
+		}
 		
 		available = {
 			FROM = {
@@ -43,7 +116,7 @@ ITA_fiat_organization = {
 		}
 
 		production_bonus = {
-			production_capacity_factor = 0.05
+			production_capacity_factor = 0.1
 		}
 	}
 }
@@ -64,12 +137,56 @@ ITA_crda_organization = {
 	icon = GFX_idea_crda
 	
 	allowed = {	
-		tag = ITA 
+		OR = {
+			tag = ITA 
+			AND = {
+				tag = BUL 
+				has_dlc = "Battle for the Bosporus"
+			}
+			AND = {
+				tag = HUN 
+				has_dlc = "Gotterdammerung"
+			}
+		}
 	}
 	
 	available = {
-		FROM = { controls_state = 736 } #LITORALE (Trieste) 
-		ITA_is_northern_designer = yes
+		# When in a Foreign MIO, countries need to be at peace with original country
+		IF = {
+			limit = {
+				FROM = { NOT = { original_tag = ITA } }
+			}
+			FROM = { NOT = { has_war_with = ITA } }
+		}
+		ELSE = { #original_tag = ITA
+			FROM = { controls_state = 736 } #LITORALE (Trieste) 
+			ITA_is_northern_designer = yes
+		}
+
+		IF = {
+			limit = { FROM = { original_tag = BUL } }
+			custom_trigger_tooltip = {
+				tooltip = has_invited_mio_tt
+				FROM = {
+					has_country_flag = has_invited_crda_mio_flag
+				}
+			}
+			FROM = {
+				OR = {
+					is_subject = no
+					is_subject_of = ITA
+				}
+				#is_in_faction_with = ITA
+				NOT = { has_completed_focus = BUL_nationalization }
+			}
+		}
+
+		IF = {
+			limit = {
+				FROM = { original_tag = HUN }
+			}
+			FROM = { controls_state = 736 } #LITORALE (Trieste) 
+		}
 	}
 
 	add_trait = { 
@@ -79,6 +196,12 @@ ITA_crda_organization = {
 		special_trait_background = yes
 
 		position = { x=9 y=0 }
+
+		visible = {
+			FROM = {
+				original_tag = ITA
+			}
+		}
 		
 		available = {
 			FROM = {
@@ -362,7 +485,7 @@ ITA_savoia_marchetti_organization = {
 		limit_to_equipment_type = { mio_cat_eq_all_medium_plane }
 		equipment_bonus = {
 			maximum_speed = 0.05
-			air_range = 0.05
+			air_range = 0.15
 		}
 	}
 
@@ -379,32 +502,32 @@ ITA_savoia_marchetti_organization = {
 		
 		limit_to_equipment_type = { mio_cat_eq_all_medium_plane }
 		equipment_bonus = {
-			naval_strike_attack = 0.05
+			naval_strike_attack = 0.15
 		}
 	}
 
-#	add_trait = {
-#		token = ITA_mio_trait_remote_operated
-#		name = ITA_mio_trait_remote_operated
-#		icon = GFX_generic_mio_trait_icon_build_cost_ic
-#		special_trait_background = yes
-#		
-#		position = { x=3 y=0 }  
-#		relative_position_id = generic_mio_trait_bomber_specialization
-#		available = {
-#			FROM = { has_tech = experimental_rockets }
-#		}
-#		
-#		#any_parent = { generic_mio_trait_narrow_build }
-#		
-#		limit_to_equipment_type = { mio_cat_eq_all_small_plane }
-#		equipment_bonus = {
-#			reliability = 0.1
-#		}
-#		production_bonus = {
-#			production_cost_factor = -0.1
-#		}
-#	}
+	add_trait = {
+		token = ITA_mio_trait_remote_operated
+		name = ITA_mio_trait_remote_operated
+		icon = GFX_generic_mio_trait_icon_build_cost_ic
+		special_trait_background = yes
+		
+		position = { x=3 y=0 }  
+		relative_position_id = generic_mio_trait_bomber_specialization
+		available = {
+			FROM = { has_tech = experimental_rockets }
+		}
+		
+		#any_parent = { generic_mio_trait_narrow_build }
+		
+		limit_to_equipment_type = { mio_cat_eq_all_small_plane }
+		equipment_bonus = {
+			reliability = 0.1
+		}
+		production_bonus = {
+			production_cost_factor = -0.1
+		}
+	}
 
 	add_trait = { 
 		token = ITA_mio_trait_new_industrialization_program
@@ -638,22 +761,41 @@ ITA_crda_cant_organization = {
 ITA_fiat_aviazione_organization = {
 	include = generic_range_focused_aircraft_organization
 	icon = GFX_idea_ITA_fiat_aviazione
+
+
 	
 	allowed = {	 
-		tag = ITA 
+		OR = {
+			tag = ITA
+			AND = {
+				tag = BRA
+				has_dlc = "Trial of Allegiance"
+			}
+		} 
 	}
 	
 	available = {
-		FROM = {
-			controls_state = 158 #PIEDMONT (Torino)
+		IF = {
+			limit = {
+				FROM = { NOT = { original_tag = ITA } }
+			}
+			FROM = { NOT = { has_war_with = ITA } }
 		}
-		ITA_is_northern_designer = yes
+		ELSE = {
+			FROM = {
+				controls_state = 158 #PIEDMONT (Torino)
+			}
+			ITA_is_northern_designer = yes
+		}
+
+		IF = {
+			limit = { FROM = { original_tag = BRA } }
+			FROM = { 
+				has_completed_focus = BRA_italian_aircraft
+			} 
+		}		
 	}
 	
-	visible = {
-		always = no
-	}
-
 	initial_trait = {
 		equipment_bonus = {
 			naval_strike_attack = -0.1
@@ -692,6 +834,10 @@ ITA_fiat_aviazione_organization = {
 		special_trait_background = yes
 
 		position = { x=9 y=0 }
+
+		visible = {
+			FROM = { original_tag = ITA }
+		}
 		
 		available = {
 			FROM = {
@@ -790,10 +936,45 @@ ITA_lancia_organization = {
 	icon = GFX_idea_lancia
 	
 	allowed = {	 
-		tag = ITA 
+		OR = {
+			tag = ITA 
+			AND = {
+				tag = BUL 
+				has_dlc = "Battle for the Bosporus"
+			}
+		}
 	}
 	
 	available = {
+		# When in a Foreign MIO, countries need to be at peace with original country
+		IF = {
+			limit = {
+				FROM = { NOT = { original_tag = ITA } }
+			}
+			FROM = { NOT = { has_war_with = ITA } }
+		}
+		ELSE = { #original_tag = ITA
+			FROM = { controls_state = 159 } #LOMBARDIA
+			ITA_is_northern_designer = yes
+		}
+		
+		IF = {
+			limit = { FROM = { original_tag = BUL } }
+			custom_trigger_tooltip = {
+				tooltip = has_invited_mio_tt
+				FROM = {
+					has_country_flag = has_invited_lancia_mio_flag
+				}
+			}
+			FROM = {
+				OR = {
+					is_subject = no
+					is_subject_of = ITA
+				}
+				#is_in_faction_with = ITA
+				NOT = { has_completed_focus = BUL_nationalization }
+			}
+		}
 	}
 
 	add_trait = { 
@@ -887,7 +1068,7 @@ ITA_brescia_arsenal_organization = {
 	icon = GFX_idea_ITA_brescia_arsenal
 	
 	allowed = {	 
-		always = no
+		tag = ITA
 	}
 	
 	available = {
@@ -914,6 +1095,146 @@ ITA_brescia_arsenal_organization = {
 
 		organization_modifier = {
 			military_industrial_organization_research_bonus = 0.1
+		}
+
+		production_bonus = {
+			production_capacity_factor = 0.1
+		}
+	}
+}
+
+ITA_officine_meccaniche_organization = {
+	include = generic_motorized_mechanized_organization
+	icon = GFX_idea_ITA_officine_meccaniche
+	
+	allowed = {
+		original_tag = ITA
+		has_dlc = "By Blood Alone"
+	}
+	
+	available = {
+		FROM = {
+			has_completed_focus = ITA_new_ricostruzione_industriale
+		}
+	}
+
+	equipment_type = {
+		motorized_equipment
+		mechanized_equipment
+		motorized_rocket_equipment
+		train_equipment
+	}
+	
+	research_categories = {
+		mio_cat_tech_all_motorized_mechanized
+		train_equipment
+	}
+
+	initial_trait = {
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.15
+		}
+	}
+
+	#research_bonus = 0.2 #Intended to be a total of 20% Research for the MIO at start
+
+	override_trait = { #Traits with no limits in the archetype need the limit to exclude the additional equipment in this MIO (train)
+		token = generic_mio_trait_medium_machinegun_mounts
+
+		limit_to_equipment_type = {
+			motorized_equipment
+			mechanized_equipment
+			motorized_rocket_equipment
+		}
+	}
+
+	override_trait = { #Traits with no limits in the archetype need the limit to exclude the additional equipment in this MIO (train)
+		token = generic_mio_trait_armored_pulpit_mount
+
+		limit_to_equipment_type = {
+			motorized_equipment
+			mechanized_equipment
+			motorized_rocket_equipment
+		}
+	}
+
+	add_trait = { 
+		token = ITA_mio_trait_new_ricostruzione_iundustriale_motorized
+		name = ITA_new_ricostruzione_industriale_motorized
+		icon = GFX_generic_mio_department_icon_motorized_production
+		special_trait_background = yes
+
+		position = { x=1 y=0 }
+		relative_position_id = generic_mio_trait_steel_cargo_bed
+		
+		available = {
+			FROM = {
+				has_completed_focus = ITA_new_ricostruzione_industriale
+			}
+		}
+
+		limit_to_equipment_type = {
+			motorized_equipment
+			motorized_rocket_equipment
+		}
+
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.05
+		}
+
+		production_bonus = {
+			production_capacity_factor = 0.1
+		}
+	}
+
+	add_trait = { 
+		token = ITA_mio_trait_new_ricostruzione_iundustriale_mechanized
+		name = ITA_new_ricostruzione_industriale_mechanized
+		icon = GFX_generic_mio_department_icon_mechanized_production
+		special_trait_background = yes
+
+		position = { x=-1 y=0 }
+		relative_position_id = generic_mio_trait_open_chassi
+		
+		available = {
+			FROM = {
+				has_completed_focus = ITA_new_ricostruzione_industriale
+			}
+		}
+
+		limit_to_equipment_type = {
+			mechanized_equipment
+		}
+
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.05
+		}
+
+		production_bonus = {
+			production_capacity_factor = 0.1
+		}
+	}
+
+	add_trait = { 
+		token = ITA_mio_trait_new_ricostruzione_iundustriale_train
+		name = ITA_new_ricostruzione_industriale_train
+		icon = GFX_military_industrial_organization_train
+		special_trait_background = yes
+
+		position = { x=9 y=0 }
+		
+		available = {
+			FROM = {
+				has_completed_focus = ITA_new_ricostruzione_industriale
+			}
+		}
+
+		limit_to_equipment_type = {
+			train_equipment
+		}
+
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.05
 		}
 
 		production_bonus = {
