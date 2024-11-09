@@ -1132,50 +1132,50 @@ focus_tree = {
 		}
 	}
 	
-	focus = {
-		id = GER_trade_deal_with_sweden
-		icon = GFX_focus_generic_befriend_sweden
-		prerequisite = { focus = GER_construct_the_reichsautobahn focus = GER_autarky_efforts }
+	#focus = {
+	#	id = GER_trade_deal_with_sweden
+	#	icon = GFX_focus_generic_befriend_sweden
+	#	prerequisite = { focus = GER_construct_the_reichsautobahn focus = GER_autarky_efforts }
 
-		x = 2
-		y = 1
-		relative_position_id = GER_construct_the_reichsautobahn
-		cost = 5
-		available = {
-			is_subject = no
-			AND = {
-				country_exists = SWE
-				SWE = { is_subject = no }
-				NOT = { has_war_with = SWE }
-				SWE = {
-					custom_trigger_tooltip = {
-						tooltip = GER_alone_or_peace_faction_tt
-						is_alone_or_in_faction_at_peace_with_GER = yes
-					}
-				}
-			}
-		}
+	#	x = 2
+	#	y = 1
+	#	relative_position_id = GER_construct_the_reichsautobahn
+	#	cost = 5
+	#	available = {
+	#		is_subject = no
+	#		AND = {
+	#			country_exists = SWE
+	#			SWE = { is_subject = no }
+	#			NOT = { has_war_with = SWE }
+	#			SWE = {
+	#				custom_trigger_tooltip = {
+	#					tooltip = GER_alone_or_peace_faction_tt
+	#					is_alone_or_in_faction_at_peace_with_GER = yes
+	#				}
+	#			}
+	#		}
+	#	}
 
-		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_INTERNATIONAL_TRADE FOCUS_FILTER_HISTORICAL}
+	#	search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_INTERNATIONAL_TRADE FOCUS_FILTER_HISTORICAL}
 
-		completion_reward = {
-			SWE = {
-				country_event = { id = wuw_GER_diplomacy.1 days = 2 }
-			}
+	#	completion_reward = {
+	#		SWE = {
+	#			country_event = { id = wuw_GER_diplomacy.1 days = 2 }
+	#		}
 
-			custom_effect_tooltip = if_they_accept_tt
-			effect_tooltip = {
-				SWE = {
-					add_ideas = GER_german_trade_ns
-					add_opinion_modifier = {
-						target = PREV
-						modifier = GER_trading_partners
-					}
-				}
-				custom_effect_tooltip = war_will_cancel_deal_tt
-			}
-		}
-	}
+	#		custom_effect_tooltip = if_they_accept_tt
+	#		effect_tooltip = {
+	#			SWE = {
+	#				add_ideas = GER_german_trade_ns
+	#				add_opinion_modifier = {
+	#					target = PREV
+	#					modifier = GER_trading_partners
+	#				}
+	#			}
+	#			custom_effect_tooltip = war_will_cancel_deal_tt
+	#		}
+	#	}
+	#}
 	
 	focus = {
 		id = GER_kdf_wagen_factories
@@ -7863,7 +7863,105 @@ focus_tree = {
 			}
 		}
 	}
+	focus = {
+		id = GER_reorganize_the_wehrmacht #von Ribbentrop
 
+		icon = GFX_focus_GER_reorganize_the_wehrmacht
+		alternate_icon = GFX_focus_GER_reorganize_the_wehrmacht_historical
+
+		prerequisite = { focus = GER_remilitarize_the_rhineland }
+		x = 0
+		y = 1
+		relative_position_id = GER_remilitarize_the_rhineland
+		cost = 5
+		available = {
+		}
+
+		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_POLITICAL FOCUS_FILTER_POLITICAL_CHARACTER FOCUS_FILTER_MILITARY_CHARACTER FOCUS_FILTER_WAR_SUPPORT }
+
+		completion_reward = {
+			add_political_power = 50
+			add_war_support = 0.05
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = joachim_von_ribbentrop
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			custom_effect_tooltip = {
+				localization_key = remove_character_as_tt
+				CHARACTER = GER_konstantin_von_neurath
+				ROLE = political_advisor
+			}
+
+			#This is bad (too long)
+			#custom_effect_tooltip = remove_political_advisor
+			#show_ideas_tooltip = konstantin_von_neurath
+
+			#This is even worse (errors, no need to retire anyone)
+			#retire_character = GER_konstantin_von_neurath
+			
+			custom_effect_tooltip = {
+				localization_key = remove_character_as_tt
+				CHARACTER = GER_werner_von_blomberg
+				ROLE = fm_leader
+			}
+
+			custom_effect_tooltip = {
+				localization_key = remove_character_as_tt
+				CHARACTER = GER_werner_von_fritsch
+				ROLE = cc_leader
+			}
+
+			custom_effect_tooltip = {
+				localization_key = remove_character_as_tt
+				CHARACTER = GER_oswald_lutz
+				ROLE = cc_leader
+			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			if = {
+				limit = {
+					has_country_leader_with_trait = GER_der_fuhrer
+				}
+				random_character = {
+					limit = {
+						is_country_leader = yes
+					}
+					swap_country_leader_traits = {
+						remove = GER_der_fuhrer
+						add = GER_der_fuhrer_wehrmacht
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_country_leader_with_trait = GER_der_fuhrer_fuhrerprinzip
+				}
+				random_character = {
+					limit = {
+						is_country_leader = yes
+					}
+					swap_country_leader_traits = {
+						remove = GER_der_fuhrer_fuhrerprinzip
+						add = GER_der_fuhrer_fuhrerprinzip_wehrmacht
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_completed_focus = GER_fuhrerprinzip
+				}
+				add_country_leader_trait = GER_der_fuhrer_fuhrerprinzip_wehrmacht
+			}
+			else = {
+				add_country_leader_trait = GER_der_fuhrer_wehrmacht
+			}
+		}
+	}
 	focus = {
 		id = GER_anschluss
 
@@ -8362,188 +8460,6 @@ focus_tree = {
 		}
 	}
 
-	focus = {
-		id = GER_uplift_the_rosenberg_office
-		icon = GFX_focus_ger_reichskommisariats
-		alternate_icon = GFX_focus_ger_reichskommisariats_historical
-		prerequisite = {  focus = GER_reorganize_the_wehrmacht }
-
-		x = -2
-		y = 1
-		relative_position_id = GER_reorganize_the_wehrmacht
-		cost = 5
-		available = {
-			has_government = fascism
-		}
-
-		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_MANPOWER }
-
-		completion_reward = {
-			add_dynamic_modifier = {
-				modifier = GER_alfred_rosenberg_modifier
-			}	
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			custom_effect_tooltip = GER_reichskommissariats_tt
-		}
-	}
-
-	focus = {
-		id = GER_expand_ss_recruitment
-		icon = GFX_focus_generic_fascist_troops
-		prerequisite = { focus = GER_uplift_the_rosenberg_office }
-
-		x = 0
-		y = 1
-		relative_position_id = GER_uplift_the_rosenberg_office
-		cost = 5
-		available = {
-			has_government = fascism
-			OR = {
-				any_controlled_state = {
-					NOT = {
-						is_core_of = ROOT
-					}
-					is_on_continent = europe
-				}
-				any_subject_country = {
-					capital_scope = {
-						is_on_continent = europe
-					}
-				}
-			}
-		}
-
-		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_MANPOWER }
-
-		completion_reward = {
-			custom_effect_tooltip = GER_SS_recruitment_tt
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			if = {
-				limit = {
-					NOT = { has_template = "Waffen-SS Division" }
-				}
-				division_template = {
-					name = "Waffen-SS Division"
-					priority = 2
-					division_names_group = GER_SS_01
-					template_counter = 101
-					is_locked = yes #Unlocked in Strengthen the Waffen-SS focus under Himmler
-					regiments = {
-						militia = { x = 0 y = 0 }
-						militia = { x = 0 y = 1 }
-						militia = { x = 0 y = 2 }
-					
-						militia = { x = 1 y = 0 }
-						militia = { x = 1 y = 1 }
-						militia = { x = 1 y = 2 }
-					}
-					support = {
-						artillery = { x = 0 y = 0 }
-						engineer = { x = 0 y = 1 }
-						mot_recon = { x = 0 y = 2 }
-					}
-					override_model = GER_militia
-				}
-			}
-			if = {
-				limit = {
-					64 = {
-						is_fully_controlled_by = ROOT
-					}
-				}
-				64 = {
-					custom_effect_tooltip = GER_create_four_militia_units_tt
-					hidden_effect = {
-						create_unit = {
-							division = "division_template =\"Waffen-SS Division\" start_experience_factor = 0.2 start_equipment_factor = 0.7"
-							owner = ROOT
-							count = 4
-						}
-					}
-				}
-			}
-			else = {
-				random_core_state = {
-					limit = {
-						is_fully_controlled_by = ROOT
-					}
-					custom_effect_tooltip = GER_create_four_militia_units_tt
-					hidden_effect = {
-						create_unit = {
-							division = "division_template =\"Waffen-SS Division\" start_experience_factor = 0.2 start_equipment_factor = 0.7"
-							owner = ROOT
-							count = 4
-						}
-					}
-				}
-			}
-
-
-			if = {
-				limit = {
-					NOT = { has_template = "SS-Verfügungstruppe" }
-				}
-				division_template = {
-					name = "SS-Verfügungstruppe"
-					priority = 2
-					division_names_group = GER_SS_01
-					is_locked = yes
-					regiments = {
-						motorized = { x = 0 y = 0 }
-						motorized = { x = 0 y = 1 }
-						motorized = { x = 0 y = 2 }
-
-						motorized = { x = 1 y = 0 }
-						motorized = { x = 1 y = 1 }
-						motorized = { x = 1 y = 2 }
-
-					}
-					support = {
-						artillery = { x = 0 y = 0 }
-						engineer = { x = 0 y = 1 }
-						mot_recon = { x = 0 y = 2 }
-					}
-					override_model = GER_infantry_alt_0_entity
-				}
-			}
-			if = {
-				limit = {
-					64 = {
-						is_fully_controlled_by = ROOT
-					}
-				}
-				64 = {
-					custom_effect_tooltip = GER_create_two_motorized_units_tt
-					hidden_effect = {
-						create_unit = {
-							division = "division_template =\"SS-Verfügungstruppe\" start_experience_factor = 0.2 start_equipment_factor = 0.4"
-							owner = ROOT
-							count = 2
-						}
-					}
-				}
-			}
-			else = {
-				random_core_state = {
-					limit = {
-						is_fully_controlled_by = ROOT
-					}
-					custom_effect_tooltip = GER_create_two_motorized_units_tt
-					hidden_effect = {
-						create_unit = {
-							division = "division_template =\"SS-Verfügungstruppe\" start_experience_factor = 0.2 start_equipment_factor = 0.4"
-							owner = ROOT
-							count = 2
-						}
-					}
-				}
-			}
-		}
-	}
 	
 	focus = {
 		id = GER_demand_sudetenland
@@ -8552,8 +8468,6 @@ focus_tree = {
 		alternate_icon = GFX_focus_GER_demand_sudetenland
 
 		prerequisite = { focus = GER_anschluss }
-
-		mutually_exclusive = { focus = GER_befriend_czechoslovakia }
 
 		x = -2
 		y = 1
@@ -9299,7 +9213,6 @@ focus_tree = {
 		alternate_icon = GFX_focus_GER_danzig_or_war_historical
 
 		prerequisite = { focus = GER_reassert_eastern_claims }
-		mutually_exclusive = { focus = GER_danzig_for_slovakia }
 		x = 0
 		y = 1
 		relative_position_id = GER_reassert_eastern_claims
@@ -9619,7 +9532,6 @@ focus_tree = {
 		alternate_icon = GFX_focus_GER_operation_wesserubung_historical
 
 		prerequisite = { focus = GER_danzig_or_war }
-		mutually_exclusive = { focus = GER_utilize_the_nordliche_gesellschaft }
 		x = 1
 		y = 2
 		relative_position_id = GER_danzig_or_war
@@ -9804,106 +9716,190 @@ focus_tree = {
 
 		}
 	}
+
+
 	focus = {
-		id = GER_reorganize_the_wehrmacht #von Ribbentrop
+		id = GER_uplift_the_rosenberg_office
+		icon = GFX_focus_ger_reichskommisariats
+		alternate_icon = GFX_focus_ger_reichskommisariats_historical
+		prerequisite = {  focus = GER_reorganize_the_wehrmacht }
 
-		icon = GFX_focus_GER_reorganize_the_wehrmacht
-		alternate_icon = GFX_focus_GER_reorganize_the_wehrmacht_historical
-
-		prerequisite = { focus = GER_remilitarize_the_rhineland }
-		x = 0
+		x = -2
 		y = 1
-		relative_position_id = GER_remilitarize_the_rhineland
+		relative_position_id = GER_reorganize_the_wehrmacht
 		cost = 5
 		available = {
+			has_government = fascism
 		}
 
-		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_POLITICAL FOCUS_FILTER_POLITICAL_CHARACTER FOCUS_FILTER_MILITARY_CHARACTER FOCUS_FILTER_WAR_SUPPORT }
+		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_MANPOWER }
 
 		completion_reward = {
-			add_political_power = 50
-			add_war_support = 0.05
+			add_dynamic_modifier = {
+				modifier = GER_alfred_rosenberg_modifier
+			}	
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = joachim_von_ribbentrop
+			custom_effect_tooltip = GER_reichskommissariats_tt
+		}
+	}
 
-			custom_effect_tooltip = generic_skip_one_line_tt
+	focus = {
+		id = GER_expand_ss_recruitment
+		icon = GFX_focus_generic_fascist_troops
+		prerequisite = { focus = GER_uplift_the_rosenberg_office }
 
-			custom_effect_tooltip = {
-				localization_key = remove_character_as_tt
-				CHARACTER = GER_konstantin_von_neurath
-				ROLE = political_advisor
+		x = 0
+		y = 1
+		relative_position_id = GER_uplift_the_rosenberg_office
+		cost = 5
+		available = {
+			has_government = fascism
+			OR = {
+				any_controlled_state = {
+					NOT = {
+						is_core_of = ROOT
+					}
+					is_on_continent = europe
+				}
+				any_subject_country = {
+					capital_scope = {
+						is_on_continent = europe
+					}
+				}
 			}
+		}
 
-			#This is bad (too long)
-			#custom_effect_tooltip = remove_political_advisor
-			#show_ideas_tooltip = konstantin_von_neurath
+		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_MANPOWER }
 
-			#This is even worse (errors, no need to retire anyone)
-			#retire_character = GER_konstantin_von_neurath
-			
-			custom_effect_tooltip = {
-				localization_key = remove_character_as_tt
-				CHARACTER = GER_werner_von_blomberg
-				ROLE = fm_leader
-			}
-
-			custom_effect_tooltip = {
-				localization_key = remove_character_as_tt
-				CHARACTER = GER_werner_von_fritsch
-				ROLE = cc_leader
-			}
-
-			custom_effect_tooltip = {
-				localization_key = remove_character_as_tt
-				CHARACTER = GER_oswald_lutz
-				ROLE = cc_leader
-			}
+		completion_reward = {
+			custom_effect_tooltip = GER_SS_recruitment_tt
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
 			if = {
 				limit = {
-					has_country_leader_with_trait = GER_der_fuhrer
+					NOT = { has_template = "Waffen-SS Division" }
 				}
-				random_character = {
-					limit = {
-						is_country_leader = yes
+				division_template = {
+					name = "Waffen-SS Division"
+					priority = 2
+					division_names_group = GER_SS_01
+					template_counter = 101
+					is_locked = yes #Unlocked in Strengthen the Waffen-SS focus under Himmler
+					regiments = {
+						militia = { x = 0 y = 0 }
+						militia = { x = 0 y = 1 }
+						militia = { x = 0 y = 2 }
+					
+						militia = { x = 1 y = 0 }
+						militia = { x = 1 y = 1 }
+						militia = { x = 1 y = 2 }
 					}
-					swap_country_leader_traits = {
-						remove = GER_der_fuhrer
-						add = GER_der_fuhrer_wehrmacht
+					support = {
+						artillery = { x = 0 y = 0 }
+						engineer = { x = 0 y = 1 }
+						mot_recon = { x = 0 y = 2 }
 					}
+					override_model = GER_militia
 				}
 			}
-			else_if = {
+			if = {
 				limit = {
-					has_country_leader_with_trait = GER_der_fuhrer_fuhrerprinzip
-				}
-				random_character = {
-					limit = {
-						is_country_leader = yes
-					}
-					swap_country_leader_traits = {
-						remove = GER_der_fuhrer_fuhrerprinzip
-						add = GER_der_fuhrer_fuhrerprinzip_wehrmacht
+					64 = {
+						is_fully_controlled_by = ROOT
 					}
 				}
-			}
-			else_if = {
-				limit = {
-					has_completed_focus = GER_fuhrerprinzip
+				64 = {
+					custom_effect_tooltip = GER_create_four_militia_units_tt
+					hidden_effect = {
+						create_unit = {
+							division = "division_template =\"Waffen-SS Division\" start_experience_factor = 0.2 start_equipment_factor = 0.7"
+							owner = ROOT
+							count = 4
+						}
+					}
 				}
-				add_country_leader_trait = GER_der_fuhrer_fuhrerprinzip_wehrmacht
 			}
 			else = {
-				add_country_leader_trait = GER_der_fuhrer_wehrmacht
+				random_core_state = {
+					limit = {
+						is_fully_controlled_by = ROOT
+					}
+					custom_effect_tooltip = GER_create_four_militia_units_tt
+					hidden_effect = {
+						create_unit = {
+							division = "division_template =\"Waffen-SS Division\" start_experience_factor = 0.2 start_equipment_factor = 0.7"
+							owner = ROOT
+							count = 4
+						}
+					}
+				}
+			}
+
+
+			if = {
+				limit = {
+					NOT = { has_template = "SS-Verfügungstruppe" }
+				}
+				division_template = {
+					name = "SS-Verfügungstruppe"
+					priority = 2
+					division_names_group = GER_SS_01
+					is_locked = yes
+					regiments = {
+						motorized = { x = 0 y = 0 }
+						motorized = { x = 0 y = 1 }
+						motorized = { x = 0 y = 2 }
+
+						motorized = { x = 1 y = 0 }
+						motorized = { x = 1 y = 1 }
+						motorized = { x = 1 y = 2 }
+
+					}
+					support = {
+						artillery = { x = 0 y = 0 }
+						engineer = { x = 0 y = 1 }
+						mot_recon = { x = 0 y = 2 }
+					}
+					override_model = GER_infantry_alt_0_entity
+				}
+			}
+			if = {
+				limit = {
+					64 = {
+						is_fully_controlled_by = ROOT
+					}
+				}
+				64 = {
+					custom_effect_tooltip = GER_create_two_motorized_units_tt
+					hidden_effect = {
+						create_unit = {
+							division = "division_template =\"SS-Verfügungstruppe\" start_experience_factor = 0.2 start_equipment_factor = 0.4"
+							owner = ROOT
+							count = 2
+						}
+					}
+				}
+			}
+			else = {
+				random_core_state = {
+					limit = {
+						is_fully_controlled_by = ROOT
+					}
+					custom_effect_tooltip = GER_create_two_motorized_units_tt
+					hidden_effect = {
+						create_unit = {
+							division = "division_template =\"SS-Verfügungstruppe\" start_experience_factor = 0.2 start_equipment_factor = 0.4"
+							owner = ROOT
+							count = 2
+						}
+					}
+				}
 			}
 		}
 	}
-
 	focus = {
 		id = GER_anti_comintern_pact
 

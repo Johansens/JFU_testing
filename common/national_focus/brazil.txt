@@ -27,14 +27,6 @@ focus_tree = {
 		y = 0
 	}
 
-	##### Shared Military Branch #####
-
-	shared_focus = SMB_army
-	shared_focus = SMB_air_force
-	shared_focus = SMB_navy
-
-	##################################
-
 	
 	
 	focus = {
@@ -118,6 +110,27 @@ focus_tree = {
 	}
 
 	focus = {
+		id = BRA_cohen_plan
+		icon = GFX_focus_BRA_cohen_plan 
+		prerequisite = { focus = BRA_ensure_continued_military_support }
+		x = 0
+		y = 1
+		relative_position_id = BRA_ensure_continued_military_support
+		cost = 10
+		available = {
+			neutrality > 0.50
+		}
+
+		cancel_if_invalid = no
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL }
+
+		completion_reward = {
+			custom_effect_tooltip = BRA_cohen_plan_tt
+			add_political_power = 100
+		}
+	}
+	focus = {
 		id = BRA_estado_novo
 		icon = GFX_focus_BRA_estado_novo
 		prerequisite = { focus = BRA_cohen_plan }
@@ -182,27 +195,6 @@ focus_tree = {
 		}
 	}
 
-	focus = {
-		id = BRA_cohen_plan
-		icon = GFX_focus_BRA_cohen_plan 
-		prerequisite = { focus = BRA_ensure_continued_military_support }
-		x = 0
-		y = 1
-		relative_position_id = BRA_ensure_continued_military_support
-		cost = 10
-		available = {
-			neutrality > 0.50
-		}
-
-		cancel_if_invalid = no
-
-		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL }
-
-		completion_reward = {
-			custom_effect_tooltip = BRA_cohen_plan_tt
-			add_political_power = 100
-		}
-	}
 
 	focus = {
 		id = BRA_the_polaca
@@ -228,6 +220,7 @@ focus_tree = {
 		id = BRA_autarky
 		icon = GFX_focus_BRA_autarky
 		prerequisite = { focus = BRA_the_polaca }
+		mutually_exclusive = { focus = BRA_corporatism }
 		x = 1
 		y = 1
 		relative_position_id = BRA_the_polaca
