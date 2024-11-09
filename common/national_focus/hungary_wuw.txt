@@ -1218,7 +1218,6 @@ focus_tree = {
 		relative_position_id = wuw_HUN_reaffirm_territorial_claims
 
 		will_lead_to_war_with = CZE
-		will_lead_to_war_with = SLO
 
 		cost = 5
 
@@ -1245,13 +1244,6 @@ focus_tree = {
 					664 = { is_owned_by = CZE }
 				}
 				strength_ratio = { tag = CZE ratio > 0.75 }
-			}
-			IF = {
-				limit = {
-					country_exists = SLO
-					664 = { is_owned_by = SLO }
-				}
-				strength_ratio = { tag = SLO ratio > 0.75 }
 			}
 
 			has_army_manpower = { size > 120000 }
@@ -1305,19 +1297,9 @@ focus_tree = {
 			}
 			ELSE_IF = {
 				limit = {
-					SLO = {
-						exists = yes
-						owns_state = 664
-					}
-				}
-				SLO = { country_event = DOD_hungary.80 }
-			}
-			ELSE_IF = {
-				limit = {
 					664 = {
 						NOT = {
 							OR = {
-								is_owned_by = SLO
 								is_owned_by = CZE
 								is_owned_by = ROOT
 							}
@@ -1349,8 +1331,6 @@ focus_tree = {
 		relative_position_id = wuw_HUN_reaffirm_territorial_claims
 
 		will_lead_to_war_with = CZE
-		will_lead_to_war_with = SLO
-		will_lead_to_war_with = UKR
 
 		available = {
 
@@ -1745,7 +1725,6 @@ focus_tree = {
 		y = 1
 		relative_position_id = wuw_HUN_demand_southern_slovakia
 
-		will_lead_to_war_with = SLO
 
 		cost = 10
 
@@ -1758,10 +1737,6 @@ focus_tree = {
 			is_subject = no
 
 			OR = {
-				SLO = {
-					exists = yes
-					NOT = { is_puppet_of = ROOT }
-				}
 				any_other_country = {
 					owns_state = 70
 					owns_state = 71
@@ -1772,11 +1747,6 @@ focus_tree = {
 					}
 				}
 			}
-			IF = {
-				limit = { country_exists = SLO }
-				strength_ratio = { tag = SLO ratio > 0.75 }
-				NOT = { has_war_with = SLO }
-			}
 			has_army_manpower = { size > 175000 }
 
 		}
@@ -1784,10 +1754,6 @@ focus_tree = {
 		bypass = {
 
 			OR = {
-				SLO = {
-					exists = yes
-					is_subject_of = ROOT
-				}
 				AND = {
 					owns_state = 70
 					owns_state = 71
@@ -1816,7 +1782,6 @@ focus_tree = {
 							}
 						}
 					}
-					SLO = { exists = no }
 					any_other_country = {
 						NOT = {
 							owns_state = 70
@@ -1831,30 +1796,6 @@ focus_tree = {
 						country_event = { id = DOD_hungary.100 hours = 5 }
 					}
 				}
-			}
-			IF = {
-				limit = {
-					SLO = {
-						exists = yes
-						is_puppet = no
-						NOT = {
-							has_war_with = ROOT
-						}
-					}
-				}
-				SLO = { country_event = { id = DOD_hungary.107 hours = 3 } }
-			}
-			IF = {
-				limit = {
-					SLO = {
-						exists = yes
-						is_puppet = yes
-						NOT = {
-							has_war_with = ROOT
-						}
-					}
-				}
-				SLO = { OVERLORD = { country_event = { id = DOD_hungary.107 hours = 4 } } }
 			}
 			hidden_effect = {
 				news_event = { id = news.309 hours = 8 }
@@ -1872,7 +1813,6 @@ focus_tree = {
 		y = 1
 		relative_position_id = wuw_HUN_demand_southern_slovakia
 
-		will_lead_to_war_with = SLO
 		will_lead_to_war_with = CZE
 
 		cost = 10
@@ -1919,30 +1859,6 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 
 		completion_reward = {
-
-			IF = {
-				limit = {
-					SLO = {
-						exists = yes
-						is_subject = yes
-						NOT = {
-							is_subject_of = ROOT
-						}
-						is_ai = yes
-					}
-				}
-				every_country = {
-					limit = {
-						has_subject = SLO
-					}
-					country_event = {
-						id = WW_hungary.96
-						days = 2
-						random_days = 3
-					}
-				}
-			}
-			ELSE = {
 				custom_effect_tooltip = HUN_demands_tt
 				every_country = {
 					limit = {
@@ -1968,7 +1884,6 @@ focus_tree = {
 						random_days = 3
 					}
 				}
-			}
 
 		}
 	}

@@ -3263,7 +3263,7 @@ country_event = {
 
 }
 
-# Demand Southern Slovakia event chain - initial event for CZE or SLO, depending on time frame
+# Demand Southern Slovakia event chain - initial event for CZE
 country_event = {
 	id = DOD_hungary.80
 	title = DOD_hungary.80.t
@@ -3319,18 +3319,6 @@ country_event = {
 			}
 		}
 	}
-
-	option = { # Appeal to Germany
-		name = DOD_hungary.80.c
-		ai_chance = {
-			base = 25
-		}
-		trigger = {
-			tag = SLO
-			is_puppet_of = GER
-		}
-		GER = { country_event = DOD_hungary.83 }
-	}
 	option = {# Refuse outright
 		name = DOD_hungary.80.d
 		HUN = { country_event = DOD_hungary.84 }
@@ -3338,7 +3326,7 @@ country_event = {
 
 }
 
-# Demand Southern Slovakia event chain - CZE/SLO folds
+# Demand Southern Slovakia event chain - CZE folds
 country_event = {
 	id = DOD_hungary.81
 	title = DOD_hungary.81.t
@@ -3391,7 +3379,7 @@ country_event = {
 	}
 }
 
-#Demand Southern Slovakia event chain - SLO appeals to Germany
+#Demand Southern Slovakia event chain -  appeals to Germany
 country_event = {
 	id = DOD_hungary.83
 	title = DOD_hungary.83.t
@@ -3425,7 +3413,7 @@ country_event = {
 	}
 }
 
-#Demand Southern Slovakia event chain - CZE/SLO flatly refuses
+#Demand Southern Slovakia event chain - CZE flatly refuses
 country_event = {
 	id = DOD_hungary.84
 	title = DOD_hungary.84.t
@@ -3454,12 +3442,6 @@ country_event = {
 		name = DOD_hungary.84.b
 		ai_chance = {
 			factor = 90
-			modifier = {
-				country_exists = SLO
-				SLO = { is_puppet = no }
-				SLO = { is_in_faction = no }
-				factor = 10
-			}
 		}
 
 		add_war_support = 0.05
@@ -3510,19 +3492,6 @@ country_event = {
 			create_wargoal = {
 				type = take_state_focus
 				target = CZE
-				generator = { 664 }
-			}
-		}
-		if = {
-			limit = { 
-				SLO = {
-					owns_state = 664
-				}
-			}
-
-			create_wargoal = {
-				type = take_state_focus
-				target = SLO
 				generator = { 664 }
 			}
 		}
@@ -4186,13 +4155,6 @@ country_event = {
 
 	option = {# annex
 		name = DOD_hungary.101.a
-		ai_chance = {
-			factor = 70
-			modifier = {
-				country_exists = SLO
-				factor = 0
-			}
-		}
 		HUN = {
 			transfer_state = 70
 			transfer_state = 71
@@ -4222,30 +4184,6 @@ country_event = {
 		}
 		if = {
 			limit = {
-				70 = {
-					is_owned_by = CZE
-				}
-			}
-			SLO = { transfer_state = 70 }
-		}
-		if = {
-			limit = {
-				71 = {
-					is_owned_by = CZE	
-				}
-			}
-			SLO = { transfer_state = 71 }
-		}
-		if = {
-			limit = {
-				72 = {
-					is_owned_by = CZE	
-				}
-			}
-			SLO = { transfer_state = 72 }
-		}
-		if = {
-			limit = {
 				154 = { is_owned_by = HUN }
 				73 = {
 					is_owned_by = CZE
@@ -4261,19 +4199,6 @@ country_event = {
 			}
 			HUN = { transfer_state = 664 }
 		}
-		every_state = {
-				limit = {
-					is_owned_by = SLO
-				}
-				add_core_of = SLO
-			}
-		SLO = {
-				load_oob = SLO_1939
-				add_manpower = 9876
-				add_state_core = 664
-				add_state_core = 73
-			}
-		puppet = SLO
 		if = {
 			limit = {
 				country_exists = CZE
@@ -4450,15 +4375,6 @@ country_event = {
 	title = DOD_hungary.107.t
 	desc = {
 		text = DOD_hungary.107.desc_SLO_independent
-		trigger = { 
-			SLO = { is_subject = no }
-		}
-	}
-	desc = {
-		text = DOD_hungary.107.desc_SLO_puppet
-		trigger = { 
-			SLO = { is_subject = yes }
-		}
 	}
 	picture = GFX_report_event_lithuania_army
 	
@@ -4494,46 +4410,6 @@ country_event = {
 		HUN = { country_event = DOD_hungary.109 }
 		
 	}	
-}
-
-#Demand Overlordship over Slovakia - Slovakia agrees to become a puppet
-country_event = {
-	id = DOD_hungary.108
-	title = DOD_hungary.108.t
-	desc = DOD_hungary.108.desc 
-	picture = GFX_report_event_generic_read_write
-	
-	is_triggered_only = yes
-
-	option = {# good
-		name = DOD_hungary.108.a
-		puppet = SLO
-	}
-
-	
-}
-
-#Demand Overlordship over Slovakia - Slovakia refuses to become a puppet
-country_event = {
-	id = DOD_hungary.109
-	title = DOD_hungary.109.t
-	desc = DOD_hungary.109.desc 
-	picture = GFX_report_event_military_planning
-	
-	is_triggered_only = yes
-
-	option = {# war!
-		name = DOD_hungary.109.a
-		create_wargoal = {
-				type = puppet_wargoal_focus
-				target = SLO
-		}
-		hidden_effect = {
-			news_event = { id = news.311 days = 1 }
-		}
-	}
-
-	
 }
 
 #Pressure Romania - Event for SOV to agree to hungarian Scheme
@@ -4931,7 +4807,6 @@ country_event = {
 	}
 }
 
-#Intervene in CZE - CZE gets an offer from SOV - guarantee in retrun for SLO to HUN
 country_event = {
 	id = DOD_hungary.121
 	title = DOD_hungary.121.t
@@ -5247,13 +5122,6 @@ country_event = {
 				transfer_state = 70
 				transfer_state = 71
 				transfer_state = 72
-			}
-			SLO = {
-				add_state_core = 70
-				add_state_core = 71
-				add_state_core = 72
-				add_state_core = 73
-				add_state_core = 664
 			}
 		}
 	}

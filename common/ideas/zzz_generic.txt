@@ -1490,7 +1490,7 @@ ideas = {
 				}
 				NOT = {
 					AND = {
-						OR = { tag = BUL tag = GRE tag = TUR }
+						OR = { tag = BUL}
 						has_dlc = "Battle for the Bosporus"
 					}
 				}
@@ -1547,7 +1547,7 @@ ideas = {
 				}
 				NOT = {
 					AND = {
-						OR = { tag = CHI tag = PRC tag = MAN tag = SHX tag = XSM tag = GXC tag = YUN tag = SIK tag = MEN }
+						OR = { tag = CHI tag = MAN }
 						has_dlc = "Waking the Tiger"
 					}
 				}
@@ -1559,34 +1559,27 @@ ideas = {
 				}
 				NOT = {
 					AND = {
-						OR = { tag = SPR tag = SPA tag = SPB tag = SPC tag = SPD }
+						OR = { tag = SPR  }
 						has_dlc = "La Resistance"
 					}
 				}
 				NOT = {
 					AND = {
-						OR = { tag = BUL tag = GRE tag = TUR }
+						OR = { tag = BUL }
 						has_dlc = "Battle for the Bosporus"
 					}
 				}
 				NOT = {
 					AND = {
-						OR = { tag = ETH tag = SWI }
+						OR = { tag = ETH }
 						has_dlc = "By Blood Alone"
 					}
 				}
 
 				NOT = {
 					AND = {
-						OR = { tag = CHL tag = ARG tag = BRA }
+						OR = {tag = BRA }
 						has_dlc = "Trial of Allegiance"
-					}
-				}
-
-				NOT = {
-					AND = {
-						tag = AUS 
-						has_dlc = "Gotterdammerung"
 					}
 				}
 			}
@@ -1623,7 +1616,7 @@ ideas = {
 				}
 				NOT = {
 					AND = {
-						OR = { tag = CHI tag = PRC tag = MAN tag = SHX tag = XSM tag = GXC tag = YUN tag = SIK tag = MEN }
+						OR = { tag = CHI = MAN }
 						has_dlc = "Waking the Tiger"
 					}
 				}
@@ -1641,7 +1634,7 @@ ideas = {
 				}
 				NOT = {
 					AND = {
-						OR = { tag = BUL tag = GRE tag = TUR }
+						OR = { tag = BUL}
 						has_dlc = "Battle for the Bosporus"
 					}
 				}
@@ -1694,7 +1687,7 @@ ideas = {
 				}
 				NOT = {
 					AND = {
-						OR = { tag = CHI tag = PRC tag = MAN tag = SHX tag = XSM tag = GXC tag = YUN tag = SIK tag = MEN }
+						OR = { tag = CHI = MAN  }
 						has_dlc = "Waking the Tiger"
 					}
 				}
@@ -1712,7 +1705,7 @@ ideas = {
 				}
 				NOT = {
 					AND = {
-						OR = { tag = BUL tag = GRE tag = TUR }
+						OR = { tag = BUL}
 						has_dlc = "Battle for the Bosporus"
 					}
 				}
@@ -1766,7 +1759,7 @@ ideas = {
 				}
 				NOT = {
 					AND = {
-						OR = { tag = CHI tag = PRC tag = MAN tag = SHX tag = XSM tag = GXC tag = YUN tag = SIK tag = MEN }
+						OR = { tag = CHI = MAN  }
 						
 					}
 				}
@@ -1784,7 +1777,7 @@ ideas = {
 				}
 				NOT = {
 					AND = {
-						OR = { tag = BUL tag = GRE tag = TUR }
+						OR = { tag = BUL}
 						has_dlc = "Battle for the Bosporus"
 					}
 				}
@@ -1833,7 +1826,7 @@ ideas = {
 						has_dlc = "Waking the Tiger"
 					}
 					NOT = {
-						OR = { tag = CHI tag = PRC tag = MAN tag = SHX tag = XSM tag = GXC tag = YUN tag = SIK tag = MEN }
+						OR = { tag = CHI = MAN  }
 					}
 				}
 				NOT = {
@@ -1850,7 +1843,7 @@ ideas = {
 				}
 				NOT = {
 					AND = {
-						OR = { tag = BUL tag = GRE tag = TUR }
+						OR = { tag = BUL}
 						has_dlc = "Battle for the Bosporus"
 					}
 				}
@@ -1901,7 +1894,7 @@ ideas = {
 				}
 				NOT = {
 					AND = {
-						OR = { tag = CHI tag = PRC tag = MAN tag = SHX tag = XSM tag = GXC tag = YUN tag = SIK tag = MEN }
+						OR = { tag = CHI = MAN  }
 						has_dlc = "Waking the Tiger"
 					}
 				}
@@ -1919,7 +1912,7 @@ ideas = {
 				}
 				NOT = {
 					AND = {
-						OR = { tag = BUL tag = GRE tag = TUR }
+						OR = { tag = BUL}
 						has_dlc = "Battle for the Bosporus"
 					}
 				}
@@ -1992,7 +1985,7 @@ ideas = {
 				}
 				NOT = {
 					AND = {
-						OR = { tag = BUL tag = GRE tag = TUR }
+						OR = { tag = BUL}
 						has_dlc = "Battle for the Bosporus"
 					}
 				}
@@ -2049,7 +2042,7 @@ ideas = {
 				}
 				NOT = {
 					AND = {
-						OR = { tag = CHI tag = PRC tag = MAN tag = SHX tag = XSM tag = GXC tag = YUN tag = SIK tag = MEN }
+						OR = { tag = CHI = MAN  }
 						has_dlc = "Waking the Tiger"
 					}
 				}
@@ -2067,7 +2060,7 @@ ideas = {
 				}
 				NOT = {
 					AND = {
-						OR = { tag = BUL tag = GRE tag = TUR }
+						OR = { tag = BUL}
 						has_dlc = "Battle for the Bosporus"
 					}
 				}
@@ -2107,7 +2100,7 @@ ideas = {
 				}
 				NOT = {
 					AND = {
-						OR = { tag = CHI tag = PRC tag = MAN tag = SHX tag = XSM tag = GXC tag = YUN tag = SIK tag = MEN }
+						OR = { tag = CHI = MAN  }
 						has_dlc = "Waking the Tiger"
 					}
 				}
@@ -2125,7 +2118,7 @@ ideas = {
 				}
 				NOT = {
 					AND = {
-						OR = { tag = BUL tag = GRE tag = TUR }
+						OR = { tag = BUL}
 						has_dlc = "Battle for the Bosporus"
 					}
 				}
@@ -2165,7 +2158,7 @@ ideas = {
 				}
 				NOT = {
 					AND = {
-						OR = { tag = CHI tag = PRC tag = MAN tag = SHX tag = XSM tag = GXC tag = YUN tag = SIK tag = MEN }
+						OR = { tag = CHI = MAN  }
 						has_dlc = "Waking the Tiger"
 					}
 				}
@@ -2183,7 +2176,7 @@ ideas = {
 				}
 				NOT = {
 					AND = {
-						OR = { tag = BUL tag = GRE tag = TUR }
+						OR = { tag = BUL}
 						has_dlc = "Battle for the Bosporus"
 					}
 				}

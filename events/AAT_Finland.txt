@@ -578,281 +578,6 @@ country_event = {
 ########  #### ##        ########  #######  ##     ## ##     ##  ######     ##    
 
 
-# FIN wants to annex us (EST) / or ally with us - Event for EST (via Viron Kansa focus)
-country_event = {
-	id = AAT_finland_diplomacy.01
-	title = AAT_finland_diplomacy.01.t
-	desc = AAT_finland_diplomacy.01.desc
-	picture = GFX_report_event_generic_peaceful_annexation
-
-	is_triggered_only = yes
-
-	fire_only_once = yes
-	
-	#Let's get annexed yay!
-	option = {
-		name = AAT_finland_diplomacy.01.a
-
-		ai_chance = {
-			base = 10
-			modifier = { 
-				factor = 2
-				has_opinion = {
-					target = FROM
-					value > 24
-				}
-			}
-			modifier = { 
-				factor = 2
-				has_opinion = {
-					target = FROM
-					value > 49
-				}
-			}
-			modifier = { 
-				factor = 5
-				has_opinion = {
-					target = FROM
-					value > 89
-				}
-			}
-			modifier = { 
-				factor = 1.5
-				is_guaranteed_by = FROM
-			}
-			modifier = { 
-				factor = 5
-				has_non_aggression_pact_with = FROM
-			}
-			modifier = { 
-				factor = 5
-				is_in_faction_with = FROM
-			}
-			modifier = { 
-				factor = 100
-				is_subject_of = FROM
-			}
-		}
-
-		effect_tooltip = {
-			FROM = {
-				annex_country = {
-					target = ROOT
-					transfer_troops = yes
-				}
-			}
-			custom_effect_tooltip = GAME_OVER_TT
-		}
-		hidden_effect = {
-			FROM = { country_event = { id = AAT_finland_diplomacy.02 hours = 1 } }
-		}
-	}
-
-	#Let's join their faction
-	option = {
-		name = AAT_finland_diplomacy.01.b
-
-		ai_chance = {
-			base = 100
-			modifier = {
-				factor = 0
-				is_subject_of = FROM
-			}
-		}
-
-		trigger = {
-			FROM = { is_in_faction = yes }
-			NOT = { is_in_faction_with = FROM }
-		}
-
-		effect_tooltip = {
-			if = {
-				limit = {
-					FROM = { is_faction_leader = yes }
-				}
-				FROM = { add_to_faction = ROOT }
-			}
-			else= {
-				random_country = {
-					limit = {
-						is_in_faction_with = FROM
-						is_faction_leader = yes
-					}
-					add_to_faction = ROOT
-				}
-			}
-		}
-		hidden_effect = {
-			FROM = { country_event = { id = AAT_finland_diplomacy.03 hours = 1 } }
-		}
-	}
-
-	#Nope
-	option = {
-		name = AAT_finland_diplomacy.01.c
-
-		ai_chance = {
-			base = 200
-			modifier = {
-				factor = 0
-				is_subject_of = FROM
-			}
-		}
-
-		effect_tooltip = {
-			every_state = {
-				limit = {
-					is_core_of = ROOT
-					NOT = { is_owned_by = FROM }
-				}
-				add_claim_by = FROM
-			}
-		}
-		hidden_effect = {
-			FROM = { country_event = { id = AAT_finland_diplomacy.04 hours = 1 } }
-		}
-	}
-}
-
-# EST is annexed - Event for FIN
-country_event = {
-	id = AAT_finland_diplomacy.02
-	title = AAT_finland_diplomacy.02.t
-	desc = AAT_finland_diplomacy.02.desc
-	picture = GFX_report_event_generic_peaceful_annexation
-
-	is_triggered_only = yes
-
-	fire_only_once = yes
-	
-	#COOL!
-	option = {
-		name = AAT_finland_diplomacy.02.a
-
-		if = { #Bring unit leaders if NSB is active (otherwise is just generic people)
-			limit = {
-				has_dlc = "No Step Back"
-			}
-			if = { #Filter out ANti-Bolshevik generals if Finland is communist
-				limit = {
-					has_government = communism
-				}
-				FROM = {
-					every_unit_leader = {
-						limit = {
-							NOT = { has_trait = BALTIC_anti_bolshevik }
-						}
-						hidden_effect = {
-							if = {
-								limit = {
-									is_field_marshal = yes
-								}
-								demote_leader = yes
-							}
-						}
-						set_nationality = ROOT
-					}
-					every_core_state = { add_core_of = ROOT }
-				}
-			}
-			else = {
-				FROM = {
-					every_unit_leader = {
-						hidden_effect = {
-							if = {
-								limit = {
-									is_field_marshal = yes
-								}
-								demote_leader = yes
-							}
-						}
-						set_nationality = ROOT
-					}
-					every_core_state = { add_core_of = ROOT }
-				}
-			}
-		}
-		annex_country = {
-			target = FROM
-			transfer_troops = yes
-		}
-	}
-}
-
-# EST joins faction - Event for FIN
-country_event = {
-	id = AAT_finland_diplomacy.03
-	title = AAT_finland_diplomacy.03.t
-	desc = AAT_finland_diplomacy.03.desc
-	picture = GFX_report_event_baltic_entente_one
-
-	is_triggered_only = yes
-
-	fire_only_once = yes
-	
-	#Cool!
-	option = {
-		name = AAT_finland_diplomacy.03.a
-
-		if = {
-			limit = {
-				is_faction_leader = yes
-			}
-			add_to_faction = FROM
-		}
-		else = {
-			faction_leader = {
-				add_to_faction = FROM
-			}
-		}
-	}
-}
-
-# EST refuses - Event for FIN
-country_event = {
-	id = AAT_finland_diplomacy.04
-	title = AAT_finland_diplomacy.04.t
-	desc = AAT_finland_diplomacy.04.desc
-	picture = GFX_report_event_generic_sign_treaty1
-
-	is_triggered_only = yes
-
-	fire_only_once = yes
-	
-	#We respect their decision (lame)
-	option = {
-		name = AAT_finland_diplomacy.04.a
-
-		ai_chance = {
-			base = 1
-		}
-	}
-
-	#Inte chicken
-	option = {
-		name = AAT_finland_diplomacy.04.b
-
-		ai_chance = {
-			base = 10
-			modifier = {
-				factor = 0
-				FROM = {
-					is_ai = no
-				}
-			}
-		}
-
-		every_state = {
-			limit = {
-				is_core_of = EST
-				NOT = { is_owned_by = ROOT }
-			}
-			add_claim_by = ROOT
-		}
-	}
-}
-
-
 #############
 ### SAMI ####
 #############
@@ -5177,7 +4902,7 @@ country_event = {
 					}
 					KAR = {
 						declare_war_on = {
-							target = SOU
+							target = SOV
 							type = independence_wargoal
 						}
 					}
@@ -5188,7 +4913,7 @@ country_event = {
 						FROM = {
 							add_to_war = {
 								targeted_alliance = KAR
-								enemy = SOU
+								enemy = SOV
 								hostility_reason = asked_to_join
 							}
 						}
@@ -5198,11 +4923,11 @@ country_event = {
 					effect_tooltip = {
 						KAR = {
 							declare_war_on = {
-								target = SOU
+								target = SOV
 								type = independence_wargoal
 							}
 
-							give_military_access = SOU
+							give_military_access = SOV
 						}
 						give_military_access = KAR
 					}
@@ -5280,7 +5005,7 @@ country_event = {
 				}
 				KAR = {
 					declare_war_on = {
-						target = SOU
+						target = SOV
 						type = independence_wargoal
 					}
 				}
@@ -5291,7 +5016,7 @@ country_event = {
 					FROM = {
 						add_to_war = {
 							targeted_alliance = KAR
-							enemy = SOU
+							enemy = SOV
 							hostility_reason = asked_to_join
 						}
 					}
@@ -5301,11 +5026,11 @@ country_event = {
 				effect_tooltip = {
 					KAR = {
 						declare_war_on = {
-							target = SOU
+							target = SOV
 							type = independence_wargoal
 						}
 
-						give_military_access = SOU
+						give_military_access = SOV
 					}
 					give_military_access = KAR
 				}

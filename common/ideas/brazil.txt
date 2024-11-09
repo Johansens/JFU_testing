@@ -474,7 +474,7 @@ ideas = {
 			}
 
 			targeted_modifier = {
-				tag = SOU
+				tag = SOV
 				license_purchase_cost = -0.30
 				license_production_speed = 0.1
 			}

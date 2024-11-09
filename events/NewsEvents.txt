@@ -2575,56 +2575,6 @@ news_event = {
 	}
 }
 
-#Hidden event to trigger actual annexation (base event baltic.5)
-news_event = {
-	id = news.71
-
-	hidden = yes
-
-	major = yes
-	
-	is_triggered_only = yes
-	
-	immediate = {
-		if = {
-			limit = { FROM = { tag = LIT } }
-		 	SOV = {
-		 		annex_country = {
-				target = LIT
-				transfer_troops = yes } 
-				add_named_threat = { threat = 2 name = soviet.35_threat_LIT }
-			}
-		}
-		if = {
-			limit = { FROM = { tag = FIN } }
-		 	SOV = { 
-		 		annex_country = {
-				target = FIN
-				transfer_troops = yes } 
-				add_named_threat = { threat = 5 name = soviet.35_threat_FIN }
-			}
-		}
-		if = {
-			limit = { FROM = { tag = EST } }
-		 	SOV = { 
-		 		annex_country = {
-				target = EST
-				transfer_troops = yes } 
-				add_named_threat = { threat = 2 name = soviet.35_threat_EST }
-			}
-		}
-		if = {
-			limit = { FROM = { tag = LAT } }
-		 	SOV = {
-		 		annex_country = {
-				target = LAT
-				transfer_troops = yes }
-				add_named_threat = { threat = 2 name = soviet.35_threat_LAT }
-			}
-		}
-	}
-}
-
 
 # The Fall of Warsaw (Germany)
 news_event = {
@@ -5177,53 +5127,6 @@ news_event = {
 	}
 }
 
-# Germany declares war without having remilitarized Rhineland. Which then happens.
-news_event = {
-	id = news.155
-	title = news.155.t
-	desc = news.155.d
-	picture = GFX_news_event_german_soldiers
-	
-	major = yes
-
-	trigger = {
-		NOT = { has_global_flag = rhineland_militarized_war }
-		GER = {
-			OR = {
-				has_country_flag = GER_rhineland_backed_down
-				NOT = { 
-					has_completed_focus = GER_remilitarize_the_rhineland 
-				}
-			}
-			has_offensive_war = yes
-			NOT = {
-				has_war_with = SIL
-			}
-		}
-		42 = {
-			is_demilitarized_zone = no
-		}
-	}
-
-	immediate = {
-		set_global_flag = rhineland_militarized_war
-	}
-	
-
-	mean_time_to_happen = {
-		days = 2
-	}
-	
-	option = {
-		trigger = { NOT = { tag = GER } }
-		name = news.155.a
-	}
-	option = {
-		trigger = { tag = GER } 
-		name = news.155.b
-	}
-}
-
 # Komet Sighted
 news_event = {
 	id = news.156
@@ -6924,94 +6827,6 @@ news_event = {
 	}
 }
 
-#Italy Seeks Reconciliation With Turkey
-news_event = {
-	id = news.188
-	title = news.188.t
-	desc = news.188.d
-	picture = GFX_news_event_french_parade
-
-	major = yes
-
-	is_triggered_only = yes
-
-	trigger = {
-		NOT = {
-			OR = {
-				tag = ITA
-				tag = TUR
-			}
-		}
-	}
-
-	option = {
-		name = news.188.a
-		trigger = {
-			is_in_faction_with = ITA
-		}
-	}
-
-	option = {
-		name = news.188.b
-		trigger = {
-			has_war_with = ITA
-		}
-	}
-
-	option = {
-		name = news.188.c
-		trigger = {
-			NOT = {
-				OR = {
-					is_in_faction_with = ITA
-					has_war_with = ITA
-				}
-			}
-		}
-	}
-}
-
-#Italy Demands Anatolian Naval Bases
-news_event = {
-	id = news.189
-	title = news.189.t
-	desc = news.189.d
-	picture = GFX_news_event_german_speech
-
-	major = yes
-
-	is_triggered_only = yes
-
-	#This matter was settled!
-	option = {
-		name = news.189.a
-		trigger = {
-			tag = TUR
-		}
-	}
-
-	#We will have what we were promised!
-	option = {
-		name = news.189.b
-		trigger = {
-			tag = ITA
-		}
-	}
-
-	#Their rivalry is intensifying.
-	option = {
-		name = news.189.c
-		trigger = {
-			NOT ={
-				OR = {
-					tag = ITA
-					tag = TUR
-				}
-			}
-		}
-	}
-}
-
 #Spain Cedes the Balearic Islands
 news_event = {
 	id = news.190
@@ -7576,268 +7391,6 @@ news_event = {
 		name = news.200.f
 		trigger = {
 			tag = ENG
-		}
-	}
-}
-
-
-#Germany Puppets Turkey
-news_event = {
-	id = news.201
-	title = news.201.t
-	desc = news.201.d
-	picture = GFX_news_events_generic_sign_treaty2
-
-	major = yes
-
-	is_triggered_only = yes
-
-	immediate = {
-		GER = {
-			save_event_target_as = Germany
-		}
-		SOV = {
-			save_event_target_as = Soviet
-		}
-	}
-
-	trigger = {
-		NOT = {
-			tag = TUR
-		}
-	}
-
-	#The new Turkish government secures our competitiveness in the Mediterranean.
-	option = {
-		name = news.201.a
-		trigger = {
-			tag = GER
-		}
-	}
-
-	#This terrible force is felling countries like dominoes.
-	option = {
-		name = news.201.b
-		trigger = {
-			OR = {
-				has_war_with = GER
-				has_war_with = SOV
-			}
-		}
-	}
-
-	#[From.GetName] couldn't resist the strength of the [Germany.GetFactionName].
-	option = {
-		name = news.201.c
-		trigger = {
-			is_in_faction_with = GER
-			NOT = {
-				OR = {
-					tag = GER
-					tag = SOV
-				}
-			}
-		}
-	}
-
-	#The alliance is strengthening our position and remains highly beneficial. For now.
-	option = {
-		name = news.201.e
-		trigger = {
-			tag = SOV
-		}
-	}
-
-	#Turkey has fallen victim to the predatory [Germany.GetFactionName].
-	option = {
-		name = news.201.f
-		trigger = {
-			NOT = {
-				is_in_faction_with = GER
-			}
-			NOT = {
-				OR = {
-					tag = GER
-					tag = SOV
-				}
-			}
-		}
-	}
-}
-
-
-
-
-
-#Danzig For Slovakia
-news_event = {
-	id = news.202
-	title = news.202.t
-	desc = news.202.d
-	picture = GFX_news_events_generic_sign_treaty2
-
-	major = yes
-
-	is_triggered_only = yes
-
-	fire_for_sender = no
-
-	immediate = {
-		POL = {
-			save_event_target_as = Poland
-		}
-	}
-
-	#A fair exchange to correct the mistakes of Versailles.
-	option = {
-		name = news.202.a
-		trigger = {
-			is_in_faction_with = GER
-		}
-	}
-
-	#Cooperation makes us stronger than conflict does.
-	option = {
-		name = news.202.b
-		trigger = {
-			is_in_faction_with = POL
-			NOT = {
-				is_in_faction_with = GER 
-			}
-		}
-	}
-
-	#This is a blatant breach of Versailles!
-	option = {
-		name = news.202.c
-		trigger = {
-			OR = {
-				tag = ENG
-				tag = FRA
-			}
-		}
-	}
-
-	#Conflict over Danzig has been averted.
-	option = {
-		name = news.202.e
-		trigger = {
-			NOT = {
-				OR = {
-					tag = ENG
-					tag = FRA
-				}
-			}
-			NOT = {
-				is_in_faction_with = POL
-			}
-			NOT = {
-				is_in_faction_with = GER
-			}
-		}
-	}
-}
-
-#Danzig Ceded
-news_event = {
-	id = news.203
-	title = news.203.t
-	desc = news.203.d
-	picture = GFX_news_events_generic_sign_treaty2
-
-	major = yes
-
-	is_triggered_only = yes
-
-	fire_for_sender = no
-
-	option = {
-		name = news.203.a
-		trigger = {
-			has_government = democratic
-			NOT = {
-				is_in_faction_with = GER
-			}
-		}
-	}
-
-	option = {
-		name = news.203.b
-		trigger = {
-			is_in_faction_with = GER
-		}
-	}
-
-	option = {
-		name = news.203.c
-		trigger = {
-			has_government = neutrality
-			NOT = {
-				is_in_faction_with = GER
-			}
-		}
-	}
-
-	option = {
-		name = news.203.e
-		trigger = {
-			has_government = communism
-			NOT = {
-				is_in_faction_with = GER
-			}
-		}
-	}
-}
-
-
-#Poland Refuses to Cede Danzig
-news_event = {
-	id = news.204
-	title = news.204.t
-	desc = news.204.d
-	picture = GFX_news_event_polish_tanks
-
-	major = yes
-
-	is_triggered_only = yes
-
-	fire_for_sender = no
-
-	#They have ignored every warning!
-	option = {
-		name = news.204.a
-		trigger = {
-			is_in_faction = yes
-			NOT = {
-				is_in_faction_with = GER
-			}
-			NOT = {
-				is_in_faction_with = POL
-			}
-		}
-	}
-
-	#
-	option = {
-		name = news.204.b
-		trigger = {
-			is_in_faction_with = GER
-		}
-	}
-
-	#Together we must stop this aggressor!
-	option = {
-		name = news.204.c
-		trigger = {
-			is_in_faction_with = POL
-		}
-	}
-
-	#This is a grave situation.
-	option = {
-		name = news.204.e
-		trigger = {
-			is_in_faction = no
 		}
 	}
 }
@@ -8468,80 +8021,6 @@ news_event = {
 	}
 }
 
-#Poland Seeks Baltic Cooperation
-news_event = {
-	id = news.214
-	title = news.214.t
-	desc = {
-		text = news.214.d_baltic
-		trigger = {
-			OR = {
-				tag = EST
-				tag = LAT
-				tag = LIT
-			}
-		}
-	}
-	desc = {
-		text = news.214.d_not_baltic
-		trigger = {
-			NOT = {
-				OR = {
-					tag = EST
-					tag = LAT
-					tag = LIT
-				}
-			}
-		}
-	}
-	picture = GFX_news_event_polish_army
-
-	major = yes
-
-	is_triggered_only = yes
-
-	fire_for_sender = no
-
-	option = {
-		name = news.214.a
-		trigger = {
-			NOT = {
-				OR = {
-					tag = EST
-					tag = LAT
-					tag = LIT
-					tag = GER
-					tag = SOV
-				}
-			}
-		}
-	}
-
-	option = {
-		name = news.214.b
-		trigger = {
-			tag = SOV
-		}
-	}
-
-	option = {
-		name = news.214.c
-		trigger = {
-			tag = GER
-		}
-	}
-
-	option = {
-		name = news.214.e
-		trigger = {
-			OR = {
-				tag = EST
-				tag = LAT
-				tag = LIT
-			}
-		}
-	}
-}
 
 
 #Anti-Soviet Pact
@@ -8592,115 +8071,6 @@ news_event = {
 				OR = {
 					has_government = communism
 					has_idea = anti_soviet_pact
-				}
-			}
-		}
-	}
-}
-
-#Turkey Resists German Ultimatum
-news_event = {
-	id = news.216
-	title = news.216.t
-	desc = news.216.d
-	picture = GFX_news_event_journalists_speech
-
-	major = yes
-
-	is_triggered_only = yes
-
-	fire_for_sender = no
-
-	option = {
-		name = news.216.a
-		trigger = {
-			has_war_with = GER
-			NOT = {
-				is_in_faction_with = TUR
-			}
-		}
-	}
-
-	option = {
-		name = news.216.b
-		trigger = {
-			is_in_faction_with = TUR
-			NOT = {
-				is_in_faction_with = GER
-			}
-		}
-	}
-
-	option = {
-		name = news.216.c
-		trigger = {
-			is_in_faction_with = GER
-		}
-	}
-
-	option = {
-		name = news.216.e
-		trigger = {
-			NOT = {
-				OR = {
-					is_in_faction_with = GER
-					is_in_faction_with = TUR
-					has_war_with = GER
-				}
-			}
-		}
-	}
-}
-
-#Turkey Joins Allies to Avoid Ultimatum
-news_event = {
-	id = news.217
-	title = news.217.t
-	desc = news.217.d
-	picture = GFX_news_event_journalists_speech
-
-	major = yes
-
-	is_triggered_only = yes
-
-	fire_for_sender = no
-
-	option = {
-		name = news.217.a
-		trigger = {
-			is_in_faction_with = TUR
-		}
-	}
-
-	option = {
-		name = news.217.b
-		trigger = {
-			has_war_with = GER
-			NOT = {
-				is_in_faction_with = TUR
-			}
-		}
-	}
-
-	option = {
-		name = news.217.c
-		trigger = {
-			OR = {
-				tag = GER
-				is_in_faction_with = GER
-			}
-		}
-	}
-
-	option = {
-		name = news.217.e
-		trigger = {
-			NOT = {
-				OR = {
-					tag = GER
-					is_in_faction_with = GER
-					is_in_faction_with = TUR
-					has_war_with = GER
 				}
 			}
 		}
@@ -8992,7 +8362,6 @@ news_event = {
 			OR = {
 				tag = BEL
 				tag = HOL
-				tag = LUX
 			}
 		}
 	}
@@ -9018,7 +8387,6 @@ news_event = {
 				OR = {
 					tag = BEL
 					tag = HOL
-					tag = LUX
 				}
 			}
 		}
@@ -9032,7 +8400,6 @@ news_event = {
 					tag = ENG
 					tag = BEL
 					tag = HOL
-					tag = LUX
 					is_in_faction_with = ENG
 					is_in_faction = yes
 				}
@@ -9100,102 +8467,6 @@ news_event = {
 	}
 }
 
- 
-
-
-#British Influence on Turkey
-news_event = {
-	id = news.225
-	title = news.225.t
-	desc = news.225.d
-	picture = GFX_news_event_generic_sign_treaty1
-
-	major = yes
-
-	is_triggered_only = yes
-
-	fire_for_sender = no
-
-	option = {
-		name = news.225.a
-		trigger = {
-			tag = TUR
-		}
-	}
-
-	option = {
-		name = news.225.b
-		trigger = {
-			NOT = {
-				tag = TUR
-			}
-			OR = {
-				has_government = fascism
-				has_government = communism
-			}
-		}
-	}
-
-	option = {
-		name = news.225.c
-		trigger = {
-			NOT = {
-				OR = {
-					tag = TUR
-					has_government = fascism
-					has_government = communism
-				}
-			}
-		}
-	}
-}
-
-#British Influence on Greece
-news_event = {
-	id = news.226
-	title = news.226.t
-	desc = news.226.d
-	picture = GFX_news_event_generic_sign_treaty1
-
-	major = yes
-
-	is_triggered_only = yes
-
-	fire_for_sender = no
-
-	option = {
-		name = news.226.a
-		trigger = {
-			tag = GRE
-		}
-	}
-
-	option = {
-		name = news.226.b
-		trigger = {
-			NOT = {
-				tag = GRE
-			}
-			OR = {
-				has_government = fascism
-				has_government = communism
-			}
-		}
-	}
-
-	option = {
-		name = news.226.c
-		trigger = {
-			NOT = {
-				OR = {
-					tag = GRE
-					has_government = fascism
-					has_government = communism
-				}
-			}
-		}
-	}
-}
 
 news_event = {
 	id = news.227
@@ -9615,7 +8886,6 @@ news_event = {
 		trigger = {
 			OR = {
 				tag = BEL
-				tag = LUX
 			}
 		}
 	}
@@ -9626,7 +8896,6 @@ news_event = {
 			OR = {
 				tag = HOL
 				is_in_faction_with = BEL
-				is_in_faction_with = LUX
 				is_in_faction_with = HOL
 			}
 			has_war_with = GER
@@ -9638,13 +8907,11 @@ news_event = {
 		trigger = {
 			NOT = {
 				tag = BEL
-				tag = LUX
 			}
 			OR = {
 				NOT = {
 					tag = HOL
 					is_in_faction_with = HOL
-					is_in_faction_with = LUX
 					is_in_faction_with = BEL
 				}
 				NOT = { has_war_with = GER }
@@ -11164,7 +10431,6 @@ news_event = {
 		trigger = {
 			OR = {
 				TAG = CHI
-				TAG = PRC
 			}
 		}
 	}
@@ -11173,7 +10439,6 @@ news_event = {
 		trigger = { 
 			NOT = {
 				TAG = CHI
-				TAG = PRC
 			}
 			OR = {
 				TAG = JAP
@@ -11185,7 +10450,6 @@ news_event = {
 		name = news.288.c
 		trigger = { 
 			NOT = { 
-				TAG = PRC 
 				TAG = CHI
 				TAG = JAP
 				is_in_faction_with = JAP
@@ -12016,23 +11280,7 @@ news_event = {
 	id = news.309
 	title = news.309.t
 	desc = {
-		text = news.309.desc.a
-		trigger = { 
-			OR = {
-				NOT = { country_exists = SLO }
-				AND = {
-					country_exists = SLO
-					SLO = { is_subject = yes }
-				}
-			}
-		}
-	}
-	desc = {
 		text = news.309.desc.b
-		trigger = { 
-			country_exists = SLO
-			SLO = { is_subject = no }
-		}
 	}
 	picture = GFX_news_event_hungary_refused
 	
@@ -12046,65 +11294,14 @@ news_event = {
 			TAG = HUN
 		}
 	}
-	option = {
-		name = news.309.b
-		trigger = { 
-			TAG = CZE
-			OR = {
-				NOT = { country_exists = SLO }
-				AND = {
-					country_exists = SLO
-					SLO = { is_subject = yes }
-				}
-			}
-		}
-	}
-	option = {
-		name = news.309.c
-		trigger = { 
-			AND = {
-				TAG = SLO
-				SLO = { is_subject = no }
-			}
-		}
-	}
-	option = {
-		name = news.300.c
-		trigger = { 
-			NOT = {
-				TAG = HUN
-				TAG = CZE
-				AND = {
-					TAG = SLO
-					SLO = { is_subject = yes }
-				}
-			}
-		}
-	}
 }
 
-#CZE/SLO folds and gives up Slovakia
+#CZE folds and gives up Slovakia
 news_event = {
 	id = news.310
 	title = news.310.t
 	desc = {
-		text = news.310.desc.a
-		trigger = { 
-			OR = {
-				NOT = { country_exists = SLO }
-				AND = {
-					country_exists = SLO
-					SLO = { is_subject = yes }
-				}
-			}
-		}
-	}
-	desc = {
 		text = news.310.desc.b
-		trigger = { 
-			country_exists = SLO
-			SLO = { is_subject = no }
-		}
 	}
 	picture = GFX_news_event_generic_sign_treaty1
 	
@@ -12135,28 +11332,12 @@ news_event = {
 	}
 }
 
-#Hungary and CZE/SLO unable to find solution, war looms
+#Hungary and CZE unable to find solution, war looms
 news_event = {
 	id = news.311
 	title = news.311.t
 	desc = {
-		text = news.311.desc.a
-		trigger = { 
-			OR = {
-				NOT = { country_exists = SLO }
-				AND = {
-					country_exists = SLO
-					SLO = { is_subject = yes }
-				}
-			}
-		}
-	}
-	desc = {
 		text = news.311.desc.b
-		trigger = { 
-			country_exists = SLO
-			SLO = { is_subject = no }
-		}
 	}
 	picture = GFX_news_event_hungarian_soldiers
 	
@@ -12175,7 +11356,6 @@ news_event = {
 		trigger = { 
 			OR = {
 				TAG = CZE
-				TAG = SLO
 			}
 		}
 	}
@@ -12185,7 +11365,6 @@ news_event = {
 			NOT = {
 				TAG = HUN
 				TAG = CZE
-				TAG = SLO
 			}
 		}
 	}
@@ -12826,143 +12005,6 @@ news_event = {
 		}
 	}
 }
-
-#The Banovina of Croatia
-news_event = {
-	id = news.326
-	title = news.326.t
-	desc = news.326.desc
-	picture = GFX_news_event_banovina_croatia
-	
-	major = yes
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = news.326.a
-		trigger = {
-			TAG = YUG
-		}
-	}
-	option = {
-		name = news.326.b
-		trigger = {
-			TAG = CRO
-		}
-	}
-	option = {
-		name = news.326.c
-		trigger = { 
-			NOT = {
-				TAG = YUG
-				TAG = CRO
-			}
-		}
-	}
-}
-
-#Yugoslavia Claims Macedonia
-news_event = {
-	id = news.327
-	title = news.327.t
-	desc = news.327.desc
-	picture = GFX_news_event_generic_parliament
-	
-	major = yes
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = news.327.a
-		trigger = {
-			TAG = YUG
-		}
-	}
-	option = {
-		name = news.327.b
-		trigger = {
-			TAG = GRE
-		}
-	}
-	option = {
-		name = news.327.c
-		trigger = { 
-			NOT = {
-				TAG = YUG
-				TAG = GRE
-			}
-		}
-	}
-}
-
-#Yugoslavia Claims Italian Border
-news_event = {
-	id = news.328
-	title = news.328.t
-	desc = news.328.desc
-	picture = GFX_news_event_generic_parliament
-	
-	major = yes
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = news.328.a
-		trigger = {
-			TAG = YUG
-		}
-	}
-	option = {
-		name = news.328.b
-		trigger = {
-			TAG = ITA
-		}
-	}
-	option = {
-		name = news.328.c
-		trigger = { 
-			NOT = {
-				TAG = YUG
-				TAG = ITA
-			}
-		}
-	}
-}
-
-#Yugoslavia Recognizes Soviet Union
-news_event = {
-	id = news.329
-	title = news.329.t
-	desc = news.329.desc
-	picture = GFX_news_event_stalin_meeting
-	
-	major = yes
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = news.329.a
-		trigger = {
-			TAG = YUG
-		}
-	}
-	option = {
-		name = news.329.b
-		trigger = {
-			TAG = SOV
-		}
-	}
-	option = {
-		name = news.329.c
-		trigger = { 
-			NOT = {
-				TAG = YUG
-				TAG = SOV
-			}
-		}
-	}
-}
-
 #The Pan-Slavic Worker's Congress
 news_event = {
 	id = news.330

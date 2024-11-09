@@ -102,7 +102,6 @@ on_actions = {
 				}
 			}
 			SWE = { JFU_startup_on_action = yes }
-			set_global_flag = { flag = VIC value = 0 }
 			set_variable = {
 				global.axis_score = 0
 			}

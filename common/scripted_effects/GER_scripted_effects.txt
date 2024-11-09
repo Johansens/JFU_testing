@@ -283,17 +283,17 @@ MR_pact_transfer_state_effect = {
 			limit = {
 				NOT = {
 					any_other_country = {
-						is_in_faction_with = SOU
+						is_in_faction_with = SOV
 						has_country_flag = BLT_soviets_said_yes_to_belarus_flag
 					}
 				}
 			}
-			SOU = { transfer_state = 96 }
+			SOV = { transfer_state = 96 }
 		}
 		else = {
 			random_other_country = {
 				limit = {
-					is_in_faction_with = SOU
+					is_in_faction_with = SOV
 					OR = {
 						has_cosmetic_tag = LIT_belarus
 						has_cosmetic_tag = LAT_belarus
@@ -321,17 +321,17 @@ MR_pact_transfer_state_effect = {
 			limit = {
 				NOT = {
 					any_other_country = {
-						is_in_faction_with = SOU
+						is_in_faction_with = SOV
 						has_country_flag = BLT_soviets_said_yes_to_belarus_flag
 					}
 				}
 			}
-			SOU = { transfer_state = 95 }
+			SOV = { transfer_state = 95 }
 		}
 		else = {
 			random_other_country = {
 				limit = {
-					is_in_faction_with = SOU
+					is_in_faction_with = SOV
 					OR = {
 						has_cosmetic_tag = LIT_belarus
 						has_cosmetic_tag = LAT_belarus
@@ -359,17 +359,17 @@ MR_pact_transfer_state_effect = {
 			limit = {
 				NOT = {
 					any_other_country = {
-						is_in_faction_with = SOU
+						is_in_faction_with = SOV
 						has_country_flag = BLT_soviets_said_yes_to_belarus_flag
 					}
 				}
 			}
-			SOU = { transfer_state = 94 }
+			SOV = { transfer_state = 94 }
 		}
 		else = {
 			random_other_country = {
 				limit = {
-					is_in_faction_with = SOU
+					is_in_faction_with = SOV
 					OR = {
 						has_cosmetic_tag = LIT_belarus
 						has_cosmetic_tag = LAT_belarus
@@ -393,7 +393,7 @@ MR_pact_transfer_state_effect = {
 				}
 			}
 		}
-		SOU = { transfer_state = 93 }
+		SOV = { transfer_state = 93 }
 	}
 	if = {
 		limit = {
@@ -407,7 +407,7 @@ MR_pact_transfer_state_effect = {
 				}
 			}
 		}
-		SOU = { transfer_state = 91 }
+		SOV = { transfer_state = 91 }
 	}
 	if = {
 		limit = {
@@ -425,17 +425,17 @@ MR_pact_transfer_state_effect = {
 			limit = {
 				NOT = {
 					any_other_country = {
-						is_in_faction_with = SOU
+						is_in_faction_with = SOV
 						has_country_flag = BLT_soviets_said_yes_to_belarus_flag
 					}
 				}
 			}
-			SOU = { transfer_state = 97 }
+			SOV = { transfer_state = 97 }
 		}
 		else = {
 			random_other_country = {
 				limit = {
-					is_in_faction_with = SOU
+					is_in_faction_with = SOV
 					OR = {
 						has_cosmetic_tag = LIT_belarus
 						has_cosmetic_tag = LAT_belarus
@@ -462,7 +462,7 @@ MR_pact_transfer_state_effect = {
 				}
 			}
 		}
-		SOU = { transfer_state = 89 }
+		SOV = { transfer_state = 89 }
 	}
 	if = {
 		limit = {
@@ -480,7 +480,7 @@ MR_pact_transfer_state_effect = {
 			limit = {
 				OR = {
 					has_global_flag = LIT_gets_vilnius
-					LIT = { is_in_faction_with = SOU }
+					LIT = { is_in_faction_with = SOV }
 					LIT = { controls_state = 784 }
 				}
 				LIT = {
@@ -494,17 +494,17 @@ MR_pact_transfer_state_effect = {
 			limit = {
 				NOT = {
 					any_other_country = {
-						is_in_faction_with = SOU
+						is_in_faction_with = SOV
 						has_country_flag = BLT_soviets_said_yes_to_belarus_flag
 					}
 				}
 			}
-			SOU = { transfer_state = 784 }
+			SOV = { transfer_state = 784 }
 		}
 		else = {
 			random_other_country = {
 				limit = {
-					is_in_faction_with = SOU
+					is_in_faction_with = SOV
 					OR = {
 						has_cosmetic_tag = LIT_belarus
 						has_cosmetic_tag = LAT_belarus
@@ -531,7 +531,7 @@ MR_pact_transfer_faction_state_effect = {
 				}
 			}
 		}
-		SOU = { transfer_state = 96 }
+		SOV = { transfer_state = 96 }
 	}
 	if = {
 		limit = {
@@ -545,7 +545,7 @@ MR_pact_transfer_faction_state_effect = {
 				}
 			}
 		}
-		SOU = { transfer_state = 95 }
+		SOV = { transfer_state = 95 }
 	}
 	if = {
 		limit = {
@@ -559,7 +559,7 @@ MR_pact_transfer_faction_state_effect = {
 				}
 			}
 		}
-		SOU = { transfer_state = 94 }
+		SOV = { transfer_state = 94 }
 	}
 	if = {
 		limit = {
@@ -573,7 +573,7 @@ MR_pact_transfer_faction_state_effect = {
 				}
 			}
 		}
-		SOU = { transfer_state = 93 }
+		SOV = { transfer_state = 93 }
 	}
 	if = {
 		limit = {
@@ -587,7 +587,7 @@ MR_pact_transfer_faction_state_effect = {
 				}
 			}
 		}
-		SOU = { transfer_state = 91 }
+		SOV = { transfer_state = 91 }
 	}
 	if = {
 		limit = {
@@ -601,7 +601,7 @@ MR_pact_transfer_faction_state_effect = {
 				}
 			}
 		}
-		SOU = { transfer_state = 97 }
+		SOV = { transfer_state = 97 }
 	}
 	if = {
 		limit = {
@@ -615,7 +615,7 @@ MR_pact_transfer_faction_state_effect = {
 				}
 			}
 		}
-		SOU = { transfer_state = 89 }
+		SOV = { transfer_state = 89 }
 	}
 	if = {
 		limit = {
@@ -643,7 +643,7 @@ MR_pact_transfer_faction_state_effect = {
 			LIT = { transfer_state = 784 }
 		}
 		else = {
-			SOU = { transfer_state = 784 }
+			SOV = { transfer_state = 784 }
 		}
 	}
 }
@@ -1346,41 +1346,6 @@ GER_setup_GER_sphere_of_influence_array = { #REMEMBER to update the focus toolti
 	}
 }
 
-GER_setup_SOV_sphere_of_influence_array = { #REMEMBER to update the focus tooltip if this is ever changed!
-	hidden_effect = {
-		for_each_scope_loop = {
-			array = global.states
-			IF = {
-				limit = {
-					is_on_continent = europe
-					OR = {
-						is_core_of = FIN
-						is_core_of = EST
-						is_core_of = LAT
-						is_core_of = LIT
-						is_core_of = SLO
-						is_core_of = ROM
-						is_core_of = YUG
-						is_core_of = BUL
-
-						#EAST POLAND
-						state = 89
-						state = 91
-						state = 93
-						state = 94
-						state = 95
-						state = 96
-						state = 97
-					}
-				}
-				THIS = {
-					add_to_array = { GER.SOV_sphere_of_influence_array = THIS }
-				}
-			}
-		}
-	}
-}
-
 
 GER_improve_rosenbergs_trait_effect = {
 	add_to_variable = { GER_total_reichskommissariats = 1 }
@@ -1554,122 +1519,6 @@ GER_setup_CHI_sphere_of_influence_array = {
 			}
 		}
 	}
-}
-
-# Setup faction-wide effects where GER is FROM (Update here when new things are added)
-GER_setup_faction_wide_aoe_effects_from = {
-	
-	IF = {
-		limit = {
-			FROM = {
-				original_tag = GER
-				OR = {
-					has_completed_focus = GER_pool_technical_know_how_ww
-					has_completed_focus = GER_pool_technical_know_how
-				}
-			}
-			NOT = { has_idea = GER_pool_technical_know_how }
-		}
-		add_ideas = GER_pool_technical_know_how
-	}
-	IF = {
-		limit = {
-			FROM = {
-				original_tag = GER
-				OR = {
-					has_completed_focus = GER_shared_rd_programs_ww
-					has_completed_focus = GER_shared_rd_programs
-				}
-				is_in_tech_sharing_group = ger_dem_research
-			}
-		}
-		add_to_tech_sharing_group = ger_dem_research 
-		custom_effect_tooltip = generic_skip_one_line_tt
-	}
-	IF = {
-		limit = {
-			FROM = {
-				original_tag = GER
-				has_completed_focus = GER_mitteleuropa_cooperation_sphere
-				is_in_tech_sharing_group = ger_mitteleuropa_research
-			}
-		}
-		add_to_tech_sharing_group = ger_mitteleuropa_research 
-		custom_effect_tooltip = generic_skip_one_line_tt
-	}
-	IF = {
-		limit = {
-			FROM = {
-				original_tag = GER
-				has_completed_focus = GER_establish_a_customs_union
-			}
-			NOT = { has_idea = GER_mitteleuropa_customs_union_member }
-		}
-		add_ideas = GER_mitteleuropa_customs_union_member
-	}
-
-}
-
-# Setup faction-wide effects where GER is ROOT (Update here when new things are added)
-GER_setup_faction_wide_aoe_effects_root = {
-	
-	IF = {
-		limit = {
-			ROOT = {
-				original_tag = GER
-				OR = {
-					has_completed_focus = GER_pool_technical_know_how_ww
-					has_completed_focus = GER_pool_technical_know_how
-				}
-			}
-			NOT = { has_idea = GER_pool_technical_know_how }
-		}
-		FROM = {
-			add_ideas = GER_pool_technical_know_how
-		}
-	}
-	IF = {
-		limit = {
-			ROOT = {
-				original_tag = GER
-				OR = {
-					has_completed_focus = GER_shared_rd_programs_ww
-					has_completed_focus = GER_shared_rd_programs
-				}
-				is_in_tech_sharing_group = ger_dem_research
-			}
-		}
-		FROM = {
-			add_to_tech_sharing_group = ger_dem_research 
-		}
-		custom_effect_tooltip = generic_skip_one_line_tt
-	}
-	IF = {
-		limit = {
-			ROOT = {
-				original_tag = GER
-				has_completed_focus = GER_mitteleuropa_cooperation_sphere
-				is_in_tech_sharing_group = ger_mitteleuropa_research
-			}
-		}
-		FROM = {
-			add_to_tech_sharing_group = ger_mitteleuropa_research 
-		}
-		custom_effect_tooltip = generic_skip_one_line_tt
-	}
-	IF = {
-		limit = {
-			ROOT = {
-				original_tag = GER
-				has_completed_focus = GER_establish_a_customs_union
-			}
-			NOT = { has_idea = GER_mitteleuropa_customs_union_member }
-		}
-		FROM = {
-			add_to_tech_sharing_group = GER_mitteleuropa_customs_union_member 
-		}
-	}
-
 }
 
 GER_one_more_member_increase_rnd_program_strength = {
@@ -1856,7 +1705,7 @@ GER_create_operative_norman_stewart = { #Operation Sea Lion
 		traits = { operative_natural_orator operative_tough }
 		bypass_recruitment = no
 		available_to_spy_master = yes
-		nationalities = { ENG SCO }
+		nationalities = { ENG }
 		gender = male
 	}
 }
@@ -1868,7 +1717,7 @@ GER_create_operative_johannes_becker = { #Influence in South America
 		traits = { operative_natural_orator operative_linguist }
 		bypass_recruitment = no
 		available_to_spy_master = yes
-		nationalities = { GER AUS ARG BRA }
+		nationalities = { GER AUS BRA }
 		gender = male
 	}
 }
@@ -1880,7 +1729,7 @@ GER_create_operative_eleysa_bazna = { #Absorb the Abwehr / Expand SS Security Du
 		traits = { operative_infiltrator }
 		bypass_recruitment = no
 		available_to_spy_master = yes
-		nationalities = { GER TUR KOS ALB }
+		nationalities = { GER ALB }
 		gender = male
 	}
 }
@@ -1904,7 +1753,7 @@ GER_create_operative_otto_von_bolschwing = { #Subversive Infiltrators
 		traits = { operative_natural_orator operative_well_groomed }
 		bypass_recruitment = no
 		available_to_spy_master = yes
-		nationalities = { GER PAL ROM }
+		nationalities = { GER ROM }
 		gender = male
 	}
 }
