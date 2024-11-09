@@ -1,33 +1,6 @@
 ###DEBUG STUFF
 
 debug_decisions = {
-	DEBUG_Manu = {
-		priority = 999
-		allowed = {
-			tag = FIN
-		}
-
-		visible = {
-			is_ai = no
-			is_debug = yes
-		}
-
-		available = {
-			any_owned_state = {
-
-				is_core_of = ROOT
-				NOT = {
-					is_controlled_by = ROOT
-				}
-			}
-		}
-
-		complete_effect = {			
-
-
-			add_stability = 0.1
-		}
-	}
 
 	DEBUG_MIO_SHOW_DEBUG_MIO_ARCHETYPES = {
 		priority = 100
