@@ -735,10 +735,6 @@ country_event = {
 				has_war_with = HUN
 				factor = 0 #lol
 			}
-			modifier = {
-				has_completed_focus = CZE_rapprochement_with_hungary
-				factor = 3
-			}
 		}
 
 		#FRA block
@@ -1001,7 +997,6 @@ country_event = {
 		trigger = {
 			FRA = {
 				NOT = { has_war_with = HUN }
-				NOT = { has_completed_focus = FRA_strengthen_the_little_entente } #would be super awkward
 				has_government = democratic
 			}
 		}
@@ -1013,10 +1008,6 @@ country_event = {
 		name = DOD_hungary.32.c
 		ai_chance = {
 			factor = 45
-			modifier = {
-				ENG = { has_completed_focus = uk_balkan_strategy }
-				factor = 2
-			}
 		}
 		trigger = {
 			ENG = {
@@ -1621,10 +1612,6 @@ country_event = {
 		HUN = { country_event = { id = DOD_hungary.54 hours = 24 } }
 		ai_chance = {
 			base = 35
-			modifier = {
-				has_completed_focus = ROM_balkans_dominance
-				factor = 10 #NO DEALS WITH THE HUNGARIAN SCUM
-			}
 			modifier = { 
 				ROM_is_on_historical_plan_trigger = yes 
 				factor = 0
@@ -1683,21 +1670,6 @@ country_event = {
 			}
 			FRA = { #France given option to intervene, if they don't have bigger problems
 				country_event = { 
-					id = DOD_hungary.60 
-					hours = 2
-				} 
-			} 
-		}
-		if = {
-			limit = { 
-				ENG = {
-					has_war = no
-					has_government = democratic
-					has_completed_focus = uk_balkan_strategy
-				}
-			}
-			ENG = { 
-				country_event = { #Britain given option to intervene, if they don't have bigger problems
 					id = DOD_hungary.60 
 					hours = 2
 				} 
@@ -2327,12 +2299,6 @@ country_event = {
 				is_in_faction_with = ROM
 				factor = 100
 			}
-			modifier = {
-				tag = GER
-				has_completed_focus = GER_oppose_hitler
-				HUN = { has_completed_focus = HUN_invite_the_habsburg_prince }
-				factor = 0
-			}
 		}
 		add_threat = 1
 		give_guarantee = ROM
@@ -2399,10 +2365,6 @@ country_event = {
 		name = DOD_hungary.61.b
 		ai_chance = {
 			base = 35
-			modifier = {
-				has_completed_focus = ROM_balkans_dominance
-				factor = 2 #come and have a go
-			}
 		}
 	}
 
@@ -2607,10 +2569,6 @@ country_event = {
 		name = DOD_hungary.64.a
 		ai_chance = {
 			base = 80
-			modifier = {
-				has_completed_focus = ROM_balkans_dominance
-				factor = 0.2
-			}
 		}
 		HUN = {
 			country_event = { 
@@ -4488,18 +4446,6 @@ country_event = {
 		}
 		SOV = { country_event = DOD_hungary.113 }
 	}
-
-	option = {# offer to put a communist government in charge
-		name = DOD_hungary.111.c
-		ai_chance = {
-			base = 75 #if available
-		}
-		trigger = {
-			NOT = { has_completed_focus = ROM_appoint_soviet_friendly_government }
-		}
-		SOV = { country_event = DOD_hungary.114 }
-		
-	}	
 	option = {# no deals!
 		name = DOD_hungary.111.d
 		ai_chance = {
@@ -5571,25 +5517,6 @@ country_event = {
 			}
 		}
 		ITA = { country_event = DOD_hungary.146 }
-	}
-	option = {# appeal to Britain
-		name = DOD_hungary.145.e
-		ai_chance = {
-			factor = 35
-			modifier = {
-				is_in_faction_with = ENG
-				factor = 10
-			}
-		}
-		trigger = {
-			ENG = {
-				has_completed_focus = uk_balkan_strategy
-			}
-			NOT = {
-				has_war_with = ENG
-			}
-		}
-		ENG = { country_event = DOD_hungary.146 }
 	}
 
 }
@@ -9293,7 +9220,6 @@ country_event = {
 				OR = {
 					exists = no
 					is_puppet = yes
-					NOT = { has_completed_focus = FRA_strengthen_the_little_entente }
 				}
 			}
 		}

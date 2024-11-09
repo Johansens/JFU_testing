@@ -54,53 +54,6 @@ on_actions = {
 		}
 	}
 
-	on_daily_SWE = {
-		effect = {
-			if = {
-				limit = {
-					#is_ironman =  = yes
-					original_tag = SWE
-					has_completed_focus = SWE_per_albin_bus
-					divisions_in_state = {
-						state = 141
-						size > 0 # use < or ><state_id>
-						unit = bus # optional. specific unit eg. mountaineers, light_tank
-					}
-				}
-				set_variable = { global.achievement_days_since_bus_left_stockholm = 0 }
-		
-			}
-
-			if = {
-				limit = {
-					divisions_in_state = {
-						state = 141
-						size < 1 # use < or ><state_id>
-						unit = bus # optional. specific unit eg. mountaineers, light_tank
-					}
-					check_variable = { global.achievement_days_since_bus_left_stockholm < 100 }
-				}
-				add_to_variable = { global.achievement_days_since_bus_left_stockholm = 1 }
-			}
-			
-			if = {
-				limit = {
-					original_tag = SWE
-					has_completed_focus = SWE_per_albin_bus
-					divisions_in_state = {
-						state = 681
-						size > 0 # use < or ><state_id>
-						unit = bus # optional. specific unit eg. mountaineers, light_tank
-					}
-
-					check_variable = { global.achievement_days_since_bus_left_stockholm < 19 }
-				}
-
-				set_global_flag = achievement_has_managed_to_travel_to_cape_town_in_18_days
-			}
-		}
-	}
-
 	# Ace pilots
 	# country, FROM = ace
 	on_ace_promoted = {
@@ -503,35 +456,6 @@ on_actions = {
 	#FROM is war target
 	on_declare_war = {
 		effect = {
-			if = {
-				limit = {
-					FROM = {
-						OR = {
-							has_idea = american_protection_drift_democratic
-							has_idea = american_protection_drift_communism
-							has_idea = american_protection_drift_fascism
-							has_idea = american_protection_defence_democratic
-							has_idea = american_protection_defence_communism
-							has_idea = american_protection_defence_fascism
-						}
-					}
-					NOT = {
-						tag = USA
-						is_in_faction_with = USA # I guess USA will not go to war with someone they are in faction with
-						has_war_with = USA
-						#USA = { has_war_with = FROM } Should USA enforce peace in a nation it is already at war with?
-					}
-					OR = {
-						has_idea = american_protection_drift_democratic
-						has_idea = american_protection_drift_communism
-						has_idea = american_protection_drift_fascism
-						has_idea = american_protection_defence_democratic
-						has_idea = american_protection_defence_communism
-						has_idea = american_protection_defence_fascism
-					}
-				}
-				FROM = { country_event = { id = usa.16 days = 1 } }
-			}
 
 			# Remove pact opinion modifiers if at war with Germany
 			if = {
@@ -634,28 +558,6 @@ on_actions = {
 					}
 				}
 			}
-
-			if = {
-				limit = {
-					FROM = {
-						has_civil_war = yes
-						original_tag = SPR
-					}
-					has_civil_war = yes
-					original_tag = SPR
-
-				}
-				random_country = {
-					limit = {
-						original_tag = FRA
-						OR = {
-							has_completed_focus = FRA_right_wing_rhetoric
-							has_completed_focus = FRA_utilize_the_leagues
-						}
-					}
-					country_event = { id = france.32 }
-				}
-			}
 		}
 	}
 
@@ -669,20 +571,6 @@ on_actions = {
 	# ROOT is capitulated country, FROM is winner
 	on_capitulation = {
 		effect = {
-			if = {
-				limit = {
-					tag = SOV
-					FIN = {
-						has_war_with = SOV
-						is_in_faction = no
-						is_ai = no
-						controls_state = 219
-						any_war_score > 14
-					}
-					NOT = { has_global_flag = finnish_him_achievement_flag }
-				}
-				set_global_flag = finnish_him_achievement_flag
-			}
 			if = {
 				limit = {
 					tag = GER
@@ -765,15 +653,6 @@ on_actions = {
 				}
 				JAP = { JAP_intervene_in_china_remove = yes }
 			}
-
-			if = {
-				limit = {
-					original_tag = POL
-					has_government = neutrality
-					NOT = { has_completed_focus = POL_fulfil_fifth_of_november }
-				}
-				retire_country_leader = yes
-			}
 			if = {
 				limit = {
 					original_tag = YUG
@@ -827,19 +706,6 @@ on_actions = {
 					has_government = fascism
 				}
 				set_global_flag = germany_lost_the_war
-			}
-
-			if = {
-				limit= {
-					ROOT = {
-						original_tag = ENG
-					}
-					FROM = {
-						original_tag = ICE
-					}
-				}
-
-				set_global_flag = achivement_ice_capitulated_eng
 			}
 		}
 
@@ -1094,141 +960,6 @@ on_actions = {
 				set_politics = {
 					ruling_party = democratic
 					elections_allowed = yes
-				}
-			}
-		}
-	}
-
-	#ROOT is winner #FROM gets annexed - This will also fire on_annex
-	on_civil_war_end = {
-		effect = {
-
-			#End of SCW
-			if = {
-				limit = {
-					NOT = { has_dlc = "La Resistance" }
-					FROM = {
-						original_tag = SPR
-					}
-					ROOT = {
-						original_tag = SPR
-						has_government = fascism
-					}
-				}
-				if = {
-					limit = {
-						OR = {
-							is_historical_focus_on = no
-							has_completed_focus = SPA_supremacy_of_the_communion
-						}
-					}
-					add_timed_idea = { idea = SPA_recovering_from_civil_war days = 2190 }
-				}
-				if = {
-					limit = {
-						is_historical_focus_on = yes
-						NOT = {
-							has_completed_focus = SPA_supremacy_of_the_communion
-						}
-					}
-					add_ideas = SPA_recovering_from_civil_war #keep the spirit on historical mode, keeping them out of the war
-				}
-			}
-			#End of SCW
-			if = {
-				limit = {
-					FROM = {
-						original_tag = SPR
-					}
-					ROOT = {
-						original_tag = SPR
-						OR = {
-							has_government = democratic
-							has_government = communism
-						}
-					}
-				}
-				ROOT = {
-					set_country_flag = achievement_won_spanish_civil_war
-				}
-			}
-			if = {
-				limit = {
-					has_government = democratic
-				}
-				set_politics = {
-					ruling_party = democratic
-					elections_allowed = yes
-				}
-			}
-			#End of German Civil War
-			if = {
-				limit = {
-					FROM = {
-						original_tag = GER
-						has_government = fascism
-					}
-					original_tag = GER
-					has_government = neutrality
-					NOT = { is_subject_of = HOL }
-				}
-				set_global_flag = { flag = civil_war_olympics value = 1 days = 30 }
-				country_event = { id = wtt_germany.18 days = 1 }
-			}
-			#End of US civil war
-			if = {
-				limit = {
-					original_tag = USA
-					OR = {
-						has_government = neutrality
-						has_government = fascism
-					}
-				}
-				news_event = { id = mtg_news.7 days = 4 random_days = 5 }
-			}
-			#End of Balkan war
-			if = {
-				limit = {
-					has_dlc = "Death or Dishonor"
-					original_tag = YUG
-				}
-				every_other_country = {
-					limit = {
-						has_country_flag = yugoslav_puppet_flag
-					}
-					white_peace = PREV
-					PREV = { puppet = PREV }
-					set_autonomy = { target = THIS autonomy_state = autonomy_integrated_puppet }
-				}
-				if = {
-					limit = {
-						FROM = { has_focus_tree = yugoslavian_focus }
-					}
-					load_focus_tree = { tree = yugoslavian_focus keep_completed = yes }
-					unlock_national_focus = YUG_end_the_regency
-				}
-			}
-			#End of ideology Civil War
-			if = {
-				limit = {
-					has_country_flag = ideology_civil_war
-				}
-				clr_country_flag = ideology_civil_war
-				set_country_flag = { flag = won_ideology_civil_war value = 1 days = 365 }
-				country_event = { id = generic.11 days = 1 }
-			}
-			if = {
-				limit = {
-					original_tag = BUL
-					has_focus_tree = generic_focus
-				}
-				if = {
-					limit = { has_idea = BUL_second_national_catastrophe }
-					remove_ideas = BUL_second_national_catastrophe
-				}
-				if = {
-					limit = { has_idea = BUL_second_national_catastrophe_02 }
-					remove_ideas = BUL_second_national_catastrophe_02
 				}
 			}
 		}

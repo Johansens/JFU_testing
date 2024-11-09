@@ -54,7 +54,7 @@ generic_tank_organization = {
 		}
 		NOT = {
 			AND = {
-				OR = { tag = ETH tag = SWI }
+				OR = { tag = ETH }
 				has_dlc = "By Blood Alone"
 			}
 		}
@@ -68,8 +68,6 @@ generic_tank_organization = {
 			AND = {
 				OR = {
 					original_tag = BRA 
-					original_tag = CHL
-					original_tag = ARG
 				}
 				has_dlc = "Trial of Allegiance"
 			}
@@ -2686,11 +2684,7 @@ generic_raider_ship_organization = {
 	icon = GFX_idea_generic_naval_manufacturer_3
 
 	allowed = {
-		AND = {
-			has_dlc = "Arms Against Tyranny"
-			original_tag = ICE
-		}
-		#always = no # Archetype only - countries using it have their own versions
+		always = no
 	}
 
 	equipment_type = {
@@ -6706,7 +6700,7 @@ generic_artillery_organization = {
 		}
 		NOT = {
 			AND = {
-				OR = { tag = SPR tag = POR}
+				OR = { tag = SPR }
 				has_dlc = "La Resistance"
 			}
 		}
@@ -7704,7 +7698,7 @@ generic_motorized_mechanized_organization = {
 		}
 		NOT = {
 			AND = {
-				OR = { tag = SPR tag = SPA tag = SPB tag = SPC tag = SPD tag = POR }
+				OR = { tag = SPR }
 				has_dlc = "La Resistance"
 			}
 		}

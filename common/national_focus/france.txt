@@ -220,7 +220,7 @@ focus = {
 		icon = GFX_R56_GOAL_FRA_INCREASE_MILITARY_SPENDINGS
 		x = 4
 		y = 0
-		available = { GER = { has_completed_focus = GER_rhineland} }
+		available = { GER = { has_completed_focus = GER_remilitarize_the_rhineland} }
 		prerequisite = {}
 		mutually_exclusive = { }
 		cost = 10

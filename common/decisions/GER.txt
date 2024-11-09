@@ -4783,21 +4783,6 @@ GER_military_buildup = {
 
 		ai_will_do = {
 			base = 1
-			modifier = {
-				factor = 0
-				OR = {
-					has_country_flag = GER_AI_RANDOM_COMMUNIST_STALINIST
-					has_game_rule = {
-						rule = GER_ai_behavior
-						option = GER_COMMUNIST_STALINIST
-					}
-					has_country_flag = GER_AI_RANDOM_COMMUNIST_SPARTACUS
-					has_game_rule = {
-						rule = GER_ai_behavior
-						option = GER_COMMUNIST_SPARTACUS
-					}
-				}
-			}
 		}
 
 		visible = {

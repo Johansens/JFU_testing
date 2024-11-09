@@ -1260,7 +1260,7 @@ SPR_airports_effect = {
 
 #generals/Feldmarshals
 
-pregrinded_effect = {
+JFU_pregrinded_effect = {
 	every_country = {
 		limit = {
 			OR = {
@@ -3782,13 +3782,6 @@ JFU_vichy_france = {
 		}
 		add_ideas = FRA_defeatism
 		set_equipment_fraction = 0.0
-		if = {
-			limit = {
-				has_completed_focus = FRA_integrate_bel_industry
-			}
-			add_offsite_building = { type = industrial_complex level = -5 }
-			add_offsite_building = { type = arms_factory level = -5 }
-		}
 	}
 	GER = {
 		transfer_state = 28

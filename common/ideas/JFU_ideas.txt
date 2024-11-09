@@ -1196,7 +1196,24 @@ ideas = {
 				winter_attrition_factor = -0.25
 				out_of_supply_factor = -0.25
 			}
-		}		
+		}	
+		GER_endsieg_idea = {
+			picture = generic_fascism_drift_2
+			allowed = {
+				original_tag = GER
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				dig_in_speed_factor = 1
+				max_dig_in_factor = 0.1
+			}
+		}	
 	}
 	hidden_ideas = {
 		idea_JUNO_truck_production_cost = {

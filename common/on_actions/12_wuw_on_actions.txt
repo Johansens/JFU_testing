@@ -3,20 +3,6 @@ on_actions = {
 	# FROM is the faction Leader, ROOT is the country leaving the faction 
 	on_leave_faction = {
 
-		effect = {
-			IF = {
-				limit = {
-					FROM = {
-						original_tag = GER
-						has_completed_focus = GER_shared_rd_programs_ww
-					}
-				}
-				FROM = {
-					GER_one_less_member_decrease_rnd_program_strength = yes
-				}
-			}
-		}
-
 		effect = { # Removing Joint Focus Tree modifiers 
 			IF = {
 				limit = {
@@ -183,21 +169,6 @@ on_actions = {
 	#FROM is faction leader on join faction requests. THIS DOES NOT FIRE ON ADD_TO_FACTION EFFECT! USE ON_OFFER_JOIN_FACTION!
 	on_join_faction = { 
 
-		effect = {
-			IF = {
-				limit = {
-					FROM = {
-						original_tag = GER
-						has_completed_focus = GER_shared_rd_programs_ww
-					}
-				}
-				FROM = {
-					GER_one_more_member_increase_rnd_program_strength = yes
-				}
-				
-			}
-		}
-
 		effect = { # Adding the correct stuff for faction joiners for the AH joint focus tree
 			IF = {
 				limit = {
@@ -370,21 +341,6 @@ on_actions = {
 							modifier = GER_autarky_trade_opinion
 						}
 					}
-				}
-			}
-		}
-
-
-		effect = {
-			IF = {
-				limit = {
-					FROM = {
-						original_tag = BEL
-						has_completed_focus = BEL_interpreters
-					}
-				}
-				ROOT = {
-					add_ideas = BEL_interpreters_ns
 				}
 			}
 		}
@@ -394,20 +350,6 @@ on_actions = {
 	# FROM is the country invited, THIS and ROOT are the faction leader.
 	on_offer_join_faction = { 
 
-		effect = {
-			IF = {
-				limit = {
-					ROOT = {
-						original_tag = GER
-						has_completed_focus = GER_shared_rd_programs_ww
-					}
-				}
-				ROOT = {
-					GER_one_more_member_increase_rnd_program_strength = yes
-				}
-				
-			}
-		}
 
 
 
@@ -582,20 +524,6 @@ on_actions = {
 							modifier = GER_autarky_trade_opinion
 						}
 					}
-				}
-			}
-		}
-
-		effect = {
-			IF = {
-				limit = {
-					ROOT = {
-						original_tag = BEL
-						has_completed_focus = BEL_interpreters
-					}
-				}
-				FROM = {
-					add_ideas = BEL_interpreters_ns
 				}
 			}
 		}
@@ -722,20 +650,6 @@ on_actions = {
 				}
 				101 = {
 					set_state_controller_to = GRN 
-				}
-			}
-		}
-
-		effect = {
-			IF = {
-				limit = {
-					FROM = {
-						original_tag = GER
-						has_completed_focus = GER_shared_rd_programs_ww
-					}
-				}
-				FROM = {
-					GER_one_more_member_increase_rnd_program_strength = yes
 				}
 			}
 		}
@@ -928,20 +842,6 @@ on_actions = {
 			}
 		}
 
-		effect = {
-			IF = {
-				limit = {
-					FROM = {
-						original_tag = GER
-						has_completed_focus = GER_shared_rd_programs_ww
-					}
-				}
-				FROM = {
-					GER_one_more_member_increase_rnd_program_strength = yes
-				}
-			}
-		}
-
 		effect = { # Adding the correct stuff for puppets for the AH joint focus tree
 			IF = {
 				limit = {
@@ -1047,37 +947,6 @@ on_actions = {
 			}
 		}
 
-
-
-		effect = {
-			IF = {
-				limit = {
-					ROOT = {
-						original_tag = TRA
-					}
-
-					AUS = {
-						OR = {
-							has_completed_focus = AUS_demand_romanian_lands
-							has_completed_focus = AUS_subjugate_lands_of_old
-						}
-					}
-				}
-
-				TRA = {
-					capital_scope = {
-						add_to_array = {
-							array = AUS.expansion_targets
-							value = THIS
-						}
-
-						log = "[THIS.GetName] was added to array"
-					}
-				}
-				
-			}
-		}
-
 	}
 
 	on_release_as_free = { #ROOT is free nation FROM is releaser.
@@ -1106,36 +975,6 @@ on_actions = {
 				101 = {
 					set_state_controller_to = GRN 
 				}
-			}
-		}
-
-		effect = {
-			IF = {
-				limit = {
-					ROOT = {
-						original_tag = TRA
-					}
-
-					AUS = {
-						OR = {
-							has_completed_focus = AUS_demand_romanian_lands
-							has_completed_focus = AUS_subjugate_lands_of_old
-						}
-						
-					}
-				}
-
-				TRA = {
-					capital_scope = {
-						add_to_array = {
-							array = AUS.expansion_targets
-							value = THIS
-						}
-
-						log = "[THIS.GetName] was added to array"
-					}
-				}
-				
 			}
 		}
 	}
@@ -1383,68 +1222,6 @@ on_actions = {
 			IF = {
 				limit = {
 					FROM = {
-						OR = {
-							original_tag = GER
-							original_tag = SOV
-						}
-	
-					}
-					GER = {
-						has_completed_focus = GER_spheres_of_influence
-						has_country_flag = GER_SOV_agreed_sphere_of_influence
-					}
-	
-					ROOT = {
-						original_tag = POL
-					}
-				}
-
-				FROM = {
-					set_country_flag = capitulated_POL_flag
-
-					country_event = {
-						id = wuw_GER_diplomacy.87
-						hours = 12
-					}
-				}
-			}
-		}
-
-		effect = {
-			IF = {
-				limit = {
-					FROM = {
-						OR = {
-							original_tag = GER
-							original_tag = SOV
-						}
-		
-					}
-					GER = {
-						has_completed_focus = GER_spheres_of_influence
-						has_country_flag = GER_SOV_agreed_sphere_of_influence
-					}
-		
-					ROOT = {
-						original_tag = CZE
-					}
-				}
-
-				FROM = {
-					set_country_flag = capitulated_CZE_flag
-
-					country_event = {
-						id = wuw_GER_diplomacy.87
-						hours = 12
-					}
-				}
-			}
-		}
-
-		effect = {
-			IF = {
-				limit = {
-					FROM = {
 						AND = {
 							GER = {
 								has_country_leader = {
@@ -1516,24 +1293,6 @@ on_actions = {
 						hours = 12
 					}
 				}
-			}
-		}
-
-		effect = {
-			if = { #If Germany has completed one of the necessary focuses, give them a timed National Spirit when the next war breaks out
-				limit = {
-					original_tag = GER
-					NOT = { has_country_flag = GER_has_war_preparations_flag }
-					OR = {
-						has_completed_focus = GER_prepare_for_the_next_naval_blockade
-						has_completed_focus = GER_war_preparations
-					}
-				}
-				add_timed_idea = {
-					idea = GER_strengthened_supply_lines_ns
-					days = 730
-				}
-				set_country_flag = GER_has_war_preparations_flag
 			}
 		}
 
@@ -1881,36 +1640,6 @@ on_actions = {
 
 	on_subject_free = {
 
-		# Sends Raoul van Overstraeten back to Belgium
-		effect = {
-			IF = {
-				limit = {
-					ROOT = {
-						original_tag = COG
-						has_character = BEL_raoul_van_overstraeten
-					}
-				}
-				ROOT = {
-					country_event = {
-						id = ww_congo.4
-						hours = 2
-					}	
-				}
-			}
-		}
-
-		# If the Belgian Congo is freed, they are no longer Belgian
-		effect = {
-			IF = {
-				limit = {
-					original_tag = COG
-					has_cosmetic_tag = COG_belgian_congo
-				}
-				COG = {
-					drop_cosmetic_tag = yes
-				}
-			}
-		}
 
 		effect = { #If a Reichskommissariat is freed, make Alfred Rosenberg suck a bit
 			IF = {
@@ -1933,26 +1662,6 @@ on_actions = {
 
 	}
 
-	on_peaceconference_ended = {
-
-		# Drop Belgian Congo cosmetic tag to set correct flag and name
-		effect = {
-			IF = {
-				limit = {
-					original_tag = COG
-					has_cosmetic_tag = COG_belgian_congo
-					NOT = {
-						is_subject_of = BEL
-					}
-				}
-				COG = {
-					drop_cosmetic_tag = yes
-				}
-			}
-		}
-
-	}
-
 	on_peace = {
 
 		# Hungary has now ended a war together with Germany, thus at the very least resetting the timer
@@ -1966,98 +1675,6 @@ on_actions = {
 				clr_country_flag = HUN_time_at_war_together_with_germany
 			}
 		}
-	}
-
-	on_monthly_COG = {
-
-		# Checks to see if Rwanda should revolt against Congolese rule or not
-		effect = {
-			IF = {
-				limit = {
-					NOT = {
-						has_global_flag = rwandan_revolution_happened_flag
-					}
-					ROOT = {
-						is_subject = no
-						owns_state = 768
-						has_war = no
-					}
-					RWA = {
-						exists = no
-					}
-					768 = {
-						NOT = {
-							is_core_of = COG
-						}
-					}
-				}
-				country_event = {
-					id = ww_congo.20
-					hours = 6
-					random_hours = 24
-				}
-			}
-		}
-
-		# Checks to see if Burundi should revolt against Congolese rule or not
-		effect = {
-			IF = {
-				limit = {
-					NOT = {
-						has_global_flag = burundian_revolution_happened_flag
-					}
-					ROOT = {
-						is_subject = no
-						owns_state = 769
-						has_war = no
-					}
-					BRD = {
-						exists = no
-					}
-					769 = {
-						NOT = {
-							is_core_of = COG
-						}
-					}
-				}
-				country_event = {
-					id = ww_congo.21
-					days = 1
-					random_days = 2
-				}
-			}
-		}
-
-	}
-
-	on_monthly_ENG = {
-
-		# Jan Zumbach heads on over to the Congo
-		effect = {
-			IF = {
-				limit = {
-					original_tag = ENG
-					COG = {
-						exists = yes
-						NOT = {
-							has_war_with = ENG
-						}
-					}
-					has_global_flag = jan_zumbach_fled_to_britain
-					NOT = {
-						has_global_flag = jan_zumbach_wanted_to_go_to_the_congo
-					}
-					date > 1943.01.01
-				}
-				country_event = {
-					id = ww_congo.71
-					hours = 2
-					random_hours = 4
-				}	
-				set_global_flag = jan_zumbach_wanted_to_go_to_the_congo
-			}
-		}
-
 	}
 
 	on_ruling_party_change = {
@@ -2102,27 +1719,6 @@ on_actions = {
 					}
 				}
 			}
-		}
-		effect = {
-			IF = {
-				limit = {
-					ROOT = {
-						original_tag = AUS
-						has_government = neutrality
-						has_completed_focus = AUS_legacy_of_the_empire
-						has_dynamic_modifier = {
-							modifier = AUS_army
-						}
-					}
-				}
-				remove_dynamic_modifier = {
-					modifier = AUS_army
-				}
-
-				add_dynamic_modifier = {
-					modifier = AUS_army_monarchy
-				}
-			}			
 		}
 
 		effect = {
@@ -2445,59 +2041,6 @@ on_actions = {
 			}
 		}
 
-		effect = { # Makes France surrender to the Belgian meance
-			IF = {
-				limit = {
-
-					NOT = {
-						has_global_flag = FRA_and_BEL_already_sought_peace_flag
-					}
-
-					29 = {
-						is_owned_by = FRA
-					}
-					785 = {
-						is_owned_by = FRA
-					}
-
-					NOT = {
-						any_country = {
-							NOT = {
-								original_tag = FRA
-							}
-							is_in_faction_with = FRA
-							#is_major = yes
-						}
-					}
-
-					FROM.FROM = {
-						state = 16 #paris
-					}
-
-					FROM = {
-						original_tag = FRA
-					}
-
-					ROOT = {
-						original_tag = BEL
-						has_completed_focus = BEL_demand_calais
-						any_other_country = {
-							is_major = no
-							NOT = { is_in_faction_with = ROOT } 
-						}
-					}
-				}
-
-				ROOT = {
-					country_event = {
-						id = ww_BEL_event_war.10
-						hours = 6
-					}	
-				}
-				
-			}
-		}
-
 		effect = { # Trigger the generic fall fo Budapest event 
 			IF = {
 				limit = {
@@ -2693,8 +2236,6 @@ on_actions = {
 					GER = {
 						NOT = {
 							has_completed_focus = GER_anschluss
-							has_completed_focus = GER_oppose_hitler_ww
-							has_completed_focus = GER_oppose_hitler
 						}
 					}
 				}
@@ -2703,7 +2244,6 @@ on_actions = {
 					limit = {
 						AUS = {	
 							OR = {
-								has_completed_focus = AUS_reinstate_the_imperial_council
 								has_government = neutrality
 							}
 							

@@ -1934,7 +1934,6 @@ news_event = {
 		}
 		GER = {
 			has_completed_focus = GER_reassert_eastern_claims
-			NOT = { has_completed_focus = GER_befriend_poland }
 		}
 	}
 	
@@ -8654,61 +8653,6 @@ news_event = {
 	}
 }
 
-#US Supports Democratic Rebellions
-news_event = {
-	id = news.230
-	title = news.230.t
-	desc = news.230.d
-	picture = GFX_news_event_generic_sign_treaty1
-
-	major = yes
-
-	is_triggered_only = yes
-
-	option = {
-		name = news.230.a
-		trigger = {
-			OR = {
-				tag = MEX
-				tag = ARG
-			}
-		}
-	}
-
-	option = {
-		name = news.230.b
-		trigger = {
-			tag = USA
-		}
-	}
-
-	option = {
-		name = news.230.c
-		trigger = {
-			has_government = democratic
-			NOT = {
-				OR = {
-					tag = USA
-					tag = MEX
-					tag = ARG
-				}
-			}
-		}
-	}
-
-	option = {
-		name = news.230.e
-		trigger = {
-			NOT = {
-				has_government = democratic
-				tag = USA
-				tag = MEX
-				tag = ARG
-			}
-		}
-	}
-}
-
 #Japan Seeks War in China
 news_event = {
 	id = news.231
@@ -9908,7 +9852,6 @@ news_event = {
 			OR = {
 				Tag = ENG
 				TAG = BEL
-				TAG = POR
 				TAG = FRA
 			}
 		}
@@ -9923,7 +9866,6 @@ news_event = {
 			NOT = {
 				Tag = ENG
 				TAG = BEL
-				TAG = POR
 				TAG = FRA
 				TAG = SOV
 				TAG = SAF	

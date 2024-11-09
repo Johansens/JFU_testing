@@ -172,18 +172,6 @@ IF = {
 			modifier = HUN_POL_friendship_modifier
 		}	
 	}
-
-	IF = {
-		limit = { has_dlc = "Arms Against Tyranny" }
-		add_ideas = { HUN_treaty_of_triannon_aat_wuw }
-		add_relation_rule_override = { 
-			target = GER
-			usage_desc = HUN_gombos_trade_treaty_tt
-			can_access_market = yes
-		}
-		give_market_access = GER
-	}
-
 	IF = {
 		limit = {
 			NOT = { has_dlc = "Arms Against Tyranny" }

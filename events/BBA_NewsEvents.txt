@@ -367,16 +367,6 @@ news_event = {
 
 	option = {
 		name = bba_news.106.a
-
-		if = { #Double check that the Vittorio is in fact King and country leader
-			limit = {
-				has_country_leader = {
-					character = ITA_vittorio_emanuele_iii
-					ruling_only = yes
-				}
-			}
-			ITA_promote_umberto_to_country_leader = yes
-		}
 		
 		hidden_effect = {
 			set_country_flag = ITA_vittorio_emmanuele_dead_flag
@@ -417,32 +407,6 @@ news_event = {
 		name = bba_news.107.a
 
 		custom_effect_tooltip = ITA_pope_dies_tt
-
-		if = { # Tooltip about retiring the character if he is already a country leader (even if not ruling)
-			limit = {
-				has_country_leader = {
-					character = ITA_papa_pio_xi
-					ruling_only = no
-				}
-			}
-			effect_tooltip = {
-				retire_character = ITA_papa_pio_xi
-			}
-		}
-
-		if = {
-			limit = {
-				has_country_leader = {
-					character = ITA_papa_pio_xi
-					ruling_only = yes
-				}
-			}
-			ITA_pope_takes_over = yes
-		}
-
-		hidden_effect = {
-			retire_character = ITA_papa_pio_xi
-		}
 	}
 }
 

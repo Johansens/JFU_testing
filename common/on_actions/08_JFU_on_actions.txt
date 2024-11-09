@@ -389,7 +389,6 @@ on_actions = {
 				SPR = {
 					add_timed_idea = { idea = SPR_carlists_uprising days = 365 }
 					add_ideas = { idea = SPA_recovering_from_civil_war}
-					if = { limit = { country_exists = SPD } annex_country = { target = SPD} }
 				}
 				ENG = { add_war_support = 0.1}
 				CAN = { add_war_support = 0.1}
@@ -419,48 +418,6 @@ on_actions = {
 				every_country = {
 					remove_ideas = { attache_idea}
 				}		
-			}
-			if = {
-				limit = {
-					original_tag = SPD
-				}
-				every_state = {
-					limit = { 
-						AND = {
-							is_core_of = SPR
-							NOT = {
-								is_controlled_by = SPA
-							}
-						}
-					}
-					transfer_state_to = SPR 
-				}
-				every_state = {
-					limit = {
-						AND = {
-							is_core_of = SPR
-							NOT = {
-								is_controlled_by = SPR
-							}
-						}
-					}
-					transfer_state_to = SPA
-				}
-				if = {
-					limit = {
-						has_global_flag = scw_early_end
-					}
-					clr_global_flag = scw_early_end
-					set_global_flag = scw_over
-					set_global_flag = nationalist_victory
-					SPR = { country_event = { id = lar_news.1 hours = 6 } }
-				}
-				if = { 
-					limit = { 
-						has_war = yes
-					} 
-					set_global_flag = scw_early_end
-				}				
 			}
 			if = {
 				limit = {

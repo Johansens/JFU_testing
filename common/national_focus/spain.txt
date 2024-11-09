@@ -753,7 +753,6 @@ focus_tree = {
 				has_global_flag = scw_over
 				NOT = {
 					country_exists = SPA
-					country_exists = SPD
 				}
 			}
 		}

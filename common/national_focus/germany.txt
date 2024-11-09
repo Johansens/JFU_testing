@@ -2838,15 +2838,6 @@ focus_tree = {
 			custom_effect_tooltip = GER_gain_totaler_krieg_remove_total_mob_tt
 			add_ideas = totaler_krieg_economy
 
-			if = {
-				limit = {
-					NOT = {
-						OR = {
-							has_completed_focus = GER_womens_rights_and_equality 
-							has_decision = women_in_the_workforce 
-						}
-					}
-				}
 				custom_effect_tooltip = generic_skip_one_line_tt
 				unlock_decision_tooltip = {
 					decision = women_in_the_workforce
@@ -2854,7 +2845,6 @@ focus_tree = {
 					show_modifiers = yes # default is no
 				} 
 				activate_decision = women_in_the_workforce
-			}
 		}
 	}
 
@@ -7792,6 +7782,59 @@ focus_tree = {
 	}
 
 	focus = {
+		id = GER_atlantikwall
+		icon = GFX_GER_ATLANTIKWALL
+		prerequisite = { focus = GER_remilitarize_the_rhineland }
+		available = {
+			EFR = { has_country_flag = vichy_france_established }		
+		}
+		cancel_if_invalid = yes
+		x = -2
+		y = 1
+		relative_position_id = GER_remilitarize_the_rhineland
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			add_ideas = GER_atlantikwall_idea
+			every_state = { 
+				limit = { 
+					atlantikwall_states = yes
+				}
+				set_building_level = {
+					type = coastal_bunker
+					level = 5
+					province = {
+						all_provinces = yes
+						limit_to_coastal = yes
+						level < 7
+					}
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						any_country = { axis = yes controls_state = 456 }
+					}
+					every_state = {
+						limit = {
+							atlantikwall_states = yes
+							is_controlled_by = GER
+							NOT = { is_core_of = NOR }
+						}
+						add_dynamic_modifier = {
+							modifier = Atlantikwall_modifier
+						}
+					}			
+				}
+			}
+
+			custom_effect_tooltip = atlantikwall_modifier_tt
+		}
+	}
+	focus = {
 		id = GER_legion_condor
 		icon = GFX_focus_intervention_spain_nationalists
 		prerequisite = { focus = GER_remilitarize_the_rhineland }
@@ -8529,190 +8572,19 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_HISTORICAL }
 
 		completion_reward = {
-			### CLAIMS
-			if = {
-				limit = {
-					69 = {
-						controller = {
-							NOT = {
-								tag = ROOT
-								is_subject_of = ROOT
-							}
-						}
-					}
-				}
-				add_state_claim = 69
+			hidden_effect = {
+				69 = { add_core_of = GER }
+				74 = { add_core_of = GER }
+				add_to_variable = { var = MFB_PP value = -0.1 }
 			}
-			if = {
-				limit = {
-					972 = {
-						controller = {
-							NOT = {
-								tag = ROOT
-								is_subject_of = ROOT
-							}
-						}
-					}
-				}
-				add_state_claim = 972
-			}
-			if = {
-				limit = {
-					74 = {
-						controller = {
-							NOT = {
-								tag = ROOT
-								is_subject_of = ROOT
-							}
-						}
-					}
-				}
-				add_state_claim = 74
-			}
-
-			### EVENT CHAIN - MUNICH CONFERENCE (CZE is always involved) ###
-			if = {
-				limit = {
-					CZE = {
-						OR = {
-							controls_state = 69
-							controls_state = 972
-							controls_state = 74
-						}
-					}
-				}
-				if = { # HOL has formed EU and CZE is part of it - Alt-hist
-					limit = {
-						CZE = {
-							is_in_faction_with = HOL
-							is_subject = no
-						}
-						HOL = {
-							has_completed_focus = HOL_foundations_for_a_european_union
-							is_faction_leader = yes
-							is_subject = no
-							exists = yes
-						}
-						NOT = { has_war_with = HOL }
-						NOT = { has_war_with = FRA }
-						OR = {
-							HUN = {
-								NOT = {
-									has_completed_focus = HUN_protect_czechoslovakia #DOD only
-								}
-							}
-							CZE = {
-								has_country_flag = HUN_AH_CZE_refused
-							}
-						}
-					}
-					HOL = {
-						country_event = germany.40
-					}
-				}
-				else_if = { #THIS IS THE HISTORICAL OUTCOME THAT SHOULD HAPPEN ON HISTORICAL - HISTORICAL HERE!! 
-					limit = {
-						ENG = {
-							NOT = { has_completed_focus = ENG_a_change_in_course }
-							exists = yes
-							is_subject = no
-						}
-						NOT = { has_war_with = ENG }
-						NOT = { has_war_with = FRA }
-						CZE = {
-							is_subject = no
-							NOT = { is_in_faction_with = GER }
-							NOT = { has_war_with = ENG }
-							OR = {
-								controls_state = 69
-								controls_state = 972
-								controls_state = 74
-							}
-						}
-						OR = {
-							HUN = {
-								NOT = {
-									has_completed_focus = HUN_protect_czechoslovakia #DOD only
-								}
-							}
-							CZE = {
-								has_country_flag = HUN_AH_CZE_refused
-							}
-						}
-					}
-					ENG = {
-						country_event = germany.40
-					}
-				}
-
-				### EVENT CHAIN - ALT-HIST DEMAND OF SUDETENLAND TO CZE OR THEIR OVERLORD ###
-				else_if = { # If not historical and CZE is independent or GER subject, send event to them
-					limit = {
-						CZE = {
-							OR = {
-								is_subject = no
-								is_subject_of = ROOT
-							}
-						}
-					}
-					CZE = {
-						country_event = { id = germany.122 }
-					}
-				}
-				else_if = { # If not historical and CZE is subject of someone else, send event to overlord
-					limit = {
-						CZE = { is_subject = yes }
-					}
-					CZE = {
-						overlord = { country_event = { id = germany.122 } }
-					}
-				}
-			}
-
-			### EVENT CHAIN - ALT-HIST SOME ONE ELSE CONTROLS SUDETENLAND STATES ###
-			if = { #If other countries control Sudetenland states -> send event to them or overlord
-				limit = {
-					any_other_country = {
-						NOT = { tag = CZE }
-						OR = {
-							controls_state = 69
-							controls_state = 972
-							controls_state = 74
-						}
-						NOT = { has_war_with = ROOT }
-					}
-				}
-				every_other_country = {
-					limit = {
-						NOT = { tag = CZE }
-						OR = {
-							controls_state = 69
-							controls_state = 972
-							controls_state = 74
-						}
-						NOT = { has_war_with = ROOT }
-					}
-					if = { # If independent or GER subject, send event to them
-						limit = {
-							OR = {
-								is_subject = no
-								is_subject_of = ROOT
-							}
-						}
-						country_event = { id = germany.1041 days = 4 random_days = 2 }
-					}
-					else = { #If subject of someone else, send event to overlord
-						if = {
-							limit = {
-								overlord = { NOT = { has_war_with = ROOT } }
-							}
-							overlord = { country_event = { id = germany.1041 days = 4 random_days = 2 } }
-						}
-					}
-				}
-			}
-
-			add_named_threat = { threat = 4 name = GER_demand_sudetenland_threat }
+			add_war_support = 0.1
+			add_stability = 0.05
+			POL = { transfer_state = 72 }
+			GER = { transfer_state = 69 }
+			GER = { transfer_state = 74 }
+			news_event = { hours = 6 id = JFU_events.6 }
+			add_named_threat = { threat = 5 name = GER_demand_sudetenland_threat }
+			set_country_flag = sudetenland_acquired
 		}
 	}
 	
@@ -9452,46 +9324,6 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_ANNEXATION }
 
 		completion_reward = {
-			#limit wargoals to when it makes sense to give them. No faction, war or non exist
-			if = { 
-				limit = {
-					country_exists = BEL
-					NOT = { BEL = { is_in_faction_with = GER } }
-					NOT = { has_war_with = BEL }
-				}
-				create_wargoal = {
-					type = take_state_focus
-					target = BEL
-					expire = 0
-					generator = { 6 }
-				}
-			}
-			if =  {
-				limit = {
-					country_exists = HOL
-					NOT = { HOL = { is_in_faction_with = GER } }
-					NOT = { has_war_with = HOL }
-					NOT = { HOL = { has_completed_focus = HOL_cave_to_the_germans } }
-				}
-				create_wargoal = {
-					type = take_state_focus
-					target = HOL
-					expire = 0
-					generator = { 7 }
-				}
-			}
-			if =  {
-				limit = {
-					country_exists = HOL
-					NOT = { HOL = { is_in_faction_with = GER } }
-					NOT = { has_war_with = HOL }
-					HOL = { has_completed_focus = HOL_cave_to_the_germans } 
-					NOT = { HOL = { has_completed_focus = HOL_the_netherlands_first } }
-				}
-				HOL = {
-					country_event = { id = mtg_germany.1 hours = 6 }
-				}
-			}
 			hidden_effect = {
 				news_event = { hours = 6 id = news.234 }
 			}
@@ -10109,17 +9941,10 @@ focus_tree = {
 			OR = {
 				has_war_with = SOV
 				NOT = { country_exists = SOV }
-				has_completed_focus = GER_bulwark_against_bolshevism
-				has_completed_focus = GER_the_great_red_menace
 			}
 		}
 
 		available = {
-			NOT = { has_completed_focus = GER_anti_soviet_pact }
-			OR = {
-				NOT = { has_completed_focus = GER_bulwark_against_bolshevism }
-				NOT = { has_completed_focus = GER_the_great_red_menace }
-			}
 		}
 
 		cancel = { 

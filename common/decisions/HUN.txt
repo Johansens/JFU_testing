@@ -3265,10 +3265,6 @@ political_actions = {
 
 			has_government = communism
 
-			OR = {
-				has_completed_focus = wuw_HUN_join_the_comintern
-				has_completed_focus = wuw_HUN_restore_the_socialist_federative_republic
-			}
 
 		}
 

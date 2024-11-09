@@ -1502,7 +1502,7 @@ ideas = {
 				}
 				NOT = {
 					AND = {
-						OR = { tag = CHL tag = ARG tag = BRA }
+						OR = {  tag = BRA }
 						has_dlc = "Trial of Allegiance"
 					}
 				}
@@ -1628,7 +1628,7 @@ ideas = {
 				}
 				NOT = {
 					AND = {
-						OR = { tag = SPR tag = SPA tag = SPB tag = SPC tag = SPD tag = POR}
+						OR = { tag = SPR}
 						has_dlc = "La Resistance"
 					}
 				}
@@ -1642,13 +1642,6 @@ ideas = {
 					AND = {
 						OR = { tag = ETH tag = SWI }
 						has_dlc = "By Blood Alone"
-					}
-				}
-
-				NOT = {
-					AND = {
-						OR = { tag = ARG }
-						has_dlc = "Trial of Allegiance"
 					}
 				}
 
@@ -1699,7 +1692,7 @@ ideas = {
 				}
 				NOT = {
 					AND = {
-						OR = { tag = SPR tag = SPA tag = SPB tag = SPC tag = SPD tag = POR }
+						OR = { tag = SPR }
 						has_dlc = "La Resistance"
 					}
 				}
@@ -1711,17 +1704,11 @@ ideas = {
 				}
 				NOT = {
 					AND = {
-						OR = { tag = ETH tag = SWI }
+						OR = { tag = ETH  }
 						has_dlc = "By Blood Alone"
 					}
 				}
 
-				NOT = {
-					AND = {
-						OR = { tag = CHL tag = ARG }
-						has_dlc = "Trial of Allegiance"
-					}
-				}
 
 				NOT = {
 					AND = {
@@ -1771,7 +1758,7 @@ ideas = {
 				}
 				NOT = {
 					AND = {
-						OR = { tag = SPR tag = SPA tag = SPB tag = SPC tag = SPD tag = POR }
+						OR = { tag = SPR }
 						has_dlc = "La Resistance"
 					}
 				}
@@ -1783,16 +1770,11 @@ ideas = {
 				}
 				NOT = {
 					AND = {
-						OR = { tag = ETH tag = SWI }
+						OR = { tag = ETH }
 						has_dlc = "By Blood Alone"
 					}
 				}
-				NOT = {
-					AND = {
-						OR = { tag = CHL tag = ARG }
-						has_dlc = "Trial of Allegiance"
-					}
-				}
+
 
 				NOT = {
 					AND = {
@@ -1837,7 +1819,7 @@ ideas = {
 				}
 				NOT = {
 					AND = {
-						OR = { tag = SPR tag = SPA tag = SPB tag = SPC tag = SPD tag = POR }
+						OR = { tag = SPR }
 						has_dlc = "La Resistance"
 					}
 				}
@@ -1849,17 +1831,11 @@ ideas = {
 				}
 				NOT = {
 					AND = {
-						OR = { tag = ETH tag = SWI }
+						OR = { tag = ETH  }
 						has_dlc = "By Blood Alone"
 					}
 				}
 
-				NOT = {
-					AND = {
-						OR = { tag = CHL tag = ARG }
-						has_dlc = "Trial of Allegiance"
-					}
-				}
 
 				NOT = {
 					AND = {
@@ -1906,7 +1882,7 @@ ideas = {
 				}
 				NOT = {
 					AND = {
-						OR = { tag = SPR tag = SPA tag = SPB tag = SPC tag = SPD }
+						OR = { tag = SPR }
 						has_dlc = "La Resistance"
 					}
 				}
@@ -1924,12 +1900,6 @@ ideas = {
 				}
 				NOT = {
 					AND = {
-						OR = { tag = ICE tag = DEN }
-						has_dlc = "Arms Against Tyranny"
-					}
-				}
-				NOT = {
-					AND = {
 						tag = BRA
 						has_dlc = "Trial of Allegiance"
 					}
@@ -1937,7 +1907,7 @@ ideas = {
 
 				NOT = {
 					AND = {
-						OR = { tag = HUN tag = AUS tag = BEL tag = COG }
+						OR = { tag = HUN tag = AUS tag = BEL }
 						has_dlc = "Gotterdammerung"
 					}
 				}
@@ -1979,7 +1949,7 @@ ideas = {
 				}
 				NOT = {
 					AND = {
-						OR = { tag = SPR tag = SPA tag = SPB tag = SPC tag = SPD }
+						OR = { tag = SPR }
 						has_dlc = "La Resistance"
 					}
 				}
@@ -1997,7 +1967,7 @@ ideas = {
 				}
 				NOT = {
 					AND = {
-						OR = { tag = FIN tag = ICE tag = SWE }
+						OR = { tag = FIN}
 						has_dlc = "Arms Against Tyranny"
 					}
 				}
@@ -2010,7 +1980,7 @@ ideas = {
 
 				NOT = {
 					AND = {
-						OR = { tag = HUN tag = AUS tag = BEL tag = COG }
+						OR = { tag = HUN tag = AUS tag = BEL}
 						has_dlc = "Gotterdammerung"
 					}
 				}
@@ -2054,7 +2024,7 @@ ideas = {
 				}
 				NOT = {
 					AND = {
-						OR = { tag = SPR tag = SPA tag = SPB tag = SPC tag = SPD tag = POR }
+						OR = { tag = SPR }
 						has_dlc = "La Resistance"
 					}
 				}
@@ -2112,7 +2082,7 @@ ideas = {
 				}
 				NOT = {
 					AND = {
-						OR = { tag = SPR tag = SPA tag = SPB tag = SPC tag = SPD tag = POR }
+						OR = { tag = SPR }
 						has_dlc = "La Resistance"
 					}
 				}
@@ -2170,7 +2140,7 @@ ideas = {
 				}
 				NOT = {
 					AND = {
-						OR = { tag = SPR tag = SPA tag = SPB tag = SPC tag = SPD tag = POR }
+						OR = { tag = SPR }
 						has_dlc = "La Resistance"
 					}
 				}
@@ -2187,12 +2157,7 @@ ideas = {
 					}
 				}
 
-				NOT = {
-					AND = {
-						tag = CHL
-						has_dlc = "Trial of Allegiance"
-					}
-				}
+
 
 				NOT = {
 					AND = {

@@ -1036,47 +1036,6 @@ ideas = {
 			
 			traits = { light_aircraft_manufacturer }
 		}
-
-		ARG_BRA_mig = {
-
-			name = mig_design_bureau
-
-			picture = mig_design_bureau
-
-			allowed = {
-				OR = {
-					original_tag = BRA
-					original_tag = ARG
-				}
-				has_dlc = "Trial of Allegiance"
-			}
-
-
-			available = {
-				OR = {
-					AND = {
-						FROM = { original_tag = ARG }
-						FROM = { has_completed_focus = ARG_russian_manufacturers }
-					}
-
-					AND = {
-
-						FROM = { original_tag = BRA }
-						FROM = { has_completed_focus = BRA_soviet_arms_industry }
-					}
-				}
-
-			}
-
-			research_bonus = {
-				air_equipment = 0.15
-			}
-
-			traits = { light_aircraft_manufacturer }
-
-			modifier = {
-			}
-		}
 	}
 	naval_manufacturer = {
 		designer = yes
@@ -1110,91 +1069,12 @@ ideas = {
 			traits = { convoy_escort_naval_manufacturer }
 		}
 
-		SOV_ARG_BRA_rubin_design_bureau_manufacturer = {
-
-			picture = SOV_rubin_design_bureau
-
-			allowed = {
-				OR = {
-					original_tag = ARG
-					original_tag = BRA
-				}
-				has_dlc = "Trial of Allegiance"
-			}
-
-			visible = {
-				OR = {
-					original_tag = ARG
-					original_tag = BRA
-				}
-			}
-
-			available = {
-				OR = {
-					AND = {
-						original_tag = ARG
-						has_completed_focus = ARG_russian_manufacturers
-					}
-					AND = {
-						original_tag = BRA 
-						has_completed_focus = BRA_soviet_arms_industry
-					}
-				}
-			}
-
-			research_bonus = {
-				naval_equipment = 0.15
-			}
-
-			traits = { raiding_fleet_naval_manufacturer }
-
-			modifier = {
-			}
-		}
-
 
 	}
 
 	materiel_manufacturer = {
 
 		designer = yes
-
-		SOV_BRA_ARG_gaz = {
-			name = gaz
-
-			picture = gaz
-
-			 allowed = {
-				OR = {
-					original_tag = ARG
-					original_tag = BRA
-				}
-				has_dlc = "Trial of Allegiance"
-			}
-			available = {
-				OR = {
-					AND = {
-						original_tag = ARG
-						has_completed_focus = ARG_russian_manufacturers
-					}
-
-					AND = {
-						original_tag = BRA
-						has_completed_focus = BRA_soviet_arms_industry
-					}
-				}
-			}
-
-			research_bonus = {
-				motorized_equipment = 0.15
-				mot_rockets = 0.50
-			}
-
-			traits = { motorized_equipment_manufacturer }
-
-			modifier = {
-			}
-		}
 
 		BRA_ford_motor_company = {
 			

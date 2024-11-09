@@ -612,30 +612,6 @@ focus_tree = {
 
 		cost = 5
 
-		offset = {
-			x = -8
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = wuw_HUN_abide_by_the_little_ententes_stipulations
-			}
-		}
-
-		offset = {
-			x = -4
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = wuw_HUN_elect_a_fascist_king
-			}
-		}
-
 		ai_will_do = {
 			factor = 15
 		}
@@ -663,53 +639,8 @@ focus_tree = {
 
 			add_threat = 1
 
-			IF = {
-				limit = {
-					FRA = {
-						has_completed_focus = FRA_strengthen_the_little_entente
-						exists = yes
-						is_subject = no
-					}
-				}
-				FRA = {
-					country_event = {
-						id = DOD_hungary.40
-						days = 1
-					}
-				}
-			}
-
-			IF = {
-				limit = {
-					OR = {
-						NOT = {
-							FRA = {
-								has_completed_focus = FRA_strengthen_the_little_entente
-							}
-						}
-						FRA = {
-							exists = no
-						}
-						FRA = {
-							is_subject = yes
-						}
-						ROM = {
-							exists = yes
-						}
-					}
-				}
-				#Romania gets the event if France not engaged in Balkans
-				ROM = {
-					country_event = {
-						id = DOD_hungary.40
-						days = 1
-					}
-				}
-				ELSE = {
 					HUN_remove_trianon_effect = yes
 					news_event = { id = news.298 days = 1 }
-				}
-			}
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
@@ -741,30 +672,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 15
-		}
-
-		offset = {
-			x = -8
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = wuw_HUN_abide_by_the_little_ententes_stipulations
-			}
-		}
-
-		offset = {
-			x = -4
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = wuw_HUN_elect_a_fascist_king
-			}
 		}
 
 		available = {
@@ -876,30 +783,6 @@ focus_tree = {
 		y = 1
 		relative_position_id = wuw_HUN_act_of_defense
 
-		offset = {
-			x = 1
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = wuw_HUN_abide_by_the_little_ententes_stipulations
-			}
-		}
-
-		offset = {
-			x = -1
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = wuw_HUN_elect_a_fascist_king
-			}
-		}
-
 		cost = 10
 
 		ai_will_do = {
@@ -949,42 +832,6 @@ focus_tree = {
 		x = 3
 		y = 1
 		relative_position_id = wuw_HUN_absolute_rule_of_the_national_unity_party
-
-		offset = {
-			x = -8
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = wuw_HUN_abide_by_the_little_ententes_stipulations
-			}
-		}
-
-		offset = {
-			x = -4
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = wuw_HUN_elect_a_fascist_king
-			}
-		}
-
-		offset = {
-			x = 2
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = wuw_HUN_strengthen_horthys_reign
-			}
-		}
 
 		cost = 5
 
@@ -1984,30 +1831,6 @@ focus_tree = {
 			factor = 15
 		}
 
-		offset = {
-			x = 1
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = wuw_HUN_abide_by_the_little_ententes_stipulations
-			}
-		}
-
-		offset = {
-			x = -1
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = wuw_HUN_elect_a_fascist_king
-			}
-		}
-
 		available = {
 			GER = {
 				exists = yes
@@ -2140,30 +1963,6 @@ focus_tree = {
 		x = -4
 		y = 1
 		relative_position_id = wuw_HUN_act_of_defense
-
-		offset = {
-			x = 1
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = wuw_HUN_abide_by_the_little_ententes_stipulations
-			}
-		}
-
-		offset = {
-			x = -1
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = wuw_HUN_elect_a_fascist_king
-			}
-		}
 
 		cost = 5
 
@@ -2473,85 +2272,6 @@ focus_tree = {
 	}
 
 	focus = {
-		id = wuw_HUN_join_the_axis
-		icon = GFX_goal_anschluss
-		prerequisite = { focus = wuw_HUN_joint_aluminum_mining_company }
-		#mutually_exclusive = { focus = wuw_HUN_renew_the_rome_protocols }
-		x = 0
-		y = 1
-		relative_position_id = wuw_HUN_joint_aluminum_mining_company
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 80
-			modifier = {
-				factor = 0
-				GER = { has_capitulated = yes }
-			}
-			modifier = {
-				GER = { surrender_progress > 0.25 }
-				factor = 0.1
-			}
-			modifier = {
-				has_country_flag = HUN_can_not_trust_germany_again_flag
-				factor = 0
-			}
-		}
-
-		available = {
-			NOT = { 
-				has_war_with = GER 
-				has_country_flag = HUN_can_not_trust_germany_again_flag
-			}
-			is_subject = no
-			is_in_faction = no
-			NOT = {
-				any_other_country = {
-					is_in_faction_with = GER
-					has_war_with = HUN
-				}
-			}
-			GER = {
-				is_faction_leader = yes
-				has_government = fascism
-				is_subject = no
-			}
-		}
-
-		bypass = {
-			AND = {
-				is_in_faction_with = GER
-				GER = {
-					is_faction_leader = yes
-					OR = {
-						has_government = fascism
-						has_government = neutrality
-					}
-				}
-			}
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL }
-
-		completion_reward = {
-
-			GER = {
-				country_event = {
-					id = WW_hungary.26
-					days = 2
-					random_days = 3
-				}
-			}
-
-		}
-	}
-
-	focus = {
 		id = wuw_HUN_protect_austria
 		icon = GFX_focus_AUS_for_a_better_future
 		prerequisite = { focus = wuw_HUN_renew_the_rome_protocols }
@@ -2622,106 +2342,6 @@ focus_tree = {
 					id = WW_hungary.8
 					days = 2
 					random_days = 3
-				}
-			}
-
-		}
-	}
-
-	focus = {
-		id = wuw_HUN_an_alliance_with_italy
-		icon = GFX_goal_generic_major_alliance
-		prerequisite = { focus = wuw_HUN_protect_austria }
-		#mutually_exclusive = { focus = wuw_HUN_renew_the_rome_protocols }
-		x = 0
-		y = 1
-		relative_position_id = wuw_HUN_protect_austria
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 15
-		}
-
-		available = {
-			NOT = { has_war_with = ITA }
-			is_subject = no
-			is_in_faction = no
-			ITA = {
-				OR = {
-					is_in_faction = no
-					is_faction_leader = yes
-				}
-				is_subject = no
-				ITA_is_kinda_fascist = yes
-			}
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		completion_reward = {
-
-			IF = {
-				limit = {
-					ITA = { is_in_faction = no }
-				}
-				ROOT = {
-					set_rule = { can_create_factions = yes }
-					create_faction = HUN_PACT_OF_ROME_FACTION
-					ITA = {
-						country_event = generic.5
-						add_ai_strategy = {
-							type = alliance
-							id = "HUN"
-							value = 200
-						}
-					}
-					IF = {
-						limit = {
-							country_exists = AUS
-							AUS = {
-								is_subject = no
-							}
-						}
-						AUS = {
-							country_event = generic.5
-						}
-					}
-				}
-			}
-			IF = {
-				limit = {
-					ITA = { is_faction_leader = yes }
-				}
-				ITA = {
-					country_event = generic.2
-				}
-			}
-			IF = {
-				limit = {
-					ITA = { is_in_faction_with = FRA }
-				}
-				FRA = {
-					country_event = generic.2
-				}
-			}
-			hidden_effect = {
-				IF = {
-					limit = {
-						has_country_leader = {
-							ruling_only = yes
-							character = HUN_miklos_horthy
-						}
-					}
-					news_event = { id = news.313 }
 				}
 			}
 
@@ -3529,10 +3149,6 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			add_relation_rule_override = {
-			    target = FIN
-			    can_send_volunteers = yes
-			}
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
@@ -3790,13 +3406,6 @@ focus_tree = {
 							is_puppet = yes
 						}
 					}
-					FRA = {
-						OR = {
-							exists = no
-							is_puppet = yes
-							NOT = { has_completed_focus = FRA_strengthen_the_little_entente }
-						}
-					}
 				}
 			}
 		}
@@ -3810,18 +3419,7 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			IF = {
-				limit = {
-					FRA = { has_completed_focus = FRA_strengthen_the_little_entente }
-				}
-				FRA = { country_event = DOD_hungary.140 }
-			}
-			IF = {
-				limit = {
-					NOT = { FRA = { has_completed_focus = FRA_strengthen_the_little_entente } }
-				}
-				ROM = { country_event = DOD_hungary.140 }
-			}
+			ROM = { country_event = DOD_hungary.140 }
 
 			custom_effect_tooltip = HUN_bled_agreement_custom_effect_tooltip
 

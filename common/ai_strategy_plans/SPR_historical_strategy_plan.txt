@@ -16,8 +16,6 @@ SPR_historical_plan = {
 	}
 	abort = {
 		OR = {
-			tag = SPD
-			tag = SPA
 			OR = {
 				has_war_with = ENG
 				has_war_with = GER
