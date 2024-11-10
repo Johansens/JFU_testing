@@ -2432,7 +2432,7 @@ generic_escort_ship_organization = {
 		}
 		NOT = {
 			AND = {
-				OR = { tag = CHI = MAN  }
+				OR = { tag = CHI tag = MAN  }
 				has_dlc = "Waking the Tiger"
 			}
 		}
@@ -7686,7 +7686,7 @@ generic_motorized_mechanized_organization = {
 		}
 		NOT = {
 			AND = {
-				OR = { tag = CHI = MAN  }
+				OR = { tag = CHI tag  = MAN  }
 				has_dlc = "Waking the Tiger"
 			}
 		}
@@ -7716,7 +7716,7 @@ generic_motorized_mechanized_organization = {
 		}
 		NOT = {
 			AND = {
-				OR = { original_tag = FIN tag = NORtag = SWE }
+				OR = { original_tag = FIN tag = NOR tag = SWE }
 				has_dlc = "Arms Against Tyranny"
 			}
 		}

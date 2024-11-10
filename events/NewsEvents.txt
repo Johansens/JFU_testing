@@ -427,146 +427,6 @@ news_event = {
 	}
 }
 
-# Second Vienna Award - Northern Transylvania
-news_event = {
-	id = news.15
-	title = news.15.t
-	desc = news.15.d
-	picture = GFX_news_event_009
-	
-	major = yes
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = news.15.a
-		trigger = {
-			NOT = {
-				TAG = GER
-				TAG = ROM
-				TAG = HUN
-			}
-		}
-	}
-	option = {
-		name = news.15.b
-		trigger = { TAG = GER }
-	}
-	option = {
-		name = news.15.c
-		trigger = { TAG = ROM }
-	}
-	option = {
-		name = news.15.e
-		trigger = { TAG = HUN }
-	}
-}
-
-# Second Vienna Award - All of Transylvania
-news_event = {
-	id = news.16
-	title = news.15.t
-	desc = news.16.d
-	picture = GFX_news_event_009
-	
-	major = yes
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = news.15.a
-		trigger = {
-			NOT = {
-				TAG = GER
-				TAG = ROM
-				TAG = HUN
-			}
-		}
-	}
-	option = {
-		name = news.15.b
-		trigger = { TAG = GER }
-	}
-	option = {
-		name = news.15.c
-		trigger = { TAG = ROM }
-	}
-	option = {
-		name = news.15.e
-		trigger = { TAG = HUN }
-	}
-}
-
-# Second Vienna Award - Romania Rejects Verdict (Northern Transylvania)
-news_event = {
-	id = news.17
-	title = news.17.t
-	desc = news.17.d
-	picture = GFX_news_event_009
-	
-	major = yes
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = news.17.a
-		trigger = {
-			NOT = {
-				TAG = GER
-				TAG = ROM
-				TAG = HUN
-			}
-		}
-	}
-	option = {
-		name = news.17.b
-		trigger = { TAG = GER }
-	}
-	option = {
-		name = news.17.c
-		trigger = { TAG = ROM }
-	}
-	option = {
-		name = news.17.e
-		trigger = { TAG = HUN }
-	}
-}
-
-# Second Vienna Award - Romania Rejects Verdict (All of Transylvania)
-news_event = {
-	id = news.18
-	title = news.17.t
-	desc = news.18.d
-	picture = GFX_news_event_009
-	
-	major = yes
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = news.17.a
-		trigger = {
-			NOT = {
-				TAG = GER
-				TAG = ROM
-				TAG = HUN
-			}
-		}
-	}
-	option = {
-		name = news.17.b
-		trigger = { TAG = GER }
-	}
-	option = {
-		name = news.17.c
-		trigger = { TAG = ROM }
-	}
-	option = {
-		name = news.17.e
-		trigger = { TAG = HUN }
-	}
-}
-
 # German Claims Memel - Lithania Folds
 news_event = {
 	id = news.19
@@ -2871,11 +2731,6 @@ news_event = {
 	title = news.105.t
 	desc = {
 		text = news.105.d
-		trigger = { NOT = { SOV_is_opposition = yes } }
-	}
-	desc = {
-		text = news.105.d_alt
-		trigger = { SOV_is_opposition = yes }
 	}
 
 	picture = GFX_news_event_soviet_soldiers_ruins
@@ -3701,8 +3556,8 @@ news_event = {
 	
 	trigger = {
 		327 = { is_controlled_by = JAP }
-		327 = { is_owned_by = PHI }
-		JAP = { has_war_with = PHI }
+		327 = { is_owned_by = USA }
+		JAP = { has_war_with = USA }
 		NOT = { has_global_flag = fall_of_manila }
 	}
 	
@@ -3719,7 +3574,6 @@ news_event = {
 		trigger = {
 			NOT = {
 				TAG = JAP
-				TAG = PHI
 				TAG = USA
 			}
 		}
@@ -3732,7 +3586,6 @@ news_event = {
 		name = news.100.c
 		trigger = { 
 			OR = {
-				TAG = PHI 
 				TAG = USA
 			}
 		}
@@ -8669,14 +8522,14 @@ news_event = {
 	option = {
 		name = news.231.a
 		trigger = {
-			is_independent_china_or_warlord = yes
+			tag = CHI
 		}
 	}
 
 	option = {
 		name = news.231.b
 		trigger = {
-			is_independent_china_or_warlord = no
+			NOT = { tag = CHI }
 		}
 	}
 }

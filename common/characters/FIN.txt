@@ -630,16 +630,6 @@ characters = {
 				small = GFX_portrait_FIN_svante_sundman_small
 			}
 		}
-		navy_leader = {
-			traits = { navy_career_officer gunnery_expert arctic_water_expert }
-			skill = 2
-			attack_skill = 1
-			defense_skill = 3
-			maneuvering_skill = 1
-			coordination_skill = 2
-			legacy_id = 0
-			visible = { has_completed_focus = FIN_coastal_defense }
-		}
 	}
 
 
@@ -1710,23 +1700,6 @@ characters = {
 				id = -1
 				traits = { pragmatic_socialist personal_agenda_tanner }
 			}
-			advisor = {
-				slot = political_advisor
-				idea_token = FIN_vaino_tanner
-				allowed = {
-					original_tag = FIN
-				}
-				available = {
-					is_country_leader = no
-					OR = {
-						has_completed_focus = FIN_cooperate_with_social_democrats
-					}
-				}
-				cost = 70
-				traits = {
-					FIN_humble_appeaser_tanner 
-				}
-			}
 		}
 		instance = {
 			allowed = {
@@ -1771,33 +1744,6 @@ characters = {
 			portraits = {
 				civilian = {
 					small = GFX_portrait_FIN_miina_sillanpaa_small
-				}
-			}
-			advisor = {
-				slot = political_advisor #SDP
-				idea_token = FIN_miina_sillanpaa
-				allowed = {
-					original_tag = FIN
-				}
-				available = {
-					OR = {
-						has_completed_focus = FIN_cooperate_with_social_democrats
-					}
-				}
-				cost = 70
-				traits = {
-					FIN_champion_of_equality_sillanpaa 
-				}
-				ai_will_do = {
-					base = 1.000
-					modifier = {
-						factor = 10
-						FIN_is_democratic_ai = yes
-					}
-					modifier = {
-						factor = 0
-						FIN_is_historical_ai = yes
-					}
 				}
 			}
 		}

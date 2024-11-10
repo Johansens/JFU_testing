@@ -803,15 +803,4 @@ on_actions = {
 			add_to_variable = { var = DAYSFRANCEHELD value = 1 }
 		}
 	}
-	on_daily_GER = {
-		effect = {
-			if = {
-				limit = {
-					GER = { has_war_with = SOV }
-				}
-				initilize_victory_system = yes
-			}
-
-		}
-	}
 }

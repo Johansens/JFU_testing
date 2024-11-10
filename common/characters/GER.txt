@@ -2063,7 +2063,6 @@ characters = {
 				OR = {
 					has_completed_focus = GER_rocketry_innovations
 					has_completed_focus = GER_wunderwaffe
-					has_completed_focus = GER_glorious_mechanical_machinations
 				}
 			}
 			traits = {
@@ -2899,33 +2898,6 @@ characters = {
 				}
 			}
 
-			advisor = {
-				slot = political_advisor
-				idea_token = ernst_thalmann
-				allowed = {
-					original_tag = GER
-				}
-				visible = {
-					NOT = {
-						OR = {
-							has_completed_focus = GER_remilitarize_the_rhineland
-							has_completed_focus = GER_monarchist_sentiment
-						}
-					}
-				}
-				available = {
-					has_country_flag = GER_thalmann_freed_from_prison_flag
-					is_country_leader = no
-				}
-
-				traits = {
-					GER_proletarian_leader 
-				}
-				
-				ai_will_do = {
-					base = 1
-				}
-			}
 
 		}
 	}
@@ -2948,34 +2920,6 @@ characters = {
 				small = GFX_portrait_GER_wilhelm_zaisser_small
 			}
 		}
-
-		advisor = {
-			slot = political_advisor
-			idea_token = GER_wilhelm_zaisser
-			allowed = {
-				original_tag = GER
-				has_dlc = "Gotterdammerung" 
-			}
-			visible = {
-				NOT = {
-					OR = {
-						has_completed_focus = GER_remilitarize_the_rhineland
-						has_completed_focus = GER_monarchist_sentiment
-					}
-				}
-			}
-			available = {
-				has_completed_focus = GER_formalize_the_intelligence_wing
-			}
-
-			traits = {
-				GER_intelligence_coordinator
-			}
-
-			ai_will_do = {
-				base = 1
-			}
-		}
 	}
 
 	GER_otto_ruhle = {
@@ -2996,41 +2940,6 @@ characters = {
 				small = GFX_portrait_GER_hermann_duncker_small
 			}
 		}
-
-		advisor = {
-			slot = political_advisor
-			idea_token = GER_hermann_duncker
-			allowed = {
-				original_tag = GER
-				has_dlc = "Gotterdammerung"
-			}
-			visible = {
-				NOT = {
-					AND = {
-						has_government = fascism
-						has_completed_focus = GER_remilitarize_the_rhineland
-					}
-					AND = {
-						OR = {	
-							has_government = neutrality
-							has_government = democratic
-						}
-						has_completed_focus = GER_monarchist_sentiment
-					}
-				}
-			}
-			available = {
-				has_government = communism
-			}
-
-			traits = {
-				GER_workers_educator
-			}
-
-			ai_will_do = {
-				base = 1
-			}
-		}
 	}
 
 	GER_august_thalheimer = {
@@ -3042,40 +2951,6 @@ characters = {
 			}
 		}
 
-		advisor = {
-			slot = political_advisor
-			idea_token = GER_august_thalheimer
-			allowed = {
-				original_tag = GER
-				has_dlc = "Gotterdammerung"
-			}
-			visible = {
-				NOT = {
-					AND = {
-						has_government = fascism
-						has_completed_focus = GER_remilitarize_the_rhineland
-					}
-					AND = {
-						OR = {	
-							has_government = neutrality
-							has_government = democratic
-						}
-						has_completed_focus = GER_monarchist_sentiment
-					}
-				}
-			}
-			available = {
-				has_government = communism
-			}
-
-			traits = {
-				GER_stakhonovite_collectivist1
-			}
-
-			ai_will_do = {
-				base = 1
-			}
-		}
 	}
 
 	GER_bernhard_bastlein = {

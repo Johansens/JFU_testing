@@ -2756,30 +2756,6 @@ ideas = {
 			}
 		}
 
-		GER_operation_tannenbaum_ns = {
-			name = GER_operation_tannenbaum
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-
-			picture = generic_armor
-
-			modifier = {
-			}
-
-			targeted_modifier = {
-				tag = SWI
-				attack_bonus_against = 0.05
-				breakthrough_bonus_against = 0.05
-			}
-		}
-
 		GER_recieving_payments_for_protection_fake_idea = {
 			allowed = {
 				always = no

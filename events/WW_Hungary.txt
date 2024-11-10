@@ -3010,57 +3010,6 @@ country_event = {
 	}
 }
 
-# Stalin Arrives in Georgia
-country_event = {
-	id = WW_hungary.124
-	title = WW_hungary.124.t
-	desc = WW_hungary.124.desc
-	picture = GFX_report_event_stalin_meeting
-
-	is_triggered_only = yes
-
-	fire_only_once = yes
-	
-	option = {
-		name = WW_hungary.124.a
-		
-		GEO_ioseb_jughashvili = {
-			add_country_leader_role = {
-				promote_leader = yes
-				country_leader = {
-					ideology = stalinism
-					expire = "1965.1.1.1"
-					traits = { GEO_vengeful_stalinist } 
-				}
-			}	
-		}
-
-		IF = {
-			limit = {
-				NOT = {
-					has_government = communism
-				}
-			}
-			set_politics = {
-				ruling_party = communism
-				elections_allowed = no
-				long_name = SOV_communism_party_russian_long
-				name = SOV_communism_party
-			}
-		}
-		
-		
-	}
-
-	option = {
-		name = WW_hungary.124.b
-		
-		add_political_power = 50
-		
-	}
-}
-
-
 
 
 

@@ -564,7 +564,6 @@ HUN_gyor_program_initiatives_category = {
 		available = {
 			has_completed_focus = wuw_HUN_announce_the_gyor_program
 			has_completed_focus = wuw_HUN_the_botond
-			has_completed_focus = wuw_HUN_make_the_magyar_legiero_known
 			has_country_flag = HUN_activated_huba_1_flag
 			any_core_state = {
 				is_fully_controlled_by = ROOT
@@ -914,7 +913,6 @@ HUN_gyor_program_initiatives_category = {
 
 		available = {
 			has_completed_focus = wuw_HUN_announce_the_gyor_program
-			has_completed_focus = wuw_HUN_make_the_magyar_legiero_known
 			has_country_flag = HUN_activated_huba_1_flag
 			any_core_state = {
 				is_fully_controlled_by = ROOT
@@ -986,14 +984,12 @@ HUN_gyor_program_initiatives_category = {
 			NOT = {
 				OR = {
 					has_country_flag = HUN_opened_the_sosto_plant_flag
-					has_completed_focus = wuw_HUN_joint_air_development
 				}
 			}
 		}
 
 		available = {
 			has_completed_focus = wuw_HUN_announce_the_gyor_program
-			has_completed_focus = wuw_HUN_repulo_muszaki_intezet
 			has_country_flag = HUN_activated_huba_1_flag
 			any_core_state = {
 				is_fully_controlled_by = ROOT
@@ -1061,14 +1057,12 @@ HUN_gyor_program_initiatives_category = {
 			NOT = {
 				OR = {
 					has_country_flag = HUN_invested_in_dunai_repulogepgyar_flag
-					has_completed_focus = wuw_HUN_repulo_muszaki_intezet
 				}
 			}
 		}
 
 		available = {
 			has_completed_focus = wuw_HUN_announce_the_gyor_program
-			has_completed_focus = wuw_HUN_joint_air_development
 			has_country_flag = HUN_activated_huba_1_flag
 			any_core_state = {
 				is_fully_controlled_by = ROOT
@@ -1276,7 +1270,6 @@ HUN_territorial_revision_category = {
 			original_tag = HUN
 			OR = {
 				has_completed_focus = wuw_HUN_reaffirm_territorial_claims
-				has_completed_focus = wuw_HUN_reclaim_the_slovak_possessions
 			}
 			NOT = { has_country_flag = HUN_reintigrated_south_slovakia_flag }
 			664 = {
@@ -1289,7 +1282,6 @@ HUN_territorial_revision_category = {
 		available = {
 			OR = {
 				has_completed_focus = wuw_HUN_reaffirm_territorial_claims
-				has_completed_focus = wuw_HUN_reclaim_the_slovak_possessions
 			}
 			controls_state = 664
 		}
@@ -1363,7 +1355,6 @@ HUN_territorial_revision_category = {
 			original_tag = HUN
 			OR = {
 				has_completed_focus = wuw_HUN_reaffirm_territorial_claims
-				has_completed_focus = wuw_HUN_reclaim_the_slovak_possessions
 			}
 			NOT = { has_country_flag = HUN_reintigrated_west_slovakia_flag }
 			70 = {
@@ -1376,7 +1367,6 @@ HUN_territorial_revision_category = {
 		available = {
 			OR = {
 				has_completed_focus = wuw_HUN_reaffirm_territorial_claims
-				has_completed_focus = wuw_HUN_reclaim_the_slovak_possessions
 			}
 			controls_state = 70
 		}
@@ -1450,7 +1440,6 @@ HUN_territorial_revision_category = {
 			original_tag = HUN
 			OR = {
 				has_completed_focus = wuw_HUN_reaffirm_territorial_claims
-				has_completed_focus = wuw_HUN_reclaim_the_slovak_possessions
 			}
 			NOT = { has_country_flag = HUN_reintigrated_east_slovakia_flag }
 			71 = {
@@ -1463,7 +1452,6 @@ HUN_territorial_revision_category = {
 		available = {
 			OR = {
 				has_completed_focus = wuw_HUN_reaffirm_territorial_claims
-				has_completed_focus = wuw_HUN_reclaim_the_slovak_possessions
 			}
 			controls_state = 71
 		}
@@ -1537,7 +1525,6 @@ HUN_territorial_revision_category = {
 			original_tag = HUN
 			OR = {
 				has_completed_focus = wuw_HUN_reaffirm_territorial_claims
-				has_completed_focus = wuw_HUN_reclaim_the_slovak_possessions
 			}
 			NOT = { has_country_flag = HUN_reintigrated_carpathia_flag }
 			73 = {
@@ -1550,7 +1537,6 @@ HUN_territorial_revision_category = {
 		available = {
 			OR = {
 				has_completed_focus = wuw_HUN_reaffirm_territorial_claims
-				has_completed_focus = wuw_HUN_reclaim_the_slovak_possessions
 			}
 			controls_state = 73
 		}
@@ -1624,7 +1610,6 @@ HUN_territorial_revision_category = {
 			original_tag = HUN
 			OR = {
 				has_completed_focus = wuw_HUN_reaffirm_territorial_claims
-				has_completed_focus = wuw_HUN_revenge_for_1919
 			}
 			NOT = { has_country_flag = HUN_reintigrated_north_transylvania_flag }
 			76 = {
@@ -1637,7 +1622,6 @@ HUN_territorial_revision_category = {
 		available = {
 			OR = {
 				has_completed_focus = wuw_HUN_reaffirm_territorial_claims
-				has_completed_focus = wuw_HUN_revenge_for_1919
 			}
 			controls_state = 76
 		}
@@ -1711,7 +1695,6 @@ HUN_territorial_revision_category = {
 			original_tag = HUN
 			OR = {
 				has_completed_focus = wuw_HUN_reaffirm_territorial_claims
-				has_completed_focus = wuw_HUN_revenge_for_1919
 			}
 			NOT = { has_country_flag = HUN_reintigrated_south_transylvania_flag }
 			84 = {
@@ -1724,7 +1707,6 @@ HUN_territorial_revision_category = {
 		available = {
 			OR = {
 				has_completed_focus = wuw_HUN_reaffirm_territorial_claims
-				has_completed_focus = wuw_HUN_revenge_for_1919
 			}
 			controls_state = 84
 		}
@@ -1798,7 +1780,6 @@ HUN_territorial_revision_category = {
 			original_tag = HUN
 			OR = {
 				has_completed_focus = wuw_HUN_reaffirm_territorial_claims
-				has_completed_focus = wuw_HUN_revenge_for_1919
 			}
 			NOT = { has_country_flag = HUN_reintigrated_crisana_flag }
 			83 = {
@@ -1811,7 +1792,6 @@ HUN_territorial_revision_category = {
 		available = {
 			OR = {
 				has_completed_focus = wuw_HUN_reaffirm_territorial_claims
-				has_completed_focus = wuw_HUN_revenge_for_1919
 			}
 			controls_state = 83
 		}
@@ -1885,7 +1865,6 @@ HUN_territorial_revision_category = {
 			original_tag = HUN
 			OR = {
 				has_completed_focus = wuw_HUN_reaffirm_territorial_claims
-				has_completed_focus = wuw_HUN_revenge_for_1919
 			}
 			NOT = { has_country_flag = HUN_reintigrated_banat_flag }
 			82 = {
@@ -1898,7 +1877,6 @@ HUN_territorial_revision_category = {
 		available = {
 			OR = {
 				has_completed_focus = wuw_HUN_reaffirm_territorial_claims
-				has_completed_focus = wuw_HUN_revenge_for_1919
 			}
 			controls_state = 82
 		}
@@ -1972,7 +1950,6 @@ HUN_territorial_revision_category = {
 			original_tag = HUN
 			OR = {
 				has_completed_focus = wuw_HUN_reaffirm_territorial_claims
-				has_completed_focus = wuw_HUN_undoing_the_yugoslav_mistake
 			}
 			NOT = { has_country_flag = HUN_reintigrated_west_banat_flag }
 			764 = {
@@ -1985,7 +1962,6 @@ HUN_territorial_revision_category = {
 		available = {
 			OR = {
 				has_completed_focus = wuw_HUN_reaffirm_territorial_claims
-				has_completed_focus = wuw_HUN_undoing_the_yugoslav_mistake
 			}
 			controls_state = 764
 		}
@@ -2059,7 +2035,6 @@ HUN_territorial_revision_category = {
 			original_tag = HUN
 			OR = {
 				has_completed_focus = wuw_HUN_reaffirm_territorial_claims
-				has_completed_focus = wuw_HUN_undoing_the_yugoslav_mistake
 			}
 			NOT = { has_country_flag = HUN_reintigrated_vojvodina_flag }
 			45 = {
@@ -2072,7 +2047,6 @@ HUN_territorial_revision_category = {
 		available = {
 			OR = {
 				has_completed_focus = wuw_HUN_reaffirm_territorial_claims
-				has_completed_focus = wuw_HUN_undoing_the_yugoslav_mistake
 			}
 			controls_state = 45
 		}
@@ -2227,7 +2201,6 @@ HUN_territorial_revision_category = {
 			original_tag = HUN
 			OR = {
 				has_completed_focus = wuw_HUN_reaffirm_territorial_claims
-				has_completed_focus = wuw_HUN_undoing_the_yugoslav_mistake
 			}
 			NOT = { has_country_flag = HUN_reintigrated_croatia_flag }
 			109 = {
@@ -2240,7 +2213,6 @@ HUN_territorial_revision_category = {
 		available = {
 			OR = {
 				has_completed_focus = wuw_HUN_reaffirm_territorial_claims
-				has_completed_focus = wuw_HUN_undoing_the_yugoslav_mistake
 			}
 			controls_state = 109
 		}
@@ -2314,7 +2286,6 @@ HUN_territorial_revision_category = {
 			original_tag = HUN
 			OR = {
 				has_completed_focus = wuw_HUN_reaffirm_territorial_claims
-				has_completed_focus = wuw_HUN_undoing_the_yugoslav_mistake
 			}
 			NOT = { has_country_flag = HUN_reintigrated_dalmatia_flag }
 			103 = {
@@ -2327,7 +2298,6 @@ HUN_territorial_revision_category = {
 		available = {
 			OR = {
 				has_completed_focus = wuw_HUN_reaffirm_territorial_claims
-				has_completed_focus = wuw_HUN_undoing_the_yugoslav_mistake
 			}
 			controls_state = 103
 		}
@@ -2374,333 +2344,6 @@ HUN_territorial_revision_category = {
 			}
 		}
 
-	}
-
-	### DEMOCRATIC REVISION
-
-	# Organize a Referendum in Southern Slovakia
-	HUN_referendum_in_southern_slovakia = {
-		priority = 75
-
-		icon = GFX_decision_eng_trade_unions_support
-
-		ai_will_do = {
-			base = 150
-		}
-
-		allowed = {
-			original_tag = HUN
-		}
-
-		visible = {
-			has_completed_focus = wuw_HUN_hold_territorial_referendums
-		}
-
-		target_trigger = {
-			FROM = {
-				NOT = {
-					has_war_with = ROOT
-				}	
-				NOT = {
-					has_country_flag = HUN_from_refused_south_slovak_referendum_results
-					has_country_flag = HUN_held_south_slovakia_referendum
-				}
-				NOT = {
-					original_tag = HUN
-				}
-				OR = {
-					controls_state = 664
-					any_subject_country = {
-						is_ai = yes
-						controls_state = 664
-					}
-				}
-			}
-		}
-
-		highlight_states = {
-			highlight_state_targets = {
-				state = 664
-			}
-		}
-
-		available = {
-			has_completed_focus = wuw_HUN_hold_territorial_referendums
-			is_subject = no
-			OR = {
-				has_government = democratic
-				has_government = neutrality
-			}
-			FROM = {
-				has_opinion = {
-					target = ROOT
-					value > 65 
-				}
-			}
-		}
-
-		target_root_trigger = {
-			original_tag = HUN
-		}
-
-		cost = 75
-
-		complete_effect = {
-			FROM = {
-				country_event = {
-				    id = WW_hungary.111
-				    days = 2
-				    random = 3
-				}
-				hidden_effect = {
-					set_country_flag = HUN_held_south_slovakia_referendum
-				}
-			}
-		}
-	}
-
-	# Organize a Referendum in Carpathian Ruthenia
-	HUN_referendum_in_carpathian_ruthenia = {
-		priority = 70
-
-		icon = GFX_decision_eng_trade_unions_support
-
-		ai_will_do = {
-			base = 200
-		}
-
-		allowed = {
-			original_tag = HUN
-		}
-
-		visible = {
-			has_completed_focus = wuw_HUN_hold_territorial_referendums
-		}
-
-		target_trigger = {
-			FROM = {
-				NOT = {
-					has_war_with = ROOT
-				}	
-				NOT = {
-					has_country_flag = HUN_from_refused_carpatho_ukrainian_referendum_results
-					has_country_flag = HUN_held_carpathian_referendum
-				}
-				NOT = {
-					original_tag = HUN
-				}
-				OR = {
-					controls_state = 73
-					any_subject_country = {
-						is_ai = yes
-						controls_state = 73
-					}
-				}
-			}
-		}
-
-		highlight_states = {
-			highlight_state_targets = {
-				state = 73
-			}
-		}
-
-		available = {
-			has_completed_focus = wuw_HUN_hold_territorial_referendums
-			is_subject = no
-			OR = {
-				has_government = democratic
-				has_government = neutrality
-			}
-			FROM = {
-				has_opinion = {
-					target = ROOT
-					value > 65 
-				}
-			}
-		}
-
-		target_root_trigger = {
-			original_tag = HUN
-		}
-
-		cost = 75
-
-		complete_effect = {
-			FROM = {
-				country_event = {
-				    id = WW_hungary.114
-				    days = 2
-				    random = 3
-				}
-				hidden_effect = {
-					set_country_flag = HUN_held_carpathian_referendum
-				}
-			}
-		}
-	}
-
-
-	# Organize a Referendum in the Vojvodina
-	HUN_referendum_in_vojvodina = {
-		priority = 60
-
-		icon = GFX_decision_eng_trade_unions_support
-
-		ai_will_do = {
-			base = 200
-		}
-
-		allowed = {
-			original_tag = HUN
-		}
-
-		visible = {
-			has_completed_focus = wuw_HUN_hold_territorial_referendums
-		}
-
-		target_trigger = {
-			FROM = {
-				NOT = {
-					has_war_with = ROOT
-				}	
-				NOT = {
-					has_country_flag = HUN_from_refused_vojvodinan_referendum_results
-					has_country_flag = HUN_held_vojvode_referendum
-				}
-				NOT = {
-					original_tag = HUN
-				}
-				OR = {
-					controls_state = 45
-					any_subject_country = {
-						is_ai = yes
-						controls_state = 45
-					}
-				}
-			}
-		}
-
-		highlight_states = {
-			highlight_state_targets = {
-				state = 45
-			}
-		}
-
-		available = {
-			has_completed_focus = wuw_HUN_hold_territorial_referendums
-			is_subject = no
-			OR = {
-				has_government = democratic
-				has_government = neutrality
-			}
-			FROM = {
-				has_opinion = {
-					target = ROOT
-					value > 65 
-				}
-			}
-		}
-
-		target_root_trigger = {
-			original_tag = HUN
-		}
-
-		cost = 75
-
-		complete_effect = {
-			FROM = {
-				country_event = {
-				    id = WW_hungary.117
-				    days = 2
-				    random = 3
-				}
-				hidden_effect = {
-					set_country_flag = HUN_held_vojvode_referendum
-				}
-			}
-		}
-	}
-
-	# Organize a Referendum in the Székelyföld
-	HUN_referendum_in_north_transylvania = {
-		priority = 65
-
-		icon = GFX_decision_eng_trade_unions_support
-
-		ai_will_do = {
-			base = 100
-		}
-
-		allowed = {
-			original_tag = HUN
-		}
-
-		visible = {
-			has_completed_focus = wuw_HUN_hold_territorial_referendums
-		}
-
-		target_trigger = {
-			FROM = {
-				NOT = {
-					has_war_with = ROOT
-				}	
-				NOT = {
-					has_country_flag = HUN_from_refused_north_transylvanian_referendum_results
-					has_country_flag = HUN_held_north_transylvanian_referendum
-				}
-				NOT = {
-					original_tag = HUN
-				}
-				OR = {
-					controls_state = 76
-					any_subject_country = {
-						is_ai = yes
-						controls_state = 76
-					}
-				}
-			}
-		}
-
-		highlight_states = {
-			highlight_state_targets = {
-				state = 76
-			}
-		}
-
-		available = {
-			has_completed_focus = wuw_HUN_hold_territorial_referendums
-			is_subject = no
-			OR = {
-				has_government = democratic
-				has_government = neutrality
-			}
-			FROM = {
-				has_opinion = {
-					target = ROOT
-					value > 65 
-				}
-			}
-		}
-
-		target_root_trigger = {
-			original_tag = HUN
-		}
-
-		cost = 75
-
-		complete_effect = {
-			FROM = {
-				country_event = {
-				    id = WW_hungary.120
-				    days = 2
-				    random = 3
-				}
-				hidden_effect = {
-					set_country_flag = HUN_held_north_transylvanian_referendum
-				}
-			}
-		}
 	}
 
 
@@ -2771,474 +2414,6 @@ political_actions = {
 
 
 HUN_fascist_movements_category = {
-	
-	# The fascist insurgency mission
-	HUN_the_incoming_fascist_civil_war_mission = {
-
-		priority = 150
-
-		icon = GFX_decision_generic_ignite_civil_war
-
-		available = {
-			hidden_trigger = { always = no }
-		}
-
-		days_mission_timeout = 420
-
-		fire_only_once = yes
-
-		activation = {
-			always = no
-		}
-
-		visible = {
-			tag = HUN
-			NOT = {
-				OR = {
-					has_country_flag = HUN_stamped_down_on_the_arrow_cross_party_flag
-					has_government = fascism
-				}
-			}
-		}
-
-		cancel_if_not_visible = yes
-
-		is_good = no
-
-		timeout_effect = {
-
-			add_stability = -0.1
-			add_political_power = -75
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			start_civil_war = {
-			    ideology = fascism
-			    size = 0.1
-			    army_ratio = 0.3
-			    navy_ratio = 0
-			    air_ratio = 0.5
-
-			    keep_unit_leaders_trigger = {
-			        has_trait = trait_HUN_vitez
-			    }
-
-			    keep_all_characters = yes
-
-			    PREV = {  # Original country
-			        every_army_leader = {
-			        	limit = {
-			        		has_trait = trait_HUN_fascist_sympathies
-			        	}
-			        	set_nationality = PREV.PREV
-			        }
-			        HUN_ferenc_szalasi = { # Character
-			            set_nationality = PREV.PREV
-			            # Transfers to breakaway
-			        }
-			    }
-
-			    IF = {
-			    	limit = {
-			    		PREV = {
-			    			has_idea = HUN_the_volksbund_idea
-			    		}
-			    	}
-			    	PREV.PREV = {
-			    		add_ideas = HUN_volksbund_good
-			    	}
-			    }
-
-			    custom_effect_tooltip = generic_skip_one_line_tt
-
-			    IF = {
-			    	limit = {
-			    		PREV = {
-			    			NOT = {
-			    				has_country_flag = HUN_secured_the_ragged_guards_flag
-			    			}
-			    		}
-			    	}
-			    	PREV.PREV = {
-			    		delete_unit_template_and_units = {
-			    			division_template = "Rongyos Gárda"
-			    			disband = yes #if yes, will refund equipment/manpower.
-			    		}
-
-			    		division_template = {
-			    			name = "Rongyos Gárda"		
-			    			division_names_group = HUN_INF_01
-			    			template_counter = 90
-			    			is_locked = yes
-			    			force_allow_recruiting = yes
-			    			division_cap = 12 
-			    			regiments = {
-			    				militia = { x = 0 y = 0 }
-			    				militia = { x = 0 y = 1 }
-			    				militia = { x = 1 y = 0 }
-			    				militia = { x = 1 y = 1 }
-			    			}
-			    			support = {
-			    			}
-			    		}
-
-			    		random_state = {
-			    			limit = {
-			    				is_fully_controlled_by = PREV
-			    			}
-			    			create_unit = {
-			    			    division = "name = \"Rongyos Gárda 'Lajtabánság'\" division_template = \"Rongyos Gárda\" start_experience_factor = 0.4 start_equipment_factor = 0.6"
-			    			    owner = PREV
-			    			}
-			    			create_unit = {
-			    			    division = "name = \"Rongyos Gárda 'Sopron'\" division_template = \"Rongyos Gárda\" start_experience_factor = 0.3 start_equipment_factor = 0.8"
-			    			    owner = PREV
-			    			}
-			    			create_unit = {
-			    			    division = "name = \"Rongyos Gárda 'Komárno'\" division_template = \"Rongyos Gárda\" start_experience_factor = 0.2 start_equipment_factor = 0.5"
-			    			    owner = PREV
-			    			}
-			    			create_unit = {
-			    			    division = "name = \"Rongyos Gárda 'Szeged'\" division_template = \"Rongyos Gárda\" start_experience_factor = 0.2 start_equipment_factor = 0.5"
-			    			    owner = PREV
-			    			}
-			    		}
-			    	}
-			    }
-			    
-
-			}
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			IF = {
-				limit = {
-					has_idea = HUN_the_volksbund_idea
-				}
-				remove_ideas = HUN_the_volksbund_idea
-			}
-
-			hidden_effect = {
-				set_global_flag = arrow_cross_insurgency_happened
-			}
-
-
-		}
-	}
-
-	# Secure the Ragged Guards
-	HUN_secure_the_ragged_guards  = {
-
-		priority = 80
-
-		icon = GFX_decision_generic_army_support
-
-		ai_will_do = {
-			base = 200
-		}
-
-		allowed = {  
-			original_tag = HUN
-		}
-
-		available = {
-			NOT = { has_government = fascism }
-			OR = {
-				has_completed_focus = wuw_HUN_establishing_a_new_dynasty
-				has_completed_focus = wuw_HUN_elect_a_democratic_king
-			}
-			NOT = { 
-				has_global_flag = arrow_cross_insurgency_happened
-			}
-		}
-
-		visible = { 
-			tag = HUN
-			NOT = { has_government = fascism }
-			OR = {
-				has_completed_focus = wuw_HUN_establishing_a_new_dynasty
-				has_completed_focus = wuw_HUN_elect_a_democratic_king
-			}
-			NOT = { 
-				OR = {
-					has_country_flag = HUN_secured_the_ragged_guards_flag
-					has_global_flag = arrow_cross_insurgency_happened
-				}
-			}
-		} 
-
-		days_remove = 35 
-
-		cost = 50
-
-		complete_effect = {
-		}
-
-		modifier = {
-		}
-
-		remove_effect = {
-			
-			custom_effect_tooltip = HUN_secure_the_ragged_guards_tt
-
-			hidden_effect = {
-				set_country_flag = HUN_secured_the_ragged_guards_flag
-			}
-		}
-
-	} 
-
-	# Ban the Volksbund
-	HUN_ban_the_volksbund  = {
-
-		priority = 79
-
-		icon = GFX_decision_eng_trade_unions_support
-
-		ai_will_do = {
-			base = 150
-		}
-
-		allowed = {  
-			original_tag = HUN
-		}
-
-		available = {
-
-			NOT = { has_government = fascism }
-
-			has_completed_focus = wuw_HUN_elect_a_democratic_king 
-			
-			NOT = { 
-				has_global_flag = arrow_cross_insurgency_happened
-			}
-
-			has_idea = HUN_the_volksbund_idea
-
-		}
-
-		visible = { 
-
-			tag = HUN
-
-			NOT = { has_government = fascism }
-			
-			has_completed_focus = wuw_HUN_elect_a_democratic_king
-			
-			NOT = { 
-				OR = {
-					has_country_flag = HUN_dissolved_the_volksbund_flag
-					has_global_flag = arrow_cross_insurgency_happened
-				}
-			}
-
-		} 
-
-		days_remove = 35 
-
-		cost = 50
-
-		complete_effect = {
-		}
-
-		modifier = {
-		}
-
-		remove_effect = {
-			
-			add_popularity = {
-				ideology = fascism
-				popularity = -0.05
-			}	
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			IF = {
-				limit = {
-					GER = {
-						exists = yes
-						has_government = fascism
-					}
-				}
-				GER = {
-					add_opinion_modifier = {
-						target = ROOT
-						modifier = dissolved_the_volksbund_modifier
-					}	
-				}
-			}
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			custom_effect_tooltip = HUN_ban_the_volksbund_tt
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			IF = {
-				limit = {
-					has_idea = HUN_the_volksbund_idea
-				}
-				remove_ideas = HUN_the_volksbund_idea
-			}
-
-			hidden_effect = {
-				set_country_flag = HUN_dissolved_the_volksbund_flag
-			}
-		}
-
-	}
-
-	# Dismiss Fascist Generals
-	HUN_dismiss_fascist_generals  = {
-
-		priority = 78
-
-		icon = GFX_decision_eng_blackshirt_march
-
-		ai_will_do = {
-			base = 190
-		}
-
-		allowed = {  
-			original_tag = HUN
-		}
-
-		available = {
-			NOT = { has_government = fascism }
-			OR = {
-				has_completed_focus = wuw_HUN_establishing_a_new_dynasty
-				has_completed_focus = wuw_HUN_elect_a_democratic_king
-			}
-			NOT = { 
-				has_global_flag = arrow_cross_insurgency_happened
-			}
-		}
-
-		visible = { 
-			tag = HUN
-			NOT = { has_government = fascism }
-			OR = {
-				has_completed_focus = wuw_HUN_establishing_a_new_dynasty
-				has_completed_focus = wuw_HUN_elect_a_democratic_king
-			}
-			NOT = { 
-				OR = {
-					has_country_flag = HUN_dismissed_fascist_generals_flag
-					has_global_flag = arrow_cross_insurgency_happened
-				}
-			}
-		} 
-
-		days_remove = 35 
-
-		cost = 50
-
-		complete_effect = {
-		}
-
-		modifier = {
-		}
-
-		remove_effect = {
-
-			add_war_support = -0.05
-			add_command_power = -25
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			custom_effect_tooltip = HUN_every_fascist_sympathizer_tt
-			every_army_leader = {
-				limit = {
-					has_trait = trait_HUN_fascist_sympathies
-				}
-				retire = yes 
-			}
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-			
-			custom_effect_tooltip = HUN_ban_the_volksbund_tt
-
-			hidden_effect = {
-				set_country_flag = HUN_dismissed_fascist_generals_flag
-			}
-		}
-
-	} 
-
-	# Stamp out the Arrow Cross Party
-	HUN_stamp_out_the_arrow_cross_party  = {
-
-		priority = 60
-
-		icon = GFX_decision_generic_civil_support
-
-		ai_will_do = {
-			base = 200
-		}
-
-		allowed = {  
-			original_tag = HUN
-		}
-
-		available = {
-			NOT = { has_government = fascism }
-			OR = {
-				has_completed_focus = wuw_HUN_establishing_a_new_dynasty
-				has_completed_focus = wuw_HUN_elect_a_democratic_king
-			}
-			NOT = { 
-				has_global_flag = arrow_cross_insurgency_happened
-			}
-			has_country_flag = HUN_secured_the_ragged_guards_flag
-			has_country_flag = HUN_dissolved_the_volksbund_flag
-			has_country_flag = HUN_dismissed_fascist_generals_flag
-		}
-
-		visible = { 
-			tag = HUN
-			NOT = { has_government = fascism }
-			OR = {
-				has_completed_focus = wuw_HUN_establishing_a_new_dynasty
-				has_completed_focus = wuw_HUN_elect_a_democratic_king
-			}
-			NOT = { 
-				OR = {
-					has_country_flag = HUN_stamped_down_on_the_arrow_cross_party_flag
-					has_global_flag = arrow_cross_insurgency_happened
-				}
-			}
-		} 
-
-		days_remove = 35 
-
-		cost = 75
-
-		complete_effect = {
-			add_stability = -0.1
-		}
-
-		modifier = {
-		}
-
-		remove_effect = {
-
-			add_stability = 0.05
-
-			add_popularity = {
-				ideology = fascism
-				popularity = -0.15
-			}	
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-			
-			custom_effect_tooltip = HUN_stamp_out_the_arrow_cross_party_tt
-
-			hidden_effect = {
-				set_country_flag = HUN_stamped_down_on_the_arrow_cross_party_flag
-			}
-		}
-
-	} 
 
 }
 
@@ -3344,147 +2519,6 @@ political_actions = {
 				set_country_flag = HUN_collectivized_society_flag
 			}
 		}
-
-	}
-
-	# Crown Georing as King
-	HUN_apostolic_king_goering  = {
-
-		priority = 100
-
-		icon = GFX_decision_generic_political_address
-
-		ai_will_do = {
-			base = 0
-		}
-
-		allowed = {  
-			original_tag = HUN
-		}
-
-		available = {
-
-			has_government = fascism
-			
-			has_completed_focus = wuw_HUN_government_of_national_unity
-			
-			OR = {
-				AND = {
-					GER = {
-						has_government = fascism
-						is_in_faction_with = HUN
-						NOT = {
-							has_country_leader = {
-								ruling_only = yes
-								character = GER_hermann_goring
-							}	
-						}
-					}
-				}
-				GER = {
-					NOT = {
-						has_government = fascism
-					}
-				}
-			}
-
-			has_country_leader = {
-				ruling_only = yes
-				character = HUN_ferenc_szalasi
-			}	
-
-			amount_taken_ideas = {
-			    amount < 3
-			    slots = {
-			        political_advisor
-			    }
-			}
-
-		}
-
-		visible = { 
-
-			original_tag = HUN
-
-			has_government = fascism
-
-			has_completed_focus = wuw_HUN_government_of_national_unity
-
-			NOT = {
-				has_country_flag = HUN_crowned_hermann_goering_king_flag
-			}
-
-			has_country_leader = {
-				ruling_only = yes
-				character = HUN_ferenc_szalasi
-			}
-
-		} 
-
-		#days_remove = 105 
-
-		cost = 50
-
-		complete_effect = {
-
-			IF = {
-				limit = {
-					GER = {
-						OR = {
-							exists = no
-							NOT = {
-								has_government = fascism
-							}
-						}
-					}
-				}
-				every_possible_country = {
-
-					limit = {
-						has_character = GER_hermann_goring
-					}
-
-					set_nationality = {
-					    target_country = ROOT
-					    character = GER_hermann_goring
-					}	
-
-				}
-
-				custom_effect_tooltip = goering_as_king_tt
-
-				hidden_effect = {
-					country_event = {
-						id = WW_hungary.107
-						hours = 0
-					}	
-				}
-			}
-			ELSE_IF = {
-				limit = {
-					GER = {
-						has_government = fascism
-					}
-				} 
-				GER = {
-					country_event = {
-						id = WW_hungary.108
-						hours = 12
-						random_hours = 24
-					}	
-				}
-			}
-
-			hidden_effect = {
-				set_country_flag = HUN_crowned_hermann_goering_king_flag
-			}
-		}
-
-		#modifier = {
-		#}
-
-		#remove_effect = {	
-		#}
 
 	}
 

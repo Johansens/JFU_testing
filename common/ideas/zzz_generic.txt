@@ -1496,12 +1496,6 @@ ideas = {
 				}
 				NOT = {
 					AND = {
-						OR = { tag = ETH tag = SWI }
-						has_dlc = "By Blood Alone"
-					}
-				}
-				NOT = {
-					AND = {
 						OR = {  tag = BRA }
 						has_dlc = "Trial of Allegiance"
 					}
@@ -1604,52 +1598,9 @@ ideas = {
 			picture = generic_air_manufacturer_1
 
 			allowed = {
-				NOT = { OR = { tag = GER tag = ENG tag = SOV tag = FRA tag = ITA tag = JAP tag = USA tag = FIN } }
+				NOT = { OR = { tag = AUS tag = ETH tag = BUL tag = SPR tag = GER tag = ENG tag = SOV tag = FRA tag = ITA tag = JAP tag = USA tag = FIN tag = YUG tag = ROM tag = CHI tag = MAN tag = MEX tag = HOL } }
 				NOT = {
 					has_allowed_idea_with_traits = { idea = light_aircraft_manufacturer limit = 1 }
-				}
-				if = {
-					limit = {
-						has_dlc = "Death or Dishonor"
-					}
-					NOT = { tag = ROM } NOT = { tag = YUG }
-				}
-				NOT = {
-					AND = {
-						OR = { tag = CHI = MAN }
-						has_dlc = "Waking the Tiger"
-					}
-				}
-				NOT = {
-					AND = {
-						OR = { tag = MEX tag = HOL }
-						has_dlc = "Man the Guns"
-					}
-				}
-				NOT = {
-					AND = {
-						OR = { tag = SPR}
-						has_dlc = "La Resistance"
-					}
-				}
-				NOT = {
-					AND = {
-						OR = { tag = BUL}
-						has_dlc = "Battle for the Bosporus"
-					}
-				}
-				NOT = {
-					AND = {
-						OR = { tag = ETH tag = SWI }
-						has_dlc = "By Blood Alone"
-					}
-				}
-
-				NOT = {
-					AND = {
-						tag = AUS 
-						has_dlc = "Gotterdammerung"
-					}
 				}
 			}
 			
@@ -1668,55 +1619,10 @@ ideas = {
 			picture = generic_air_manufacturer_3
 
 			allowed = {
-				NOT = { OR = { tag = GER tag = ENG tag = SOV tag = FRA tag = ITA tag = JAP tag = USA tag = ROM tag = FIN } }
+				NOT = { OR = { tag = AUS tag = ETH tag = BUL tag = SPR tag = GER tag = ENG tag = SOV tag = FRA tag = ITA tag = JAP tag = USA tag = FIN tag = YUG tag = ROM tag = CHI tag = MAN tag = MEX tag = HOL } }
 				NOT = {
-					has_allowed_idea_with_traits = { idea = medium_aircraft_manufacturer limit = 1 }
+					has_allowed_idea_with_traits = { idea = light_aircraft_manufacturer limit = 1 }
 				}
-				if = {
-					limit = {
-						has_dlc = "Death or Dishonor"
-					}
-					NOT = { tag = YUG }
-				}
-				NOT = {
-					AND = {
-						OR = { tag = CHI = MAN  }
-						has_dlc = "Waking the Tiger"
-					}
-				}
-				NOT = {
-					AND = {
-						OR = { tag = MEX tag = HOL }
-						has_dlc = "Man the Guns"
-					}
-				}
-				NOT = {
-					AND = {
-						OR = { tag = SPR }
-						has_dlc = "La Resistance"
-					}
-				}
-				NOT = {
-					AND = {
-						OR = { tag = BUL}
-						has_dlc = "Battle for the Bosporus"
-					}
-				}
-				NOT = {
-					AND = {
-						OR = { tag = ETH  }
-						has_dlc = "By Blood Alone"
-					}
-				}
-
-
-				NOT = {
-					AND = {
-						OR = { tag = HUN tag = AUS }
-						has_dlc = "Gotterdammerung"
-					}
-				}
-
 			}
 			
 			cost = 150
@@ -1734,53 +1640,9 @@ ideas = {
 			picture = generic_air_manufacturer_2
 			
 			allowed = {
-				NOT = { OR = { tag = GER tag = ENG tag = SOV tag = FRA tag = ITA tag = JAP tag = USA tag = CAN tag = ROM tag = FIN } }
+				NOT = { OR = { tag = AUS tag = ETH tag = BUL tag = SPR tag = GER tag = ENG tag = SOV tag = FRA tag = ITA tag = JAP tag = USA tag = FIN tag = YUG tag = ROM tag = CHI tag = MAN tag = MEX tag = HOL } }
 				NOT = {
-					has_allowed_idea_with_traits = { idea = heavy_aircraft_manufacturer limit = 1 }
-				}
-				if = {
-					limit = {
-						has_dlc = "Death or Dishonor"
-					}
-					NOT = { tag = YUG }
-				}
-				NOT = {
-					AND = {
-						OR = { tag = CHI = MAN  }
-						
-					}
-				}
-				NOT = {
-					AND = {
-						OR = { tag = MEX tag = HOL }
-						has_dlc = "Man the Guns"
-					}
-				}
-				NOT = {
-					AND = {
-						OR = { tag = SPR }
-						has_dlc = "La Resistance"
-					}
-				}
-				NOT = {
-					AND = {
-						OR = { tag = BUL}
-						has_dlc = "Battle for the Bosporus"
-					}
-				}
-				NOT = {
-					AND = {
-						OR = { tag = ETH }
-						has_dlc = "By Blood Alone"
-					}
-				}
-
-
-				NOT = {
-					AND = {
-						OR = { tag = HUN tag = AUS }
-						has_dlc = "Gotterdammerung"
-					}
+					has_allowed_idea_with_traits = { idea = light_aircraft_manufacturer limit = 1 }
 				}
 			}
 			
@@ -1799,51 +1661,10 @@ ideas = {
 			picture = generic_naval_manufacturer_2
 
 			allowed = {
-				NOT = { OR = { tag = GER tag = ENG tag = SOV tag = FRA tag = ITA tag = JAP tag = USA tag = CAN tag = ROM tag = YUG tag = FIN } }
+				NOT = { OR = { tag = AUS tag = ETH tag = BUL tag = SPR tag = GER tag = ENG tag = SOV tag = FRA tag = ITA tag = JAP tag = USA tag = FIN tag = YUG tag = ROM tag = CHI tag = MAN tag = MEX tag = HOL } }
 				NOT = {
-					has_allowed_idea_with_traits = { idea = naval_aircraft_manufacturer limit = 1 }
+					has_allowed_idea_with_traits = { idea = light_aircraft_manufacturer limit = 1 }
 				}
-				if = {
-					limit = {
-						has_dlc = "Waking the Tiger"
-					}
-					NOT = {
-						OR = { tag = CHI = MAN  }
-					}
-				}
-				NOT = {
-					AND = {
-						OR = { tag = MEX tag = HOL }
-						has_dlc = "Man the Guns"
-					}
-				}
-				NOT = {
-					AND = {
-						OR = { tag = SPR }
-						has_dlc = "La Resistance"
-					}
-				}
-				NOT = {
-					AND = {
-						OR = { tag = BUL}
-						has_dlc = "Battle for the Bosporus"
-					}
-				}
-				NOT = {
-					AND = {
-						OR = { tag = ETH  }
-						has_dlc = "By Blood Alone"
-					}
-				}
-
-
-				NOT = {
-					AND = {
-						OR = { tag = HUN tag = AUS }
-						has_dlc = "Gotterdammerung"
-					}
-				}
-
 			}
 			
 			cost = 150
@@ -1864,52 +1685,9 @@ ideas = {
 			picture = generic_industrial_concern_1
 
 			allowed = {
-				NOT = { OR = { tag = GER tag = ENG tag = SOV tag = FRA tag = ITA tag = JAP tag = USA tag = HUN tag = FIN } }
+				NOT = { OR = { tag = AUS tag = ETH tag = BUL tag = SPR tag = GER tag = ENG tag = SOV tag = FRA tag = ITA tag = JAP tag = USA tag = FIN tag = YUG tag = ROM tag = CHI tag = MAN tag = MEX tag = HOL } }
 				NOT = {
-					has_allowed_idea_with_traits = { idea = industrial_concern limit = 1 }
-				}
-				NOT = {
-					AND = {
-						OR = { tag = CHI = MAN  }
-						has_dlc = "Waking the Tiger"
-					}
-				}
-				NOT = {
-					AND = {
-						OR = { tag = MEX tag = HOL }
-						has_dlc = "Man the Guns"
-					}
-				}
-				NOT = {
-					AND = {
-						OR = { tag = SPR }
-						has_dlc = "La Resistance"
-					}
-				}
-				NOT = {
-					AND = {
-						OR = { tag = BUL}
-						has_dlc = "Battle for the Bosporus"
-					}
-				}
-				NOT = {
-					AND = {
-						tag = ETH
-						has_dlc = "By Blood Alone"
-					}
-				}
-				NOT = {
-					AND = {
-						tag = BRA
-						has_dlc = "Trial of Allegiance"
-					}
-				}
-
-				NOT = {
-					AND = {
-						OR = { tag = HUN tag = AUS tag = BEL }
-						has_dlc = "Gotterdammerung"
-					}
+					has_allowed_idea_with_traits = { idea = light_aircraft_manufacturer limit = 1 }
 				}
 			}
 			
@@ -1928,61 +1706,9 @@ ideas = {
 			picture = generic_electronics_concern_1
 
 			allowed = {
-				NOT = { OR = { tag = GER tag = ENG tag = SOV tag = FRA tag = ITA tag = JAP tag = USA tag = FIN } }
+				NOT = { OR = { tag = AUS tag = ETH tag = BUL tag = SPR tag = GER tag = ENG tag = SOV tag = FRA tag = ITA tag = JAP tag = USA tag = FIN tag = YUG tag = ROM tag = CHI tag = MAN tag = MEX tag = HOL } }
 				NOT = {
-					has_allowed_idea_with_traits = { idea = electronics_concern limit = 1 }
-				}
-				NOT = {
-					AND = {
-						has_DLC = "Waking the Tiger"
-						OR = {
-							original_tag = MAN
-							is_literally_china = yes
-						}
-					}
-				}
-				NOT = {
-					AND = {
-						OR = { tag = HOL tag = MEX }
-						has_dlc = "Man the Guns"
-					}
-				}
-				NOT = {
-					AND = {
-						OR = { tag = SPR }
-						has_dlc = "La Resistance"
-					}
-				}
-				NOT = {
-					AND = {
-						OR = { tag = BUL}
-						has_dlc = "Battle for the Bosporus"
-					}
-				}
-				NOT = {
-					AND = {
-						OR = { tag = ETH tag = SWI }
-						has_dlc = "By Blood Alone"
-					}
-				}
-				NOT = {
-					AND = {
-						OR = { tag = FIN}
-						has_dlc = "Arms Against Tyranny"
-					}
-				}
-				NOT = {
-					AND = {
-						has_dlc = "Trial of Allegiance"
-						original_tag = BRA
-					}
-				}
-
-				NOT = {
-					AND = {
-						OR = { tag = HUN tag = AUS tag = BEL}
-						has_dlc = "Gotterdammerung"
-					}
+					has_allowed_idea_with_traits = { idea = light_aircraft_manufacturer limit = 1 }
 				}
 			}
 			
@@ -2006,46 +1732,9 @@ ideas = {
 			picture = generic_motorized_equipment_manufacturer_3
 
 			allowed = {
-				NOT = { OR = { tag = GER tag = ENG tag = SOV tag = FRA tag = ITA tag = JAP tag = USA tag = FIN } }
+				NOT = { OR = { tag = AUS tag = ETH tag = BUL tag = SPR tag = GER tag = ENG tag = SOV tag = FRA tag = ITA tag = JAP tag = USA tag = FIN tag = YUG tag = ROM tag = CHI tag = MAN tag = MEX tag = HOL } }
 				NOT = {
-					has_allowed_idea_with_traits = { idea = motorized_equipment_manufacturer limit = 1 }
-				}
-				NOT = {
-					AND = {
-						OR = { tag = CHI = MAN  }
-						has_dlc = "Waking the Tiger"
-					}
-				}
-				NOT = {
-					AND = {
-						OR = { tag = HOL }
-						has_dlc = "Man the Guns"
-					}
-				}
-				NOT = {
-					AND = {
-						OR = { tag = SPR }
-						has_dlc = "La Resistance"
-					}
-				}
-				NOT = {
-					AND = {
-						OR = { tag = BUL}
-						has_dlc = "Battle for the Bosporus"
-					}
-				}
-				NOT = {
-					AND = {
-						tag = ETH
-						has_dlc = "By Blood Alone"
-					}
-				}
-
-				NOT = {
-					AND = {
-						OR = { tag = HUN tag = AUS }
-						has_dlc = "Gotterdammerung"
-					}
+					has_allowed_idea_with_traits = { idea = light_aircraft_manufacturer limit = 1 }
 				}
 			}
 			
@@ -2064,46 +1753,9 @@ ideas = {
 			picture = generic_infantry_equipment_manufacturer_2
 
 			allowed = {
-				NOT = { OR = { tag = GER tag = ENG tag = SOV tag = FRA tag = ITA tag = JAP tag = USA tag = HUN tag = FIN } }
+				NOT = { OR = { tag = AUS tag = ETH tag = BUL tag = SPR tag = GER tag = ENG tag = SOV tag = FRA tag = ITA tag = JAP tag = USA tag = FIN tag = YUG tag = ROM tag = CHI tag = MAN tag = MEX tag = HOL } }
 				NOT = {
-					has_allowed_idea_with_traits = { idea = infantry_equipment_manufacturer limit = 1 }
-				}
-				NOT = {
-					AND = {
-						OR = { tag = CHI = MAN  }
-						has_dlc = "Waking the Tiger"
-					}
-				}
-				NOT = {
-					AND = {
-						OR = { tag = HOL }
-						has_dlc = "Man the Guns"
-					}
-				}
-				NOT = {
-					AND = {
-						OR = { tag = SPR }
-						has_dlc = "La Resistance"
-					}
-				}
-				NOT = {
-					AND = {
-						OR = { tag = BUL}
-						has_dlc = "Battle for the Bosporus"
-					}
-				}
-				NOT = {
-					AND = {
-						tag = ETH
-						has_dlc = "By Blood Alone"
-					}
-				}
-
-				NOT = {
-					AND = {
-						tag = AUS
-						has_dlc = "Gotterdammerung"
-					}
+					has_allowed_idea_with_traits = { idea = light_aircraft_manufacturer limit = 1 }
 				}
 			}
 			
@@ -2122,51 +1774,10 @@ ideas = {
 			picture = generic_artillery_manufacturer_2
 
 			allowed = {
-				NOT = { OR = { tag = GER tag = ENG tag = SOV tag = FRA tag = ITA tag = JAP tag = USA tag = FIN } }
+				NOT = { OR = { tag = AUS tag = ETH tag = BUL tag = SPR tag = GER tag = ENG tag = SOV tag = FRA tag = ITA tag = JAP tag = USA tag = FIN tag = YUG tag = ROM tag = CHI tag = MAN tag = MEX tag = HOL } }
 				NOT = {
-					has_allowed_idea_with_traits = { idea = artillery_manufacturer limit = 1 }
+					has_allowed_idea_with_traits = { idea = light_aircraft_manufacturer limit = 1 }
 				}
-				NOT = {
-					AND = {
-						OR = { tag = CHI = MAN  }
-						has_dlc = "Waking the Tiger"
-					}
-				}
-				NOT = {
-					AND = {
-						OR = { tag = HOL }
-						has_dlc = "Man the Guns"
-					}
-				}
-				NOT = {
-					AND = {
-						OR = { tag = SPR }
-						has_dlc = "La Resistance"
-					}
-				}
-				NOT = {
-					AND = {
-						OR = { tag = BUL}
-						has_dlc = "Battle for the Bosporus"
-					}
-				}
-				NOT = {
-					AND = {
-						tag = ETH
-						has_dlc = "By Blood Alone"
-					}
-				}
-
-
-
-				NOT = {
-					AND = {
-						tag = HUN
-						has_dlc = "Gotterdammerung"
-					}
-				}
-
-				
 			}
 			
 			cost = 150

@@ -110,41 +110,8 @@ characters = {
 				visible = {
 					OR = {
 						has_completed_focus = wuw_HUN_strengthen_horthys_reign
-						has_completed_focus = wuw_HUN_end_the_regency
 					}
 				}		
-			}
-
-			advisor = {
-
-				slot = navy_chief
-
-				idea_token = HUN_miklos_horthy
-
-				allowed = {
-					original_tag = HUN
-				}
-
-				available = {
-					has_completed_focus = wuw_HUN_reinstate_the_navy
-					NOT = {
-						OR = {
-							has_government = communism
-							has_government = fascism
-						}
-					}
-				}
-
-				traits = {
-					navy_chief_reform_2
-				}
-
-				cost = 100
-
-				ai_will_do = {
-					factor = 2
-				}
-
 			}
 
 		}
@@ -246,22 +213,6 @@ characters = {
 		#	expire = "1965.1.1.1"
 		#	id = -1
 		#}
-
-		field_marshal = {
-			traits = { inflexible_strategist politically_connected old_guard }
-			skill = 3
-			attack_skill = 2
-			defense_skill = 3
-			planning_skill = 3
-			logistics_skill = 1
-			legacy_id = -1
-			visible = {
-				OR = {
-					has_completed_focus = wuw_HUN_invite_otto_to_the_throne
-					has_completed_focus = wuw_HUN_the_old_habsburg_king
-				}
-			}
-		}
 		
 	}
 
@@ -294,13 +245,6 @@ characters = {
 			}
 
 			visible = {
-				NOT = {
-					OR = {
-						has_completed_focus = wuw_HUN_end_the_regency
-						has_completed_focus = wuw_HUN_end_the_white_terror
-						has_completed_focus = wuw_HUN_undermine_the_admiral
-					}
-				}
 			}
 
 			available = {	
@@ -951,32 +895,6 @@ characters = {
 				}
 			}
 
-			advisor = {
-
-				slot = air_chief
-
-				idea_token = HUN_ferenc_feketehalmyczeydner
-
-				allowed = {
-					original_tag = HUN
-				}
-
-				available = {
-					has_completed_focus = wuw_HUN_make_the_magyar_legiero_known
-				}
-
-				traits = {
-					air_chief_ground_support_2
-				}
-
-				cost = 100
-
-				ai_will_do = {
-					base = 1
-				}
-
-			}
-
 		}
 	}
 
@@ -1332,22 +1250,6 @@ characters = {
 			}
 		}
 		
-		corps_commander = {
-			traits = { cavalry_leader trait_mountaineer old_guard }
-			skill = 4
-			attack_skill = 4
-			defense_skill = 2
-			planning_skill = 3
-			logistics_skill = 4
-			legacy_id = -1
-			visible = {
-				OR = {
-					has_completed_focus = wuw_HUN_invite_otto_to_the_throne
-					has_completed_focus = wuw_HUN_the_old_habsburg_king
-				}
-			}
-		}
-		
 	}
 
 	HUN_vasyl_vyshyvanyi = {
@@ -1361,22 +1263,6 @@ characters = {
 			}
 			civilian = {
 				large = GFX_portrait_UKR_vasyl_vyshyvany
-			}
-		}
-		
-		field_marshal = {
-			traits = { infantry_leader organizer inspirational_leader aggressive_assaulter }
-			skill = 4
-			attack_skill = 3
-			defense_skill = 2
-			planning_skill = 4
-			logistics_skill = 4
-			legacy_id = -1
-			visible = {
-				OR = {
-					has_completed_focus = wuw_HUN_reenlist_the_sich_riflemen
-					has_completed_focus = wuw_HUN_revenge_for_the_brusilov_offensive
-				}
 			}
 		}
 		
@@ -1404,7 +1290,6 @@ characters = {
 			visible = {
 				OR = {
 					has_completed_focus = wuw_HUN_reestablish_the_rongyos_garda
-					has_completed_focus = wuw_HUN_stage_an_uprising_in_leitha
 				}
 			}
 		}
@@ -1433,7 +1318,6 @@ characters = {
 			visible = {
 				OR = {
 					has_completed_focus = wuw_HUN_reestablish_the_rongyos_garda
-					has_completed_focus = wuw_HUN_stage_an_uprising_in_leitha
 				}
 			}
 		}
@@ -1902,7 +1786,6 @@ characters = {
 			}
 
 			available = {
-				has_completed_focus = wuw_HUN_make_the_magyar_legiero_known
 			}
 
 			traits = {
@@ -2358,9 +2241,7 @@ characters = {
 				legacy_id = -1
 				visible = {
 					OR = {
-						has_completed_focus = wuw_HUN_integrate_the_volksbund
 						has_completed_focus = wuw_HUN_invite_german_investors
-						has_completed_focus = wuw_HUN_volksbund_der_deutschen_in_ungarn
 					}
 				}
 			}
@@ -2440,25 +2321,6 @@ characters = {
 			#	expire = "1965.1.1.1"
 			#	id = -1
 			#}
-
-			corps_commander = {
-				traits = { trait_HUN_fascist_sympathies militias_officer }
-				skill = 2
-				attack_skill = 3
-				defense_skill = 1
-				planning_skill = 2
-				logistics_skill = 1
-				legacy_id = -1
-				visible = {
-					OR = {
-						has_country_leader = {
-							ruling_only = yes
-							character = HUN_franz_anton_bach
-						}	
-						has_completed_focus = wuw_HUN_volksbund_der_deutschen_in_ungarn
-					}
-				}
-			}
 
 		}
 	}
@@ -2776,13 +2638,6 @@ characters = {
 				}
 
 				visible = {
-					NOT = {
-						OR = {
-							has_completed_focus = wuw_HUN_end_the_regency
-							has_completed_focus = wuw_HUN_end_the_white_terror
-							has_completed_focus = wuw_HUN_undermine_the_admiral
-						}
-					}
 				}
 
 				available = {
@@ -2974,9 +2829,6 @@ characters = {
 			}
 
 			visible = {
-				NOT = {
-					has_completed_focus = wuw_HUN_undermine_the_admiral
-				}
 			}
 
 			available = {
@@ -3108,13 +2960,6 @@ characters = {
 			}
 
 			visible = {
-				NOT = {
-					OR = {
-						has_completed_focus = wuw_HUN_end_the_regency
-						has_completed_focus = wuw_HUN_end_the_white_terror
-						has_completed_focus = wuw_HUN_undermine_the_admiral
-					}
-				}
 			}
 
 			available = {
@@ -3237,7 +3082,6 @@ characters = {
 				NOT = {
 					OR = {
 						has_completed_focus = wuw_HUN_continue_the_regency
-						has_completed_focus = wuw_HUN_end_the_regency
 					}
 				}
 			}
@@ -3282,7 +3126,6 @@ characters = {
 				NOT = {
 					OR = {
 						has_completed_focus = wuw_HUN_continue_the_regency
-						has_completed_focus = wuw_HUN_end_the_regency
 					}
 				}
 			}
@@ -3411,7 +3254,6 @@ characters = {
 				NOT = {
 					OR = {
 						has_completed_focus = wuw_HUN_continue_the_regency
-						has_completed_focus = wuw_HUN_end_the_regency
 					}
 				}
 			}
@@ -3524,44 +3366,6 @@ characters = {
 			}
 		}
 
-		advisor = {
-
-			slot = political_advisor
-
-			idea_token = HUN_janos_kadar
-
-			allowed = {
-				original_tag = HUN
-			}
-
-			visible = {
-				NOT = {
-					OR = {
-						has_completed_focus = wuw_HUN_establish_the_second_republic
-						has_completed_focus = wuw_HUN_continue_the_regency
-						has_completed_focus = wuw_HUN_end_the_regency
-					}
-				}
-			}
-
-			available = {
-				OR = {
-					has_completed_focus = wuw_HUN_goulash_communism
-					has_completed_focus = wuw_HUN_restore_the_socialist_federative_republic
-				}
-				has_government = communism
-			}
-
-			traits = {
-				HUN_goulash_communist
-			}
-
-			ai_will_do = {
-				base = 5
-			}
-
-		}
-
 	}
 
 	HUN_jusztinian_seredi = {
@@ -3585,14 +3389,10 @@ characters = {
 			}
 
 			visible = {
-				NOT = {
-					has_completed_focus = wuw_HUN_end_the_white_terror
-				}
 			}
 
 			available = {
 				OR = {
-					has_completed_focus = wuw_HUN_end_the_regency
 					has_completed_focus = wuw_HUN_continue_the_regency
 				}
 			}
@@ -3617,44 +3417,6 @@ characters = {
 			civilian = {
 				small = "GFX_portrait_HUN_lennart_bernadotte_small"
 			}
-		}
-
-		advisor = {
-
-			slot = political_advisor
-
-			idea_token = HUN_lennart_bernadotte
-
-			allowed = {
-				original_tag = HUN
-			}
-
-			visible = {
-				NOT = {
-					OR = {
-						has_completed_focus = wuw_HUN_reinstate_the_pragmatic_sanction
-						has_completed_focus = wuw_HUN_end_the_white_terror
-						has_completed_focus = wuw_HUN_continue_the_regency
-					}
-				}
-			}
-
-			available = {
-				has_completed_focus = wuw_HUN_a_responsible_government
-				OR = {
-					has_government = democratic
-					has_government = neutrality
-				}
-			}
-
-			traits = {
-				HUN_filmmaker
-			}
-
-			ai_will_do = {
-				base = 5
-			}
-
 		}
 
 	}
@@ -3858,22 +3620,6 @@ characters = {
 				large = GFX_portrait_HUN_leo_szilard
 			}
 		}
-
-		scientist = {
-			traits = { scientist_trait_nuclear_power_expert }
-			skills = {
-				specialization_nuclear = 2
-			}
-
-			visible = {
-				owner = {
-					OR = {
-						has_completed_focus = wuw_HUN_guarantee_religious_liberties
-						has_completed_focus = wuw_HUN_reverse_the_brain_drain
-					}
-				}
-			}
-		}
 	}
 
 	HUN_john_von_neumann = {
@@ -3881,22 +3627,6 @@ characters = {
 		portraits = {
 			army = {
 				large = GFX_portrait_HUN_john_von_neumann
-			}
-		}
-
-		scientist = {
-			traits = { scientist_trait_nuclear_specialist }
-			skills = {
-				specialization_nuclear = 2
-			}
-
-			visible = {
-				owner = {
-					OR = {
-						has_completed_focus = wuw_HUN_guarantee_religious_liberties
-						has_completed_focus = wuw_HUN_reverse_the_brain_drain
-					}
-				}
 			}
 		}
 	}
@@ -3908,22 +3638,6 @@ characters = {
 				large = GFX_portrait_HUN_edward_teller
 			}
 		}
-
-		scientist = {
-			traits = { scientist_trait_nuclear_warfare_expert }
-			skills = {
-				specialization_nuclear = 2
-			}
-
-			visible = {
-				owner = {
-					OR = {
-						has_completed_focus = wuw_HUN_guarantee_religious_liberties
-						has_completed_focus = wuw_HUN_reverse_the_brain_drain
-					}
-				}
-			}
-		}
 	}
 
 	HUN_laszlo_varga = {
@@ -3931,19 +3645,6 @@ characters = {
 		portraits = {
 			army = {
 				large = GFX_portrait_generic_europe_male_04
-			}
-		}
-
-		scientist = {
-			traits = { scientist_trait_aircraft_specialist }
-			skills = {
-				specialization_air = 2
-			}
-
-			visible = {
-				owner = {
-					has_completed_focus = wuw_HUN_develop_laszlo_vargas_design
-				}
 			}
 		}
 	}

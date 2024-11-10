@@ -57,15 +57,15 @@ political_actions1 = {
 				ROOT_call_against_beligum = yes  ROOT_call_against_holland = yes
 			}
 			complete_national_focus = GER_around_maginot
-			if = {
-				limit = { 
-					has_completed_focus = GER_west_wall
-				}
-				add_ideas = "Fall Gelb"
-				else = {
-					custom_effect_tooltip = "You will gain bonus stats against france if the Westwall was constructed"
-				}
-			}
+			#if = {
+			#	limit = { 
+			#		has_completed_focus = GER_west_wall
+			#	}
+			#	add_ideas = "Fall Gelb"
+			#	else = {
+			#		custom_effect_tooltip = "You will gain bonus stats against france if the Westwall was constructed"
+			#	}
+			#}
 		}
 	}
 	
@@ -197,7 +197,7 @@ political_actions1 = {
 					}
 				}
 			}
-			complete_national_focus = GER_ussr_war_goal
+			#complete_national_focus = GER_ussr_war_goal
 		}
 	}
 	GER_fall_blau = {
@@ -208,7 +208,7 @@ political_actions1 = {
 			date > 1942.6.1
 			date < 1942.8.1
 			NOT = { has_idea = axis_barbarossa }
-			has_completed_focus = GER_ussr_war_goal
+			#has_completed_focus = GER_ussr_war_goal
 		}
 		cost = 0
 		complete_effect = {
@@ -601,7 +601,7 @@ political_actions1 = {
 		icon = generic_prepare_civil_war
 		fire_only_once = yes
 		allowed = { tag = SOV }
-		available = { GER = { has_completed_focus = GER_mol_rib_pact } }
+		available = { GER = { has_completed_focus = GER_molotov_ribbentrop_pact } }
 		cost = 0
 		complete_effect = {
 			if = {
@@ -650,7 +650,8 @@ political_actions1 = {
 		fire_only_once = yes
 		allowed = { tag =  SOV }
 		available = {
-			NOT = { GER = { has_completed_focus = GER_ussr_war_goal } }
+			always = no
+			#NOT = { GER = { has_completed_focus = GER_ussr_war_goal } }
 			OR = { 
 				date > 1942.1.1
 				NOT = {
