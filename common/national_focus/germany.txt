@@ -7763,21 +7763,12 @@ focus_tree = {
 			51 = { set_demilitarized_zone = no }
 			978 = { set_demilitarized_zone = no }
 			set_global_flag = rhineland_remilitarized
-			custom_effect_tooltip = GER_rhineland_ultimatum
 			custom_effect_tooltip = generic_skip_one_line_tt
 			add_political_power = 75
 			army_experience = 5
 
 			custom_effect_tooltip = generic_skip_one_line_tt
-			add_named_threat = { threat = 5 name = GER_rhineland }
-
-			if = {
-				limit = { FRA = { is_subject = no } }
-				FRA = {
-					country_event = { id = germany.60 hours = 1 }
-					custom_effect_tooltip = may_provoke_hostility
-				}
-			}
+			add_named_threat = { threat = 7 name = GER_rhineland }
 		}
 	}
 
@@ -8018,42 +8009,7 @@ focus_tree = {
 		relative_position_id = GER_reorganize_the_wehrmacht
 		cost = 10
 
-		ai_will_do = {
-			factor = 10
-			modifier = {
-				factor = 0
-				OR = {
-					has_government = democratic
-					has_government = communism
-				}
-			}
-		}
-
 		bypass = {
-			OR = {
-				AUS = {
-					OR = {
-						is_subject = yes
-						exists = no 
-						AND = {
-							is_in_faction = yes
-							NOT = { is_in_faction_with = GER }
-							any_other_country = {
-								is_in_faction_with = AUS
-								is_subject = no
-							}
-						}
-					}
-				}
-				GER = {
-					owns_state = 4
-					owns_state = 152
-					owns_state = 153
-					owns_state = 848
-					owns_state = 975
-					owns_state = 976
-				}
-			}
 		}
 
 		continue_if_invalid = yes
@@ -8064,31 +8020,12 @@ focus_tree = {
 		}
 
 		cancel = {
-			OR = {
-				is_subject = yes
-				has_idea = rhineland_challenge_met
-				has_war_with = AUS
-			}
 		}
 
-		ai_will_do = {
-			factor = 10
-			modifier = {
-				factor = 0
-				date < 1938.1.1
-			}
-		}
 
 		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_ANNEXATION FOCUS_FILTER_POLITICAL FOCUS_FILTER_MILITARY_CHARACTER FOCUS_FILTER_ARMY_XP FOCUS_FILTER_STABILITY }
 
 		select_effect = {
-			AUS = {
-				country_event = {
-					id = AUS_political_events.77
-					hours = 12
-				}
-				set_country_flag = AUS_anschluss_process_has_begun_flag
-			}
 		}
 
 		completion_reward = {
@@ -8103,7 +8040,26 @@ focus_tree = {
 				}
 				GER_create_operative_otto_skorzeny = yes
 			}
+			hidden_effect = {
+				GER_seize_gold_reserves_in_europe_peacefully = yes
+				add_to_variable = { var = GER_mefo_bill_counter value = -10 }
+
+			}
 			custom_effect_tooltip = generic_skip_one_line_tt
+			hidden_effect = {
+				4 =		{ add_core_of = GER }
+				152 = 	{ add_core_of = GER }
+				153 = 	{ add_core_of = GER }
+				848 =   { add_core_of = GER }
+			}
+			add_political_power = 100
+			add_war_support = 0.1
+			add_stability = 0.05
+			annex_country = { target = AUS transfer_troops = no }
+			add_named_threat = { threat = 10 name = germany.4.t }
+			hidden_effect = { 
+				news_event = { hours = 6 id = news.36 }
+			}
 		}
 	}
 
@@ -8522,52 +8478,14 @@ focus_tree = {
 		will_lead_to_war_with = FRA
 
 		bypass = {
-			69 = { #NORTH SUDETENLAND
-				controller = {
-					OR = {
-						has_war_with = GER
-						tag = ROOT
-					}
-				}
-			}
-			972 = { #EASTERN SUDETENLAND
-				controller = {
-					OR = {
-						has_war_with = GER
-						tag = ROOT
-					}
-				}
-			}
-			74 = { #SOUTH SUDETENLAND
-				controller = {
-					OR = {
-						has_war_with = GER
-						tag = ROOT
-					}
-				}
-			}
 		}
 
 		available = {
-			is_subject = no
-			has_army_manpower = { size > 724999 } #80 div
 		}
 		
 		cancel = {
-			is_subject = yes
 		}
 		cancel_if_invalid = yes
-
-		ai_will_do = {
-			factor = 10
-			modifier = {
-				factor = 0
-				OR = {
-					has_government = democratic
-					has_government = communism
-				}
-			}
-		}
 
 		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_HISTORICAL }
 
@@ -8575,7 +8493,8 @@ focus_tree = {
 			hidden_effect = {
 				69 = { add_core_of = GER }
 				74 = { add_core_of = GER }
-				add_to_variable = { var = MFB_PP value = -0.1 }
+				GER_czechoslovakia_modify_mefo_bills_or_economy_of_conquest = yes
+				GER_seize_gold_reserves_in_europe_peacefully = yes
 			}
 			add_war_support = 0.1
 			add_stability = 0.05
@@ -8599,30 +8518,9 @@ focus_tree = {
 		cost = 5
 
 		bypass = {
-			OR = {
-				AND = {
-					NOT = { CZE = { controls_state = 664 } }
-					NOT = { owns_state = 664 }
-				}
-				HUN = { is_friend_or_potential_friend_of_GER = no }
-				CZE = { is_puppet_of = GER }
-				CZE = { is_in_faction_with = GER }
-			}
 		}
 
 		available = {
-			is_subject = no
-			HUN = { 
-				is_friend_or_potential_friend_of_GER = yes
-				OR = {
-					has_government = neutrality
-					has_government = fascism
-				}
-			}
-			OR = {
-				owns_state = 69
-				owns_state = 972
-			}
 		}
 
 		ai_will_do = {
@@ -8681,26 +8579,9 @@ focus_tree = {
 		will_lead_to_war_with = CZE
 
 		bypass = {
-			OR = {
-				has_war_with = CZE
-				CZE = { 
-					is_in_faction_with = ROOT
-					NOT = { is_subject_of = ROOT }
-				}
-				NOT = {
-					country_exists = CZE
-					9 = { is_controlled_by = ROOT }
-					75 = { is_controlled_by = ROOT }
-				}
-				any_allied_country = {
-					has_subject = CZE
-				}
-			}
 		}
 		
 		available = { 
-			is_subject = no
-			has_army_manpower = { size > 749999 }
 		}
 
 		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_HISTORICAL }
@@ -9094,57 +8975,11 @@ focus_tree = {
 		will_lead_to_war_with = ENG
 
 		bypass = {
-			OR = {
-				has_war_with = POL
-				is_in_faction_with = POL
-				NOT = {
-					85 = {
-						controller = {
-							original_tag = POL 
-						}
-						owner = {
-							original_tag = POL 
-						}
-					}
-				}
-			}
 		}
 
 		continue_if_invalid = yes
 
 		available = {
-			is_subject = no
-			has_army_manpower = { size > 949999 } #100 div			
-			#Make custom trigger tooltip here
-			85 = {
-				owner = {
-					original_tag = POL
-				}
-				controller = {
-					original_tag = POL
-				}
-			}
-			OR = {
-				POL = {
-					has_civil_war = no
-				}
-				#custom_trigger_tooltip = {
-					#tooltip = GER_danzig_trigger_polish_civil_war
-					AND = {
-						any_other_country = {
-							original_tag = POL
-							has_civil_war = yes
-							OR = {
-								is_in_faction_with = ROOT
-								has_volunteers_amount_from = {
-									tag = GER
-									count > 0
-								}
-							}
-						}
-					}
-				#}
-			}
 		}
 
 		ai_will_do = {
