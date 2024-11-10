@@ -9693,20 +9693,12 @@ focus_tree = {
 		cost = 10
 		
 		bypass = { 
-			OR = {
-				has_war_with = SOV
-				NOT = { country_exists = SOV }
-			}
 		}
 
 		available = {
 		}
 
 		cancel = { 
-			OR = {
-				has_war_with = SOV
-				NOT = { country_exists = SOV }
-			} 
 		}
 
 		ai_will_do = {
