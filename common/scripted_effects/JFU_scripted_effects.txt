@@ -3932,7 +3932,6 @@ JFU_vichy_france_2 = {
 				transfer_state = 776
 				transfer_state = 781
 				transfer_state = 782
-				transfer_state = 786
 				transfer_state = 515
 				transfer_state = 775
 				transfer_state = 298
@@ -3949,7 +3948,6 @@ JFU_vichy_france_2 = {
 				add_state_core = 776
 				add_state_core = 781
 				add_state_core = 782
-				add_state_core = 786
 				add_state_core = 515
 				add_state_core = 775
 				add_state_core = 298
@@ -4242,6 +4240,7 @@ SPR_NO_CW = {
 	RAJ = { add_war_support = 0.1 }
 	SOV = { add_war_support = 0.1 }	
 	NOR = { add_war_support = 0.1 }
+	GER = { add_war_support = 0.1 }
 }
 
 #building stuff

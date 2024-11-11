@@ -2311,6 +2311,7 @@ focus_tree = {
 		relative_position_id = GER_seize_foreign_industries
 		cost = 10
 		available = {
+			always = no
 			all_core_state = {
 				is_fully_controlled_by = ROOT
 			}
@@ -2548,19 +2549,19 @@ focus_tree = {
 
 			GER_modify_industrial_modifier = yes
 			add_to_variable = { 
-				GER_industrial_production_factory_max_efficiency_factor = 0.05
+				GER_industrial_production_factory_max_efficiency_factor = 0.025
 				tooltip = production_factory_max_efficiency_factor_tt
 			}
 			add_to_variable = { 
-				GER_industrial_production_factory_efficiency_gain_factor = 0.05
+				GER_industrial_production_factory_efficiency_gain_factor = 0.025
 				tooltip = production_factory_efficiency_gain_factor_tt
 			}
 			add_to_variable = { 
-				GER_industrial_production_factory_start_efficiency_factor = 0.05
+				GER_industrial_production_factory_start_efficiency_factor = 0.025
 				tooltip = production_factory_start_efficiency_factor_tt
 			}
 			add_to_variable = { 
-				GER_industrial_line_change_production_efficiency_factor = 0.05
+				GER_industrial_line_change_production_efficiency_factor = 0.025
 				tooltip = line_change_production_efficiency_factor_tt
 			}
 		}
@@ -2784,19 +2785,19 @@ focus_tree = {
 				tooltip = industrial_capacity_dockyard_tt
 			}
 			add_to_variable = { 
-				GER_industrial_production_factory_max_efficiency_factor = 0.05
+				GER_industrial_production_factory_max_efficiency_factor = 0.025
 				tooltip = production_factory_max_efficiency_factor_tt
 			}
 			add_to_variable = { 
-				GER_industrial_production_factory_efficiency_gain_factor = 0.05
+				GER_industrial_production_factory_efficiency_gain_factor = 0.025
 				tooltip = production_factory_efficiency_gain_factor_tt
 			}
 			add_to_variable = { 
-				GER_industrial_production_factory_start_efficiency_factor = 0.05
+				GER_industrial_production_factory_start_efficiency_factor = 0.025
 				tooltip = production_factory_start_efficiency_factor_tt
 			}
 			add_to_variable = { 
-				GER_industrial_line_change_production_efficiency_factor = 0.05
+				GER_industrial_line_change_production_efficiency_factor = 0.025
 				tooltip = line_change_production_efficiency_factor_tt
 			}
 		}
@@ -4805,8 +4806,8 @@ focus_tree = {
 
 			add_tech_bonus = {
 				name = GER_aeronautical_research_institute
-				bonus = 0.25
-				uses = 2
+				bonus = 0.75
+				uses = 1
 				category = air_equipment
 			}
 			add_breakthrough_progress = {
@@ -4877,7 +4878,7 @@ focus_tree = {
 			}
 			add_tech_bonus = {
 				name = GER_dive_bombers
-				bonus = 0.5
+				bonus = 0.75
 				uses = 1
 				category = light_air
 			}
@@ -5010,7 +5011,7 @@ focus_tree = {
 			}
 			add_tech_bonus = {
 				name = GER_tactical_bombers
-				bonus = 0.5
+				bonus = 0.75
 				uses = 1
 				category = medium_air
 			}
@@ -5142,7 +5143,7 @@ focus_tree = {
 			}
 			add_tech_bonus = {
 				name = GER_uralbomber_program
-				bonus = 0.5
+				bonus = 0.75
 				uses = 1
 				category = heavy_air
 			}
@@ -5579,24 +5580,23 @@ focus_tree = {
 					GER_wunderwaffen_sp_air_helicopter_speed_factor = GER_wunderwaffe_research_speed_bonus
 					tooltip = sp_air_helicopter_speed_factor_tt
 				}
-			}
+				if = {
+					limit = {
+						has_dlc = "Arms Against Tyranny"
+					}
+					custom_effect_tooltip = generic_skip_one_line_tt
+					mio:GER_focke_achgelis_organization = {
+						add_mio_size = 1
+						add_mio_funds_gain_factor = 0.25
+						add_mio_research_bonus = 0.05
 
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			if = {
-				limit = {
-					has_dlc = "Arms Against Tyranny"
-				}
-				custom_effect_tooltip = generic_skip_one_line_tt
-				mio:GER_focke_achgelis_organization = {
-					add_mio_size = 1
-					add_mio_funds_gain_factor = 0.25
-					add_mio_research_bonus = 0.05
-
-					#unlock_mio_trait_tooltip = 
-					#unlock_mio_trait_tooltip = 
+						#unlock_mio_trait_tooltip = 
+						#unlock_mio_trait_tooltip = 
+					}
 				}
 			}
+
+
 		}
 	}
 	
