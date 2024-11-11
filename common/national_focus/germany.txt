@@ -9212,7 +9212,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_trade_deal_with_sweden
+		id =  GER_trade_deal_with_sweden_focus
 		icon = GFX_GER_SWEDISH_TRADE  
 		prerequisite = { focus = GER_weserubung2 } 
 		x = 0
