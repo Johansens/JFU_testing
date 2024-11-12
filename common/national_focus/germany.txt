@@ -2125,7 +2125,7 @@ focus_tree = {
 				tooltip = GER_industrial_consumer_goods_factor_limit_tt
 				check_variable = { GER_industrial_consumer_goods_factor < 0.9 }
 			}
-			has_tech = oil_processing
+			has_tech = fuel_refining2
 		}
 
 		continue_if_invalid = yes
@@ -2220,7 +2220,7 @@ focus_tree = {
 				tooltip = GER_industrial_consumer_goods_factor_limit_tt
 				check_variable = { GER_industrial_consumer_goods_factor < 0.9 }
 			}
-			has_tech = rubber_processing
+			has_tech = fuel_refining2
 		}
 
 		continue_if_invalid = yes
@@ -2549,19 +2549,19 @@ focus_tree = {
 
 			GER_modify_industrial_modifier = yes
 			add_to_variable = { 
-				GER_industrial_production_factory_max_efficiency_factor = 0.025
+				GER_industrial_production_factory_max_efficiency_factor = 0.05
 				tooltip = production_factory_max_efficiency_factor_tt
 			}
 			add_to_variable = { 
-				GER_industrial_production_factory_efficiency_gain_factor = 0.025
+				GER_industrial_production_factory_efficiency_gain_factor = 0.05
 				tooltip = production_factory_efficiency_gain_factor_tt
 			}
 			add_to_variable = { 
-				GER_industrial_production_factory_start_efficiency_factor = 0.025
+				GER_industrial_production_factory_start_efficiency_factor = 0.05
 				tooltip = production_factory_start_efficiency_factor_tt
 			}
 			add_to_variable = { 
-				GER_industrial_line_change_production_efficiency_factor = 0.025
+				GER_industrial_line_change_production_efficiency_factor = 0.05
 				tooltip = line_change_production_efficiency_factor_tt
 			}
 		}
@@ -2785,19 +2785,19 @@ focus_tree = {
 				tooltip = industrial_capacity_dockyard_tt
 			}
 			add_to_variable = { 
-				GER_industrial_production_factory_max_efficiency_factor = 0.025
+				GER_industrial_production_factory_max_efficiency_factor = 0.05
 				tooltip = production_factory_max_efficiency_factor_tt
 			}
 			add_to_variable = { 
-				GER_industrial_production_factory_efficiency_gain_factor = 0.025
+				GER_industrial_production_factory_efficiency_gain_factor = 0.05
 				tooltip = production_factory_efficiency_gain_factor_tt
 			}
 			add_to_variable = { 
-				GER_industrial_production_factory_start_efficiency_factor = 0.025
+				GER_industrial_production_factory_start_efficiency_factor = 0.05
 				tooltip = production_factory_start_efficiency_factor_tt
 			}
 			add_to_variable = { 
-				GER_industrial_line_change_production_efficiency_factor = 0.025
+				GER_industrial_line_change_production_efficiency_factor = 0.05
 				tooltip = line_change_production_efficiency_factor_tt
 			}
 		}
@@ -8041,9 +8041,8 @@ focus_tree = {
 				GER_create_operative_otto_skorzeny = yes
 			}
 			hidden_effect = {
-				GER_seize_gold_reserves_in_europe_peacefully = yes
-				add_to_variable = { var = GER_mefo_bill_counter value = -10 }
-
+				#GER_seize_gold_reserves_in_europe_peacefully = yes
+				add_to_variable = { GER_industrial_consumer_goods_factor = -0.1}				
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt
 			hidden_effect = {
@@ -8495,8 +8494,7 @@ focus_tree = {
 			hidden_effect = {
 				69 = { add_core_of = GER }
 				74 = { add_core_of = GER }
-				GER_czechoslovakia_modify_mefo_bills_or_economy_of_conquest = yes
-				GER_seize_gold_reserves_in_europe_peacefully = yes
+				add_to_variable = { GER_industrial_consumer_goods_factor = -0.02}
 			}
 			add_war_support = 0.1
 			add_stability = 0.05
@@ -8599,8 +8597,7 @@ focus_tree = {
 					add_compliance = 50
 				}
 				add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 50000 } 			
-				GER_czechoslovakia_modify_mefo_bills_or_economy_of_conquest = yes
-				GER_seize_gold_reserves_in_europe_peacefully = yes			
+				add_to_variable = { GER_industrial_consumer_goods_factor = -0.07}		
 			}
 			set_global_flag = end_of_czechoslovakia
 			add_named_threat = { threat = 5 name = GER_end_of_czechoslovakia }			

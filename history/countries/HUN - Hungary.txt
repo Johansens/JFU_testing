@@ -20,7 +20,6 @@ IF = {
 		set_air_oob = "HUN_1936_air_bba"
 		set_technology = {
 			iw_small_airframe = 1
-			engines_1 = 1
 			early_bombs = 1
 			photo_reconnaisance = 1
 			aa_lmg = 1

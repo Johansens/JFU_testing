@@ -9,7 +9,7 @@ categories = {
 	    intel_source = air
 
 		available = {
-		    has_tech = paratroopers
+		    always = no
 		}
 	}
 

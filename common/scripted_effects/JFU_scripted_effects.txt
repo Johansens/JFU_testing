@@ -16,6 +16,244 @@ JFU_startup_on_action = {
 
 
 JFU_buildings_on_start_up = {
+
+	#factories
+
+	#italy
+
+	2 = {
+		add_extra_state_shared_building_slots = 11
+		add_building_construction = {
+			type = industrial_complex
+			level = 6
+			instant_build = yes
+		}
+		add_building_construction = {
+			type = dockyard
+			level = 5
+			instant_build = yes
+		}		
+	}
+
+	#benelux
+
+	6 = {
+		add_extra_state_shared_building_slots = 11
+		add_building_construction = {
+			type = industrial_complex
+			level = 6
+			instant_build = yes
+		}
+		add_building_construction = {
+			type = dockyard
+			level = 5
+			instant_build = yes
+		}		
+	}	
+
+	#balcans
+
+	44 = {
+		add_extra_state_shared_building_slots = 10
+		add_building_construction = {
+			type = industrial_complex
+			level = 5
+			instant_build = yes
+		}
+		add_building_construction = {
+			type = arms_factory
+			level = 5
+			instant_build = yes
+		}		
+	}	
+
+	46 = {
+		add_extra_state_shared_building_slots = 4
+		add_building_construction = {
+			type = industrial_complex
+			level = 3
+			instant_build = yes
+		}
+		add_building_construction = {
+			type = arms_factory
+			level = 1
+			instant_build = yes
+		}		
+	}	
+
+	103 = {
+		add_extra_state_shared_building_slots = 6
+		add_building_construction = {
+			type = industrial_complex
+			level = 3
+			instant_build = yes
+		}
+		add_building_construction = {
+			type = arms_factory
+			level = 3
+			instant_build = yes
+		}		
+	}
+
+	#england
+
+	126 = {
+		add_extra_state_shared_building_slots = 4
+		add_building_construction = {
+			type = industrial_complex
+			level = 4
+			instant_build = yes
+		}		
+	}
+
+	#japan
+
+	103 = {
+		add_extra_state_shared_building_slots = 3
+		add_building_construction = {
+			type = industrial_complex
+			level = 3
+			instant_build = yes
+		}		
+	}	
+
+	#china
+
+	283 = {
+		add_extra_state_shared_building_slots = 4
+	}
+
+	325 = {
+		add_extra_state_shared_building_slots = 2
+	}
+
+	592 = {
+		add_extra_state_shared_building_slots = 4
+	}
+
+	593 = {
+		add_extra_state_shared_building_slots = 1
+	}
+
+	594 = {
+		add_extra_state_shared_building_slots = 1
+	}
+
+	595 = {
+		add_extra_state_shared_building_slots = 1
+	}
+
+	597 = {
+		add_extra_state_shared_building_slots = 1
+	}
+
+	599 = {
+		add_extra_state_shared_building_slots = 3
+	}
+
+	600 = {
+		add_extra_state_shared_building_slots = 2
+	}
+
+	602 = {
+		add_extra_state_shared_building_slots = 2
+	}
+
+	603 = {
+		add_extra_state_shared_building_slots = 2
+	}
+
+	604 = {
+		add_extra_state_shared_building_slots = 2
+	}
+
+	605 = {
+		add_extra_state_shared_building_slots = 6
+	}
+
+	606 = {
+		add_extra_state_shared_building_slots = 1
+	}
+
+	607 = {
+		add_extra_state_shared_building_slots = 2
+	}
+
+	608 = {
+		add_extra_state_shared_building_slots = 2
+	}
+
+	613 = {
+		add_extra_state_shared_building_slots = 1 #7
+	}
+
+	615 = {
+		add_extra_state_shared_building_slots = 4
+	}
+
+	617 = {
+		add_extra_state_shared_building_slots = 2
+	}
+
+	618 = {
+		add_extra_state_shared_building_slots = 1
+	}
+
+	619 = {
+		add_extra_state_shared_building_slots = 1
+	}
+
+	620 = {
+		add_extra_state_shared_building_slots = 5
+	}
+
+	621 = {
+		add_extra_state_shared_building_slots = 1
+	}
+
+	622 = {
+		add_extra_state_shared_building_slots = 6
+	}
+
+	637 = {
+		add_extra_state_shared_building_slots = 5
+	}
+
+	743 = {
+		add_extra_state_shared_building_slots = 1
+	}
+
+	750 = {
+		add_extra_state_shared_building_slots = 3
+	}
+
+	755 = {
+		add_extra_state_shared_building_slots = 1
+	}
+
+	760 = {
+		add_extra_state_shared_building_slots = 1
+	}
+
+	#austria
+
+	4 = {
+		add_extra_state_shared_building_slots = 7
+		add_building_construction = {
+			type = industrial_complex
+			level = 4
+			instant_build = yes
+		}
+		add_building_construction = {
+			type = arms_factory
+			level = 3
+			instant_build = yes
+		}
+	}
+
+
+	#baltics
+
 	11 = {
 		add_extra_state_shared_building_slots = 8
 		add_building_construction = {
@@ -63,6 +301,19 @@ JFU_buildings_on_start_up = {
 			instant_build = yes
 		}
 	}
+
+
+
+
+
+
+
+
+
+
+
+	#airports
+
 	251 = {
 		set_building_level = {
 			type = air_base
