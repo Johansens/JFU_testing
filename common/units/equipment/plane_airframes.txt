@@ -1,6 +1,5 @@
 equipments = {
 
-	#to make sure that an airframe appears in the air designer make sure to add it in interface/equipmentdesigner/planes/plane_blueprints_generic.gui, otherwise it will not show up
 	small_plane_airframe = {
 		year = 1933
 
@@ -48,7 +47,7 @@ equipments = {
 		lend_lease_cost = 8
 		manpower = 20
 		fuel_consumption = 0.05
-		build_cost_ic = 4
+		build_cost_ic = 24
 		resources = {
 			aluminium = 2
 			rubber = 1
@@ -124,7 +123,10 @@ equipments = {
 			module = self_sealing_fuel_tanks_small
 			count < 2
 		}
-
+		module_count_limit = {
+			module = armor_plate_small
+			count < 3
+		}
 		module_count_limit = {
 			module = non_strategic_materials_small
 			count < 2
@@ -218,7 +220,7 @@ equipments = {
 		module_slots = inherit
 		priority = 5
 
-		air_range = 400
+		air_range = 700
 		maximum_speed = 400
 		air_agility = 35
 		air_defence = 7
@@ -236,14 +238,14 @@ equipments = {
 		parent = small_plane_airframe_0
 		priority = 5
 
-		air_range = 550
+		air_range = 850
 		maximum_speed = 425
 		air_agility = 40
 		air_defence = 9
 		weight = 4
 		naval_strike_attack = 1
 		naval_strike_targetting = 1
-		build_cost_ic = 5
+		build_cost_ic = 26
 		resources = {
 			aluminium = 3
 			rubber = 1
@@ -313,14 +315,14 @@ equipments = {
 		parent = small_plane_airframe_1
 		priority = 5
 
-		air_range = 650
+		air_range = 1100
 		maximum_speed = 450
 		air_agility = 45
 		air_defence = 11
-		weight = 5
+		weight = 4
 		naval_strike_attack = 1
 		naval_strike_targetting = 1
-		build_cost_ic = 6
+		build_cost_ic = 28
 		resources = {
 			aluminium = 3
 			rubber = 1
@@ -417,14 +419,15 @@ equipments = {
 		parent = small_plane_airframe_2
 		priority = 5
 
-		air_range = 750
+		air_range = 1300
 		maximum_speed = 475
 		air_agility = 50
 		air_defence = 12
+		air_attack = 4
 		weight = 6
 		naval_strike_attack = 1
 		naval_strike_targetting = 1
-		build_cost_ic = 7
+		build_cost_ic = 30
 		resources = {
 			aluminium = 4
 			rubber = 1
@@ -516,21 +519,8 @@ equipments = {
 					plane_special_module_defense_turret
 				}
 			}
-
-			special_type_slot_4 = {
-				required = no
-				allowed_module_categories = {
-					plane_special_module_small
-					plane_special_module_bomb_sights
-					plane_special_module_radio_navigation
-					plane_special_module_air_ground_radar
-					plane_special_module_air_air_radar
-					plane_special_module_defense_turret
-				}
-			}
 		}
 	}
-
 	small_plane_airframe_4 = { #modern
 		abbreviation = "afs4"
 		derived_variant_name = jet_fighter_equipment_1 # We should use "jet" for this or any of the ones below, but this is good enough for now.
@@ -540,14 +530,14 @@ equipments = {
 		parent = small_plane_airframe_3
 		priority = 5
 
-		air_range = 900
+		air_range = 2200
 		maximum_speed = 500
 		air_agility = 55
 		air_defence = 18
 		weight = 6
 		naval_strike_attack = 1
 		naval_strike_targetting = 1
-		build_cost_ic = 10
+		build_cost_ic = 36
 		resources = {
 			aluminium = 4
 			rubber = 1
@@ -850,7 +840,7 @@ equipments = {
 		lend_lease_cost = 8
 		manpower = 20
 		fuel_consumption = 0.05
-		build_cost_ic = 6
+		build_cost_ic = 28
 		resources = {
 			aluminium = 2
 			rubber = 1
@@ -1019,7 +1009,7 @@ equipments = {
 		module_slots = inherit
 		priority = 5
 
-		air_range = 400
+		air_range = 700
 		maximum_speed = 400
 		air_agility = 30
 		air_defence = 7
@@ -1039,14 +1029,14 @@ equipments = {
 		parent = cv_small_plane_airframe_0
 		priority = 5
 
-		air_range = 550
+		air_range = 850
 		maximum_speed = 425
 		air_agility = 35
 		air_defence = 9
 		weight = 5
 		naval_strike_attack = 1
 		naval_strike_targetting = 1
-		build_cost_ic = 8.5
+		build_cost_ic = 33
 		resources = {
 			aluminium = 3
 			rubber = 1
@@ -1115,14 +1105,14 @@ equipments = {
 		parent = cv_small_plane_airframe_1
 		priority = 5
 
-		air_range = 650
+		air_range = 1100
 		maximum_speed = 450
 		air_agility = 40
 		air_defence = 11
 		weight = 6
 		naval_strike_attack = 1
 		naval_strike_targetting = 1
-		build_cost_ic = 9.5
+		build_cost_ic = 35
 		resources = {
 			aluminium = 3
 			rubber = 1
@@ -1218,14 +1208,15 @@ equipments = {
 		parent = cv_small_plane_airframe_2
 		priority = 5
 
-		air_range = 750
+		air_range = 1300
 		maximum_speed = 475
 		air_agility = 45
 		air_defence = 12
+		air_attack = 4
 		weight = 6
 		naval_strike_attack = 1
 		naval_strike_targetting = 1
-		build_cost_ic = 11
+		build_cost_ic = 38
 		resources = {
 			aluminium = 4
 			rubber = 1
@@ -1327,14 +1318,14 @@ equipments = {
 		parent = cv_small_plane_airframe_3
 		priority = 5
 
-		air_range = 900
+		air_range = 2200
 		maximum_speed = 500
 		air_agility = 50
 		air_defence = 18
 		weight = 6
 		naval_strike_attack = 1
 		naval_strike_targetting = 1
-		build_cost_ic = 14.5
+		build_cost_ic = 45
 		resources = {
 			aluminium = 4
 			rubber = 1
@@ -1475,7 +1466,7 @@ equipments = {
 		lend_lease_cost = 10
 		manpower = 40
 		fuel_consumption = 0
-		build_cost_ic = 6
+		build_cost_ic = 40
 		resources = {
 			aluminium = 2
 			rubber = 1
@@ -1694,7 +1685,7 @@ equipments = {
 		module_slots = inherit
 		priority = 5
 
-		air_range = 750
+		air_range = 1200
 		maximum_speed = 200
 		air_agility = 25
 		air_defence = 15
@@ -1714,14 +1705,14 @@ equipments = {
 		parent = medium_plane_airframe_0
 		priority = 5
 
-		air_range = 900
+		air_range = 2200
 		maximum_speed = 325
 		air_agility = 30
 		air_defence = 18
 		weight = 8
 		naval_strike_attack = 1
 		naval_strike_targetting = 1
-		build_cost_ic = 8
+		build_cost_ic = 44
 		resources = {
 			aluminium = 3
 			rubber = 1
@@ -1845,14 +1836,14 @@ equipments = {
 		parent = medium_plane_airframe_1
 		priority = 5
 
-		air_range = 1100
+		air_range = 2400
 		maximum_speed = 375
 		air_agility = 35
 		air_defence = 20
 		weight = 12
 		naval_strike_attack = 1
 		naval_strike_targetting = 1
-		build_cost_ic = 10
+		build_cost_ic = 48
 		resources = {
 			aluminium = 4
 			rubber = 1
@@ -1993,14 +1984,14 @@ equipments = {
 		parent = medium_plane_airframe_2
 		priority = 5
 
-		air_range = 1300
+		air_range = 2800
 		maximum_speed = 425
 		air_agility = 40
 		air_defence = 24
 		weight = 14
 		naval_strike_attack = 1
 		naval_strike_targetting = 1
-		build_cost_ic = 13
+		build_cost_ic = 52
 		resources = {
 			aluminium = 5
 			rubber = 1
@@ -2153,14 +2144,14 @@ equipments = {
 		parent = medium_plane_airframe_3
 		priority = 5
 
-		air_range = 1500
+		air_range = 3000
 		maximum_speed = 500
 		air_agility = 45
 		air_defence = 24
 		weight = 16
 		naval_strike_attack = 1
 		naval_strike_targetting = 1
-		build_cost_ic = 14
+		build_cost_ic = 56
 		resources = {
 			aluminium = 5
 			rubber = 1
@@ -2347,7 +2338,7 @@ equipments = {
 		lend_lease_cost = 10
 		manpower = 80
 		fuel_consumption = 0.16
-		build_cost_ic = 16
+		build_cost_ic = 64
 		resources = {
 			aluminium = 3
 			rubber = 2
@@ -2564,10 +2555,10 @@ equipments = {
 		module_slots = inherit
 		priority = 5
 
-		air_range = 1000
+		air_range = 2000
 		maximum_speed = 200
 		air_agility = 20
-		air_defence = 20
+		air_defence = 10
 		weight = 16
 		naval_strike_attack = 1
 		naval_strike_targetting = 1
@@ -2582,14 +2573,14 @@ equipments = {
 		parent = large_plane_airframe_0
 		priority = 5
 
-		air_range = 1500
+		air_range = 2500
 		maximum_speed = 225
 		air_agility = 25
-		air_defence = 25
+		air_defence = 15
 		weight = 18
 		naval_strike_attack = 1
 		naval_strike_targetting = 1
-		build_cost_ic = 18
+		build_cost_ic = 68
 		resources = {
 			aluminium = 3
 			rubber = 2
@@ -2722,14 +2713,14 @@ equipments = {
 		parent = large_plane_airframe_1
 		priority = 5
 
-		air_range = 2000
+		air_range = 3500
 		maximum_speed = 300
 		air_agility = 30
-		air_defence = 35
+		air_defence = 25
 		weight = 20
 		naval_strike_attack = 1
 		naval_strike_targetting = 1
-		build_cost_ic = 20
+		build_cost_ic = 72
 		resources = {
 			aluminium = 4
 			rubber = 2
@@ -2888,14 +2879,14 @@ equipments = {
 		parent = large_plane_airframe_2
 		priority = 5
 
-		air_range = 3000
+		air_range = 5000
 		maximum_speed = 350
 		air_agility = 35
-		air_defence = 50
+		air_defence = 40
 		weight = 22
 		naval_strike_attack = 1
 		naval_strike_targetting = 1
-		build_cost_ic = 22
+		build_cost_ic = 76
 		resources = {
 			aluminium = 5
 			rubber = 2
@@ -3054,14 +3045,14 @@ equipments = {
 		parent = large_plane_airframe_3
 		priority = 5
 
-		air_range = 3600
+		air_range = 2600
 		maximum_speed = 400
 		air_agility = 40
 		air_defence = 54
 		weight = 24
 		naval_strike_attack = 1
 		naval_strike_targetting = 1
-		build_cost_ic = 23
+		build_cost_ic = 80
 		resources = {
 			aluminium = 6
 			rubber = 2
