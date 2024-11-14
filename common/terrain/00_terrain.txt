@@ -27,10 +27,10 @@ categories =  {
 	
 	forest = {
 		color = { 89 199 85 }
-		movement_cost = 1.5
+		movement_cost = 2.5
 		#combat_width = -0.20
-		combat_width = 60
-		combat_support_width = 30
+		combat_width = 80
+		combat_support_width = 40
 		ai_terrain_importance_factor = 5.0
 		match_value = 5
 		sound_type = forest
@@ -53,10 +53,10 @@ categories =  {
 
 	hills = {
 		color = { 248 255 153 }
-		movement_cost = 1.5
+		movement_cost = 1.8
 		#combat_width = -0.33
-		combat_width = 70
-		combat_support_width = 35
+		combat_width = 80
+		combat_support_width = 40
 		ai_terrain_importance_factor = 3.0
 		match_value = 2
 		sound_type = desert
@@ -78,11 +78,11 @@ categories =  {
 	
 	mountain = {
 		color = { 157 192 208 }
-		movement_cost = 2.0
+		movement_cost = 2.5
 		attrition = 0.3
 		#combat_width = -0.66
-		combat_width = 50
-		combat_support_width = 25
+		combat_width = 80
+		combat_support_width = 2540
 		ai_terrain_importance_factor = 10.0
 		match_value = 10
 		sound_type = desert
@@ -105,10 +105,10 @@ categories =  {
 	
 	plains = {
 		color = { 255 129 66 }
-		movement_cost = 1.0
+		movement_cost = 1.7
 		ai_terrain_importance_factor = 0.1
-		combat_width = 70
-		combat_support_width = 35
+		combat_width = 80
+		combat_support_width = 40
 		match_value = 0.5
 		sound_type = plains
 		buildings_max_level = {
@@ -119,7 +119,7 @@ categories =  {
 	
 	urban = {
 		color = { 120 120 120 }
-		movement_cost = 1.2
+		movement_cost = 2
 		ai_terrain_importance_factor = 4.0
 		combat_width = 80
 		combat_support_width = 40
@@ -142,11 +142,11 @@ categories =  {
 	
 	jungle = {
 		color = { 127 191 0 }
-		movement_cost = 1.5
+		movement_cost = 1.8
 		attrition = 0.2
 		# combat_width = -0.25
-		combat_width = 60
-		combat_support_width = 30
+		combat_width = 80
+		combat_support_width = 40
 
 		ai_terrain_importance_factor = 6.0
 		match_value = 6
@@ -172,11 +172,11 @@ categories =  {
 	
 	marsh = {
 		color = { 76 96 35 }
-		movement_cost = 2.0
+		movement_cost = 2.5
 		attrition = 0.35
 		# combat_width = -0.25
-		combat_width = 50
-		combat_support_width = 25
+		combat_width = 80
+		combat_support_width = 40
 		ai_terrain_importance_factor = 8.0
 		match_value = 8
 		sound_type = forest
@@ -199,10 +199,10 @@ categories =  {
 	
 	desert = {
 		color = { 255 127 0 }
-		movement_cost = 1.05
-		attrition = 0.15
-		combat_width = 70
-		combat_support_width = 35
+		movement_cost = 2.5
+		attrition = 0.05
+		combat_width = 80
+		combat_support_width = 40
 		ai_terrain_importance_factor = 8.0
 		match_value = 8
 		sound_type = desert
@@ -210,7 +210,10 @@ categories =  {
 			bunker = 4
 			coastal_bunker = 6
 		}
-		
+		units = {
+			attack = -0.1
+			defence = -0.1
+		}		
 		sickness_chance = 1.0
 		
 		supply_flow_penalty_factor = 0.14
