@@ -2,10 +2,6 @@
 state = {
 	id = 934
 	name = "STATE_934"
-	resources = {
-		aluminium = 1.000
-        chromium = 1.000
-	}
 
 	history = {
 		owner = ALB
@@ -18,11 +14,6 @@ state = {
 		}
 		add_core_of = ALB
 		add_claim_by = ITA
-		1939.4.12 = {
-		    owner = ITA
-		    controller = ITA
-		    remove_claim_by = ITA
-		}
 
 	}
 

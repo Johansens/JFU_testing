@@ -363,8 +363,8 @@ script_enum_equipment_bonus_type = {
 	ship_hull_submarine
 	ship_hull_submarine_1
 	ship_hull_submarine_2
-	ship_hull_submarine_3
-	ship_hull_submarine_4
+	#ship_hull_submarine_3
+	#ship_hull_submarine_4
 	cruiser_submarine
 	fleet_submarine
 	midget_submarine
@@ -377,8 +377,8 @@ script_enum_equipment_bonus_type = {
 	ship_hull_fleet_submarine
 	submarine_1
 	submarine_2
-	submarine_3
-	submarine_4
+	#submarine_3
+	#submarine_4
 	support_equipment
 	support_equipment_1
 	light_tank_chassis
@@ -527,9 +527,9 @@ script_enum_equipment_bonus_type = {
 	super_heavy_tank_aa_chassis
 	super_heavy_tank_artillery_chassis
 	super_heavy_tank_destroyer_chassis
-	modern_tank_aa_chassis
-	modern_tank_artillery_chassis
-	modern_tank_destroyer_chassis
+	#modern_tank_aa_chassis
+	#modern_tank_artillery_chassis
+	#modern_tank_destroyer_chassis
 	light_tank_aa_chassis_0
 	light_tank_aa_chassis_1
 	light_tank_aa_chassis_2
@@ -593,9 +593,9 @@ script_enum_equipment_bonus_type = {
 	super_heavy_tank_aa_chassis_1
 	super_heavy_tank_artillery_chassis_1
 	super_heavy_tank_destroyer_chassis_1
-	modern_tank_aa_chassis_1
-	modern_tank_artillery_chassis_1
-	modern_tank_destroyer_chassis_1
+	#modern_tank_aa_chassis_1
+	#modern_tank_artillery_chassis_1
+	#modern_tank_destroyer_chassis_1
 	gw_tank_equipment
 	light_tank_equipment_1
 	light_tank_equipment_2
@@ -634,9 +634,9 @@ script_enum_equipment_bonus_type = {
 	heavy_tank_aa_equipment_2
 	heavy_tank_aa_equipment_3
 	modern_tank_equipment_1
-	modern_tank_artillery_equipment_1
-	modern_tank_destroyer_equipment_1
-	modern_tank_aa_equipment_1
+	#modern_tank_artillery_equipment_1
+	#modern_tank_destroyer_equipment_1
+	#modern_tank_aa_equipment_1
 	super_heavy_tank_equipment_1
 	super_heavy_tank_artillery_equipment_1
 	super_heavy_tank_destroyer_equipment_1
@@ -644,4 +644,9 @@ script_enum_equipment_bonus_type = {
 	amphibious_tank_equipment_1
 	amphibious_tank_equipment_2
 	supersonic_fighter_equipment_1
+	medium_tank_aa_chassisodern_tank_chassis_1
+	medium_tank_artillery_chassisodern_tank_chassis_1
+	medium_tank_destroyer_chassisodern_tank_chassis_1
+	medium_tank_amphibious_chassisodern_tank_chassis_1
+	medium_tank_flame_chassisodern_tank_chassis_1
 }

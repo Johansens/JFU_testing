@@ -2,9 +2,6 @@ state = {
 	id = 975
 	name = "STATE_975"
 	manpower = 298000
-
-	resources = {
-	}
 	
 	state_category = rural
 	
@@ -21,12 +18,7 @@ state = {
 			infrastructure = 1
 			industrial_complex = 1
 		}
-		
-		1938.3.12 = {
-			owner = GER
-			controller = GER
-			add_core_of = GER
-		}
+
 
 	}
 

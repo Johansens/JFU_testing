@@ -479,6 +479,10 @@ technologies = {
 	}
 	basic_medium_tank_chassis = { #Panzer III
 
+		sub_technologies = {
+			amphibious_tank_chassis
+		}
+
 		enable_equipments = {
 			medium_tank_chassis_1
 			medium_tank_destroyer_chassis_1
@@ -588,6 +592,10 @@ technologies = {
 
 
 	improved_medium_tank_chassis = { #Panzer IV
+
+		sub_technologies = {
+			amphibious_drive
+		}
 
 		enable_equipments = {
 			medium_tank_chassis_2
@@ -918,9 +926,9 @@ technologies = {
 
 		enable_equipments = {
 			modern_tank_chassis_1
-			modern_tank_destroyer_chassis_1
-			modern_tank_artillery_chassis_1
-			modern_tank_aa_chassis_1
+			#modern_tank_destroyer_chassis_1
+			#modern_tank_artillery_chassis_1
+			#modern_tank_aa_chassis_1
 		}
 		enable_subunits = {
 			modern_armor

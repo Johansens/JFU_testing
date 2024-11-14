@@ -4,9 +4,6 @@ state = {
 	name = "STATE_531" # Kansai
 	manpower = 11015000
 	state_category = metropolis
-	resources = {
-		aluminium = 3 # was: 6
-	}
 
 	history = {
 
@@ -33,13 +30,6 @@ state = {
 
 		victory_points = {
 			11960 20 # Kyoto
-		}
-
-		1939.1.1 = {
-			buildings = {
-				arms_factory = 3
-				industrial_complex = 5
-			}
 		}
 
 	}

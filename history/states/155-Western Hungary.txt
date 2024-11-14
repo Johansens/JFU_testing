@@ -6,7 +6,8 @@ state = {
 	state_category = large_town # was city
 
 	resources = {
-		aluminium = 40 # moved from Northern Hungary, then was 60
+		tungsten = 30.000
+		steel = 30.000
 	}
 
 	history = {

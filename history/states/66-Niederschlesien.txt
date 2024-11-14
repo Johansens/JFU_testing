@@ -4,8 +4,8 @@ state = {
 	manpower = 3052726
 
 	resources = {
-		steel = 10 #was 32 #was 50 # was: 110
-		aluminium = 16 # was: 38
+		steel = 40 #was 32 #was 50 # was: 110
+		aluminium = 30 # was: 38
 	}
 	
 	state_category = large_city
@@ -32,14 +32,6 @@ state = {
 			infrastructure = 3
 			industrial_complex = 1
 			air_base = 6
-		}
-
-		1939.1.1 = {
-			buildings = {
-				air_base = 10
-				arms_factory = 3
-				industrial_complex = 3
-			}
 		}
 	}
 

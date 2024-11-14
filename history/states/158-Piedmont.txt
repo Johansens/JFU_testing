@@ -8,8 +8,7 @@ state = {
 	resources = {
 		steel = 24 # was: 40
 		aluminium = 16 # was: 28
-		chromium = 2 # was: 4
-		tungsten = 1 # was: 2
+		chromium = 100 # was: 4
 	}
 
 	history = {
@@ -31,17 +30,6 @@ state = {
 			}
 		}
 		add_core_of = ITA
-		add_core_of = SPM
-		1939.1.1 = {
-			buildings = {
-				arms_factory = 10
-				industrial_complex = 2
-				dockyard = 3
-				6788 = {
-					naval_facility = 1 # Genoa Facilities
-				}
-			}
-		}
 	}
 
 	provinces = {

@@ -1258,7 +1258,7 @@ technologies = {
 	improved_submarine = {
 
 		enable_equipments = { 
-			submarine_3
+			#submarine_3
 		}
 		
 		path = {

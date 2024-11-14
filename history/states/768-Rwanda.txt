@@ -5,10 +5,6 @@ state = {
 	state_category = pastoral
 	manpower = 1716564
 
-	resources = {
-		tungsten = 3
-	}
-
 	history = {
 
 		owner = BEL
