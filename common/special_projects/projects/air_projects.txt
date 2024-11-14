@@ -801,19 +801,7 @@ sp_air_jet_engine = {
 
 	available = { 
 		FROM = {
-			if = {
-				limit = { has_dlc = "By Blood Alone" }
-				OR = {
-					has_tech = improved_small_airframe
-					has_tech = improved_medium_airframe
-				}
-			}
-			else = {
-				OR = {
-					has_tech = fighter2
-					has_tech = tactical_bomber2
-				}
-			}	
+			has_tech = experimental_rockets
 		}
 	}
 	

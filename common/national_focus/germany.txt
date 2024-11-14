@@ -788,14 +788,21 @@ focus_tree = {
 			}
 
 			custom_effect_tooltip = generic_skip_one_line_tt
-
 			add_tech_bonus = {
 				name = GER_wirtschaftswunder
-				bonus = 1
+				bonus = 1.0
 				uses = 1
-				category = industry
+				technology = advanced_machine_tools
+				technology = flexible_line
+				technology = assembly_line_production
+				technology = streamlined_line
+				technology = concentrated_industry3
+				technology = concentrated_industry4
+				technology = concentrated_industry5
+				technology = dispersed_industry3 
+				technology = dispersed_industry4 
+				technology = dispersed_industry5 
 			}
-
 			custom_effect_tooltip = generic_skip_one_line_tt
 
 			custom_effect_tooltip = GER_replace_recovering_economy_with_wirtschaftswunder_tt
@@ -1517,7 +1524,7 @@ focus_tree = {
 		relative_position_id = GER_kdf_wagen_factories
 		cost = 10
 		available = {
-			industrial_complex > 49
+			date > 1940.01.01
 		}
 
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
@@ -1594,10 +1601,19 @@ focus_tree = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 
 			add_tech_bonus = {
-				name = GER_the_four_year_plan
-				bonus = 1
+				name = GER_four_year_plan
+				bonus = 1.0
 				uses = 1
-				category = industry
+				technology = advanced_machine_tools
+				technology = flexible_line
+				technology = assembly_line_production
+				technology = streamlined_line
+				technology = concentrated_industry3
+				technology = concentrated_industry4
+				technology = concentrated_industry5
+				technology = dispersed_industry3 
+				technology = dispersed_industry4 
+				technology = dispersed_industry5 
 			}
 		}
 	}
@@ -1641,14 +1657,21 @@ focus_tree = {
 				add_extra_state_shared_building_slots = 1
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt
-
 			add_tech_bonus = {
 				name = GER_autarky_efforts
-				bonus = 1
+				bonus = 1.0
 				uses = 1
-				category = industry
+				technology = advanced_machine_tools
+				technology = flexible_line
+				technology = assembly_line_production
+				technology = streamlined_line
+				technology = concentrated_industry3
+				technology = concentrated_industry4
+				technology = concentrated_industry5
+				technology = dispersed_industry3 
+				technology = dispersed_industry4 
+				technology = dispersed_industry5 
 			}
-
 			custom_effect_tooltip = generic_skip_one_line_tt
 
 			custom_effect_tooltip = GER_gain_autarkic_economy_lock_free_trade_tt
@@ -4427,10 +4450,10 @@ focus_tree = {
 					GER_blitzkrieg_army_armor_speed_factor = 0.05
 					tooltip = army_armor_speed_factor_tt
 				}
-				add_to_variable = { 
-					GER_blitzkrieg_army_armor_attack_factor = 0.05
-					tooltip = army_armor_attack_factor_tt
-				}
+				#add_to_variable = { 
+				#	GER_blitzkrieg_army_armor_attack_factor = 0.05
+				#	tooltip = army_armor_attack_factor_tt
+				#}
 			}
 
 			custom_effect_tooltip = generic_skip_one_line_tt
@@ -4567,10 +4590,10 @@ focus_tree = {
 
 			custom_effect_tooltip = GER_modify_blitzkrieg_modifier_tt
 			effect_tooltip = {
-				add_to_variable = { 
-					GER_blitzkrieg_army_armor_attack_factor = 0.05
-					tooltip = army_armor_attack_factor_tt
-				}
+				#add_to_variable = { 
+				#	GER_blitzkrieg_army_armor_attack_factor = 0.05
+				#	tooltip = army_armor_attack_factor_tt
+				#}
 				add_to_variable = { 
 					GER_blitzkrieg_breakthrough_factor = 0.05
 					tooltip = breakthrough_factor_tt
@@ -4806,7 +4829,7 @@ focus_tree = {
 
 			add_tech_bonus = {
 				name = GER_aeronautical_research_institute
-				bonus = 0.75
+				bonus = 1
 				uses = 1
 				category = air_equipment
 			}
@@ -5174,10 +5197,10 @@ focus_tree = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 
 			GER_modify_airforce_modifier = yes
-			add_to_variable = { 
-				GER_military_air_range_factor = 0.15
-				tooltip = air_range_factor_tt
-			}
+			#add_to_variable = { 
+			#	GER_military_air_range_factor = 0.15
+			#	tooltip = air_range_factor_tt
+			#}
 			add_to_variable = { 
 				GER_military_air_strategic_bomber_bombing_factor = 0.05
 				tooltip = air_strategic_bomber_bombing_factor_tt
@@ -8630,7 +8653,6 @@ focus_tree = {
 		relative_position_id = GER_anschluss
 		cost = 5
 		available = {
-			surrender_progress < 0.1
 			custom_trigger_tooltip = { 
 				tooltip = GER_demonstration_of_military_achievements_trigger
 				OR = {
@@ -8662,7 +8684,6 @@ focus_tree = {
 		relative_position_id = GER_demonstration_of_military_achievements
 		cost = 5
 		available = {
-			surrender_progress < 0.05
 			custom_trigger_tooltip = {
 				tooltip = GER_an_invincible_army_trigger
 				OR = {
@@ -8720,7 +8741,6 @@ focus_tree = {
 		relative_position_id = GER_an_invincible_army
 		cost = 5
 		available = {
-			surrender_progress < 0.01
 			custom_trigger_tooltip = {
 				tooltip = GER_an_invincible_army_trigger
 				OR = {
@@ -8784,13 +8804,9 @@ focus_tree = {
 		cost = 5
 		
 		bypass = {
-			188 = { is_owned_by = GER }
-			85 = { is_owned_by = GER }
-			86 = { is_owned_by = GER }
 		}
 		
 		available = { 
-			is_subject = no 
 		}
 
 		will_lead_to_war_with = LIT
@@ -8975,76 +8991,23 @@ focus_tree = {
 		relative_position_id = GER_danzig_or_war
 		cost = 4
 
-		will_lead_to_war_with = BEL
-		will_lead_to_war_with = HOL
-		will_lead_to_war_with = FRA
-
 		bypass = {
-			HOL = {
-				OR = {
-					exists = no
-					is_in_faction_with = GER
-					has_war_with = ROOT
-				}
-			}
-			BEL = {
-				OR = {
-					exists = no
-					is_in_faction_with = GER
-					has_war_with = ROOT
-				}
-			}
 		}
 
 		available = {
-			is_subject = no
-			OR = {
-				NOT = { HOL = { is_in_faction_with = GER } }
-				NOT = { BEL = { is_in_faction_with = GER } }
-			}
+			always = no
 		}
 
 		historical_ai = {
-			date > 1939.1.1
-			NOT = {
-				any_home_area_neighbor_country = {
-					NOT = { tag = FRA }
-					NOT = { tag = DEN }
-					has_war_with = ROOT
-					surrender_progress < 0.5
-				}
-			}
 		}
 
 		ai_will_do = {
-			factor = 10			
-			modifier = {
-				factor = 0.05
-				date < 1939.1.1
-			}			
-			modifier = {
-				factor = 0.2
-				any_home_area_neighbor_country = {
-					NOT = { tag = FRA }
-					has_war_with = ROOT
-					surrender_progress < 0.5
-				}
-			}
-			modifier = {
-				factor = 0
-				OR = {
-					has_government = democratic
-					has_government = communism
-				}
-			}
 		}
 
 		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_ANNEXATION }
 
 		completion_reward = {
-			hidden_effect = {
-				news_event = { hours = 6 id = news.234 }
-			}
+			custom_effect_tooltip = GER_decision_focus_tt
 		}
 	}
 
@@ -9064,79 +9027,16 @@ focus_tree = {
 		will_lead_to_war_with = NOR
 		
 		bypass = {
-			AND = {
-				DEN = { 
-					OR = {
-						is_in_faction_with = ROOT
-						exists = no
-					}
-				}
-				NOR = { 
-					OR = {
-						is_in_faction_with = ROOT
-						exists = no
-					}
-				}
-			}
 		}
 
 		available = {
-			is_subject = no
-			hidden_trigger = {
-				OR = {
-					AND = {
-						is_ai = yes
-						NOT = { has_country_flag = SWE_GER_avoid_dow_nordics }
-					}
-
-					is_ai = no
-				}
-			}
-
-			10 = {
-				controller = {
-					OR = {
-						is_in_faction_with = ROOT
-						original_tag = GER
-					}
-				}
-			}
-			85 = {
-				controller = {
-					OR = {
-						is_in_faction_with = ROOT
-						original_tag = GER
-					}
-				}
-			}
-			OR = { 
-				has_war_with = ENG
-				NOT = {country_exists = ENG}
-			}
+			always = no
 		}
 
 		ai_will_do = {
-			factor = 10	
-			modifier = {
-				factor = 0
-				date < 1939.1.1
-			}
-			modifier = {
-				factor = 0
-				OR = {
-					has_government = democratic
-					has_government = communism
-				}
-			}
 		}
 
 		historical_ai = {
-			any_home_area_neighbor_country = {
-				OR = {
-					NOT = { has_war_with = ROOT	}
-					POL = { has_capitulated = yes }
-				}
-			}
 		}
 
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_HISTORICAL FOCUS_FILTER_ANNEXATION }
@@ -9146,46 +9046,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-
-			if = {
-				limit = {
-					NOT = { DEN = { is_in_faction_with = GER } }
-					country_exists = DEN					
-				} 
-				create_wargoal = {
-					type = take_state_focus
-					target = DEN
-					expire = 0
-					generator = { 37 }
-				}
-			}
-
-
-			if = {
-				limit = {
-					NOT = { NOR = { is_in_faction_with = GER } }
-					country_exists = NOR					
-				} 
-				create_wargoal = {
-					type = take_state_focus
-					target = NOR
-					expire = 0
-					generator = { 110 }
-				}
-			}
-			
-			add_tech_bonus = {
-				name = tp_bonus
-				bonus = 1.0
-				ahead_reduction = 2
-				uses = 1
-				category = tp_tech
-			}
-			hidden_effect = {
-				news_event = { hours = 6 id = news.233 }
-			}
-
-			custom_effect_tooltip = GER_weserubung_tt
+			custom_effect_tooltip = GER_decision_focus_tt		
 		}
 	}
 	focus = { 
@@ -9495,6 +9356,7 @@ focus_tree = {
 		available_if_capitulated = no
 
 		available = {
+			always = no
 		}
 
 		cancel = {
@@ -9635,23 +9497,9 @@ focus_tree = {
 		cost = 5
 		
 		available = {
-			is_subject = no
-			has_government = fascism
-			has_army_manpower = { size > 849999 } #ca 90 div
-			SOV = {
-				NOT = { has_war_with = GER }
-				country_exists = SOV
-				has_civil_war = no
-			}
-			NOT = { has_global_flag = beck_ribbentrop_signed }
 		}
 
 		cancel = {
-			OR = {
-				has_war_with = SOV
-				NOT = { country_exists = SOV }
-				has_global_flag = beck_ribbentrop_signed
-			}
 		}
 
 		continue_if_invalid = yes
