@@ -1114,17 +1114,17 @@ focus_tree = {
 					}
 				}
 			}
-			#custom_effect_tooltip = generic_skip_one_line_tt
-			#51 = {
-			#	add_building_construction = {
-			#		type = dam
-			#		level = 1
-			#		instant_build = yes
-			#		province = {
-			#			id = 3547
-			#		}
-			#	}
-			#}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			51 = {
+				add_building_construction = {
+					type = dam
+					level = 1
+					instant_build = yes
+					province = {
+						id = 3547
+					}
+				}
+			}
 			#custom_effect_tooltip = {
 			#	localization_key = building_state_modifier|dam
 			#	INDENT = "    "
@@ -7766,7 +7766,7 @@ focus_tree = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 			add_political_power = 75
 			army_experience = 5
-
+			add_war_support = 0.1
 			custom_effect_tooltip = generic_skip_one_line_tt
 			add_named_threat = { threat = 7 name = GER_rhineland }
 		}

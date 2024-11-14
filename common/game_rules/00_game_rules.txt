@@ -108,27 +108,6 @@ JFU_pre_sets = {
 		desc = "This option disables all pre set rule you may configurate your game manually with game rules below"
 	}
 }
-JFU_pre_grinded_generals = {
-	name = "pre grinded Generals Settings"
-	group = "HORST_GROUPKEY"
-	icon = "RULE_GROUP_GENERAL_UI"
-
-	default = {
-		name = "PRE_GRINDED_GENERALS_OFF"
-		text = "Pre grinded Generals OFF"
-		desc = "normal Vanilla grinding no pre grinded Generals"
-	}
-	option = {
-		name = "HALVED_GRIND_TIME"
-		text = "+50% trait Xp gain"
-		desc = "Trait XP gained is mulitpled by 50% does not affect level XP"
-	}
-	option = {
-		name = "PRE_GRINDED_GENERALS_ON"
-		text = "Pre grinded Generals ON"
-		desc = "all Nations have pregrinded Generals Volunteers are not allowed"
-	}
-}
 JFU_closed_eco_SOVIET = {
 	name = "Soviet eco"
 	group = "HORST_GROUPKEY"
@@ -211,12 +190,12 @@ JFU_CHINA_WAR = {
 	name = "2. Sino-Japanese War Settings"
 	group = "HORST_GROUPKEY"
 	icon = "RULE_GROUP_GENERAL_UI"	
-	option = {
+	default = {
 		name = "NO_CHINA_WAR"
 		text = "No China War"
 		desc = "The 2. Sino Japanese War will get bypassed"
 	}
-	default = {
+	option = {
 		name = "CHINA_WAR"
 		text = "Normal China "
 		desc = "Normal China war"

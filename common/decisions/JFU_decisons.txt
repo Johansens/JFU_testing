@@ -573,16 +573,10 @@ political_actions1 = {
 				news_event = { id = news.5005 }
 				if = {
 					limit = {
-						OR = {
-							has_game_rule = {
-								rule = JFU_pre_sets 
-								option = COMPETITIVE_JFU
-							}
-							has_game_rule = {
-								rule = JFU_pre_grinded_generals 
-								option = PRE_GRINDED_GENERALS_ON
-							}					
-						}	
+						has_game_rule = {
+							rule = JFU_pre_sets 
+							option = COMPETITIVE_JFU
+						}
 					}	
 					JFU_update_generals = yes											
 				}
@@ -607,15 +601,9 @@ political_actions1 = {
 			if = {
 				limit = {
 					NOT = {
-						OR = {
-							has_game_rule = {
-								rule = JFU_pre_grinded_generals
-								option = PRE_GRINDED_GENERALS_ON
-							}
-							has_game_rule = {
-								rule = JFU_pre_sets
-								option = COMPETITIVE_JFU
-							}	
+						has_game_rule = {
+							rule = JFU_pre_sets 
+							option = COMPETITIVE_JFU
 						}
 					}
 				}
@@ -626,17 +614,10 @@ political_actions1 = {
 			}
 			if = {
 				limit = {
-					OR = {
-						has_game_rule = {
-							rule = JFU_pre_grinded_generals
-							option = PRE_GRINDED_GENERALS_ON
-						}
-						has_game_rule = {
-							rule = JFU_pre_sets
-							option = COMPETITIVE_JFU
-						}
+					has_game_rule = {
+						rule = JFU_pre_sets 
+						option = COMPETITIVE_JFU
 					}
-
 				}
 				SOV = {
 					transfer_state = 147
@@ -956,15 +937,9 @@ political_actions1 = {
 				news_event = { id = news.5002 }
 				if = {
 					limit = {
-						OR = {
-							has_game_rule = {
-								rule = JFU_pre_sets 
-								option = COMPETITIVE_JFU
-							}
-							has_game_rule = {
-								rule = JFU_pre_grinded_generals 
-								option = PRE_GRINDED_GENERALS_ON
-							}					
+						has_game_rule = {
+							rule = JFU_pre_sets 
+							option = COMPETITIVE_JFU
 						}	
 					}	
 					JFU_update_generals = yes											

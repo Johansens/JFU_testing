@@ -7899,32 +7899,26 @@ news_event = {
 
 	is_triggered_only = yes
 
-	option = {
-		name = news.215.a
-		trigger = {
-			has_idea = anti_soviet_pact
-		}
-	}
+	#option = {
+		#name = news.215.a
+		#trigger = {
+		#	has_idea = anti_soviet_pact
+		#}
+	#}
 
-	option = {
-		name = news.215.b
-		trigger = {
-			has_government = communism
-			NOT = {
-				has_idea = anti_soviet_pact
-			}
-		}
-	}
+	#option = {
+		#name = news.215.b
+	#	trigger = {
+			#has_government = communism
+			#NOT = {
+				#has_idea = anti_soviet_pact
+			#}
+		#}
+	#}
 
 	option = {
 		name = news.215.c
 		trigger = {	
-			NOT = {
-				OR = {
-					has_government = communism
-					has_idea = anti_soviet_pact
-				}
-			}
 		}
 	}
 }
