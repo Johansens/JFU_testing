@@ -8670,25 +8670,6 @@ country_event = {
 			clr_country_flag = GER_inner_circle_event_pending_flag
 		}
 	}
-
-	option = { # Abort!
-		name = GER_inner_circle.02.d
-
-		ai_chance = {
-			base = 0
-		}
-
-		uncomplete_national_focus = {
-			focus = GER_a_strong_successor
-			uncomplete_children = no
-			refund_political_power = yes
-		}
-
-		hidden_effect = {
-			#Cleaning vars / flags / etc
-			clr_country_flag = GER_inner_circle_event_pending_flag
-		}
-	}
 }
 
 # INTRIGUE - Todt-Speer-Göring ME focuses

@@ -1318,17 +1318,6 @@ on_actions = {
 				}
 				else_if = {
 					limit = {
-						has_country_flag = { flag = GER_a_strong_successor_flag days > 40 }
-					}
-					unlock_national_focus = GER_a_strong_successor
-					uncomplete_national_focus = {
-						focus = GER_a_strong_successor
-						refund_political_power = yes
-					}
-					clr_country_flag = GER_a_strong_successor_flag
-				}
-				else_if = {
-					limit = {
 						has_country_flag = { flag = GER_loyalty_to_the_fuhrer_flag days > 40 }
 					}
 					unlock_national_focus = GER_loyalty_to_the_fuhrer
