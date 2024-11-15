@@ -491,17 +491,25 @@ focus_tree = {
 
 			add_tech_bonus = {
 				name = GER_industrial_expansion
-				bonus = 1
+				bonus = 1.0
 				uses = 1
-				category = industry
+				technology = advanced_machine_tools
+				technology = flexible_line
+				technology = assembly_line_production
+				technology = streamlined_line
+				technology = concentrated_industry3
+				technology = concentrated_industry4
+				technology = concentrated_industry5
+				technology = dispersed_industry3 
+				technology = dispersed_industry4 
+				technology = dispersed_industry5 
 			}
-
 			custom_effect_tooltip = generic_skip_one_line_tt
 
 			modify_building_resources = {
         	   building = synthetic_refinery
         	   resource = rubber
-        	   amount = 1
+        	   amount = 2
         	}
 
 			custom_effect_tooltip = generic_skip_one_line_tt
@@ -833,10 +841,7 @@ focus_tree = {
 		relative_position_id = GER_wirtschaftswunder
 		cost = 10
 		available = {
-			OR = {
-				has_war = yes
-				threat > 0.15
-			}
+			has_war = yes
 		}
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -889,10 +894,7 @@ focus_tree = {
 		relative_position_id = GER_wirtschaftswunder
 		cost = 10
 		available = {
-			OR = {
-				has_war = yes
-				threat > 0.3
-			}
+			has_war = yes
 		}
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -1091,7 +1093,7 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = GER_construct_the_reichsautobahn
-		cost = 10
+		cost = 5
 		available = {
 			51 = { 
 				is_fully_controlled_by = ROOT
@@ -1676,25 +1678,6 @@ focus_tree = {
 
 			custom_effect_tooltip = GER_gain_autarkic_economy_lock_free_trade_tt
 			add_ideas = autarkic_economy
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			custom_effect_tooltip = GER_improve_trade_relations_tt
-			every_other_country = {
-				limit = {
-					is_in_faction_with = PREV
-				}	
-				add_opinion_modifier = {
-					target = GER
-					modifier = GER_autarky_trade_opinion
-				}
-				GER = {
-					add_opinion_modifier = {
-						target = PREV
-						modifier = GER_german_trade_opinion
-					}
-				}
-			}
 		}
 	}
 	
@@ -1806,7 +1789,7 @@ focus_tree = {
 
 			GER_modify_industrial_modifier = yes
 			add_to_variable = { 
-				GER_industrial_consumer_goods_factor = 0.1
+				GER_industrial_consumer_goods_factor = 0.05
 				tooltip = consumer_goods_factor_tt
 			}
 			if = {
@@ -1844,91 +1827,13 @@ focus_tree = {
 				tooltip = GER_industrial_consumer_goods_factor_limit_tt
 				check_variable = { GER_industrial_consumer_goods_factor < 0.9 }
 			}
-			any_controlled_state = {
-				NOT = { is_core_of = ROOT }
-				is_fully_controlled_by = ROOT
-				OR = {
-					steel > 24
-					aluminium > 19
-					oil > 14
-					tungsten > 9
-					chromium > 9
-				}
-			}
+			has_war = yes
 		}
 
 		cancel = {
-			NOT = {
-				any_controlled_state = {
-					is_core_of = ROOT
-					OR = {
-						steel > 25
-						aluminium > 20
-						oil > 15
-						tungsten > 10
-						chromium > 10
-					}
-				}
-			}
 		}
 
 		bypass = {
-			OR = {
-				has_resources_in_country = {
-					resource = steel
-					amount > 799
-					extracted = yes
-				}
-				any_subject_country = {
-					has_resources_in_country = {
-						resource = steel
-						amount > 799
-						extracted = yes
-					}
-				}
-			}
-			OR = {
-				has_resources_in_country = {
-					resource = aluminium
-					amount > 499
-					extracted = yes
-				}
-				any_subject_country = {
-					has_resources_in_country = {
-						resource = aluminium
-						amount > 499
-						extracted = yes
-					}
-				}
-			}
-			OR = {
-				has_resources_in_country = {
-					resource = tungsten
-					amount > 99
-					extracted = yes
-				}
-				any_subject_country = {
-					has_resources_in_country = {
-						resource = tungsten
-						amount > 99
-						extracted = yes
-					}
-				}
-			}
-			OR = {
-				has_resources_in_country = {
-					resource = chromium
-					amount > 99
-					extracted = yes
-				}
-				any_subject_country = {
-					has_resources_in_country = {
-						resource = chromium
-						amount > 99
-						extracted = yes
-					}
-				}
-			}
 		}
 
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
@@ -2012,7 +1917,7 @@ focus_tree = {
 
 			GER_modify_industrial_modifier = yes
 			add_to_variable = { 
-				GER_industrial_consumer_goods_factor = 0.1
+				GER_industrial_consumer_goods_factor = 0.05
 				tooltip = consumer_goods_factor_tt
 			}
 			if = {
@@ -2089,7 +1994,7 @@ focus_tree = {
 
 			GER_modify_industrial_modifier = yes
 			add_to_variable = { 
-				GER_industrial_consumer_goods_factor = 0.1
+				GER_industrial_consumer_goods_factor = 0.05
 				tooltip = consumer_goods_factor_tt
 			}
 			if = {
@@ -2196,7 +2101,7 @@ focus_tree = {
 
 			GER_modify_industrial_modifier = yes
 			add_to_variable = { 
-				GER_industrial_consumer_goods_factor = 0.1
+				GER_industrial_consumer_goods_factor = 0.05
 				tooltip = consumer_goods_factor_tt
 			}
 			if = {
@@ -2249,20 +2154,6 @@ focus_tree = {
 		continue_if_invalid = yes
 
 		bypass = {
-			OR = {
-				has_resources_in_country = {
-					resource = rubber
-					amount > 99
-					extracted = yes
-				}
-				any_subject_country = {
-					has_resources_in_country = {
-						resource = rubber
-						amount > 99
-						extracted = yes
-					}
-				}
-			}
 		}
 
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
@@ -2291,7 +2182,7 @@ focus_tree = {
 			modify_building_resources = {
         	   building = synthetic_refinery
         	   resource = rubber
-        	   amount = 2
+        	   amount = 3
         	}
 
 			custom_effect_tooltip = generic_skip_one_line_tt
@@ -2307,7 +2198,7 @@ focus_tree = {
 
 			GER_modify_industrial_modifier = yes
 			add_to_variable = { 
-				GER_industrial_consumer_goods_factor = 0.1
+				GER_industrial_consumer_goods_factor = 0.05
 				tooltip = consumer_goods_factor_tt
 			}
 			if = {
@@ -2334,94 +2225,10 @@ focus_tree = {
 		relative_position_id = GER_seize_foreign_industries
 		cost = 10
 		available = {
-			always = no
-			all_core_state = {
-				is_fully_controlled_by = ROOT
+			ENG = { 
+				NOT = { controls_state = 907 }
 			}
-			OR = {
-				has_resources_in_country = {
-					resource = steel
-					amount > 799 #This needs to correspond to the Bypass values in the previous focuses
-					extracted = yes
-				}
-				any_subject_country = {
-					has_resources_in_country = {
-						resource = steel
-						amount > 799 #This needs to correspond to the Bypass values in the previous focuses
-						extracted = yes
-					}
-				}
-			}
-			OR = {
-				has_resources_in_country = {
-					resource = aluminium
-					amount > 199 #This needs to correspond to the Bypass values in the previous focuses
-					extracted = yes
-				}
-				any_subject_country = {
-					has_resources_in_country = {
-						resource = aluminium
-						amount > 199 #This needs to correspond to the Bypass values in the previous focuses
-						extracted = yes
-					}
-				}
-			}
-			OR = {
-				has_resources_in_country = {
-					resource = oil
-					amount > 149 #This needs to correspond to the Bypass values in the previous focuses
-					extracted = yes
-				}
-				any_subject_country = {
-					has_resources_in_country = {
-						resource = oil
-						amount > 149 #This needs to correspond to the Bypass values in the previous focuses
-						extracted = yes
-					}
-				}
-			}
-			OR = {
-				has_resources_in_country = {
-					resource = tungsten
-					amount > 99 #This needs to correspond to the Bypass values in the previous focuses
-					extracted = yes
-				}
-				any_subject_country = {
-					has_resources_in_country = {
-						resource = tungsten
-						amount > 99 #This needs to correspond to the Bypass values in the previous focuses
-						extracted = yes
-					}
-				}
-			}
-			OR = {
-				has_resources_in_country = {
-					resource = chromium
-					amount > 99 #This needs to correspond to the Bypass values in the previous focuses
-					extracted = yes
-				}
-				any_subject_country = {
-					has_resources_in_country = {
-						resource = chromium
-						amount > 99 #This needs to correspond to the Bypass values in the previous focuses
-						extracted = yes
-					}
-				}
-			}
-			OR = {
-				has_resources_in_country = {
-					resource = rubber
-					amount > 49 #This needs to correspond to the Bypass values in the previous focuses
-					extracted = yes
-				}
-				any_subject_country = {
-					has_resources_in_country = {
-						resource = rubber
-						amount > 49 #This needs to correspond to the Bypass values in the previous focuses
-						extracted = yes
-					}
-				}
-			}
+
 		}
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -4706,7 +4513,12 @@ focus_tree = {
 		}
 		
 		completion_reward = {			
-			
+			add_tech_bonus = {
+				name = GER_aeronautical_research_institute
+				bonus = 1
+				uses = 1
+				category = air_equipment
+			}			
 			air_experience = 25
 
 			if = {
@@ -4827,12 +4639,7 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			add_tech_bonus = {
-				name = GER_aeronautical_research_institute
-				bonus = 1
-				uses = 1
-				category = air_equipment
-			}
+
 			add_breakthrough_progress = {
 				specialization = specialization_air
 				value = 0.5
@@ -8941,7 +8748,7 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = GER_reassert_eastern_claims
-		cost = 10
+		cost = 1
 
 		will_lead_to_war_with = POL
 		will_lead_to_war_with = ENG
@@ -8952,6 +8759,7 @@ focus_tree = {
 		continue_if_invalid = yes
 
 		available = {
+			date > 1939.08.01
 		}
 		
 		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_ANNEXATION }
@@ -9535,7 +9343,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = GER_reorganize_the_wehrmacht
-		cost = 10
+		cost = 5
 		
 		bypass = { 
 		}
