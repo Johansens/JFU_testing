@@ -916,7 +916,7 @@ equipments = {
 		fuel_consumption = 4
 
 
-		sub_visibility = 13
+		sub_visibility = 15
 		naval_speed = 20
 	
 		
