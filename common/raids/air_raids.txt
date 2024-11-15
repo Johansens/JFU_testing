@@ -40,6 +40,7 @@ types = {
 
 		allowed = {
 			has_dlc = "Gotterdammerung"
+			ai = no
 		}
 
 		# Raid Type is visible
@@ -292,6 +293,7 @@ types = {
 
 		allowed = {
 			has_dlc = "Gotterdammerung"
+			ai = no
 		}
 		# Raid Type is visible
 		visible = {
@@ -538,6 +540,7 @@ types = {
 
 		allowed = {
 			has_dlc = "Gotterdammerung"
+			ai = no
 		}
 		# Raid Type is visible
 		visible = {
@@ -1113,6 +1116,7 @@ types = {
 		allowed = {
 			has_dlc = "Gotterdammerung"
 			has_dlc = "By Blood Alone"
+			ai = no
 		}
 
 		# Raid Type is visible
@@ -1339,6 +1343,7 @@ types = {
 		allowed = {
 			has_dlc = "Gotterdammerung"
 			NOT = { has_dlc = "By Blood Alone" }
+			ai = no
 		}
 
 		# Raid Type is visible
