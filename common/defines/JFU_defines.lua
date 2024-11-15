@@ -42,6 +42,14 @@ NDefines.NDiplomacy.BASE_SEND_ATTACHE_CP_COST = 0			-- vanilla 50 Command Power 
 NDefines.NDiplomacy.EMBARGO_COST = 999							-- vanilla 100	-- One-time cost
 NDefines.NDiplomacy.REVOKE_EMBARGO_COST = 999						-- vanilla 0	-- Cost to remove an existing embargo
 
+NDefines.NMilitary.BASE_DIVISION_BRIGADE_GROUP_COST = 0
+NDefines.NMilitary.BASE_DIVISION_BRIGADE_CHANGE_COST = 0
+NDefines.NMilitary.BASE_DIVISION_SUPPORT_SLOT_COST = 0
+NDefines.NMilitary.MAX_ARMY_EXPERIENCE = 999
+NDefines.NMilitary.MAX_NAVY_EXPERIENCE = 999
+NDefines.NMilitary.MAX_AIR_EXPERIENCE = 999
+NDefines.NMilitary.DEPLOY_TRAINING_MAX_LEVEL = 2
+NDefines.NMilitary.PROMOTE_LEADER_CP_COST = 1.0	
 NDefines.NMilitary.UNIT_LEADER_ASSIGN_TRAIT_COST = 0.00
 NDefines.NMilitary.UNIT_LEADER_MODIFIER_COOLDOWN_ON_GROUP_CHANGE = 0
 NDefines.NMilitary.AIR_EQUIPMENT_BASE_COST = 0                 -- CHANGED AS EVERYTHING IS PRE-UPGPRADED (needs to be tested)
