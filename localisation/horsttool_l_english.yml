@@ -1515,3 +1515,15 @@
  VICTORY_POINTS_4949:0 "Krasnaya Sloboda"
  VICTORY_POINTS_3555:0 "Dzerzhinsky Tractor Factory"
  VICTORY_POINTS_1948:0 "Yelshanka"
+
+
+ resourcesteel:0 "[?resource@steel|0Y]"
+ resourcesteel1:0 "[?resource@steel|0+]"
+ resourcerubber:0 "[?resource@rubber|0Y]"
+ resourcerubber1:0 "[?resource@rubber|0+]"
+ resourcealuminium:0 "[?resource@aluminium|0Y]"
+ resourcealuminim1:0 "[?resource@aluminium|0+]"
+ resourcetungsten:0 "[?resource@tungsten|0Y]"
+ resourcetungsten1:0 "[?resource@tungsten|0+]"
+ resourcechromium:0 "[?resource@chromium|0Y]"
+ resourcechromium1:0 "[?resource@chromium|0+]"
