@@ -282,39 +282,6 @@ spanish_civil_war_SOV = {
 	}
 }
 
-spanish_civil_war_SOV_resistance = {
-	allowed = {
-		original_tag = SOV
-		has_dlc = "La Resistance"
-	}
-	enable = {
-		has_government = communism
-		country_exists = SPD
-		has_global_flag = spanish_civil_war
-		NOT = { has_global_flag = scw_over }
-	}
-
-	abort = {
-		has_global_flag = scw_over
-	}
-
-	ai_strategy = {
-		type = befriend
-		id = "SPD"
-		value = 100
-	}
-	ai_strategy = {
-		type = support
-		id = "SPD"
-		value = 100
-	}
-	ai_strategy = {
-		type = send_volunteers_desire
-		id = "SPD"
-		value = 100
-	}
-}
-
 SOV_template_design_1 = {
 	allowed = {
 		original_tag = SOV

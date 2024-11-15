@@ -77,10 +77,11 @@ weather_sandstorm = { # on Region
 	naval_strike = -0.9
 	org_loss_when_moving = 0.25
 	supply_factor = -0.05
-	truck_attrition_factor = 2.0
+	truck_attrition_factor = 3.0
 }
 
 weather_arctic_water = { # on Region
+	naval_attrition = 0.1
 	naval_retreat_speed = -0.05
 	navy_casualty_on_sink = 0.2
 	positioning = -0.2
@@ -107,18 +108,18 @@ weather_very_cold = { # on Province
 	army_attack_factor = -0.1
 	breakthrough_factor = -0.15
 	dig_in_speed_factor = -0.3
-	winter_attrition = 0.15
+	winter_attrition = 0.25
 }
 weather_very_hot = { # on Province
-	heat_attrition = 0.05
+	heat_attrition = 0.1
 	local_org_regain = -0.05
 	supply_factor = -0.05
 }
 weather_extreme_hot = { # on Province
 	army_attack_factor = -0.1
-	heat_attrition = 0.1
+	heat_attrition = 0.2
 	local_org_regain = -0.1
-	supply_factor = -0.1
+	supply_consumption_factor = 0.5
 	truck_attrition_factor = 0.1
 }
 weather_ground_snow_medium = { # on Province
@@ -199,7 +200,7 @@ non_core = {
 
 # On States that are controlled by a non-core country
 non_core_controller = {
-	local_building_slots_factor = -0.5
+	#local_building_slots_factor = -0.5
 
 	local_factories = -0.75
 	#local_manpower = -0.75
@@ -222,6 +223,8 @@ ROM_license_german_equipment = {
 		}
 	}
 
+	license_purchase_cost = 0 #base cost reduction
+	ai_license_acceptance = 20 #more to AI acceptance value.
 	license_production_speed = 0.25 #speed  increase for being a license
 	license_tech_difference_speed = 0.25 #less cost increase for each tech level between the license and own tech level
 }
@@ -476,6 +479,7 @@ air_wing_experience_bonus_max = {
 	#air_defence_factor = 0.2
 	air_agility_factor = 0.3
 	air_night_penalty = -0.2
+	air_accidents_factor = -1.0
 	#air_weather_penalty = -0.3
 }
 
@@ -484,6 +488,7 @@ air_wing_experience_malus_min = {
 	#air_defence_factor = -0.15
 	air_agility_factor = -0.15
 	air_night_penalty = 0.15
+	air_accidents_factor = 0.10
 	#air_weather_penalty = 0.15
 }
 
@@ -711,6 +716,13 @@ NORDIC_allow_more_planes = {
 FIN_organized_support_for_finland = {
 	send_volunteer_size = 3
 	air_volunteer_cap = 1
+}
+
+### SOUTH AMERICA ###
+CHL_from_support_chile_static_modifier = {
+	send_volunteers_tension = -0.6
+	send_volunteer_divisions_required = -0.9
+	send_volunteer_factor = 0.6
 }
 trade_major = {trade_cost_for_target_factor = -0.9 extra_trade_to_target_factor = 1.0	}
 trade_vichy = { trade_cost_for_target_factor = -0.9 }

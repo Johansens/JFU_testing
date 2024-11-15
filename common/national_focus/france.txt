@@ -218,9 +218,9 @@ focus = {
 	focus = {
 		id = FRA_begin_rearmament
 		icon = GFX_R56_GOAL_FRA_INCREASE_MILITARY_SPENDINGS
-		x = 6
+		x = 4
 		y = 0
-		available = { GER = { has_completed_focus = GER_rhineland} }
+		available = { GER = { has_completed_focus = GER_remilitarize_the_rhineland} }
 		prerequisite = {}
 		mutually_exclusive = { }
 		cost = 10
@@ -246,7 +246,7 @@ focus = {
 	focus = {
 		id = FRA_defensive_focus
 		icon = GFX_R56_GOAL_FRA_DEFENSE
-		x = -3
+		x = -1
 		y = 1
 		cost = 5
 		prerequisite = { focus = FRA_begin_rearmament }
@@ -255,155 +255,6 @@ focus = {
 		completion_reward = {
 			custom_effect_tooltip = available_chief_of_army
 			show_ideas_tooltip = maxime_weygand
-		}
-		mutually_exclusive = {
-			focus = FRA_aggressive_focus
-		}
-	}
-	focus = {
-		id = FRA_fortification_focus
-		icon = GFX_goal_generic_construction2
-		prerequisite = { focus = FRA_aggressive_focus focus = FRA_defensive_focus }
-		x = 2
-		y = 1
-		relative_position_id = FRA_defensive_focus
-		cost = 5
-		mutually_exclusive = {
-			focus = ENG_belgium_security
-		}
-
-		available = {
-			has_idea = FRA_protected_by_the_maginot_line
-			
-		}
-
-		completion_reward = {
-			add_ideas = FRA_fortification_focus
-		}
-	}
-	focus = {
-		id = FRA_extend_the_maginot
-		icon = GFX_goal_generic_construct_military
-		prerequisite = { focus = FRA_fortification_focus }
-		x = 0
-		y = 1
-		relative_position_id = FRA_fortification_focus
-		cost = 5
-		available = {			has_idea = FRA_protected_by_the_maginot_line
-		}
-
-		completion_reward = {
-			if = { 
-				limit = { 
-					FRA = { controls_province = 11420 }
-				} 
-				785 = {
-					add_building_construction = {
-						type = bunker
-						level = 3
-						province = 495
-						instant_build = yes
-					}		 
-				}	
-			}
-			if = { 
-				limit = { 
-					FRA = { controls_province = 454 }
-				} 
-				785 = {
-					add_building_construction = {
-						type = bunker
-						level = 3
-						province = 454
-						instant_build = yes
-					}		 
-				}	
-			}
-			if = { 
-				limit = { 
-					FRA = { controls_province = 3402 }
-				} 
-				785 = {
-					add_building_construction = {
-						type = bunker
-						level = 3
-						province = 3402
-						instant_build = yes
-					}		 
-				}	
-			}
-			if = { 
-				limit = { 
-					FRA = { controls_province = 11549 }
-				} 
-				785 = {
-					add_building_construction = {
-						type = bunker
-						level = 3
-						province = 11549 
-						instant_build = yes
-					}		 
-				}	
-			}
-			if = { 
-				limit = { 
-					FRA = { controls_province = 9472}
-				} 
-				18 = {
-					add_building_construction = {
-						type = bunker
-						level = 3
-						province = 9472
-						instant_build = yes
-					}		 
-				}	
-			}
-			if = { 
-				limit = { 
-					FRA = { controls_province = 3560}
-				} 
-				18 = {
-					add_building_construction = {
-						type = bunker
-						level = 3
-						province = 3560
-						instant_build = yes
-					}		 
-				}	
-			}
-			if = { 
-				limit = { 
-					FRA = { controls_province = 3560}
-				} 
-				18 = {
-					add_building_construction = {
-						type = bunker
-						level = 3
-						province = 3560
-						instant_build = yes
-					}		 
-				}	
-			}
-		}
-	}
-	focus = {
-		id = FRA_improve_the_maginot
-		icon = GFX_goal_generic_fortify_city
-		prerequisite = { focus = FRA_extend_the_maginot }
-		x = 0
-		y = 1
-		relative_position_id = FRA_extend_the_maginot
-		cost = 1
-
-		available = {
-			has_idea = FRA_protected_by_the_maginot_line
-		}
-		completion_reward = {
-			28 = {
-				add_dynamic_modifier = {
-					modifier = FRA_maginot_defence_modifier
-				}
-			}
 		}
 	}
 	focus = {
@@ -478,7 +329,7 @@ focus = {
 	focus = {
 		id = FRA_aggressive_focus
 		icon = GFX_goal_generic_major_war
-		x = 3
+		x = 1
 		y = 1
 		cost = 5
 		relative_position_id = FRA_begin_rearmament
@@ -487,84 +338,6 @@ focus = {
 		completion_reward = {
 			custom_effect_tooltip = available_chief_of_army
 			show_ideas_tooltip = maurice_gamelin
-
-			
-		}
-		mutually_exclusive = {
-			focus = FRA_defensive_focus
-		}
-	}
-	focus = {
-		id = ENG_belgium_security
-		available = {
-			has_war = no
-			GER = {
-				has_completed_focus = GER_anschluss
-			}
-		}
-		mutually_exclusive = {
-			focus = FRA_fortification_focus
-		}		
-		prerequisite = { focus = FRA_aggressive_focus }
-		icon = GFX_goal_generic_attack_allies
-		x = -2
-		y = 1
-		relative_position_id = FRA_aggressive_focus
-		cost = 5
-		ai_will_do = {
-		}	
-		completion_reward = {
-			give_guarantee = BEL
-			BEL = {
-				give_military_access = FRA
-			}
-
-		}
-	}
-	focus = {
-		id = FRA_integrate_bel_industry
-		prerequisite = { focus = ENG_belgium_security }
-		icon = GFX_goal_demand_sudetenland
-		available = {
-			
-		}
-		x = 0
-		y = 1
-		relative_position_id = ENG_belgium_security
-		cost = 5
-		ai_will_do = {
-			factor = 10
-		}	
-		completion_reward = {
-			custom_effect_tooltip = FRA_integrate_bel_industry_tt
-			hidden_effect = {
-				FRA = {
-					BEL_FRA_building = yes
-				}
-			}
-
-		}
-	}
-	focus = {
-		id = FRA_strike_first
-		icon = GFX_focus_attack_germany
-		prerequisite = { focus = FRA_integrate_bel_industry }
-		available = {
-			has_war_with = GER
-		}
-
-		continue_if_invalid = yes
-		available_if_capitulated = yes
-
-		x = 0
-		y = 1
-		relative_position_id = FRA_integrate_bel_industry
-		cost = 1
-		completion_reward = {
-			add_timed_idea = {
-				idea = "Strike First"
-				days = 45
-			}
 		}
 	}
 	
@@ -641,7 +414,7 @@ focus = {
 			focus = FRA_light_medium_armor 
 			focus = FRA_fusiliers_marine
 		}
-		x = -3
+		x = -1
 		y = 1
 		relative_position_id = FRA_light_medium_armor
 		cost = 5
@@ -683,7 +456,7 @@ focus = {
 	focus = {
 		id = FRA_form_the_popular_front
 		icon = GFX_FRA_front_de_la_liberte
-		x = 14
+		x = 9
 		y = 0
 
 
@@ -1140,7 +913,7 @@ focus = {
 	focus = {
 		id = FRA_naval_rearmament
 		icon = GFX_goal_generic_construct_naval_dockyard
-		x = 18
+		x = 13
 		y = 0
 		cost = 5
 		available_if_capitulated = yes
@@ -1197,7 +970,7 @@ focus = {
 	focus = {
 		id = FRA_appeal_to_the_french_nation
 		icon = GFX_FOCUS_FRA_DE_GAULLE
-		x = 30
+		x = 24
 		y = 0
 
 		prerequisite = {}
@@ -1327,7 +1100,6 @@ focus = {
 				transfer_state = 776
 				transfer_state = 781
 				transfer_state = 782
-				transfer_state = 786
 				transfer_state = 515
 				transfer_state = 775
 				transfer_state = 298
@@ -1692,7 +1464,7 @@ focus = {
 	focus = {
 		id = FRA_refus_absurde
 		icon = GFX_goal_generic_demand_territory
-		x = 22
+		x = 17
 		y = 0
 
 		prerequisite = { 

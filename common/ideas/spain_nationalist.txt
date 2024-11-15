@@ -136,25 +136,6 @@ ideas = {
 			}
 		}
 
-		SPA_anti_republican_offensive = {
-
-			picture = SPR_nationalist_remnants
-
-			allowed = {
-				original_tag = SPR
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			targeted_modifier = {
-				tag = SPD
-				attack_bonus_against = 0.15
-				defense_bonus_against = 0.05
-			}
-		}
-
 		SPA_recovering_from_civil_war = {
 
 			name = SPA_recovering_from_civil_war

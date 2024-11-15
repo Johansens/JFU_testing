@@ -266,7 +266,6 @@ country_event = {
 			SPA = {
 				load_focus_tree = {
 					tree = JFU_RSPAIN_focus
-					keep_completed = no
 				}
 				inherit_technology = SPR
 				country_lock_all_division_template = no
