@@ -854,6 +854,7 @@ types = {
 
 		allowed = {
 			has_dlc = "Gotterdammerung"
+			always = no
 		}
 		# Raid Type is visible
 		visible = {
