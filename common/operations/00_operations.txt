@@ -1221,6 +1221,7 @@ operation_boost_resistance = { ### 8 2/40
 			tag = FROM
 			token = token_resistance_contacts
 		}
+		always = no
 	}
 
 	selection_target = {
@@ -1359,7 +1360,8 @@ operation_make_resistance_contacts = { ### 9 2/40
 			any_controlled_state = {
 				has_resistance = yes
 			}
-		}		
+		}	
+		always = no	
 	}
 
 	equipment = {
@@ -1524,6 +1526,7 @@ operation_collaboration_government = { ### 10 2/55
 			target = FROM
 			value > 25
 		}
+		always = no
 	}
 
 	equipment = {
@@ -1642,6 +1645,7 @@ operation_coordinated_strike = { ### 11 2/70
 		NOT = {
 			has_war_with = FROM
 		}
+		always = no
 	}
 
 	equipment = {
@@ -1756,6 +1760,7 @@ operation_steal_tech_civilian = { ### 12 3/35
 			tag = FROM
 			token = token_civilian
 		}
+		always = no
 	}
 
 	equipment = {
@@ -1920,6 +1925,7 @@ operation_targeted_sabotage_industry = { ### 13 3/35
 			tag = FROM
 			token = token_resistance_contacts
 		}
+		always = no
 	}
 
 	requirements = {
@@ -2053,6 +2059,7 @@ operation_targeted_sabotage_infrastructure = { ### 14 3/35
 			tag = FROM
 			token = token_resistance_contacts
 		}
+		always = no
 	}	
 
 	requirements = {
@@ -2185,6 +2192,7 @@ operation_targeted_sabotage_resources = { ### 15 3/35
 			tag = FROM
 			token = token_resistance_contacts
 		}
+		always = no
 	}
 	
 	requirements = {
@@ -2315,6 +2323,7 @@ operation_steal_tech_army = { ### 16 3/55
 			tag = FROM
 			token = token_army
 		}
+		always = no
 	}
 
 	equipment = {
@@ -2580,6 +2589,7 @@ operation_steal_tech_navy = { ### 17 3/55
 			tag = FROM
 			token = token_navy
 		}
+		always = no
 	}
 
 	equipment = {
@@ -2802,6 +2812,7 @@ operation_steal_tech_airforce = { ### 18 3/55
 			tag = FROM
 			token = token_airforce
 		}
+		always = no
 	}
 
 	equipment = {
