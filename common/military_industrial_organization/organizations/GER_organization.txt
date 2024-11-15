@@ -1880,7 +1880,7 @@ GER_focke_wulf_organization = {
 	icon = GFX_idea_focke_wulf
 	
 	allowed = {	
-		original_tag = GER 
+		always = no
 	}
 
 	override_trait = {
@@ -3066,7 +3066,7 @@ GER_carl_walther_organization = {
 	icon = GFX_idea_GER_carl_walther
 	
 	allowed = {	
-		original_tag = GER 
+		always = no
 	}
 
 	add_trait = {
@@ -3123,7 +3123,7 @@ GER_auto_union_organization = {
 	icon = GFX_idea_GER_auto_union
 	
 	allowed = {	
-		original_tag = GER 
+		always = no 
 	}
 
 	add_trait = {
