@@ -716,14 +716,13 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				min_export = 0.15
-				#industrial_capacity_factory = 0.05
-				#industrial_capacity_dockyard = 0.05
-				production_speed_buildings_factor = 0.05
+				min_export = 0.5
+				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.1
+				production_speed_buildings_factor = 0.1
 				research_speed_factor = 0.05
-				lend_lease_tension = 0.20
-				faction_trade_opinion_factor = 0.25
-				#cic_construction_boost = -0.05
+				civilian_intel_to_others = 20.0
+				navy_intel_to_others = 10.0
 			}
 
 			cancel_if_invalid = no
@@ -758,14 +757,13 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				min_export = 0.15
-				industrial_capacity_factory = 0.05
-				industrial_capacity_dockyard = 0.05
+				min_export = 0.5
+				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.1
 				production_speed_buildings_factor = 0.1
 				research_speed_factor = 0.05
-				lend_lease_tension = 0.20
-				faction_trade_opinion_factor = 0.5
-				#cic_construction_boost = -0.05
+				civilian_intel_to_others = 20.0
+				navy_intel_to_others = 10.0
 			}
 
 			cancel_if_invalid = no
