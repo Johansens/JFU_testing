@@ -3464,7 +3464,6 @@ country_event = {
 		add_political_power = 100
 
 		hidden_effect = {
-			news_event = { id = aat_news.120 hours = 12 }
 
 			IF = {
 				limit = {
