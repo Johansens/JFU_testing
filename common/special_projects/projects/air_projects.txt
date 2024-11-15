@@ -803,6 +803,7 @@ sp_air_jet_engine = {
 		FROM = {
 			has_tech = experimental_rockets
 		}
+		date > 1942.06.01
 	}
 	
 	breakthrough_cost = {
