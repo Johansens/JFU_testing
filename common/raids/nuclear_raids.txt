@@ -40,7 +40,7 @@ types = {
 		}
 
 		allowed = {
-			ai = no
+			is_ai = no
 		}
 		# Raid Type is visible
 		visible = {
@@ -272,7 +272,7 @@ types = {
 
 		allowed = {
 			has_dlc = "Gotterdammerung"
-			ai = no
+			is_ai = no
 		}
 		# Raid Type is visible
 		visible = {
@@ -436,7 +436,7 @@ types = {
 
 		allowed = {
 			has_dlc = "Gotterdammerung"
-			ai = no
+			is_ai = no
 		}
 		# Raid Type is visible
 		visible = {
@@ -684,7 +684,7 @@ types = {
 
 		allowed = {
 			has_dlc = "Gotterdammerung"
-			ai = no
+			is_ai = no
 		}
 		# Raid Type is visible
 		visible = {
