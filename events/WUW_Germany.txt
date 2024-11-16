@@ -95,20 +95,20 @@ country_event = { #MEFO Bills have been cancelled
 			show_ideas_tooltip = hjalmar_schacht
 		}
 	}
-	option = { #Stop rearmaming and receive Recovering Economy or Wirtschaftswunder
-		name = germany_mefo_bills.1.b
-		ai_chance = {
-			base = 0
-		}
-		GER_stop_rearmament = yes
+	#option = { #Stop rearmaming and receive Recovering Economy or Wirtschaftswunder
+	#	name = germany_mefo_bills.1.b
+	#	ai_chance = {
+	#		base = 0
+	#	}
+	#	GER_stop_rearmament = yes
 
-		custom_effect_tooltip = generic_skip_one_line_tt
+	#	custom_effect_tooltip = generic_skip_one_line_tt
 
-		effect_tooltip = {
-			retire_character = GER_hjalmar_schacht
-			show_ideas_tooltip = hjalmar_schacht
-		}
-	}
+	#	effect_tooltip = {
+	#		retire_character = GER_hjalmar_schacht
+	#		show_ideas_tooltip = hjalmar_schacht
+	#	}
+	#}
 }
 
 country_event = { #MEFO Bills are getting a bit expensive and players must be warned, but nothing too urgent
@@ -7662,16 +7662,16 @@ country_event = {
 			limit = {
 				has_dlc = "Gotterdammerung"
 			}
-			if = {
-				limit = {
-					has_dlc = "Arms Against Tyranny"
-				}
-				mio:GER_focke_wulf_organization = {
-					add_mio_funds_gain_factor = 0.25
-					add_mio_research_bonus = -0.15 #Represents the MIO focused on Amerikabomber and not in boring regular planes. WWARNING! Any change on this penalty needs to be applied to the bonus coming after project completion (in scripted effect below)
-					add_mio_size = 1
-				}
-			}
+			#if = {
+			#	limit = {
+			#		has_dlc = "Arms Against Tyranny"
+			#	}
+			#	mio:GER_focke_wulf_organization = {
+			#		add_mio_funds_gain_factor = 0.25
+			#		add_mio_research_bonus = -0.15 #Represents the MIO focused on Amerikabomber and not in boring regular planes. WWARNING! Any change on this penalty needs to be applied to the bonus coming after project completion (in scripted effect below)
+			#		add_mio_size = 1
+			#	}
+			#}
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
@@ -7679,14 +7679,14 @@ country_event = {
 
 			effect_tooltip = {
 				GER_amerika_bomber_focke_wulf_completion_SP_effects = yes
-				if = {
-					limit = {
-						has_dlc = "Arms Against Tyranny"
-					}
-					mio:GER_focke_wulf_organization = {
-						GER_amerika_bomber_focke_wulf_completion_MIO_effects = yes
-					}
-				}
+				#if = {
+				#	limit = {
+				#		has_dlc = "Arms Against Tyranny"
+				#	}
+				#	mio:GER_focke_wulf_organization = {
+				#		GER_amerika_bomber_focke_wulf_completion_MIO_effects = yes
+				#	}
+				#}
 			}
 		}
 		else = {
@@ -7701,16 +7701,16 @@ country_event = {
 				}
 			}
 
-			if = {
-				limit = {
-					has_dlc = "Arms Against Tyranny"
-				}
-				mio:GER_focke_wulf_organization = {
-					add_mio_funds_gain_factor = 0.25
-					add_mio_research_bonus = 0.05
-					complete_mio_trait = GER_mio_trait_amerikabomber_learnings
-				}
-			}
+			#if = {
+			#	limit = {
+			#		has_dlc = "Arms Against Tyranny"
+			#	}
+			#	mio:GER_focke_wulf_organization = {
+			#		add_mio_funds_gain_factor = 0.25
+			#		add_mio_research_bonus = 0.05
+			#		complete_mio_trait = GER_mio_trait_amerikabomber_learnings
+			#	}
+			#}
 		}
 
 		set_country_flag = GER_amerikabomber_focke_wulf_flag

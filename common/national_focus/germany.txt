@@ -111,6 +111,10 @@ focus_tree = {
 		cost = 5
 		#relative_position_id = GER_strengthen_the_kriegsmarine
 
+		available = {
+			always = no
+		}
+
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL_CHARACTER }
 
 		completion_reward = {
@@ -2379,19 +2383,19 @@ focus_tree = {
 
 			GER_modify_industrial_modifier = yes
 			add_to_variable = { 
-				GER_industrial_production_factory_max_efficiency_factor = 0.05
+				GER_industrial_production_factory_max_efficiency_factor = 0.025
 				tooltip = production_factory_max_efficiency_factor_tt
 			}
 			add_to_variable = { 
-				GER_industrial_production_factory_efficiency_gain_factor = 0.05
+				GER_industrial_production_factory_efficiency_gain_factor = 0.025
 				tooltip = production_factory_efficiency_gain_factor_tt
 			}
 			add_to_variable = { 
-				GER_industrial_production_factory_start_efficiency_factor = 0.05
+				GER_industrial_production_factory_start_efficiency_factor = 0.025
 				tooltip = production_factory_start_efficiency_factor_tt
 			}
 			add_to_variable = { 
-				GER_industrial_line_change_production_efficiency_factor = 0.05
+				GER_industrial_line_change_production_efficiency_factor = 0.025
 				tooltip = line_change_production_efficiency_factor_tt
 			}
 		}
@@ -2615,19 +2619,19 @@ focus_tree = {
 				tooltip = industrial_capacity_dockyard_tt
 			}
 			add_to_variable = { 
-				GER_industrial_production_factory_max_efficiency_factor = 0.05
+				GER_industrial_production_factory_max_efficiency_factor = 0.025
 				tooltip = production_factory_max_efficiency_factor_tt
 			}
 			add_to_variable = { 
-				GER_industrial_production_factory_efficiency_gain_factor = 0.05
+				GER_industrial_production_factory_efficiency_gain_factor = 0.025
 				tooltip = production_factory_efficiency_gain_factor_tt
 			}
 			add_to_variable = { 
-				GER_industrial_production_factory_start_efficiency_factor = 0.05
+				GER_industrial_production_factory_start_efficiency_factor = 0.025
 				tooltip = production_factory_start_efficiency_factor_tt
 			}
 			add_to_variable = { 
-				GER_industrial_line_change_production_efficiency_factor = 0.05
+				GER_industrial_line_change_production_efficiency_factor = 0.025
 				tooltip = line_change_production_efficiency_factor_tt
 			}
 		}
@@ -3582,39 +3586,6 @@ focus_tree = {
 			}
 
 			custom_effect_tooltip = generic_skip_one_line_tt
-
-			if = {
-				limit = {
-					NOT = { has_dlc = "Arms Against Tyranny" }
-				}
-				if = {
-					limit = {
-						has_idea = GER_auto_union
-					}
-					swap_ideas = {
-						remove_idea = GER_auto_union
-						add_idea = GER_auto_union_improved
-					}
-				}
-				else = {
-					effect_tooltip = {
-						swap_ideas = {
-							remove_idea = GER_auto_union
-							add_idea = GER_auto_union_improved
-						}
-					}
-				}
-			}
-			else = {
-				mio:GER_auto_union_organization = {
-					add_mio_size = 1
-					add_mio_funds_gain_factor = 0.25
-					add_mio_research_bonus = 0.05
-
-					unlock_mio_trait_tooltip = GER_mio_trait_schwerer_panzerspahwagen
-					#unlock_mio_trait_tooltip = 
-				}
-			}
 		}
 	}
 	
@@ -5460,38 +5431,38 @@ focus_tree = {
 				category = radar_tech
 			}
 
-			if = {
-				limit = {
-					NOT = { has_dlc = "Arms Against Tyranny" }
-				}
-				if = {
-					limit = {
-						has_idea = focke_wulf
-					}
-					swap_ideas = {
-						remove_idea = focke_wulf
-						add_idea = GER_focke_wulf_improved
-					}
-				}
-				else = {
-					effect_tooltip = {
-						swap_ideas = {
-							remove_idea = focke_wulf
-							add_idea = GER_focke_wulf_improved
-						}
-					}
-				}
-			}
-			else = {
-				mio:GER_focke_wulf_organization = {
-					add_mio_size = 1
-					add_mio_funds_gain_factor = 0.25
-					add_mio_research_bonus = 0.05
+			#if = {
+			#	limit = {
+			#		NOT = { has_dlc = "Arms Against Tyranny" }
+			#	}
+			#	if = {
+			#		limit = {
+			#			has_idea = focke_wulf
+			#		}
+			#		swap_ideas = {
+			#			remove_idea = focke_wulf
+			#			add_idea = GER_focke_wulf_improved
+			#		}
+			#	}
+			#	else = {
+			#		effect_tooltip = {
+			#			swap_ideas = {
+			#				remove_idea = focke_wulf
+			#				add_idea = GER_focke_wulf_improved
+			#			}
+			#		}
+			#	}
+			#}
+			#else = {
+			#	mio:GER_focke_wulf_organization = {
+			#		add_mio_size = 1
+			#		add_mio_funds_gain_factor = 0.25
+			#		add_mio_research_bonus = 0.05
 
-					#unlock_mio_trait_tooltip = 
-					#unlock_mio_trait_tooltip = 
-				}
-			}
+			#		#unlock_mio_trait_tooltip = 
+			#		#unlock_mio_trait_tooltip = 
+			#	}
+			#}
 		}
 	}
 	
@@ -7847,6 +7818,7 @@ focus_tree = {
 		available_if_capitulated = no
 		
 		available = {
+			date > 1937.06.01
 		}
 
 		cancel = {
