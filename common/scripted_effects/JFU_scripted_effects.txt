@@ -4017,11 +4017,11 @@ BRA_clr_country_leader_role = {
 
 
 JFU_vichy_france = { 
-	28 = { 
-		remove_dynamic_modifier = {
-			modifier = FRA_maginot_defence_modifier
-		} 
-	}
+	#28 = { 
+	#	remove_dynamic_modifier = {
+	#		modifier = FRA_maginot_defence_modifier
+	#	} 
+	#}
 	ENG = { news_event = { id = news.44 } }
 	GER = { country_event = { id = germany.107 } }
 	FRA = {
@@ -4243,6 +4243,7 @@ JFU_vichy_france_2 = {
 		add_equipment_to_stockpile = { type = medium_tank_chassis_2 amount = 500 producer = FRA variant_name = "AFRICA TANKs" }
 		add_equipment_to_stockpile = { type = medium_tank_flame_chassis_1 amount = 200 producer = FRA variant_name = "AFRICA FLAME TANKs" }
 		add_equipment_to_stockpile = { type = light_tank_chassis_1 amount = 300 producer = FRA variant_name = "AFRICA LIGHT TANKs" }
+		set_country_flag = GER_has_capitulated_to_germany
 	}
 	if = { 
 		limit = {
