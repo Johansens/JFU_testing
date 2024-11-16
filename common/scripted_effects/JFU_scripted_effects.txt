@@ -1325,10 +1325,6 @@ dynamic_modifier_start_up = {
 		set_variable = { var = MLL_stability value = -0.5 }
 		set_variable = { var = MLL_warsupport value = -0.5 }
 	}
-	GER = {
-		set_variable = { var = MFB_PP value = 0.1 }
-		set_variable = { var = GER_mefo_month_counter value = 0 }
-	}
 	ENG = {
 		set_variable = { var = fte_LFCS value = 0.05 }
 		set_variable = { var = fte_NFCS value = 0.05 }		

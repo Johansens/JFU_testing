@@ -2232,7 +2232,7 @@ focus_tree = {
 			ENG = { 
 				NOT = { controls_state = 907 }
 			}
-
+			always = no
 		}
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }

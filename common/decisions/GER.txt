@@ -169,6 +169,7 @@ GER_mefo_bills_category = {
 		}
 
 		available = {
+			always = no
 		}
 
 		cost = 0
@@ -2506,12 +2507,14 @@ GER_reichskommissariats = {
 		fire_only_once = yes
 
 		available = {
-			is_subject = no
-			OR = {
-				has_completed_focus = GER_reorganize_the_wehrmacht
+			every_state = {
+				limit = {
+					GER_is_RKG_state = yes
+				}
+				compliance > 60
 			}
 			custom_trigger_tooltip = {
-				tooltip = GER_reichskommissariat_highlighted_required_states
+				tooltip = GER_reichskommissariat_highlighted_required_states_new
 				110 = {
 					is_controlled_by_ROOT_or_subject = yes
 				}
@@ -2581,7 +2584,14 @@ GER_reichskommissariats = {
 		complete_effect = {
 
 			GER_improve_rosenbergs_trait_effect = yes
-
+			hidden_effect = {
+				every_state = {
+					limit = {
+						GER_is_RKG_state = yes
+					}
+					set_state_flag = established_RKG_flag
+				}
+			}
 		}
 	}
 
@@ -2597,12 +2607,15 @@ GER_reichskommissariats = {
 		}
 
 		available = {
-			is_subject = no
-			OR = {
-				has_completed_focus = GER_reorganize_the_wehrmacht
+			every_state = {
+				limit = {
+					GER_is_RKN_state = yes
+				}
+				compliance > 60
 			}
 			custom_trigger_tooltip = {
-				tooltip = GER_reichskommissariat_highlighted_required_states
+				tooltip = GER_reichskommissariat_highlighted_required_states_60_comp
+
 				7 = {
 					is_controlled_by_ROOT_or_subject = yes
 				}
@@ -2645,7 +2658,14 @@ GER_reichskommissariats = {
 		complete_effect = {
 
 			GER_improve_rosenbergs_trait_effect = yes
-			
+			hidden_effect = {
+				every_state = {
+					limit = {
+						GER_is_RKN_state = yes
+					}
+					set_state_flag = established_RKN_flag
+				}
+			}			
 		}
 	}
 
@@ -2661,13 +2681,14 @@ GER_reichskommissariats = {
 		priority = 100
 
 		available = {
-			is_subject = no
-			OR = {
-
-				has_completed_focus = GER_reorganize_the_wehrmacht
+			every_state = {
+				limit = {
+					GER_is_RKB_state = yes
+				}
+				compliance > 60
 			}
 			custom_trigger_tooltip = {
-				tooltip = GER_reichskommissariat_highlighted_required_states
+				tooltip = GER_reichskommissariat_highlighted_required_states_60_comp
 				6 = {
 					is_controlled_by_ROOT_or_subject = yes
 				}
@@ -2717,7 +2738,14 @@ GER_reichskommissariats = {
 		complete_effect = {
 
 			GER_improve_rosenbergs_trait_effect = yes
-			
+			hidden_effect = {
+				every_state = {
+					limit = {
+						GER_is_RKB_state = yes
+					}
+					set_state_flag = established_RKB_flag
+				}
+			}						
 		}
 	}
 
@@ -3220,11 +3248,6 @@ GER_reichskommissariats = {
 		}
 
 		available = {
-			is_subject = no
-			OR = {
-
-				has_completed_focus = GER_reorganize_the_wehrmacht
-			}
 			custom_trigger_tooltip = {
 				tooltip = GER_reichskommissariat_highlighted_required_states
 				219 = {
@@ -3402,8 +3425,7 @@ GER_reichskommissariats = {
 		}
 		complete_effect = {
 
-			GER_improve_rosenbergs_trait_effect = yes
-			
+			GER_improve_rosenbergs_trait_effect = yes		
 		}
 	}
 
@@ -3419,10 +3441,20 @@ GER_reichskommissariats = {
 		}
 
 		available = {
-			is_subject = no
-			has_completed_focus = GER_reassert_eastern_claims
 			custom_trigger_tooltip = {
-				tooltip = GER_reichskommissariat_highlighted_required_states
+				tooltip = GER_reichskommissariat_highlighted_required_states_80_comp
+				10 = {
+					compliance > 80 
+				}
+				90 = {
+					compliance > 80 
+				} 
+				92 = {
+					compliance > 80 
+				}
+				88  = {
+					compliance > 80 
+				}
 				88 = {
 					is_controlled_by_ROOT_or_subject = yes
 				}
@@ -3434,7 +3466,7 @@ GER_reichskommissariats = {
 				}
 				10 = {
 					is_controlled_by_ROOT_or_subject = yes
-				}
+				}			
 			}
 		}
 
@@ -3460,10 +3492,16 @@ GER_reichskommissariats = {
 		complete_effect = {
 
 			GER_improve_rosenbergs_trait_effect = yes
-			
+			hidden_effect = {
+				every_state = {
+					limit = {
+						GER_is_GEN_state = yes
+					}
+					set_state_flag = established_GEN_flag
+				}
+			}
 		}
 	}
-
 
 	GER_reichsprotektorat_bohemia_moravia = {
 
@@ -3477,19 +3515,20 @@ GER_reichskommissariats = {
 		}
 
 		available = {
-			is_subject = no
-			OR = {
-
-				has_completed_focus = GER_reorganize_the_wehrmacht
-			}
 			custom_trigger_tooltip = {
-				tooltip = GER_reichskommissariat_highlighted_required_states
+				tooltip = GER_reichskommissariat_highlighted_required_states_60_comp
+				9 = {
+					compliance > 60 
+				}
+				75 = {
+					compliance > 60 
+				} 
 				9 = {
 					is_controlled_by_ROOT_or_subject = yes
 				}
 				75 = {
 					is_controlled_by_ROOT_or_subject = yes
-				}
+				}		
 			}
 		}
 
@@ -3517,7 +3556,14 @@ GER_reichskommissariats = {
 		complete_effect = {
 
 			GER_improve_rosenbergs_trait_effect = yes
-			
+			hidden_effect = {
+				every_state = {
+					limit = {
+						GER_is_RKH_state = yes
+					}
+					set_state_flag = established_RKH_flag
+				}
+			}
 		}
 	}
 

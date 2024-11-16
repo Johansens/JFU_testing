@@ -166,22 +166,6 @@ on_actions = {
 				}
 				add_ideas = peace_training
 			}
-			if = {
-				limit = {
-					original_tag = GER 
-					NOT = { has_war = yes }
-				}
-				add_to_variable = { var = GER_mefo_month_counter value = 1 } 
-			}
-			if = {
-				limit = { 
-					original_tag = GER 
-					NOT = { has_war = yes }
-					check_variable = { GER_mefo_month_counter = 5 } 
-				}
-				add_to_variable = { var = MFB_PP value = 0.1 }
-				set_variable = { var = GER_mefo_month_counter value = 0 }
-			}
 		}
 	}
 	on_capitulation = {
@@ -262,7 +246,7 @@ on_actions = {
 						}
 					}
 				
-					set_compliance = 80 
+					set_compliance = 70 
 				}
 				GER = { add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 100000 } }
 			}
@@ -591,6 +575,7 @@ on_actions = {
 				}
 				NOR = {
 					complete_national_focus = NOR_ALLIANCE
+					set_country_flag = GER_has_capitulated_to_germany
 				}
 				if = {
 					limit = {
@@ -600,6 +585,7 @@ on_actions = {
 						annex_country = { target = NOR transfer_troops = no }
 					}
 				}
+				
 			}
 			if = { 
 				limit = {
@@ -746,6 +732,51 @@ on_actions = {
 				}
 				Atlantikwall_modifier_effect = yes
 			}
+			if = {
+				limit = {
+					any_state = {
+						has_state_flag = established_GEN_flag
+					} 
+					compliance < 80
+				}
+				GER_worsen_rosenbergs_trait_effect = yes
+			}
+			if = {
+				limit = {
+					any_state = {
+						has_state_flag = established_RKH
+					} 
+					compliance < 60
+				}
+				GER_worsen_rosenbergs_trait_effect = yes
+			}
+			if = {
+				limit = {
+					any_state = {
+						has_state_flag = established_RKN
+					} 
+					compliance < 60
+				}
+				GER_worsen_rosenbergs_trait_effect = yes
+			}
+			if = {
+				limit = {
+					any_state = {
+						has_state_flag = established_RKN
+					} 
+					compliance < 60
+				}
+				GER_worsen_rosenbergs_trait_effect = yes
+			}
+			if = {
+				limit = {
+					any_state = {
+						has_state_flag = established_RKB
+					} 
+					compliance < 60
+				}
+				GER_worsen_rosenbergs_trait_effect = yes
+			}								
 		}
 	}
 	on_state_control_changed = {
