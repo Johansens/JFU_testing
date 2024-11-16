@@ -15,6 +15,7 @@ branch_intelligence = {
 		
 		modifiers_during_progress = {
 			political_power_cost = 0.1
+			ai_license_acceptance = -1001
 		}
 		
 		level = {
@@ -198,7 +199,7 @@ branch_operation = {
 		}
 
 		modifiers_during_progress = {
-			civilian_factory_use = 8
+			political_power_cost = 0.2
 		}
 		
 		level = {
@@ -241,7 +242,7 @@ branch_operation = {
 		}
 		
 		modifiers_during_progress = {
-			civilian_factory_use = 8
+			political_power_cost = 0.2
 		}
 		
 		level = {
@@ -289,7 +290,7 @@ branch_operative = {
 		}
 		
 		modifiers_during_progress = {
-			civilian_factory_use = 10
+			political_power_cost = 0.25
 		}
 		
 		level = {
@@ -381,7 +382,7 @@ branch_operative = {
 		}
 		
 		modifiers_during_progress = {
-			civilian_factory_use = 8
+			political_power_cost = 0.2
 		}
 		
 		level = {
@@ -408,7 +409,7 @@ branch_crypto = {
 		}
 		
 		modifiers_during_progress = {
-			civilian_factory_use = 8
+			political_power_cost = 0.2
 		}
 		
 		level = {
@@ -466,7 +467,7 @@ branch_crypto = {
 		}
 		
 		modifiers_during_progress = {
-			civilian_factory_use = 10 
+			political_power_cost = 0.2
 		}
 		
 		level = {
@@ -534,7 +535,7 @@ branch_crypto = {
 		}
 		
 		modifiers_during_progress = {
-			civilian_factory_use = 15
+			political_power_cost = 0.3
 		}
 		
 		level = {
