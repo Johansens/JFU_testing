@@ -429,21 +429,21 @@ sp_air_intercontinental_bomber = {
 		}
 
 		country_effects = {
-			if = {
-				limit = {
-					original_tag = GER
-					has_country_flag = GER_amerikabomber_focke_wulf_flag
-				}
-				custom_effect_tooltip = GER_amerikabomber_focke_wulf_name
-				#SCRIPTED EFFECT BOOSTING AMERIKABOMBER
-				GER_amerika_bomber_focke_wulf_completion_SP_effects = yes
+			#if = {
+			#	limit = {
+			#		original_tag = GER
+			#		has_country_flag = GER_amerikabomber_focke_wulf_flag
+			#	}
+			#	custom_effect_tooltip = GER_amerikabomber_focke_wulf_name
+			#	#SCRIPTED EFFECT BOOSTING AMERIKABOMBER
+			#	GER_amerika_bomber_focke_wulf_completion_SP_effects = yes
 
-				custom_effect_tooltip = generic_skip_one_line_tt
-				#SCRIPTED EFFECT BOOSTING MIO
-				mio:GER_focke_wulf_organization = {
-					GER_amerika_bomber_focke_wulf_completion_MIO_effects = yes
-				}
-			}
+			#	custom_effect_tooltip = generic_skip_one_line_tt
+			#	#SCRIPTED EFFECT BOOSTING MIO
+			#	mio:GER_focke_wulf_organization = {
+			#		GER_amerika_bomber_focke_wulf_completion_MIO_effects = yes
+			#	}
+			#}
 		}
 	}
 
@@ -803,7 +803,7 @@ sp_air_jet_engine = {
 		FROM = {
 			has_tech = experimental_rockets
 		}
-		date > 1942.06.01
+		date > 1941.06.01
 	}
 	
 	breakthrough_cost = {

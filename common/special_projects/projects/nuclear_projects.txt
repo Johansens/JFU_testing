@@ -10,7 +10,7 @@ sp_nuclear_reactor = {
 	}
 	available = { 
 		FROM = { has_tech = atomic_research }
-		date > 1942.06.01
+		date > 1941.06.01
 	}
 	
 	resource_cost = {
