@@ -95,7 +95,7 @@ political_actions1 = {
 					hidden_effect = { 
 				ROOT_call_against_denmark = yes 
 			}		
-			complete_national_focus = GER_weserubung	
+			complete_national_focus = GER_operation_weserubung	
 		}	
 	}
 	GER_weserbung_operation2 = { 

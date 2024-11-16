@@ -1481,6 +1481,7 @@
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
+			add_ideas = JAP_supremacy_of_the_battlefleet	
 			add_tech_bonus = {
 				name = JAP_supremacy_of_the_battlefleet
 				bonus = 1.0
@@ -1514,7 +1515,7 @@
 		}
 
 		available = {
-
+			is_special_project_completed = sp:sp_naval_super_heavy_battleship
 		}
 
 		bypass = {
@@ -1530,6 +1531,10 @@
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
+			add_breakthrough_progress = {
+				specialization = specialization_naval
+				value = 0.5
+			}
 			if = {
 				limit = {
 					not = { has_dlc = "Man the Guns" }
@@ -1542,14 +1547,6 @@
 				}
 			}
 			else = {
-				if = {
-					limit = {
-						not = { has_tech = ship_hull_super_heavy }
-					}
-					set_technology = {
-						ship_hull_super_heavy = 1
-					}
-				}
 				create_equipment_variant = {
 					name = "Yamato Class"
 					type = ship_hull_super_heavy_1

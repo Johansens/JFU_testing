@@ -47,7 +47,19 @@ if = {
 #	add_dynamic_modifier = { modifier = AFRICA_entrechment_dynamic }	
 #}
 starting_train_buffer = 4
+complete_special_project = {
+	project = sp:sp_air_radar
+	scientist = ENG_robert_watson_watt
+}
 
+add_breakthrough_progress = {
+	specialization = specialization_naval
+	value = 0.6
+}
+add_breakthrough_progress = {
+	specialization = specialization_air
+	value = 0.5
+}
 if = {
 	limit = {
 		has_dlc = "Man the Guns"

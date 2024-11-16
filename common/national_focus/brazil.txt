@@ -1247,24 +1247,6 @@ focus_tree = {
 					name = BRA_fordlandia_name
 				}
 			}
-			IF = {
-				limit = {
-					has_dlc = "Arms Against Tyranny"
-				}
-				custom_effect_tooltip = available_mio_tt
-				show_mio_tooltip = USA_ford_motor_company_organization
-				mio:USA_ford_motor_company_organization = {
-					add_mio_size = 2
-				}
-			}
-			ELSE = {
-				add_tech_bonus = {
-					name = BRA_nacional_de_motores_bonus
-					bonus = 0.75
-					uses = 1
-					category = motorized_equipment
-				}
-			}
 		}
 	}
 
