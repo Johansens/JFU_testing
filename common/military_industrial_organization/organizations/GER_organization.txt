@@ -67,73 +67,6 @@ GER_porsche_organization = {
 	}
 
 	add_trait = {
-		token = GER_mio_trait_hoesch_facilities
-		name = GER_mio_trait_hoesch_facilities
-		icon = GFX_generic_mio_trait_icon_production_capacity
-		special_trait_background = yes
-
-		position = { x=@tank_hoesch_X y=@tank_hoesch_Y }
-
-		visible = {
-			FROM = { original_tag = GER }
-		}
-
-		available = {
-			FROM = {
-				NOT = { has_country_flag = GER_hoesch_facilities_trait_taken_flag }
-			}
-		}
-
-		on_complete = {
-			custom_effect_tooltip = generic_trait_will_not_be_available_in_other_organizations
-			FROM = {
-				set_country_flag = GER_hoesch_facilities_trait_taken_flag
-			}
-		}
-
-		production_bonus = {
-			production_capacity_factor = 0.05
-		}
-
-		ai_will_do = {
-			base = 2
-		}
-	}
-
-	add_trait = {
-		token = GER_mio_trait_involve_porsche_in_special_projects
-		name = GER_mio_trait_involve_porsche_in_special_projects
-		icon = GFX_generic_mio_department_icon_facilities
-		special_trait_background = yes
-
-		position = { x=0 y=1 }
-		relative_position_id = GER_mio_trait_hoesch_facilities
-
-		visible = {
-			FROM = { original_tag = GER }
-		}
-
-		available = {
-			has_mio_size > 4
-		}
-
-		on_complete = {
-			custom_effect_tooltip = {
-				localization_key = available_scientist_one_line_tt
-				CHARACTER = GER_ferdinand_porsche
-			}
-		}
-
-		organization_modifier = {
-			military_industrial_organization_research_bonus = 0.05
-		}
-
-		ai_will_do = {
-			base = 2
-		}
-	}
-
-	add_trait = {
 		token = GER_mio_trait_multi_role_tanks
 		name = GER_mio_trait_multi_role_tanks
 		icon = GFX_generic_mio_department_icon_tank_heavy_tank_aa
@@ -241,73 +174,6 @@ GER_henschel_organization = {
 
 	available = {
 	}
-
-	add_trait = {
-		token = GER_mio_trait_hoesch_facilities
-		name = GER_mio_trait_hoesch_facilities
-		icon = GFX_generic_mio_trait_icon_production_capacity
-		special_trait_background = yes
-
-		position = { x=@tank_hoesch_X y=@tank_hoesch_Y }  
-		
-		visible = {
-			FROM = { original_tag = GER }
-		}
-
-		available = {
-			FROM = {
-				NOT = { has_country_flag = GER_hoesch_facilities_trait_taken_flag }
-			}
-		}
-
-		on_complete = {
-			custom_effect_tooltip = generic_trait_will_not_be_available_in_other_organizations
-			FROM = {
-				set_country_flag = GER_hoesch_facilities_trait_taken_flag
-			}
-		}
-
-		production_bonus = {
-			production_capacity_factor = 0.05
-		}
-
-		ai_will_do = {
-			base = 2
-		}
-	}
-
-	add_trait = {
-		token = GER_mio_trait_involve_henschel_in_special_projects
-		name = GER_mio_trait_involve_henschel_in_special_projects
-		icon = GFX_generic_mio_department_icon_facilities
-		special_trait_background = yes
-
-		position = { x=0 y=1 }
-		relative_position_id = GER_mio_trait_hoesch_facilities
-
-		visible = {
-			FROM = { original_tag = GER }
-		}
-
-		available = {
-			has_mio_size > 4
-		}
-
-		on_complete = {
-			custom_effect_tooltip = {
-				localization_key = available_scientist_one_line_tt
-				CHARACTER = GER_erwin_aders
-			}
-		}
-
-		organization_modifier = {
-			military_industrial_organization_research_bonus = 0.05
-		}
-
-		ai_will_do = {
-			base = 2
-		}
-	}
 }
 
 GER_man_organization = {
@@ -340,40 +206,6 @@ GER_man_organization = {
 		token = generic_mio_trait_armor_steel_working
 
 		position = { x=3 y=0 }
-	}
-
-	add_trait = {
-		token = GER_mio_trait_hoesch_facilities
-		name = GER_mio_trait_hoesch_facilities
-		icon = GFX_generic_mio_trait_icon_production_capacity
-		special_trait_background = yes
-
-		position = { x=@tank_hoesch_X y=@tank_hoesch_Y }  
-		
-		visible = {
-			FROM = { original_tag = GER }
-		}
-
-		available = {
-			FROM = {
-				NOT = { has_country_flag = GER_hoesch_facilities_trait_taken_flag }
-			}
-		}
-
-		on_complete = {
-			custom_effect_tooltip = generic_trait_will_not_be_available_in_other_organizations
-			FROM = {
-				set_country_flag = GER_hoesch_facilities_trait_taken_flag
-			}
-		}
-
-		production_bonus = {
-			production_capacity_factor = 0.05
-		}
-
-		ai_will_do = {
-			base = 2
-		}
 	}
 
 	add_trait = {
@@ -488,39 +320,6 @@ GER_alkett_organization = {
 	#	position = { x = 0 y = 2 }	
 	#}
 	
-	add_trait = {
-		token = GER_mio_trait_hoesch_facilities
-		name = GER_mio_trait_hoesch_facilities
-		icon = GFX_generic_mio_trait_icon_production_capacity
-		special_trait_background = yes
-		
-		position = { x=@tank_hoesch_X y=@tank_hoesch_Y }  
-
-		visible = {
-			FROM = { original_tag = GER }
-		}
-
-		available = {
-			FROM = {
-				NOT = { has_country_flag = GER_hoesch_facilities_trait_taken_flag }
-			}
-		}
-
-		on_complete = {
-			custom_effect_tooltip = generic_trait_will_not_be_available_in_other_organizations
-			FROM = {
-				set_country_flag = GER_hoesch_facilities_trait_taken_flag
-			}
-		}
-
-		production_bonus = {
-			production_capacity_factor = 0.05
-		}
-
-		ai_will_do = {
-			base = 2
-		}
-	}
 
 	add_trait = {
 		token = GER_mio_trait_panzerjager
@@ -718,40 +517,6 @@ GER_daimler_benz_organization = {
 				factor = 1.5
 				date > 1937.1.1
 			}
-		}
-	}
-
-	add_trait = {
-		token = GER_mio_trait_hoesch_facilities
-		name = GER_mio_trait_hoesch_facilities
-		icon = GFX_generic_mio_trait_icon_production_capacity
-		special_trait_background = yes
-
-		position = { x=@tank_hoesch_X y=@tank_hoesch_Y }  
-		
-		visible = {
-			FROM = { original_tag = GER }
-		}
-
-		available = {
-			FROM = {
-				NOT = { has_country_flag = GER_hoesch_facilities_trait_taken_flag }
-			}
-		}
-
-		on_complete = {
-			custom_effect_tooltip = generic_trait_will_not_be_available_in_other_organizations
-			FROM = {
-				set_country_flag = GER_hoesch_facilities_trait_taken_flag
-			}
-		}
-
-		production_bonus = {
-			production_capacity_factor = 0.05
-		}
-
-		ai_will_do = {
-			base = 2
 		}
 	}
 
@@ -1604,43 +1369,6 @@ GER_messerschmitt_organization = {
 	}
 
 	add_trait = {
-		token = GER_mio_trait_hamburger_flugzeugbau
-		name = GER_mio_trait_hamburger_flugzeugbau
-		icon = GFX_generic_mio_trait_icon_production_capacity
-		special_trait_background = yes
-
-		position = { x=@aircraft_hamburger_X y=@aircraft_hamburger_Y }  
-		
-		visible = {
-			FROM = { original_tag = GER }
-		}
-
-		available = {
-			FROM = {
-				mio:GER_blohm_und_voss_organization = {
-					has_mio_size > 4
-				}
-				NOT = { has_country_flag = GER_hamburger_flugzeugbau_trait_taken_flag }
-			}
-		}
-
-		on_complete = {
-			custom_effect_tooltip = generic_trait_will_not_be_available_in_other_organizations
-			FROM = {
-				set_country_flag = GER_hamburger_flugzeugbau_trait_taken_flag
-			}
-		}
-
-		production_bonus = {
-			production_capacity_factor = 0.05
-		}
-
-		ai_will_do = {
-			base = 2
-		}
-	}
-
-	add_trait = {
 		token = GER_mio_trait_aerodynamic_research_insitute
 		name = GER_mio_trait_aerodynamic_research_insitute
 		icon = GFX_generic_mio_department_icon_facilities
@@ -1772,43 +1500,6 @@ GER_junkers_organization = {
 	}
 
 	add_trait = {
-		token = GER_mio_trait_hamburger_flugzeugbau
-		name = GER_mio_trait_hamburger_flugzeugbau
-		icon = GFX_generic_mio_trait_icon_production_capacity
-		special_trait_background = yes
-
-		position = { x=@aircraft_hamburger_X y=@aircraft_hamburger_Y }  
-		
-		visible = {
-			FROM = { original_tag = GER }
-		}
-
-		available = {
-			FROM = {
-				mio:GER_blohm_und_voss_organization = {
-					has_mio_size > 4
-				}
-				NOT = { has_country_flag = GER_hamburger_flugzeugbau_trait_taken_flag }
-			}
-		}
-
-		on_complete = {
-			custom_effect_tooltip = generic_trait_will_not_be_available_in_other_organizations
-			FROM = {
-				set_country_flag = GER_hamburger_flugzeugbau_trait_taken_flag
-			}
-		}
-
-		production_bonus = {
-			production_capacity_factor = 0.05
-		}
-
-		ai_will_do = {
-			base = 2
-		}
-	}
-
-	add_trait = {
 		token = GER_mio_trait_aerodynamic_research_insitute
 		name = GER_mio_trait_aerodynamic_research_insitute
 		icon = GFX_generic_mio_department_icon_facilities
@@ -1897,7 +1588,6 @@ GER_focke_wulf_organization = {
 		special_trait_background = yes
 		
 		position = { x=0 y=1 }
-		relative_position_id = GER_mio_trait_hamburger_flugzeugbau
 
 		limit_to_equipment_type = { mio_cat_eq_all_small_plane mio_cat_eq_all_medium_plane }
 
@@ -2000,43 +1690,6 @@ GER_focke_wulf_organization = {
 			air_defence = 0.05
 		} 
 	} 
-
-	add_trait = {
-		token = GER_mio_trait_hamburger_flugzeugbau
-		name = GER_mio_trait_hamburger_flugzeugbau
-		icon = GFX_generic_mio_trait_icon_production_capacity
-		special_trait_background = yes
-
-		position = { x=@aircraft_hamburger_X y=@aircraft_hamburger_Y }  
-		
-		visible = {
-			FROM = { original_tag = GER }
-		}
-
-		available = {
-			FROM = {
-				mio:GER_blohm_und_voss_organization = {
-					has_mio_size > 4
-				}
-				NOT = { has_country_flag = GER_hamburger_flugzeugbau_trait_taken_flag }
-			}
-		}
-
-		on_complete = {
-			custom_effect_tooltip = generic_trait_will_not_be_available_in_other_organizations
-			FROM = {
-				set_country_flag = GER_hamburger_flugzeugbau_trait_taken_flag
-			}
-		}
-
-		production_bonus = {
-			production_capacity_factor = 0.05
-		}
-
-		ai_will_do = {
-			base = 2
-		}
-	}
 
 	add_trait = {
 		token = GER_mio_trait_amerikabomber_learnings
@@ -2153,43 +1806,6 @@ GER_heinkel_organization = {
 	} 
 
 	add_trait = {
-		token = GER_mio_trait_hamburger_flugzeugbau
-		name = GER_mio_trait_hamburger_flugzeugbau
-		icon = GFX_generic_mio_trait_icon_production_capacity
-		special_trait_background = yes
-
-		position = { x=@aircraft_hamburger_X y=@aircraft_hamburger_Y }  
-
-		visible = {
-			FROM = { original_tag = GER }
-		}
-
-		available = {
-			FROM = {
-				mio:GER_blohm_und_voss_organization = {
-					has_mio_size > 4
-				}
-				NOT = { has_country_flag = GER_hamburger_flugzeugbau_trait_taken_flag }
-			}
-		}
-
-		on_complete = {
-			custom_effect_tooltip = generic_trait_will_not_be_available_in_other_organizations
-			FROM = {
-				set_country_flag = GER_hamburger_flugzeugbau_trait_taken_flag
-			}
-		}
-
-		production_bonus = {
-			production_capacity_factor = 0.05
-		}
-
-		ai_will_do = {
-			base = 2
-		}
-	}
-
-	add_trait = {
 		token = GER_mio_trait_aerodynamic_research_insitute
 		name = GER_mio_trait_aerodynamic_research_insitute
 		icon = GFX_generic_mio_department_icon_facilities
@@ -2300,43 +1916,6 @@ GER_dornier_organization = {
 	} 
 
 	add_trait = {
-		token = GER_mio_trait_hamburger_flugzeugbau
-		name = GER_mio_trait_hamburger_flugzeugbau
-		icon = GFX_generic_mio_trait_icon_production_capacity
-		special_trait_background = yes
-
-		position = { x=@aircraft_hamburger_X y=@aircraft_hamburger_Y }  
-		
-		visible = {
-			FROM = { original_tag = GER }
-		}
-
-		available = {
-			FROM = {
-				mio:GER_blohm_und_voss_organization = {
-					has_mio_size > 4
-				}
-				NOT = { has_country_flag = GER_hamburger_flugzeugbau_trait_taken_flag }
-			}
-		}
-
-		on_complete = {
-			custom_effect_tooltip = generic_trait_will_not_be_available_in_other_organizations
-			FROM = {
-				set_country_flag = GER_hamburger_flugzeugbau_trait_taken_flag
-			}
-		}
-
-		production_bonus = {
-			production_capacity_factor = 0.05
-		}
-
-		ai_will_do = {
-			base = 2
-		}
-	}
-
-	add_trait = {
 		token = GER_mio_trait_aerodynamic_research_insitute
 		name = GER_mio_trait_aerodynamic_research_insitute
 		icon = GFX_generic_mio_department_icon_facilities
@@ -2388,8 +1967,7 @@ GER_arado_flugzeugwerke_organization = {
 		icon = GFX_generic_mio_department_icon_plane_medium_engine
 		special_trait_background = yes
 		
-		position = { x=0 y=1 }
-		relative_position_id = GER_mio_trait_hamburger_flugzeugbau
+		position = { x=8 y=1 }
 
 		available = {
 			FROM = {
@@ -2405,51 +1983,13 @@ GER_arado_flugzeugwerke_organization = {
 	} 
 
 	add_trait = {
-		token = GER_mio_trait_hamburger_flugzeugbau
-		name = GER_mio_trait_hamburger_flugzeugbau
-		icon = GFX_generic_mio_trait_icon_production_capacity
-		special_trait_background = yes
-		
-		position = { x=@aircraft_hamburger_X y=@aircraft_hamburger_Y }  
-
-		visible = {
-			FROM = { original_tag = GER }
-		}
-
-		available = {
-			FROM = {
-				mio:GER_blohm_und_voss_organization = {
-					has_mio_size > 4
-				}
-				NOT = { has_country_flag = GER_hamburger_flugzeugbau_trait_taken_flag }
-			}
-		}
-
-		on_complete = {
-			custom_effect_tooltip = generic_trait_will_not_be_available_in_other_organizations
-			FROM = {
-				set_country_flag = GER_hamburger_flugzeugbau_trait_taken_flag
-			}
-		}
-
-		production_bonus = {
-			production_capacity_factor = 0.05
-		}
-
-		ai_will_do = {
-			base = 2
-		}
-	}
-
-	add_trait = {
 		token = GER_mio_trait_aerodynamic_research_insitute
 		name = GER_mio_trait_aerodynamic_research_insitute
 		icon = GFX_generic_mio_department_icon_facilities
 		special_trait_background = yes
 
-		relative_position_id = GER_mio_trait_hamburger_flugzeugbau
 
-		position = { x = -1 y = 0 }  
+		position = { x = 8 y = 0 }  
 		
 		visible = {
 			FROM = { original_tag = GER }
@@ -2488,51 +2028,13 @@ GER_fieseler_organization = {
 	}
 
 	add_trait = {
-		token = GER_mio_trait_hamburger_flugzeugbau
-		name = GER_mio_trait_hamburger_flugzeugbau
-		icon = GFX_generic_mio_trait_icon_production_capacity
-		special_trait_background = yes
-
-		position = { x=@aircraft_hamburger_X y=@aircraft_hamburger_Y }  
-		
-		visible = {
-			FROM = { original_tag = GER }
-		}
-
-		available = {
-			FROM = {
-				mio:GER_blohm_und_voss_organization = {
-					has_mio_size > 4
-				}
-				NOT = { has_country_flag = GER_hamburger_flugzeugbau_trait_taken_flag }
-			}
-		}
-
-		on_complete = {
-			custom_effect_tooltip = generic_trait_will_not_be_available_in_other_organizations
-			FROM = {
-				set_country_flag = GER_hamburger_flugzeugbau_trait_taken_flag
-			}
-		}
-
-		production_bonus = {
-			production_capacity_factor = 0.05
-		}
-
-		ai_will_do = {
-			base = 2
-		}
-	}
-
-	add_trait = {
 		token = GER_mio_trait_aerodynamic_research_insitute
 		name = GER_mio_trait_aerodynamic_research_insitute
 		icon = GFX_generic_mio_department_icon_facilities
 		special_trait_background = yes
 
-		relative_position_id = GER_mio_trait_hamburger_flugzeugbau
 
-		position = { x = 0 y = 1 }  
+		position = { x = 7 y = 0 }  
 		
 		visible = {
 			FROM = { original_tag = GER }
@@ -2573,51 +2075,13 @@ GER_focke_achgelis_organization = {
 	}
 
 	add_trait = {
-		token = GER_mio_trait_hamburger_flugzeugbau
-		name = GER_mio_trait_hamburger_flugzeugbau
-		icon = GFX_generic_mio_trait_icon_production_capacity
-		special_trait_background = yes
-
-		position = { x=@aircraft_hamburger_X y=@aircraft_hamburger_Y }  
-		
-		visible = {
-			FROM = { original_tag = GER }
-		}
-
-		available = {
-			FROM = {
-				mio:GER_blohm_und_voss_organization = {
-					has_mio_size > 4
-				}
-				NOT = { has_country_flag = GER_hamburger_flugzeugbau_trait_taken_flag }
-			}
-		}
-
-		on_complete = {
-			custom_effect_tooltip = generic_trait_will_not_be_available_in_other_organizations
-			FROM = {
-				set_country_flag = GER_hamburger_flugzeugbau_trait_taken_flag
-			}
-		}
-
-		production_bonus = {
-			production_capacity_factor = 0.05
-		}
-
-		ai_will_do = {
-			base = 2
-		}
-	}
-
-	add_trait = {
 		token = GER_mio_trait_aerodynamic_research_insitute
 		name = GER_mio_trait_aerodynamic_research_insitute
 		icon = GFX_generic_mio_department_icon_facilities
 		special_trait_background = yes
 
-		relative_position_id = GER_mio_trait_hamburger_flugzeugbau
 
-		position = { x = 0 y = 1 }  
+		position = { x = 7 y = 1 }  
 		
 		visible = {
 			FROM = { original_tag = GER }
@@ -2930,7 +2394,7 @@ GER_mauser_organization = {
 		}
 
 		equipment_bonus = {
-			soft_attack = 0.07
+			soft_attack = 0.03
 			breakthrough = 0.03
 		}
 
@@ -2975,84 +2439,6 @@ GER_opel_organization = {
 
 		equipment_bonus = {
 			reliability = 0.05
-			build_cost_ic = -0.02
-		}
-
-		ai_will_do = {
-			base = 2
-		}
-	}
-
-	add_trait = {
-		token = GER_mio_trait_ford_facilities
-		name = GER_mio_trait_ford_facilities
-		icon = GFX_generic_mio_trait_icon_production_capacity
-		special_trait_background = yes
-
-		position = { x=9 y=1 }  
-
-		visible = {
-			FROM = { original_tag = GER }
-		}
-
-		available = {
-			FROM = {
-				has_completed_focus = GER_nationalize_ford_factories
-			}
-		}
-
-		production_bonus = {
-			production_capacity_factor = 0.05
-		}
-
-		ai_will_do = {
-			base = 2
-		}
-	}
-
-	add_trait = {
-		token = GER_mio_trait_efficiency_in_mass_production
-		name = GER_mio_trait_efficiency_in_mass_production
-		icon = GFX_generic_mio_trait_icon_efficiency_cap
-		special_trait_background = yes
-
-		position = { x=0 y=1 }
-		relative_position_id = GER_mio_trait_ford_facilities
-
-		any_parent = { GER_mio_trait_ford_facilities }
-
-		visible = {
-			FROM = { original_tag = GER }
-		}
-
-		production_bonus = {
-			production_efficiency_cap_factor = 0.05
-		}
-
-		ai_will_do = {
-			base = 2
-		}
-	}
-
-	add_trait = {
-		token = GER_mio_trait_improved_engines
-		name = GER_mio_trait_improved_engines
-		icon = GFX_generic_mio_department_icon_motorized_mechanized_engine
-		special_trait_background = yes
-
-		position = { x=-1 y=1 }
-		relative_position_id = GER_mio_trait_ford_facilities
-
-		any_parent = { GER_mio_trait_ford_facilities }
-
-		visible = {
-			FROM = { original_tag = GER }
-		}
-
-		equipment_bonus = {
-			maximum_speed = 0.05
-			reliability = 0.03
-			build_cost_ic = 0.02
 		}
 
 		ai_will_do = {
