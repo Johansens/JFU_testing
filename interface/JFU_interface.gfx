@@ -4,32 +4,4 @@ spriteTypes = {
 		name = "GFX_Juggle1_medium"
 		texturefile = "gfx/interface/technologies/juggle.dds"
 	}
-	SpriteType = {
-		name = "GFX_Juggle2_medium"
-		texturefile = "gfx/interface/technologies/juggle.dds"
-	}
-	SpriteType = {
-		name = "GFX_Juggle3_medium"
-		texturefile = "gfx/interface/technologies/juggle.dds"
-	}
-	SpriteType = {
-		name = "GFX_Juggle4_medium"
-		texturefile = "gfx/interface/technologies/juggle.dds"
-	}
-	SpriteType = {
-		name = "GFX_Juggle5_medium"
-		texturefile = "gfx/interface/technologies/juggle.dds"
-	}
-	SpriteType = {
-		name = "GFX_Juggle6_medium"
-		texturefile = "gfx/interface/technologies/juggle.dds"
-	}
-	SpriteType = {
-		name = "GFX_Juggle7_medium"
-		texturefile = "gfx/interface/technologies/juggle.dds"
-	}
-	SpriteType = {
-		name = "GFX_Juggle8_medium"
-		texturefile = "gfx/interface/technologies/juggle.dds"
-	}
 }
