@@ -1100,10 +1100,10 @@ focus = {
 				transfer_state = 776
 				transfer_state = 781
 				transfer_state = 782
-				transfer_state = 515
+				#transfer_state = 515
 				transfer_state = 775
 				transfer_state = 298
-				transfer_state = 514
+				#transfer_state = 514
 				transfer_state = 899
 				transfer_state = 898				
 			}

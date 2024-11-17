@@ -4189,10 +4189,10 @@ JFU_vichy_france_2 = {
 				transfer_state = 776
 				transfer_state = 781
 				transfer_state = 782
-				transfer_state = 515
+				#transfer_state = 515
 				transfer_state = 775
 				transfer_state = 298
-				transfer_state = 514
+				#transfer_state = 514
 				transfer_state = 899
 				transfer_state = 898
 				add_state_core = 557
@@ -4205,10 +4205,10 @@ JFU_vichy_france_2 = {
 				add_state_core = 776
 				add_state_core = 781
 				add_state_core = 782
-				add_state_core = 515
+				#add_state_core = 515
 				add_state_core = 775
 				add_state_core = 298
-				add_state_core = 514
+				#add_state_core = 514
 				add_state_core = 899
 				add_state_core = 898
 			}
@@ -4254,14 +4254,6 @@ JFU_vichy_france_2 = {
 	}
 	FRA = {
 		transfer_state = 713
-	}
-	if = {
-		limit = {
-			FRA = {
-				is_ai = yes 
-			}
-		}
-		ENG = { annex_country = { target = FRA transfer_troops = no } }
 	}
 }
 
