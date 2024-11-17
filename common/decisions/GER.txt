@@ -2297,6 +2297,83 @@ GER_fortify_the_vaterland_cat = {
 			}
 		}
 	}
+	GER_construct_the_atlantik_wall = {
+		icon = GFX_decision_generic_mountain_fortification
+
+		visible = {
+		}
+
+		available = {
+			EFR = { has_country_flag = vichy_france_established }
+		}
+
+		days_remove = 90
+
+		fire_only_once = yes
+
+		ai_hint_pp_cost = 15
+		custom_cost_trigger = {
+			command_power > GER_fort_construction_cp_cost
+			has_political_power > GER_fort_construction_pp_cost
+		}
+		custom_cost_text = decision_cost_CP_25_pp_15
+
+		modifier = {
+			civilian_factory_use = 10
+		}
+
+		cancel_trigger = {
+		}
+
+		cancel_effect = {
+			clr_country_flag = GER_constructing_forts_flag
+		}
+
+		complete_effect = {
+			set_country_flag = GER_constructing_forts_flag
+
+			hidden_effect = {
+				add_command_power = GER_fort_construction_cp_payment
+				add_political_power = GER_fort_construction_pp_payment
+			}
+		}
+		remove_effect = {
+			add_ideas = GER_atlantikwall_idea
+			every_state = { 
+				limit = { 
+					atlantikwall_states = yes
+				}
+				set_building_level = {
+					type = coastal_bunker
+					level = 5
+					province = {
+						all_provinces = yes
+						limit_to_coastal = yes
+						level < 7
+					}
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						any_country = { axis = yes controls_state = 456 }
+					}
+					every_state = {
+						limit = {
+							atlantikwall_states = yes
+							is_controlled_by = GER
+							NOT = { is_core_of = NOR }
+						}
+						add_dynamic_modifier = {
+							modifier = Atlantikwall_modifier
+						}
+					}			
+				}
+			}
+
+			custom_effect_tooltip = atlantikwall_modifier_tt
+		}
+	}
 }
 
 GER_hilfskreuzer_cat = {
@@ -2507,14 +2584,8 @@ GER_reichskommissariats = {
 		fire_only_once = yes
 
 		available = {
-			every_state = {
-				limit = {
-					GER_is_RKG_state = yes
-				}
-				compliance > 60
-			}
 			custom_trigger_tooltip = {
-				tooltip = GER_reichskommissariat_highlighted_required_states_new
+				tooltip = GER_reichskommissariat_highlighted_required_states_60_comp
 				110 = {
 					is_controlled_by_ROOT_or_subject = yes
 				}
@@ -2544,6 +2615,36 @@ GER_reichskommissariats = {
 				}
 				925 = {
 					is_controlled_by_ROOT_or_subject = yes
+				}
+				110 = {
+					compliance > 60
+				}
+				142 = {
+					compliance > 60
+				}
+				143 = {
+					compliance > 60
+				}
+				144 = {
+					compliance > 60
+				}
+				920 = {
+					compliance > 60
+				}
+				921 = {
+					compliance > 60
+				}
+				922 = {
+					compliance > 60
+				}
+				923 = {
+					compliance > 60
+				}
+				924 = {
+					compliance > 60
+				}
+				925 = {
+					compliance > 60
 				}
 			}
 		}
@@ -2607,15 +2708,17 @@ GER_reichskommissariats = {
 		}
 
 		available = {
-			every_state = {
-				limit = {
-					GER_is_RKN_state = yes
-				}
-				compliance > 60
-			}
 			custom_trigger_tooltip = {
 				tooltip = GER_reichskommissariat_highlighted_required_states_60_comp
-
+				7 = {
+					compliance > 60
+				}
+				35 = {
+					compliance > 60
+				}
+				36 = {
+					compliance > 60
+				}
 				7 = {
 					is_controlled_by_ROOT_or_subject = yes
 				}
@@ -2681,14 +2784,23 @@ GER_reichskommissariats = {
 		priority = 100
 
 		available = {
-			every_state = {
-				limit = {
-					GER_is_RKB_state = yes
-				}
-				compliance > 60
-			}
 			custom_trigger_tooltip = {
 				tooltip = GER_reichskommissariat_highlighted_required_states_60_comp
+				6 = {
+					compliance > 60
+				}
+				29 = {
+					compliance > 60
+				}
+				34 = {
+					compliance > 60
+				}
+				977 = {
+					compliance > 60
+				}
+				980 = {
+					compliance > 60
+				}
 				6 = {
 					is_controlled_by_ROOT_or_subject = yes
 				}
@@ -2758,14 +2870,10 @@ GER_reichskommissariats = {
 		priority = 97
 
 		visible = {
+			always = no
 		}
 
 		available = {
-			is_subject = no
-			OR = {
-
-				has_completed_focus = GER_reorganize_the_wehrmacht
-			}
 			custom_trigger_tooltip = {
 				tooltip = GER_reichskommissariat_highlighted_required_states
 				94 = {
@@ -2898,6 +3006,7 @@ GER_reichskommissariats = {
 		fire_only_once = yes
 
 		visible = {
+			always = no
 		}
 
 		available = {
@@ -3011,6 +3120,7 @@ GER_reichskommissariats = {
 		fire_only_once = yes
 
 		visible = {
+			always = no
 		}
 
 		available = {
@@ -3110,6 +3220,7 @@ GER_reichskommissariats = {
 		fire_only_once = yes
 
 		visible = {
+			always = no
 		}
 
 		available = {
@@ -3245,6 +3356,7 @@ GER_reichskommissariats = {
 		fire_only_once = yes
 
 		visible = {
+			always = no
 		}
 
 		available = {
