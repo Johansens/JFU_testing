@@ -723,6 +723,7 @@ JFU_comp_startup_effect = {
 	}		
 	HOL = {
 		add_ideas = ai_limiter
+		add_ideas = lower_surrender_cap_idea
 	}	
 }
 JFU_scripted_events_effect = {
@@ -1359,6 +1360,9 @@ dynamic_modifier_start_up = {
 		set_variable = { var = SPReco_DO value = -0.1 }
 		set_variable = { var = SPReco_mfcs value = 0 }
 		set_variable = { var = SPR_eco_ics value = 0 }
+	}
+	28 = {
+		add_dynamic_modifier = { modifier = FRA_maginot_defence_modifier } 
 	}
 }
 SPR_airports_effect = {
@@ -4013,11 +4017,11 @@ BRA_clr_country_leader_role = {
 
 
 JFU_vichy_france = { 
-	#28 = { 
-	#	remove_dynamic_modifier = {
-	#		modifier = FRA_maginot_defence_modifier
-	#	} 
-	#}
+	28 = { 
+		remove_dynamic_modifier = {
+			modifier = FRA_maginot_defence_modifier
+		} 
+	}
 	ENG = { news_event = { id = news.44 } }
 	GER = { country_event = { id = germany.107 } }
 	FRA = {
@@ -4062,6 +4066,7 @@ JFU_vichy_france = {
 			add_compliance = 80
 		}
 		complete_national_focus = GER_fall_of_france
+		GER_set_consumer_goods_war_reparations = yes
 	}
 	JFU_vichy_france_2 = yes
 	ENG = {

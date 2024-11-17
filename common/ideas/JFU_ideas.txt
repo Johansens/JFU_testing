@@ -70,6 +70,23 @@ ideas = {
 				special_forces_min = 8000
 			}
 		}
+		lower_surrender_cap_idea = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+
+			removal_cost = -1
+
+			picture = generic_acquire_tanks
+
+			modifier = { 
+				surrender_limit = -0.3
+			}				
+		}
 	}
 
 

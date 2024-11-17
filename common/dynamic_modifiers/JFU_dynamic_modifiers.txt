@@ -211,6 +211,6 @@ FRA_maginot_defence_modifier = {
 	icon = GFX_idea_generic_fascism_drift_bonus
 	army_core_defence_factor = 1
 	supply_combat_penalties_on_core_factor = -0.50
-	cas_damage_reduction = 0.25
+	cas_damage_reduction = 0.75
 	
 }

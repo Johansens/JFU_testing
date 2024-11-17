@@ -728,54 +728,70 @@ on_actions = {
 		effect = {
 			if = {
 				limit = {
-					has_completed_focus = GER_atlantikwall
+					has_idea = GER_atlantikwall_idea
 				}
 				Atlantikwall_modifier_effect = yes
 			}
 			if = {
 				limit = {
-					any_state = {
+					any_controlled_state = {
 						has_state_flag = established_GEN_flag
+						compliance < 80
 					} 
-					compliance < 80
 				}
 				GER_worsen_rosenbergs_trait_effect = yes
+				every_state = {
+					clr_state_flag = established_GEN_flag
+				}
 			}
 			if = {
 				limit = {
-					any_state = {
-						has_state_flag = established_RKH
+					any_controlled_state = {
+						has_state_flag = established_RKH_flag
+						compliance < 60
 					} 
-					compliance < 60
 				}
 				GER_worsen_rosenbergs_trait_effect = yes
+				every_state = {
+					clr_state_flag = established_RKH_flag
+				}
 			}
 			if = {
 				limit = {
-					any_state = {
-						has_state_flag = established_RKN
+					any_controlled_state = {
+						has_state_flag = established_RKN_flag
+						compliance < 60
 					} 
-					compliance < 60
+				}
+				GER_worsen_rosenbergs_trait_effect = yes 
+				every_state = {
+					clr_state_flag = established_RKN_flag
+				}
+			}
+
+			if = {
+				limit = {
+					any_controlled_state = {
+						has_state_flag = established_RKG_flag
+						compliance < 60
+					} 
 				}
 				GER_worsen_rosenbergs_trait_effect = yes
+				every_state = {
+					clr_state_flag = established_RKG_flag
+				}
 			}
 			if = {
 				limit = {
-					any_state = {
-						has_state_flag = established_RKN
+					any_controlled_state = {
+						has_state_flag = established_RKB_flag
+						compliance < 60
 					} 
-					compliance < 60
 				}
 				GER_worsen_rosenbergs_trait_effect = yes
-			}
-			if = {
-				limit = {
-					any_state = {
-						has_state_flag = established_RKB
-					} 
-					compliance < 60
+				every_state = {
+					clr_state_flag = established_RKB_flag
 				}
-				GER_worsen_rosenbergs_trait_effect = yes
 			}								
 		}
 	}
