@@ -87,9 +87,6 @@ technologies = {
 		mot_artillery_brigade = {
 			soft_attack = 0.1
 		}
-		category_self_propelled_artillery = {
-			soft_attack = 0.15
-		}
 
 		enable_equipment_modules = {
 			tank_small_cannon_2
@@ -224,9 +221,6 @@ technologies = {
 		mot_artillery_brigade = {
 			soft_attack = 0.1
 		}
-		category_self_propelled_artillery = {
-			soft_attack = 0.1
-		}
 
 		path = {
 			leads_to_tech = artillery3
@@ -284,9 +278,6 @@ technologies = {
 		}
 		mot_artillery_brigade = {
 			soft_attack = 0.1
-		}
-		category_self_propelled_artillery = {
-			soft_attack = 0.05
 		}
 
 		enable_equipment_modules = {
@@ -388,9 +379,6 @@ technologies = {
 		}
 		mot_artillery_brigade = {
 			soft_attack = 0.1
-		}
-		category_self_propelled_artillery = {
-			soft_attack = 0.05
 		}
 
 		enable_equipment_modules = {
@@ -1068,7 +1056,6 @@ technologies = {
 	antitank1 = {
 
 		category_tank_destroyers = {
-			hard_attack = 0.15
 			ap_attack = 0.2
 		}
 
@@ -1241,7 +1228,6 @@ technologies = {
 			ap_attack = 0.1
 		}
 		category_tank_destroyers = {
-			hard_attack = 0.1
 			ap_attack = 0.05
 		}
 
@@ -1324,7 +1310,6 @@ technologies = {
 			ap_attack = 0.1
 		}
 		category_tank_destroyers = {
-			hard_attack = 0.05
 			ap_attack = 0.05
 		}
 
@@ -1668,9 +1653,6 @@ technologies = {
 		}
 		mot_artillery_brigade = {
 			soft_attack = 0.2
-		}
-		category_self_propelled_artillery = {
-			soft_attack = 0.1
 		}
 
 		force_use_small_tech_layout = yes
