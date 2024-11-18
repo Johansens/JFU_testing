@@ -668,9 +668,8 @@ ideas = {
 			}
 
 			modifier = {
-				army_attack_against_major_factor = 0.1
-				army_breakthrough_against_major_factor = 0.1
-				army_morale_factor = 0.1
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
 			}
 		}
 

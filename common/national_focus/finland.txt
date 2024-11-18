@@ -316,7 +316,7 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = FIN_political_unity
-		cost = 10
+		cost = 5
 		available = {
 		}
 
@@ -813,12 +813,8 @@ focus_tree = {
 		relative_position_id = FIN_moderate_politics
 		cost = 5
 		available = {
-			is_subject = no
-			is_in_faction = no
 			threat > 0.5
 			neutrality > 0.85
-			NOT = { has_government = democratic }
-			NOT = { has_government = communism }
 		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_MANPOWER }
@@ -843,157 +839,40 @@ focus_tree = {
 		cost = 5
 		
 		bypass = {
-			OR = {
-				is_in_faction_with = GER
-				is_subject_of = GER
-				has_subject = SOV
-				has_subject = GER
-				NOT = { country_exists = GER }
-				GER = { has_capitulated = yes }
-				GER = { has_war_with = SOV }
-				SOV = { exists = no }
-				GER = { has_subject = SOV }
-				AND = {
-					has_war_with = SOV
-					NOT = { has_country_flag = FIN_winter_war_ongoing_flag }
-				}
-			}
 		}
 
 		available = {
-			is_subject = no
-			NOT = { has_government = communism }
-			NOT = { is_in_faction_with = SOV }
-			NOT = { has_non_aggression_pact_with = SOV }
-			NOT = { has_guaranteed = SOV }
-			NOT = { has_country_flag = FIN_winter_war_ongoing_flag }
-			GER = {
-				NOT = { has_war_with = ROOT }
-				NOT = { 
-					any_allied_country = {
-						has_war_with = ROOT
-					}
-				}
-			}
+			date > 1940.01.01
 		}
 
 		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_INTERNATIONAL_TRADE }
 
 		completion_reward = {
-			if = {
-				limit = {
-					has_dlc = "Arms Against Tyranny"	
-				}
-				custom_effect_tooltip = FIN_cooperation_with_germany_subsidies_tt
-
-				hidden_effect = {
-					add_equipment_subsidy = {
-						cic = FIN_basic_subsidies_value
-						equipment_type = small_plane_airframe
-						seller_tags = { GER } 
-					}
-					add_equipment_subsidy = {
-						cic = FIN_basic_subsidies_value
-						equipment_type = medium_plane_airframe
-						seller_tags = { GER } 
-					}
-					add_equipment_subsidy = {
-						cic = FIN_basic_subsidies_value
-						equipment_type = light_tank_chassis
-						seller_tags = { GER } 
-					}
-					add_equipment_subsidy = {
-						cic = FIN_basic_subsidies_value
-						equipment_type = medium_tank_chassis
-						seller_tags = { GER } 
-					}
-					add_equipment_subsidy = {
-						cic = FIN_basic_subsidies_value
-						equipment_type = artillery_equipment
-						seller_tags = { GER } 
-					}
-					add_equipment_subsidy = {
-						cic = FIN_basic_subsidies_value
-						equipment_type = anti_air_equipment
-						seller_tags = { GER } 
-					}
-					add_equipment_subsidy = {
-						cic = FIN_basic_subsidies_value
-						equipment_type = anti_tank_equipment
-						seller_tags = { GER } 
-					}
-				}
+			add_equipment_to_stockpile = { 
+				type = convoy_1
+				amount = 100
+				producer = GER
 			}
-
-			GER = {
-				country_event = { id = AAT_finland_continuation_war.01 hours = 8 random_hours = 4 }
+			add_equipment_to_stockpile = { 
+				type = artillery_equipment_1
+				amount = 500
+				producer = GER
 			}
-
-			custom_effect_tooltip = if_they_accept_tt
-			effect_tooltip = {
-				FIN_pact_for_continuation_war_start = yes
-
-				if = {
-					limit = {
-						has_dlc = "No Step Back"
-					}
-					add_equipment_to_stockpile = { 
-						type = light_tank_chassis_1
-						amount = 50
-						producer = GER
-					}
-				}
-				else = {
-					add_equipment_to_stockpile = { 
-						type = light_tank_equipment_1
-						amount = 50
-						producer = GER
-					}
-				}
-				if = {
-					limit = {
-						has_dlc = "By Blood Alone"
-					}
-					add_equipment_to_stockpile = { 
-						type = small_plane_airframe_1
-						amount = 50
-						producer = GER
-					}
-				}
-				else = {
-					add_equipment_to_stockpile = { 
-						type = fighter_equipment_1
-						amount = 50
-						producer = GER
-					}
-				}
-				add_equipment_to_stockpile = { 
-					type = convoy_1
-					amount = 50
-					producer = GER
-				}
-				add_equipment_to_stockpile = { 
-					type = artillery_equipment_1
-					amount = 50
-					producer = GER
-				}
-				add_equipment_to_stockpile = { 
-					type = anti_air_equipment_1
-					amount = 25
-					producer = GER
-				}
-				add_equipment_to_stockpile = { 
-					type = infantry_equipment_1
-					amount = 3000
-					producer = GER
-				}
-				add_equipment_to_stockpile = { 
-					type = support_equipment_1
-					amount = 300
-					producer = GER
-				}
+			add_equipment_to_stockpile = { 
+				type = anti_air_equipment_1
+				amount = 500
+				producer = GER
 			}
-			custom_effect_tooltip = FIN_pact_for_continuation_war_fin_focus_tt
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment_1
+				amount = 5000
+				producer = GER
+			}
+			add_equipment_to_stockpile = { 
+				type = support_equipment_1
+				amount = 1000
+				producer = GER
+			}
 		}
 	}
 	
@@ -1072,11 +951,9 @@ focus_tree = {
 
 			add_doctrine_cost_reduction = {
 				name = FIN_german_military_advisors
-				cost_reduction = 0.25
-				uses = 3
+				cost_reduction = 0.5
+				uses = 2
 				category = land_doctrine
-				category = air_doctrine
-				category = naval_doctrine
 			}
 
 			custom_effect_tooltip = available_military_high_command
@@ -1095,11 +972,8 @@ focus_tree = {
 		relative_position_id = FIN_wartsila_engine_production
 		cost = 10
 		available = {
-			is_subject = no
+			has_war = yes
 			has_dynamic_modifier = { modifier = FIN_finnish_army }
-			all_core_state = {
-				is_controlled_by = ROOT
-			}
 		}
 
 		search_filters = { FOCUS_FILTER_MANPOWER }
@@ -1117,8 +991,6 @@ focus_tree = {
 				idea = FIN_finnish_march_of_conquest
 				days = 730
 			}
-
-			custom_effect_tooltip = FIN_heimosodat_dec_tt
 		}
 	}
 	
@@ -1132,46 +1004,12 @@ focus_tree = {
 		relative_position_id = FIN_cooperation_with_germany
 		cost = 10
 		available = {
-			OR = {
-				is_in_faction = yes
-				has_idea = FIN_the_lone_wolf
-			}
 		}
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
 			add_research_slot = 1
-			add_to_tech_sharing_group = FIN_joint_research_and_development_program
-			custom_effect_tooltip = FIN_joint_scientific_program_tt
-
-			if = {
-				limit = {
-					is_in_faction = yes
-				}
-				custom_effect_tooltip = generic_current_effects_new_lines
-				every_other_country = {
-					limit = {
-						is_in_faction_with = ROOT
-					}
-					add_to_tech_sharing_group = FIN_joint_research_and_development_program
-					hidden_effect = {
-						country_event = { id = AAT_finland_misc_events.07 hours = 1 }
-					}
-				}
-			}
-			else_if = { #Used this instead of "else" for tooltip purposes
-				limit = {
-					has_idea = FIN_the_lone_wolf
-				}
-				custom_effect_tooltip = generic_current_effects_new_lines
-				every_subject_country = {
-					add_to_tech_sharing_group = FIN_joint_research_and_development_program
-					hidden_effect = {
-						country_event = { id = AAT_finland_misc_events.07 hours = 1 }
-					}
-				}
-			}
 		}
 	}
 	
@@ -1193,12 +1031,19 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = {
 				name = FIN_modernize_the_industry
-				bonus = 0.5
-				uses = 2
-				category = industry
-				category = electronics
+				bonus = 1.0
+				uses = 1
+				technology = advanced_machine_tools
+				technology = flexible_line
+				technology = assembly_line_production
+				technology = streamlined_line
+				technology = concentrated_industry3
+				technology = concentrated_industry4
+				technology = concentrated_industry5
+				technology = dispersed_industry3 
+				technology = dispersed_industry4 
+				technology = dispersed_industry5 
 			}
-
 			random_core_state = {
 				limit = {
 					is_fully_controlled_by = ROOT
@@ -1395,83 +1240,6 @@ focus_tree = {
 			show_unit_leaders_tooltip = FIN_paavo_talvela
 		}
 	}
-
-	focus = {
-		id = FIN_parmis_devils
-		icon = GFX_focus_FIN_parmis_devils
-		prerequisite = { focus = FIN_union_of_finnish_brothers_in_arms }
-
-		x = 1
-		y = 1
-		relative_position_id = FIN_union_of_finnish_brothers_in_arms
-		cost = 5
-		available = {
-		}
-
-		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_MANPOWER FOCUS_FILTER_MILITARY_CHARACTER }
-
-		completion_reward = {
-			#Spawn Penal divisions
-			custom_effect_tooltip = FIN_parmis_devils_spawn_tt
-			hidden_effect = {
-				#set_technology = { penal_infantry = 1 popup = no } #Note: Granting tech will make the penal battalion available for any template
-				division_template = {
-					name = "Rangaistusdivisioona"
-					division_names_group = FIN_PEN_01
-					is_locked = yes
-					force_allow_recruiting = yes
-					override_model = FIN_infantry_alt_1_entity
-					division_cap = 6
-
-					regiments = {
-						penal_battalion = { x = 0 y = 0 }
-						penal_battalion = { x = 0 y = 1 }
-						penal_battalion = { x = 0 y = 2 }
-						penal_battalion = { x = 1 y = 0 }
-						penal_battalion = { x = 1 y = 1 }
-						penal_battalion = { x = 1 y = 2 }
-						penal_battalion = { x = 2 y = 0 }
-						penal_battalion = { x = 2 y = 1 }
-						penal_battalion = { x = 2 y = 2 }
-					}
-					support = {
-						artillery = { x = 0 y = 0 }
-					}
-				}
-				capital_scope = {
-					create_unit = {
-						division = "division_template = \"Rangaistusdivisioona\" start_experience_factor = 1 start_equipment_factor = 1.0"
-						officer = {
-							name = FIN_nikke_parmi
-							portraits = {
-								army = {
-									large = GFX_portrait_FIN_nikke_parmi
-									small = GFX_portrait_FIN_nikke_parmi_small
-								}
-							}
-						}
-						owner = ROOT
-					}
-				}
-				if = {
-					limit = {
-						has_dlc = "By Blood Alone"
-					}
-					random_country_division = {
-						limit = {
-							division_has_battalion_in_template = penal_battalion
-						}
-						add_divisional_commander_xp = 2300
-						add_history_entry = {
-							key = FIN_parmis_devils
-							subject = "Pärmi's Devils"
-							allow = no #(allow medal award)
-						}
-					}
-				}
-			}
-		}
-	}
 	
 	focus = {
 		id = FIN_militarized_society
@@ -1511,7 +1279,7 @@ focus_tree = {
 		icon = GFX_focus_FIN_a_cry_for_help
 		prerequisite = { focus = FIN_national_unity }
 
-		x = 1
+		x = -1
 		y = 2
 		relative_position_id = FIN_national_unity
 		cost = 5
@@ -2528,16 +2296,8 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = FIN_outokumpu_for_defence_industry
-		cost = 10
+		cost = 5
 		available = {
-			if = {
-				limit = {
-					has_dlc = "Arms Against Tyranny"
-				}
-				mio:FIN_valtion_kivaaritehdas_organization = {
-					has_mio_size > 4
-				}
-			}
 		}
 
 		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
@@ -2545,7 +2305,7 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = {
 				name = FIN_integrate_oy_tikkakoski
-				bonus = 0.5
+				bonus = 1
 				uses = 2
 				category = infantry_weapons
 			}
@@ -2610,16 +2370,8 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = FIN_integrate_oy_tikkakoski
-		cost = 10
+		cost = 5
 		available = {
-			if = {
-				limit = {
-					has_dlc = "Arms Against Tyranny"
-				}
-				mio:FIN_valtion_tykkitehdas_organization = {
-					has_mio_size > 4
-				}
-			}
 		}
 
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
@@ -2627,7 +2379,7 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = {
 				name = FIN_national_firepower
-				bonus = 0.5
+				bonus = 1
 				uses = 2
 				category = artillery
 			}
@@ -2749,7 +2501,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = FIN_increase_military_budget
-		cost = 10
+		cost = 5
 		available = {
 		}
 
@@ -2888,7 +2640,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = FIN_suomen_maavoimat
-		cost = 10
+		cost = 5
 		available = {
 			threat > 0.25
 		}
@@ -2942,7 +2694,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = FIN_extra_refresher_exercises
-		cost = 10
+		cost = 5
 		available = {
 		}
 
@@ -2976,7 +2728,7 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = FIN_extra_refresher_exercises
-		cost = 10
+		cost = 5
 		available = {
 		}
 
@@ -3026,68 +2778,6 @@ focus_tree = {
 					uses = 2
 					category = cat_light_armor
 				}
-				if = {
-					limit = {
-						has_dlc = "Arms Against Tyranny"
-					}
-					create_equipment_variant = {
-						name = "BT-42"
-						type = light_tank_chassis_2
-						parent_version = 0
-						modules = {
-							main_armament_slot = tank_close_support_gun
-							turret_type_slot = tank_light_two_man_tank_turret
-							suspension_type_slot = tank_christie_suspension
-							armor_type_slot = tank_welded_armor
-							engine_type_slot = tank_gasoline_engine
-						}
-						upgrades = {
-							tank_nsb_engine_upgrade = 10
-							tank_nsb_armor_upgrade = 2
-						}
-						icon = "GFX_FIN_improved_light_art_medium"
-						design_team = mio:FIN_valtion_panssaritehdas_organization
-					}
-				}
-				else = {
-					create_equipment_variant = {
-						name = "BT-42"
-						type = light_tank_chassis_2
-						parent_version = 0
-						modules = {
-							main_armament_slot = tank_close_support_gun
-							turret_type_slot = tank_light_two_man_tank_turret
-							suspension_type_slot = tank_christie_suspension
-							armor_type_slot = tank_welded_armor
-							engine_type_slot = tank_gasoline_engine
-						}
-						upgrades = {
-							tank_nsb_engine_upgrade = 10
-							tank_nsb_armor_upgrade = 2
-						}
-						icon = "GFX_FIN_improved_light_art_medium"
-					}
-				}
-			}
-
-			if = {
-				limit = {
-					has_dlc = "Arms Against Tyranny"
-				}
-				if = {
-					limit = {
-						has_tech = mechanised_infantry3
-					}
-					mio:FIN_sisu_auto_organization = {
-						unlock_mio_trait_tooltip = FIN_mio_trait_repurposed_equipment
-					}
-				}
-				else = {
-					custom_effect_tooltip = FIN_salvaged_and_retooled_sisu_trait_repurposed_tt
-					mio:FIN_sisu_auto_organization = {
-						unlock_mio_trait_tooltip = FIN_mio_trait_repurposed_equipment
-					}
-				}
 			}
 		}
 	}
@@ -3113,15 +2803,6 @@ focus_tree = {
 			add_to_variable = { FIN_finnish_army_acclimatization_cold_climate_gain_factor = 0.15 tooltip = acclimatization_cold_climate_gain_factor_tt }
 			add_to_variable = { FIN_finnish_army_winter_attrition_factor = -0.15 tooltip = winter_attrition_factor_tt }
 			add_to_variable = { FIN_finnish_army_supply_combat_penalties_on_core_factor = -0.15 tooltip = supply_combat_penalties_on_core_factor_tt }
-
-			custom_effect_tooltip = FIN_winter_warfare_battalion_tt
-
-			hidden_effect = {
-				set_technology = {
-					winter_logistics_support_tech = 1
-					popup = no
-				}
-			}
 		}
 	}
 	
@@ -3179,384 +2860,9 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = {
 				name = FIN_foreign_armor
-				bonus = 0.5
+				bonus = 1
 				uses = 2
 				category = armor
-			}
-
-			if = {
-				limit = {
-					has_dlc = "Arms Against Tyranny"
-				}
-				custom_effect_tooltip = FIN_foreign_armor_equipment_and_subsidies_tt
-			}
-			else = {
-				custom_effect_tooltip = FIN_foreign_armor_equipment_only_tt
-			}
-
-			effect_tooltip = { #Just tooltip purposes
-				every_other_country = {
-					limit = {
-						OR = {
-							original_tag = GER
-							original_tag = ITA
-							original_tag = ENG
-							original_tag = FRA
-							original_tag = SOV
-							original_tag = SWE
-						}
-						FIN_can_purchase_equipment_from_country = yes
-					}
-					display_individual_scopes = yes
-				}
-			}
-
-			hidden_effect = {
-				if = {
-					limit = {
-						has_dlc = "Arms Against Tyranny"
-					}
-					if = {
-						limit = {
-							GER = {
-								FIN_can_purchase_equipment_from_country = yes
-							}
-						}
-						add_equipment_subsidy = {
-							cic = FIN_basic_subsidies_value
-							equipment_type = light_tank_chassis
-							seller_tags = { GER } 
-						}
-					}
-					if = {
-						limit = {
-							ITA = {
-								FIN_can_purchase_equipment_from_country = yes
-							}
-						}
-						add_equipment_subsidy = {
-							cic = FIN_basic_subsidies_value
-							equipment_type = light_tank_chassis
-							seller_tags = { ITA } 
-						}
-					}
-					if = {
-						limit = {
-							ENG = {
-								FIN_can_purchase_equipment_from_country = yes
-							}
-						}
-						add_equipment_subsidy = {
-							cic = FIN_basic_subsidies_value
-							equipment_type = light_tank_chassis
-							seller_tags = { ENG } 
-						}
-					}
-					if = {
-						limit = {
-							FRA = {
-								FIN_can_purchase_equipment_from_country = yes
-							}
-						}
-						add_equipment_subsidy = {
-							cic = FIN_basic_subsidies_value
-							equipment_type = light_tank_chassis
-							seller_tags = { FRA } 
-						}
-					}
-					if = {
-						limit = {
-							SOV = {
-								FIN_can_purchase_equipment_from_country = yes
-							}
-						}
-						add_equipment_subsidy = {
-							cic = FIN_basic_subsidies_value
-							equipment_type = light_tank_chassis
-							seller_tags = { SOV } 
-						}
-					}
-					if = {
-						limit = {
-							SWE = {
-								FIN_can_purchase_equipment_from_country = yes
-							}
-						}
-						add_equipment_subsidy = {
-							cic = FIN_basic_subsidies_value
-							equipment_type = light_tank_chassis
-							seller_tags = { SWE } 
-						}
-					}
-				}
-
-				if = {
-					limit = {
-						has_dlc = "No Step Back"
-					}
-					if = {
-						limit = {
-							GER = {
-								FIN_can_purchase_equipment_from_country = yes
-							}
-						}
-						add_equipment_to_stockpile = { 
-							type = light_tank_chassis_1
-							amount = 50
-							producer = GER
-						}
-						add_equipment_to_stockpile = { 
-							type = heavy_tank_chassis_1
-							amount = 15
-							producer = GER
-						}
-					}
-					if = {
-						limit = {
-							ITA = {
-								FIN_can_purchase_equipment_from_country = yes
-							}
-						}
-						add_equipment_to_stockpile = { 
-							type = light_tank_chassis_1
-							amount = 35
-							producer = ITA
-						}
-					}
-					if = {
-						limit = {
-							ENG = {
-								FIN_can_purchase_equipment_from_country = yes
-							}
-						}
-						add_equipment_to_stockpile = { 
-							type = light_tank_chassis_0
-							amount = 50
-							producer = ENG
-						}
-						add_equipment_to_stockpile = { 
-							type = light_tank_chassis_1
-							amount = 25
-							producer = ENG
-						}
-
-						if = {
-							limit = {
-								NOT = { has_country_flag = FIN_vickers_template_created_flag }
-							}
-							create_equipment_variant = {
-								name = "Vickers Mark E Tpye B"
-								type = light_tank_chassis_0
-								parent_version = 0
-								modules = {
-									main_armament_slot = tank_high_velocity_cannon
-									turret_type_slot = tank_light_one_man_tank_turret
-									suspension_type_slot = tank_bogie_suspension
-									armor_type_slot = tank_riveted_armor
-									engine_type_slot = tank_gasoline_engine
-									special_type_slot_1 = secondary_turret_hmg
-								}
-								upgrades = {
-									tank_nsb_armor_upgrade = 3
-									tank_nsb_engine_upgrade = 2
-								}
-								obsolete = yes
-								icon = "GFX_FIN_gw_tank_destroyer_vickers_medium"
-								model = "commonwealth_gfx_light_armor_entity"
-							}
-						}
-						add_equipment_to_stockpile = { 
-							type = light_tank_chassis_0
-							variant_name = "Vickers 6 ton A"
-							amount = 26
-							producer = ENG
-						}
-					}
-					if = {
-						limit = {
-							FRA = {
-								FIN_can_purchase_equipment_from_country = yes
-							}
-						}
-						add_equipment_to_stockpile = { 
-							type = light_tank_chassis_0
-							amount = 25
-							producer = FRA
-						}
-						add_equipment_to_stockpile = { 
-							type = medium_tank_chassis_0
-							amount = 15
-							producer = FRA
-						}
-					}
-					if = {
-						limit = {
-							SOV = {
-								FIN_can_purchase_equipment_from_country = yes
-							}
-						}
-						add_equipment_to_stockpile = { 
-							type = light_tank_chassis_1
-							variant_name = "T-26TU mod. 1933"
-							amount = 50
-							producer = SOV
-						}
-						add_equipment_to_stockpile = { 
-							type = light_tank_chassis_1
-							variant_name = "BT-5"
-							amount = 25
-							producer = SOV
-						}
-						add_equipment_to_stockpile = { 
-							type = medium_tank_chassis_0
-							amount = 15
-							producer = SOV
-						}
-					}
-					if = {
-						limit = {
-							has_dlc = "Arms Against Tyranny"
-							SWE = {
-								FIN_can_purchase_equipment_from_country = yes
-							}
-						}
-						add_equipment_to_stockpile = { 
-							type = light_tank_chassis_0
-							amount = 35
-							producer = SWE
-						}
-						add_equipment_to_stockpile = { 
-							type = light_tank_chassis_1
-							amount = 15
-							producer = SWE
-						}
-
-						create_equipment_variant = {
-							name = "Landsverk L-62"
-							type = light_tank_aa_chassis_2
-							parent_version = 1
-						    	modules = {
-						        main_armament_slot = tank_anti_air_cannon_2
-								turret_type_slot = tank_light_three_man_tank_turret
-								suspension_type_slot = tank_torsion_bar_suspension
-								armor_type_slot = tank_welded_armor
-								engine_type_slot = tank_diesel_engine
-						    	}
-							upgrades = {
-								tank_nsb_engine_upgrade = 3
-								tank_nsb_armor_upgrade = 2
-							}
-							model = "FIN_light_sp_anti_air_brigade_entity"
-							icon = "GFX_SWE_basic_light_spaa_medium"
-						}
-						add_equipment_to_stockpile = { 
-							type = light_tank_aa_chassis_2
-							variant_name = "Landsverk L-62"
-							amount = 15
-							producer = SWE
-						}
-					}
-				}
-				else = {
-					if = {
-						limit = {
-							GER = {
-								FIN_can_purchase_equipment_from_country = yes
-							}
-						}
-						add_equipment_to_stockpile = { 
-							type = light_tank_equipment_1
-							amount = 50
-							producer = GER
-						}
-						add_equipment_to_stockpile = { 
-							type = heavy_tank_equipment_1
-							amount = 15
-							producer = GER
-						}
-					}
-					if = {
-						limit = {
-							ITA = {
-								FIN_can_purchase_equipment_from_country = yes
-							}
-						}
-						add_equipment_to_stockpile = { 
-							type = light_tank_equipment_1
-							amount = 35
-							producer = ITA
-						}
-					}
-					if = {
-						limit = {
-							ENG = {
-								FIN_can_purchase_equipment_from_country = yes
-							}
-						}
-						add_equipment_to_stockpile = { 
-							type = gw_tank_equipment
-							amount = 50
-							producer = ENG
-						}
-						add_equipment_to_stockpile = { 
-							type = light_tank_equipment_1
-							amount = 25
-							producer = ENG
-						}
-					}
-					if = {
-						limit = {
-							FRA = {
-								FIN_can_purchase_equipment_from_country = yes
-							}
-						}
-						add_equipment_to_stockpile = { 
-							type = gw_tank_equipment
-							amount = 25
-							producer = FRA
-						}
-						add_equipment_to_stockpile = { 
-							type = light_tank_equipment_1
-							amount = 15
-							producer = FRA
-						}
-					}
-					if = {
-						limit = {
-							SOV = {
-								FIN_can_purchase_equipment_from_country = yes
-							}
-						}
-						add_equipment_to_stockpile = { 
-							type = gw_tank_equipment
-							amount = 50
-							producer = SOV
-						}
-						add_equipment_to_stockpile = { 
-							type = light_tank_equipment_1
-							amount = 25
-							producer = SOV
-						}
-					}
-					if = {
-						limit = {
-							has_dlc = "Arms Against Tyranny"
-							SWE = {
-								FIN_can_purchase_equipment_from_country = yes
-							}
-						}
-						add_equipment_to_stockpile = { 
-							type = gw_tank_equipment
-							amount = 35
-							producer = SWE
-						}
-						add_equipment_to_stockpile = { 
-							type = light_tank_equipment_1
-							amount = 15
-							producer = SWE
-						}
-					}
-				}
 			}
 		}
 	}
@@ -3603,14 +2909,6 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_HISTORICAL }
 
 		completion_reward = {
-			custom_effect_tooltip = FIN_long_range_patrols_battalion_tt
-
-			hidden_effect = {
-				set_technology = {
-					long_range_patrol_support_tech = 1
-					popup = no
-				}
-			}
 		}
 	}
 	
@@ -3650,7 +2948,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = FIN_long_range_patrols
-		cost = 10
+		cost = 5
 		available = {
 		}
 
@@ -3661,9 +2959,7 @@ focus_tree = {
 
 			custom_effect_tooltip = FIN_modify_finnish_army_ns_intro
 			add_to_variable = { FIN_finnish_army_initiative_factor = 0.02 tooltip = initiative_factor_tt }
-			add_to_variable = { FIN_finnish_army_recon_factor_while_entrenched = 0.1 tooltip = recon_factor_while_entrenched_tt }
-			add_to_variable = { FIN_finnish_army_modifier_army_sub_unit_long_range_patrol_support_attack_factor = 0.1 tooltip = modifier_army_sub_unit_long_range_patrol_support_attack_factor_tt }
-			add_to_variable = { FIN_finnish_army_modifier_army_sub_unit_long_range_patrol_support_defence_factor = 0.1 tooltip = modifier_army_sub_unit_long_range_patrol_support_defence_factor_tt }		
+			add_to_variable = { FIN_finnish_army_recon_factor_while_entrenched = 0.1 tooltip = recon_factor_while_entrenched_tt }	
 
 			show_unit_leaders_tooltip = FIN_erkki_raappana
 		}
@@ -3678,7 +2974,7 @@ focus_tree = {
 		x = 0
 		y = 3
 		relative_position_id = FIN_salvaged_and_retooled
-		cost = 10
+		cost = 5
 		available = {
 		}
 
@@ -3727,112 +3023,6 @@ focus_tree = {
 							remove_idea = FIN_valtion_panssaritehdas
 							add_idea = FIN_valtion_panssaritehdas_improved
 						}
-					}
-				}
-			}
-
-			if = {
-				limit = {
-					has_dlc = "No Step Back"
-				}
-				if = {
-					limit = {
-						has_dlc = "Arms Against Tyranny"
-					}
-					create_equipment_variant = { #Made-up
-						name = "Pukki"
-						type = light_tank_chassis_3
-						parent_version = 0
-						modules = {
-							main_armament_slot = tank_small_cannon_2
-							turret_type_slot = tank_light_three_man_tank_turret
-							suspension_type_slot = tank_bogie_suspension
-							armor_type_slot = tank_riveted_armor
-							engine_type_slot = tank_gasoline_engine
-							special_type_slot_1 = tank_radio_1
-							special_type_slot_2 = secondary_turret_hmg
-							special_type_slot_3 = additional_machine_guns
-							special_type_slot_4 = additional_machine_guns
-						}
-						upgrades = {
-							tank_nsb_engine_upgrade = 10
-							tank_nsb_armor_upgrade = 8
-						}
-						design_team = mio:FIN_valtion_panssaritehdas_organization
-					}
-					
-					create_equipment_variant = { #Made-up
-						name = "Sonni"
-						type = medium_tank_chassis_2
-						parent_version = 0
-						modules = {
-							main_armament_slot = tank_medium_cannon
-							turret_type_slot = tank_medium_three_man_tank_turret
-							suspension_type_slot = tank_bogie_suspension
-							armor_type_slot = tank_riveted_armor
-							engine_type_slot = tank_gasoline_engine
-							special_type_slot_1 = tank_radio_1
-							special_type_slot_2 = secondary_turret_small_cannon
-							special_type_slot_3 = additional_machine_guns
-							special_type_slot_4 = additional_machine_guns
-						}
-						upgrades = {
-							tank_nsb_engine_upgrade = 9
-							tank_nsb_armor_upgrade = 6
-						}
-						design_team = mio:FIN_valtion_panssaritehdas_organization
-					}
-				}
-				else = {
-					create_equipment_variant = { #Made-up
-						name = "Pukki"
-						type = light_tank_chassis_3
-						parent_version = 0
-						modules = {
-							main_armament_slot = tank_small_cannon_2
-							turret_type_slot = tank_light_three_man_tank_turret
-							suspension_type_slot = tank_bogie_suspension
-							armor_type_slot = tank_riveted_armor
-							engine_type_slot = tank_gasoline_engine
-							special_type_slot_1 = tank_radio_1
-							special_type_slot_2 = secondary_turret_hmg
-							special_type_slot_3 = additional_machine_guns
-							special_type_slot_4 = additional_machine_guns
-						}
-						upgrades = {
-							tank_nsb_engine_upgrade = 10
-							tank_nsb_armor_upgrade = 8
-						}
-					}
-					
-					create_equipment_variant = { #Made-up
-						name = "Sonni"
-						type = medium_tank_chassis_2
-						parent_version = 0
-						modules = {
-							main_armament_slot = tank_medium_cannon
-							turret_type_slot = tank_medium_three_man_tank_turret
-							suspension_type_slot = tank_bogie_suspension
-							armor_type_slot = tank_riveted_armor
-							engine_type_slot = tank_gasoline_engine
-							special_type_slot_1 = tank_radio_1
-							special_type_slot_2 = secondary_turret_small_cannon
-							special_type_slot_3 = additional_machine_guns
-							special_type_slot_4 = additional_machine_guns
-						}
-						upgrades = {
-							tank_nsb_engine_upgrade = 9
-							tank_nsb_armor_upgrade = 6
-						}
-					}
-				}
-
-				hidden_effect = {
-					if = {
-						limit = {
-							has_completed_focus = FIN_militarized_society
-						}
-						mark_focus_tree_layout_dirty = yes
 					}
 				}
 			}
@@ -3953,7 +3143,7 @@ focus_tree = {
 		x = 4
 		y = 1
 		relative_position_id = FIN_suomen_maavoimat
-		cost = 10
+		cost = 5
 		available = {
 			has_full_control_of_state = 146 #KARJALA
 		}
@@ -4025,7 +3215,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = FIN_mannerheim_line
-		cost = 10
+		cost = 5
 		available = {
 
 		}
