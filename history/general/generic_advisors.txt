@@ -67,6 +67,7 @@ every_possible_country = {
 		has_dlc = "La Resistance"
 		# china gets a special one via focus
 		NOT = { original_tag = CHI }
+		NOT = { original_tag = GER }
 		if = {
 			limit = {
 				has_dlc = "Battle for the Bosporus"
