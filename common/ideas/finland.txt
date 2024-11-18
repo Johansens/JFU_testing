@@ -1,6 +1,25 @@
 ideas = {
 
 	country = {
+		finnladen_rausen = {
+
+			picture = partial_economic_mobilisation
+
+				allowed = {
+					always = no
+				}
+			
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				send_volunteer_size = 180
+				send_volunteer_divisions_required = -0.99
+			}
+		}
 		sisu = { # NO-AAT version
 			allowed = {
 				always = no

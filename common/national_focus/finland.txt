@@ -873,6 +873,10 @@ focus_tree = {
 				amount = 1000
 				producer = GER
 			}
+			set_rule = { 
+				can_send_volunteers = yes
+			}
+			add_ideas = finnladen_rausen
 		}
 	}
 	
