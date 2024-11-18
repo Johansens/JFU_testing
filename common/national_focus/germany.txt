@@ -3012,51 +3012,6 @@ focus_tree = {
 				value = 0.5
 			}
 
-			if = {
-				limit = {
-					has_dlc = "No Step Back"
-				}
-				custom_effect_tooltip = generic_skip_one_line_tt
-
-				create_equipment_variant = {
-					name = "Sturmpanzer"
-					design_team = mio:GER_alkett_organization #We feed on your tears
-					parent_version = 0
-					type = medium_tank_artillery_chassis_1
-					modules = {
-						main_armament_slot = tank_medium_howitzer
-						turret_type_slot = tank_medium_fixed_superstructure_turret
-						suspension_type_slot = tank_bogie_suspension
-						armor_type_slot = tank_welded_armor
-						engine_type_slot = tank_gasoline_engine
-					}
-					upgrades = {
-						tank_nsb_engine_upgrade = 6
-						tank_nsb_armor_upgrade = 2
-					}
-					icon = "GFX_GER_basic_medium_art_medium"
-				}
-
-				create_equipment_variant = {
-					name = "Nashorn"
-					design_team = mio:GER_alkett_organization #We feed on your tears
-					parent_version = 0
-					type = medium_tank_destroyer_chassis_1
-					modules = {
-						main_armament_slot = tank_medium_cannon
-						turret_type_slot = tank_medium_fixed_superstructure_turret
-						suspension_type_slot = tank_bogie_suspension
-						armor_type_slot = tank_welded_armor
-						engine_type_slot = tank_gasoline_engine
-					}
-					upgrades = {
-						tank_nsb_engine_upgrade = 6
-						tank_nsb_armor_upgrade = 2
-					}
-					icon = "GFX_GER_basic_light_td"
-				}
-			}
-
 			custom_effect_tooltip = generic_skip_one_line_tt
 
 			GER_modify_army_modifier = yes
@@ -3289,22 +3244,6 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			GER_modify_army_modifier = yes
-			add_to_variable = { 
-				GER_military_equipment_capture = 0.05
-				tooltip = equipment_capture_tt
-			}
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			GER_modify_industrial_modifier = yes
-			add_to_variable = { 
-				GER_industrial_equipment_conversion_speed = 0.1
-				tooltip = equipment_conversion_speed_tt
-			}
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
 			every_army_leader = {
 				limit = {
 					NOT = { has_trait = scavenger }
@@ -3388,67 +3327,17 @@ focus_tree = {
 		relative_position_id = GER_instill_auftragstaktik
 		cost = 5
 		available = {
-			OR = {
-				AND = {
-					any_controlled_state = {
-						is_fully_controlled_by = ROOT
-						OR =  {
-							is_on_continent = africa
-							is_on_continent = asia
-						}
-					}
-				}
-				AND = {
-					any_subject_country = {
-						any_controlled_state = {
-							is_fully_controlled_by = PREV
-							OR =  {
-								is_on_continent = africa
-								is_on_continent = asia
-							}
-						}
-					}
-				}
-				AND = {
-					any_allied_country = {
-						any_controlled_state = {
-							is_fully_controlled_by = PREV
-							OR =  {
-								is_on_continent = africa
-								is_on_continent = asia
-							}
-						}
-					}
-				}
-			}
+			451 = { is_controlled_by = ITA }
 		}
 
 		search_filters = { FOCUS_FILTER_MILITARY_CHARACTER FOCUS_FILTER_HISTORICAL }
 
 		completion_reward = {
-			if = {
-				limit = {
-					NOT = { has_completed_focus = GER_the_prussian_legacy}
-					has_character = GER_erwin_rommel
-					GER_erwin_rommel = {
-						NOT = { has_trait = desert_fox }
-					}
-				}
-				GER_erwin_rommel = {
-					add_trait = { trait = desert_fox }
-				}
+			GER_erwin_rommel = {
+				add_trait = { trait = desert_fox }
 			}
-			if = {
-				limit = {
-					NOT = { has_completed_focus = GER_the_prussian_legacy}
-					has_character = GER_walther_nehring
-					GER_walther_nehring = {
-						NOT = { has_trait = desert_fox }
-					}
-				}
-				GER_walther_nehring = {
-					add_trait = { trait = desert_fox }
-				}
+			GER_erich_von_manstein = {
+				add_trait = { trait = desert_fox }
 			}
 
 			GER_modify_army_modifier = yes
@@ -3459,7 +3348,7 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			custom_effect_tooltip = GER_unlock_operational_planning_in_africa_tt
+			#custom_effect_tooltip = GER_unlock_operational_planning_in_africa_tt
 		}
 	}
 
@@ -3495,16 +3384,10 @@ focus_tree = {
 				custom_effect_tooltip = generic_skip_one_line_tt
 				add_doctrine_cost_reduction = {
 					name = GER_establish_the_skijager
-					cost_reduction = 0.25
+					cost_reduction = 0.5
 					uses = 2
 					category = cat_mountaineers_doctrine
 				}
-			}
-			add_tech_bonus = {
-				name = GER_establish_the_skijager
-				bonus = 0.5
-				uses = 1
-				category = mountaineers_tech
 			}
 		}
 	}
@@ -4064,10 +3947,8 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			show_unit_leaders_tooltip = GER_heinz_guderian
 			custom_effect_tooltip = available_theorist
 			show_ideas_tooltip = heinz_guderian
-			show_unit_leaders_tooltip = GER_erwin_rommel
 			custom_effect_tooltip = available_military_high_command
 			show_ideas_tooltip = erwin_rommel
 
@@ -4308,53 +4189,6 @@ focus_tree = {
 				value = 0.5
 			}
 
-			
-			if = {
-				limit = { 
-					has_dlc = "No Step Back"
-				}
-				custom_effect_tooltip = generic_skip_one_line_tt
-				create_equipment_variant = {
-					name = "Panther Ausf. A"
-					type = medium_tank_chassis_3
-					design_team = mio:GER_man_organization #We feed on your tears
-					modules = {
-						main_armament_slot = tank_high_velocity_cannon
-						turret_type_slot = tank_medium_three_man_tank_turret
-						suspension_type_slot = tank_interleaved_suspension
-						armor_type_slot = tank_welded_armor
-						engine_type_slot = tank_gasoline_engine
-						special_type_slot_1 = tank_radio_1
-						special_type_slot_2 = sloped_armor
-						special_type_slot_3 = smoke_launchers
-					}
-					upgrades = {
-						tank_nsb_engine_upgrade = 6
-						tank_nsb_armor_upgrade = 4
-					}
-					icon = "GFX_GER_advanced_medium_tank_medium"
-				}
-				create_equipment_variant = {
-					name = "Tiger I Ausf. A"
-					type = heavy_tank_chassis_2
-					design_team = mio:GER_porsche_organization #We feed on your tears
-					modules = {
-						main_armament_slot = tank_heavy_cannon
-						turret_type_slot = tank_heavy_three_man_tank_turret
-						suspension_type_slot = tank_interleaved_suspension
-						armor_type_slot = tank_welded_armor
-						engine_type_slot = tank_gasoline_engine
-						special_type_slot_1 = tank_radio_1
-						special_type_slot_2 = smoke_launchers
-						special_type_slot_3 = additional_machine_guns
-					}
-					upgrades = {
-						tank_nsb_engine_upgrade = 8
-						tank_nsb_armor_upgrade = 6
-					}
-					icon = "GFX_GER_advanced_heavy_tank_medium"
-				}
-			}
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
@@ -4609,11 +4443,24 @@ focus_tree = {
 			}
 
 			custom_effect_tooltip = generic_skip_one_line_tt
-
-
-			add_breakthrough_progress = {
-				specialization = specialization_air
-				value = 0.5
+			IF = {
+				limit = { 
+					65 = {
+						is_fully_controlled_by = ROOT
+						air_facility < 1
+						land_facility < 1
+						naval_facility < 1
+						nuclear_facility < 1
+					}
+				}
+				65 = {
+					add_building_construction = {
+						type = air_facility
+						level = 1
+						instant_build = yes
+						province = 514 
+					}
+				}
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt
 
@@ -6045,13 +5892,28 @@ focus_tree = {
 		complete_tooltip = {
 		}
 		completion_reward = {
-			add_doctrine_cost_reduction = {
-				name = GER_plan_z
-				cost_reduction = 0.25
-				uses = 3
-				category = fleet_in_being_tree
+			add_ideas = GER_plan_z_idea
+			custom_effect_tooltip = generic_skip_one_line_tt
+			IF = {
+				limit = { 
+					58 = {
+						is_fully_controlled_by = ROOT
+						air_facility < 1
+						land_facility < 1
+						naval_facility < 1
+						nuclear_facility < 1
+					}
+				}
+				58 = {
+					add_building_construction = {
+						type = naval_facility
+						level = 1
+						instant_build = yes
+						province = 6389 
+					}
+				}
 			}
-
+			custom_effect_tooltip = generic_skip_one_line_tt
 			if = {
 				limit = {
 					has_dlc = "Arms Against Tyranny"

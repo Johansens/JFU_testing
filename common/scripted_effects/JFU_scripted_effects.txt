@@ -1550,7 +1550,7 @@ JFU_pregrinded_effect = {
 		GER_erwin_rommel = {
 			add_unit_leader_trait = pre_grinded
 			add_unit_leader_trait = expert_improviser
-			add_unit_leader_trait = desert_fox
+			#add_unit_leader_trait = desert_fox
 			add_unit_leader_trait = trait_mountaineer
 			add_unit_leader_trait = hill_fighter
 			add_unit_leader_trait = panzer_leader
@@ -1573,7 +1573,7 @@ JFU_pregrinded_effect = {
 			add_unit_leader_trait = trait_engineer
 			add_unit_leader_trait = fortress_buster
 			add_unit_leader_trait = cavalry_leader
-			add_unit_leader_trait = desert_fox
+			#add_unit_leader_trait = desert_fox
 		}	
 		GER_fedor_von_bock = { add_attack = 2 }
 		GER_fedor_von_bock = { add_defense = 2 }
