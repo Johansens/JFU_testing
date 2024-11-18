@@ -544,6 +544,11 @@ recruit_character = ITA_giuseppe_bottai
 recruit_character = ITA_raffaele_de_courten
 recruit_character = ITA_antonio_gramsci
 
+recruit_character = ITA_robert_longhi
+recruit_character = ITA_mario_castoldi
+recruit_character = ITA_giovanni_giorgi
+recruit_character = ITA_filippo_bonfiglietti
+recruit_character = ITA_curio_bernardis
 
 ########################################
 ##### MISSIOLINIS - TRIGGER EVENTS #####
