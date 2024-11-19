@@ -6,7 +6,7 @@ guiTypes = {
 		show_position = { x= -6 y = 78 }
 		show_animation_type = decelerated
 		hide_animation_type = accelerated
-		animation_time = 300
+		animation_time = 000
 		size = { width = 550 height = 100%% }
 		
 		hide_sound = menu_close_window
@@ -843,17 +843,16 @@ guiTypes = {
 	
 	#------------------------- UPGRADES WINDOW ----------------------------
 	
-	containerWindowType = {
+	containerWindowType = {  
 		name = "intelligence_agency_upgrades_window"
 		position = { x = 0 y = 0 }
 		size = { width = 1092 height = 90% } # uses max_window_size for clamping
 		moveable = yes
-		fade_time = 500
+		fade_time = 1
 		fade_type = linear
 		orientation = CENTER
 		origo = center
 		show_sound = Spy_Agency_Branch_Upgrade_Window_Show_Sound
-		
 		
 		positionType = {
 			name = "max_window_size"
@@ -891,7 +890,7 @@ guiTypes = {
 			pdx_tooltip = "CLOSE"
 		}
 
-		instantTextboxType = {
+		instantTextboxType = { 
 			name = "upgrade_duration_title"
 			position = { x = 146 y = 54 }
 			font = "hoi_18mbs"
@@ -1014,16 +1013,28 @@ guiTypes = {
 		iconType = {
 			name = "civilian_factory_icon"
 			position = { x = 173 y = 35 }
-			spriteType = "GFX_non_available_factory_icon"
+			spriteType = "GFX_pol_power"
 			alwaystransparent = yes
-			scale = 0.8
+			scale = 1
+		}
+		instantTextboxType = { 
+			name = "num_factories"
+			position = { x = 11163 y = 50 }
+			font = "hoi_18mbs"
+			text = "12"
+			maxWidth = 40
+			maxHeight = 20
+			#format = center
+			vertical_alignment = center 			
+			format = center
+			alwaystransparent = yes
 		}
 		
 		instantTextboxType = { 
-			name = "num_factories"
-			position = { x = 163 y = 50 }
+			name = "pol_power"  
+			position = { x = 163 y = 50 } 
 			font = "hoi_18mbs"
-			text = "12"
+			text = "0.1"
 			maxWidth = 40
 			maxHeight = 20
 			#format = center
