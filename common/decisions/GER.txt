@@ -3554,18 +3554,18 @@ GER_reichskommissariats = {
 
 		available = {
 			custom_trigger_tooltip = {
-				tooltip = GER_reichskommissariat_highlighted_required_states_80_comp
+				tooltip = GER_reichskommissariat_highlighted_required_states_70_comp
 				10 = {
-					compliance > 80 
+					compliance > 70 
 				}
 				90 = {
-					compliance > 80 
+					compliance > 70 
 				} 
 				92 = {
-					compliance > 80 
+					compliance > 70 
 				}
 				88  = {
-					compliance > 80 
+					compliance > 70 
 				}
 				88 = {
 					is_controlled_by_ROOT_or_subject = yes
