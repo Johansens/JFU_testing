@@ -9086,6 +9086,12 @@ focus_tree = {
 				custom_effect_tooltip = GER_mol_rib_pact_tt
 				custom_effect_tooltip = needs_approval
 			}
+			hidden_effect = {
+				POL = { load_oob = "POL_spawn"}
+				HOL = { load_oob = "HOL_CHROM_SPAWN"}
+				BEL = { load_oob = "BEL_CHROM_SPAWN"}
+				DEN = { load_oob = "DEN_CHROM_SPAWN"}
+			}
 		}
 	}
 
