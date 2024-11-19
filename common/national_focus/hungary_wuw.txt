@@ -712,8 +712,8 @@ focus_tree = {
 		icon = GFX_focus_HUN_the_turul_association
 		prerequisite = { focus = wuw_HUN_absolute_rule_of_the_national_unity_party }
 		
-		x = 2
-		y = 1
+		x = 1
+		y = 2
 		relative_position_id = wuw_HUN_absolute_rule_of_the_national_unity_party
 
 		cost = 5
@@ -738,39 +738,6 @@ focus_tree = {
 		completion_reward = {
 
 			add_ideas = HUN_turul_association_idea
-
-		}
-	}
-
-	focus = {
-		id = wuw_HUN_carrying_on_arpads_legacy
-		icon = GFX_focus_HUN_carrying_on_arpads_legacy
-		prerequisite = { focus = wuw_HUN_the_turul_association }
-		
-		x = 0
-		y = 1
-		relative_position_id = wuw_HUN_the_turul_association
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 2
-		}
-
-		available = {
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = no
-		continue_if_invalid = yes
-		available_if_capitulated = no
-
-		completion_reward = {
-
-			add_country_leader_trait = HUN_arpads_successor_trait
 
 		}
 	}
