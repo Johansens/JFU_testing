@@ -2371,34 +2371,34 @@ characters = {
 				}
 			}
 
-			advisor = {
+			#advisor = {
 
-				slot = political_advisor
+			#	slot = political_advisor
 
-				idea_token = HUN_kalman_kanya
+			#	idea_token = HUN_kalman_kanya
 
-				allowed = {
-					original_tag = HUN
-				}
+			#	allowed = {
+			#		original_tag = HUN
+			#	}
 
-				available = {
-					NOT = {
-						OR = {
-							has_government = communism
-							has_government = democratic
-						}
-					}
-				}
+			#	available = {
+			#		NOT = {
+			#			OR = {
+			#				has_government = communism
+			#				has_government = democratic
+			#			}
+			#		}
+			#	}
 
-				traits = {
-					HUN_irredentist_foreign_minister 
-				}
+			#	traits = {
+			#		HUN_irredentist_foreign_minister 
+			#	}
 
-				ai_will_do = {
-					base = 1
-				}
-				
-			}
+			#	ai_will_do = {
+			#		base = 1
+			#	}
+
+			#}
 
 		}
 	}
@@ -2458,9 +2458,6 @@ characters = {
 				}
 
 				available = {
-					NOT = {
-						has_government = communism
-					}
 				}
 
 				traits = {
@@ -2638,12 +2635,6 @@ characters = {
 				}
 
 				available = {
-					NOT = {
-						OR = {
-							has_government = communism
-							has_government = democratic
-						}
-					}
 					has_completed_focus = wuw_HUN_strengthen_horthys_reign
 				}
 
@@ -2735,12 +2726,6 @@ characters = {
 			}
 
 			available = {
-				NOT = {
-					OR = {
-						has_government = communism
-						has_government = democratic
-					}
-				}
 				has_completed_focus = wuw_HUN_devalue_the_pengo
 			}
 
@@ -2766,42 +2751,42 @@ characters = {
 			}
 		}
 
-		advisor = {
+		#advisor = {
 
-			slot = political_advisor
+		#	slot = political_advisor
 
-			idea_token = HUN_pal_teleki
+		#	idea_token = HUN_pal_teleki
 
-			allowed = {
-				original_tag = HUN
-			}
+		#	allowed = {
+		#		original_tag = HUN
+		#	}
 
-			available = {
-				NOT = {
-					has_government = communism
-				}
-				# This is replaced by an on_action
-				#has_war = no 
-				NOT = {
-					has_global_flag = HUN_entered_an_offensive_war_flag
-				}
-			}
+		#	available = {
+		#		NOT = {
+		#			has_government = communism
+		#		}
+		#		# This is replaced by an on_action
+		#		#has_war = no 
+		#		NOT = {
+		#			has_global_flag = HUN_entered_an_offensive_war_flag
+		#		}
+		#	}
 
-			visible = {
-				NOT = {
-					has_global_flag = HUN_entered_an_offensive_war_flag
-				}
-			}
+		#	visible = {
+		#		NOT = {
+		#			has_global_flag = HUN_entered_an_offensive_war_flag
+		#		}
+		#	}
 
-			traits = {
-				HUN_scholary_politician
-			}
+		#	traits = {
+		#		HUN_scholary_politician
+		#	}
 
-			ai_will_do = {
-				base = 3
-			}
+		#	ai_will_do = {
+		#		base = 3
+		#	}
 
-		}
+		#}
 
 	}
 
@@ -2829,9 +2814,6 @@ characters = {
 			}
 
 			available = {
-				NOT = {
-					has_government = fascism
-				}
 			}
 
 			traits = {
@@ -2867,33 +2849,6 @@ characters = {
 			civilian = {
 				small = "GFX_portrait_HUN_fidel_palffy_small"
 			}
-		}
-
-		advisor = {
-
-			slot = political_advisor
-
-			idea_token = HUN_fidel_palffy
-
-			allowed = {
-				original_tag = HUN
-			}
-
-			visible = {
-			}
-
-			available = {
-			}
-
-			# He should get a better trait through the focus wuw_HUN_sway_the_count
-			traits = {
-				nazi_sympathizer
-			}
-
-			ai_will_do = {
-				base = 1
-			}
-
 		}
 
 	}
@@ -2960,9 +2915,6 @@ characters = {
 			}
 
 			available = {
-				NOT = {
-					has_government = communism
-				}
 				has_completed_focus = wuw_HUN_pass_statute_xix
 			}
 
@@ -3041,38 +2993,6 @@ characters = {
 			}
 		}
 
-		advisor = {
-
-			slot = political_advisor
-
-			idea_token = HUN_sandor_garbai
-
-			allowed = {
-				original_tag = HUN
-			}
-
-			visible = {
-				NOT = {
-					OR = {
-						has_completed_focus = wuw_HUN_continue_the_regency
-					}
-				}
-			}
-
-			available = {
-				has_government = communism
-			}
-
-			traits = {
-				socialist_economist
-			}
-
-			ai_will_do = {
-				base = 3
-			}
-
-		}
-
 	}
 
 	HUN_jozsef_kelen = {
@@ -3083,41 +3003,6 @@ characters = {
 			civilian = {
 				small = "GFX_portrait_HUN_jozsef_kelen_small"
 			}
-		}
-
-		advisor = {
-
-			slot = political_advisor
-
-			idea_token = HUN_jozsef_kelen
-
-			allowed = {
-				original_tag = HUN
-			}
-
-			visible = {
-				NOT = {
-					OR = {
-						has_completed_focus = wuw_HUN_continue_the_regency
-					}
-				}
-			}
-
-			available = {
-				OR = {
-					has_government = communism
-					has_government = democratic
-				}
-			}
-
-			traits = {
-				peoples_commisar_of_heavy_industries
-			}
-
-			ai_will_do = {
-				base = 2
-			}
-
 		}
 
 	}
@@ -3132,34 +3017,34 @@ characters = {
 			}
 		}
 
-		advisor = {
+		#advisor = {
 
-			slot = political_advisor
+		#	slot = political_advisor
 
-			idea_token = HUN_istvan_bethlen
+		#	idea_token = HUN_istvan_bethlen
 
-			allowed = {
-				original_tag = HUN
-			}
+		#	allowed = {
+		#		original_tag = HUN
+		#	}
 
-			available = {
-				NOT = {
-					OR = {
-						has_government = communism
-						has_government = fascism
-					}
-				}
-			}
+		#	available = {
+		#		NOT = {
+		#			OR = {
+		#				has_government = communism
+		#				has_government = fascism
+		#			}
+		#		}
+		#	}
 
-			traits = {
-				HUN_popular_liberal
-			}
+		#	traits = {
+		#		HUN_popular_liberal
+		#	}
 
-			ai_will_do = {
-				base = 1
-			}
+		#	ai_will_do = {
+		#		base = 1
+		#	}
 
-		}
+		#}
 
 	}
 
@@ -3213,43 +3098,6 @@ characters = {
 			}
 		}
 
-		advisor = {
-
-			slot = political_advisor
-
-			idea_token = HUN_imre_nagy
-
-			allowed = {
-				original_tag = HUN
-			}
-
-			visible = {
-				NOT = {
-					OR = {
-						has_completed_focus = wuw_HUN_continue_the_regency
-					}
-				}
-			}
-
-			available = {
-				NOT = {
-					OR = {
-						has_government = neutrality
-						has_government = fascism
-					}
-				}
-			}
-
-			traits = {
-				HUN_internationalist_marxist
-			}
-
-			ai_will_do = {
-				base = 1
-			}
-
-		}
-
 	}
 
 	HUN_miklos_horthy_jr = {
@@ -3262,34 +3110,34 @@ characters = {
 			}
 		}
 
-		advisor = {
+		#advisor = {
 
-			slot = political_advisor
+		#	slot = political_advisor
 
-			idea_token = HUN_miklos_horthy_jr
+		#	idea_token = HUN_miklos_horthy_jr
 
-			allowed = {
-				original_tag = HUN
-			}
+		#	allowed = {
+		#		original_tag = HUN
+		#	}
 
-			available = {
-				NOT = {
-					OR = {
-						has_government = communism
-						has_government = fascism
-					}
-				}
-			}
+		#	available = {
+		#		NOT = {
+		#			OR = {
+		#				has_government = communism
+		#				has_government = fascism
+		#			}
+		#		}
+		#	}
 
-			traits = {
-				modernizer_and_diplomat
-			}
+		#	traits = {
+		#		modernizer_and_diplomat
+		#	}
 
-			ai_will_do = {
-				base = 1
-			}
+		#	ai_will_do = {
+		#		base = 1
+		#	}
 
-		}
+		#}
 
 	}
 
