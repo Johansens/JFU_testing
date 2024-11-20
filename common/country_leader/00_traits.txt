@@ -13931,44 +13931,4 @@ leader_traits = {
 			}
 		}
 	}
-	#ENG_arthur Harris
-	victory_through_destruction = {
-		sprite = 14
-		cat_strategic_destruction_cost_factor = -0.15
-		air_strategic_bomber_bombing_factor = 0.10
-		ai_will_do = {
-			factor = 1
-		}
-	}
-	#ENG_hugh_dowding
-	victory_through_fighter = {
-		sprite = 14
-		cat_operational_integrity_cost_factor = -0.15
-		air_superiority_detect_factor = 0.10
-		ai_will_do = {
-			factor = 1
-		}
-	}
-	#Eng Oswald#
-	wartime_minister_of_labour = {
-		random = no
-		sprite = 10
-		industrial_capacity_factory = 0.05
-		production_factory_max_efficiency_factor = 0.025
-		line_change_production_efficiency_factor = 0.025
-		political_power_factor = -0.05
-		
-	}
-	# nevile_henderson #
-	economic_organizer_1 = {
-		random = no
-		sprite = 10
-
-		stability_factor = 0.05
-		global_building_slots_factor = 0.1
-
-		ai_will_do = {
-			factor = 1
-		}
-	}
 }

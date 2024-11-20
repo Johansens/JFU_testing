@@ -901,10 +901,7 @@ characters={
 			}
 		}
 		advisor={
-			available  = {
-				has_completed_focus = ENG_fighter_command
-				}
-			cost = 150
+			cost = 100
 			slot = theorist
 			idea_token = hugh_dowding
 			ledger = air
@@ -912,7 +909,7 @@ characters={
 				original_tag = ENG
 			}
 			traits = {
-				victory_through_fighter
+				air_warfare_theorist
 			}
 		}
 	}
@@ -925,9 +922,6 @@ characters={
 			}
 		}
 		advisor={
-			available  = {
-				has_completed_focus = ENG_the_bomber_command
-				}
 			cost = 150
 			slot = theorist
 			idea_token = arthur_harris
@@ -937,7 +931,7 @@ characters={
 			}
 			
 			traits = {
-				victory_through_destruction
+				victory_through_airpower
 			}
 		}
 	}
@@ -1383,11 +1377,8 @@ characters={
 			allowed  = {
 				original_tag  = ENG
 			}
-			available  = {
-				has_completed_focus = ENG_reform_our_carbinet
-			}
 			traits  = {
-				economic_organizer_1 
+				backroom_backstabber 
 			}
 		}
 	}
@@ -1424,15 +1415,11 @@ characters={
 		advisor={
 			slot = political_advisor
 			idea_token = ENG_leslie_hore_belisha
-			available  = {
-				has_completed_focus = ENG_reform_our_carbinet
-			}
 			allowed  = {
 				original_tag  = ENG
-				has_dlc = "Man the Guns"
 			}
 			traits  = {
-				wartime_minister_of_labour 
+				armaments_organizer 
 			}
 		}
 	}
@@ -1515,5 +1502,4 @@ characters={
 			}
 		}
 	}
-
 }
