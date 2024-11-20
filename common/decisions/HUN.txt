@@ -231,8 +231,8 @@ HUN_gyor_program_initiatives_category = {
 			}
 			
 			add_tech_bonus = {
-				bonus = 0.5
-				uses = 2
+				bonus = 1
+				uses = 1
 				category = artillery
 			}	
 			
@@ -310,15 +310,9 @@ HUN_gyor_program_initiatives_category = {
 			}
 			
 			add_tech_bonus = {
-				bonus = 0.3
+				bonus = 1
 				uses = 1
 				category = motorized_equipment
-			}
-
-			add_tech_bonus = {
-				bonus = 0.3
-				uses = 1
-				category = light_air
 			}	
 			
 
@@ -364,7 +358,7 @@ HUN_gyor_program_initiatives_category = {
 		cost = 50
 
 		modifier = {
-			consumer_goods_factor = 0.2
+			consumer_goods_factor = 0.3
 		}
 
 		complete_effect = { 
@@ -584,7 +578,7 @@ HUN_gyor_program_initiatives_category = {
 			army_experience = 25
 			
 			add_tech_bonus = {
-				bonus = 0.5
+				bonus = 1
 				uses = 1
 				category = cat_medium_armor
 			}	
@@ -657,14 +651,6 @@ HUN_gyor_program_initiatives_category = {
 					instant_build = yes
 				}	
 			}
-			
-			add_tech_bonus = {
-				bonus = 0.5
-				uses = 1
-				category = air_equipment
-			}	
-			
-
 		} 
 
 	}
@@ -706,7 +692,7 @@ HUN_gyor_program_initiatives_category = {
 		cost = 25
 
 		modifier = {
-			consumer_goods_factor = 0.15
+			consumer_goods_factor = 0.20
 		}
 
 		complete_effect = { 
@@ -735,69 +721,6 @@ HUN_gyor_program_initiatives_category = {
 					level = 1
 					instant_build = yes
 				}
-			}
-			
-
-		} 
-
-	}
-
-	# Invest in the Dunai Repülőgépgyár
-	 HUN_invest_in_dunai_repulogepgyar_decision  = {
-
-		priority = 92
-
-		icon = GFX_decision_generic_air
-
-		ai_will_do = {
-			base = 5
-		}
-
-		allowed = {  
-			original_tag = HUN
-		}
-
-		visible = { 
-			has_completed_focus = wuw_HUN_announce_the_gyor_program 
-			NOT = {
-				OR = {
-					has_country_flag = HUN_invested_in_dunai_repulogepgyar_flag
-				}
-			}
-		}
-
-		available = {
-			has_completed_focus = wuw_HUN_announce_the_gyor_program
-			has_country_flag = HUN_activated_huba_1_flag
-			any_core_state = {
-				is_fully_controlled_by = ROOT
-			}
-		} 
-
-		days_remove = 35
-
-		cost = 35
-
-		modifier = {
-			consumer_goods_factor = 0.15
-		}
-
-		complete_effect = { 
-			  
-		}
-
-		remove_effect = {
-			hidden_effect = {
-				set_country_flag = HUN_invested_in_dunai_repulogepgyar_flag
-			}
-
-			air_experience = 15
-
-			add_tech_bonus = {
-				name = HUN_tac_focus
-				bonus = 0.3
-				uses = 1
-				category = medium_air
 			}
 			
 
@@ -866,10 +789,6 @@ HUN_gyor_program_initiatives_category = {
 		} 
 
 	}
-
-
-
-
 }
 
 # Greater Hungarian Territorial Revision
