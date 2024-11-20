@@ -779,54 +779,6 @@ focus_tree = {
 		}
 	}
 
-	focus = {
-		id = coastal_command_focus
-		prerequisite = { focus = ENG_naval_rearment }
-		icon = GFX_focus_generic_multi_role_aircraft
-		x = 5
-		y = 1
-		relative_position_id = ENG_naval_rearment
-		cost = 5
-		ai_will_do = {
-			factor = 1
-		}
-
-		available_if_capitulated = yes
-		search_filters = {FOCUS_FILTER_RESEARCH}
-		completion_reward = {
-			if = {
-				limit = {
-					NOT = { has_dlc = "By Blood Alone" }
-				}
-				air_experience = 25
-				add_tech_bonus = {
-					name = coastal_command_focus
-					bonus = 1.0
-					uses = 2
-					category = naval_bomber
-					category = cas_bomber
-				}
-			}
-			else_if = {
-				limit = {
-					has_dlc = "By Blood Alone"
-				}
-				air_experience = 25
-				add_tech_bonus = {
-					name = coastal_command_focus
-					bonus = 1.0
-					uses = 1
-					technology = air_torpedoe_2
-				}
-				add_doctrine_cost_reduction = {
-					name = ENG_coastal_command_focus #land_doc_bonus
-					cost_reduction = 0.5
-					uses = 1
-					category = air_doctrine
-				}
-			}
-		}
-	}
 
 	focus = {
 		id = aircraft_production_focus
@@ -933,7 +885,7 @@ focus = {
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
-			mio:Light_aircraft_designer_organization = {
+			mio:ENG_light_aircraft_organization = {
 					add_mio_size = 3
 					add_mio_funds_gain_factor = 0.25
 					add_mio_research_bonus = 0.05
@@ -1659,7 +1611,7 @@ focus = {
 				navy_experience = 25
 				air_experience = 25			
 			}
-			dd_political_power = 60
+			add_political_power = 60
 			CAN = {
 				if = {
 					limit = {
@@ -2311,88 +2263,44 @@ focus = {
 		ai_will_do = {
 			factor = 1
 		}
-	# Files vom Alten Focus Tree kopieren #
+
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 						# Singapore
 			336 = {
-				if = {
-					limit = {
-						OR = {
-							is_controlled_by = ROOT
-							AND = {
-								is_controlled_by = MAL
-								MAL = { is_in_faction_with = ROOT }
-							}
-						}
-					}
-					add_building_construction = {
-						type = air_base
-						level = 2
-						instant_build = yes
-					}
-					# Singapore
-					add_building_construction = {
-						type = naval_base
-						level = 2
-						province = 12299
-						instant_build = yes
-					}
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+				# Singapore
+				add_building_construction = {
+					type = naval_base
+					level = 2
+					province = 12299
+					instant_build = yes
 				}								
 			}
 			# Egypt
 			446 = {
-				if = {
-					limit = {
-						OR = {
-							is_controlled_by = ROOT
-							AND = {
-								is_controlled_by = EGY
-								EGY = { is_in_faction_with = ROOT }
-							}
-						}
-					}
-					add_building_construction = {
-						type = air_base
-						level = 2
-						instant_build = yes
-					}
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
 				}								
 			}
 			447 = {
-				if = {
-					limit = {
-						OR = {
-							is_controlled_by = ROOT
-							AND = {
-								is_controlled_by = EGY
-								EGY = { is_in_faction_with = ROOT }
-							}
-						}
-					}
-					# Alexandria
-					add_building_construction = {
-						type = naval_base
-						level = 2
-						province = 4076
-						instant_build = yes
-					}
+				add_building_construction = {
+					type = naval_base
+					level = 2
+					province = 4076
+					instant_build = yes
 				}								
 			}
 			# Nova Scotia
 			464 = {
-				if = {
-					limit = {
-						OR = {
-							is_controlled_by = ROOT
-							AND = {
-								is_controlled_by = CAN
-								CAN = { is_in_faction_with = ROOT }
-							}
-						}
-					}
-					add_building_construction = {
+				add_building_construction = {
 						type = air_base
 						level = 2
 						instant_build = yes
@@ -2403,52 +2311,24 @@ focus = {
 						level = 2
 						province = 7361
 						instant_build = yes
-					}
 				}								
 			}
 			# Malta
 			116 = {
-				if = {
-					limit = {
-						OR = {
-							is_controlled_by = ROOT
-							AND = {
-								is_controlled_by = MAL
-								MAL = { is_in_faction_with = ROOT }
-							}
-						}
-					}
-					add_building_construction = {
-						type = air_base
-						level = 1
-						instant_build = yes
-					}
+				add_building_construction = {
+					type = air_base
+					level = 1
+					instant_build = yes
 				}								
 			}
 			# Gibraltar
 			118 = {
-				if = {
-					limit = {
-						is_controlled_by = ROOT
-					}
-					add_building_construction = {
-						type = bunker
-						level = 1
-						province = 4135
-						instant_build = yes
-					}
+				add_building_construction = {
+					type = bunker
+					level = 1
+					province = 4135
+					instant_build = yes
 				}								
-			}
-			hidden_effect = {
-				if = {
-					limit = {
-						has_game_rule = {
-							rule = obsolete_focus_branches_visibility
-							option = HIDE
-						}
-					}
-					mark_focus_tree_layout_dirty = yes
-				}
 			}
 		}	
 	}
@@ -2770,6 +2650,54 @@ focus = {
 		}
 	}
 
+	focus = {
+		id = coastal_command_focus
+		prerequisite = { focus = ENG_naval_rearment }
+		icon = GFX_focus_generic_multi_role_aircraft
+		x = 5
+		y = 1
+		relative_position_id = ENG_naval_rearment
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_RESEARCH}
+		completion_reward = {
+			if = {
+				limit = {
+					NOT = { has_dlc = "By Blood Alone" }
+				}
+				air_experience = 25
+				add_tech_bonus = {
+					name = coastal_command_focus
+					bonus = 1.0
+					uses = 2
+					category = naval_bomber
+					category = cas_bomber
+				}
+			}
+			else_if = {
+				limit = {
+					has_dlc = "By Blood Alone"
+				}
+				air_experience = 25
+				add_tech_bonus = {
+					name = coastal_command_focus
+					bonus = 1.0
+					uses = 1
+					technology = air_torpedoe_2
+				}
+				add_doctrine_cost_reduction = {
+					name = ENG_coastal_command_focus #land_doc_bonus
+					cost_reduction = 0.5
+					uses = 1
+					category = air_doctrine
+				}
+			}
+		}
+	}
 	focus = {
 		id = ENG_focus_on_sub_defense
 

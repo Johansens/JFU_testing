@@ -926,8 +926,7 @@ characters={
 		}
 		advisor={
 			available  = {
-				has_completed_focus = ENG_the_bomber_command
-				}
+			}
 			cost = 150
 			slot = theorist
 			idea_token = arthur_harris
