@@ -13337,6 +13337,608 @@ focus_tree = {
 		}
 	}
 
+# Herrschers Endsieg#
+
+focus = {
+		id = GER_fall_of_france_1
+
+		icon = GFX_focus_GER_remilitarize_the_rhineland
+		alternate_icon = GFX_focus_GER_remilitarize_the_rhineland_historical
+
+		x = 100
+		y = 0
+		
+
+		cost = 5
+
+		bypass = {
+
+		}
+
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL FOCUS_FILTER_ARMY_XP }	
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = GER_götterdämerung
+
+		icon = GFX_focus_GER_remilitarize_the_rhineland
+		alternate_icon = GFX_focus_GER_remilitarize_the_rhineland_historical
+		prerequisite = { focus = GER_fall_of_france_1}
+		x = 0
+		y = 1
+		relative_position_id = GER_fall_of_france_1
+
+		cost = 5
+
+		bypass = {
+
+		}
+
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL FOCUS_FILTER_ARMY_XP }	
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = GER_stay_loyal
+
+		icon = GFX_focus_GER_remilitarize_the_rhineland
+		alternate_icon = GFX_focus_GER_remilitarize_the_rhineland_historical
+		prerequisite = { focus = GER_götterdämerung}
+		x = -3
+		y = 2
+		relative_position_id = GER_fall_of_france_1
+
+		cost = 5
+
+		bypass = {
+
+		}
+
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL FOCUS_FILTER_ARMY_XP }	
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = GER_we_can_only_trust_the_ss
+
+		icon = GFX_focus_GER_remilitarize_the_rhineland
+		alternate_icon = GFX_focus_GER_remilitarize_the_rhineland_historical
+		prerequisite = { focus = GER_stay_loyal}
+		x = -5
+		y = 3
+		relative_position_id = GER_fall_of_france_1
+
+		cost = 5
+
+		bypass = {
+
+		}
+
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL FOCUS_FILTER_ARMY_XP }	
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = GER_form_the_SS_grenadier_devision
+
+		icon = GFX_focus_GER_remilitarize_the_rhineland
+		alternate_icon = GFX_focus_GER_remilitarize_the_rhineland_historical
+		prerequisite = { focus = GER_we_can_only_trust_the_ss}
+		x = -6
+		y = 4
+		relative_position_id = GER_fall_of_france_1
+
+		cost = 5
+
+		bypass = {
+
+		}
+
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL FOCUS_FILTER_ARMY_XP }	
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = GER_the_new_high_command
+
+		icon = GFX_focus_GER_remilitarize_the_rhineland
+		alternate_icon = GFX_focus_GER_remilitarize_the_rhineland_historical
+		prerequisite = { focus = GER_we_can_only_trust_the_ss}
+		x = -4
+		y = 4
+		relative_position_id = GER_fall_of_france_1
+
+		cost = 5
+
+		bypass = {
+
+		}
+
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL FOCUS_FILTER_ARMY_XP }	
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = GER_the_volksturm
+
+		icon = GFX_focus_GER_remilitarize_the_rhineland
+		alternate_icon = GFX_focus_GER_remilitarize_the_rhineland_historical
+		prerequisite = { focus = GER_stay_loyal}
+		x = -8
+		y = 3
+		relative_position_id = GER_fall_of_france_1
+
+		cost = 5
+
+		bypass = {
+
+		}
+
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL FOCUS_FILTER_ARMY_XP }	
+
+		completion_reward = {
+
+		}
+	}
+
+
+	focus = {
+		id = GER_the_untinkable
+
+		icon = GFX_focus_GER_remilitarize_the_rhineland
+		alternate_icon = GFX_focus_GER_remilitarize_the_rhineland_historical
+		prerequisite = { focus = GER_götterdämerung}
+		x = 5
+		y = 2
+		relative_position_id = GER_fall_of_france_1
+
+		cost = 5
+
+		bypass = {
+
+		}
+
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL FOCUS_FILTER_ARMY_XP }	
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = GER_only_the_army_can_lead
+
+		icon = GFX_focus_GER_remilitarize_the_rhineland
+		alternate_icon = GFX_focus_GER_remilitarize_the_rhineland_historical
+		prerequisite = { focus = GER_the_untinkable}
+		x = 3
+		y = 3
+		relative_position_id = GER_fall_of_france_1
+
+		cost = 5
+
+		bypass = {
+
+		}
+
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL FOCUS_FILTER_ARMY_XP }	
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = GER_reorganize_the_heer
+
+		icon = GFX_focus_GER_remilitarize_the_rhineland
+		alternate_icon = GFX_focus_GER_remilitarize_the_rhineland_historical
+		prerequisite = { focus = GER_only_the_army_can_lead}
+		x = 1
+		y = 4
+		relative_position_id = GER_fall_of_france_1
+
+		cost = 5
+
+		bypass = {
+
+		}
+
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL FOCUS_FILTER_ARMY_XP }	
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = GER_follow_manstein
+
+		icon = GFX_focus_GER_remilitarize_the_rhineland
+		alternate_icon = GFX_focus_GER_remilitarize_the_rhineland_historical
+		prerequisite = { focus = GER_reorganize_the_heer}
+		x = 0
+		y = 5
+		relative_position_id = GER_fall_of_france_1
+
+		cost = 5
+
+		bypass = {
+
+		}
+
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL FOCUS_FILTER_ARMY_XP }	
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = GER_follow_runstädt
+
+		icon = GFX_focus_GER_remilitarize_the_rhineland
+		alternate_icon = GFX_focus_GER_remilitarize_the_rhineland_historical
+		prerequisite = { focus = GER_reorganize_the_heer}
+		x = 2
+		y = 5
+		relative_position_id = GER_fall_of_france_1
+
+		cost = 5
+
+		bypass = {
+
+		}
+
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL FOCUS_FILTER_ARMY_XP }	
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = GER_only_the_army_can_lead
+
+		icon = GFX_focus_GER_remilitarize_the_rhineland
+		alternate_icon = GFX_focus_GER_remilitarize_the_rhineland_historical
+		prerequisite = { focus = GER_the_untinkable}
+		x = 3
+		y = 3
+		relative_position_id = GER_fall_of_france_1
+
+		cost = 5
+
+		bypass = {
+
+		}
+
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL FOCUS_FILTER_ARMY_XP }	
+
+		completion_reward = {
+
+		}
+	}
+
+focus = {
+		id = GER_stay_with_the_kaiser
+
+		icon = GFX_focus_GER_remilitarize_the_rhineland
+		alternate_icon = GFX_focus_GER_remilitarize_the_rhineland_historical
+		prerequisite = { focus = GER_the_untinkable}
+		x = 8
+		y = 3
+		relative_position_id = GER_fall_of_france_1
+
+		cost = 5
+
+		bypass = {
+
+		}
+
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL FOCUS_FILTER_ARMY_XP }	
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = GER_share_r_d_programms
+
+		icon = GFX_focus_GER_remilitarize_the_rhineland
+		alternate_icon = GFX_focus_GER_remilitarize_the_rhineland_historical
+		prerequisite = { focus = GER_stay_with_the_kaiser}
+		x = 12
+		y = 4
+		relative_position_id = GER_fall_of_france_1
+
+		cost = 5
+
+		bypass = {
+
+		}
+
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL FOCUS_FILTER_ARMY_XP }	
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = GER_industrial_support
+
+		icon = GFX_focus_GER_remilitarize_the_rhineland
+		alternate_icon = GFX_focus_GER_remilitarize_the_rhineland_historical
+		prerequisite = { focus = GER_share_r_d_programms}
+		x = 13
+		y = 5
+		relative_position_id = GER_fall_of_france_1
+
+		cost = 5
+
+		bypass = {
+
+		}
+
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL FOCUS_FILTER_ARMY_XP }	
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = GER_pool_of_technologie_know_how
+
+		icon = GFX_focus_GER_remilitarize_the_rhineland
+		alternate_icon = GFX_focus_GER_remilitarize_the_rhineland_historical
+		prerequisite = { focus = GER_share_r_d_programms}
+		x = 11
+		y = 5
+		relative_position_id = GER_fall_of_france_1
+
+		cost = 5
+
+		bypass = {
+
+		}
+
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL FOCUS_FILTER_ARMY_XP }	
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = GER_releas_the_inocent
+
+		icon = GFX_focus_GER_remilitarize_the_rhineland
+		alternate_icon = GFX_focus_GER_remilitarize_the_rhineland_historical
+		prerequisite = { focus = GER_stay_with_the_kaiser}
+		x = 8
+		y = 4
+		relative_position_id = GER_fall_of_france_1
+
+		cost = 5
+
+		bypass = {
+
+		}
+
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL FOCUS_FILTER_ARMY_XP }	
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = GER_found_the_pna
+
+		icon = GFX_focus_GER_remilitarize_the_rhineland
+		alternate_icon = GFX_focus_GER_remilitarize_the_rhineland_historical
+		prerequisite = { focus = GER_releas_the_inocent}
+		x = 7
+		y = 5
+		relative_position_id = GER_fall_of_france_1
+
+		cost = 5
+
+		bypass = {
+
+		}
+
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL FOCUS_FILTER_ARMY_XP }	
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = GER_found_the_polnish
+
+		icon = GFX_focus_GER_remilitarize_the_rhineland
+		alternate_icon = GFX_focus_GER_remilitarize_the_rhineland_historical
+		prerequisite = { focus = GER_releas_the_inocent}
+		x = 9
+		y = 5
+		relative_position_id = GER_fall_of_france_1
+
+		cost = 5
+
+		bypass = {
+
+		}
+
+		available = {
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL FOCUS_FILTER_ARMY_XP }	
+
+		completion_reward = {
+
+		}
+	}
 
 ######################################
 ######### INNER CIRCLE DEBUG #########
