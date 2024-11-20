@@ -1869,4 +1869,10 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/ger/focus_GER_recruit.dds"
 	}
     
+
+    SpriteType = {
+		name = "GFX_TODT"
+		texturefile = "gfx/interface/goals/ger/todt.dds"
+	}
+    
 }

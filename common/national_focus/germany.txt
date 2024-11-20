@@ -6084,7 +6084,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_construct_aircraft_carriers
-		icon = GFX_focus_GER_graf_zeppelin
+		icon = GFX_FOCUS_GER_GRAF
 		prerequisite = { focus = GER_expand_kriegsmarinewerft }
 
 		x = -1
@@ -6292,7 +6292,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_grosskampfschiff_construction
-		icon = GFX_focus_generic_navy_battleship2
+		icon = GFX_FOCUS_GER_BISMARCK
 		prerequisite = { focus = GER_expand_kriegsmarinewerft }
 
 		x = 1
@@ -8111,6 +8111,7 @@ focus_tree = {
 			POL = { transfer_state = 72 }
 			GER = { transfer_state = 69 }
 			GER = { transfer_state = 74 }
+			GER = { transfer_state = 972 }
 			news_event = { hours = 6 id = JFU_events.6 }
 			add_named_threat = { threat = 5 name = GER_demand_sudetenland_threat }
 			set_country_flag = sudetenland_acquired
@@ -8933,7 +8934,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GER_focus_fall_blau
-		icon = GFX_GER_DANZIG_OR_WAR_ICON
+		icon = GFX_focus_ger_strike_at_the_source
 		prerequisite = { focus = GER_war_with_the_ussr}
 		available_if_capitulated = no
 		
@@ -8994,7 +8995,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_ostwall
-		icon = GFX_goal_generic_fortify_city
+		icon = GFX_focus_ger_bulwark_against_bolshevism
 		prerequisite = { focus = GER_focus_fall_blau }
 		available = {
 			custom_trigger_tooltip = { tooltip = blau_failed date > 1942.11.22 }
@@ -9028,7 +9029,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GER_focus_citadel
-		icon = GFX_GER_MOSCOW_PUSH
+		icon = GFX_focus_generic_spread_fascism
 		prerequisite = { focus = GER_focus_fall_blau}
 		available_if_capitulated = no
 		
@@ -12401,7 +12402,7 @@ focus_tree = {
 
 	focus = { 
 		id = GER_total_war
-		icon = GFX_GER_TOTAL_WAR
+		icon = GFX_focus_ger_reichskommisariats
 		prerequisite = { focus = GER_fall_of_france }
 		
 		available = {
@@ -12885,7 +12886,7 @@ focus_tree = {
 
 	focus = {
 		id = GER_todt
- 		icon = GFX_GER_ORGANISE_TODT
+ 		icon = GFX_TODT
 		prerequisite = { focus = GER_total_war }
 		x = 0
 		y = 2
@@ -12959,7 +12960,7 @@ focus_tree = {
 	}
 	focus = { 
 		id = GER_endsieg_1
-		icon = GFX_GER_ENDSIEG
+		icon = GFX_focus_ger_reichskommisariats
 		prerequisite = { focus = GER_endsieg_2 focus = GER_endsieg_3 }
 		x = 0
 		y = 3
