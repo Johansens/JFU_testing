@@ -8048,12 +8048,11 @@ focus_tree = {
 			add_tech_bonus = {
 				name = GER_innovative_warfare
 				#bonus = 1
-				ahead_reduction = 2
+				ahead_reduction = 1
 				uses = 1
 				category = armor
 				category = artillery
 				category = naval_equipment
-				category = air_equipment
 			}
 
 			custom_effect_tooltip = generic_skip_one_line_tt
@@ -12851,6 +12850,27 @@ focus_tree = {
 
 		completion_reward = {
 			set_cosmetic_tag = GER_greater_german_reich
+			IF = {
+				limit = {
+					has_dlc = "Gotterdammerung"
+				}
+				custom_effect_tooltip = GER_build_volkshalle_landmark_tt
+				hidden_effect = {
+					64 = {
+						remove_building = {
+							type = landmark_berlin_reichstag
+							level = 1
+							province = 6521
+						}
+						add_building_construction = {
+							type = landmark_berlin_volkshalle
+							level = 1
+							instant_build = yes
+							province = 6521
+						}
+					}
+				}
+			}
 		}
 	}
 	focus = { 
@@ -12881,6 +12901,7 @@ focus_tree = {
 					add_ideas = service_by_requirement 
 				}
 			}
+	
 		}
 	}
 
@@ -13079,7 +13100,7 @@ focus_tree = {
 	}
 	focus = { 
 		id = GER_steinercounteroffensive
-		icon = GFX_GER_LOYALTY_TO_THE_FUHRER
+		icon = GFX_focus_ger_reichskommisariats
 		prerequisite = { focus = GER_endsieg_1}
 		
 		available = {
