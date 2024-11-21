@@ -13,6 +13,7 @@ political_actions = {
 			has_government = democratic
 			has_country_leader = { ruling_only = yes character = ENG_winston_churchill }
 			has_war_with = GER
+			has_completed_focus = ENG_reform_our_carbinet
 		}
 
 		cost = 50

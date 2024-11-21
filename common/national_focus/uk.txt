@@ -18,7 +18,7 @@ focus_tree = {
 		}
 	}
 	default = no
-
+	continuous_focus_position = { x = 50 y = 1400 }
 	focus = {
 		id = crypto_bomb_focus
 		available = {
@@ -413,7 +413,7 @@ focus_tree = {
 		continue_if_invalid = yes
 
 		icon = GFX_FOCUS_ENG_GENERAL
-		x = 6
+		x = 4
 		y = 1
 		relative_position_id = limited_rearmament_focus
 		cost = 10
@@ -800,13 +800,14 @@ focus_tree = {
 	}
 #Herrschers änderung air #
 
-focus = {
+	focus = {
 		id = ENG_the_raf
 		prerequisite = { focus = ENG_bomber_modernization }
 		prerequisite = { focus = ENG_fighter_modernization }
 		icon = GFX_goal_generic_build_airforce
-		x = 9
-		y = 5
+		relative_position_id = ENG_bomber_modernization
+		x = 1
+		y = 1
 		cost = 5
 		ai_will_do = {
 			factor = 3
@@ -816,16 +817,16 @@ focus = {
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 			add_ideas = ENG_the_raf_1		
-			}	
+		}	
 	}
-focus = {
+	focus = {
 		id = ENG_fighter_command
 		prerequisite = { focus = ENG_the_raf }
 		mutually_exclusive = { focus = ENG_bomber_command}
-
-		icon = GFX_goal_generic_air_fighter2
-		x = 8
-		y = 6
+		relative_position_id = ENG_the_raf
+		icon = GFX_ENG_FIGHTER_COMMAND
+		x = -1
+		y = 1
 		cost = 5
 		ai_will_do = {
 			factor = 3
@@ -842,16 +843,17 @@ focus = {
 		completion_reward = {
 			custom_effect_tooltip = available_theorist
             show_ideas_tooltip = hugh_dowding		
-			}	
+		}	
 	}	
 
-focus = {
+	focus = {
 		id = ENG_focus_on_the_skies 
 		prerequisite = { focus = ENG_fighter_command }
 		
 		icon = GFX_focus_generic_armored_air_support
-		x = 8
-		y = 7
+		relative_position_id = ENG_fighter_command
+		x = 0
+		y = 1
 		cost = 5
 		ai_will_do = {
 			factor = 3
@@ -862,20 +864,21 @@ focus = {
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 			custom_effect_tooltip = ENG_military_stuff_adviser
-				swap_ideas = {
+			swap_ideas = {
 				remove_idea = ENG_the_raf_1
 				add_idea = ENG_the_raf_fighter_command_1
-				}					
-			}	
+			}					
+		}	
 	}			
 
-focus = {
+	focus = {
 		id = ENG_the_supermarine
 		prerequisite = { focus = ENG_focus_on_the_skies }
 		
 		icon = GFX_focus_generic_aircraft_production
-		x = 8
-		y = 8
+		relative_position_id = ENG_focus_on_the_skies
+		x = 0
+		y = 1
 		cost = 5
 		ai_will_do = {
 			factor = 3
@@ -886,9 +889,9 @@ focus = {
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 			mio:ENG_light_aircraft_organization = {
-					add_mio_size = 3
-					add_mio_funds_gain_factor = 0.25
-					add_mio_research_bonus = 0.05
+				add_mio_size = 3
+				add_mio_funds_gain_factor = 0.25
+				add_mio_research_bonus = 0.05
 			}
 			swap_ideas = {
 				remove_idea = british_fighter_discount
@@ -897,14 +900,14 @@ focus = {
 		}	
 	}
 
-focus = {
+	focus = {
 		id = ENG_bomber_command
 		prerequisite = { focus = ENG_the_raf }
 		mutually_exclusive = { focus = ENG_fighter_command }
-
+		relative_position_id = ENG_the_raf
 		icon = GFX_focus_SWE_marauder_bombers
-		x = 10
-		y = 6
+		x = 1
+		y = 1
 		cost = 5
 		ai_will_do = {
 			factor = 3
@@ -921,7 +924,7 @@ focus = {
 		completion_reward = {
 			custom_effect_tooltip = available_theorist
 			show_ideas_tooltip = arthur_harris		
-			}	
+		}	
 	}			
 
 	focus = {
@@ -929,8 +932,9 @@ focus = {
 		prerequisite = { focus = ENG_bomber_command }
 		
 		icon = GFX_goal_generic_air_bomber
-		x = 10
-		y = 7
+		relative_position_id = ENG_bomber_command
+		x = 0
+		y = 1
 		cost = 5
 		ai_will_do = {
 			factor = 3
@@ -943,8 +947,8 @@ focus = {
 			swap_ideas = {
 				remove_idea = ENG_the_raf_1
 				add_idea = ENG_the_raf_bomber_command_1
-				}				
-			}		
+			}				
+		}		
 	}
 
 	focus = {
@@ -952,8 +956,9 @@ focus = {
 		prerequisite = { focus = ENG_thousand_bomber_attack }
 		
 		icon = GFX_focus_generic_long_range_aircraft
-		x = 10
-		y = 8
+		relative_position_id = ENG_thousand_bomber_attack
+		x = 0
+		y = 1
 		cost = 5
 		ai_will_do = {
 			factor = 3
@@ -995,7 +1000,7 @@ focus = {
 			add_tech_bonus = {
 				name = uk_jet_focus
 				bonus = 1.0
-				uses = 4
+				uses = 1
 				category = jet_technology
 				category = rocketry
 			}
@@ -1010,7 +1015,7 @@ focus = {
 		available = {
 		} 
 		icon = GFX_goal_generic_national_unity
-		x = 30
+		x = 26
 		y = 0
 		cost = 10	
 
@@ -1050,9 +1055,9 @@ focus = {
 		cancel_if_invalid = yes
 
 		icon = GFX_focus_generic_offshore_oil_rig
-
-		x =  28
-		y = 2
+		relative_position_id = uk_service_focus
+		x = -2
+		y = 1
 		
 		cost = 5
 		
@@ -1070,11 +1075,16 @@ focus = {
 					amount = 60
 				}	
 			}
-			295 = {
-				add_resource = {
-					type = oil
-					amount = 60
-				}	
+			if = {
+				limit = {
+					291 = { is_controlled_by = ENG }
+				}
+				291 = {
+					add_resource = {
+						type = oil
+						amount = 60
+					}	
+				}
 			}
 		}
 	}
@@ -1106,9 +1116,9 @@ focus = {
 					province = 4076
 					instant_build = yes
 				}
-				add_building_construction = {
+				set_building_level = {
 					type = air_base
-					level = 3
+					level = 10
 					instant_build = yes
 				}
 			}
@@ -1160,8 +1170,9 @@ focus = {
 		id = ENG_protect_suez
 		prerequisite = { focus = uk_mediterranean_focus }
 		icon = GFX_focus_generic_the_suez
-		x = 35
-		y = 3
+		x = 2
+		y = 1
+		relative_position_id = uk_mediterranean_focus
 		cost = 2
 		ai_will_do = {
 			factor = 1
@@ -1182,26 +1193,41 @@ focus = {
 
 		completion_reward = {
 			447 = {
-				add_building_construction = {
+				set_building_level = {
 					type = coastal_bunker
-					level = 2
+					level = 5
 					province = 4076
 					instant_build = yes
 				}
-				add_building_construction = {
-					type = air_base
-					level = 3
-					instant_build = yes
-				}
-				add_building_construction = {
+				set_building_level = {
 					type = bunker
-					level = 2
+					level = 3
 					province = 1071
 					instant_build = yes
 				}
-				add_building_construction = {
+				set_building_level = {
 					type = anti_air_building
-					level = 2
+					level = 3
+					instant_build = yes
+				}
+			}
+			552 = {
+				set_building_level = {
+					type = bunker
+					level = 3
+					province = 10127
+					instant_build = yes
+				}
+				set_building_level = {
+					type = bunker
+					level = 3
+					province = 1901
+					instant_build = yes
+				}
+				set_building_level = {
+					type = bunker
+					level = 3
+					province = 7943
 					instant_build = yes
 				}
 			}
@@ -1215,8 +1241,9 @@ focus = {
 			116 = { is_owned_and_controlled_by = ENG }
 		}		
 		icon = GFX_focus_BEL_koningshooikt_wavre_line
-		x = 33
-		y = 3
+		x =0
+		y = 1
+		relative_position_id = uk_mediterranean_focus
 		cost = 2
 
 		available_if_capitulated = yes
@@ -1224,18 +1251,18 @@ focus = {
 		completion_reward = {
 			116 = {
 				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
+				set_building_level = {
 					type = coastal_bunker
-					level = 2
+					level = 3
 					province = 12003
 					instant_build = yes
 				}
-				add_building_construction = {
+				set_building_level = {
 					type = air_base
-					level = 3
+					level = 10
 					instant_build = yes
 				}
-				add_building_construction = {
+				set_building_level = {
 					type = anti_air_building
 					level = 2
 					instant_build = yes
@@ -1248,8 +1275,9 @@ focus = {
 		id = ENG_zypern_focus
 		prerequisite = { focus = uk_mediterranean_focus }
 		icon = GFX_focus_FIN_coastal_defense
-		x = 32
-		y = 4
+		x = -1
+		y = 2
+		relative_position_id = uk_mediterranean_focus
 		cost = 2
 		ai_will_do = {
 			factor = 1
@@ -1269,27 +1297,21 @@ focus = {
 
 		completion_reward = {
 			183 = {
-				add_building_construction = {
-					type = bunker
+				set_building_level = {
+					type = coastal_bunker
 					level = 3
 					province = 7193
 					instant_build = yes
 				}
-				add_building_construction = {
-					type = bunker
+				set_building_level = {
+					type = coastal_bunker
 					level = 3
-					province = 7193
+					province = 11984
 					instant_build = yes
 				}
-				add_building_construction = {
-					type = bunker
-					level = 3
-					province = 7193
-					instant_build = yes
-				}
-				add_building_construction = {
+				set_building_level = {
 					type = air_base
-					level = 2
+					level = 5
 					instant_build = yes
 				}
 				if = {
@@ -1313,8 +1335,9 @@ focus = {
 		id = ENG_loxur_focus
 		prerequisite = { focus = uk_mediterranean_focus }
 		icon = GFX_focus_BEL_better_than_maginot
-		x = 34
-		y = 4
+		x = 1
+		y = 2
+		relative_position_id = uk_mediterranean_focus
 		cost = 2
 		ai_will_do = {
 			factor = 0.25
@@ -1335,20 +1358,17 @@ focus = {
 		completion_reward = {
 			navy_experience = 25
 			456 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
+				set_building_level = {
 					type = anti_air_building
 					level = 3
 					instant_build = yes
 				}
-			
-				add_building_construction = {
+				set_building_level = {
 					type = air_base
-					level = 5
+					level = 10
 					instant_build = yes
 				}
-					add_extra_state_shared_building_slots = 1
-				add_building_construction = {
+				set_building_level = {
 					type = bunker
 					level = 5
 					province = 12071
@@ -1882,7 +1902,7 @@ focus = {
 
 		icon = GFX_FOCUS_ENG_STEADY
 
-		x = 35
+		x = 30
 		y = 0
 		relative_position_id = limited_rearmament_focus
 		cost = 5
@@ -2019,14 +2039,16 @@ focus = {
 		id = ENG_blood_toil_tears_and_sweat
 		prerequisite = { focus = ENG_home_defence}
 		available = {
-			is_subject = no
-			has_war = yes
+			has_country_leader = {
+				ruling_only = yes
+				character = ENG_winston_churchill
+			}
 		}
 		bypass = {	
 		}
 		
 		icon = GFX_focus_eng_motion_of_no_confidence
-		x = 40
+		x = 35
 		y = 4
 		cost = 5
 		ai_will_do = {
@@ -2036,8 +2058,9 @@ focus = {
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
-			promote_character = ENG_winston_churchill
-			retire_character = ENG_neville_chamberlain
+			#promote_character = ENG_winston_churchill
+			#retire_character = ENG_neville_chamberlain
+			custom_effect_tooltip = ENG_blood_toil_tears_and_sweat_tt
 		}	
 	}
 
@@ -2050,7 +2073,7 @@ focus = {
 		}
 		
 		icon = GFX_focus_generic_industrialists
-		x = 40
+		x = 35
 		y = 5
 		cost = 5
 		ai_will_do = {
@@ -2076,7 +2099,7 @@ focus = {
 		}
 		
 		icon = GFX_focus_generic_strike_at_democracy1
-		x = 36
+		x = 31
 		y = 6
 		cost = 5
 		ai_will_do = {
@@ -2098,7 +2121,7 @@ focus = {
 		}
 		
 		icon = GFX_focus_SOV_flying_clubs
-		x = 35
+		x = 30
 		y = 7
 		cost = 5
 		ai_will_do = {
@@ -2123,7 +2146,7 @@ focus = {
 		available_if_capitulated = yes
 
 		icon = GFX_goal_generic_construct_military
-		x = 37
+		x = 32
 		y = 7
 		cost = 5
 		ai_will_do = {
@@ -2182,7 +2205,7 @@ focus = {
 		}
 		
 		icon = GFX_goal_generic_build_airforce
-		x = 36
+		x = 31
 		y = 8
 		cost = 5
 		ai_will_do = {
@@ -2207,7 +2230,7 @@ focus = {
 		}
 		
 		icon = GFX_focus_generic_military_mission
-		x = 40
+		x = 35
 		y = 6
 		cost = 5
 		ai_will_do = {
@@ -2231,7 +2254,7 @@ focus = {
 		}
 		
 		icon = GFX_focus_ETH_freedom_at_gunpoint
-		x = 39
+		x = 34
 		y = 7
 		cost = 5
 		ai_will_do = {
@@ -2243,7 +2266,7 @@ focus = {
 		completion_reward = {
 			add_equipment_to_stockpile = { 
 				type = infantry_equipment_1
-				amount = 50000
+				amount = 40000
 				producer = ROOT
 			}
 		}	
@@ -2257,7 +2280,7 @@ focus = {
 
 		
 		icon = GFX_focus_eng_global_defense
-		x = 41
+		x = 36
 		y = 7
 		cost = 5
 		ai_will_do = {
@@ -2269,11 +2292,11 @@ focus = {
 		completion_reward = {
 						# Singapore
 			336 = {
-				add_building_construction = {
-					type = air_base
-					level = 2
-					instant_build = yes
-				}
+				#add_building_construction = {
+				#	type = air_base
+				#	level = 2
+				#	instant_build = yes
+				#}
 				# Singapore
 				add_building_construction = {
 					type = naval_base
@@ -2283,13 +2306,13 @@ focus = {
 				}								
 			}
 			# Egypt
-			446 = {
-				add_building_construction = {
-					type = air_base
-					level = 2
-					instant_build = yes
-				}								
-			}
+			#446 = {
+			#	add_building_construction = {
+			#		type = air_base
+			#		level = 2
+			#		instant_build = yes
+			#	}								
+			#}
 			447 = {
 				add_building_construction = {
 					type = naval_base
@@ -2300,27 +2323,27 @@ focus = {
 			}
 			# Nova Scotia
 			464 = {
+			#	add_building_construction = {
+			#		type = air_base
+			#		level = 2
+			#		instant_build = yes
+			#	}
+				# Halifax
 				add_building_construction = {
-						type = air_base
-						level = 2
-						instant_build = yes
-					}
-					# Halifax
-					add_building_construction = {
-						type = naval_base
-						level = 2
-						province = 7361
-						instant_build = yes
-				}								
-			}
-			# Malta
-			116 = {
-				add_building_construction = {
-					type = air_base
-					level = 1
+					type = naval_base
+					level = 2
+					province = 7361
 					instant_build = yes
 				}								
 			}
+			# Malta
+			#116 = {
+			#	add_building_construction = {
+			#		type = air_base
+			#		level = 1
+			#		instant_build = yes
+			#	}								
+			#}
 			# Gibraltar
 			118 = {
 				add_building_construction = {
@@ -2342,7 +2365,7 @@ focus = {
 		}
 		
 		icon = GFX_focus_generic_commonwealth_build_infantry
-		x = 40
+		x = 34
 		y = 8
 		cost = 5
 		ai_will_do = {
@@ -2368,7 +2391,7 @@ focus = {
 		}
 		
 		icon = 	GFX_goal_generic_navy_doctrines_tactics
-		x = 45
+		x = 40
 		y = 6
 		cost = 5
 		ai_will_do = {
@@ -2400,7 +2423,7 @@ focus = {
 		}
 		
 		icon = GFX_focus_generic_cruiser2
-		x = 47
+		x = 42
 		y = 7
 		cost = 5
 		ai_will_do = {
@@ -2426,7 +2449,7 @@ focus = {
 		}
 		
 		icon = GFX_goal_generic_navy_carrier
-		x = 47
+		x = 42
 		y = 8
 		cost = 5
 		ai_will_do = {
@@ -2452,7 +2475,7 @@ focus = {
 		}
 		
 		icon = GFX_focus_generic_north_atlantic_fleet
-		x = 47
+		x = 42
 		y = 9
 		cost = 5
 		ai_will_do = {
@@ -2479,7 +2502,7 @@ focus = {
 		}
 		
 		icon = GFX_focus_DEN_protect_greenland
-		x = 45
+		x = 40
 		y = 8
 		cost = 2
 		ai_will_do = {
@@ -2491,11 +2514,9 @@ focus = {
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 			337 = { add_core_of = ENG }
-				ENG = { transfer_state = 337 }
 			100 = { add_core_of = ENG }
-				ENG = { transfer_state = 100 }
 			101 = { add_core_of = ENG }
-				ENG = { transfer_state = 101 }	
+			ENG = { transfer_state = 101 }	
 		}	
 	}
 
@@ -2509,7 +2530,7 @@ focus = {
 		}
 		
 		icon = GFX_focus_generic_atlantic_coast
-		x = 45
+		x = 40
 		y = 9
 		cost = 2
 		ai_will_do = {
@@ -2539,7 +2560,7 @@ focus = {
 		}
 		
 		icon = GFX_focus_generic_destroyer
-		x = 43
+		x = 38
 		y = 7
 		cost = 5
 		ai_will_do = {
@@ -2565,7 +2586,7 @@ focus = {
 		}
 		
 		icon = GFX_goal_generic_amphibious_assault
-		x = 43
+		x = 38
 		y = 8
 		cost = 5
 		ai_will_do = {
@@ -2590,8 +2611,8 @@ focus = {
 		bypass = {	
 		}
 		
-		icon = GFX_goal_generic_navy_carrier
-		x = 43
+		icon = GFX_ENG_CARRIERS
+		x = 38
 		y = 9
 		cost = 5
 		ai_will_do = {
@@ -2618,10 +2639,10 @@ focus = {
 		bypass = {
 			
 		}
-		
+		relative_position_id = general_rearmament_focus		
 		icon = GFX_focus_SWE_italian_destroyers
-		x = 17
-		y = 2
+		x = 6
+		y = 1
 		cost = 5
 		ai_will_do = {
 			factor = 1
@@ -2654,9 +2675,9 @@ focus = {
 		id = coastal_command_focus
 		prerequisite = { focus = ENG_naval_rearment }
 		icon = GFX_focus_generic_multi_role_aircraft
-		x = 5
+		relative_position_id = ENG_naval_rearment	
+		x = 1
 		y = 1
-		relative_position_id = ENG_naval_rearment
 		cost = 5
 		ai_will_do = {
 			factor = 1
@@ -2708,8 +2729,9 @@ focus = {
 		}
 		
 		icon = GFX_goal_generic_navy_submarine
-		x = 14
-		y = 4
+		relative_position_id = ENG_naval_rearment	
+		x = -3
+		y = 2
 		cost = 5
 		ai_will_do = {
 			factor = 1
@@ -2734,8 +2756,9 @@ focus = {
 		}
 		
 		icon = GFX_focus_generic_destroyer
-		x = 14
-		y = 5
+		relative_position_id = ENG_focus_on_sub_defense	
+		x = 0
+		y = 1
 		cost = 5
 		ai_will_do = {
 			factor = 1
@@ -2767,7 +2790,7 @@ focus = {
 		}
 		
 		icon = GFX_focus_generic_cruiser2
-		x = 14
+		x = 12
 		y = 6
 		cost = 5
 		ai_will_do = {
@@ -2793,7 +2816,7 @@ focus = {
 		}
 		
 		icon = GFX_goal_generic_navy_cruiser
-		x = 14
+		x = 12
 		y = 7
 		cost = 5
 		ai_will_do = {
@@ -2818,7 +2841,7 @@ focus = {
 		}
 		
 		icon = GFX_focus_generic_refit_civilian_ships
-		x = 12
+		x = 10
 		y = 6
 		cost = 10
 		ai_will_do = {
@@ -2910,7 +2933,7 @@ focus = {
 		}
 		
 		icon = GFX_goal_generic_navy_anti_submarine
-		x = 12
+		x = 10
 		y = 7
 		cost = 5
 		ai_will_do = {
@@ -2937,7 +2960,7 @@ focus = {
 		}
 		
 		icon = GFX_focus_generic_military_academy
-		x = 16
+		x = 14
 		y = 6
 		cost = 5
 		ai_will_do = {
@@ -2964,7 +2987,7 @@ focus = {
 		}
 		
 		icon = GFX_focus_SWE_coastal_support
-		x = 16
+		x = 14
 		y = 7
 		cost = 5
 		ai_will_do = {
@@ -2988,8 +3011,9 @@ focus = {
 		id = ENG_expand_the_repair_yards_focus
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = ENG_naval_rearment}
-		x = 17
-		y = 3
+		relative_position_id = ENG_naval_rearment	
+		x = -1
+		y = 1
 		cost = 5
 	
 		available_if_capitulated = yes
@@ -3015,8 +3039,8 @@ focus = {
 		bypass = {
 		}
 		
-		icon = GFX_goal_generic_navy_doctrines_tactics
-		x = 20
+		icon = GFX_ENG_NAVAL_REARMAMENT
+		x = 18
 		y = 4
 		cost = 5
 		ai_will_do = {
@@ -3040,8 +3064,8 @@ focus = {
 		bypass = {
 		}
 		
-		icon = GFX_goal_generic_navy_battleship
-		x =20
+		icon = GFX_ENG_RULE_WAVES
+		x = 18
 		y = 5
 		cost = 5
 		ai_will_do = {
@@ -3073,7 +3097,7 @@ focus = {
 		}
 		
 		icon = GFX_focus_generic_air_carrier
-		x = 20
+		x = 18
 		y = 6
 		cost = 5
 		ai_will_do = {
@@ -3105,7 +3129,7 @@ focus = {
 		}
 		
 		icon = GFX_goal_generic_occupy_states_coastal
-		x = 22
+		x = 20
 		y = 6
 		cost = 5
 		ai_will_do = {
@@ -3134,7 +3158,7 @@ focus = {
 		}
 		
 		icon = GFX_focus_GER_graf_zeppelin
-		x = 22
+		x = 20
 		y = 7
 		cost = 5
 		ai_will_do = {
@@ -3161,7 +3185,7 @@ focus = {
 		}
 		
 		icon = GFX_focus_POL_develop_polish_shipbuilding
-		x = 20
+		x = 18
 		y = 7
 		cost = 5
 		ai_will_do = {
@@ -3186,7 +3210,7 @@ focus = {
 		}
 		
 		icon = GFX_goal_generic_build_navy 
-		x = 18
+		x = 16
 		y = 6
 		cost = 5
 		ai_will_do = {
@@ -3213,7 +3237,7 @@ focus = {
 		}
 		
 		icon = GFX_focus_SWE_all_cards_on_deck
-		x = 18
+		x = 16
 		y = 7
 		cost = 5
 		ai_will_do = {
@@ -3242,7 +3266,7 @@ focus = {
 		}
 		
 		icon = GFX_focus_SWE_the_lion_of_the_north
-		x = 17
+		x = 15
 		y = 8
 		cost = 5
 		ai_will_do = {
@@ -3276,7 +3300,7 @@ focus = {
 
 		}
 		icon = GFX_focus_eng_the_sun_never_sets
-		x = 16
+		x = 14
 		y = 9
 		cost = 5
 		ai_will_do = {
@@ -3293,7 +3317,7 @@ focus = {
 		id = ENG_vanguard
 		prerequisite = { focus = ENG_britannia_rules_the_waves }
 		icon = GFX_focus_SWE_Vasa_II
-		x = 18
+		x = 16
 		y = 9
 		cost = 10
 		ai_will_do = {
@@ -3351,7 +3375,7 @@ focus = {
 
 		}
 		icon = GFX_goal_generic_navy_carrier
-		x = 17
+		x = 15
 		y = 10
 		cost = 5
 		ai_will_do = {

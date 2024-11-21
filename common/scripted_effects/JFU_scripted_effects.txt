@@ -448,7 +448,7 @@ JFU_other_stuff_on_start_up_effect = {
 }
 JFU_equipment_on_start_up_effect = {
 	ENG = {
-		add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 30000 }
+		add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 20000 }
 		add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 20000 }
 		add_equipment_to_stockpile = { type = support_equipment_1 amount = 259 }
 		add_equipment_to_stockpile = { type = artillery_equipment_1 amount = 100 }

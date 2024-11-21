@@ -790,6 +790,8 @@
  UK_imperial_conference_tt:0 " Add §YImperial Conference Economy Agreements§!, which grants (Factory Output §G+15.00%§!, Dockyard Output §G+15.00%§!).\n Add §YImperial Conference Economy Agreements§! which grants (§YCivilian Factory§! construction Speed §G+15.00%§!, §YMilitary Factory§! construction speed §G+15.00%§!, §!Dockyard§! construction Speed §G+15.00%§!)\n Gain Base War Support §G+10.00%§!\n(@AST§YAustralia, @CANDominion of Canada, @RAJBritish Raj,\n @NZLNew Zealand and @SAFSouth Africa§!):\n    Add §YImperial Conference Defense Agreements§! which grants (Factory Output §G+10.00%§!, Dockyard Output §G+10.00%§!).\n    Add §YImperial Conference Economy Agreements§! which grants (§YCivilian Factory§! construction Speed §G+10.00%§!, §YMilitary Factory§! construction speed §G+10.00%§!, §!Dockyard§! construction Speed §G+10.00%§!)\n   Gain Base War Support §G+10.00%§! "
  ENG_fortify_the_empire_big_tt:0 "Modify §YFortify the Empire§! by\n §YLand Fort§! construction speed §G+10.00%§!\n §YCoastal Fort§! construction speed §G+10.00%§!"
  ENG_fortify_the_empire_small_tt:0 "Modify §YFortify the Empire§! by\n §YLand Fort§! construction speed §G+5.00%§!\n §YCoastal Fort§! construction speed §G+5.00%§!"
+ ENG_blood_toil_tears_and_sweat_tt:0 "§RIf we have Winston Churchill as our Prime Minister we will be able to hold speeches infront of Parlament§!"
+
 
  FRA_integrate_bel_industry_tt:0 "§RWe will gain 100% of the belgium Industry§!"
  fra_legit_idea:0 "French Legitimacy is §G[?FRA.FRA_legitimacy|+0]§!\n\nWe gain +1 legitimacy for every 3k Axis soldiers wounded/killed and +1 legitimacy for every day we hold mainland France, up to December 30th, 1939."
@@ -1563,7 +1565,7 @@
  ENG_zypern_focus:0 "Zypern Focus"
  ENG_zypern_focus_desc:0 ""
  ENG_loxur_focus:0 "Loxur Focus"
-ENG_loxur_focus_desc:0 ""
+ ENG_loxur_focus_desc:0 ""
  ENG_the_king_is_dead_long_live_the_new_king:0 "The King is dead Long Live The New King"
  ENG_the_new_national_goverment:0 "The New National Goverment"
  ENG_the_new_national_goverment_desc:0 ""
@@ -1653,8 +1655,6 @@ ENG_loxur_focus_desc:0 ""
  ENG_destroyer_focus_desc:0 ""
  ENG_convoy_escort_focus:0 "Convoy Escort Focus"
  ENG_convoy_escort_focus_desc:0 ""
- ENG_anti_submarine_training_school:0 "Anti Submarine Training School"
- ENG_anti_submarine_training_school_desc:0 ""
  ENG_escort_carrier:0 "Escort Carrier"
  ENG_escort_carrier_desc:0 ""
  ENG_as_warfare:0 "as Warfare"
@@ -1784,15 +1784,8 @@ ENG_loxur_focus_desc:0 ""
  ENG_the_raf_ground_command_1:0 "The RAF"
  ENG_refit_civilian_ships_1:0 "Refit Civilian Ships"
  ENG_reform_our_carbinet_1:0 "Reform our Carbinet"
-ENG_british_fighter_discount_supermarine:0 "Aircraft production group"
-ENG_british_fighter_discount_bomber:0 "Aircraft production group"
-
- GER_reichskommissariat_highlighted_required_states_80_comp:0 "§Y[ROOT.GetNameWithFlag]§! or a subject control all §YHighlighted States§! with compliance higher then §Y80%§!"
- GER_reichskommissariat_highlighted_required_states_70_comp:0 "§Y[ROOT.GetNameWithFlag]§! or a subject control all §YHighlighted States§! with compliance higher then §Y70%§!"
- GER_reichskommissariat_highlighted_required_states_60_comp:0 "§Y[ROOT.GetNameWithFlag]§! or a subject control all §YHighlighted States§! with compliance higher then §Y60%§!"
-
- Juggle1:0 "Juggle"
- Juggle1_desc:0 "Juggle Juggle"
+ ENG_british_fighter_discount_supermarine:0 "Aircraft production group"
+ ENG_british_fighter_discount_bomber:0 "Aircraft production group"
 
 
 
