@@ -38,10 +38,10 @@ JFU_buildings_on_start_up = {
 	#benelux
 
 	6 = {
-		add_extra_state_shared_building_slots = 4
+		add_extra_state_shared_building_slots = 2
 		add_building_construction = {
 			type = industrial_complex
-			level = 4
+			level = 2
 			instant_build = yes
 		}	
 	}	
@@ -104,10 +104,15 @@ JFU_buildings_on_start_up = {
 	#japan
 
 	103 = {
-		add_extra_state_shared_building_slots = 3
+		add_extra_state_shared_building_slots = 11
 		add_building_construction = {
 			type = industrial_complex
-			level = 3
+			level = 7
+			instant_build = yes
+		}
+		add_building_construction = {
+			type = arms_factory
+			level = 4
 			instant_build = yes
 		}		
 	}	
@@ -302,6 +307,21 @@ JFU_buildings_on_start_up = {
 		}
 	}
 
+	#soviet
+
+	590 = {
+		add_extra_state_shared_building_slots = 7
+		add_building_construction = {
+			type = industrial_complex
+			level = 4
+			instant_build = yes
+		}
+		add_building_construction = {
+			type = arms_factory
+			level = 3
+			instant_build = yes
+		}
+	}
 
 
 
@@ -462,7 +482,7 @@ JFU_equipment_on_start_up_effect = {
 		add_equipment_to_stockpile = { type = motorized_equipment_1 amount = 607 }
 		add_equipment_to_stockpile = { type = artillery_equipment_1 amount = 349 }
 		add_equipment_to_stockpile = { type = light_tank_chassis_2 amount = 720 producer = GER variant_name = "Panzer II Ausf. A" }
-		add_equipment_to_stockpile = { type = train_equipment_1 amount = 300 }
+		add_equipment_to_stockpile = { type = train_equipment_1 amount = 200 }
 	}
 	FRA = {
 		add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 25000 }
@@ -513,7 +533,7 @@ JFU_equipment_on_start_up_effect = {
 		add_equipment_to_stockpile = { type = convoy_1 amount = 100 producer = BUL }
 	}
 	SOV = {
-		add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 220000 }
+		add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 120000 }
 		add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 40000 }
 		add_equipment_to_stockpile = { type = support_equipment_1 amount = 443 }
 		add_equipment_to_stockpile = { type = motorized_equipment_1 amount = 1600 }
@@ -1717,7 +1737,13 @@ JFU_pregrinded_effect = {
 			add_unit_leader_trait = trickster
 			add_unit_leader_trait = guerilla_fighter	
 			add_unit_leader_trait = inf_gens2		
-		}				
+		}
+		ITA_carlo_bergamini = {
+			add_unit_leader_trait = green_water_expert
+		}	
+		ITA_inigo_campioni = {
+			add_unit_leader_trait = green_water_expert
+		}	
 	}
 	HUN = {
 		HUN_geza_lakatos = { add_skill_level = 1 }
@@ -2497,7 +2523,7 @@ JFU_pregrinded_effect = {
 		USA_omar_bradley = { add_logistics = 1 }
 		USA_omar_bradley = {
 			add_unit_leader_trait = pre_grinded
-			add_unit_leader_trait = panzer_expert
+			add_unit_leader_trait = combined_arms_expert
 			add_unit_leader_trait = hill_fighter
 			add_unit_leader_trait = panzer_leader
 			add_unit_leader_trait = organizer	
@@ -4061,7 +4087,7 @@ JFU_vichy_france = {
 			add_compliance = 80
 		}
 		complete_national_focus = GER_fall_of_france
-		GER_set_consumer_goods_war_reparations = yes
+		#GER_set_consumer_goods_war_reparations = yes
 	}
 	JFU_vichy_france_2 = yes
 	ENG = {
