@@ -1,6 +1,37 @@
 ideas = {
 
 	country = {
+		torpedo_cruisers_ns = {
+			name = JAP_torpedo_cruisers
+			allowed = { always = no }
+			removal_cost = -1
+			picture = generic_sea_focused_navy
+			modifier = {
+				sp_naval_torpedo_cruiser_speed_factor = 1
+			}
+			equipment_bonus = {
+				torpedo_cruiser = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+			}
+		}
+
+		torpedo_cruisers_ns_mtg = {
+			name = JAP_torpedo_cruisers
+			allowed = { always = no }
+			removal_cost = -1
+			picture = generic_sea_focused_navy
+			modifier = {
+				sp_naval_torpedo_cruiser_speed_factor = 1
+			}
+			equipment_bonus = {
+				ship_hull_torpedo_cruiser = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+			}
+		}
 		JAP_supremacy_of_the_battlefleet = {
 			removal_cost = -1
 

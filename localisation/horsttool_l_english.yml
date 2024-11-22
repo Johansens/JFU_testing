@@ -1541,8 +1541,8 @@
  Juggle1:0 "Juggle"
  Juggle1_desc:0 "Juggle Juggle"
 
-
-
+ ITA_modify_navy_modifier_tt: "Modify §Y$ITA_regia_marina_dynamic_modifier$§! by:"
+ MODIFIER_NAVAL_STRIKE_AGILITY_FACTOR_tt: " $MODIFIER_NAVAL_STRIKE_AGILITY_FACTOR$: $RIGHT|+=%1$"
 
 
  #Herrscher England #
