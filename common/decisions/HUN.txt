@@ -781,7 +781,7 @@ HUN_gyor_program_initiatives_category = {
 				}
 				add_resource = {
 					type = rubber
-					amount = 16
+					amount = 10
 				}	
 			}
 			
