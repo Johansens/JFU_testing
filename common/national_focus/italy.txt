@@ -3766,10 +3766,10 @@ focus_tree = {
 				}
 			}
 			736 = {
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = dockyard
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -3777,7 +3777,7 @@ focus_tree = {
 			add_doctrine_cost_reduction = {
 				name = naval_doc_bonus
 				cost_reduction = 0.5
-				uses = 1
+				uses = 2
 				category = naval_doctrine
 			}
 		}
@@ -3834,10 +3834,10 @@ focus_tree = {
 
 		completion_reward = {
 			162 = { #TUSCANY (La Spezia)
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = dockyard
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -4269,11 +4269,12 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_AIR_XP FOCUS_FILTER_NAVY_XP FOCUS_FILTER_RESEARCH}
 
 		completion_reward = {
-			add_to_variable = { ITA_rm_naval_coordination = 0.05 }
-			add_to_variable = { ITA_rm_spotting_chance = 0.1 }
-			add_to_variable = { ITA_rm_naval_strike_agility_factor = 0.05 }
-			custom_effect_tooltip = ITA_naval_air_coordination_rm_tt
-
+			custom_effect_tooltip = ITA_modify_navy_modifier_tt
+			add_to_variable = { ITA_rm_naval_strike_agility_factor = 0.05 tooltip = MODIFIER_NAVAL_STRIKE_AGILITY_FACTOR_tt }
+			add_to_variable = { ITA_rm_naval_coordination = 0.05 tooltip = naval_coordination_tt }
+			add_to_variable = { ITA_rm_spotting_chance = 0.1 tooltip = spotting_chance_tt }
+			add_to_variable = { ITA_rm_naval_strike_attack_factor = 0.05 tooltip = naval_strike_attack_factor_tt }
+			custom_effect_tooltip = generic_skip_one_line_tt
 			air_experience = 25
 			navy_experience = 25
 
@@ -4354,7 +4355,28 @@ focus_tree = {
 				uses = 1
 				category = cl_tech
 			}
-
+			add_equipment_production = {
+				equipment = {
+					type =  ship_hull_cruiser_2
+					creator = "ITA"
+					version_name = "Montecuccoli Class"
+				}
+				name = "Montecuccoli Class"
+				requested_factories = 2
+				progress = 0.8
+				amount = 1
+			}
+			add_equipment_production = {
+				equipment = {
+					type =  ship_hull_cruiser_2
+					creator = "ITA"
+					version_name = "Montecuccoli Class"
+				}
+				name = "Montecuccoli Class"
+				requested_factories = 2
+				progress = 0.8
+				amount = 1
+			}
 			add_equipment_production = {
 				equipment = {
 					type =  ship_hull_cruiser_2
@@ -4446,6 +4468,20 @@ focus_tree = {
 
 			#Update NS icon
 			ITA_improve_regia_marina_dm_effect = yes
+			custom_effect_tooltip = generic_skip_one_line_tt
+			if = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}
+				mio:ITA_cantiere_navale_di_ancona_organization = {
+					add_mio_size = 2
+					add_mio_funds_gain_factor = 0.10
+					add_mio_research_bonus = 0.05
+
+				
+					#unlock_mio_trait_tooltip = 
+				}
+			}
 		}
 	}
 
@@ -4479,74 +4515,108 @@ focus_tree = {
 				uses = 1
 				category = bb_tech
 			}
+			add_equipment_production = {
+				equipment = {
+					type =  ship_hull_cruiser_2
+					creator = "ITA"
+					version_name = "Zara Class"
+				}
+				name = "Montecuccoli Class"
+				requested_factories = 40
+				progress = 0.8
+				amount = 1
+			}
+			add_equipment_production = {
+				equipment = {
+					type =  ship_hull_cruiser_2
+					creator = "ITA"
+					version_name = "Zara Class"
+				}
+				name = "Montecuccoli Class"
+				requested_factories = 40
+				progress = 0.8
+				amount = 1
+			}
+			add_equipment_production = {
+				equipment = {
+					type =  ship_hull_cruiser_2
+					creator = "ITA"
+					version_name = "Zara Class"
+				}
+				name = "Montecuccoli Class"
+				requested_factories = 40
+				progress = 0.8
+				amount = 1
+			}
+			add_equipment_production = {
+				equipment = {
+					type =  ship_hull_cruiser_2
+					creator = "ITA"
+					version_name = "Zara Class"
+				}
+				name = "Montecuccoli Class"
+				requested_factories = 40
+				progress = 0.8
+				amount = 1
+			}
+			add_equipment_production = {
+				equipment = {
+					type =  ship_hull_cruiser_2
+					creator = "ITA"
+					version_name = "Zara Class"
+				}
+				name = "Montecuccoli Class"
+				requested_factories = 40
+				progress = 0.8
+				amount = 1
+			}
+			add_equipment_production = {
+				equipment = {
+					type =  ship_hull_cruiser_2
+					creator = "ITA"
+					version_name = "Zara Class"
+				}
+				name = "Montecuccoli Class"
+				requested_factories = 40
+				progress = 0.8
+				amount = 1
+			}
+			add_equipment_production = {
+				equipment = {
+					type =  ship_hull_cruiser_2
+					creator = "ITA"
+					version_name = "Zara Class"
+				}
+				name = "Montecuccoli Class"
+				requested_factories = 40
+				progress = 0.8
+				amount = 1
+			}
+			add_equipment_production = {
+				equipment = {
+					type =  ship_hull_cruiser_2
+					creator = "ITA"
+					version_name = "Zara Class"
+				}
+				name = "Montecuccoli Class"
+				requested_factories = 40
+				progress = 0.8
+				amount = 1
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			if = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}
+				mio:ITA_crda_organization = {
+					add_mio_size = 2
+					add_mio_funds_gain_factor = 0.10
+					add_mio_research_bonus = 0.05
 
-			add_equipment_production = {
-				equipment = {
-					type =  ship_hull_cruiser_2
-					creator = "ITA"
-					version_name = "Zara Class"
+				
+					#unlock_mio_trait_tooltip = 
 				}
-				name = "Montecuccoli Class"
-				requested_factories = 2
-				progress = 0.8
-				amount = 1
 			}
-			add_equipment_production = {
-				equipment = {
-					type =  ship_hull_cruiser_2
-					creator = "ITA"
-					version_name = "Zara Class"
-				}
-				name = "Montecuccoli Class"
-				requested_factories = 2
-				progress = 0.8
-				amount = 1
-			}
-			add_equipment_production = {
-				equipment = {
-					type =  ship_hull_cruiser_2
-					creator = "ITA"
-					version_name = "Zara Class"
-				}
-				name = "Montecuccoli Class"
-				requested_factories = 2
-				progress = 0.8
-				amount = 1
-			}
-			add_equipment_production = {
-				equipment = {
-					type =  ship_hull_cruiser_2
-					creator = "ITA"
-					version_name = "Zara Class"
-				}
-				name = "Montecuccoli Class"
-				requested_factories = 2
-				progress = 0.8
-				amount = 1
-			}
-			add_equipment_production = {
-				equipment = {
-					type =  ship_hull_cruiser_2
-					creator = "ITA"
-					version_name = "Zara Class"
-				}
-				name = "Montecuccoli Class"
-				requested_factories = 2
-				progress = 0.8
-				amount = 1
-			}
-			add_equipment_production = {
-				equipment = {
-					type =  ship_hull_cruiser_2
-					creator = "ITA"
-					version_name = "Zara Class"
-				}
-				name = "Montecuccoli Class"
-				requested_factories = 2
-				progress = 0.8
-				amount = 1
-			}
-
 			#Update NS icon
 			ITA_improve_regia_marina_dm_effect = yes
 		}
@@ -4688,13 +4758,14 @@ focus_tree = {
 
 		completion_reward = {
 			navy_experience = 15
+			custom_effect_tooltip = generic_skip_one_line_tt
 			add_doctrine_cost_reduction = {
 				name = ITA_cacciatorpediniere_di_scorta
 				cost_reduction = 0.5
 				uses = 2
 				category = naval_doctrine
 			}
-
+			custom_effect_tooltip = generic_skip_one_line_tt
 			###########
 			### MTG ###
 			###########
@@ -4720,7 +4791,30 @@ focus_tree = {
 						front_1_custom_slot = ship_light_battery_2
 					}
 				}
+				custom_effect_tooltip = generic_skip_one_line_tt
 				#Line Production
+				add_equipment_production = {		
+					equipment = {
+						type = ship_hull_light_3
+						creator = "ITA"
+						version_name = "Comandanti Class"
+					}
+					name = "Comandante Margottini"
+					requested_factories = 2
+					progress = 0.8
+					amount = 1
+				}
+				add_equipment_production = {
+					equipment = {
+						type = ship_hull_light_3
+						creator = "ITA"
+						version_name = "Comandanti Class"
+					}
+					name = "Comandante Margottini"
+					requested_factories = 2
+					progress = 0.8
+					amount = 1
+				}
 				add_equipment_production = {
 					equipment = {
 						type = ship_hull_light_3
@@ -4897,10 +4991,11 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_NAVY_XP FOCUS_FILTER_RESEARCH}
 
 		completion_reward = {
-
+			add_ideas = JAP_supremacy_of_the_battlefleet
 			###########
 			### MTG ###
 			###########
+			custom_effect_tooltip = generic_skip_one_line_tt
 			if = { #MTG 
 				limit = {
 					has_dlc = "Man the Guns"
@@ -4913,7 +5008,7 @@ focus_tree = {
 						version_name = "Littorio Class"
 					}
 					name = "Roma"
-					requested_factories = 1
+					requested_factories = 40
 					progress = 0.8
 					amount = 1
 				}
@@ -4924,7 +5019,7 @@ focus_tree = {
 						version_name = "Littorio Class"
 					}
 					name = "Roma"
-					requested_factories = 1
+					requested_factories = 40
 					progress = 0.8
 					amount = 1
 				}
@@ -4935,7 +5030,18 @@ focus_tree = {
 						version_name = "Littorio Class"
 					}
 					name = "Roma"
-					requested_factories = 1
+					requested_factories = 40
+					progress = 0.8
+					amount = 1
+				}
+				add_equipment_production = {
+					equipment = {
+						type = ship_hull_heavy_2
+						creator = "ITA"
+						version_name = "Littorio Class"
+					}
+					name = "Roma"
+					requested_factories = 40
 					progress = 0.8
 					amount = 1
 				}
@@ -4947,7 +5053,7 @@ focus_tree = {
 						version_name = "Littorio Class"
 					}
 					name = "Impero"
-					requested_factories = 1
+					requested_factories = 40
 					progress = 0.8
 					amount = 1
 				}
@@ -4978,6 +5084,7 @@ focus_tree = {
 					amount = 1
 				}
 			}
+
 		}
 	}
 
@@ -4991,6 +5098,7 @@ focus_tree = {
 		relative_position_id = ITA_incrociatori_pesanti
 		cost = 5
 		available = {
+			has_tech = early_ship_hull_carrier
 		}
 
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_NAVY_XP FOCUS_FILTER_RESEARCH}
@@ -5003,7 +5111,7 @@ focus_tree = {
 				uses = 1
 				category = cv_tech
 			}
-
+			custom_effect_tooltip = generic_skip_one_line_tt
 			###########
 			### MTG ###
 			###########
@@ -5035,6 +5143,7 @@ focus_tree = {
 						mid_1_custom_slot = ship_deck_space
 					}
 				}
+				custom_effect_tooltip = generic_skip_one_line_tt
 				#Line Production
 				add_equipment_production = {
 					equipment = {
@@ -5044,7 +5153,7 @@ focus_tree = {
 					}
 					name = "Aquila"
 					requested_factories = 40
-					progress = 0.80
+					progress = 0.60
 					amount = 1
 				}
 				add_equipment_production = {
@@ -5055,7 +5164,29 @@ focus_tree = {
 					}
 					name = "Aquila"
 					requested_factories = 40
-					progress = 0.80
+					progress = 0.60
+					amount = 1
+				}
+				add_equipment_production = {
+					equipment = {
+						type = ship_hull_carrier_1
+						creator = "ITA"
+						version_name = "Aquila Class"
+					}
+					name = "Aquila"
+					requested_factories = 40
+					progress = 0.20
+					amount = 1
+				}
+				add_equipment_production = {
+					equipment = {
+						type = ship_hull_carrier_1
+						creator = "ITA"
+						version_name = "Aquila Class"
+					}
+					name = "Aquila"
+					requested_factories = 40
+					progress = 0.20
 					amount = 1
 				}
 			}
@@ -5129,7 +5260,13 @@ focus_tree = {
 			}
 
 			navy_experience = 15
-
+			add_tech_bonus = {
+				name = ITA_proper_carriers
+				bonus = 1.0
+				uses = 1
+				category = cv_tech
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
 			###########
 			### MTG ###
 			###########
@@ -5158,7 +5295,7 @@ focus_tree = {
 						fixed_ship_secondaries_slot = ship_secondaries_1
 					}
 				}
-
+				custom_effect_tooltip = generic_skip_one_line_tt
 				#Line Production
 				add_equipment_production = {
 					equipment = {
@@ -5274,93 +5411,18 @@ focus_tree = {
 		relative_position_id = ITA_ispettorato_dei_mezzi_antisommergibili
 		cost = 5
 		available = {
-			has_tech = ship_hull_super_heavy
+			is_special_project_completed = sp:sp_naval_super_heavy_battleship
 		}
 
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_NAVY_XP}
 
 		completion_reward = {
-			custom_effect_tooltip = ITA_flotta_d_evasione_admiral_traits_tt
-			#Stupid tooltips oh my god I hate this game
-			hidden_effect = {
-				#First admiral trait
-				if = { #Try to select high level admirals
-					limit = {
-						any_navy_leader = {
-							NOT = {
-								has_trait = bold
-							}
-							skill > 3
-						}
-					}
-					random_navy_leader = {
-						limit = {
-							NOT = {
-								has_trait = bold
-							}
-							skill > 3
-						}
-						add_unit_leader_trait = bold
-					}
-				}
-				else_if = {
-					limit = {
-						any_navy_leader = {
-							NOT = {
-								has_trait = bold
-							}
-						}
-					}
-					random_navy_leader = {
-						limit = {
-							NOT = {
-								has_trait = bold
-							}
-						}
-						add_unit_leader_trait = bold
-					}
-				}
+			add_to_variable = { ITA_rm_navy_capital_ship_attack_factor = 0.05 }
+			custom_effect_tooltip = ITA_oto_naval_guns_rm_tt
 
-				#Second admiral trait
-				if = { #Try to select high level admirals
-					limit = {
-						any_navy_leader = {
-							NOT = {
-								has_trait = bold
-							}
-							skill > 3
-						}
-					}
-					random_navy_leader = {
-						limit = {
-							NOT = {
-								has_trait = bold
-							}
-							skill > 3
-						}
-						add_unit_leader_trait = bold
-					}
-				}
-				else_if = {
-					limit = {
-						any_navy_leader = {
-							NOT = {
-								has_trait = bold
-							}
-						}
-					}
-					random_navy_leader = {
-						limit = {
-							NOT = {
-								has_trait = bold
-							}
-						}
-						add_unit_leader_trait = bold
-					}
-				}
-			}
-		
-
+			ITA_inigo_campioni = { add_unit_leader_trait = bold }
+			ITA_carlo_bergamini = { add_unit_leader_trait = bold }
+			custom_effect_tooltip = generic_skip_one_line_tt
 			###########
 			### MTG ###
 			###########
@@ -5407,7 +5469,18 @@ focus_tree = {
 				}
 				name = "Yamato" 
 				requested_factories = 1
-				progress = 0.8
+				progress = 0.6
+				amount = 1
+			}
+			add_equipment_production = {
+				equipment = {
+					type = ship_hull_super_heavy_1
+					creator = "ITA" 
+					version_name = "Roma Class"
+				}
+				name = "Yamato" 
+				requested_factories = 1
+				progress = 0.6
 				amount = 1
 			}
 

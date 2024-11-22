@@ -873,7 +873,7 @@ characters = {
 		}
 		
 		navy_leader = {
-			traits = { battleship_adherent superior_tactician spotter green_water_expert }
+			traits = { battleship_adherent superior_tactician spotter }
 			skill = 3
 			attack_skill = 5
 			defense_skill = 2
