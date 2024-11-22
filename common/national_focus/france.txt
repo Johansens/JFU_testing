@@ -1700,6 +1700,25 @@ focus = {
 				remove_idea = FRA_civil_and_military_organization
 				add_idea = FRA_national_council_of_the_resistance
 			}
+			IF = {
+				limit = { 
+					539 = {
+						is_fully_controlled_by = ROOT
+						air_facility < 1
+						land_facility < 1
+						naval_facility < 1
+						nuclear_facility < 1
+					}
+				}
+				539 = {
+					add_building_construction = {
+						type = land_facility
+						level = 1
+						instant_build = yes
+						province = 6710 
+					}
+				}
+			}
 		}
 	}
 	focus = {
