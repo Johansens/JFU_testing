@@ -775,6 +775,7 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
 			army_experience = 10
+			custom_effect_tooltip = generic_skip_one_line_tt
 			393 = {
 				add_extra_state_shared_building_slots = 5
 				add_building_construction = {
@@ -788,6 +789,7 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+			custom_effect_tooltip = generic_skip_one_line_tt
 			394 = {
 				add_building_construction = {
 					type = infrastructure
@@ -814,6 +816,26 @@ focus_tree = {
 					type = infrastructure
 					level = 2
 					instant_build = yes
+				}
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			IF = {
+				limit = { 
+					393 = {
+						is_fully_controlled_by = ROOT
+						air_facility < 1
+						land_facility < 1
+						naval_facility < 1
+						nuclear_facility < 1
+					}
+				}
+				393 = {
+					add_building_construction = {
+						type = land_facility
+						level = 1
+						instant_build = yes
+						province = 6710 
+					}
 				}
 			}		
 		}
@@ -847,10 +869,11 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			369 = {
+			custom_effect_tooltip = generic_skip_one_line_tt
+			368 = {
 				add_building_construction = {
 					type = infrastructure
-					level = 3
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -861,6 +884,7 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+			custom_effect_tooltip = generic_skip_one_line_tt
 			air_experience = 50
 			navy_experience = 50
 			army_experience = 10			
@@ -1524,6 +1548,17 @@ focus = {
 				bonus = 1.0
 				category = armor
 			}
+			IF = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}	
+				mio:USA_army_ordnance_department_organization = {
+					add_mio_funds = 2000
+					add_mio_funds_gain_factor = 0.1
+					add_mio_research_bonus = 0.05
+
+				}
+			}
 		}
 	}
 	focus = {
@@ -1533,6 +1568,7 @@ focus = {
 		y = 3
 		prerequisite = { focus = USA_tank_experiments }
 		relative_position_id = USA_selective_training_act
+		mutually_exclusive = { focus = USA_main_battle_tanks }
 		cost = 5
 
 		ai_will_do = {
@@ -1557,7 +1593,9 @@ focus = {
 					has_dlc = "Arms Against Tyranny"
 				}	
 				mio:USA_tank_destroyer_board_organization = {
-					add_mio_size = 2
+					add_mio_funds = 2000
+					add_mio_funds_gain_factor = 0.1
+					add_mio_research_bonus = 0.05
 				}
 			}
 			ELSE = {
@@ -1573,6 +1611,7 @@ focus = {
 		y = 3
 		prerequisite = { focus = USA_tank_experiments }
 		relative_position_id = USA_selective_training_act
+		mutually_exclusive = { focus = USA_tank_destroyer_doctrine }
 		cost = 5
 
 		ai_will_do = {
@@ -1597,7 +1636,10 @@ focus = {
 					has_dlc = "Arms Against Tyranny"
 				}	
 				mio:USA_detroit_arsenal_organization = {
-					add_mio_size = 2
+					add_mio_funds = 2000
+					add_mio_funds_gain_factor = 0.1
+					add_mio_research_bonus = 0.05
+
 				}
 			}
 			ELSE = {
@@ -1739,6 +1781,16 @@ focus = {
 				bonus = 1.0
 				category = light_air
 			}
+			IF = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}	
+				mio:USA_light_aircraft_organization = {
+					add_mio_funds = 2000
+					add_mio_funds_gain_factor = 0.1
+					add_mio_research_bonus = 0.05
+				}
+			}
 		}
 	}
 
@@ -1763,6 +1815,16 @@ focus = {
 				uses = 1
 				bonus = 1.0
 				category = medium_air
+			}
+			IF = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}	
+				mio:USA_douglas_aircraft_company_organization = {
+					add_mio_funds = 2000
+					add_mio_funds_gain_factor = 0.1
+					add_mio_research_bonus = 0.05
+				}
 			}
 		}
 	}
@@ -1789,6 +1851,16 @@ focus = {
 				bonus = 1.0
 				uses = 1
 				category = heavy_air
+			}
+			IF = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}	
+				mio:USA_boeing_organization = {
+					add_mio_funds = 2000
+					add_mio_funds_gain_factor = 0.1
+					add_mio_research_bonus = 0.05
+				}
 			}
 		}
 	}
@@ -1876,6 +1948,16 @@ focus = {
 				bonus = 3.0
 				uses = 1
 				category = medium_air
+			}
+			IF = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}	
+				mio:USA_lockheed_organization = {
+					add_mio_funds = 2000
+					add_mio_funds_gain_factor = 0.1
+					add_mio_research_bonus = 0.05
+				}
 			}
 		}
 	}
@@ -2227,7 +2309,18 @@ focus = {
 				uses = 2
 				category = bb_tech
 			}
+			IF = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}	
+				mio:USA_norfolk_naval_yard_organization = {
+					add_mio_funds = 2000
+					add_mio_funds_gain_factor = 0.1
+					add_mio_research_bonus = 0.05
+				}
+			}
 		}
+		
 	}
 
 	focus = {
@@ -2277,6 +2370,16 @@ focus = {
 				bonus = 1.0
 				uses = 2
 				category = cv_tech
+			}
+			IF = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}	
+				mio:USA_newport_news_shipbuilding_organization = {
+					add_mio_funds = 2000
+					add_mio_funds_gain_factor = 0.1
+					add_mio_research_bonus = 0.05
+				}
 			}
 		}
 	}
@@ -2359,7 +2462,16 @@ focus = {
 
 		completion_reward = {
 			add_ideas = escort_effort_focus
-			
+			IF = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}	
+				mio:USA_electric_boat_company_organization = {
+					add_mio_funds = 2000
+					add_mio_funds_gain_factor = 0.1
+					add_mio_research_bonus = 0.05
+				}
+			}
 		}
 	}
 
@@ -2415,11 +2527,26 @@ focus = {
 
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
-			if = {
+			add_tech_bonus = {
+				name = USA_fleet_submarines
+				bonus = 1.0
+				uses = 2
+				category = ss_tech
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_breakthrough_progress = {
+				specialization = specialization_naval
+				value = 0.25
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			IF = {
 				limit = {
 					has_dlc = "Man the Guns"
 				}
-				set_technology = { cruiser_submarines = 1 }
+				add_ideas = fleet_submarine_specialization_mtg
+			}
+			ELSE = {
+				add_ideas = fleet_submarine_specialization
 			}
 		}
 	}
