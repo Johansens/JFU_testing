@@ -24,20 +24,6 @@ characters={
 				small="GFX_idea_george_patton"
 			}
 		}
-		advisor={
-			cost = 150
-			
-			slot = theorist
-			idea_token = george_patton
-			ledger = army
-				allowed = {
-					original_tag = USA
-				}
-				
-				traits = {
-					mobile_warfare_expert
-				}
-		}
 
 		corps_commander={
 			traits={ trait_reckless armor_officer war_hero trickster panzer_leader }
@@ -194,22 +180,17 @@ characters={
 			}
 		}
 		advisor={
-			slot = army_chief
+			slot = theorist
 			idea_token = douglas_macarthur
+			ledger = army
 			allowed = {
 				original_tag = USA
 			}
-			available = {
-			}
 			traits = {
-				army_chief_morale_2
+				military_theorist
 			}
-			cost = 100
-			ai_will_do = {
-				factor = 1.000
-			}
-		}
-		
+			cost = 150
+		}	
 		field_marshal={
 			traits={ brilliant_strategist career_officer media_personality politically_connected offensive_doctrine }
 			skill=4
