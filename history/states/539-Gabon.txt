@@ -4,14 +4,14 @@ state={
 
 	history={
 		owner = FRA
-		add_core_of = FRA
+		add_core_of = GAB
 		victory_points = {
 			5139 1 
 		}
 		buildings = {
 			infrastructure = 2
 			5139 = {
-				naval_base = 5
+				naval_base = 1
 
 			}
 

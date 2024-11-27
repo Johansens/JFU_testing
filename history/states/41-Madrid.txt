@@ -1,9 +1,6 @@
 state={
 	id=41
 	name="STATE_41"
-	resources={
-		aluminium=1.000
-	}
 
 	history={
 		owner = SPR
@@ -17,6 +14,7 @@ state={
 			infrastructure = 3
 			arms_factory = 2
 			industrial_complex = 2
+			air_base = 6
 
 		}
 		add_core_of = SPR

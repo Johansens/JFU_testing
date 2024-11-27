@@ -364,6 +364,7 @@ USA_lockheed_organization = {
 		equipment_bonus = {
 			air_range = 0.1
 			air_attack = 0.05
+			air_defence = 0.05
 		}
 	}
 }

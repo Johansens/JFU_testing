@@ -105,7 +105,8 @@ ideas = {
 
 			modifier = {
 				air_range_factor = 0.2
-				operative_slot = 1
+				#operative_slot = 1
+				conscription = 0.03
 			}
 		}
 
@@ -1193,7 +1194,6 @@ ideas = {
 			modifier = {
 				production_factory_max_efficiency_factor = 0.1
 				research_speed_factor = 0.1
-				communism_drift = 0.05
 				consumer_goods_factor = -0.1
 			}
 		}
@@ -1926,24 +1926,6 @@ ideas = {
 				political_power_gain = 1
 				weekly_manpower = 500
 				war_support_factor = 0.1
-			}
-		}
-
-		SOV_agents_in_the_stalinist_command_poum = {
-
-			picture = generic_spy_political
-
-			removal_cost = -1
-
-			allowed = {
-				always = no # Added via event
-			}
-
-			targeted_modifier = {
-				tag = SPD
-				attack_bonus_against = 0.15
-				defense_bonus_against = 0.25
-				breakthrough_bonus_against = 0.15
 			}
 		}
 

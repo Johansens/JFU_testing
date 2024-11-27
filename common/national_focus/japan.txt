@@ -103,7 +103,17 @@
 		available_if_capitulated = no
 
 		completion_reward = {
-			hidden_effect = { CHI = { load_oob = "CHI_spawn" } }
+			hidden_effect = {
+				if = {
+					limit = {
+						has_game_rule = { 
+							rule = JFU_CHINA_WAR 
+							option = CHINA_WAR 
+						} 
+					}
+					CHI = { load_oob = "CHI_spawn" } 
+				} 
+			}
 			add_stability = 0.1
 			add_war_support = 0.1
 			MAN = {
@@ -241,7 +251,7 @@
 		y = 2
 		relative_position_id = JAP_liaison_conference
 
-		cost = 10
+		cost = 5
 
 
 		cancel_if_invalid = yes
@@ -823,6 +833,31 @@
 				category = land_doctrine
 			}
 			add_ideas = JAP_supremacy_of_technology
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_breakthrough_progress = {
+				specialization = specialization_land
+				value = 0.5
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			IF = {
+				limit = { 
+					531 = {
+						is_fully_controlled_by = ROOT
+						air_facility < 1
+						land_facility < 1
+						naval_facility < 1
+						nuclear_facility < 1
+					}
+				}
+				531 = {
+					add_building_construction = {
+						type = land_facility
+						level = 1
+						instant_build = yes
+						province = 6710 
+					}
+				}
+			}		
 		}
 	}
 
@@ -937,6 +972,17 @@
 				uses = 2
 				category = armor	
 			}
+			if = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}
+				mio:JAP_osaka_army_arsenal_organization = {
+					add_mio_funds = 2000
+					add_mio_funds_gain_factor = 0.1
+					add_mio_research_bonus = 0.05
+
+				}
+			}
 		}
 	}
 
@@ -989,6 +1035,18 @@
 				uses = 2
 				technology = mechanised_infantry
 				technology = amphibious_mechanized_infantry
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			if = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}
+				mio:JAP_osaka_army_arsenal_organization = {
+					add_mio_funds = 2000
+					add_mio_funds_gain_factor = 0.1
+					add_mio_research_bonus = 0.05
+
+				}
 			}
 		}
 	}
@@ -1127,7 +1185,34 @@
 
 
 		completion_reward = {
-			custom_effect_tooltip = MIO_range_trait
+			#custom_effect_tooltip = MIO_range_trait
+			if = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}
+				mio:JAP_light_aircraft_organization = {
+					add_mio_funds = 2000
+					add_mio_funds_gain_factor = 0.10
+					add_mio_research_bonus = 0.05
+
+				
+					unlock_mio_trait_tooltip = JAP_range_focus_trait
+				}
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			if = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}
+				mio:JAP_yokosuka_organization = {
+					add_mio_funds = 2000
+					add_mio_funds_gain_factor = 0.10
+					add_mio_research_bonus = 0.05
+
+				
+					unlock_mio_trait_tooltip = JAP_range_focus_trait
+				}
+			}
 		}
 	}
 
@@ -1163,7 +1248,34 @@
 
 
 		completion_reward = {
-			custom_effect_tooltip = MIO_agility_trait
+			#custom_effect_tooltip = MIO_agility_trait
+			if = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}
+				mio:JAP_light_aircraft_organization = {
+					add_mio_funds = 2000
+					add_mio_funds_gain_factor = 0.1
+					add_mio_research_bonus = 0.05
+
+				
+					unlock_mio_trait_tooltip = JAP_agility_focus_trait
+				}
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			if = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}
+				mio:JAP_yokosuka_organization = {
+					add_mio_funds = 2000
+					add_mio_funds_gain_factor = 0.1
+					add_mio_research_bonus = 0.05
+
+				
+					unlock_mio_trait_tooltip = JAP_agility_focus_trait
+				}
+			}
 		}
 	}
 
@@ -1217,6 +1329,7 @@
 					}
 				}
 			}
+			
 		}
 	}
 
@@ -1324,6 +1437,18 @@
 				cost_reduction = 0.25
 				uses = 2
 				category = cat_base_strike
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			IF = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}
+				mio:JAP_yokosuka_naval_arsenal_organization = {
+					add_mio_funds = 2000
+					add_mio_funds_gain_factor = 0.1
+					add_mio_research_bonus = 0.05
+
+				}
 			}
 		}
 	}
@@ -1481,19 +1606,24 @@
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
+			add_ideas = JAP_supremacy_of_the_battlefleet
+			custom_effect_tooltip = generic_skip_one_line_tt	
 			add_tech_bonus = {
 				name = JAP_supremacy_of_the_battlefleet
 				bonus = 1.0
 				uses = 1
 				category = bb_tech
 			}
+			custom_effect_tooltip = generic_skip_one_line_tt
 			IF = {
 				limit = {
 					has_dlc = "Arms Against Tyranny"
 				}
-				show_mio_tooltip = JAP_kure_naval_arsenal_organization
 				mio:JAP_kure_naval_arsenal_organization = {
 					add_mio_funds = 2000
+					add_mio_funds_gain_factor = 0.1
+					add_mio_research_bonus = 0.05
+
 				}
 			}
 		}
@@ -1514,14 +1644,10 @@
 		}
 
 		available = {
-
+			is_special_project_completed = sp:sp_naval_super_heavy_battleship
 		}
 
 		bypass = {
-			AND = {
-				has_tech = heavy_battleship
-				has_tech = heavy_battleship2
-			}
 		}
 
 		cancel_if_invalid = yes
@@ -1530,6 +1656,11 @@
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
+			add_breakthrough_progress = {
+				specialization = specialization_naval
+				value = 0.5
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
 			if = {
 				limit = {
 					not = { has_dlc = "Man the Guns" }
@@ -1542,14 +1673,6 @@
 				}
 			}
 			else = {
-				if = {
-					limit = {
-						not = { has_tech = ship_hull_super_heavy }
-					}
-					set_technology = {
-						ship_hull_super_heavy = 1
-					}
-				}
 				create_equipment_variant = {
 					name = "Yamato Class"
 					type = ship_hull_super_heavy_1
@@ -1636,6 +1759,17 @@
 				category = cl_tech	
 				category = ca_tech	
 			}
+			IF = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}
+				mio:JAP_sasebo_naval_arsenal_organization = {
+					add_mio_funds = 2000
+					add_mio_funds_gain_factor = 0.1
+					add_mio_research_bonus = 0.05
+
+				}
+			}
 		}
 	}
 
@@ -1699,14 +1833,21 @@
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			if = {
-				limit = {
-					not = { has_dlc = "Man the Guns" }
-				}
-				set_technology = { torpedo_cruiser = 1 }
+			add_breakthrough_progress = {
+				specialization = specialization_naval
+				value = 0.75
 			}
-			else = {
-				set_technology = { torpedo_cruiser_mtg = 1 }
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			IF = {
+				limit = {
+					has_dlc = "Man the Guns"
+				}
+				add_ideas = torpedo_cruisers_ns_mtg
+			}
+			ELSE = {
+				add_ideas = torpedo_cruisers_ns
 			}
 		}
 	}

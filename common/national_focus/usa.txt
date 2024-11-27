@@ -384,7 +384,7 @@ focus_tree = {
 		x = 2
 		y = 2
 		relative_position_id = USA_wpa
-		cost = 10
+		cost = 5
 		#ai_will_do = {
 		#	factor = 1
 		#}
@@ -444,17 +444,30 @@ focus_tree = {
 
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
-			add_tech_bonus = {
-				name = USA_manhattan_project
-				bonus = 1.0
-				uses = 1
-				category = nuclear
+			IF = {
+				limit = {
+					NOT = {
+						has_tech = atomic_research
+					}
+				}
+				add_tech_bonus = {
+					name = USA_manhattan_project
+					bonus = 0.5
+					uses = 1
+					category = nuclear
+				}
+				add_breakthrough_progress = {
+					specialization = specialization_nuclear
+					value = 0.5
+				}
+				add_ideas = USA_manhattan_project_ns
 			}
-			add_tech_bonus = {
-				name = USA_manhattan_project
-				bonus = 1.0
-				uses = 1
-				category = nuclear
+			ELSE = {
+				add_breakthrough_progress = {
+					specialization = specialization_nuclear
+					value = 1
+				}
+				add_ideas = USA_manhattan_project_ns
 			}
 		}
 	}
@@ -758,210 +771,73 @@ focus_tree = {
 		#	factor = 1
 		#}
 		complete_tooltip = {
-			army_experience = 10
-			every_state = {
-				limit = { has_state_flag = USA_military_construction_5MF }
-				add_extra_state_shared_building_slots = 5
-				add_building_construction = {
-					type = arms_factory
-					level = 5
-					instant_build = yes
-				}
-			}
-			every_state = {
-				limit = { has_state_flag = USA_military_construction_3Inf }
-				add_building_construction = {
-					type = infrastructure
-					level = 3
-					instant_build = yes
-				}
-			}
 		}
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
 			army_experience = 10
-			random_owned_controlled_state = {
-				limit = {
-					arms_factory > 0
-					free_building_slots = {
-						building = arms_factory
-						size > 4
-						include_locked = yes
-					}
-					OR = {
-						region = 117
-						region = 118
-						region = 119
-						region = 120
-					}
-				}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			393 = {
 				add_extra_state_shared_building_slots = 5
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
 				add_building_construction = {
 					type = arms_factory
 					level = 5
 					instant_build = yes
 				}
-				set_state_flag = USA_military_construction_5MF
 			}
-			if = {
-				limit = {
-					371 = {
-						OR = {
-							NOT = { is_owned_and_controlled_by = USA }
-							AND = {
-								is_owned_and_controlled_by = USA
-								free_building_slots = {
-									building = infrastructure
-									size < 3
-								}
-							}
-						}
-					}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			394 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
 				}
-				random_owned_controlled_state = {
-					limit = { 
-						free_building_slots = {
-							building = infrastructure
-							size > 2
-						}
-						OR = {
-							region = 117
-							region = 118
-							region = 119
-							region = 120
-						}
-					}
-					add_building_construction = {
-						type = infrastructure
-						level = 3
-						instant_build = yes
-					}
-					set_state_flag = USA_military_construction_3Inf
+			}
+			391 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
 				}
 			}
 			371 = {
-				if = {
-					limit = { 
-						is_owned_and_controlled_by = USA
-						free_building_slots = {
-							building = infrastructure
-							size > 2
-						}
-					}
-					add_building_construction = {
+				add_building_construction = {
 						type = infrastructure
-						level = 3
+						level = 2
 						instant_build = yes
-					}
-					set_state_flag = USA_military_construction_3Inf
-				}
-			}
-			if = {
-				limit = {
-					375 = {
-						OR = {
-							NOT = { is_owned_and_controlled_by = USA }
-							AND = {
-								is_owned_and_controlled_by = USA
-								free_building_slots = {
-									building = infrastructure
-									size < 3
-								}
-							}
-						}
-					}
-				}
-				random_owned_controlled_state = {
-					limit = { 
-						free_building_slots = {
-							building = infrastructure
-							size > 2
-						}
-						OR = {
-							region = 117
-							region = 118
-							region = 119
-							region = 120
-						}
-					}
-					add_building_construction = {
-						type = infrastructure
-						level = 3
-						instant_build = yes
-					}
-					set_state_flag = USA_military_construction_3Inf
 				}
 			}
 			375 = {
-				if = {
-					limit = { 
-						is_owned_and_controlled_by = USA
-						free_building_slots = {
-							building = infrastructure
-							size > 2
-						}
-					}
-					add_building_construction = {
-						type = infrastructure
-						level = 3
-						instant_build = yes
-					}
-					set_state_flag = USA_military_construction_3Inf
-				}
-			}			
-			if = {
-				limit = {
-					378 = {
-						OR = {
-							NOT = { is_owned_and_controlled_by = USA }
-							AND = {
-								is_owned_and_controlled_by = USA
-								free_building_slots = {
-									building = infrastructure
-									size < 3
-								}
-							}
-						}
-					}
-				}
-				random_owned_controlled_state = {
-					limit = { 
-						free_building_slots = {
-							building = infrastructure
-							size > 2
-						}
-						OR = {
-							region = 117
-							region = 118
-							region = 119
-							region = 120
-						}
-					}
-					add_building_construction = {
-						type = infrastructure
-						level = 3
-						instant_build = yes
-					}
-					set_state_flag = USA_military_construction_3Inf
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
 				}
 			}
-			378 = {
-				if = {
-					limit = { 
-						is_owned_and_controlled_by = USA
-						free_building_slots = {
-							building = infrastructure
-							size > 2
-						}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			IF = {
+				limit = { 
+					393 = {
+						is_fully_controlled_by = ROOT
+						air_facility < 1
+						land_facility < 1
+						naval_facility < 1
+						nuclear_facility < 1
 					}
-					add_building_construction = {
-						type = infrastructure
-						level = 3
-						instant_build = yes
-					}
-					set_state_flag = USA_military_construction_3Inf
 				}
-			}			
+				393 = {
+					add_building_construction = {
+						type = land_facility
+						level = 1
+						instant_build = yes
+						province = 6710 
+					}
+				}
+			}		
 		}
 	}
 
@@ -982,93 +858,33 @@ focus_tree = {
 		#	factor = 1
 		#}
 		complete_tooltip = {
-			every_state = {
-				limit = { has_state_flag = USA_USACE_projects_3AF }
-				add_extra_state_shared_building_slots = 3
-				add_building_construction = {
-					type = arms_factory
-					level = 3
-					instant_build = yes
-				}
-			}
-			every_state = {
-				limit = { has_state_flag = USA_USACE_projects_3Inf }
-				add_building_construction = {
-					type = infrastructure
-					level = 3
-					instant_build = yes
-				}
-			}
 		}
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
-			random_owned_controlled_state = {
-				limit = {
-					arms_factory > 0
-					free_building_slots = {
-						building = arms_factory
-						size > 2
-						include_locked = yes
-					}
-					OR = {
-						region = 117
-						region = 118
-						region = 119
-						region = 120
-					}
-				}
+			370 = {
 				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = arms_factory
 					level = 3
 					instant_build = yes
 				}
-				set_state_flag = USA_USACE_projects_3AF
 			}
-			random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = infrastructure
-						size > 2
-						include_locked = yes
-					}
-					OR = {
-						region = 117
-						region = 118
-						region = 119
-						region = 120
-					}
-					state_population > 3000000
+			custom_effect_tooltip = generic_skip_one_line_tt
+			368 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
 				}
+			}
+			380 = {
 				add_building_construction = {
 					type = infrastructure
 					level = 3
 					instant_build = yes
 				}
-				set_state_flag = USA_USACE_projects_3Inf
 			}
-			random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = infrastructure
-						size > 2
-						include_locked = yes
-					}
-					OR = {
-						region = 117
-						region = 118
-						region = 119
-						region = 120
-					}
-					state_population > 3000000
-				}
-				add_building_construction = {
-					type = infrastructure
-					level = 3
-					instant_build = yes
-				}
-				set_state_flag = USA_USACE_projects_3Inf
-			}
+			custom_effect_tooltip = generic_skip_one_line_tt
 			air_experience = 50
 			navy_experience = 50
 			army_experience = 10			
@@ -1252,10 +1068,13 @@ focus_tree = {
 				date > 1943.01.01
 				SOV = { surrender_progress > 0.6 }
 			}
-			has_country_flag = {
-				flag = USA_emergency_dday_flag
-				days > 60
-			} 
+			OR = {
+				has_country_flag = {
+					flag = USA_operation_overlord_flag
+					days > 60
+				} 
+				NOT = { has_idea = emergency_dday_idea }
+			}
 		}
 
 		available_if_capitulated = yes
@@ -1270,7 +1089,7 @@ focus_tree = {
 				#	days = 30 
 				#}	 
 			#}
-			set_country_flag = USA_operation_overlord_flag	
+			set_country_flag = USA_operation_overlord_flag_2	
 		}
 	}
 	focus = {
@@ -1286,17 +1105,21 @@ focus_tree = {
 
 		available = {
 			SOV = { surrender_progress > 0.5 }
-			NOT = { has_idea = emergency_dday_idea }
+
 			#NOT = { 
 			#	any_state = {
 			#		limit = { atlantikwall_states = yes }
 			#		is_controlled_by_ROOT_or_ally = yes 
 			#	}
 			#}
-			has_country_flag = {
-				flag = USA_operation_overlord_flag
-				days > 60
-			} 
+			OR = {
+				has_country_flag = {
+					flag = USA_operation_overlord_flag_2
+					days > 60
+				} 
+				NOT = { has_idea = emergency_dday_idea }
+			}
+
 		}
 
 		available_if_capitulated = yes
@@ -1312,7 +1135,7 @@ focus_tree = {
 				#	scope = USA
 				#} 
 			}
-			set_country_flag = USA_emergency_dday_flag	
+			set_country_flag = USA_operation_overlord_flag	
 		}
 	}
 	focus = {
@@ -1327,10 +1150,7 @@ focus_tree = {
 		prerequisite = {  focus = USA_war_plan_silver }
 
 		available = {
-			OR = {
-				448 = { is_controlled_by = ENG }
-				SOV = { surrender_progress > 0.5 }
-			}
+			448 = { is_controlled_by = ENG }
 		}
 
 
@@ -1550,7 +1370,7 @@ focus = {
 		y = 1
 		prerequisite = { focus = USA_selective_training_act }
 		relative_position_id = USA_selective_training_act
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -1678,7 +1498,7 @@ focus = {
 		x = 2
 		y = 1
 		relative_position_id = USA_selective_training_act
-		cost = 10
+		cost = 5
 		prerequisite = { focus = USA_selective_training_act }
 		ai_will_do = {
 			factor = 5
@@ -1703,7 +1523,7 @@ focus = {
 		y = 2
 		prerequisite = { focus = USA_support_rock_island }
 		relative_position_id = USA_selective_training_act
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -1728,6 +1548,17 @@ focus = {
 				bonus = 1.0
 				category = armor
 			}
+			IF = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}	
+				mio:USA_army_ordnance_department_organization = {
+					add_mio_funds = 2000
+					add_mio_funds_gain_factor = 0.1
+					add_mio_research_bonus = 0.05
+
+				}
+			}
 		}
 	}
 	focus = {
@@ -1737,7 +1568,8 @@ focus = {
 		y = 3
 		prerequisite = { focus = USA_tank_experiments }
 		relative_position_id = USA_selective_training_act
-		cost = 10
+		mutually_exclusive = { focus = USA_main_battle_tanks }
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -1761,7 +1593,9 @@ focus = {
 					has_dlc = "Arms Against Tyranny"
 				}	
 				mio:USA_tank_destroyer_board_organization = {
-					add_mio_size = 2
+					add_mio_funds = 2000
+					add_mio_funds_gain_factor = 0.1
+					add_mio_research_bonus = 0.05
 				}
 			}
 			ELSE = {
@@ -1777,7 +1611,8 @@ focus = {
 		y = 3
 		prerequisite = { focus = USA_tank_experiments }
 		relative_position_id = USA_selective_training_act
-		cost = 10
+		mutually_exclusive = { focus = USA_tank_destroyer_doctrine }
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -1801,7 +1636,10 @@ focus = {
 					has_dlc = "Arms Against Tyranny"
 				}	
 				mio:USA_detroit_arsenal_organization = {
-					add_mio_size = 2
+					add_mio_funds = 2000
+					add_mio_funds_gain_factor = 0.1
+					add_mio_research_bonus = 0.05
+
 				}
 			}
 			ELSE = {
@@ -1937,6 +1775,22 @@ focus = {
 				category = air_doctrine
 			} # REVISIT May use modifier?
 			add_ideas = air_war_plans_division_focus
+			add_tech_bonus = {
+				name = CAS_effort
+				uses = 1
+				bonus = 1.0
+				category = light_air
+			}
+			IF = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}	
+				mio:USA_light_aircraft_organization = {
+					add_mio_funds = 2000
+					add_mio_funds_gain_factor = 0.1
+					add_mio_research_bonus = 0.05
+				}
+			}
 		}
 	}
 
@@ -1960,7 +1814,17 @@ focus = {
 				name = fighter_effort
 				uses = 1
 				bonus = 1.0
-				category = light_air
+				category = medium_air
+			}
+			IF = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}	
+				mio:USA_douglas_aircraft_company_organization = {
+					add_mio_funds = 2000
+					add_mio_funds_gain_factor = 0.1
+					add_mio_research_bonus = 0.05
+				}
 			}
 		}
 	}
@@ -1986,8 +1850,17 @@ focus = {
 				name = USA_medium_fighters
 				bonus = 1.0
 				uses = 1
-				category = medium_air
 				category = heavy_air
+			}
+			IF = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}	
+				mio:USA_boeing_organization = {
+					add_mio_funds = 2000
+					add_mio_funds_gain_factor = 0.1
+					add_mio_research_bonus = 0.05
+				}
 			}
 		}
 	}
@@ -2076,6 +1949,16 @@ focus = {
 				uses = 1
 				category = medium_air
 			}
+			IF = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}	
+				mio:USA_lockheed_organization = {
+					add_mio_funds = 2000
+					add_mio_funds_gain_factor = 0.1
+					add_mio_research_bonus = 0.05
+				}
+			}
 		}
 	}
 
@@ -2120,22 +2003,6 @@ focus = {
 		available_if_capitulated = no
 
 		complete_tooltip = {
-			378 = { 
-				add_extra_state_shared_building_slots = 5
-				add_building_construction = {
-					type = dockyard
-					level = 5
-					instant_build = yes
-				}
-			}
-			358 = { 
-				add_extra_state_shared_building_slots = 5
-				add_building_construction = {
-					type = dockyard
-					level = 5
-					instant_build = yes
-				}
-			}
 		}
 		search_filters = {FOCUS_FILTER_USA_CONGRESS}
 		completion_reward = {
@@ -2161,6 +2028,7 @@ focus = {
 					instant_build = yes
 				}
 			}
+			custom_effect_tooltip = generic_skip_one_line_tt
 		}
 	}
 	focus = {
@@ -2172,7 +2040,7 @@ focus = {
 		x = -3
 		y = 1
 		relative_position_id = USA_two_ocean_navy_act
-		cost = 2
+		cost = 5
 		#ai_will_do = {
 		#	factor = 1
 		#}
@@ -2185,6 +2053,26 @@ focus = {
 					level = 2
 					instant_build = yes
 				}
+				if= {
+					limit = {
+						650 = {
+							air_base > 8
+						}
+					}
+					set_building_level = {
+						type = air_base
+						level = 10
+						instant_build = yes
+					}				
+				}
+				else = {
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}
+				}
+
 				add_building_construction = {
 					type = naval_base
 					province = 13067
@@ -2199,6 +2087,25 @@ focus = {
 					province = 13052
 					level = 2
 					instant_build = yes
+				}
+				if= {
+					limit = {
+						631 = {
+							air_base > 8
+						}
+					}
+					set_building_level = {
+						type = air_base
+						level = 10
+						instant_build = yes
+					}				
+				}
+				else = {
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}
 				}
 				add_building_construction = {
 					type = naval_base
@@ -2215,6 +2122,25 @@ focus = {
 					level = 2
 					instant_build = yes
 				}
+				if= {
+					limit = {
+						632 = {
+							air_base > 8
+						}
+					}
+					set_building_level = {
+						type = air_base
+						level = 10
+						instant_build = yes
+					}				
+				}
+				else = {
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}
+				}
 				add_building_construction = {
 					type = naval_base
 					province = 13047
@@ -2230,6 +2156,25 @@ focus = {
 					level = 2
 					instant_build = yes
 				}
+				if= {
+					limit = {
+						638 = {
+							air_base > 8
+						}
+					}
+					set_building_level = {
+						type = air_base
+						level = 10
+						instant_build = yes
+					}				
+				}
+				else = {
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}
+				}
 				add_building_construction = {
 					type = naval_base
 					province = 12140
@@ -2244,6 +2189,25 @@ focus = {
 					province = 13050
 					level = 2
 					instant_build = yes
+				}
+				if= {
+					limit = {
+						642 = {
+							air_base > 8
+						}
+					}
+					set_building_level = {
+						type = air_base
+						level = 10
+						instant_build = yes
+					}				
+				}
+				else = {
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}
 				}
 				add_building_construction = {
 					type = naval_base
@@ -2345,7 +2309,18 @@ focus = {
 				uses = 2
 				category = bb_tech
 			}
+			IF = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}	
+				mio:USA_norfolk_naval_yard_organization = {
+					add_mio_funds = 2000
+					add_mio_funds_gain_factor = 0.1
+					add_mio_research_bonus = 0.05
+				}
+			}
 		}
+		
 	}
 
 	focus = {
@@ -2395,6 +2370,16 @@ focus = {
 				bonus = 1.0
 				uses = 2
 				category = cv_tech
+			}
+			IF = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}	
+				mio:USA_newport_news_shipbuilding_organization = {
+					add_mio_funds = 2000
+					add_mio_funds_gain_factor = 0.1
+					add_mio_research_bonus = 0.05
+				}
 			}
 		}
 	}
@@ -2477,7 +2462,16 @@ focus = {
 
 		completion_reward = {
 			add_ideas = escort_effort_focus
-			
+			IF = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}	
+				mio:USA_electric_boat_company_organization = {
+					add_mio_funds = 2000
+					add_mio_funds_gain_factor = 0.1
+					add_mio_research_bonus = 0.05
+				}
+			}
 		}
 	}
 
@@ -2533,11 +2527,26 @@ focus = {
 
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
-			if = {
+			add_tech_bonus = {
+				name = USA_fleet_submarines
+				bonus = 1.0
+				uses = 2
+				category = ss_tech
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_breakthrough_progress = {
+				specialization = specialization_naval
+				value = 0.25
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			IF = {
 				limit = {
 					has_dlc = "Man the Guns"
 				}
-				set_technology = { cruiser_submarines = 1 }
+				add_ideas = fleet_submarine_specialization_mtg
+			}
+			ELSE = {
+				add_ideas = fleet_submarine_specialization
 			}
 		}
 	}
