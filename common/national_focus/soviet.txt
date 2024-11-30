@@ -892,6 +892,20 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			if = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}
+				mio:SOV_mig_design_bureau_organization = {
+					add_mio_size = 2
+					add_mio_funds_gain_factor = 0.10
+					add_mio_research_bonus = 0.05
+
+				
+					#unlock_mio_trait_tooltip = 
+				}
+			}
 		}
 	}
 
@@ -1259,6 +1273,20 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			if = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}
+				mio:SOV_CAS_organization = {
+					add_mio_size = 2
+					add_mio_funds_gain_factor = 0.10
+					add_mio_research_bonus = 0.05
+
+				
+					#unlock_mio_trait_tooltip = 
+				}
+			}
 		}
 	}
 
@@ -1296,6 +1324,20 @@ focus_tree = {
 					type = air_base
 					level = 10
 					instant_build = yes
+				}
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			if = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}
+				mio:SOV_tupolev_design_bureau_organization = {
+					add_mio_size = 2
+					add_mio_funds_gain_factor = 0.10
+					add_mio_research_bonus = 0.05
+
+				
+					#unlock_mio_trait_tooltip = 
 				}
 			}
 		}
@@ -1412,6 +1454,7 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+			
 		}
 	}
 
@@ -1883,6 +1926,20 @@ focus_tree = {
 						add_to_temp_variable = { SOV.temp_targets_index = 1 }
 						log = "Round [?SOV.temp_targets_index]"
 					}
+				}
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			if = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}
+				mio:SOV_okmo_organization = {
+					add_mio_size = 2
+					add_mio_funds_gain_factor = 0.10
+					add_mio_research_bonus = 0.05
+
+				
+					#unlock_mio_trait_tooltip = 
 				}
 			}
 		}
