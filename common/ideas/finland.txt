@@ -1687,7 +1687,6 @@ ideas = {
 			}
 
 			visible = {
-				NOT = { has_completed_focus = FIN_national_armor_focus }
 			}
 			
 			research_bonus = {
@@ -1706,7 +1705,7 @@ ideas = {
 			}
 
 			visible = {
-				has_completed_focus = FIN_national_armor_focus
+				always = no
 			}
 
 			cost = 75

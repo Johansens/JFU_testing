@@ -61,12 +61,6 @@ news_event = {
 				add_to_variable = { var = SPReco_cs value = -0.1 }
 				add_to_variable = { var = SPReco_FO value = -0.3 }
 				add_to_variable = { var = SPReco_DO value = -0.3 }
-				if = {
-					limit = {
-						has_idea = SPA_a_methodical_approach
-					}
-					remove_ideas = SPA_a_methodical_approach
-				}
 			}
 		}
 	}
@@ -133,19 +127,7 @@ news_event = {
 					disband = yes
 			}
 			remove_ideas = SPA_death_before_surrender
-			if = {
-				limit = {
-					has_idea = SPA_a_methodical_approach
-				}
-				remove_ideas = SPA_a_methodical_approach
-			}
 			add_timed_idea = { idea = SPA_recovering_from_civil_war days = 2190 }
-			if = {
-				limit = {
-					has_idea = SPA_foreign_training_staff
-				}
-				remove_ideas = SPA_foreign_training_staff
-			}
 		}
 	}
 }

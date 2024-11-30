@@ -91,7 +91,7 @@ political_actions = {
 				USA = { set_country_flag = fight_on_the_beaches_speech }
 			}
 			set_country_flag = fight_on_the_beaches_speech
-			play_we_shall_fight_on_the_beaches_effect = yes
+			#play_we_shall_fight_on_the_beaches_effect = yes
 		}
 
 		ai_will_do = {
@@ -139,7 +139,7 @@ political_actions = {
 				USA = { set_country_flag = this_was_their_finest_hour_speech }
 			}
 			set_country_flag = this_was_their_finest_hour_speech
-			play_their_finest_hour_effect = yes
+			#play_their_finest_hour_effect = yes
 		}
 
 		ai_will_do = {

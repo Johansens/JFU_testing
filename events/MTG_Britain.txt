@@ -5,6 +5,21 @@
 
 ####
 
+
+country_event = {
+	id = mtg_britain.17
+	title = mtg_britain.17.t
+	desc = mtg_britain.17.d
+	picture = GFX_report_event_generic_conference
+
+	is_triggered_only = yes
+	
+	# Ok
+	option = {
+		name = mtg_britain.17.a
+	}
+}
+
 country_event = {
 	id = mtg_britain.999
 	title = mtg_britain.999.t

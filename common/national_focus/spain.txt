@@ -391,29 +391,6 @@ focus_tree = {
 	}
 
 	focus = {
-		id = SPR_a_methodical_approach
-		available = {
-		}
-		bypass = {
-			has_global_flag = scw_over
-		}
-		prerequisite = { focus = SPR_unify_the_nationalist_front }
-		
-		icon = GFX_goal_generic_more_territorial_claims
-		x = 4
-		y = 1
-		relative_position_id = SPR_unify_the_nationalist_front
-		cost = 5
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-			add_ideas = SPA_a_methodical_approach
-			custom_effect_tooltip = SPR_seize_public_transport_tt
-		}
-	}
-
-	focus = {
 		id = SPR_integrate_the_requetes
 		available = {
 		}
@@ -775,24 +752,21 @@ focus_tree = {
 				add_to_variable = { var = SPReco_stabwg value = 0.001 }
 				add_ideas = SPR_no_airfields
 				remove_ideas = scw_pre_grinded_nerf2
-				169 = { 
-					remove_building = { type = air_base  level = 10 }  
+				169 = {   
 					set_building_level = {
 						type = anti_air_building
 						level = 10
 						instant_build = yes
 					}		
 				}
-				173 = { 
-					remove_building = { type = air_base  level = 10 }  
+				173 = {  
 					set_building_level = {
 						type = anti_air_building
 						level = 10
 						instant_build = yes
 					}		
 				}
-				168 = { 
-					remove_building = { type = air_base  level = 10 }  
+				168 = {  
 					set_building_level = {
 						type = anti_air_building
 						level = 10
@@ -800,23 +774,20 @@ focus_tree = {
 					}		
 				}
 				789 = { 
-					remove_building = { type = air_base  level = 10 }  
 					set_building_level = {
 						type = anti_air_building
 						level = 10
 						instant_build = yes
 					}		
 				}
-				170 = { 
-					remove_building = { type = air_base  level = 10 }  
+				170 = {  
 					set_building_level = {
 						type = anti_air_building
 						level = 10
 						instant_build = yes
 					}		
 				}
-				175 = { 
-					remove_building = { type = air_base  level = 10 }  
+				175 = {  
 					set_building_level = {
 						type = anti_air_building
 						level = 10
@@ -824,7 +795,6 @@ focus_tree = {
 					}		
 				}
 				167 = { 
-					remove_building = { type = air_base  level = 10 }  
 					set_building_level = {
 						type = anti_air_building
 						level = 10
@@ -832,23 +802,20 @@ focus_tree = {
 					}		
 				}
 				793 = { 
-					remove_building = { type = air_base  level = 10 }  
 					set_building_level = {
 						type = anti_air_building
 						level = 10
 						instant_build = yes
 					}		
 				}
-				41 = { 
-					remove_building = { type = air_base  level = 10 }  
+				41 = {  
 					set_building_level = {
 						type = anti_air_building
 						level = 10
 						instant_build = yes
 					}		
 				}
-				788 = { 
-					remove_building = { type = air_base  level = 10 }  
+				788 = {  
 					set_building_level = {
 						type = anti_air_building
 						level = 10
@@ -856,15 +823,13 @@ focus_tree = {
 					}		
 				}
 				791 = { 
-					remove_building = { type = air_base  level = 10 }  
 					set_building_level = {
 						type = anti_air_building
 						level = 10
 						instant_build = yes
 					}		
 				}
-				794 = { 
-					remove_building = { type = air_base  level = 10 }  
+				794 = {  
 					set_building_level = {
 						type = anti_air_building
 						level = 10
@@ -872,7 +837,6 @@ focus_tree = {
 					}		
 				}
 				166 = { 
-					remove_building = { type = air_base  level = 10 }  
 					set_building_level = {
 						type = anti_air_building
 						level = 10
@@ -880,15 +844,13 @@ focus_tree = {
 					}		
 				}
 				165 = { 
-					remove_building = { type = air_base  level = 10 }  
 					set_building_level = {
 						type = anti_air_building
 						level = 10
 						instant_build = yes
 					}		
 				}
-				176 = { 
-					remove_building = { type = air_base  level = 10 }  
+				176 = {  
 					set_building_level = {
 						type = anti_air_building
 						level = 10
@@ -896,7 +858,6 @@ focus_tree = {
 					}		
 				}
 				172 = { 
-					remove_building = { type = air_base  level = 10 }  
 					set_building_level = {
 						type = anti_air_building
 						level = 10
@@ -904,15 +865,13 @@ focus_tree = {
 					}		
 				}
 				792 = { 
-					remove_building = { type = air_base  level = 10 }  
 					set_building_level = {
 						type = anti_air_building
 						level = 10
 						instant_build = yes
 					}		
 				}
-				790 = { 
-					remove_building = { type = air_base  level = 10 }  
+				790 = {  
 					set_building_level = {
 						type = anti_air_building
 						level = 10
@@ -920,27 +879,20 @@ focus_tree = {
 					}		
 				}
 				171 = { 
-					remove_building = { type = air_base  level = 10 }  
 					set_building_level = {
 						type = anti_air_building
 						level = 10
 						instant_build = yes
 					}		
 				}
-				174 = { 
-					remove_building = { type = air_base  level = 10 }  
+				174 = {  
 					set_building_level = {
 						type = anti_air_building
 						level = 10
 						instant_build = yes
 					}		
 				}
-				290 = { 
-					remove_building = { type = air_base  level = 10 }		 
-				}
-
 				177 = { 
-					remove_building = { type = air_base  level = 10 }
 					set_building_level = {
 						type = anti_air_building
 						level = 10
@@ -967,15 +919,14 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
 		completion_reward = {
-
-			custom_effect_tooltip = SPR_economy_fea_tt
-			hidden_effect = {
-				add_to_variable = { var = SPReco_cgf value = -0.05 }
-				add_to_variable = { var = SPReco_cs value = 0.06 }
-				add_to_variable = { var = SPReco_FO value = 0.12 }
-				add_to_variable = { var = SPReco_DO value = 0.12 }
-				add_to_variable = { var = SPReco_mfcs value = 0.1 }
-			}
+			
+			custom_effect_tooltip = SPR_modify_eco_modifier_tt
+			add_to_variable = { SPReco_cgf = -0.05 tooltip = consumer_goods_factor_tt }
+			add_to_variable = { SPReco_cs = 0.06 tooltip = production_speed_buildings_factor_tt }
+			add_to_variable = { SPReco_FO = 0.12 tooltip = industrial_capacity_factory_tt }
+			add_to_variable = { SPReco_DO = 0.12 tooltip = industrial_capacity_dockyard_tt }
+			add_to_variable = { SPReco_DO = 0.1 tooltip = production_speed_arms_factory_factor_tt }				
+			custom_effect_tooltip = generic_skip_one_line_tt
 			add_tech_bonus = {
 				name = SPA_fascist_economic_aid
 				bonus = 1.0
@@ -990,7 +941,7 @@ focus_tree = {
 				technology = dispersed_industry3 
 				technology = dispersed_industry4 
 				technology = dispersed_industry5 
-			}
+			}		
 		}
 	}
 
@@ -1084,13 +1035,11 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			custom_effect_tooltip = SPR_economy_stwi_tt
-			hidden_effect = {
-				add_to_variable = { var = SPReco_cgf value = -0.05 }
-				add_to_variable = { var = SPReco_cs value = 0.06 }
-				add_to_variable = { var = SPReco_FO value = 0.14 }
-				add_to_variable = { var = SPReco_DO value = 0.14 }
-			}
+			custom_effect_tooltip = SPR_modify_eco_modifier_tt
+			add_to_variable = { SPReco_cgf = -0.05 tooltip = consumer_goods_factor_tt }
+			add_to_variable = { SPReco_cs = 0.06 tooltip = production_speed_buildings_factor_tt }
+			add_to_variable = { SPReco_FO = 0.14 tooltip = industrial_capacity_factory_tt }
+			add_to_variable = { SPReco_DO = 0.14 tooltip = industrial_capacity_dockyard_tt }		
 		}
 	}
 
@@ -1109,13 +1058,11 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
-			custom_effect_tooltip = SPR_economy_tdtw_tt
-			hidden_effect = {
-				add_to_variable = { var = SPReco_cgf value = -0.10 }
-				add_to_variable = { var = SPReco_cs value = 0.08 }
-				add_to_variable = { var = SPReco_FO value = 0.24 }
-				add_to_variable = { var = SPReco_DO value = 0.14 }
-			}
+			custom_effect_tooltip = SPR_modify_eco_modifier_tt
+			add_to_variable = { SPReco_cgf = -0.10 tooltip = consumer_goods_factor_tt }
+			add_to_variable = { SPReco_cs = 0.08 tooltip = production_speed_buildings_factor_tt }
+			add_to_variable = { SPReco_FO = 0.24 tooltip = industrial_capacity_factory_tt }
+			add_to_variable = { SPReco_DO = 0.14 tooltip = industrial_capacity_dockyard_tt }
 		}
 	}
 
@@ -1243,10 +1190,8 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			custom_effect_tooltip = SPR_economy_eagt_tt
-			hidden_effect = {
-				add_to_variable = { var = SPReco_cs value = 0.1 }
-			}
+			custom_effect_tooltip = SPR_modify_eco_modifier_tt
+			add_to_variable = { SPReco_cs = 0.15 tooltip = production_speed_buildings_factor_tt }
 		}
 	}
 
@@ -1276,13 +1221,11 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			custom_effect_tooltip = SPR_economy_eass_tt
-			hidden_effect = {
-				add_to_variable = { var = SPReco_cgf value = -0.15 }
-				add_to_variable = { var = SPReco_cs value = 0.14 }
-				add_to_variable = { var = SPReco_FO value = 0.28 }
-				add_to_variable = { var = SPReco_DO value = 0.28 }
-			}
+			custom_effect_tooltip = SPR_modify_eco_modifier_tt
+			add_to_variable = { SPReco_cgf = -0.15 tooltip = consumer_goods_factor_tt }
+			add_to_variable = { SPReco_cs = 0.14 tooltip = production_speed_buildings_factor_tt }
+			add_to_variable = { SPReco_FO = 0.28 tooltip = industrial_capacity_factory_tt }
+			add_to_variable = { SPReco_DO = 0.28 tooltip = industrial_capacity_dockyard_tt }
 		}
 	}
 

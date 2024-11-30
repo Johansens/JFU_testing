@@ -50,9 +50,10 @@ FIN_valtion_panssaritehdas_organization = {
 		position = { x=8 y=0 }
 		
 		available = {
-			owner = {
-				has_completed_focus = FIN_salvaged_and_retooled
-			}
+			#owner = {
+			#	has_completed_focus = FIN_salvaged_and_retooled
+			#}
+			always = no
 		}
 
 		production_bonus = {
@@ -203,9 +204,10 @@ FIN_valtion_kivaaritehdas_organization = { #Infantry Equipment
 		position = { x=8 y=0 }
 		
 		available = {
-			owner = {
-				has_completed_focus = FIN_salvaged_and_retooled
-			}
+			#owner = {
+			#	has_completed_focus = FIN_salvaged_and_retooled
+			#}
+			always = no
 		}
 
 		production_bonus = {
@@ -301,9 +303,10 @@ FIN_valtion_tykkitehdas_organization = { #AT (Artillery)
 		position = { x=8 y=0 }
 		
 		available = {
-			owner = {
-				has_completed_focus = FIN_salvaged_and_retooled
-			}
+			#owner = {
+			#	has_completed_focus = FIN_salvaged_and_retooled
+			#}
+			always = no
 		}
 
 		production_bonus = {
@@ -495,13 +498,13 @@ FIN_sisu_auto_organization = { #Motorized
 		mutually_exclusive = { generic_mio_trait_land_mine_racks }
 	
 		available = {
-			owner = {
-				custom_trigger_tooltip = {
-					tooltip = FIN_mio_trait_repurposed_equipment_trigger_tt
-					has_tech = mechanised_infantry3
-				}
-				has_completed_focus = FIN_salvaged_and_retooled
-			}
+			#owner = {
+			#	custom_trigger_tooltip = {
+			#		tooltip = FIN_mio_trait_repurposed_equipment_trigger_tt
+			#		has_tech = mechanised_infantry3
+			#	}
+			#}
+			always = no
 		}
 
 		limit_to_equipment_type = { motorized_equipment }
@@ -520,9 +523,10 @@ FIN_sisu_auto_organization = { #Motorized
 		position = { x=8 y=0 }
 		
 		available = {
-			owner = {
-				has_completed_focus = FIN_salvaged_and_retooled
-			}
+			#owner = {
+			#	has_completed_focus = FIN_salvaged_and_retooled
+			#}
+			always = no
 		}
 
 		production_bonus = {

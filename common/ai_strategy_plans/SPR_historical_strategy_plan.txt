@@ -36,7 +36,6 @@ SPR_historical_plan = {
 		SPR_banish_the_party_leaders
 		SPR_safeguard_the_freedom_of_worship
 		SPR_fuse_the_parties
-		SPR_a_methodical_approach
 		SPR_expand_conscription
 		SPR_integrate_the_requetes
 		SPR_national_recovery

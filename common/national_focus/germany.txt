@@ -2057,26 +2057,11 @@ focus_tree = {
 				tooltip = GER_industrial_consumer_goods_factor_limit_tt
 				check_variable = { GER_industrial_consumer_goods_factor < 0.9 }
 			}
-			has_tech = fuel_refining2
 		}
 
 		continue_if_invalid = yes
 
 		bypass = {
-			OR = {
-				has_resources_in_country = {
-					resource = oil
-					amount > 149
-					extracted = yes
-				}
-				any_subject_country = {
-					has_resources_in_country = {
-						resource = oil
-						amount > 149
-						extracted = yes
-					}
-				}
-			}
 		}
 
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
@@ -2152,7 +2137,6 @@ focus_tree = {
 				tooltip = GER_industrial_consumer_goods_factor_limit_tt
 				check_variable = { GER_industrial_consumer_goods_factor < 0.9 }
 			}
-			has_tech = fuel_refining2
 		}
 
 		continue_if_invalid = yes
@@ -2229,9 +2213,6 @@ focus_tree = {
 		relative_position_id = GER_seize_foreign_industries
 		cost = 10
 		available = {
-			ENG = { 
-				NOT = { controls_state = 907 }
-			}
 			always = no
 		}
 

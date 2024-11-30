@@ -7137,33 +7137,9 @@ news_event = {
 		}
 	}
 
-	#This is essential to the [From.GetAdjective] strategy.
-	option = {
-		name = news.199.a
-		trigger = {
-			is_in_faction_with = SOV
-		}
-	}
-
-	#The countries of the world must face the evil of the [From.GetName]!
-	option = {
-		name = news.199.b
-		trigger = {
-			has_war_with = SOV
-		}
-	}
-
 	#[Romania.GetName] is in an unfortunate position. 
 	option = {
 		name = news.199.c
-		trigger = {
-			NOT = {
-				is_in_faction_with = SOV
-			}
-			NOT = {
-				has_war_with = SOV
-			}
-		}
 	}
 }
 

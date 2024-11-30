@@ -518,6 +518,8 @@ JFU_equipment_on_start_up_effect = {
 		add_equipment_to_stockpile = { type = train_equipment_1 amount = 50 }
 		add_equipment_to_stockpile = { type = motorized_equipment_1 amount = 200 }
 		add_equipment_to_stockpile = { type = convoy_1 amount = 100 producer = HUN }
+		set_country_flag = GER_puppet_exploited_flag
+		set_country_flag = GER_puppet_development_flag
 	}
 	ROM = {
 		add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 9600 }
@@ -528,9 +530,13 @@ JFU_equipment_on_start_up_effect = {
 		add_equipment_to_stockpile = { type = train_equipment_1 amount = 50 }
 		add_equipment_to_stockpile = { type = motorized_equipment_1 amount = 200 }
 		add_equipment_to_stockpile = { type = convoy_1 amount = 100 producer = ROM }
+		set_country_flag = GER_puppet_exploited_flag
+		set_country_flag = GER_puppet_development_flag
 	}
 	BUL = {
 		add_equipment_to_stockpile = { type = convoy_1 amount = 100 producer = BUL }
+		set_country_flag = GER_puppet_exploited_flag
+		set_country_flag = GER_puppet_development_flag
 	}
 	SOV = {
 		add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 120000 }

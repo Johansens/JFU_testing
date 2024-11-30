@@ -577,72 +577,6 @@ focus_tree = {
 			}
 		}
 	}
-
-	focus = {
-		id = FIN_the_finnish_throne
-		icon = GFX_focus_FIN_the_finnish_throne
-		prerequisite = { focus = FIN_a_new_course_for_kokoomus }
-		x = 0
-		y = 1
-		relative_position_id = FIN_a_new_course_for_kokoomus
-		cost = 10
-
-		allow_branch = {
-			has_completed_focus = FIN_a_new_course_for_kokoomus
-			OR = {
-				has_country_leader = {
-					ruling_only = yes
-					character = FIN_pehr_evind_svinhufvud
-				}
-				has_country_leader = {
-					ruling_only = yes
-					character = FIN_prince_wolfgang_von_hesse
-				}
-			}
-		}
-
-		available = {
-			has_country_leader = {
-				ruling_only = yes
-				character = FIN_pehr_evind_svinhufvud
-			}
-		}
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		completion_reward = {
-			add_country_leader_role = {
-				character =  FIN_prince_wolfgang_von_hesse
-				promote_leader = yes
-				country_leader = {
-					ideology = despotism
-					expire = "1965.1.1.1"
-					traits = { crown_prince_of_finland personal_agenda_von_hesse }
-				}
-			}
-
-			set_party_name = {
-				ideology = neutrality
-				long_name = FIN_neutrality_party_monarchist_long
-				name = FIN_neutrality_party_monarchist
-			}
-
-			add_popularity = {
-				ideology = neutrality
-				popularity = -0.3
-			}
-
-			if = {
-				limit = {
-					has_completed_focus = FIN_greater_finland
-				}
-				set_cosmetic_tag = FIN_greater_kingdom_of_finland
-			}
-			else = {
-				set_cosmetic_tag = FIN_kingdom_of_finland
-			}
-		}
-	}
 	
 	focus = {
 		id = FIN_strengthen_military_administration
@@ -814,7 +748,6 @@ focus_tree = {
 		cost = 5
 		available = {
 			threat > 0.5
-			neutrality > 0.85
 		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_MANPOWER }
@@ -1265,16 +1198,6 @@ focus_tree = {
 
 		completion_reward = {
 			add_ideas = FIN_militarized_society
-
-			hidden_effect = {
-				if = {
-					limit = {
-						has_dlc = "No Step Back"
-						has_completed_focus = FIN_national_armor_focus
-					}
-					mark_focus_tree_layout_dirty = yes
-				}
-			}
 		}
 	}
 	
@@ -1347,19 +1270,7 @@ focus_tree = {
 			925 = { #FINNMARK
 				add_core_of = ROOT
 			}
-
-			if = {
-				limit = {
-					has_country_leader = {
-						ruling_only = yes
-						character = FIN_prince_wolfgang_von_hesse
-					}
-				}
-				set_cosmetic_tag = FIN_greater_kingdom_of_finland
-			}
-			else = {
-				set_cosmetic_tag = FIN_greater_finland
-			}
+			set_cosmetic_tag = FIN_greater_finland
 
 			add_state_claim = 208 #LUGA
 			add_state_claim = 195 #LENINGRAD
@@ -1726,23 +1637,11 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = available_designer
 			show_ideas_tooltip = FIN_pohjolan_voima
-
-			custom_effect_tooltip = FIN_found_pohjolan_voima_factories_tt
-			every_core_state = {
-				random_select_amount = 5
-				limit = {
-					is_fully_controlled_by = ROOT
-					infrastructure > 2
-					free_building_slots = {
-						building = industrial_complex
-						size > 0
-						include_locked = yes
-					}
-				}
+			928 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -2088,141 +1987,33 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = FIN_industrial_upgrade_in_harjavalta
-		cost = 5
+		cost = 10
 		available = {
 		}
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			custom_effect_tooltip = FIN_expand_mining_prospection_tt
-			every_core_state = {
-				limit = {
-					is_fully_controlled_by = ROOT
-					has_resources_amount = {
-						resource = steel
-						amount > 0
-					}
-				}
+			148 = {
 				add_resource = {
-					show_state_in_tooltip = no
 					type = steel
-					amount = 2 #WARNING No vars supported here so if this changes the custom tooltip above needs to be updated. Tack
+					amount = 10 #WARNING No vars supported here so if this changes the custom tooltip above needs to be updated. Tack
 				}
 			}
 
 			#PETSAMO Chromium
-			if = {
-				limit = {
-					controls_state = 722
-				}
-				722 = {
-					add_resource = {
-						type = chromium
-						amount = 2
-					}
+			722 = {
+				add_resource = {
+					type = chromium
+					amount = 10
 				}
 			}
-
-			#OULU Chromium
-			if = {
-				limit = {
-					controls_state = 929
-				}
-				929 = {
-					add_resource = {
-						type = chromium
-						amount = 2
-					}
-				}
-			}
-
-			#TURKU Chromium
-			if = {
-				limit = {
-					controls_state = 926
-				}
-				926 = {
-					add_resource = {
-						type = chromium
-						amount = 2
-					}
-				}
-			}
-		}
-	}
-	
-	focus = {
-		id = FIN_elijarvi_mine
-		icon = GFX_goal_generic_construction2
-		prerequisite = { focus = FIN_expand_mining_prospection }
-
-		x = 0
-		y = 1
-		relative_position_id = FIN_expand_mining_prospection
-		cost = 5
-		available = {
-			has_tech = excavation5
-			has_full_control_of_state = 148 #LAPPI (Kemi)
-		}
-
-		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_INDUSTRY }
-
-		completion_reward = {
 			148 = { #LAPPI (Kemi)
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
 					level = 1
 					instant_build = yes
-				}
-				add_resource = {
-					type = steel
-					amount = 4
-				}
-				add_resource = {
-					type = chromium
-					amount = 2
-				}
-			}
-		}
-	}
-	
-	focus = {
-		id = FIN_tornio_steel_factory
-		icon = GFX_focus_generic_steel
-		prerequisite = { focus = FIN_elijarvi_mine }
-
-		x = 0
-		y = 1
-		relative_position_id = FIN_elijarvi_mine
-		cost = 10
-		available = {
-			has_full_control_of_state = 148 #LAPPI (Kemi)
-		}
-
-		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_INDUSTRY }
-
-		completion_reward = {
-			148 = { #LAPPI (Kemi)
-				add_extra_state_shared_building_slots = 3
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-				add_resource = {
-					type = steel
-					amount = 6
-				}
-				add_resource = {
-					type = chromium
-					amount = 4
 				}
 			}
 		}
@@ -2236,7 +2027,7 @@ focus_tree = {
 		x = 4
 		y = 0
 		relative_position_id = FIN_tire_factory_at_nokia
-		cost = 10
+		cost = 5
 		available = {
 			has_full_control_of_state = 926 #TURKU (Pori)
 		}
@@ -2245,20 +2036,11 @@ focus_tree = {
 
 		completion_reward = {
 			926 = { #TURKU (Pori)
-				add_extra_state_shared_building_slots = 3
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
 					level = 1
 					instant_build = yes
-				}
-				add_resource = {
-					type = steel
-					amount = 6
 				}
 			}
 		}
@@ -2324,10 +2106,10 @@ focus_tree = {
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = arms_factory
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -2338,7 +2120,7 @@ focus_tree = {
 				}
 				mio:FIN_valtion_kivaaritehdas_organization = {
 					add_mio_size = 1
-					add_mio_funds_gain_factor = 0.35
+					add_mio_funds_gain_factor = 0.1
 					add_mio_research_bonus = 0.05
 
 					unlock_mio_trait_tooltip = FIN_mio_trait_oy_tikkakoski
@@ -2374,7 +2156,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = FIN_integrate_oy_tikkakoski
-		cost = 5
+		cost = 10
 		available = {
 		}
 
@@ -2388,16 +2170,7 @@ focus_tree = {
 				category = artillery
 			}
 
-			random_core_state = {
-				prioritize = { 149 } #VAASA (Tikkakoski - Jyväskylä)
-				limit = {
-					is_fully_controlled_by = ROOT
-					free_building_slots = {
-						building = arms_factory
-						size > 1
-						include_locked = yes
-					}
-				}
+			149 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
@@ -2413,7 +2186,7 @@ focus_tree = {
 				mio:FIN_valtion_tykkitehdas_organization = {
 					add_mio_size = 1
 					add_mio_research_bonus = 0.1
-					add_mio_funds_gain_factor = 0.35
+					add_mio_funds_gain_factor = 0.1
 				}
 			}
 			else = {
@@ -2454,7 +2227,7 @@ focus_tree = {
 		id = FIN_increase_military_budget
 		icon = GFX_focus_FIN_increase_military_budget
 
-		x = 11
+		x = 10
 		y = 0
 		relative_position_id = FIN_enhance_southern_infrastructure
 		cost = 5
@@ -2469,12 +2242,8 @@ focus_tree = {
 				name = FIN_increase_military_budget
 				bonus = 0.5
 				uses = 2
-				category = infantry_weapons
-				category = artillery
 				category = motorized_equipment
 				category = support_tech
-				category = air_equipment
-				category = naval_equipment
 			}
 
 			random_core_state = {
@@ -2669,7 +2438,7 @@ focus_tree = {
 		icon = GFX_focus_SOV_the_road_of_life
 		prerequisite = { focus = FIN_extra_refresher_exercises }
 
-		x = -2
+		x = -1
 		y = 1
 		relative_position_id = FIN_extra_refresher_exercises
 		cost = 5
@@ -2695,7 +2464,7 @@ focus_tree = {
 		icon = GFX_focus_FIN_jaeger_movement
 		prerequisite = { focus = FIN_extra_refresher_exercises }
 
-		x = 0
+		x = 1
 		y = 1
 		relative_position_id = FIN_extra_refresher_exercises
 		cost = 5
@@ -2721,68 +2490,6 @@ focus_tree = {
 
 			custom_effect_tooltip = available_military_high_command
 			show_ideas_tooltip = FIN_johan_arajuuri
-		}
-	}
-	
-	focus = {
-		id = FIN_salvaged_and_retooled
-		icon = GFX_focus_FIN_salvaged_and_retooled
-		prerequisite = { focus = FIN_extra_refresher_exercises }
-
-		x = 2
-		y = 1
-		relative_position_id = FIN_extra_refresher_exercises
-		cost = 5
-		available = {
-		}
-
-		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_ARMY_XP FOCUS_FILTER_INDUSTRY }
-
-		completion_reward = {
-			army_experience = 15
-
-			custom_effect_tooltip = FIN_modify_finnish_army_ns_intro
-			add_to_variable = { FIN_finnish_army_equipment_capture_factor = 0.3 tooltip = equipment_capture_factor_tt }
-			add_to_variable = { FIN_finnish_army_equipment_conversion_speed = 0.3 tooltip = equipment_conversion_speed_tt }
-			add_to_variable = { FIN_finnish_army_production_lack_of_resource_penalty_factor = -0.15 tooltip = production_lack_of_resource_penalty_factor_tt }
-
-			if = {
-				limit = {
-					has_dlc = "Arms Against Tyranny"
-				}
-				every_military_industrial_organization = {
-					limit = {
-						OR = {
-							is_military_industrial_organization = FIN_valtion_panssaritehdas_organization
-							is_military_industrial_organization = FIN_valtion_kivaaritehdas_organization
-							is_military_industrial_organization = FIN_valtion_tykkitehdas_organization
-							is_military_industrial_organization = FIN_sisu_auto_organization
-						}
-					}
-					add_mio_design_team_assign_cost = -0.5
-					add_mio_design_team_change_cost = -0.2
-					complete_mio_trait = FIN_mio_trait_salvaged_and_retooled
-				}
-			}
-
-			add_tech_bonus = {
-				name = FIN_salvaged_and_retooled
-				bonus = 0.5
-				uses = 1
-				category = cat_mechanized_equipment
-			}
-
-			if = {
-				limit = {
-					has_dlc = "No Step Back"
-				}
-				add_tech_bonus = {
-					name = FIN_salvaged_and_retooled
-					bonus = 0.5
-					uses = 2
-					category = cat_light_armor
-				}
-			}
 		}
 	}
 	
@@ -2813,7 +2520,7 @@ focus_tree = {
 	focus = {
 		id = FIN_motti_tactics
 		icon = GFX_focus_FIN_motti_tactics
-		prerequisite = { focus = FIN_jaeger_movement focus = FIN_salvaged_and_retooled }
+		prerequisite = { focus = FIN_jaeger_movement }
 		prerequisite = { focus = FIN_the_cold_front }
 
 		x = 0
@@ -2840,43 +2547,11 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = FIN_foreign_armor
-		icon = GFX_focus_FIN_foreign_anti_air
-		prerequisite = { focus = FIN_salvaged_and_retooled }
-
-		x = 1
-		y = 1
-		relative_position_id = FIN_salvaged_and_retooled
-		cost = 5
-		available = {
-			NOT = {
-				is_justifying_wargoal_against = SWE
-			}
-			SWE = {
-				exists = yes
-				has_capitulated = no
-				NOT = { is_justifying_wargoal_against = ROOT	}
-			}
-		}
-
-		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_INTERNATIONAL_TRADE }
-
-		completion_reward = {
-			add_tech_bonus = {
-				name = FIN_foreign_armor
-				bonus = 1
-				uses = 2
-				category = armor
-			}
-		}
-	}
-	
-	focus = {
 		id = FIN_utilize_the_sami
 		icon = GFX_focus_FIN_utilize_the_sami
 		prerequisite = { focus = FIN_winter_warfare }
 
-		x = -1
+		x = 0
 		y = 1
 		relative_position_id = FIN_winter_warfare
 		cost = 5
@@ -2897,31 +2572,31 @@ focus_tree = {
 		}
 	}
 
-	focus = {
-		id = FIN_long_range_patrols
-		icon = GFX_focus_FIN_sissi
-		prerequisite = { focus = FIN_winter_warfare }
-		prerequisite = { focus = FIN_motti_tactics }
+	#focus = {
+	#	id = FIN_long_range_patrols
+	#	icon = GFX_focus_FIN_sissi
+	#	prerequisite = { focus = FIN_winter_warfare }
+	#	prerequisite = { focus = FIN_motti_tactics }
 
-		x = 1
-		y = 1
-		relative_position_id = FIN_winter_warfare
-		cost = 5
-		available = {
-		}
+	#	x = 1
+	#	y = 1
+	#	relative_position_id = FIN_winter_warfare
+	#	cost = 5
+	#	available = {
+	#	}
 
-		search_filters = { FOCUS_FILTER_HISTORICAL }
+	#	search_filters = { FOCUS_FILTER_HISTORICAL }
 
-		completion_reward = {
-		}
-	}
+	#	completion_reward = {
+	#	}
+	#}
 	
 	focus = {
 		id = FIN_finnish_radio_intelligence
 		icon = GFX_focus_generic_cryptologic_bomb
 		prerequisite = { focus = FIN_motti_tactics }
 
-		x = 1
+		x = 0
 		y = 1
 		relative_position_id = FIN_motti_tactics
 		cost = 5
@@ -2945,13 +2620,11 @@ focus_tree = {
 	focus = {
 		id = FIN_sissi
 		icon = GFX_focus_FIN_the_cold_front
-		prerequisite = { focus = FIN_long_range_patrols }
 		prerequisite = { focus = FIN_finnish_radio_intelligence }
 		prerequisite = { focus = FIN_utilize_the_sami }
-		mutually_exclusive = { focus = FIN_national_armor_focus }
 		x = 1
 		y = 1
-		relative_position_id = FIN_long_range_patrols
+		relative_position_id = FIN_utilize_the_sami
 		cost = 5
 		available = {
 		}
@@ -2966,148 +2639,6 @@ focus_tree = {
 			add_to_variable = { FIN_finnish_army_recon_factor_while_entrenched = 0.1 tooltip = recon_factor_while_entrenched_tt }	
 
 			show_unit_leaders_tooltip = FIN_erkki_raappana
-		}
-	}
-	
-	focus = {
-		id = FIN_national_armor_focus
-		icon = GFX_focus_generic_tank_production
-		prerequisite = { focus = FIN_salvaged_and_retooled }
-		prerequisite = { focus = FIN_finnish_radio_intelligence }
-		mutually_exclusive = { focus = FIN_sissi }
-		x = 0
-		y = 3
-		relative_position_id = FIN_salvaged_and_retooled
-		cost = 5
-		available = {
-		}
-
-		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY FOCUS_FILTER_MILITARY_CHARACTER }
-
-		completion_reward = {
-
-			add_breakthrough_progress = {
-				specialization = specialization_land
-				value = 0.5
-			}
-
-			add_tech_bonus = {
-				name = FIN_national_armor_focus
-				bonus = 0.5
-				uses = 1 # was 2
-				category = armor
-			}
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			show_unit_leaders_tooltip = FIN_ruben_lagus
-
-			if = {
-				limit = {
-					has_dlc = "Arms Against Tyranny"
-				}
-				mio:FIN_valtion_panssaritehdas_organization = {
-					add_mio_size = 1
-					add_mio_funds_gain_factor = 0.35
-				}
-			}
-			else = {
-				if = {
-					limit = {
-						has_idea = FIN_valtion_panssaritehdas
-					}
-					swap_ideas = {
-						remove_idea = FIN_valtion_panssaritehdas
-						add_idea = FIN_valtion_panssaritehdas_improved
-					}
-				}
-				else = {
-					effect_tooltip = {
-						swap_ideas = {
-							remove_idea = FIN_valtion_panssaritehdas
-							add_idea = FIN_valtion_panssaritehdas_improved
-						}
-					}
-				}
-			}
-		}
-	}
-
-	focus = {
-		id = FIN_innovative_designs
-		icon = GFX_focus_generic_army_tanks2
-		prerequisite = { focus = FIN_national_armor_focus }
-		x = 0
-		y = 1
-		relative_position_id = FIN_national_armor_focus
-		cost = 5
-
-		allow_branch = {
-			has_dlc = "No Step Back"
-			has_completed_focus = FIN_national_armor_focus
-			has_completed_focus = FIN_militarized_society
-		}
-
-		available = {
-			has_tech = super_heavy_tank_chassis
-		}
-
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-
-		completion_reward = {
-			if = { #Intended that this is not to shown to the player until the other focus is completed.
-				limit = {
-					has_completed_focus = FIN_militarized_society
-				}
-				random_core_state = {
-					limit = {
-						is_fully_controlled_by = ROOT
-						free_building_slots = {
-							building = arms_factory
-							size > 0
-							include_locked = yes
-						}
-					}
-					add_extra_state_shared_building_slots = 1
-					add_building_construction = {
-						type = arms_factory
-						level = 1
-						instant_build = yes
-					}
-				}
-				create_equipment_variant = {
-					name = "Hyökkäysvaunu"
-					type = super_heavy_tank_chassis_1
-					parent_version = 0
-					modules = {
-						main_armament_slot = tank_heavy_cannon_2
-						turret_type_slot = tank_super_heavy_three_man_tank_turret
-						suspension_type_slot = tank_torsion_bar_suspension
-						armor_type_slot = tank_riveted_armor
-						engine_type_slot = tank_gasoline_engine
-						special_type_slot_1 = secondary_turret_hmg
-						special_type_slot_2 = secondary_turret_hmg
-						special_type_slot_3 = wet_ammo_storage
-						special_type_slot_4 = empty
-					}
-					upgrades = {
-						tank_nsb_engine_upgrade = 18
-						tank_nsb_armor_upgrade = 7
-					}
-					icon = "GFX_FIN_super_heavy_tank_2_medium"
-				}
-
-				add_equipment_production = {
-					equipment = {
-						type = super_heavy_tank_chassis_1
-						creator = "FIN"
-						version_name = "Hyökkäysvaunu"
-					}
-					requested_factories = 1
-					progress = 0.6
-					efficiency = 50
-				}
-			}
 		}
 	}
 	
@@ -3299,11 +2830,11 @@ focus_tree = {
 	focus = {
 		id = FIN_helsinki_air_defense
 		icon = GFX_focus_generic_air_defense
-		prerequisite = { focus = FIN_mannerheim_line }
+		prerequisite = { focus = FIN_defense_in_depth }
 
-		x = 1
-		y = 2
-		relative_position_id = FIN_mannerheim_line
+		x = 0
+		y = 1
+		relative_position_id = FIN_defense_in_depth
 		cost = 5
 		available = {
 			is_special_project_completed = sp:sp_air_radar

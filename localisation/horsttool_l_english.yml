@@ -1544,6 +1544,11 @@
  ITA_modify_navy_modifier_tt: "Modify §Y$ITA_regia_marina_dynamic_modifier$§! by:"
  MODIFIER_NAVAL_STRIKE_AGILITY_FACTOR_tt: " $MODIFIER_NAVAL_STRIKE_AGILITY_FACTOR$: $RIGHT|+=%1$"
 
+ SPR_modify_eco_modifier_tt: "Modify §Y$SPR_economy_modifier$§! by:"
+
+ sp_armored_amphibious_drive_tech:0 ""
+ sp_amphibious_drive:0 "Amphibious Drive"
+ sp_amphibious_drive_desc:0 "A set of floatation devices and a small screw allow this tank to quickly be rigged to traverse water, either from ship to shore or across a river."
 
  #Herrscher England #
  ENG_british_oil:0 "British Oil"

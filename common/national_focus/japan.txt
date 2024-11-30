@@ -1026,7 +1026,7 @@
 				uses = 2
 				technology = improved_medium_tank_chassis
 				technology = improved_heavy_tank_chassis
-				technology = amphibious_drive
+				#technology = amphibious_drive
 			}
 			add_tech_bonus = {
 				name = JAP_armored_divisions
