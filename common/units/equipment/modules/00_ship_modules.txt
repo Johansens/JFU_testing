@@ -663,7 +663,7 @@ equipment_modules = {
 			max_strength = 20
 		}
 		build_cost_resources = {
-			steel = 1
+			#steel = 1
 		}
 
 		forbid_module_categories = {
@@ -1624,7 +1624,11 @@ equipment_modules = {
 			fuel_consumption = 16
 			#build_cost_ic = 480
 		}
-		
+
+		build_cost_resources = {
+			steel = 1
+		}	
+
 		multiply_stats = {
 			naval_speed = 0.3
 			build_cost_ic = 0.175
@@ -1655,7 +1659,7 @@ equipment_modules = {
 		}
 
 		build_cost_resources = {
-			steel = 1
+			steel = 2
 		}		
 
 		multiply_stats = {
@@ -1687,7 +1691,7 @@ equipment_modules = {
 		}
 
 		build_cost_resources = {
-			steel = 1
+			steel = 2
 		}		
 
 		multiply_stats = {
