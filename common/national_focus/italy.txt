@@ -2776,6 +2776,7 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+			
 		}
 	}
 
@@ -2922,7 +2923,7 @@ focus_tree = {
 			add_tech_bonus = {
 				name = ITA_self_propelled_guns
 				bonus = 1
-				uses = 3
+				uses = 2
 				category = artillery
 			}
 
@@ -2942,14 +2943,19 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			
-			hidden_effect = {
-				if = {
-					limit = {
-						has_dlc = "No Step Back"
-					}
-					ITA_add_basic_medium_tank_templates = yes
-				}			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			if = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}
+				mio:ITA_fiat_organization = {
+					add_mio_size = 2
+					add_mio_funds_gain_factor = 0.10
+					add_mio_research_bonus = 0.05
+
+				
+					#unlock_mio_trait_tooltip = 
+				}
 			}
 		}
 	}
@@ -3312,11 +3318,19 @@ focus_tree = {
 				category = air_equipment #Maybe more specific stuff? (Light/Medium bombers, fighters...)
 			}
 
+			custom_effect_tooltip = generic_skip_one_line_tt
 			if = {
 				limit = {
-					has_dlc = "By Blood Alone"
+					has_dlc = "Arms Against Tyranny"
 				}
-#				ITA_add_reggianes_exports_templates = yes
+				mio:ITA_macchi_organization = {
+					add_mio_size = 2
+					add_mio_funds_gain_factor = 0.10
+					add_mio_research_bonus = 0.05
+
+				
+					#unlock_mio_trait_tooltip = 
+				}
 			}
 		}
 	}
@@ -4280,16 +4294,22 @@ focus_tree = {
 
 			add_tech_bonus = {
 				name = ITA_naval_air_coordination
-				bonus = 1.0
+				bonus = 0.75
 				uses = 2
 				category = naval_bomber
 			}
-			hidden_effect = {
-				if = {
-					limit = {
-						has_dlc = "By Blood Alone"
-					}
-					ITA_naval_air_coordination_templates = yes
+			custom_effect_tooltip = generic_skip_one_line_tt
+			if = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}
+				mio:ITA_crda_cant_organization = {
+					add_mio_size = 2
+					add_mio_funds_gain_factor = 0.10
+					add_mio_research_bonus = 0.05
+
+				
+					#unlock_mio_trait_tooltip = 
 				}
 			}
 		}
@@ -4519,7 +4539,7 @@ focus_tree = {
 				equipment = {
 					type =  ship_hull_cruiser_2
 					creator = "ITA"
-					version_name = "Zara Class"
+					version_name = "Montecuccoli Class"
 				}
 				name = "Montecuccoli Class"
 				requested_factories = 40
@@ -4530,7 +4550,7 @@ focus_tree = {
 				equipment = {
 					type =  ship_hull_cruiser_2
 					creator = "ITA"
-					version_name = "Zara Class"
+					version_name = "Montecuccoli Class"
 				}
 				name = "Montecuccoli Class"
 				requested_factories = 40
@@ -4541,7 +4561,7 @@ focus_tree = {
 				equipment = {
 					type =  ship_hull_cruiser_2
 					creator = "ITA"
-					version_name = "Zara Class"
+					version_name = "Montecuccoli Class"
 				}
 				name = "Montecuccoli Class"
 				requested_factories = 40
@@ -4552,7 +4572,7 @@ focus_tree = {
 				equipment = {
 					type =  ship_hull_cruiser_2
 					creator = "ITA"
-					version_name = "Zara Class"
+					version_name = "Montecuccoli Class"
 				}
 				name = "Montecuccoli Class"
 				requested_factories = 40
@@ -4563,7 +4583,7 @@ focus_tree = {
 				equipment = {
 					type =  ship_hull_cruiser_2
 					creator = "ITA"
-					version_name = "Zara Class"
+					version_name = "Montecuccoli Class"
 				}
 				name = "Montecuccoli Class"
 				requested_factories = 40
@@ -4574,7 +4594,7 @@ focus_tree = {
 				equipment = {
 					type =  ship_hull_cruiser_2
 					creator = "ITA"
-					version_name = "Zara Class"
+					version_name = "Montecuccoli Class"
 				}
 				name = "Montecuccoli Class"
 				requested_factories = 40
@@ -4585,7 +4605,7 @@ focus_tree = {
 				equipment = {
 					type =  ship_hull_cruiser_2
 					creator = "ITA"
-					version_name = "Zara Class"
+					version_name = "Montecuccoli Class"
 				}
 				name = "Montecuccoli Class"
 				requested_factories = 40
@@ -4596,7 +4616,7 @@ focus_tree = {
 				equipment = {
 					type =  ship_hull_cruiser_2
 					creator = "ITA"
-					version_name = "Zara Class"
+					version_name = "Montecuccoli Class"
 				}
 				name = "Montecuccoli Class"
 				requested_factories = 40
@@ -4608,7 +4628,7 @@ focus_tree = {
 				limit = {
 					has_dlc = "Arms Against Tyranny"
 				}
-				mio:ITA_crda_organization = {
+				mio:ITA_cantiere_navale_di_ancona_organization = {
 					add_mio_size = 2
 					add_mio_funds_gain_factor = 0.10
 					add_mio_research_bonus = 0.05
@@ -4684,20 +4704,36 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_NAVY_XP FOCUS_FILTER_RESEARCH}
 
 		completion_reward = {
-			navy_experience = 15
 			if = {
 				limit = {
-					has_dlc = "Man the Guns"
+					NOT = { is_special_project_completed = sp:sp_naval_cruiser_submarine }
 				}
-				set_technology = { cruiser_submarines = 1 }
+				complete_special_project = {
+					project = sp:sp_naval_cruiser_submarine
+					scientist = ITA_curio_bernardis
+				}
 			}
-			
+			custom_effect_tooltip = generic_skip_one_line_tt
 			736 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = dockyard
 					level = 2
 					instant_build = yes
+				}
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			if = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}
+				mio:ITA_cantieri_navali_tosi_organization = {
+					add_mio_size = 2
+					add_mio_funds_gain_factor = 0.10
+					add_mio_research_bonus = 0.05
+
+				
+					#unlock_mio_trait_tooltip = 
 				}
 			}
 		}
@@ -4718,24 +4754,36 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_NAVY_XP FOCUS_FILTER_RESEARCH}
 
 		completion_reward = {
-			navy_experience = 15
-
-			###########
-			### MTG ###
-			###########
 			if = {
 				limit = {
-					has_dlc = "Man the Guns"
+					NOT = { is_special_project_completed = sp:sp_naval_midget_submarine }
 				}
-				set_technology = { midget_submarines = 1 }
+				complete_special_project = {
+					project = sp:sp_naval_midget_submarine
+					scientist = ITA_curio_bernardis
+				}
 			}
-
+			custom_effect_tooltip = generic_skip_one_line_tt
 			158 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = dockyard
 					level = 2
 					instant_build = yes
+				}
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			if = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}
+				mio:ITA_cantieri_navali_tosi_organization = {
+					add_mio_size = 2
+					add_mio_funds_gain_factor = 0.10
+					add_mio_research_bonus = 0.05
+
+				
+					#unlock_mio_trait_tooltip = 
 				}
 			}
 		}
@@ -4936,6 +4984,20 @@ focus_tree = {
 					amount = 3
 				}
 			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			if = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}
+				mio:ITA_cantiere_navale_di_ancona_organization = {
+					add_mio_size = 2
+					add_mio_funds_gain_factor = 0.10
+					add_mio_research_bonus = 0.05
+
+				
+					#unlock_mio_trait_tooltip = 
+				}
+			}
 		}
 	}
 
@@ -4967,6 +5029,7 @@ focus_tree = {
 			}
 
 			162 = {
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = dockyard
 					level = 2
@@ -5084,7 +5147,20 @@ focus_tree = {
 					amount = 1
 				}
 			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			if = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}
+				mio:ITA_crda_organization = {
+					add_mio_size = 2
+					add_mio_funds_gain_factor = 0.10
+					add_mio_research_bonus = 0.05
 
+				
+					#unlock_mio_trait_tooltip = 
+				}
+			}
 		}
 	}
 
