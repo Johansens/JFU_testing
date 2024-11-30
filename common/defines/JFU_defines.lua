@@ -123,7 +123,7 @@ NDefines.NAir.AIR_WING_FLIGHT_SPEED_MULT = 0.2 --makes redeployement of fighters
 -- NDefines.NAir.ANTI_AIR_PLANE_DAMAGE_FACTOR = 0.4  -- vanilla 0.8
 
 NDefines.NAir.AIRBASE_CAPACITY_MULT = 100  -- vanilla 200
-NDefines.NAir.DETECT_CHANCE_FROM_AIRCRAFTS_EFFECTIVE_COUNT = 1500  -- WAS 3000, halved because plane counts halved | Max amount of aircrafts in region to give full detection bonus.
+NDefines.NAir.DETECT_CHANCE_FROM_AIRCRAFTS_EFFECTIVE_COUNT = 1000  -- WAS 3000, halved because plane counts halved | Max amount of aircrafts in region to give full detection bonus.
 NDefines.NAir.FIELD_EXPERIENCE_SCALE = 0.0008						-- WAS 0.0004 | This affects how much XP you get from various missions (AFAIK this will affect XP gained from bombing and CAS missions as well)
 NDefines.NAir.NAVAL_COMBAT_EXTERNAL_PLANES_JOIN_RATIO = 0.03       -- WAS 0.05 | Changed due to plane count changes 
 NDefines.NAir.AIR_WING_MAX_STATS_BOMBING = 200	-- vanilla 100
