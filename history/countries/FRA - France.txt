@@ -191,7 +191,6 @@ add_ideas = {
 	FRA_legit_idea
 }
 
-recruit_character = FRA_philippe_petain
 recruit_character = FRA_pierre_laval
 recruit_character = FRA_edouard_daladier
 recruit_character = FRA_jean_de_lattre_de_tassigny

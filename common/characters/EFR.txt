@@ -30,18 +30,12 @@ characters={
 			legacy_id=-1
 		}
 	}
-	EFR_phillipe_pétain={
-		name="Phillipe Pétain"
+	EFR_philippe_petain={ #Fascist Leader
+		name=FRA_philippe_petain
 		portraits={
 			civilian={
-				large="gfx/leaders/FRA/Portrait_France_Philippe_Petain.dds"
+				large=GFX_portrait_FRA_philippe_petain
 			}
-		}
-		country_leader={
-			ideology=fascism_ideology
-			traits={ lion_of_verdun }
-			expire="1965.1.1.1"
-			id=-1
 		}
 	}
 	EFR_charles_huntziger={

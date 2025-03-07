@@ -52,7 +52,7 @@ add_relation_modifier = {
 set_convoys = 50
 
 recruit_character = EFR_maxime_weygand
-recruit_character = EFR_phillipe_pétain
+recruit_character = EFR_philippe_petain
 recruit_character = EFR_charles_huntziger
 recruit_character = EFR_maurice_gamelin
 recruit_character = EFR_vicente_rojo_lluch

@@ -919,13 +919,26 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
 		completion_reward = {
-			
-			custom_effect_tooltip = SPR_modify_eco_modifier_tt
-			add_to_variable = { SPReco_cgf = -0.05 tooltip = consumer_goods_factor_tt }
-			add_to_variable = { SPReco_cs = 0.06 tooltip = production_speed_buildings_factor_tt }
-			add_to_variable = { SPReco_FO = 0.12 tooltip = industrial_capacity_factory_tt }
-			add_to_variable = { SPReco_DO = 0.12 tooltip = industrial_capacity_dockyard_tt }
-			add_to_variable = { SPReco_DO = 0.1 tooltip = production_speed_arms_factory_factor_tt }				
+			if = {
+				limit = {
+					has_completed_focus = SPR_national_recovery
+				}
+				custom_effect_tooltip = SPR_modify_eco_modifier_tt
+				add_to_variable = { SPReco_cgf = -0.05 tooltip = consumer_goods_factor_tt }
+				add_to_variable = { SPReco_cs = 0.06 tooltip = production_speed_buildings_factor_tt }
+				add_to_variable = { SPReco_FO = 0.12 tooltip = industrial_capacity_factory_tt }
+				add_to_variable = { SPReco_DO = 0.12 tooltip = industrial_capacity_dockyard_tt }
+				add_to_variable = { SPReco_DO = 0.1 tooltip = production_speed_arms_factory_factor_tt }				
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_completed_focus = SPR_national_recovery
+					}
+				}
+				custom_effect_tooltip = SPR_modify_eco_modifier_tt
+				add_to_variable = { SPReco_DO = 0.1 tooltip = production_speed_arms_factory_factor_tt }				
+			}				
 			custom_effect_tooltip = generic_skip_one_line_tt
 			add_tech_bonus = {
 				name = SPA_fascist_economic_aid
@@ -1035,11 +1048,16 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			custom_effect_tooltip = SPR_modify_eco_modifier_tt
+			if = {
+				limit = {
+					has_completed_focus = SPR_national_recovery
+				}
+				custom_effect_tooltip = SPR_modify_eco_modifier_tt
 			add_to_variable = { SPReco_cgf = -0.05 tooltip = consumer_goods_factor_tt }
 			add_to_variable = { SPReco_cs = 0.06 tooltip = production_speed_buildings_factor_tt }
 			add_to_variable = { SPReco_FO = 0.14 tooltip = industrial_capacity_factory_tt }
 			add_to_variable = { SPReco_DO = 0.14 tooltip = industrial_capacity_dockyard_tt }		
+			}
 		}
 	}
 
@@ -1058,11 +1076,25 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
-			custom_effect_tooltip = SPR_modify_eco_modifier_tt
-			add_to_variable = { SPReco_cgf = -0.10 tooltip = consumer_goods_factor_tt }
-			add_to_variable = { SPReco_cs = 0.08 tooltip = production_speed_buildings_factor_tt }
-			add_to_variable = { SPReco_FO = 0.24 tooltip = industrial_capacity_factory_tt }
-			add_to_variable = { SPReco_DO = 0.14 tooltip = industrial_capacity_dockyard_tt }
+			if = {
+				limit = {
+					has_completed_focus = SPR_national_recovery
+				}
+				custom_effect_tooltip = SPR_modify_eco_modifier_tt
+				add_to_variable = { SPReco_cgf = -0.10 tooltip = consumer_goods_factor_tt }
+				add_to_variable = { SPReco_cs = 0.08 tooltip = production_speed_buildings_factor_tt }
+				add_to_variable = { SPReco_FO = 0.24 tooltip = industrial_capacity_factory_tt }
+				add_to_variable = { SPReco_DO = 0.14 tooltip = industrial_capacity_dockyard_tt }
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_completed_focus = SPR_national_recovery
+					}
+				}
+				custom_effect_tooltip = SPR_modify_eco_modifier_tt
+				add_to_variable = { SPReco_FO = 0.10 tooltip = industrial_capacity_factory_tt }
+			}	
 		}
 	}
 
@@ -1141,14 +1173,28 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
-			custom_effect_tooltip = SPR_economy_sa_tt
-			hidden_effect = {
-				add_to_variable = { var = SPReco_cgf value = -0.15 }
-				add_to_variable = { var = SPReco_cs value = 0.06 }
-				add_to_variable = { var = SPReco_FO value = 0.12 }
-				add_to_variable = { var = SPReco_DO value = 0.12 }
-				add_to_variable = { var = SPReco_stabwg value = -0.001 }
+			if = {
+				limit = {
+					has_completed_focus = SPR_national_recovery
+				}
+				custom_effect_tooltip = SPR_modify_eco_modifier_tt
+				add_to_variable = { SPReco_cgf = -0.15 tooltip = consumer_goods_factor_tt }
+				add_to_variable = { SPReco_cs = 0.06 tooltip = production_speed_buildings_factor_tt }
+				add_to_variable = { SPReco_FO = 0.12 tooltip = industrial_capacity_factory_tt }
+				add_to_variable = { SPReco_DO = 0.12 tooltip = industrial_capacity_dockyard_tt }
+				add_to_variable = { SPReco_stabwg = -0.001 }
+				custom_effect_tooltip = SPA_ECO_stability_weekly_tt
 			}
+			if = {
+				limit = {
+					NOT = {
+						has_completed_focus = SPR_national_recovery
+					}
+				}
+				custom_effect_tooltip = SPR_modify_eco_modifier_tt
+				add_to_variable = { SPReco_stabwg = -0.001 }
+				custom_effect_tooltip = SPA_ECO_stability_weekly_tt
+			}	
 		}
 	}
 
@@ -1221,11 +1267,16 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			custom_effect_tooltip = SPR_modify_eco_modifier_tt
-			add_to_variable = { SPReco_cgf = -0.15 tooltip = consumer_goods_factor_tt }
-			add_to_variable = { SPReco_cs = 0.14 tooltip = production_speed_buildings_factor_tt }
-			add_to_variable = { SPReco_FO = 0.28 tooltip = industrial_capacity_factory_tt }
-			add_to_variable = { SPReco_DO = 0.28 tooltip = industrial_capacity_dockyard_tt }
+			if = {
+				limit = {
+					has_completed_focus = SPR_national_recovery
+				}
+				custom_effect_tooltip = SPR_modify_eco_modifier_tt
+				add_to_variable = { SPReco_cgf = -0.15 tooltip = consumer_goods_factor_tt }
+				add_to_variable = { SPReco_cs = 0.14 tooltip = production_speed_buildings_factor_tt }
+				add_to_variable = { SPReco_FO = 0.28 tooltip = industrial_capacity_factory_tt }
+				add_to_variable = { SPReco_DO = 0.28 tooltip = industrial_capacity_dockyard_tt }
+			}
 		}
 	}
 

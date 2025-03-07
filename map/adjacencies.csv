@@ -257,7 +257,15 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;adjacency_rule_name;Comment;;
 7990;1888;impassable;-1;-1;-1;-1;-1;;Persia Soviet Border;;
 7990;10806;impassable;-1;-1;-1;-1;-1;;Persia Soviet Border;;
 5014;1822;impassable;-1;-1;-1;-1;-1;;Persia Soviet Border;;
-6826;1822;impassable;-1;-1;-1;-1;-1;;Persia Soviet Border;;
+4920;5046;impassable;-1;-1;-1;-1;-1;;Spain Africa;;
+8111;5046;impassable;-1;-1;-1;-1;-1;;Spain Africa;;
+7992;10875;impassable;-1;-1;-1;-1;-1;;Spain Africa;;
+8088;13251;impassable;-1;-1;-1;-1;-1;;Spain Africa;;
+8088;1984;impassable;-1;-1;-1;-1;-1;;Spain Africa;;
+8088;12723;impassable;-1;-1;-1;-1;-1;;Spain Africa;;
+
+
+
 ;;;;;;;;;;;
 2800;2776;;-1;-1;-1;-1;-1;Aden_Strait;Aden Strait;;
 5838;5864;;-1;-1;-1;-1;-1;OTRANTO_STRAIT;Italy-Albania;;

@@ -1541,23 +1541,6 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			random_core_state = {
-				limit = {
-					is_fully_controlled_by = ROOT
-				}
-				prioritize = { 56 }
-				add_resource = {
-					type = tungsten
-					amount = 2
-				}
-				add_resource = {
-					type = chromium
-					amount = 2
-				}
-			}
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
 			add_tech_bonus = {
 				name = GER_develop_heraeus_facilities
 				bonus = 1

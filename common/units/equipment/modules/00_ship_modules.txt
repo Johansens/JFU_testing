@@ -1562,6 +1562,7 @@ equipment_modules = {
 			convert_cost_ic = 270
 		}
 	}	
+	
 	sub_ship_nuclear_engine_1 = {
 		abbreviation = "sbn"
 		category = sub_ship_nuclear_engine
