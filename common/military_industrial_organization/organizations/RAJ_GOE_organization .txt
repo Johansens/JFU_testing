@@ -152,8 +152,6 @@ RAJ_ordnance_factory_kanpur_organization = {
 
 		has_dlc = "Graveyard of Empires"
 		OR = {
-			ROOT = { original_tag = BAN }
-			ROOT = { original_tag = PAK }
 			ROOT = { original_tag = RAJ }
 		}
 	}

@@ -135,20 +135,6 @@ technologies = {
 		
 		ai_will_do = {
 			base = 2
-			
-			modifier = {
-				factor = 5
-
-				OR = {
-					tag = CHI
-					tag = PRC
-					tag = XSM
-					tag = SIK
-					tag = GXC
-					tag = SHX
-					tag = YUN
-				}
-			}
 
 			modifier = {
 				factor = 5
@@ -1342,23 +1328,6 @@ technologies = {
 		ai_will_do = {
 			factor = 1
 
-			# All participants in this war will want to have this tech as early as possible
-			modifier = {
-				factor = 15
-				OR = {
-					tag = CHI
-					tag = PRC
-					tag = XSM
-					tag = SIK
-					tag = GXC
-					tag = SHX
-					tag = YUN
-					tag = MAN
-					tag = MEN
-					tag = JAP
-				}
-			}
-
 			modifier = {
 				factor = 2
 				date > "1937.1.1"
@@ -1419,20 +1388,6 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 1
-			
-			modifier = {
-				factor = 5
-
-				OR = {
-					tag = CHI
-					tag = PRC
-					tag = XSM
-					tag = SIK
-					tag = GXC
-					tag = SHX
-					tag = YUN
-				}
-			}
 			modifier = {
 				factor = 2
 				date > "1938.1.6"

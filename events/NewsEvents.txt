@@ -10084,7 +10084,7 @@ news_event = {
 	option = {
 		name = news.285.b
 		trigger = {
-			TAG = PAK
+			always = no
 		}
 	}
 	option = {
@@ -10092,7 +10092,6 @@ news_event = {
 		trigger = { 
 			NOT = {
 				TAG = RAJ
-				TAG = PAK
 			}
 		}
 	}
