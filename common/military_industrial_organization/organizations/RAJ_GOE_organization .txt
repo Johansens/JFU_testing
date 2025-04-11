@@ -51,7 +51,6 @@ RAJ_ammunition_factory_khadki_organization = {
 	allowed = {	
 		has_dlc = "Graveyard of Empires"
 		ROOT = { original_tag = RAJ }
-		always = no
 	}
 	name = RAJ_ammunition_factory_khadki
 	available = {
@@ -209,13 +208,9 @@ RAJ_ordnance_factory_medak_organization = {
 	allowed = {	
 		has_dlc = "Graveyard of Empires"
 		ROOT = { original_tag = RAJ }
-		always = no
 	}
 
 	available = {
-		hidden_trigger = {
-			always = yes	
-		}
 	}
 	trait = {
 		token = RAJ_mio_trait_apc_research_effort
@@ -252,18 +247,6 @@ RAJ_ordnance_factory_medak_organization = {
 		}
 	}
 	
-}
-
-
-RAJ_vickers_armstrong_organization = {
-	name = CAN_vickers_armstrong_can_organization
-	include = generic_medium_tank_organization
-	icon = GFX_idea_vickers_armstrong_can
-	allowed = {
-		ROOT = { original_tag = RAJ }
-		#has_dlc = "Together for Victory"
-		always = no
-	}
 }
 
 

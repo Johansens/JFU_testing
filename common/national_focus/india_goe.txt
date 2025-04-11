@@ -3109,7 +3109,6 @@ focus_tree = {
                     mark_focus_tree_layout_dirty = yes
                 }
             }
-            custom_effect_tooltip = RAJ_provincial_autonomy_tt
         }
     }
 
@@ -6522,19 +6521,19 @@ focus_tree = {
         completion_reward = {
             add_tech_bonus = {
                 name = RAJ_for_the_people_by_the_people
-                bonus = 0.75
-                uses = 2
+                bonus = 1
+                uses = 1
                 category = infantry_tech
             }
             add_tech_bonus = {
                 name = RAJ_for_the_people_by_the_people
-                bonus = 0.5
+                bonus = 1
                 uses = 1
                 category = artillery
             }
             add_tech_bonus = {
                 name = RAJ_for_the_people_by_the_people
-                bonus = 0.5
+                bonus = 1
                 uses = 1
                 category = support_tech
             }
@@ -8010,7 +8009,7 @@ focus_tree = {
             }
 
             add_tech_bonus = {
-                bonus = 0.4
+                bonus = 1
                 uses = 1
                 category = infantry_weapons # optional 
                 # technology  = technology_id # optional
@@ -9262,23 +9261,7 @@ focus_tree = {
                 }
             }
             
-            if = {
-                limit = {
-                   990 = { 
-                        is_owned_and_controlled_by = ROOT
-                        infrastructure < 5 
-                   }
-                }
-                990 = {
-                    add_building_construction = {
-                        type = infrastructure
-                        level = 2
-                        instant_build = yes
-                    }
-                }
-            }
-            else = {
-                random_controlled_state = {
+            random_controlled_state = {
                     limit = { 
                         infrastructure < 5 
                     }
@@ -9288,7 +9271,6 @@ focus_tree = {
                         instant_build = yes
                     }
                 }
-            }
             
             
             if = {
@@ -9355,7 +9337,6 @@ focus_tree = {
                     mio:RAJ_ammunition_factory_khadki_organization = { has_mio_size > 7  }                   
                     mio:RAJ_ordnance_factory_kanpur_organization  = { has_mio_size > 7  } 
                     mio:RAJ_ordnance_factory_medak_organization  = { has_mio_size > 7  }  
-                    mio:RAJ_vickers_armstrong_organization  = { has_mio_size > 7  }   
                 }
             }
             

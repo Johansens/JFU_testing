@@ -645,22 +645,6 @@ on_actions = {
 		}
 	}
 
-	#Not run on a specific country.
-	on_startup = {
-
-		effect = {  
-			RAJ = {
-				if = {
-					limit = { has_dlc = "Together for Victory" }
-					
-					set_variable = { RAJ_agrarian_society_value = -0.70 }
-					add_dynamic_modifier = { modifier = RAJ_agrarian_society_dynamic }
-					remove_ideas = RAJ_agrarian_society #For startup screen
-				}
-			}	
-		}
-	}
-
 
 	#ROOT = country that joined a war
 	#Fired when a country goes to war against anyone and is not fired again when it enters war against another country unless it went to peace first

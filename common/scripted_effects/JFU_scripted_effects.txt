@@ -586,7 +586,6 @@ JFU_equipment_on_start_up_effect = {
 		add_equipment_to_stockpile = { type = train_equipment_1 amount = 50 }
 		add_equipment_to_stockpile = { type = motorized_equipment_1 amount = 200 }
 		add_equipment_to_stockpile = { type = convoy_1 amount = 100 producer = RAJ }
-		add_dynamic_modifier = { modifier = RAJ_agrarian_society_dynamic }
 	}
 	AST = {
 		add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 4000 }
