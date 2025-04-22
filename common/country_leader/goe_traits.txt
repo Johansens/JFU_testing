@@ -346,7 +346,6 @@ leader_traits = {
 		sprite = 13
 		autonomy_gain_ll_to_overlord = -0.3
 		autonomy_gain = -0.4
-		cic_to_overlord_factor = 0.15
 	}
 
 	seasoned_administrator = {
@@ -358,7 +357,6 @@ leader_traits = {
 	aloof_authority = {
 		autonomy_gain_ll_to_overlord = -0.1
 		autonomy_gain = -0.1
-		cic_to_overlord_factor = 0.05
 	}
 
 	spiritual_leader = {
@@ -404,7 +402,6 @@ leader_traits = {
 
 	the_people_have_risen_up = {
 		autonomy_gain = 2
-		cic_to_overlord_factor = -1
 		political_power_factor = 0.2
 	}
 
