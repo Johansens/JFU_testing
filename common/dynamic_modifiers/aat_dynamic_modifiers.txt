@@ -378,39 +378,6 @@ NOR_oppressed_civilians_dmod = {
 		conscription_factor = NOR.NOR_oppressed_civilians_dmod_recruitable_population_factor #0.15
 }
 
-NOR_kingdom_of_norway_dmod = {
-	enable = {
-		NOR_AAT = yes 
-	}
-	remove_trigger = {
-		NOT = {	has_government = neutrality	}
-	}
-
-	icon = GFX_idea_generic_monarchist_uprising
-
-	military_leader_cost_factor = -0.5
-	naval_defense_factor = 0.1
-	army_defence_against_major_factor = 0.15
-	consumer_goods_factor = NOR_kingdom_of_norway_dmod_consumer_goods_factor # -0.2 0.25
-	research_speed_factor = NOR_kingdom_of_norway_dmod_research_speed # 0.08
-	special_forces_min = NOR_kingdom_of_norway_dmod_special_forces_min # 0.20
-	special_forces_training_time_factor = NOR_kingdom_of_norway_dmod_special_forces_training_time_factor # -0.1
-	special_forces_defence_factor = NOR_kingdom_of_norway_dmod_special_forces_defence_factor #0.10
-	modifier_army_sub_unit_mountaineers_max_org_factor = NOR_kingdom_of_norway_dmod_modifier_army_sub_unit_mountaineers_max_org_factor #0.10
-	modifier_army_sub_unit_marines_max_org_factor = NOR_kingdom_of_norway_dmod_modifier_army_sub_unit_marines_max_org_factor #0.10
-	conscription_factor = NOR_kingdom_of_norway_dmod_recruitable_population_factor # 0.2
-	army_defence_factor = NOR_kingdom_of_norway_dmod_army_defence_factor # 0.2 
-	army_morale_factor = NOR_kingdom_of_norway_dmod_army_morale_factor # 0.15 
-	army_org_factor = NOR_kingdom_of_norway_dmod_army_org_factor # 0.15
-	justify_war_goal_time = NOR_kingdom_of_norway_dmod_justify_war_goal_time # -0.2
-	production_speed_coastal_bunker_factor =  NOR_kingdom_of_norway_dmod_production_speed_coastal_bunker_factor # 0.35
-	production_speed_naval_base_factor = NOR_kingdom_of_norway_dmod_production_speed_naval_base_factor # 0.4
-	production_speed_dockyard_factor = NOR_kingdom_of_norway_dmod_production_speed_dockyard_factor # 0.2 
-	naval_mines_damage_factor = NOR_kingdom_of_norway_dmod_naval_mines_damage_factor # 0.2
-	spotting_chance = NOR_kingdom_of_norway_dmod_spotting_chance # 0.35
-	navy_max_range_factor = NOR_kingdom_of_norway_dmod_navy_max_range_factor # 0.15
-}
-
 SF_PARA_dispersed_drop = {
 	enable = { always = yes }
 	icon = GFX_idea_generic_air_bonus

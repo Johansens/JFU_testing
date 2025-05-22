@@ -290,7 +290,7 @@
  ENG_merch_air_craft_carrier_desc:0 ""
  ENG_royal_rearment_plan:0 "Royal Rearment Plan"
  ENG_royal_rearment_plan_desc:0 ""
- ENG_naval_rearment:0 "Naval Rearment"
+ ENG_naval_rearment:0 "Naval Rearmament"
  ENG_naval_rearment_desc:0 ""
  ENG_focus_on_sub_defense:0 "Focus on Sub Defense"
  ENG_focus_on_sub_defense_desc:0 ""
@@ -300,7 +300,7 @@
  ENG_convoy_escort_focus_desc:0 ""
  ENG_escort_carrier:0 "Escort Carrier"
  ENG_escort_carrier_desc:0 ""
- ENG_as_warfare:0 "as Warfare"
+ ENG_as_warfare:0 "AS Warfare"
  ENG_as_warfare_desc:0 ""
  ENG_manover_against_submarines:0 "Manover against Submarines"
  ENG_manover_against_submarines_desc:0 ""
@@ -1274,6 +1274,11 @@
  EFR_marcel_bruno_gensoul:0 "Marcel-Bruno Gensoul"
  EFR_jean_francois_jannekeyn:0 "Jean-Francois Jannekeyn"
  EFR_jean_de_laborde:0 "Jean de Laborde"
+
+ #traits 
+
+ lion_of_verdun:0 "The Lion of Verdun"
+
 
  victory_through_destruction:0 "Victory through Destruction"
  victory_through_fighter:0 "Victory through Fighter"
