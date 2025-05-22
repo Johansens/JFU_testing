@@ -105,7 +105,7 @@ ideas = {
 				
 		}
 
-	ENG_british_fleet_modernization_1= {
+		ENG_british_fleet_modernization_1= {
 			
 			allowed = {
 				original_tag = ENG
@@ -123,7 +123,7 @@ ideas = {
 						}		
 		}
 
-ENG_british_fleet_modernization_2= {
+		ENG_british_fleet_modernization_2= {
 			
 			allowed = {
 				original_tag = ENG
@@ -151,7 +151,7 @@ ENG_british_fleet_modernization_2= {
 		}
 
 
-	ENG_kick_start_the_carrier_airframe_project_1= {
+		ENG_kick_start_the_carrier_airframe_project_1= {
 			
 			allowed = {
 				original_tag = ENG
@@ -177,7 +177,7 @@ ENG_british_fleet_modernization_2= {
 			}
 		}
 
-	ENG_refit_civilian_ships_1 = { 
+		ENG_refit_civilian_ships_1 = { 
  			
 			removal_cost = -1
 
@@ -201,7 +201,7 @@ ENG_british_fleet_modernization_2= {
 			}
 		}	
 
-	ENG_britannia_rules_the_waves = {
+		ENG_britannia_rules_the_waves = {
 			name = ENG_britannia_rules_the_waves
 		 	picture = GER_seeherrschaft
 		 
@@ -220,7 +220,7 @@ ENG_british_fleet_modernization_2= {
 			}
 		}	
 
-	ENG_the_sun_never_sets_idea = {
+		ENG_the_sun_never_sets_idea = {
 
 			name = ENG_the_sun_never_sets
 
@@ -253,7 +253,7 @@ ENG_british_fleet_modernization_2= {
 
 		}
 
-	ENG_battel_on_the_oceans = {
+		ENG_battel_on_the_oceans = {
 			
 			allowed = {
 				original_tag = ENG
@@ -397,7 +397,7 @@ ENG_british_fleet_modernization_2= {
 
 	# Air #
 
-	ENG_the_raf_1= {
+		ENG_the_raf_1= {
 			
 			allowed = {
 				original_tag = ENG
@@ -415,7 +415,7 @@ ENG_british_fleet_modernization_2= {
 			}
 		}	
 
-	ENG_the_raf_fighter_command_1= {
+		ENG_the_raf_fighter_command_1= {
 			
 			allowed = {
 				original_tag = ENG
@@ -435,7 +435,7 @@ ENG_british_fleet_modernization_2= {
 				}
 			}	
 
-	ENG_the_raf_bomber_command_1= {
+		ENG_the_raf_bomber_command_1= {
 			
 			allowed = {
 				original_tag = ENG
@@ -612,6 +612,25 @@ ENG_british_fleet_modernization_2= {
 					
 			}
 		}
+
+		wartime_industry_focus_eng = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_production_bonus
+
+			modifier = {
+				conversion_cost_civ_to_mil_factor= -0.5
+			}
+		}
+
 		george_v = {
 			
 			allowed = {
@@ -734,7 +753,7 @@ ENG_british_fleet_modernization_2= {
 			}
 			
 			modifier = {
-				#operative_slot = 4
+				operative_slot = 4
 			}			
 		}
 
