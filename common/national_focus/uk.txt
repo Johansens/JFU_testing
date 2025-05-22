@@ -348,7 +348,7 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY}	
 		completion_reward = {
 			custom_effect_tooltip = shadow_scheme_focus_tt
-			add_ideas = wartime_industry_focus	
+			add_ideas = wartime_industry_focus_eng	
 		}
 	}
 
@@ -874,7 +874,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
-			custom_effect_tooltip = ENG_military_stuff_adviser
+			#custom_effect_tooltip = ENG_military_stuff_adviser
 			swap_ideas = {
 				remove_idea = ENG_the_raf_1
 				add_idea = ENG_the_raf_fighter_command_1
@@ -900,7 +900,7 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 			mio:ENG_light_aircraft_organization = {
-				add_mio_size = 2
+				add_mio_funds = 2000
 				add_mio_funds_gain_factor = 0.10
 				add_mio_research_bonus = 0.05
 			}
@@ -980,7 +980,7 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 			mio:ENG_avro_organization = {
-					add_mio_size = 3
+					add_mio_funds = 2000
 					add_mio_funds_gain_factor = 0.10
 					add_mio_research_bonus = 0.05
 			}	
@@ -2785,7 +2785,7 @@ focus = {
 				category = dd_tech
 			}
 			mio:ENG_yarrow_shipbuilders_organization = {
-					add_mio_size = 4
+					add_mio_funds = 2000
 					add_mio_funds_gain_factor = 0.10
 					add_mio_research_bonus = 0.05
 			}	
@@ -3093,7 +3093,7 @@ focus = {
 				category = bb_tech
 				}
 			mio:ENG_cammell_laird_organization = {
-					add_mio_size = 3
+					add_mio_funds = 2000
 					add_mio_funds_gain_factor = 0.10
 					add_mio_research_bonus = 0.05
 			}	
@@ -3125,7 +3125,7 @@ focus = {
 				category = cv_tech
 				}
 			mio:ENG_Harland_wolff_organization = {
-					add_mio_size = 3
+					add_mio_funds = 2000
 					add_mio_funds_gain_factor = 0.10
 					add_mio_research_bonus = 0.05
 			}		
@@ -3181,7 +3181,7 @@ focus = {
 		completion_reward = {				
 			add_ideas = ENG_kick_start_the_carrier_airframe_project_1
 			mio:ENG_fairey_aviation_organization = {
-					add_mio_size = 2
+					add_mio_funds = 2000
 					add_mio_funds_gain_factor = 0.10
 			}
 		}
@@ -3346,9 +3346,12 @@ focus = {
 
 		completion_reward = {
 			navy_experience = 100
-			set_technology = {
-						advanced_ship_hull_heavy = 1
-					}
+			hidden_effect = {
+				set_technology = {
+					advanced_ship_hull_heavy = 1
+				}
+			}
+
 
 			133 = {
 				add_extra_state_shared_building_slots = 4
