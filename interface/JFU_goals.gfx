@@ -1875,4 +1875,34 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/ger/todt.dds"
 	}
     
+
+    SpriteType = {
+		name = "GFX_UK_TRENCH"
+		texturefile = "gfx/interface/goals/eng/UK_trench.dds"
+	}
+    
+
+    SpriteType = {
+		name = "GFX_GER_UNTERNEHMEN_FRUHLINGSERWACHEN"
+		texturefile = "gfx/interface/goals/ger/GER_unternehmen_fruhlingserwachen.dds"
+	}
+    
+
+    SpriteType = {
+		name = "GFX_GER_WINTER2"
+		texturefile = "gfx/interface/goals/ger/GER_winter2.dds"
+	}
+    
+
+    SpriteType = {
+		name = "GFX_GER_OSTTRUPPENN"
+		texturefile = "gfx/interface/goals/ger/ger_osttruppenn.dds"
+	}
+    
+
+    SpriteType = {
+		name = "GFX_GOAL_GER_HEAVY_TIGER_CATS"
+		texturefile = "gfx/interface/goals/ger/goal_ger_heavy_tiger_cats.dds"
+	}
+    
 }

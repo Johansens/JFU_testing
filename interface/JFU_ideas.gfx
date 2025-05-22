@@ -10,6 +10,10 @@ spriteTypes = {
 	SpriteType = { 
 		name = "GFX_idea_pervitin"
 		texturefile = "gfx/interface/ideas/pervitin.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_GER_cold"
+		texturefile = "gfx/interface/ideas/idea_GER_cold.dds"
 	}	
 }
 

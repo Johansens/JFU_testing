@@ -423,19 +423,19 @@ focus_tree = {
 
 			GER_modify_industrial_modifier = yes
 			add_to_variable = { 
-				GER_industrial_production_factory_max_efficiency_factor = 0.05
+				GER_industrial_production_factory_max_efficiency_factor = 0.025
 				tooltip = production_factory_max_efficiency_factor_tt
 			}
 			add_to_variable = { 
-				GER_industrial_production_factory_efficiency_gain_factor = 0.05
+				GER_industrial_production_factory_efficiency_gain_factor = 0.025
 				tooltip = production_factory_efficiency_gain_factor_tt
 			}
 			add_to_variable = { 
-				GER_industrial_production_factory_start_efficiency_factor = 0.05
+				GER_industrial_production_factory_start_efficiency_factor = 0.025
 				tooltip = production_factory_start_efficiency_factor_tt
 			}
 			add_to_variable = { 
-				GER_industrial_line_change_production_efficiency_factor = 0.05
+				GER_industrial_line_change_production_efficiency_factor = 0.025
 				tooltip = line_change_production_efficiency_factor_tt
 			}
 		}
@@ -493,21 +493,21 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			add_tech_bonus = {
-				name = GER_industrial_expansion
-				bonus = 1.0
-				uses = 1
-				technology = advanced_machine_tools
-				technology = flexible_line
-				technology = assembly_line_production
-				technology = streamlined_line
-				technology = concentrated_industry3
-				technology = concentrated_industry4
-				technology = concentrated_industry5
-				technology = dispersed_industry3 
-				technology = dispersed_industry4 
-				technology = dispersed_industry5 
-			}
+			#add_tech_bonus = {
+			#	name = GER_industrial_expansion
+			#	bonus = 1.0
+			#	uses = 1
+			#	technology = advanced_machine_tools
+			#	technology = flexible_line
+			#	technology = assembly_line_production
+			#	technology = streamlined_line
+			#	technology = concentrated_industry3
+			#	technology = concentrated_industry4
+			#	technology = concentrated_industry5
+			#	technology = dispersed_industry3 
+			#	technology = dispersed_industry4 
+			#	technology = dispersed_industry5 
+			#}
 			custom_effect_tooltip = generic_skip_one_line_tt
 
 			modify_building_resources = {
@@ -823,7 +823,7 @@ focus_tree = {
 				tooltip = consumer_goods_factor_tt
 			}
 			add_to_variable = { 
-				GER_industrial_production_speed_buildings_factor = 0.1
+				GER_industrial_production_speed_buildings_factor = 0.05
 				tooltip = production_speed_buildings_factor_tt
 			}
 			
@@ -877,11 +877,11 @@ focus_tree = {
 				tooltip = production_lack_of_resource_penalty_factor_tt
 			}
 			add_to_variable = { 
-				GER_industrial_industrial_capacity_factory = 0.05
+				GER_industrial_industrial_capacity_factory = 0.025
 				tooltip = industrial_capacity_factory_tt
 			}
 			add_to_variable = { 
-				GER_industrial_industrial_capacity_dockyard = 0.05
+				GER_industrial_industrial_capacity_dockyard = 0.025
 				tooltip = industrial_capacity_dockyard_tt
 			}
 
@@ -923,19 +923,19 @@ focus_tree = {
 
 			GER_modify_industrial_modifier = yes
 			add_to_variable = { 
-				GER_industrial_production_factory_max_efficiency_factor = 0.05
+				GER_industrial_production_factory_max_efficiency_factor = 0.025
 				tooltip = production_factory_max_efficiency_factor_tt
 			}
 			add_to_variable = { 
-				GER_industrial_production_factory_efficiency_gain_factor = 0.05
+				GER_industrial_production_factory_efficiency_gain_factor = 0.025
 				tooltip = production_factory_efficiency_gain_factor_tt
 			}
 			add_to_variable = { 
-				GER_industrial_production_factory_start_efficiency_factor = 0.05
+				GER_industrial_production_factory_start_efficiency_factor = 0.025
 				tooltip = production_factory_start_efficiency_factor_tt
 			}
 			add_to_variable = { 
-				GER_industrial_line_change_production_efficiency_factor = 0.05
+				GER_industrial_line_change_production_efficiency_factor = 0.025
 				tooltip = line_change_production_efficiency_factor_tt
 			}
 		}
@@ -982,11 +982,11 @@ focus_tree = {
 
 			GER_modify_industrial_modifier = yes
 			add_to_variable = { 
-				GER_industrial_industrial_capacity_factory = 0.05
+				GER_industrial_industrial_capacity_factory = 0.025
 				tooltip = industrial_capacity_factory_tt
 			}
 			add_to_variable = { 
-				GER_industrial_industrial_capacity_dockyard = 0.05
+				GER_industrial_industrial_capacity_dockyard = 0.025
 				tooltip = industrial_capacity_dockyard_tt
 			}
 			add_to_variable = { 
@@ -2060,11 +2060,11 @@ focus_tree = {
 						include_locked = yes
 					}
 				}
-				prioritize = { 57 }
-				add_extra_state_shared_building_slots = 1
+				prioritize = { 60 }
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = synthetic_refinery
-					level = 1
+					level = 3
 					instant_build = yes
 				}
 			}
@@ -2140,10 +2140,10 @@ focus_tree = {
 					}
 				}
 				prioritize = { 65 }
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = synthetic_refinery
-					level = 1
+					level = 3
 					instant_build = yes
 				}
 			}
@@ -2253,7 +2253,7 @@ focus_tree = {
 						include_locked = yes
 					}
 				}
-				random_select_amount = 2
+				random_select_amount = 1
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = arms_factory
@@ -2326,15 +2326,16 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
 
 		completion_reward = {
-			random_core_state = {
+			every_core_state = {
 				limit = {
-					is_controlled_by = ROOT
+					is_fully_controlled_by = ROOT
 					free_building_slots = {
 						building = arms_factory
 						size > 0
 						include_locked = yes
 					}
 				}
+				random_select_amount = 2
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = arms_factory
@@ -2451,7 +2452,6 @@ focus_tree = {
 		cost = 10
 		available = {
 			has_war_with_major = yes
-			has_civil_war = no
 		}
 
 		continue_if_invalid = yes
@@ -2704,8 +2704,8 @@ focus_tree = {
 			}
 			else = {
 				mio:GER_henschel_organization = {
-					add_mio_size = 1
-					add_mio_funds_gain_factor = 0.25
+					add_mio_funds = 1000
+					add_mio_funds_gain_factor = 0.10
 					add_mio_research_bonus = 0.05
 
 					#unlock_mio_trait_tooltip = 
@@ -2863,8 +2863,8 @@ focus_tree = {
 			}
 			else = {
 				mio:GER_alkett_organization = {
-					add_mio_size = 1
-					add_mio_funds_gain_factor = 0.25
+					add_mio_funds = 1000
+					add_mio_funds_gain_factor = 0.10
 					add_mio_research_bonus = 0.05
 
 					#unlock_mio_trait_tooltip = 
@@ -2947,12 +2947,12 @@ focus_tree = {
 					has_dlc = "Arms Against Tyranny"
 				}
 				mio:GER_rheinmetall_organization = {
-					add_mio_size = 1
-					add_mio_funds_gain_factor = 0.25
+					add_mio_funds = 1000
+					add_mio_funds_gain_factor = 0.10
 					add_mio_research_bonus = 0.05
 				}
 				mio:GER_mauser_organization = {
-					add_mio_size = 1
+					add_mio_funds = 1000
 					add_mio_funds_gain_factor = 0.1
 				}
 				custom_effect_tooltip = generic_skip_one_line_tt
@@ -3512,14 +3512,14 @@ focus_tree = {
 			}
 			else = {
 				mio:GER_opel_organization = {
-					add_mio_size = 1
+					add_mio_funds = 1000
 					add_mio_funds_gain_factor = 0.10
 					add_mio_research_bonus = 0.05
 
 					unlock_mio_trait_tooltip = GER_mio_trait_continental_ag_tires
 				}
 				mio:GER_MAN_organization = {
-					add_mio_size = 1
+					add_mio_funds = 1000
 					add_mio_funds_gain_factor = 0.10
 					add_mio_research_bonus = 0.05
 
@@ -4012,7 +4012,7 @@ focus_tree = {
 			}
 			else = {
 				mio:GER_daimler_benz_organization = {
-					add_mio_size = 1
+					add_mio_funds = 1000
 					add_mio_funds_gain_factor = 0.10
 					add_mio_research_bonus = 0.05
 
@@ -4104,7 +4104,7 @@ focus_tree = {
 			}
 			else = {
 				mio:GER_porsche_organization = {
-					add_mio_size = 1
+					add_mio_funds = 1000
 					add_mio_funds_gain_factor = 0.10
 					add_mio_research_bonus = 0.05
 
@@ -4354,8 +4354,8 @@ focus_tree = {
 			}
 			else = {
 				mio:GER_arado_flugzeugwerke_organization = {
-					add_mio_size = 1
-					add_mio_funds_gain_factor = 0.25
+					add_mio_funds = 1000
+					add_mio_funds_gain_factor = 0.10
 					add_mio_research_bonus = 0.05
 
 					#unlock_mio_trait_tooltip = 
@@ -4431,7 +4431,7 @@ focus_tree = {
 			}
 			else = {
 				mio:GER_junkers_organization = {
-					add_mio_size = 1
+					add_mio_funds = 1000
 					add_mio_funds_gain_factor = 0.10
 					add_mio_research_bonus = 0.05
 
@@ -4519,7 +4519,7 @@ focus_tree = {
 			}
 			else = {
 				mio:GER_dornier_organization = {
-					add_mio_size = 1
+					add_mio_funds = 1000
 					add_mio_funds_gain_factor = 0.10
 					add_mio_research_bonus = 0.05
 
@@ -4601,7 +4601,7 @@ focus_tree = {
 			}
 			else = {
 				mio:GER_heinkel_organization = {
-					add_mio_size = 1
+					add_mio_funds = 1000
 					add_mio_funds_gain_factor = 0.10
 					add_mio_research_bonus = 0.05
 
@@ -4822,8 +4822,8 @@ focus_tree = {
 			}
 			else = {
 				mio:GER_messerschmitt_organization = {
-					add_mio_size = 1
-					add_mio_funds_gain_factor = 0.25
+					add_mio_funds = 1000
+					add_mio_funds_gain_factor = 0.10
 					add_mio_research_bonus = 0.05
 
 					#unlock_mio_trait_tooltip = 
@@ -5270,8 +5270,8 @@ focus_tree = {
 			}
 			else = {
 				mio:GER_fieseler_organization = {
-					add_mio_size = 1
-					add_mio_funds_gain_factor = 0.25
+					add_mio_funds = 1000
+					add_mio_funds_gain_factor = 0.10
 					add_mio_research_bonus = 0.05
 
 					#unlock_mio_trait_tooltip = 
@@ -5703,7 +5703,7 @@ focus_tree = {
 			}
 			else = {
 				mio:GER_kriegsmarinewerft_wilhelmshaven_organization = {
-					add_mio_size = 1
+					add_mio_funds = 1000
 					add_mio_funds_gain_factor = 0.10
 					add_mio_research_bonus = 0.05
 
@@ -5911,7 +5911,7 @@ focus_tree = {
 			}
 			else = {
 				mio:GER_deutsche_werke_organization = {
-					add_mio_size = 1
+					add_mio_funds = 1000
 					add_mio_funds_gain_factor = 0.10
 					add_mio_research_bonus = 0.05
 
@@ -6073,7 +6073,7 @@ focus_tree = {
 			}
 			else = {
 				mio:GER_germaniawerft_organization = {
-					add_mio_size = 1
+					add_mio_funds = 1000
 					add_mio_funds_gain_factor = 0.10
 					add_mio_research_bonus = 0.05
 
@@ -6148,7 +6148,7 @@ focus_tree = {
 			}
 			else = {
 				mio:GER_deschimag_organization = {
-					add_mio_size = 1
+					add_mio_funds = 1000
 					add_mio_funds_gain_factor = 0.10
 					add_mio_research_bonus = 0.05
 
@@ -6607,7 +6607,7 @@ focus_tree = {
 			}
 			else = {
 				mio:GER_blohm_und_voss_organization = {
-					add_mio_size = 1
+					add_mio_funds = 1000
 					add_mio_funds_gain_factor = 0.10
 					add_mio_research_bonus = 0.05
 
@@ -6857,7 +6857,7 @@ focus_tree = {
 			}
 			else = {
 				mio:GER_hdw_organization = {
-					add_mio_size = 1
+					add_mio_funds = 1000
 					add_mio_funds_gain_factor = 0.10
 					add_mio_research_bonus = 0.05
 
@@ -8482,7 +8482,7 @@ focus_tree = {
 
 		prerequisite = { focus = GER_remilitarize_the_rhineland }
 
-		x = 5
+		x = 6
 		y = 0
 		relative_position_id = GER_reorganize_the_wehrmacht
 		cost = 1
@@ -8533,10 +8533,166 @@ focus_tree = {
 			custom_effect_tooltip = GER_decision_focus_tt
 		}
 	}
+
+	focus = {
+		id = GER_winter
+		
+		icon = GFX_GER_WINTER
+		
+		x = 0
+		y = 1
+		cost = 5
+		
+        available = {
+			always = no
+		}
+		
+		available_if_capitulated = yes
+		prerequisite = { focus = GER_war_with_the_ussr }
+		
+		relative_position_id = GER_war_with_the_ussr
+
+		completion_reward = {
+			custom_effect_tooltip = GER_winter_tt
+			add_ideas = GER_winterdebuff
+            hidden_effect = {
+				ROM = { add_ideas = GER_winterdebuff}
+				HUN = { add_ideas = GER_winterdebuff}
+				BUL = { add_ideas = GER_winterdebuff}
+				SPR = { add_ideas = GER_winterdebuff}
+				CZE = { add_ideas = GER_winterdebuff}
+            }    				
+		}
+	}
+
+	focus = {
+		id = GER_entrenching
+		icon = GFX_UK_TRENCH
+		prerequisite = { focus = GER_winter }
+		x = -1
+		y = 1
+		relative_position_id = GER_winter
+		cost = 5
+
+		available_if_capitulated = yes
+
+		mutually_exclusive = { focus = GER_typhoon }
+	
+		available = {
+		}
+		completion_reward = {
+			add_timed_idea = { 
+					idea = GER_entrenching_idea 
+					days = 70 
+			} 
+			hidden_effect = {
+				HUN = { add_timed_idea = { idea = GER_entrenching_idea days = 90 } }
+				ROM = { add_timed_idea = { idea = GER_entrenching_idea days = 90 } }
+				BUL = { add_timed_idea = { idea = GER_entrenching_idea days = 90 } }
+				SPA = { add_timed_idea = { idea = GER_entrenching_idea days = 90 } }
+				ITA = { add_timed_idea = { idea = GER_entrenching_idea days = 90 } }
+				#EFR = { add_timed_idea = { idea = GER_entrenching_idea days = 90 } }
+			}
+		}
+	}
+
+	focus = {
+		id = GER_winterequipement
+		icon = GFX_GER_WINTER2
+		prerequisite = { focus = GER_entrenching}
+		x = -1
+		y = 1
+		relative_position_id = GER_entrenching
+		cost = 5
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = GER_winterequipement
+				bonus = 2.0
+				uses = 2
+				category = support_tech
+			}	
+		}
+	}
+
+	focus = {
+		id = GER_typhoon
+		icon = GFX_GER_UNTERNEHMEN_FRUHLINGSERWACHEN
+		prerequisite = { focus = GER_winter }
+		x = 1
+		y = 1
+		relative_position_id = GER_winter
+		cost = 5
+		mutually_exclusive = { focus = GER_entrenching }
+		available_if_capitulated = yes
+		
+		available = {
+			NOT = { SOV = { has_completed_focus = SOV_lessons_of_war } }  
+			NOT = { controls_state = 219 }
+		}
+
+		completion_reward = {
+     		every_country = {
+				limit = { 
+					OR = { 
+						tag = GER 
+						tag = ROM
+						tag = HUN 
+						tag = SPR 
+						tag = BUL  
+					} 
+				}
+			 add_timed_idea = { idea = GER_typhoon days = 30 }
+		}
+		}
+	}
+
+	focus = {
+		id = GER_continuetheoffence
+		icon = GFX_GOAL_GER_HEAVY_TIGER_CATS 
+		prerequisite = { focus = GER_typhoon   }
+		x = 1
+		y = 1
+		relative_position_id = GER_typhoon
+		cost = 5
+
+		available_if_capitulated = yes
+		
+		completion_reward = {
+		add_equipment_to_stockpile = { type = infantry_equipment amount = 10000 }
+		add_equipment_to_stockpile = { type = motorized_equipment amount = 750 }
+		add_equipment_to_stockpile = { type = support_equipment amount = 500 }
+		add_equipment_to_stockpile = { type = artillery_equipment amount = 1000 }
+		add_equipment_to_stockpile = { type = anti_tank_equipment amount = 1000 }	
+		}
+	}
+
+	focus = {
+		id = GER_winterresiliance
+		icon = GFX_GER_OSTTRUPPENN
+		prerequisite = { focus = GER_typhoon focus = GER_entrenching }
+		x = -1
+		y = 1
+		relative_position_id = GER_typhoon
+		cost = 5
+ 
+		available_if_capitulated = yes
+
+		completion_reward = {
+		hidden_effect = { 
+                 every_country = { limit ={  has_idea = GER_winterdebuff } remove_ideas = GER_winterdebuff }
+				 }
+				 effect_tooltip = {
+					remove_ideas = GER_winterdebuff
+				 }	
+				 
+		}
+	}
+
 	focus = {
 		id = GER_focus_fall_blau
 		icon = GFX_focus_ger_strike_at_the_source
-		prerequisite = { focus = GER_war_with_the_ussr}
+		prerequisite = { focus = GER_winterresiliance}
 		available_if_capitulated = no
 		
 		available = {
@@ -8544,7 +8700,7 @@ focus_tree = {
 		}
 		x = 0
 		y = 1
-		relative_position_id = GER_war_with_the_ussr
+		relative_position_id = GER_winterresiliance
 		cost = 10
 
 		bypass = {
@@ -8572,12 +8728,12 @@ focus_tree = {
 			add_manpower = 500000 
 			add_equipment_to_stockpile = {
 				type = infantry_equipment_1
-				amount = 40000
+				amount = 30000
 				producer = GER
 			}
 			add_equipment_to_stockpile = {
 				type = support_equipment_1
-				amount = 3000
+				amount = 2000
 				producer = GER
 			}
 			add_equipment_to_stockpile = {
@@ -12542,6 +12698,11 @@ focus_tree = {
 			OR = {
 				GER = { surrender_progress > 0.05 }	
 			}		
+		}
+		bypass = {
+			NOT = {
+				has_war_with = SOV 
+			}
 		}
 		cost = 5
 		completion_reward = {

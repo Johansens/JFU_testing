@@ -1,8 +1,8 @@
 ﻿l_english:
 
  #hosttool
- HOSTTOOL_GAME_RULE: "      Select Host"
- HOSTTOOL_NONE: "§RDisable Host Tool§!"
+ HOSTTOOL_GAME_RULE: "Select Host"
+ HOSTTOOL_NONE:0 "§RDisable Host Tool§!"
  
  ST_STATE_MARK_FOR_TRANSFER:0 "§HMark State for Transfer§!\nMark the selected state so it can be transfered \n"
  ST_STATE_UNMARK_FOR_TRANSFER:0 "§HUnmark State§!\nUnmarks the selected state\n"
@@ -44,12 +44,12 @@
  MILADD:0 "§HAdd 1 Military Factories§!\nClicking this button will add five military factories to the selected state.\n\n"
 
  ADDPP:0 "§HAdd 50 Political Power§!\nClicking this button will add pp to the selected state's owner.\n\n"
- XPAIR_TT: "§HAdd 50 Air XP§!\nClicking this button will add Air xp to the selected state's owner.\n\n"
- XPARMY_TT: "§HAdd 50 Army XP§!\nClicking this button will add Army xp to the selected state's owner.\n\n"
+ XPAIR_TT:0 "§HAdd 50 Air XP§!\nClicking this button will add Air xp to the selected state's owner.\n\n"
+ XPARMY_TT:0 "§HAdd 50 Army XP§!\nClicking this button will add Army xp to the selected state's owner.\n\n"
 
- PROD_RESET: "§HReset the Prod Line Fixer§!\nClicking this button will revert all prod line fixer settings to default.\n\n"
- PROD_CREATE: "§HCreate Prod Line§!\nClicking this button will create a prod line on the selected state's owner.\n§RTHIS WONT WORK FOR TANKS/SELF DESIGNED EQUIP§!\n"
- PROD_CREATE_VARIANT: "§HCreate Prod Line Variant§!\nClicking this button will create a prod line on the selected state's owner.\n§RFor Self-Designed Equipment (f.e. Tanks in NSB) you need to name the variant/design "prodfix", else it wont work.§!\n"
+ PROD_RESET:0 "§HReset the Prod Line Fixer§!\nClicking this button will revert all prod line fixer settings to default.\n\n"
+ PROD_CREATE:0 "§HCreate Prod Line§!\nClicking this button will create a prod line on the selected state's owner.\n§RTHIS WONT WORK FOR TANKS/SELF DESIGNED EQUIP§!\n"
+ PROD_CREATE_VARIANT:0 "§HCreate Prod Line Variant§!\nClicking this button will create a prod line on the selected state's owner.\n§RFor Self-Designed Equipment (f.e. Tanks in NSB) you need to name the variant/design "prodfix", else it wont work.§!\n"
 
  ST_TOOLTIP_on:0 "§HActivate 'Host Tool'§!"
  ST_TOOLTIP_off:0 "§HDeactivate 'Host Tool'§!"
@@ -65,7 +65,7 @@
  mark_status_marked:0   "     Unmark State "
  mark_status_unmarked:0 "      Mark State  "
  
- hosttool.7.desc: " [From.Getname] gave a [ROOT.prod_type] line with [ROOT.prod_efficiency]% effi to [From.From.Owner.Getname]. The Nation needs to have this Equipment Researched/Unlocked to get the line. §RFor Self-Designed Equipment (f.e. Tanks in NSB) you need to name their variant "prodfix" and use the Prod Line Variant button, else it wont work.§!"
+ hosttool.7.desc:0 " [From.Getname] gave a [ROOT.prod_type] line with [ROOT.prod_efficiency]% effi to [From.From.Owner.Getname]. The Nation needs to have this Equipment Researched/Unlocked to get the line. §RFor Self-Designed Equipment (f.e. Tanks in NSB) you need to name their variant "prodfix" and use the Prod Line Variant button, else it wont work.§!"
 
  hosttool.69.t:0 "Help with Host Tool"
  hosttool.69.desc:0 "The Host Tool system is made for hosts to have an easier time with their games and not waste time on hotjoins, and for games not to be over if Germany researches something wrong with its bonuses, etc. The hosttool has a few functionalities: \n\n 1. Changing borders \nThe hosttool can annex countries, transfer states and add cores. To annex a country, mark one of its states, then click on the country you want to annex it to and click the annex button. To transfer states/add cores, mark the state and then click on the recieving country and click transfer states/add cores. \n\n2. Adding tech bonuses.\n To do so, click on the target country, click on the bonus you want to add to it and click the 'Cheat' button with the research icon.\n\n3. Sending players to observer. \nTo do so, click on the country the player is playing and click the Observe button. \n\n4. Whitepeace countries. \nTo whitepeace a country, click on the target country, and click the Whitepeace button."
@@ -73,15 +73,15 @@
 
  horsthelp.1.t:0 "Help with Fuel Manager"
  horsthelp.1.d:0 "The Fuel Manager is made so that the faction leader of one faction can manage all of the fuel in a faction.\n\nYou can assign a percentage of required fuel reserves to the country that the country should have. The Fuel Manager will try to keep the assigned percentage by taking fuel from the UK, Germany, or Japan. You can also assign a priority based on the position that nation has in the system. To change the priority of a country, click on the arrows."
- horsthelp.1.a:0 "Thank you Horst, very cool!"
-
-
-  #counties
+ horsthelp.1.a:0 "Thank you Host, very cool!"
+ 
+ 
+ #counties
  EFR_fascism:0 "Vichy France"
  EFR_fascism_DEF:0 "Vichy France"
  ITA_SRI:0 "Italian Socialist Republic"
 
- 
+
  #FOCI
  continuous_morb:0 "Mobilization"
 
@@ -231,6 +231,20 @@
  GER_prepare:0 "Build up the East"
  GER_prepare_desc:0 ""
  GER_focus_fall_blau:0 "Fall Blau"
+ GER_entrenching:0 "Echeloned Defense"
+ GER_winter:0 "§BWinter§! 1941-42"
+ GER_winter_desc:0 "Because of the very hard frosts and the lack of winter clothing, our soldiers suffer great losses, which affects the course of the operation."
+ GER_entrenching_desc:0 "By building fortifications and conducting an echelon defense, we will not let the enemy break into our rear"
+ GER_typhoon:0 "Operation Typhoon!"
+ GER_typhoon_desc:0 "We will try again to break through to Moscow, this time more prepared"
+ GER_winterresiliance:0 "Winter Resiliance"
+ GER_winterresiliance_desc:0 ""  
+ GER_winter_equipment:0 "Winterize Our Equipment"
+ GER_winter_equipment_desc:0 "If we are to fight through winter then we must winterize our equipment - and fast."
+ GER_continuetheoffence:0 "Continue the offensive!"
+ GER_continuetheoffence_desc:0 "Once we have replenished our supplies, we will be able to conduct offensive operations again."
+ GER_winterequipement:0 "Winter Equipement"
+ GER_winterequipement_desc:0 "" 
 
  JAP_armored_divisions_MAN:0 "Manchurian Armor Technology"
 
@@ -943,7 +957,7 @@
  kursk_failed:0 "Operation Citadelle has failed"
  GER_prio_fighter_tt:0 "Add '§YFighter Priority§!', which grants \n(§YFighter§!: $production_cost_tt$ §G-10.00%§!, §YLight§!, §YMedium§! and §YHeavy Armor§!: $production_cost_tt$ §R+15.00%§!)"
  GER_prio_tanks_tt:0 "Add '§YArmor Priority§!', which grants \n(§YLight§!, §YMedium§! and §YHeavy Armor§!: $production_cost_tt$ §G-10.00%§!, §YFighter§!: $production_cost_tt$ §R+15.00%§!)"
- GER_SWE_deal_tt:0 "We will broker a trade deal with @SWE§YSweden§! giving us access to their §YSteal§! and §YTungsten§! (spawns §Y80§! Steel and §Y50§! Tungesten in Oslo)"
+ GER_SWE_deal_tt:0 "We will broker a trade deal with @SWE§YSweden§! giving us access to their §YSteal§! and §YTungsten§! (adds §Y80§! Steel and §Y50§! Tungesten in Oslo)"
  endsieg_tanks_tt:0 "§HOur§! §CDivision Attack on core territory§! §Hand§! §CDivision Defense on core territory§! §Hwill increase by§! §C10%§!.\n§RWe will also double our Total war Modifier§!"
  endsieg_tt:0 "§HWe will deploy §G72 40w infantry divisions§! to hold the line.§!\n\n"
  das_letzte_aufgebot_tt:0 "§HOur§! §CDivision Attack on core territory§! §Hand§! §CDivision Defense on core territory§! §Hwill increase by an additonal§! §C10%§!."
@@ -977,6 +991,9 @@
  mefo_reduction_small_tt:0 "We will use aquired funds to reduce the MEFO Bills payments by §G-0.10§! Political Power"
  ost_wall_tt:0 "We will gain level 3 forts in all porvinzes bordering the Soviet Union"
  GER_form_the_reichskommissariats_tt:0 "Every state occupied by us \n  Add §YSS Occupation§! which grants:\nlocal Resources: §G+5%§!\nlocal Factories: §G+15%§!\nResistance Target: §G-40%§!\nDamage to Garrisons: §R+50%§!\nRequired Garrisons: §R+15%§!\nDaily Compliance Gain: §R-0.01%§!"
+ GER_barbarossa_others_text:0 "§C\nOur allies will benefit from attack plans as well.§!"
+ GER_winter_tt:0 "This focus is automatically completed after our §YOperation Barabrossa§! buff ends"
+
 
  ITA_blackshirts_div_cap_20_tt:0 "Modify template cap of §YCamicie Nere§! by §G+20§!."
  ITA_strengthen_the_blackshirts_spawn_divs_10_tt:0 "Create §Y10 Camicie Nere§! divisions in §Y[THIS.GetName]§!."
@@ -1097,7 +1114,9 @@
  ALLIES_usa_dock_idea:0 "Trained by the US Marine Corps"
  ALLIES_usa_patron_idea:0 "Learn from Americans"
  ALLIES_eng_patron_idea:0 "Seek British Expertise"
+
  ENG_con_int_dynamic:0 "Continental Intervention"
+ wartime_industry_focus_eng:0 "Wartime Industry"
 
  GER_apointalbertspeer:0 "Albert Speer's Reforms"
  GER_stuka:0 "Stuka-Tabletten"
@@ -1108,6 +1127,8 @@
  GER_pillen_desc:0 "Distributing Pervitin to our troops has significantly improved their endurance in day-to-day combat." 
  GER_plan_z_idea:0 "Plan Z"
  GER_prepare_barb_idea:0 "Prepare for Operation Barbarossa"
+ GER_entrenching_idea:0 "Operational Pause"
+ GER_winterdebuff:0 "Soviet Winter"
 
 
  JAP_strike_on_the_northern_resource_area:0 "Strike on the Northern Resource Area"

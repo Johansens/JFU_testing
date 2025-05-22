@@ -1107,6 +1107,15 @@ ideas = {
 				has_government = fascism
 			}
 
+			on_remove = {
+				if = { 
+					limit = { 
+						tag = GER 
+					} 
+					complete_national_focus = GER_winter 
+				}
+			}
+
 			removal_cost = -1
 
 			picture = generic_acquire_tanks
@@ -1212,6 +1221,54 @@ ideas = {
 				}
 			}
 		}
+
+		GER_winterdebuff = {
+            allowed = {
+                always = no
+            }
+            allowed_civil_war = {
+                has_government = fascism
+            }
+            removal_cost = -1
+            picture = GER_cold
+            modifier = {
+                winter_attrition_factor = 0.1
+                acclimatization_cold_climate_gain_factor = -0.5
+            }
+        }
+
+		GER_entrenching_idea = {
+            allowed = {
+                always = no
+            }
+            allowed_civil_war = {
+                has_government = fascism
+            }
+            removal_cost = -1
+            picture = generic_wall_line
+            targeted_modifier = {
+                tag = SOV
+                defense_bonus_against = 0.1
+            }	
+        }
+
+        GER_typhoon = {
+            allowed = {
+                always = no
+            }
+            allowed_civil_war = {
+                has_government = fascism
+            }
+			available = { NOT ={ GER ={ controls_state  =  219  } } }
+            removal_cost = -1
+            picture = Blitzkrieg1
+	        targeted_modifier = {
+                tag = SOV
+                attack_bonus_against = 0.10
+				defense_bonus_against = -0.1
+            }	      	
+        }
+
 
 		GER_uncertain_future = {
 			picture = FRA_scw_intervention_republicans_focus
@@ -2379,8 +2436,8 @@ ideas = {
 			modifier = {
 				experience_gain_army_factor = 0.15
 				experience_gain_air_factor = 0.15
-				send_volunteer_size = 2
-				air_volunteer_cap = 2
+				#send_volunteer_size = 2
+				#air_volunteer_cap = 2
 			}
 		}
 
@@ -6227,7 +6284,7 @@ ideas = {
 
 				#opinion_gain_monthly_same_ideology_factor = 1
 
-				military_industrial_organization_funds_gain = 0.15
+				military_industrial_organization_funds_gain = 0.10
 				#military_industrial_organization_research_bonus = 0.15
 			}
 		}
@@ -6271,8 +6328,8 @@ ideas = {
 				political_power_gain = 0.2
 
 				#opinion_gain_monthly_same_ideology_factor = 1
-				military_industrial_organization_funds_gain = 0.15
-				#military_industrial_organization_research_bonus = 0.15
+				military_industrial_organization_funds_gain = 0.10
+				military_industrial_organization_research_bonus = 0.10
 
 				#New from Total Control
 				conscription_factor = 0.05
@@ -6280,7 +6337,7 @@ ideas = {
 				mobilization_laws_cost_factor = -0.25
 				trade_laws_cost_factor = -0.25
 				economy_cost_factor = -0.25
-				research_speed_factor = 0.05
+				#research_speed_factor = 0.05
 			}
 		}
 
