@@ -5,19 +5,11 @@ ideas = {
 		MAN_banditry = {
 
 			available = {
-				OR = {
-					has_country_flag = MAN_northern_bandits
-					has_country_flag = MAN_eastern_bandits
-					has_country_flag = MAN_western_bandits
-				}
+
 			}
 
 			allowed = {
 				always = no
-			}
-
-			allowed_civil_war = {
-				original_tag = MAN
 			}
 			
 			removal_cost = -1

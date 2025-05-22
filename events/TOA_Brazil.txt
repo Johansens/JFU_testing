@@ -1985,7 +1985,9 @@ country_event = {
 		show_ideas_tooltip = BRA_henry_ford
 
 		mio:USA_ford_motor_company_organization = {
-			add_mio_size = 2
+					add_mio_funds = 2000
+					add_mio_funds_gain_factor = 0.10
+					add_mio_research_bonus = 0.05
 		}
 	}
 	option = {

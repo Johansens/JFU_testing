@@ -2949,7 +2949,7 @@ focus_tree = {
 					has_dlc = "Arms Against Tyranny"
 				}
 				mio:ITA_fiat_organization = {
-					add_mio_size = 2
+					add_mio_funds = 2000
 					add_mio_funds_gain_factor = 0.10
 					add_mio_research_bonus = 0.05
 
@@ -3324,7 +3324,7 @@ focus_tree = {
 					has_dlc = "Arms Against Tyranny"
 				}
 				mio:ITA_macchi_organization = {
-					add_mio_size = 2
+					add_mio_funds = 2000
 					add_mio_funds_gain_factor = 0.10
 					add_mio_research_bonus = 0.05
 
@@ -4304,7 +4304,7 @@ focus_tree = {
 					has_dlc = "Arms Against Tyranny"
 				}
 				mio:ITA_crda_cant_organization = {
-					add_mio_size = 2
+					add_mio_funds = 2000
 					add_mio_funds_gain_factor = 0.10
 					add_mio_research_bonus = 0.05
 
@@ -4494,7 +4494,7 @@ focus_tree = {
 					has_dlc = "Arms Against Tyranny"
 				}
 				mio:ITA_cantiere_navale_di_ancona_organization = {
-					add_mio_size = 2
+					add_mio_funds = 2000
 					add_mio_funds_gain_factor = 0.10
 					add_mio_research_bonus = 0.05
 
@@ -4629,7 +4629,7 @@ focus_tree = {
 					has_dlc = "Arms Against Tyranny"
 				}
 				mio:ITA_cantiere_navale_di_ancona_organization = {
-					add_mio_size = 2
+					add_mio_funds = 2000
 					add_mio_funds_gain_factor = 0.10
 					add_mio_research_bonus = 0.05
 
@@ -4728,7 +4728,7 @@ focus_tree = {
 					has_dlc = "Arms Against Tyranny"
 				}
 				mio:ITA_cantieri_navali_tosi_organization = {
-					add_mio_size = 2
+					add_mio_funds = 2000
 					add_mio_funds_gain_factor = 0.10
 					add_mio_research_bonus = 0.05
 
@@ -4778,7 +4778,7 @@ focus_tree = {
 					has_dlc = "Arms Against Tyranny"
 				}
 				mio:ITA_cantieri_navali_tosi_organization = {
-					add_mio_size = 2
+					add_mio_funds = 2000
 					add_mio_funds_gain_factor = 0.10
 					add_mio_research_bonus = 0.05
 
@@ -4990,7 +4990,7 @@ focus_tree = {
 					has_dlc = "Arms Against Tyranny"
 				}
 				mio:ITA_cantiere_navale_di_ancona_organization = {
-					add_mio_size = 2
+					add_mio_funds = 2000
 					add_mio_funds_gain_factor = 0.10
 					add_mio_research_bonus = 0.05
 
@@ -5153,7 +5153,7 @@ focus_tree = {
 					has_dlc = "Arms Against Tyranny"
 				}
 				mio:ITA_crda_organization = {
-					add_mio_size = 2
+					add_mio_funds = 2000
 					add_mio_funds_gain_factor = 0.10
 					add_mio_research_bonus = 0.05
 

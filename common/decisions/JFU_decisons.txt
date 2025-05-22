@@ -17,7 +17,6 @@ political_actions1 = {
                 	target = POL
                     type = annex_everything
             }
-	
 			hidden_effect = { 
 				if = { limit = { country_exists = HUN }	HUN = { add_to_war = { targeted_alliance = GER enemy = ENG } } }
 				if = { limit = { country_exists = ROM }	ROM = { add_to_war = { targeted_alliance = GER enemy = ENG } } }
@@ -29,7 +28,7 @@ political_actions1 = {
 				#remove_dynamic_modifier = { modifier = GER_mefo_bills_modifier }
 				ENG = { 
 					country_event = { id = britain.24 days = 5 }
-					add_ideas = ENG_ireland_rebalance
+					#add_ideas = ENG_ireland_rebalance
 				}
 				country_event = { id = super.1 hours = 1}
 			}
@@ -143,6 +142,7 @@ political_actions1 = {
 				}
 				GER = { add_timed_idea = { idea = axis_barbarossa days = 120 } }
 			}
+			custom_effect_tooltip = GER_barbarossa_others_text
 			hidden_effect = {
 				if = { limit = { country_exists = HUN }	HUN = { add_to_war = { targeted_alliance = GER enemy = SOV } } }
 				if = { limit = { country_exists = ROM }	ROM = { add_to_war = { targeted_alliance = GER enemy = SOV } } }
@@ -216,6 +216,7 @@ political_actions1 = {
 		cost = 0
 		complete_effect = {
 			GER = { add_timed_idea = { idea = axis_fall_blau days = 120 } }
+			custom_effect_tooltip = GER_barbarossa_others_text
 			hidden_effect = {
 				HUN = { add_timed_idea = { idea = axis_fall_blau days = 120 } }
 				ROM = { add_timed_idea = { idea = axis_fall_blau days = 120 } }	
@@ -242,6 +243,7 @@ political_actions1 = {
 		cost = 0
 		complete_effect = {
 			GER = { add_timed_idea = { idea = axis_operation_citadelle days = 120 } }
+			custom_effect_tooltip = GER_barbarossa_others_text
 			hidden_effect = {
 				HUN = { add_timed_idea = { idea = axis_operation_citadelle days = 120 } }
 				ROM = { add_timed_idea = { idea = axis_operation_citadelle days = 120 } }	

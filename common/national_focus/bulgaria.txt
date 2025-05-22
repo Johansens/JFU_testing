@@ -573,7 +573,9 @@ focus_tree = {
 				}	
 
 				mio:BUL_dvf_organization = {
-					add_mio_size = 2
+					add_mio_funds = 2000
+					add_mio_funds_gain_factor = 0.10
+					add_mio_research_bonus = 0.05
 				}
 			}
 			ELSE = {
@@ -618,7 +620,9 @@ focus_tree = {
 				}	
 
 				mio:BUL_dvf_sopot_organization = {
-					add_mio_size = 2
+					add_mio_funds = 2000
+					add_mio_funds_gain_factor = 0.10
+					add_mio_research_bonus = 0.05
 				}
 			}
 			ELSE = {

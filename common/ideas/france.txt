@@ -680,36 +680,13 @@ ideas = {
 				always = no
 			}
 
-			allowed_civil_war = {
-				NOT = {
-					OR = {
-						AND = {
-							has_government = democratic
-							GER = {
-								has_government = democratic
-							}
-						}
-						AND = {
-							has_government = communism
-							GER = {
-								has_government = communism
-							}
-						}
-						AND = {	
-							has_government = fascism
-							GER = {
-								has_government = fascism
-							}
-						}
-					}
-				}
-			}
-
 			removal_cost = -1
 
 			picture = generic_wall_line
 			
 			modifier = {
+				max_planning = 0.25
+				planning_speed = -0.25
 				conversion_cost_civ_to_mil_factor= 2
 				production_speed_naval_base_factor = -1.5
 			}

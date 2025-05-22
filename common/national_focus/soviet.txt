@@ -898,7 +898,7 @@ focus_tree = {
 					has_dlc = "Arms Against Tyranny"
 				}
 				mio:SOV_mig_design_bureau_organization = {
-					add_mio_size = 2
+					add_mio_funds = 2000
 					add_mio_funds_gain_factor = 0.10
 					add_mio_research_bonus = 0.05
 
@@ -1279,7 +1279,7 @@ focus_tree = {
 					has_dlc = "Arms Against Tyranny"
 				}
 				mio:SOV_CAS_organization = {
-					add_mio_size = 2
+					add_mio_funds = 2000
 					add_mio_funds_gain_factor = 0.10
 					add_mio_research_bonus = 0.05
 
@@ -1332,7 +1332,7 @@ focus_tree = {
 					has_dlc = "Arms Against Tyranny"
 				}
 				mio:SOV_tupolev_design_bureau_organization = {
-					add_mio_size = 2
+					add_mio_funds = 2000
 					add_mio_funds_gain_factor = 0.10
 					add_mio_research_bonus = 0.05
 
@@ -1934,7 +1934,7 @@ focus_tree = {
 					has_dlc = "Arms Against Tyranny"
 				}
 				mio:SOV_okmo_organization = {
-					add_mio_size = 2
+					add_mio_funds = 2000
 					add_mio_funds_gain_factor = 0.10
 					add_mio_research_bonus = 0.05
 

@@ -7121,7 +7121,9 @@ focus_tree = {
                 }
 
                 mio:RAJ_ammunition_factory_khadki_organization = {
-                    add_mio_size = 1
+					add_mio_funds = 1000
+					add_mio_funds_gain_factor = 0.10
+					add_mio_research_bonus = 0.05
                 }
             }
             else = {
@@ -8672,7 +8674,9 @@ focus_tree = {
                 }
 
                 mio:RAJ_ammunition_factory_khadki_organization = {
-                    add_mio_size = 1
+					add_mio_funds = 1000
+					add_mio_funds_gain_factor = 0.10
+					add_mio_research_bonus = 0.05
                     unlock_mio_trait_tooltip = {
                         trait = RAJ_mio_trait_gun_and_shell_facatory_cassiopore
                     }
@@ -8720,7 +8724,9 @@ focus_tree = {
                     has_dlc = "Arms Against Tyranny"
                 }
                 mio:RAJ_ammunition_factory_khadki_organization = {
-                    add_mio_size = 1
+					add_mio_funds = 1000
+					add_mio_funds_gain_factor = 0.10
+					add_mio_research_bonus = 0.05
                     unlock_mio_trait_tooltip = {
                         trait = RAJ_mio_trait_rifle_factory_ishapore
                     }
@@ -8771,14 +8777,18 @@ focus_tree = {
                 }
 
                 mio:RAJ_ammunition_factory_khadki_organization = {
-                    add_mio_size = 1
+					add_mio_funds = 1000
+					add_mio_funds_gain_factor = 0.10
+					add_mio_research_bonus = 0.05
                     unlock_mio_trait_tooltip = {
                         trait = RAJ_mio_trait_ordnance_factory_kanpur_uttar_pradesh_inf
                     }
                 }
 
                 mio:RAJ_ordnance_factory_kanpur_organization = {
-                    add_mio_size = 1
+					add_mio_funds = 1000
+					add_mio_funds_gain_factor = 0.10
+					add_mio_research_bonus = 0.05
                     unlock_mio_trait_tooltip = {
                         trait = RAJ_mio_trait_ordnance_factory_kanpur_uttar_pradesh_art
                     }
@@ -8828,7 +8838,9 @@ focus_tree = {
                 }
 
                 mio:RAJ_ordnance_factory_medak_organization = {
-                    add_mio_size = 1
+					add_mio_funds = 1000
+					add_mio_funds_gain_factor = 0.10
+					add_mio_research_bonus = 0.05
                     unlock_mio_trait_tooltip = {
                         trait = RAJ_mio_trait_apc_research_effort
                     }
@@ -8895,7 +8907,9 @@ focus_tree = {
                 }
 
                 mio:RAJ_ordnance_factory_medak_organization = {
-                    add_mio_size = 1
+					add_mio_funds = 1000
+					add_mio_funds_gain_factor = 0.10
+					add_mio_research_bonus = 0.05
                     unlock_mio_trait_tooltip = {
                         trait = RAJ_mio_trait_chariot_of_victory
                     }
@@ -8960,7 +8974,9 @@ focus_tree = {
                     has_dlc = "Arms Against Tyranny"
                 }
                 mio:RAJ_ordnance_factory_kanpur_organization = {
-                    add_mio_size = 1
+					add_mio_funds = 1000
+					add_mio_funds_gain_factor = 0.10
+					add_mio_research_bonus = 0.05
                     unlock_mio_trait_tooltip = {
                         trait = RAJ_mio_trait_cordite_factory_aruvankadu_tamil_nadu
                         show_modifiers = yes
@@ -9012,7 +9028,9 @@ focus_tree = {
                 }
 
                 mio:RAJ_ammunition_factory_khadki_organization = {
-                    add_mio_size = 1
+					add_mio_funds = 1000
+					add_mio_funds_gain_factor = 0.10
+					add_mio_research_bonus = 0.05
                     unlock_mio_trait_tooltip = {
                         trait = RAJ_mio_trait_ordnance_factory_khamaria_jabalpur
                     }

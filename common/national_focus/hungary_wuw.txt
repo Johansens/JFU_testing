@@ -2517,7 +2517,9 @@ focus_tree = {
 				show_mio_tooltip = HUN_mavag_assault_guns_organization
 
 				mio:HUN_mavag_assault_guns_organization = {
-					add_mio_size = 2
+					add_mio_funds = 2000
+					add_mio_funds_gain_factor = 0.10
+					add_mio_research_bonus = 0.05
 				}
 
 			}
@@ -2963,7 +2965,9 @@ focus_tree = {
 				show_mio_tooltip = HUN_hti_turan_organization
 
 				mio:HUN_hti_turan_organization = {
-					add_mio_size = 2
+					add_mio_funds = 2000
+					add_mio_funds_gain_factor = 0.10
+					add_mio_research_bonus = 0.05
 				}
 
 			}

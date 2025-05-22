@@ -636,7 +636,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			air_experience = 100
+			air_experience = 50
 			IF = {
 				limit = { 
 					126 = {
@@ -1640,75 +1640,12 @@ focus = {
 				}
 				army_experience = 25
 				navy_experience = 25
-				air_experience = 25			
+				air_experience = 25
+				add_stability = 0.05
+				country_event = { id =  mtg_britain.17 hours = 6 }	
+				add_ideas = ENG_guided_by_britain_2
 			}
 			add_political_power = 60
-			CAN = {
-				if = {
-					limit = {
-						is_subject_of = ENG
-					}
-					add_stability = 0.05
-					add_opinion_modifier = { target = ENG modifier = ENG_guiding_the_colonies }
-					add_ideas = ENG_guided_by_britain_1
-					hidden_effect = { country_event = { id =  mtg_britain.17 hours = 6 } }
-				}
-			}
-			RAJ = {
-				if = {
-					limit = {
-						is_subject_of = ENG
-					}
-					add_stability = 0.05
-					add_opinion_modifier = { target = ENG modifier = ENG_guiding_the_colonies }
-					add_ideas = ENG_guided_by_britain_2
-					hidden_effect = { country_event = { id =  mtg_britain.17 hours = 6 } }
-				}
-			}
-			SAF = {
-				if = {
-					limit = {
-						is_subject_of = ENG
-					}
-					add_stability = 0.05
-					add_opinion_modifier = { target = ENG modifier = ENG_guiding_the_colonies }
-					add_ideas = ENG_guided_by_britain_2
-					hidden_effect = { country_event = { id =  mtg_britain.17 hours = 6 } }
-				}
-			}
-			AST = {
-				if = {
-					limit = {
-						is_subject_of = ENG
-					}
-					add_stability = 0.05
-					add_opinion_modifier = { target = ENG modifier = ENG_guiding_the_colonies }
-					add_ideas = ENG_guided_by_britain_2
-					hidden_effect = { country_event = { id =  mtg_britain.17 hours = 6 } }
-				}
-			}
-			NZL = {
-				if = {
-					limit = {
-						is_subject_of = ENG
-					}
-					add_stability = 0.05
-					add_opinion_modifier = { target = ENG modifier = ENG_guiding_the_colonies }
-					add_ideas = ENG_guided_by_britain_2
-					hidden_effect = { country_event = { id =  mtg_britain.17 hours = 6 } }
-				}
-			}
-			IRE = {
-				if = {
-					limit = {
-						is_subject_of = ENG
-					}
-					add_stability = 0.05
-					add_opinion_modifier = { target = ENG modifier = ENG_guiding_the_colonies }
-					add_ideas = ENG_guided_by_britain_2
-					hidden_effect = { country_event = { id =  mtg_britain.17 hours = 6 } }
-				}
-			}
 		}
 	}
 
@@ -2252,7 +2189,6 @@ focus = {
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 			remove_ideas = ENG_the_war_to_end_all_wars
-			set_rule = { can_send_volunteers = yes }
 		}
 	}
 
@@ -2502,39 +2438,45 @@ focus = {
 		}	
 	}
 
-	focus = {
-		id = ENG_take_over_the_danish_atlantik_posessions
+	#focus = {
+	#	id = ENG_take_over_the_danish_atlantik_posessions
 
-		prerequisite = { focus = ENG_focus_on_the_fleet_treaht 
-						focus = ENG_defense_our_trade_routs }
-		
-	
-		bypass = {	
-		}
-		
-		icon = GFX_focus_DEN_protect_greenland
-		x = 40
-		y = 8
-		cost = 2
-		ai_will_do = {
-			factor = 1
-		}
+	#	prerequisite = { 
+	#		focus = ENG_focus_on_the_fleet_treaht 
+	#		focus = ENG_defense_our_trade_routs 
+	#	}
+	#	
+	#
+	#	bypass = {	
+	#	}
+	#	
+	#	icon = GFX_focus_DEN_protect_greenland
+	#	x = 40
+	#	y = 8
+	#	cost = 2
+	#	ai_will_do = {
+	#		factor = 1
+	#	}
 
-		#Cliff fragen wie man terretorium übernimmt#
-		available_if_capitulated = yes
-		search_filters = {FOCUS_FILTER_RESEARCH}
-		completion_reward = {
-			337 = { add_core_of = ENG }
-			100 = { add_core_of = ENG }
-			101 = { add_core_of = ENG }
-			ENG = { transfer_state = 101 }	
-		}	
-	}
+	#	#Cliff fragen wie man terretorium übernimmt#
+	#	available_if_capitulated = yes
+	#	search_filters = {FOCUS_FILTER_RESEARCH}
+	#	completion_reward = {
+	#		337 = { add_core_of = ENG }
+	#		100 = { add_core_of = ENG }
+	#		101 = { add_core_of = ENG }
+	#		ENG = { transfer_state = 101 }	
+	#	}	
+	#}
 
 	focus = {
 		id = ENG_bases_in_the_arizonen
 
-		prerequisite = { focus = ENG_take_over_the_danish_atlantik_posessions }
+		prerequisite = { 
+			focus = ENG_focus_on_the_fleet_treaht 
+			focus = ENG_defense_our_trade_routs 
+			#focus = ENG_take_over_the_danish_atlantik_posessions
+		}
 		
 	
 		bypass = {	
@@ -2552,12 +2494,9 @@ focus = {
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
-			698 = { add_core_of = ENG }
-				ENG = { transfer_state = 698 }
-			697 = { add_core_of = ENG }
-				ENG = { transfer_state = 697 }
-			702 = { add_core_of = ENG }
-				ENG = { transfer_state = 702 }	
+			ENG = { transfer_state = 698 }
+			ENG = { transfer_state = 697 }
+			ENG = { transfer_state = 702 }	
 		}	
 	}
 

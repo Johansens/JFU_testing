@@ -514,8 +514,9 @@ focus_tree = {
 							is_military_industrial_organization = FIN_sisu_auto_organization
 						}
 					}
-					add_mio_size = 1
-					add_mio_research_bonus = 0.1
+					add_mio_funds = 1000
+					add_mio_funds_gain_factor = 0.10
+					add_mio_research_bonus = 0.05
 				}
 			}
 		}
@@ -861,7 +862,9 @@ focus_tree = {
 							is_military_industrial_organization = FIN_sisu_auto_organization
 						}
 					}
-					add_mio_size = 1
+					add_mio_funds = 1000
+					add_mio_funds_gain_factor = 0.10
+					add_mio_research_bonus = 0.05
 					unlock_mio_trait_tooltip = FIN_mio_trait_wartsila_engine_production
 				}
 			}
@@ -1910,8 +1913,9 @@ focus_tree = {
 					has_dlc = "Arms Against Tyranny"
 				}
 				mio:FIN_sisu_auto_organization = {
-					add_mio_size = 1
-					add_mio_funds_gain_factor = 0.35
+					add_mio_funds = 1000
+					add_mio_funds_gain_factor = 0.10
+					add_mio_research_bonus = 0.05
 					unlock_mio_trait_tooltip = FIN_mio_trait_yhteissisus_modern_premises
 				}
 			}
@@ -2119,8 +2123,8 @@ focus_tree = {
 					has_dlc = "Arms Against Tyranny"
 				}
 				mio:FIN_valtion_kivaaritehdas_organization = {
-					add_mio_size = 1
-					add_mio_funds_gain_factor = 0.1
+					add_mio_funds = 1000
+					add_mio_funds_gain_factor = 0.10
 					add_mio_research_bonus = 0.05
 
 					unlock_mio_trait_tooltip = FIN_mio_trait_oy_tikkakoski
@@ -2184,9 +2188,9 @@ focus_tree = {
 					has_dlc = "Arms Against Tyranny"
 				}
 				mio:FIN_valtion_tykkitehdas_organization = {
-					add_mio_size = 1
-					add_mio_research_bonus = 0.1
-					add_mio_funds_gain_factor = 0.1
+					add_mio_funds = 1000
+					add_mio_funds_gain_factor = 0.10
+					add_mio_research_bonus = 0.05
 				}
 			}
 			else = {
