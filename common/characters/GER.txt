@@ -2770,6 +2770,7 @@ characters = {
 				NOT = {
 					has_completed_focus = GER_the_four_year_plan
 				}
+				always = no
 			}
 			available = {
 				has_completed_focus = GER_prioritize_economic_growth
@@ -2838,30 +2839,7 @@ characters = {
 			civilian = {
 				small = GFX_portrait_GER_dietrich_bonhoffer_small
 			}
-		}
-
-		advisor = {
-			slot = political_advisor
-			idea_token = GER_dietrich_bonhoeffer
-			allowed = {
-				original_tag = GER
-				has_dlc = "Gotterdammerung"
-			}
-			visible = {
-				NOT = {
-					has_completed_focus = GER_remilitarize_the_rhineland
-				}
-			}
-			available = {
-				OR = {
-					has_government = neutrality
-					has_government = democratic
-				}
-			}
-			traits = {
-				GER_influential_pastor
-			}
-		}		
+		}	
 	}
 
 	GER_ernst_thalmann = {

@@ -43,6 +43,13 @@
 
 leader_traits = {
 
+	lion_of_verdun = {
+		random = no
+		training_time_army_factor = -0.5
+		mobilization_speed = 1
+		min_export = -1
+	}
+
 	dictator = {
 		random = no
 		political_power_factor = 0.25
@@ -5173,7 +5180,6 @@ leader_traits = {
 	stalin_heart_of_steel = {
 		random = no
 		stability_factor = -0.1
-		war_support_factor = 0.05
 		political_power_factor = 0.05
 		opinion_gain_monthly_factor = -0.05
 		subjects_autonomy_gain = -0.1
@@ -5182,7 +5188,6 @@ leader_traits = {
 	stalin_heart_of_steel_opposition = {
 		random = no
 		stability_factor = -0.1
-		war_support_factor = 0.05
 		opinion_gain_monthly_factor = -0.05
 		subjects_autonomy_gain = -0.1
 	}
@@ -5257,6 +5262,7 @@ leader_traits = {
 
 	stalin_father_of_nations = {
 		random = no
+		political_power_factor = 0.05
 		army_core_attack_factor = 0.05
 		army_core_defence_factor = 0.05
 		production_factory_max_efficiency_factor = 0.05

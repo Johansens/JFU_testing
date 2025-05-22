@@ -66,7 +66,7 @@ every_possible_country = {
 	limit = {
 		has_dlc = "La Resistance"
 		# china gets a special one via focus
-		NOT = { OR = {  ai_country = yes tag = CHI tag = HUN } }
+		NOT = { OR = {  ai_country = yes tag = CHI tag = HUN tag = GER } }
 		NOT = {
 			has_allowed_idea_with_traits = { idea = head_of_intelligence characters = yes }
 		}

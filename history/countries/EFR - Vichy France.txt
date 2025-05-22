@@ -61,7 +61,6 @@ recruit_character = EFR_francisco_franco
 recruit_character = EFR_emilio_mola
 recruit_character = EFR_paul_reynaud
 recruit_character = EFR_jean_francois_darlan
-recruit_character = EFR_joe_biden
 recruit_character = EFR_charles_maurras
 recruit_character = EFR_marius_viple
 recruit_character = EFR_felix_gouin

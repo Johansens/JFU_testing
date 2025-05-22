@@ -1211,19 +1211,19 @@ characters={
 				large=GFX_portrait_FRA_jacques_duclos #Used only as Operative atm
 			}
 		}
-		advisor={
-			slot = political_advisor
-			idea_token = FRA_jacques_duclos
-			allowed  = {
-				original_tag  = FRA
-			}
-			traits  = {
-				backroom_backstabber 
-			}
-			ai_will_do  = {
-				factor  = 0.000
-			}
-		}
+		#advisor={
+		#	slot = political_advisor
+		#	idea_token = FRA_jacques_duclos
+		#	allowed  = {
+		#		original_tag  = FRA
+		#	}
+		#	traits  = {
+		#		backroom_backstabber 
+		#	}
+		#	ai_will_do  = {
+		#		factor  = 0.000
+		#	}
+		#}
 	}
 
 	FRA_paul_baudouin={
@@ -1233,23 +1233,23 @@ characters={
 				small="GFX_idea_FRA_paul_baudouin"
 			}
 		}
-		advisor={
-			slot = political_advisor
-			idea_token = FRA_paul_baudouin
-			allowed  = {
-				original_tag  = FRA
-			}
-			traits  = {
-				smooth_talking_charmer 
-			}
-			on_add  = {
-			}
-			do_effect  = {
-			}
-			ai_will_do  = {
-				factor  = 1.000
-			}
-		}
+		#advisor={
+		#	slot = political_advisor
+		#	idea_token = FRA_paul_baudouin
+		#	allowed  = {
+		#		original_tag  = FRA
+		#	}
+		#	traits  = {
+		#		smooth_talking_charmer 
+		#	}
+		#	on_add  = {
+		#	}
+		#	do_effect  = {
+		#	}
+		#	ai_will_do  = {
+		#		factor  = 1.000
+		#	}
+		#}
 	}
 
 	FRA_zivony_peshkov={
