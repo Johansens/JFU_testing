@@ -1206,7 +1206,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 2
+		research_cost = 1.75
 		
 		categories = {
 			industry
@@ -1293,7 +1293,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 2
+		research_cost = 1.75
 		start_year = 1937
 		
 		categories = {
@@ -1384,7 +1384,6 @@ technologies = {
 		}
 	}
 
-
 	excavation3 = {
 		
 		local_resources_factor = 0.10
@@ -1393,7 +1392,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 2
+		research_cost = 1.75
 		start_year = 1939
 		
 		categories = {
@@ -1488,7 +1487,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 2
+		research_cost = 1.75
 		start_year = 1941
 		
 		categories = {
@@ -1565,7 +1564,6 @@ technologies = {
 		}
 	}
 
-
 	excavation5 = {
 		
 		local_resources_factor = 0.10
@@ -1574,7 +1572,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 2
+		research_cost = 1.75
 		start_year = 1943
 		
 		categories = {

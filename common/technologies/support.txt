@@ -272,11 +272,11 @@ technologies = {
 		}
 
 		armored_engineer = {
-			entrenchment = 1
+			entrenchment = 0.50
 			river = {
 				attack = 0.05	
 				defence = 0.05
-				movement = 0.15
+				movement = 0.10
 			}
 		}
 
@@ -351,23 +351,24 @@ technologies = {
 		engineer = {
 			entrenchment = 0.50
 			urban = {
-				attack = 0.1	
-				defence = 0.1
+				attack = 0.05	
+				defence = 0.05
 			}
 		}
 
 		assault_engineer = {
 			breakthrough = 0.1
 			urban = {
-				attack = 0.15	
+				attack = 0.10	
 			}
 		}
 
 		armored_engineer = {
-			entrenchment = 1
+			entrenchment = 0.5
 			urban = {
-				defence = 0.15
-				movement = 0.15
+				attack = 0.05
+				defence = 0.1
+				movement = 0.1
 			}
 		}
 
@@ -1708,7 +1709,7 @@ technologies = {
 		start_year = 1910
 		folder = {
 			name = support_folder
-			position = { x = 0 y = @1918 }
+			position = { x = 0 y = 1 }
 		}
 
 		path = {
@@ -1753,9 +1754,9 @@ technologies = {
 			railway_gun_equipment_1
 		}
 
-		enable_equipment_modules = {
-			lc_hull_mounted_railway_gun #Module for Land Cruiser
-		}
+		#enable_equipment_modules = {
+		#	lc_hull_mounted_railway_gun #Module for Land Cruiser
+		#}
 
 		on_research_complete = {
 			custom_effect_tooltip = {
@@ -1768,7 +1769,7 @@ technologies = {
 		start_year = 1936
 		folder = {
 			name = support_folder
-			position = { x = 4 y = 3 }
+			position = { x = 2 y = 6 }
 		}
 
 		path = {
@@ -1808,7 +1809,7 @@ technologies = {
 		start_year = 1939
 		folder = {
 			name = support_folder
-			position = { x = 0 y = @1939 }
+			position = { x = 0 y = 6 }
 		}
 		
 		categories = {
@@ -1857,7 +1858,7 @@ technologies = {
 		start_year = 1936
 		folder = {
 			name = support_folder
-			position = { x = 2 y = 3 }
+			position = { x = 2 y = 1 }
 		}
 		
 		categories = {
@@ -2037,9 +2038,9 @@ technologies = {
 			armored_signal
 		}
 
-		enable_equipment_modules = { #TODO_Manu: This shouldn't show up without NSB OR GOT
-			lc_command_center #Module for Land Cruiser
-		}
+		#enable_equipment_modules = { #TODO_Manu: This shouldn't show up without NSB OR GOT
+		#	lc_command_center #Module for Land Cruiser
+		#}
 
 		on_research_complete = {
 			SP_create_variant_based_on_country_armored_signal = yes

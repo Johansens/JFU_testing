@@ -31,15 +31,15 @@ technologies = {
 		}
 
 		on_research_complete = {
-			if = {
-				limit = {
-					has_dlc = "Gotterdammerung"
-				}
-				custom_effect_tooltip = {
-					localization_key = SP_UNLOCK_PROJECT
-					PROJECT = sp_land_super_heavy_howitzer
-				}
-			}
+			#if = {
+			#	limit = {
+			#		has_dlc = "Gotterdammerung"
+			#	}
+			#	custom_effect_tooltip = {
+			#		localization_key = SP_UNLOCK_PROJECT
+			#		PROJECT = sp_land_super_heavy_howitzer
+			#	}
+			#}
 		}
 
 		research_cost = 1.5
@@ -155,8 +155,8 @@ technologies = {
 		enable_equipment_modules = {
 			tank_medium_howitzer
 			tank_medium_cannon
-			lc_medium_cannon_turret #Module for Land Cruiser
-			lc_assault_gun #Module for Land Cruiser
+			#lc_medium_cannon_turret #Module for Land Cruiser
+			#lc_assault_gun #Module for Land Cruiser
 		}
 
 		path = {
@@ -457,7 +457,7 @@ technologies = {
 		enable_equipment_modules = {
 			tank_rocket_launcher
 			rocket_rails
-			lc_rocket_launcher #Module for Land Cruiser
+			#lc_rocket_launcher #Module for Land Cruiser
 		}
 
 		path = {
@@ -627,7 +627,7 @@ technologies = {
 			tank_auto_cannon
 			tank_anti_air_cannon
 			tank_heavy_cannon
-			lc_light_anti_air_battery #Module for Land Cruiser
+			#lc_light_anti_air_battery #Module for Land Cruiser
 		}
 
 		enable_building = {
@@ -686,6 +686,9 @@ technologies = {
 		mot_anti_air_brigade = {
 			air_attack = 0.1
 		}
+		category_self_propelled_anti_air = {
+			air_attack = 0.1
+		}
 
 		tech_air_damage_factor = -0.02
 
@@ -740,7 +743,7 @@ technologies = {
 			ship_anti_air_3
 			tank_auto_cannon_2
 			tank_anti_air_cannon_2
-			lc_heavy_anti_air_battery #Module for Land Cruiser
+			#lc_heavy_anti_air_battery #Module for Land Cruiser
 		}
 
 		path = {
@@ -796,6 +799,9 @@ technologies = {
 			air_attack = 0.1
 		}
 		mot_anti_air_brigade = {
+			air_attack = 0.1
+		}
+		category_self_propelled_anti_air = {
 			air_attack = 0.1
 		}
 
@@ -855,6 +861,9 @@ technologies = {
 		mot_anti_air_brigade = {
 			air_attack = 0.1
 		}
+		category_self_propelled_anti_air = {
+			air_attack = 0.1
+		}
 
 		tech_air_damage_factor = -0.02
 
@@ -910,7 +919,7 @@ technologies = {
 			tank_heavy_cannon_3
 			tank_anti_air_cannon_3
 			auto_loader
-			lc_heavy_anti_air_platform #Module for Land Cruiser
+			#lc_heavy_anti_air_platform #Module for Land Cruiser
 		}
 
 		research_cost = 1
@@ -957,7 +966,7 @@ technologies = {
 			tank_high_velocity_cannon
 			tank_heavy_cannon
 			tank_buster_1
-			lc_high_velocity_cannon_turret #Module for Land Cruiser
+			#lc_high_velocity_cannon_turret #Module for Land Cruiser
 		}
 
 		path = {
@@ -1028,7 +1037,7 @@ technologies = {
 	antitank1 = {
 
 		category_tank_destroyers = {
-			ap_attack = 0.2
+			ap_attack = 0.15
 		}
 
 		anti_tank = {
@@ -1200,7 +1209,7 @@ technologies = {
 			ap_attack = 0.1
 		}
 		category_tank_destroyers = {
-			ap_attack = 0.05
+			ap_attack = 0.10
 		}
 
 		path = {
@@ -1351,7 +1360,7 @@ technologies = {
 			tank_high_velocity_cannon_3
 			tank_heavy_cannon_3
 			auto_loader
-			lc_heavy_high_velocity_cannons #Module for Land Cruiser
+			#lc_heavy_high_velocity_cannons #Module for Land Cruiser
 		}
 
 		research_cost = 1
