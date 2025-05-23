@@ -1097,12 +1097,6 @@ characters={
 				original_tag  = FRA
 			}
 			available  = {
-				NOT  = {
-					has_country_leader  = {
-						character  = FRA_philippe_petain
-						ruling_only  = yes 
-					}
-				}
 			}
 			traits  = {
 				democratic_reformer 
