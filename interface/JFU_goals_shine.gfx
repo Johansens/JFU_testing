@@ -10392,10 +10392,10 @@ spriteTypes = {
 
     SpriteType = {
         name = "GFX_GER_UNTERNEHMEN_FRUHLINGSERWACHEN_shine"
-        texturefile = "gfx/interface/goals/eng/GER_unternehmen_fruhlingserwachen.dds"
+        texturefile = "gfx/interface/goals/ger/GER_unternehmen_fruhlingserwachen.dds"
         effectFile = "gfx/FX/buttonstate.lua"
         animation = {
-            animationmaskfile = "gfx/interface/goals/eng/GER_unternehmen_fruhlingserwachen.dds"
+            animationmaskfile = "gfx/interface/goals/ger/GER_unternehmen_fruhlingserwachen.dds"
             animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 
             animationrotation = -90.0		
             animationlooping = no			
@@ -10408,7 +10408,7 @@ spriteTypes = {
         }
 
         animation = {
-            animationmaskfile = "gfx/interface/goals/eng/GER_unternehmen_fruhlingserwachen.dds"
+            animationmaskfile = "gfx/interface/goals/ger/GER_unternehmen_fruhlingserwachen.dds"
             animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
             animationrotation = 90.0		
             animationlooping = no			
@@ -10425,10 +10425,10 @@ spriteTypes = {
 
     SpriteType = {
         name = "GFX_GER_WINTER2_shine"
-        texturefile = "gfx/interface/goals/eng/GER_winter2.dds"
+        texturefile = "gfx/interface/goals/ger/GER_winter2.dds"
         effectFile = "gfx/FX/buttonstate.lua"
         animation = {
-            animationmaskfile = "gfx/interface/goals/eng/GER_winter2.dds"
+            animationmaskfile = "gfx/interface/goals/ger/GER_winter2.dds"
             animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 
             animationrotation = -90.0		
             animationlooping = no			
@@ -10441,7 +10441,7 @@ spriteTypes = {
         }
 
         animation = {
-            animationmaskfile = "gfx/interface/goals/eng/GER_winter2.dds"
+            animationmaskfile = "gfx/interface/goals/ger/GER_winter2.dds"
             animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
             animationrotation = 90.0		
             animationlooping = no			
@@ -10458,10 +10458,10 @@ spriteTypes = {
 
     SpriteType = {
         name = "GFX_GER_OSTTRUPPENN_shine"
-        texturefile = "gfx/interface/goals/eng/ger_osttruppenn.dds"
+        texturefile = "gfx/interface/goals/ger/ger_osttruppenn.dds"
         effectFile = "gfx/FX/buttonstate.lua"
         animation = {
-            animationmaskfile = "gfx/interface/goals/eng/ger_osttruppenn.dds"
+            animationmaskfile = "gfx/interface/goals/ger/ger_osttruppenn.dds"
             animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 
             animationrotation = -90.0		
             animationlooping = no			
@@ -10474,7 +10474,7 @@ spriteTypes = {
         }
 
         animation = {
-            animationmaskfile = "gfx/interface/goals/eng/ger_osttruppenn.dds"
+            animationmaskfile = "gfx/interface/goals/ger/ger_osttruppenn.dds"
             animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
             animationrotation = 90.0		
             animationlooping = no			
@@ -10491,10 +10491,10 @@ spriteTypes = {
 
     SpriteType = {
         name = "GFX_GOAL_GER_HEAVY_TIGER_CATS_shine"
-        texturefile = "gfx/interface/goals/eng/goal_ger_heavy_tiger_cats.dds"
+        texturefile = "gfx/interface/goals/ger/goal_ger_heavy_tiger_cats.dds"
         effectFile = "gfx/FX/buttonstate.lua"
         animation = {
-            animationmaskfile = "gfx/interface/goals/eng/goal_ger_heavy_tiger_cats.dds"
+            animationmaskfile = "gfx/interface/goals/ger/goal_ger_heavy_tiger_cats.dds"
             animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 
             animationrotation = -90.0		
             animationlooping = no			
@@ -10507,7 +10507,7 @@ spriteTypes = {
         }
 
         animation = {
-            animationmaskfile = "gfx/interface/goals/eng/goal_ger_heavy_tiger_cats.dds"
+            animationmaskfile = "gfx/interface/goals/ger/goal_ger_heavy_tiger_cats.dds"
             animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
             animationrotation = 90.0		
             animationlooping = no			
