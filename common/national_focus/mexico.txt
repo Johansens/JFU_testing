@@ -30,7 +30,7 @@ focus_tree = {
 	focus = {
 		id = MEX_focus_plan_of_agua_prieta
 		icon = GFX_focus_hol_the_foundations_of_defense
-		x = 20
+		x = 22
 		y = 0
 
 		cost = 10
@@ -173,7 +173,7 @@ focus_tree = {
 	focus = {
 		id = MEX_focus_national_bank
 		icon = GFX_focus_usa_reestablish_the_gold_standard
-		x = 9
+		x = 12
 		y = 0
 
 		cost = 10
@@ -878,7 +878,7 @@ focus_tree = {
 		id = MEX_focus_northern_steel_plants
 		icon = GFX_focus_generic_steel
 		prerequisite = { focus = MEX_focus_oil_field_expansion focus = MEX_focus_xefo}
-		x = 6
+		x = 5
 		y = 1
 		relative_position_id = MEX_focus_oil_field_expansion
 
@@ -2368,310 +2368,636 @@ focus_tree = {
 			}
 		}
 	}
-	focus = {
-		id = MEX_focus_military_budget_review
-		icon = GFX_focus_generic_combined_arms
-		prerequisite = { focus = MEX_focus_national_bank }
-		x = -4
-		y = 1
-		relative_position_id = MEX_focus_national_bank
+    focus = {
+		id = MEX_focus_rebuilding_the_army
+			icon = GFX_goal_generic_small_arms
+			#relative_position_id = MEX_focus_national_bank
+			x = 4
+			y = 0
 
-		cost = 10
+			cost = 10
 
-		ai_will_do = {
-			factor = 100
-			
-			modifier = {
-				factor = 10
-				has_war = yes
+			ai_will_do = {
+				factor = 1
 			}
-		}
 
-		available = {
-			
-		}
-
-		bypass = {
-			
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = yes
-		search_filters = {FOCUS_FILTER_RESEARCH}
-		completion_reward = {
-			add_tech_bonus = {
-				name = tooltip_military_budget_review
-				bonus = 1.0
-				uses = 1
-				category = infantry_weapons
-				category = artillery
+			available = {
+				
 			}
-			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = MEX_manuel_avila
-		}
+
+			bypass = {
+				
+			}
+
+			cancel_if_invalid = yes
+			continue_if_invalid = no
+			available_if_capitulated = yes
+
+			completion_reward = {
+				add_doctrine_cost_reduction = {
+					name = land_doctrine
+					cost_reduction = 0.5
+					uses = 2
+					category = land_doctrine
+				}
+				custom_effect_tooltip = available_theorist
+				show_ideas_tooltip = MEX_manuel_perez_trevino
+			}
 	}
 
 	focus = {
-		id = MEX_focus_heroic_military_college
-		icon = GFX_focus_generic_military_academy
-		prerequisite = { focus = MEX_focus_military_budget_review }
-		x = 0
-		y = 1
-		relative_position_id = MEX_focus_military_budget_review
+		id = MEX_focus_leg_day
+			icon = GFX_goal_generic_allies_build_infantry
+			mutually_exclusive = { focus = MEX_focus_play_their_game }
+			prerequisite = { focus = MEX_focus_rebuilding_the_army }
+			relative_position_id = MEX_focus_rebuilding_the_army
+			x = 1
+			y = 1
 
-		cost = 5
+			cost = 5
 
-		ai_will_do = {
-			factor = 100
-			
-			modifier = {
-				factor = 10
-				has_war = yes
+			ai_will_do = {
+				factor = 1
 			}
-		}
 
-		available = {
-			
-		}
+			available = {
+				# NOT = { has_completed_focus = MEX_focus_Better_then_the_KRIEGSMARINE }
+			}
 
-		bypass = {
-			
-		}
+			bypass = {
+				
+			}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = yes
-		search_filters = {FOCUS_FILTER_RESEARCH}
-		completion_reward = {
-			army_experience = 30
+			cancel_if_invalid = yes
+			continue_if_invalid = no
+			available_if_capitulated = yes
+
+			completion_reward = {
+				add_tech_bonus = {
+					name = infantry_weapons
+					bonus = 1.00
+					uses = 1
+					category = infantry_weapons
+				}
+				add_tech_bonus = {
+					name = anti_tank
+					bonus = 1
+					uses = 1
+					category = artillery
+				}
+				add_ideas = MEX_conscription_campaign
+			}
+	}
+
+    focus = {
+		id = MEX_focus_better_weapons
+			icon = GFX_USA_WELL_SUPPLIED_AND_MOTIVATED
+			prerequisite = { focus = MEX_focus_leg_day }
+			relative_position_id = MEX_focus_leg_day
+			x = 0
+			y = 1
+
+			cost = 5
+
+			ai_will_do = {
+				factor = 1
+			}
+
+			available = {
+				
+			}
+
+			bypass = {
+				
+			}
+
+			cancel_if_invalid = yes
+			continue_if_invalid = no
+			available_if_capitulated = yes
+
+			completion_reward = {
+				add_tech_bonus = {
+					name = infantry_weapons
+					bonus = 1
+					uses = 1
+					category = infantry_weapons
+				}
+			}
+	}
+
+	focus = {
+		id = MEX_focus_better_support
+			icon = GFX_goal_generic_army_artillery
+			prerequisite = { focus = MEX_focus_better_weapons }
+			relative_position_id = MEX_focus_better_weapons
+			x = 0
+			y = 1
+
+			cost = 5
+
+			ai_will_do = {
+				factor = 1
+			}
+
+			available = {
+				
+			}
+
+			bypass = {
+				
+			}
+
+			cancel_if_invalid = yes
+			continue_if_invalid = no
+			available_if_capitulated = yes
+
+			completion_reward = {
+				add_tech_bonus = {
+					name = support_tech
+					bonus = 1
+					uses = 2
+					category = support_tech
+				}
+			}
+	}
+
+	focus = {
+		id = MEX_depoliticised_army
+			icon = GFX_goal_generic_army_tanks
+			prerequisite = { focus = MEX_focus_army_expansion_programm focus = MEX_focus_safety_first focus = MEX_focus_offense_is_better }
+			relative_position_id = MEX_focus_better_support 
+			x = -2
+			y = 2
+
+			cost = 5
+
+			ai_will_do = {
+				factor = 1
+			}
+
+			available = {
+				
+			}
+
+			bypass = {
+				
+			}
+
+			cancel_if_invalid = yes
+			continue_if_invalid = no
+			available_if_capitulated = yes
+
+			completion_reward = {
+			}
+	}	
+	focus = {
+		id = MEX_focus_It_evolves
+			icon = GFX_goal_generic_allies_build_infantry
+			prerequisite = { focus = MEX_focus_leg_day }
+			relative_position_id = MEX_focus_leg_day
+			x = 3
+			y = 1
+
+			cost = 5
+
+			ai_will_do = {
+				factor = 1
+			}
+
+			available = {
+				
+			}
+
+			bypass = {
+				
+			}
+
+			cancel_if_invalid = yes
+			continue_if_invalid = no
+			available_if_capitulated = yes
+
+			completion_reward = {
+				army_experience = 25
+				add_tech_bonus = {
+				name = HUN_danuvia_submachine_guns
+				bonus = 1.01
+				uses = 2
+				category = cat_anti_tank
+			}
+			}
+	}
+    focus = {
+		id = MEX_focus_lets_start_hiking
+			icon = GFX_focus_GRE_a_land_of_mountains
+			prerequisite = { focus = MEX_focus_It_evolves }
+			relative_position_id = MEX_focus_It_evolves
+			x = 0
+			y = 1
+
+			cost = 5
+
+			ai_will_do = {
+				factor = 1
+			}
+
+			available = {
+				# NOT = { has_completed_focus = MEX_focus_Beginning_of_the_Chungus }
+				# NOT = { has_completed_focus = MEX_focus_Floating_Airfield }
+				# NOT = { has_completed_focus = MEX_focus_Copy_the_Wright_Brothers }
+			}
+
+			bypass = {
+				
+			}
+
+			cancel_if_invalid = yes
+			continue_if_invalid = no
+			available_if_capitulated = yes
+
+			completion_reward = {
+				add_tech_bonus = {
+					name = mountaineers_tech
+					bonus = 1
+					uses = 1
+					category = artillery
+				}
 			add_doctrine_cost_reduction = {
-				name = land_doctrine
+				name = land_doc_bonus
+				cost_reduction = 0.75
+				uses = 1
+				category = special_forces_doctrine
+			}
+			}
+	}
+
+    focus = {
+		id = MEX_focus_interessting_rocks
+			icon = GFX_goal_generic_special_forces
+			prerequisite = { focus = MEX_focus_lets_start_hiking }
+			relative_position_id = MEX_focus_lets_start_hiking
+			x = 0
+			y = 1
+
+			cost = 5
+
+			ai_will_do = {
+				factor = 1
+			}
+
+			available = {
+				
+			}
+
+			bypass = {
+				
+			}
+
+			cancel_if_invalid = yes
+			continue_if_invalid = no
+			available_if_capitulated = yes
+
+			completion_reward = {
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
 				cost_reduction = 0.5
-				uses = 1
-				category = land_doctrine
+				uses = 2
+				category = special_forces_doctrine
 			}
-			custom_effect_tooltip = available_theorist
-			show_ideas_tooltip = MEX_manuel_perez_trevino
-		}
+				# add_ideas = MEX_cheap_sfeq
+			}
 	}
-	
-	focus = {
-		id = MEX_focus_weapons_modernisation
-		icon = GFX_goal_generic_small_arms
-		prerequisite = { focus = MEX_focus_heroic_military_college }
-		x = 1
-		y = 1
-		relative_position_id = MEX_focus_heroic_military_college
 
-		cost = 5
+    focus = {
+		id = MEX_focus_on_top_of_the_world
+			icon = GFX_SOV_ARTILLERY_DEVELOPMENT
+			prerequisite = { focus = MEX_focus_interessting_rocks }
+			relative_position_id = MEX_focus_interessting_rocks
+			x = 0
+			y = 1
 
-		ai_will_do = {
-			factor = 100
-			
-			modifier = {
-				factor = 10
-				has_war = yes
+			cost = 5
+
+			ai_will_do = {
+				factor = 1
 			}
-		}
 
-		available = {
-			
-		}
-
-		bypass = {
-			
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = yes
-		search_filters = {FOCUS_FILTER_RESEARCH}
-		completion_reward = {
-			add_tech_bonus = {
-				name = infantry_weapons
-				bonus = 1.0
-				uses = 1
-				category = infantry_weapons
+			available = {
+				
 			}
-			add_tech_bonus = {
-				name = artillery
-				bonus = 1.0
-				uses = 1
-				category = artillery
+
+			bypass = {
+				
 			}
-		}
+
+			cancel_if_invalid = yes
+			continue_if_invalid = no
+			available_if_capitulated = yes
+
+			completion_reward = {
+				add_ideas = MEX_heavy_artillery
+			}
 	}
+
+    focus = {
+		id = MEX_focus_offense_is_better
+			icon = GFX_goal_generic_position_armies
+			prerequisite = { focus = MEX_focus_better_support }
+    		mutually_exclusive = { focus = MEX_focus_safety_first }
+			relative_position_id = MEX_focus_better_support
+			x = 1
+			y = 1
+
+			cost = 5
+
+			ai_will_do = {
+				factor = 1
+			}
+
+			available = {
+				
+			}
+
+			bypass = {
+				
+			}
+
+			cancel_if_invalid = yes
+			continue_if_invalid = no
+			available_if_capitulated = yes
+
+			completion_reward = {
+				add_tech_bonus = {
+					name = artillery
+					bonus = 1
+					uses = 1
+					category = artillery
+				}
+				add_ideas = MEX_reinforce_the_army
+				custom_effect_tooltip = MEX_jungle_training_effect_tt
+				hidden_effect = { set_technology = { jungle_warfare1 = 1 } }
+			}
+	}
+
+    focus = {
+		id = MEX_focus_safety_first
+			icon = GFX_goal_generic_allies_build_infantry
+			prerequisite = { focus = MEX_focus_better_support }
+    		mutually_exclusive = { focus = MEX_focus_offense_is_better }
+			relative_position_id = MEX_focus_better_support
+			x = -1
+			y = 1
+
+			cost = 5
+
+			ai_will_do = {
+				factor = 1
+			}
+
+			available = {
+				
+			}
+
+			bypass = {
+				
+			}
+
+			cancel_if_invalid = yes
+			continue_if_invalid = no
+			available_if_capitulated = yes
+
+			completion_reward = {
+				add_tech_bonus = {
+					name = infantry_weapons
+					bonus = 1
+					uses = 1
+					category = infantry_weapons
+				}
+				add_ideas = MEX_defence_effort
+			}
+	}
+
 	
-	focus = {
+    focus = {
+		id = MEX_focus_play_their_game
+			icon = GFX_SOV_ARMOUR_DEVELOPMENT
+			mutually_exclusive = { focus = MEX_focus_leg_day }
+			prerequisite = { focus = MEX_focus_rebuilding_the_army }
+			relative_position_id = MEX_focus_rebuilding_the_army
+			x = -1
+			y = 1
+
+			cost = 5
+
+			ai_will_do = {
+				factor = 1
+			}
+
+			available = {
+				# NOT = { has_completed_focus = MEX_focus_Better_then_the_KRIEGSMARINE }
+			}
+
+			bypass = {
+				
+			}
+
+			cancel_if_invalid = yes
+			continue_if_invalid = no
+			available_if_capitulated = yes
+
+			completion_reward = {
+				army_experience = 25
+				add_tech_bonus = {
+					name = armor
+					bonus = 1
+					uses = 1
+					category = armor
+				}
+			}
+	}
+
+    focus = {
+		id = MEX_focus_lets_start_rolling
+			icon = GFX_goal_generic_army_motorized
+			prerequisite = { focus = MEX_focus_play_their_game }
+			relative_position_id = MEX_focus_play_their_game
+			x = -2
+			y = 1
+
+			cost = 5
+
+			ai_will_do = {
+				factor = 1
+			}
+
+			available = {
+				# NOT = { has_completed_focus = MEX_focus_Better_then_the_KRIEGSMARINE }
+			}
+
+			bypass = {
+				
+			}
+
+			cancel_if_invalid = yes
+			continue_if_invalid = no
+			available_if_capitulated = yes
+
+			completion_reward = {
+				add_tech_bonus = {
+					name = artillery
+					bonus = 1
+					uses = 1
+					technology = motorized_rocket_unit
+				}
+				add_tech_bonus = {
+					name = cat_mechanized_equipment
+					uses = 1
+					bonus = 1
+					category = cat_mechanized_equipment
+				}
+			}
+	}
+
+    focus = {
+		id = MEX_focus_Radios_for_trucks
+			icon = GFX_focus_generic_combined_arms
+			prerequisite = { focus = MEX_focus_lets_start_rolling }
+			relative_position_id = MEX_focus_lets_start_rolling
+			x = 0
+			y = 1
+
+			cost = 5
+
+			ai_will_do = {
+				factor = 1
+			}
+
+			available = {
+				
+			}
+
+			bypass = {
+				
+			}
+
+			cancel_if_invalid = yes
+			continue_if_invalid = no
+			available_if_capitulated = yes
+
+			completion_reward = {
+				add_doctrine_cost_reduction = {
+					name = land_doctrine
+					cost_reduction = 0.5
+					uses = 2
+					category = land_doctrine
+				}
+			}
+	}
+
+    focus = {
+		id = MEX_focus_New_General
+			icon = GFX_goal_generic_cavalry
+			prerequisite = { focus = MEX_focus_Radios_for_trucks }
+			relative_position_id = MEX_focus_Radios_for_trucks
+			x = 0
+			y = 1
+
+			cost = 5
+
+			ai_will_do = {
+				factor = 1
+			}
+
+			available = {
+				
+			}
+
+			bypass = {
+				
+			}
+
+			cancel_if_invalid = yes
+			continue_if_invalid = no
+			available_if_capitulated = yes
+
+			completion_reward = {
+				add_ideas = MEX_improvement_of_motorization
+			}
+	}
+
+    focus = {
 		id = MEX_focus_tank_workshops
-		icon = GFX_goal_generic_army_tanks
-		prerequisite = { focus = MEX_focus_heroic_military_college }
-		x = -1
-		y = 1
-		relative_position_id = MEX_focus_heroic_military_college
+			icon = GFX_goal_generic_build_tank
+			prerequisite = { focus = MEX_focus_play_their_game }
+			relative_position_id = MEX_focus_play_their_game 
+			x = 0
+			y = 1
 
-		cost = 5
+			cost = 5
 
-		ai_will_do = {
-			factor = 100
-			
-			modifier = {
-				factor = 10
-				has_war = yes
+			ai_will_do = {
+				factor = 1
 			}
-		}
 
-		available = {
-			
-		}
-
-		bypass = {
-			
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = yes
-		search_filters = {FOCUS_FILTER_RESEARCH}
-		completion_reward = {
-			add_tech_bonus = {
-				name = armor
-				bonus = 1.0
-				uses = 1
-				category = armor
+			available = {
+				
 			}
-			IF = {
-				limit = {
-					has_dlc = "Arms Against Tyranny"
-				}
-				custom_effect_tooltip = available_mio_tt
-				show_mio_tooltip = MEX_tga_organization
-				mio:MEX_tga_organization = {
-					add_mio_funds = 500
+
+			bypass = {
+				
+			}
+
+			cancel_if_invalid = yes
+			continue_if_invalid = no
+			available_if_capitulated = yes
+
+			completion_reward = {
+				add_tech_bonus = {
+					name = armor
+					bonus = 1.00
+					uses = 1
+					category = armor
 				}
 			}
-			ELSE = {
-				custom_effect_tooltip = available_designer
-				show_ideas_tooltip = MEX_tga
-			}
-		}
 	}
 
-	focus = {
-		id = MEX_focus_army_expansion_programme
-		icon = GFX_goal_generic_construct_mil_factory
-		prerequisite = { focus = MEX_focus_tank_workshops focus = MEX_focus_weapons_modernisation }
-		x = 1
-		y = 1
-		relative_position_id = MEX_focus_tank_workshops
+    focus = {
+		id = MEX_focus_army_expansion_programm
+			icon = GFX_DOCTRINE_TANK_WARFARE
+			prerequisite = { focus = MEX_focus_tank_workshops }
+			relative_position_id = MEX_focus_tank_workshops 
+			x = 0
+			y = 1
 
-		cost = 5
+			cost = 5
 
-		ai_will_do = {
-			factor = 100
-			
-			modifier = {
-				factor = 0.1
-				has_war = no
+			ai_will_do = {
+				factor = 1
 			}
-			
-			modifier = {
-				factor = 10
-				has_war = yes
+
+			available = {
+				
 			}
-		}
 
-		available = {
-			
-		}
+			bypass = {
+				
+			}
 
-		bypass = {
-			
-		}
+			cancel_if_invalid = yes
+			continue_if_invalid = no
+			available_if_capitulated = yes
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = yes
-		search_filters = {FOCUS_FILTER_INDUSTRY}
-		completion_reward = {
-			every_state = {
-				limit = {
-					OR = {
-						state = 478
-						state = 277
-						state = 477
+			completion_reward = {
+				if = {
+					limit = {
+						has_dlc = "Arms Against Tyranny"
+					}
+					mio:MEX_tga_organization = {
+						add_mio_funds = 2000
+						add_mio_funds_gain_factor = 0.10
+						add_mio_research_bonus = 0.05
+						unlock_mio_trait_tooltip = MEX_mio_trait_hotrolled_armor
 					}
 				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
 			}
-			if = {
-				limit = {
-					has_war = no
-				}
-				custom_effect_tooltip = tooltip_mexico_stability_hit_for_peacetime_expansion
-				add_stability = -0.05
-			}
-		}
-	}
-	
-	focus = {
-		id = MEX_focus_heavy_artillery
-		icon = GFX_goal_generic_army_artillery2
-		prerequisite = { focus = MEX_focus_army_expansion_programme }
-		x = 0
-		y = 1
-		relative_position_id = MEX_focus_army_expansion_programme
-		
-		cost = 5
-
-		ai_will_do = {
-			factor = 100
-			
-			modifier = {
-				factor = 10
-				has_war = yes
-			}
-			
-			modifier = {
-				factor = 10
-				any_enemy_country = {
-					is_major = yes
-				}
-			}
-		}
-
-		available = {
-			
-		}
-
-		bypass = {
-			
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = yes
-
-		completion_reward = {
-			add_tech_bonus = {
-				name = infantry_weapons
-				bonus = 1.0
-				uses = 1
-				category = infantry_weapons
-			}
-			add_tech_bonus = {
-				name = artillery
-				bonus = 1.0
-				uses = 1
-				category = artillery
-			}
-			add_ideas = MEX_heavy_artillery
-		}
-	}		
+	}	
 }

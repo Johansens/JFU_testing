@@ -824,7 +824,7 @@ ideas = {
 			picture = generic_improved_industries
 
 			modifier = {
-				consumer_goods_factor = -0.15
+				consumer_goods_factor = -0.10
 				stability_factor = -0.05
 				war_support_factor = 0.05
 			}
@@ -840,10 +840,9 @@ ideas = {
 			picture = HUN_agrarian_tradition
 
 			modifier = {
-				consumer_goods_factor = -0.15
+				consumer_goods_factor = -0.10
 				supply_consumption_factor = -0.1
 				winter_attrition = -0.1
-				conscription_factor = -0.05
 			}
 		}
 
