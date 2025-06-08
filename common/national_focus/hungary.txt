@@ -1022,79 +1022,79 @@ focus_tree = {
 		}
 	}
 
-	focus = {
-		id = HUN_focus_desert
-		text = "Africa Campaign"
-		icon = GFX_goal_generic_special_forces
-		prerequisite = { focus = HUN_home_defense }
-		mutually_exclusive = {
-			focus = HUN_focus_forest
-		}
-		x = 1
-		y = 1
-		relative_position_id = HUN_home_defense
+	#focus = {
+	#	id = HUN_focus_desert
+	#	text = "Africa Campaign"
+	#	icon = GFX_goal_generic_special_forces
+	#	prerequisite = { focus = HUN_home_defense }
+	#	mutually_exclusive = {
+	#		focus = HUN_focus_forest
+	#	}
+	#	x = 1
+	#	y = 1
+	#	relative_position_id = HUN_home_defense
 
-		cost = 5
+	#	cost = 5
 
-		ai_will_do = {
-			factor = 50
-		}
+	#	ai_will_do = {
+	#		factor = 50
+	#	}
 
-		available = {
+	#	available = {
 
-		}
+	#	}
 
-		bypass = {
+	#	bypass = {
 
-		}
+	#	}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+	#	cancel_if_invalid = yes
+	#	continue_if_invalid = no
+	#	available_if_capitulated = no
 
-		search_filters = { FOCUS_FILTER_MANPOWER }
-		completion_reward = {
-			custom_effect_tooltip = HUN_light_infantry_divisions_doctrine_tech_desert_tt
-			hidden_effect = { set_technology = { HUN_light_infantry_tech_desert = 1 } }
-		}
-	}
+	#	search_filters = { FOCUS_FILTER_MANPOWER }
+	#	completion_reward = {
+	#		custom_effect_tooltip = HUN_light_infantry_divisions_doctrine_tech_desert_tt
+	#		hidden_effect = { set_technology = { HUN_light_infantry_tech_desert = 1 } }
+	#	}
+	#}
 
-	focus = {
-		id = HUN_focus_forest
-		text = "Unternehmen Barbarossa"
-		icon = GFX_goal_generic_special_forces
-		prerequisite = { focus = HUN_home_defense }
-		mutually_exclusive = {
-			focus = HUN_focus_desert
-		}
-		x = -1
-		y = 1
-		relative_position_id = HUN_home_defense
+	#focus = {
+	#	id = HUN_focus_forest
+	#	text = "Unternehmen Barbarossa"
+	#	icon = GFX_goal_generic_special_forces
+	#	prerequisite = { focus = HUN_home_defense }
+	#	mutually_exclusive = {
+	#		focus = HUN_focus_desert
+	#	}
+	#	x = -1
+	#	y = 1
+	#	relative_position_id = HUN_home_defense
+	#
+	#	cost = 5
+	#
+	#	ai_will_do = {
+	#		factor = 50
+	#	}
+	#
+	#	available = {
+	#
+	#	}
+	#
+	#	bypass = {
+	#
+	#	}
 
-		cost = 5
+	#	cancel_if_invalid = yes
+	#	continue_if_invalid = no
+	#	available_if_capitulated = no
 
-		ai_will_do = {
-			factor = 50
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		search_filters = { FOCUS_FILTER_MANPOWER }
-		completion_reward = {
-			custom_effect_tooltip = HUN_light_infantry_divisions_doctrine_tech_tt
-			hidden_effect = { set_technology = { HUN_light_infantry_tech = 1 } }
-		}
-	}
+	#	search_filters = { FOCUS_FILTER_MANPOWER }
+	#	completion_reward = {
+	#		custom_effect_tooltip = HUN_light_infantry_divisions_doctrine_tech_tt
+	#		hidden_effect = { set_technology = { HUN_light_infantry_tech = 1 } }
+	#	}
+	#}
 
 	focus = {
 		id = HUN_danuvia_submachine_guns
