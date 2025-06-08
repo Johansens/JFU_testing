@@ -2744,7 +2744,7 @@ focus_tree = {
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			custom_effect_tooltip = GER_fortify_the_vaterland_unlock_decision_tt
+			custom_effect_tooltip = GER_fortify_the_vaterland_unlock_decisionjfu_tt
 		}
 	}
 	
@@ -3206,15 +3206,14 @@ focus_tree = {
 			custom_effect_tooltip = available_military_high_command
 			show_ideas_tooltip = GER_alfred_becker
 
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			every_army_leader = {
-				limit = {
-					NOT = { has_trait = scavenger }
-				}
-				random_select_amount = 2
-				add_trait = { trait = scavenger }
-			}
+			#custom_effect_tooltip = generic_skip_one_line_tt
+			#every_army_leader = {
+			#	limit = {
+			#		NOT = { has_trait = scavenger }
+			#	}
+			#	random_select_amount = 2
+			#	add_trait = { trait = scavenger }
+			#}
 		}
 	}
 	

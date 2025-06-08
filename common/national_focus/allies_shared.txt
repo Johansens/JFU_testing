@@ -9,7 +9,7 @@
 		trigger = {	tag = AST}
 	} 
 	offset = {
-		x = 29  
+		x = 39  
 		y = 5
 		trigger = {	tag = MEX}
 	}

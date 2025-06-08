@@ -2480,8 +2480,6 @@ focus_tree = {
 		completion_reward = {
 			army_experience = 15
 
-			set_technology = { bicycle_infantry = 1 popup = no }
-
 			custom_effect_tooltip = FIN_modify_finnish_army_ns_intro
 			add_to_variable = { FIN_finnish_army_army_org_factor = 0.1 tooltip = army_org_factor_tt }
 			add_to_variable = { FIN_finnish_army_special_forces_cap = 0.15 tooltip = special_forces_cap_tt }
