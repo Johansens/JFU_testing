@@ -81,6 +81,7 @@ set_technology = {
 	special_forces_paratroopers = 1
 	gwtank_chassis = 1 #nsb man
 	building_limiter_tech = 1 #air base max level
+	bicycle_infantry = 1
 }
 
 if = {

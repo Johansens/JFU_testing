@@ -86,7 +86,7 @@ set_technology = {
 	motorised_infantry = 1
 	gw_artillery = 1
 	interwar_antiair = 1
-
+	bicycle_infantry = 1
 	special_forces_mountaineers = 1
 	special_forces_marines = 1
 	special_forces_paratroopers = 1
@@ -407,7 +407,7 @@ IF = {
 	recruit_character = HUN_gusztav_jany
 	recruit_character = HUN_dezso_laszlo
 	recruit_character = HUN_shvoy_kalman
-	recruit_character = HUN_sandor_magyarossy
+	#recruit_character = HUN_sandor_magyarossy
 	recruit_character = HUN_kalman_kanya
 	recruit_character = HUN_jozsef_szell
 	recruit_character = HUN_vilmos_roder

@@ -27,7 +27,7 @@ set_technology = {
 
 	gw_artillery = 1
 	interwar_antiair = 1
-
+	bicycle_infantry = 1
 	basic_train = 1
 	gwtank_chassis = 1 #nsb man
 
