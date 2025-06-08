@@ -247,6 +247,24 @@
  GER_winterequipement_desc:0 "" 
 
  JAP_armored_divisions_MAN:0 "Manchurian Armor Technology"
+ JAP_oceanic_collaborators:0 "Oceanic Collaborators"
+ JAP_take_malaya:0 "Sakusen E"
+ JAP_take_sumatra:0 "Sakusen T"
+ JAP_take_java:0 "Sakusen J"
+ JAP_take_borneo:0 "Sakusen B"
+ JAP_take_philippines:0 "Sakusen M"
+ JAP_take_papua:0 "Sakusen SR"
+ JAP_take_wake:0 "WA Sakusen"
+ JAP_take_midway:0 "MI Sakusen"
+ JAP_plunder_territories:0 "Sakusen Sho-I"
+ JAP_plunder_territories2:0 "Sakusen Lustre"
+ JAP_plunder_territories3:0 "Sakusen Gomu"
+ JAP_plundered_everything:0 "Sakusen Seiryu"
+ JAP_successfully_took_wake:0 "Triumph Over Wake Island"
+ JAP_successfully_took_midway:0 "Triumph Over Midway Atoll"
+
+
+
 
  ENG_prep_africa:0 "Prepare Afrika"
 
@@ -367,6 +385,50 @@
  FRA_operation_dragoon:0 "Operation Dragoon"
  FRA_operation_dragoon_desc:0 "An amphibious landing in Southern France can draw away German units from the Atlantikwall, making a more serious invasion in Northern France more possible."
 
+ MEX_focus_play_their_game:0 "Armor Effort"
+ MEX_focus_tank_workshops:0 "Tank Workshops"
+ MEX_focus_army_expansion_programm:0 "Army Expansion Program"
+ MEX_focus_lets_start_rolling:0 "Mechanization Effort"
+ MEX_focus_Radios_for_trucks:0 "Truck Radios"
+ MEX_focus_New_General:0 "Modern Army Academy"
+ MEX_focus_leg_day:0 "Infantry Effort"
+ MEX_focus_better_weapons:0 "Weapon Modernization"
+ MEX_focus_better_support:0 "Support Squads"
+ MEX_focus_safety_first:0 "Safety First"
+ MEX_focus_offense_is_better:0 "Offense is Defense"
+ MEX_focus_lets_start_hiking:0 "Time to Hike"
+ MEX_focus_interessting_rocks:0 "Scout Corps"
+ MEX_focus_on_top_of_the_world:0 "On Top of the World"
+ MEX_depoliticised_army:0 "Depoliticized Army"
+ MEX_focus_cold_shower:0 "Cold Showers"
+ MEX_focus_my_first_arm_floats:0 "Deep Dive Training"
+ MEX_focus_Happy_New_Year:0 "Bigger Landings"
+ MEX_focus_Preparation_for_new_Year:0 "Beach Exercises"
+ MEX_focus_air_matress:0 "Amphibious Operations"
+ MEX_focus_speed_up_the_invasion:0 "Efficient Planning"
+ MEX_focus_Beginning_of_the_Chungus:0 "Battleship Designs"
+ MEX_focus_combined_invasion:0 "Combined Arms Invasion"
+ MEX_focus_Bunker_Buster:0 "Bunker Busters"
+ MEX_focus_It_evolves:0 "Growth Through Battle"
+ MEX_focus_HE_RISES:0 "Mexican Dreadnoughts" 
+ MEX_focus_sREEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEn:0 "Screening Effort"
+ MEX_focus_Based_Navy_1:0 "Submarine Effrot "
+ MEX_focus_Based_Navy_2:0 "Bigger Guns"
+ MEX_focus_Based_Navy_3:0 "Cruiser Submarines"
+ MEX_focus_Better_then_the_KRIEGSMARINE:0 "Rival the Kriegsmarine" 
+ MEX_focus_Light_nut_shells:0 "Improved Light Shells"
+ MEX_focus_Improved_nut_shells:0 "Shell Dyes"
+ MEX_focus_Floating_Airfield:0 "Floating Airfields"
+ MEX_focus_Is_it_an_island:0 "Dockyard Construction"
+ MEX_focus_It_is_an_island:0 "Carrier Domination"
+ MEX_focus_Sortier_Pendechos:0 "Improved Sorties"
+ MEX_focus_The_first_Sortier:0 "Naval Academy"
+ MEX_focus_Naval_aviation:0 "Naval Aviation"
+ MEX_focus_oil_drilling:0 "Oil Drilling"
+ MEX_focus_oil_refineries:0 "Oil Refining"
+ MEX_focus_rubber_refineries:0 "Rubber Refining"
+ MEX_focus_improve_steel_plants:0 "Improved Steel Plants"
+ MEX_focus_improved_resource_gain:0 "Mining Permits"
  ROM_nationalize_oil_industry:0 "Nationalise Oil Industry"
 
  MAN_railways_extend_to_port_arthur_desc:0 "We should extend our railway expansion to Dalian to improve trade with Japan"
@@ -925,6 +987,7 @@
  RAJ_agrarian_society_big_up_tt:0 "Modify §YAgrarian Society§! by \nRecruitable Population factor §G+10%§!"
 
  AST_rats_of_tobruk_tt:0 "Spawns 4 40w division in eather Tobruk oder Sydney"
+ AST_jungle_adaptable_armor_designs:0 "Enables §HAdaptable Jungle Armor Designs§!\n§HAll Tanks and Variants:\n    Jungle§!\n     Attack: §G+5%§!\n      Defense: §G+5%§!\n      Movement: §G+10%§!"
  AST_great_despression_NSA_tt:0 "Modify §YAustralian Economy§! by \nConsumer Goods Factories factor: §Y-10.0%§! \nStability: §G+10.00%§! \nFactory Output §G+10.00%§! \nDockyard Output §G+10.00%§!"
  AST_great_despression_CCC_tt:0 "Modify §YAustralian Economy§! by \nConsumer Goods Factories factor: §Y-20.0%§! \nFactory Output §G+5.00%§! \nDockyard Output §G+5.00%§!"
  AST_great_despression_INV_tt:0 "Modify §YAustralian Economy§! by \nConsumer Goods Factories factor: §Y-15.0%§! \nStability: §G+5.00%§! \nFactory Output §G+7.00%§! \nDockyard Output §G+7.00%§!"
@@ -993,6 +1056,7 @@
  GER_form_the_reichskommissariats_tt:0 "Every state occupied by us \n  Add §YSS Occupation§! which grants:\nlocal Resources: §G+5%§!\nlocal Factories: §G+15%§!\nResistance Target: §G-40%§!\nDamage to Garrisons: §R+50%§!\nRequired Garrisons: §R+15%§!\nDaily Compliance Gain: §R-0.01%§!"
  GER_barbarossa_others_text:0 "§C\nOur allies will benefit from attack plans as well.§!"
  GER_winter_tt:0 "This focus is automatically completed after our §YOperation Barabrossa§! buff ends"
+ GER_fortify_the_vaterland_unlock_decisionjfu_tt:0 "Unlocks §Ydecision§! to build multiple §Ydefensive Lines§! in Europe\n§RThis focus is needed for the atlantik wall decision§!"
 
 
  ITA_blackshirts_div_cap_20_tt:0 "Modify template cap of §YCamicie Nere§! by §G+20§!."
@@ -1004,7 +1068,11 @@
  jap_china_tt:0 "§RMay declare war on China via decision§!"
  JAP_declare_tt:0 "§RWe will declare war on all allied nations. \nTora Tora Tora will be active for 180 days. We will also reduced the Entrenchment of all east asian states by 8 for 180 days§!"
  JAP_suprise_attack_dynamic:0 "Japanese suprise attack"
-
+ oceanic_collaborators_tt:0 "§0+30% compliance in each occupied state in Malaya, Borneo, Sumatra, Java, Philippines, Sulawesi, and Papua.§!"
+ JAP_plunder_territories_tt:0 "§YGuam§!, §YLuzon§!, §YHong Kong§! and the §YPhilipinies§! are fully  controlled by §YJapan§!"
+ JAP_plunder_territories2_tt:0 "§YSingapore§!, §YSumatra§! and §YBorneo§! are fully controlled by §YJapan§!"
+ JAP_plunder_territories3_tt:0 "§YJava§!, §YSulawesi§! and §YPapua§! are fully controlled by §YJapan§!"
+ 
  MLL_dynamic_modifer_tt:0 "Modify §YLow Legitimacy§! by\nStabilty §G+10.00%§!\nWar Support §G+10.00%§!"
  MLL_remove_tt:0 "Remove §YLow Legitmiacy§! which granted \nStabilty §R-20.00%§!\nWar Support §R-20.00%§!"
  
@@ -1056,6 +1124,8 @@
  BRA_artillery_tt:0 "If we chose the §RGreater Federalism§! Focus path we will modify §Y$BRA_army_modifier$§! by (Artillery Attack §G+10.00%§!, Artillery Defence §G10.00%§!)\nIf we instead chose the §RPromote Centralization§! Focus path we will gain §YIncreased Artillery Production§!, which grants (§YTowed Artillery§!: $production_cost_tt$ §G-10.00%§!, §YTowed Rocket Artillery§!: $production_cost_tt$ §G-10.00%§!, §YTowed anti Tank§!: $production_cost_tt$ §G-10.00%§!)."
  BRA_politcal_branches_tt:0 "§RDepending on our politcal choice we change what boni we gain in our army tree§!" 
  
+ MEX_jungle_training_effect_tt:0 "Enables §HExtensive Infantry Forest Training§!\n§HInfantry\n    Forest§!\n      Attack: §G+5%§!\n      Movement: §G+10%§!\n"
+
  tooltip_MAN_railways:0 "§YBegins work on a railway network across Manchuria§ \n\n§YRailway work is completed every 140 days until all states have been developed. Railway expansion adds 1 civilian factory, 1 infrastructure, and 3 building slot§\n\n"
  
 
@@ -1197,6 +1267,31 @@
  ENG_british_fighter_discount_supermarine:0 "Aircraft production group"
  ENG_british_fighter_discount_bomber:0 "Aircraft production group"
 
+ AST_tank_conversion_spirit:0 "Streamlined Tank Factories"
+ AST_z_special_unit_idea:0 "Z Special Unit"
+ AST_m_special_unit_idea:0 "M Special Unit"
+ AST_rats_of_tobruk_idea:0 "Rats of Tobruk"
+
+ MEX_conscription_campaign:0 "Conscription Campaign"
+ MEX_preperation_for_the_new_year:0 "Beach Exercises"
+ MEX_brown_water_navy:0 "Brown Water Navy"
+ MEX_improvement_of_armor:0 "Armor Improvement"
+ MEX_improvement_of_motorization:0 "Motorized Army"
+ MEX_defence_effort:0 "Defense Effort"
+ MEX_reinforce_the_army:0 "Offense Effort"
+ MEX_cheap_sfeq:0 "Mexican Special Forces"
+ MEX_better_pack_arty:0 "Mountain Flatteners"
+ MEX_bigger_landings:0 "Bigger Landings"
+ MEX_faster_planning:0 "Planning Corps"
+ MEX_politicised_army:0 "Politicised Army"
+ MEX_politicised_army_2:0 "Depoliticised Army"
+ MEX_better_naval_prep_invasion:0 "Preparation for Landing"
+ MEX_support_offshore:0 "Offshore Support"
+ MEX_Battleship_focus:0 "Mexican Dreadnoughts"
+ MEX_proper_destroyers:0 "Proper Destroyers"
+ MEX_Invest_in_submarine_warfare:0 "Submarine Warfare"
+ MEX_naval_aviation:0 "Naval Aviation"
+ MEX_naval_aviation_cooperation:0 "Cooperation Between Navy and Air"
 
  USA_pre_war_production:0 "Prepare our Industry"
  victory_programs:0 "Victory Programs"
@@ -1541,9 +1636,7 @@
 
  #map
 
- STRATEGICREGION_289:0 "Gulf of Aden"
- STRATEGICREGION_290:0 "Gibraltar"
- STRATEGICREGION_291:0 "Lower Egypt"
+
  Aden_Strait:0 "Strait of Aden"
 
  #gamerules
@@ -1671,7 +1764,6 @@
 
 #vps
  #moscow
- VICTORY_POINTS_2017:0 "Lyubertsy"
  VICTORY_POINTS_5020:0 "Reutov"
  VICTORY_POINTS_12877:0 "Khimki"
  VICTORY_POINTS_10789:0 "Krasnogorsk"

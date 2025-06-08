@@ -1302,9 +1302,6 @@ NOR_monarcist_full_controlled_goverment:0 "Vollständig monarchistisch kontrolli
 NOR_army_buffs_2:0 "Ruges Plan"
 NOR_coredef:0 "Das Heimatland schützen"
 
-STRATEGICREGION_289:0 "Golf von Aden"
-STRATEGICREGION_290:0 "Gibraltar"
-STRATEGICREGION_291:0 "Unterägypten"
 
 horsthelp.1.t:0 "Hilfe beim Treibstoffmanager"
 horsthelp.1.d:0 "Der Treibstoffmanager wurde so erstellt, dass der Fraktionsführer einer Fraktion das gesamte Treibstoffmanagement einer Fraktion übernehmen kann.\n\nSie können einen Prozentsatz der benötigten Treibstoffreserven dem Land zuweisen, das es haben sollte. Der Treibstoffmanager wird versuchen, den zugewiesenen Prozentsatz zu halten, indem er Treibstoff aus dem Vereinigten Königreich, Deutschland oder Japan entnimmt. Sie können auch eine Priorität basierend auf der Position des Landes im System zuweisen. Um die Priorität eines Landes zu ändern, klicken Sie auf die Pfeile."
