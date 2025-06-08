@@ -53,14 +53,13 @@ adjacency_rule =
 			AND = {
 				tag = USA
 				USA = {
-						not  = {
+					NOT  = {
 						has_global_flag  = EFR_torch_declared
 					}
 				}
 			}
 		}
 		tooltip = suez_blocked_tt
-
 	}
 	
 	icon = 12049
@@ -108,7 +107,7 @@ adjacency_rule =
 			AND = {
 				tag = USA
 				USA = {
-						not  = {
+					NOT  = {
 						has_global_flag  = EFR_torch_declared
 					}
 				}
