@@ -10521,4 +10521,466 @@ spriteTypes = {
         legacy_lazy_load = no
     }
     
+
+    SpriteType = {
+        name = "GFX_GOAL_JAP_OCEANIC_COLLAB_shine"
+        texturefile = "gfx/interface/goals/jap/goal_JAP_oceanic_collab.dds"
+        effectFile = "gfx/FX/buttonstate.lua"
+        animation = {
+            animationmaskfile = "gfx/interface/goals/jap/goal_JAP_oceanic_collab.dds"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 
+            animationrotation = -90.0		
+            animationlooping = no			
+            animationtime = 0.75			
+            animationdelay = 0			
+            animationblendmode = "add"       
+            animationtype = "scrolling"     
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 } 
+        }
+
+        animation = {
+            animationmaskfile = "gfx/interface/goals/jap/goal_JAP_oceanic_collab.dds"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+            animationrotation = 90.0		
+            animationlooping = no			
+            animationtime = 0.75				
+            animationdelay = 0			
+            animationblendmode = "add"     
+            animationtype = "scrolling"      
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 } 
+        }
+        legacy_lazy_load = no
+    }
+    
+
+    SpriteType = {
+        name = "GFX_JAP_ATTACK_INDONESIA_shine"
+        texturefile = "gfx/interface/goals/jap/JAP_attack_indonesia.png"
+        effectFile = "gfx/FX/buttonstate.lua"
+        animation = {
+            animationmaskfile = "gfx/interface/goals/jap/JAP_attack_indonesia.png"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 
+            animationrotation = -90.0		
+            animationlooping = no			
+            animationtime = 0.75			
+            animationdelay = 0			
+            animationblendmode = "add"       
+            animationtype = "scrolling"     
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 } 
+        }
+
+        animation = {
+            animationmaskfile = "gfx/interface/goals/jap/JAP_attack_indonesia.png"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+            animationrotation = 90.0		
+            animationlooping = no			
+            animationtime = 0.75				
+            animationdelay = 0			
+            animationblendmode = "add"     
+            animationtype = "scrolling"      
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 } 
+        }
+        legacy_lazy_load = no
+    }
+    
+
+    SpriteType = {
+        name = "GFX_JAP_ATTACK_PHILLIPPINEN_shine"
+        texturefile = "gfx/interface/goals/jap/JAP_attack_phillippinen.png"
+        effectFile = "gfx/FX/buttonstate.lua"
+        animation = {
+            animationmaskfile = "gfx/interface/goals/jap/JAP_attack_phillippinen.png"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 
+            animationrotation = -90.0		
+            animationlooping = no			
+            animationtime = 0.75			
+            animationdelay = 0			
+            animationblendmode = "add"       
+            animationtype = "scrolling"     
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 } 
+        }
+
+        animation = {
+            animationmaskfile = "gfx/interface/goals/jap/JAP_attack_phillippinen.png"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+            animationrotation = 90.0		
+            animationlooping = no			
+            animationtime = 0.75				
+            animationdelay = 0			
+            animationblendmode = "add"     
+            animationtype = "scrolling"      
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 } 
+        }
+        legacy_lazy_load = no
+    }
+    
+
+    SpriteType = {
+        name = "GFX_JAP_ATTACK_SINGAPORE_shine"
+        texturefile = "gfx/interface/goals/jap/JAP_attack_singapore.png"
+        effectFile = "gfx/FX/buttonstate.lua"
+        animation = {
+            animationmaskfile = "gfx/interface/goals/jap/JAP_attack_singapore.png"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 
+            animationrotation = -90.0		
+            animationlooping = no			
+            animationtime = 0.75			
+            animationdelay = 0			
+            animationblendmode = "add"       
+            animationtype = "scrolling"     
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 } 
+        }
+
+        animation = {
+            animationmaskfile = "gfx/interface/goals/jap/JAP_attack_singapore.png"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+            animationrotation = 90.0		
+            animationlooping = no			
+            animationtime = 0.75				
+            animationdelay = 0			
+            animationblendmode = "add"     
+            animationtype = "scrolling"      
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 } 
+        }
+        legacy_lazy_load = no
+    }
+    
+
+    SpriteType = {
+        name = "GFX_GOAL_JAP_SUPREMACY_OF_WILL_shine"
+        texturefile = "gfx/interface/goals/jap/goal_JAP_supremacy_of_will.dds"
+        effectFile = "gfx/FX/buttonstate.lua"
+        animation = {
+            animationmaskfile = "gfx/interface/goals/jap/goal_JAP_supremacy_of_will.dds"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 
+            animationrotation = -90.0		
+            animationlooping = no			
+            animationtime = 0.75			
+            animationdelay = 0			
+            animationblendmode = "add"       
+            animationtype = "scrolling"     
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 } 
+        }
+
+        animation = {
+            animationmaskfile = "gfx/interface/goals/jap/goal_JAP_supremacy_of_will.dds"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+            animationrotation = 90.0		
+            animationlooping = no			
+            animationtime = 0.75				
+            animationdelay = 0			
+            animationblendmode = "add"     
+            animationtype = "scrolling"      
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 } 
+        }
+        legacy_lazy_load = no
+    }
+    
+
+    SpriteType = {
+        name = "GFX_GOAL_JAP_GREATER_EAST_ASIAN_CO_PROSPERITY_SPHERE_shine"
+        texturefile = "gfx/interface/goals/jap/goal_JAP_greater_east_asian_co_prosperity_sphere.dds"
+        effectFile = "gfx/FX/buttonstate.lua"
+        animation = {
+            animationmaskfile = "gfx/interface/goals/jap/goal_JAP_greater_east_asian_co_prosperity_sphere.dds"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 
+            animationrotation = -90.0		
+            animationlooping = no			
+            animationtime = 0.75			
+            animationdelay = 0			
+            animationblendmode = "add"       
+            animationtype = "scrolling"     
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 } 
+        }
+
+        animation = {
+            animationmaskfile = "gfx/interface/goals/jap/goal_JAP_greater_east_asian_co_prosperity_sphere.dds"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+            animationrotation = 90.0		
+            animationlooping = no			
+            animationtime = 0.75				
+            animationdelay = 0			
+            animationblendmode = "add"     
+            animationtype = "scrolling"      
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 } 
+        }
+        legacy_lazy_load = no
+    }
+    
+
+    SpriteType = {
+        name = "GFX_GOAL_JAP_THE_YEN_BLOC_shine"
+        texturefile = "gfx/interface/goals/jap/goal_JAP_the_yen_bloc.dds"
+        effectFile = "gfx/FX/buttonstate.lua"
+        animation = {
+            animationmaskfile = "gfx/interface/goals/jap/goal_JAP_the_yen_bloc.dds"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 
+            animationrotation = -90.0		
+            animationlooping = no			
+            animationtime = 0.75			
+            animationdelay = 0			
+            animationblendmode = "add"       
+            animationtype = "scrolling"     
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 } 
+        }
+
+        animation = {
+            animationmaskfile = "gfx/interface/goals/jap/goal_JAP_the_yen_bloc.dds"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+            animationrotation = 90.0		
+            animationlooping = no			
+            animationtime = 0.75				
+            animationdelay = 0			
+            animationblendmode = "add"     
+            animationtype = "scrolling"      
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 } 
+        }
+        legacy_lazy_load = no
+    }
+    
+
+    SpriteType = {
+        name = "GFX_JAP_SUPERIORITY_OF_MAN_shine"
+        texturefile = "gfx/interface/goals/jap/JAP_superiority_of_man.dds"
+        effectFile = "gfx/FX/buttonstate.lua"
+        animation = {
+            animationmaskfile = "gfx/interface/goals/jap/JAP_superiority_of_man.dds"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 
+            animationrotation = -90.0		
+            animationlooping = no			
+            animationtime = 0.75			
+            animationdelay = 0			
+            animationblendmode = "add"       
+            animationtype = "scrolling"     
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 } 
+        }
+
+        animation = {
+            animationmaskfile = "gfx/interface/goals/jap/JAP_superiority_of_man.dds"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+            animationrotation = 90.0		
+            animationlooping = no			
+            animationtime = 0.75				
+            animationdelay = 0			
+            animationblendmode = "add"     
+            animationtype = "scrolling"      
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 } 
+        }
+        legacy_lazy_load = no
+    }
+    
+
+    SpriteType = {
+        name = "GFX_GOAL_JAP_FUMIMARO_KONOE_CABINET_shine"
+        texturefile = "gfx/interface/goals/jap/goal_JAP_fumimaro_konoe_cabinet.dds"
+        effectFile = "gfx/FX/buttonstate.lua"
+        animation = {
+            animationmaskfile = "gfx/interface/goals/jap/goal_JAP_fumimaro_konoe_cabinet.dds"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 
+            animationrotation = -90.0		
+            animationlooping = no			
+            animationtime = 0.75			
+            animationdelay = 0			
+            animationblendmode = "add"       
+            animationtype = "scrolling"     
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 } 
+        }
+
+        animation = {
+            animationmaskfile = "gfx/interface/goals/jap/goal_JAP_fumimaro_konoe_cabinet.dds"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+            animationrotation = 90.0		
+            animationlooping = no			
+            animationtime = 0.75				
+            animationdelay = 0			
+            animationblendmode = "add"     
+            animationtype = "scrolling"      
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 } 
+        }
+        legacy_lazy_load = no
+    }
+    
+
+    SpriteType = {
+        name = "GFX_JAP_THE_EMPERORS_WAVE_shine"
+        texturefile = "gfx/interface/goals/jap/JAP_the_emperors_wave.dds"
+        effectFile = "gfx/FX/buttonstate.lua"
+        animation = {
+            animationmaskfile = "gfx/interface/goals/jap/JAP_the_emperors_wave.dds"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 
+            animationrotation = -90.0		
+            animationlooping = no			
+            animationtime = 0.75			
+            animationdelay = 0			
+            animationblendmode = "add"       
+            animationtype = "scrolling"     
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 } 
+        }
+
+        animation = {
+            animationmaskfile = "gfx/interface/goals/jap/JAP_the_emperors_wave.dds"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+            animationrotation = 90.0		
+            animationlooping = no			
+            animationtime = 0.75				
+            animationdelay = 0			
+            animationblendmode = "add"     
+            animationtype = "scrolling"      
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 } 
+        }
+        legacy_lazy_load = no
+    }
+    
+
+    SpriteType = {
+        name = "GFX_DOCTRINE_TANK_WARFARE_shine"
+        texturefile = "gfx/interface/goals/ger/doctrine_tank_warfare.dds"
+        effectFile = "gfx/FX/buttonstate.lua"
+        animation = {
+            animationmaskfile = "gfx/interface/goals/ger/doctrine_tank_warfare.dds"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 
+            animationrotation = -90.0		
+            animationlooping = no			
+            animationtime = 0.75			
+            animationdelay = 0			
+            animationblendmode = "add"       
+            animationtype = "scrolling"     
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 } 
+        }
+
+        animation = {
+            animationmaskfile = "gfx/interface/goals/ger/doctrine_tank_warfare.dds"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+            animationrotation = 90.0		
+            animationlooping = no			
+            animationtime = 0.75				
+            animationdelay = 0			
+            animationblendmode = "add"     
+            animationtype = "scrolling"      
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 } 
+        }
+        legacy_lazy_load = no
+    }
+    
+
+    SpriteType = {
+        name = "GFX_USA_WELL_SUPPLIED_AND_MOTIVATED_shine"
+        texturefile = "gfx/interface/goals/usa/USA_well_supplied_and_motivated.dds"
+        effectFile = "gfx/FX/buttonstate.lua"
+        animation = {
+            animationmaskfile = "gfx/interface/goals/usa/USA_well_supplied_and_motivated.dds"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 
+            animationrotation = -90.0		
+            animationlooping = no			
+            animationtime = 0.75			
+            animationdelay = 0			
+            animationblendmode = "add"       
+            animationtype = "scrolling"     
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 } 
+        }
+
+        animation = {
+            animationmaskfile = "gfx/interface/goals/usa/USA_well_supplied_and_motivated.dds"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+            animationrotation = 90.0		
+            animationlooping = no			
+            animationtime = 0.75				
+            animationdelay = 0			
+            animationblendmode = "add"     
+            animationtype = "scrolling"      
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 } 
+        }
+        legacy_lazy_load = no
+    }
+    
+
+    SpriteType = {
+        name = "GFX_SOV_ARTILLERY_DEVELOPMENT_shine"
+        texturefile = "gfx/interface/goals/sov/SOV_artillery_development.dds"
+        effectFile = "gfx/FX/buttonstate.lua"
+        animation = {
+            animationmaskfile = "gfx/interface/goals/sov/SOV_artillery_development.dds"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 
+            animationrotation = -90.0		
+            animationlooping = no			
+            animationtime = 0.75			
+            animationdelay = 0			
+            animationblendmode = "add"       
+            animationtype = "scrolling"     
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 } 
+        }
+
+        animation = {
+            animationmaskfile = "gfx/interface/goals/sov/SOV_artillery_development.dds"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+            animationrotation = 90.0		
+            animationlooping = no			
+            animationtime = 0.75				
+            animationdelay = 0			
+            animationblendmode = "add"     
+            animationtype = "scrolling"      
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 } 
+        }
+        legacy_lazy_load = no
+    }
+    
+
+    SpriteType = {
+        name = "GFX_SOV_ARMOUR_DEVELOPMENT_shine"
+        texturefile = "gfx/interface/goals/sov/SOV_armour_development.dds"
+        effectFile = "gfx/FX/buttonstate.lua"
+        animation = {
+            animationmaskfile = "gfx/interface/goals/sov/SOV_armour_development.dds"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 
+            animationrotation = -90.0		
+            animationlooping = no			
+            animationtime = 0.75			
+            animationdelay = 0			
+            animationblendmode = "add"       
+            animationtype = "scrolling"     
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 } 
+        }
+
+        animation = {
+            animationmaskfile = "gfx/interface/goals/sov/SOV_armour_development.dds"
+            animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+            animationrotation = 90.0		
+            animationlooping = no			
+            animationtime = 0.75				
+            animationdelay = 0			
+            animationblendmode = "add"     
+            animationtype = "scrolling"      
+            animationrotationoffset = { x = 0.0 y = 0.0 }
+            animationtexturescale = { x = 1.0 y = 1.0 } 
+        }
+        legacy_lazy_load = no
+    }
+    
 }

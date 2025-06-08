@@ -1905,4 +1905,88 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/ger/goal_ger_heavy_tiger_cats.dds"
 	}
     
+
+    SpriteType = {
+		name = "GFX_GOAL_JAP_OCEANIC_COLLAB"
+		texturefile = "gfx/interface/goals/jap/goal_JAP_oceanic_collab.dds"
+	}
+    
+
+    SpriteType = {
+		name = "GFX_JAP_ATTACK_INDONESIA"
+		texturefile = "gfx/interface/goals/jap/JAP_attack_indonesia.png"
+	}
+    
+
+    SpriteType = {
+		name = "GFX_JAP_ATTACK_PHILLIPPINEN"
+		texturefile = "gfx/interface/goals/jap/JAP_attack_phillippinen.png"
+	}
+    
+
+    SpriteType = {
+		name = "GFX_JAP_ATTACK_SINGAPORE"
+		texturefile = "gfx/interface/goals/jap/JAP_attack_singapore.png"
+	}
+    
+
+    SpriteType = {
+		name = "GFX_GOAL_JAP_SUPREMACY_OF_WILL"
+		texturefile = "gfx/interface/goals/jap/goal_JAP_supremacy_of_will.dds"
+	}
+    
+
+    SpriteType = {
+		name = "GFX_GOAL_JAP_GREATER_EAST_ASIAN_CO_PROSPERITY_SPHERE"
+		texturefile = "gfx/interface/goals/jap/goal_JAP_greater_east_asian_co_prosperity_sphere.dds"
+	}
+    
+
+    SpriteType = {
+		name = "GFX_GOAL_JAP_THE_YEN_BLOC"
+		texturefile = "gfx/interface/goals/jap/goal_JAP_the_yen_bloc.dds"
+	}
+    
+
+    SpriteType = {
+		name = "GFX_JAP_SUPERIORITY_OF_MAN"
+		texturefile = "gfx/interface/goals/jap/JAP_superiority_of_man.dds"
+	}
+    
+
+    SpriteType = {
+		name = "GFX_GOAL_JAP_FUMIMARO_KONOE_CABINET"
+		texturefile = "gfx/interface/goals/jap/goal_JAP_fumimaro_konoe_cabinet.dds"
+	}
+    
+
+    SpriteType = {
+		name = "GFX_JAP_THE_EMPERORS_WAVE"
+		texturefile = "gfx/interface/goals/jap/JAP_the_emperors_wave.dds"
+	}
+    
+
+    SpriteType = {
+		name = "GFX_DOCTRINE_TANK_WARFARE"
+		texturefile = "gfx/interface/goals/ger/doctrine_tank_warfare.dds"
+	}
+    
+
+    SpriteType = {
+		name = "GFX_USA_WELL_SUPPLIED_AND_MOTIVATED"
+		texturefile = "gfx/interface/goals/usa/USA_well_supplied_and_motivated.dds"
+	}
+    
+
+    SpriteType = {
+		name = "GFX_SOV_ARTILLERY_DEVELOPMENT"
+		texturefile = "gfx/interface/goals/sov/SOV_artillery_development.dds"
+	}
+    
+
+    SpriteType = {
+		name = "GFX_SOV_ARMOUR_DEVELOPMENT"
+		texturefile = "gfx/interface/goals/sov/SOV_armour_development.dds"
+	}
+    
 }
