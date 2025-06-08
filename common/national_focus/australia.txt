@@ -25,10 +25,11 @@
 	####### ARMY SECTION #######
 	############################
 	shared_focus = ALLIES_commonwealth_of_nations
+
 	focus = {
 		id = AST_additional_militia_training
 		icon = GFX_goal_generic_allies_build_infantry
-		x = 2
+		x = 4
 		y = 0
 
 		cost = 5
@@ -48,10 +49,9 @@
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-			army_experience = 5
+			army_experience = 10
 			add_doctrine_cost_reduction = {
 				name = AST_additional_militia_training
 				cost_reduction = 0.5
@@ -62,10 +62,47 @@
 	}
 
 	focus = {
+		id = AST_cruiser_tanks
+		icon = GFX_focus_generic_tank_production
+		prerequisite = { focus =AST_additional_militia_training}
+		mutually_exclusive = { focus = AST_hmas_assault}
+		x = -3
+		y = 2
+		relative_position_id = AST_additional_militia_training
+		cost = 5
+
+		available_if_capitulated = yes
+
+		offset = {
+			x = 0
+			y = 1
+			trigger = {
+				has_global_flag = NO_ASIA
+			}
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = AST_cruiser
+				bonus = 1
+				uses = 1
+				category = armor
+			}
+			add_doctrine_cost_reduction = {
+				name = AST_additional_militia_training
+				cost_reduction = 0.5
+				uses = 2
+				category = land_doctrine
+			}
+		}
+		
+	}
+
+	focus = {
 		id = AST_royal_australian_artillery
 		icon = GFX_goal_generic_army_artillery2
 		prerequisite = { focus = AST_additional_militia_training }
-		x = -1
+		x = 2
 		y = 1
 		relative_position_id = AST_additional_militia_training
 
@@ -91,7 +128,7 @@
 		completion_reward = {
 			add_tech_bonus = {
 				name = AST_royal_australian_artillery
-				bonus = 1.0
+				bonus = 1
 				uses = 1
 				category = artillery
 			}
@@ -99,12 +136,64 @@
 	}
 
 	focus = {
+		id = AST_revive_the_screw_guns
+		icon = GFX_goal_generic_army_artillery
+		prerequisite = { focus = AST_royal_australian_artillery }
+		x = 0
+		y = 1
+		relative_position_id = AST_royal_australian_artillery
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 30
+		}
+
+		available = {
+			# has_tech = artillery2
+		}
+
+		bypass = {
+
+		}
+
+		allow_branch = {
+			has_global_flag = NO_ASIA
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = RAJ_indian_armor
+				bonus = 0.75
+				uses = 2
+				category = artillery
+			}
+			# set_technology = {
+			# 	# mountain_arty = 1
+			# 	artillery3 = 1
+			# }
+		}
+	}
+
+	focus = {
 		id = AST_promote_reservists
 		icon = GFX_goal_generic_army_doctrines
-		prerequisite = { focus = AST_additional_militia_training }
-		x = 1
-		y = 1
+		prerequisite = { focus = AST_hmas_assault focus = AST_cruiser_tanks}
+		x = 0
+		y = 3
 		relative_position_id = AST_additional_militia_training
+
+		offset = {
+			x = 0
+			y = 1
+			trigger = {
+				has_global_flag = NO_ASIA
+			}
+		}
 
 		cost = 5
 
@@ -133,17 +222,11 @@
 				uses = 1
 				category = land_doctrine
 			}
-			custom_effect_tooltip = AST_new_general_tt
-			hidden_effect = {
-				add_corps_commander_role = {
-					character = AST_iven_mackay
-					traits = { }
-					skill = 3
-					attack_skill = 2
-					defense_skill = 2
-					planning_skill = 3
-					logistics_skill = 3
-				}
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = special_forces_doctrine
 			}
 		}
 	}
@@ -151,10 +234,10 @@
 	focus = {
 		id = AST_daimler_dingo
 		icon = GFX_goal_generic_army_motorized
-		prerequisite = { focus = AST_royal_australian_artillery }
-		x = -2
-		y = 2
-		relative_position_id = AST_additional_militia_training
+		prerequisite = { focus = AST_cruiser_tanks }
+		x = 1
+		y = 1
+		relative_position_id = AST_cruiser_tanks
 
 		cost = 5
 
@@ -178,7 +261,8 @@
 		completion_reward = {
 			add_tech_bonus = {
 				name = motorized_bonus
-				bonus = 1.00
+				bonus = 1
+				uses = 1
 				category = motorized_equipment
 			}
 		}
@@ -187,10 +271,19 @@
 	focus = {
 		id = AST_hmas_assault
 		icon = GFX_goal_generic_army_doctrines
-		prerequisite = { focus = AST_royal_australian_artillery focus = AST_promote_reservists }
-		x = 0
+		prerequisite = { focus = AST_additional_militia_training }
+		mutually_exclusive = { focus = AST_cruiser_tanks}
+		x = 3
 		y = 2
 		relative_position_id = AST_additional_militia_training
+
+		offset = {
+			x = 0
+			y = 1
+			trigger = {
+				has_global_flag = NO_ASIA
+			}
+		}
 
 		cost = 5
 
@@ -219,16 +312,22 @@
 				uses = 2
 				category = land_doctrine
 			}
+			add_tech_bonus = {
+				name = AST_fund_owen_gun_research
+				bonus = 1
+				uses = 1
+				category = infantry_weapons
+			}
 		}
 	}
 
 	focus = {
-		id = AST_specialize_equipment
+		id = AST_tank_pounder
 		icon = GFX_goal_generic_army_artillery
-		prerequisite = { focus = AST_promote_reservists }
-		x = 2
-		y = 2
-		relative_position_id = AST_additional_militia_training
+		prerequisite = { focus = AST_cruiser_tanks }
+		x = -1
+		y = 1
+		relative_position_id = AST_cruiser_tanks
 
 		cost = 5
 
@@ -251,8 +350,8 @@
 
 		completion_reward = {
 			add_tech_bonus = {
-				name = AST_specialize_equipment
-				bonus = 1.0
+				name = AST_tank_pounder
+				bonus = 1
 				uses = 2
 				category = artillery
 			}
@@ -264,8 +363,8 @@
 		icon = GFX_goal_generic_allies_build_infantry
 		prerequisite = { focus = AST_hmas_assault }
 		x = -1
-		y = 3
-		relative_position_id = AST_additional_militia_training
+		y = 1
+		relative_position_id = AST_hmas_assault
 
 		cost = 5
 
@@ -295,9 +394,9 @@
 	focus = {
 		id = AST_australian_army_catering_corps
 		icon = GFX_goal_generic_consumer_goods
-		prerequisite = { focus = AST_hmas_assault }
-		x = 0
-		y = 4
+		prerequisite = { focus = AST_additional_militia_training }
+		x = -2
+		y = 1
 		relative_position_id = AST_additional_militia_training
 
 		cost = 5
@@ -322,7 +421,7 @@
 		completion_reward = {
 			add_tech_bonus = {
 				name = AST_fund_owen_gun_research
-				bonus = 3.0
+				bonus = 1
 				uses = 1
 				technology = tech_logistics_company
 				technology = tech_logistics_company2
@@ -339,8 +438,8 @@
 		icon = GFX_goal_generic_small_arms
 		prerequisite = { focus = AST_hmas_assault }
 		x = 1
-		y = 3
-		relative_position_id = AST_additional_militia_training
+		y = 1
+		relative_position_id = AST_hmas_assault
 		
 		cost = 5
 
@@ -364,7 +463,7 @@
 		completion_reward = {
 			add_tech_bonus = {
 				name = AST_fund_owen_gun_research
-				bonus = 1.0
+				bonus = 1
 				uses = 2
 				category = infantry_weapons
 			}
@@ -372,12 +471,69 @@
 	}
 
 	focus = {
+		id = AST_jungle_blitz
+		icon = GFX_focus_generic_combined_arms
+		x = 1
+		y = 1
+		prerequisite = { focus = AST_tank_pounder }
+		prerequisite = { focus = AST_daimler_dingo}
+
+		mutually_exclusive = { }
+		relative_position_id = AST_tank_pounder
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_RESEARCH  }
+
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				name = AST_additional_militia_training
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+			custom_effect_tooltip = AST_jungle_adaptable_armor_designs
+			hidden_effect = { set_technology = { jungle_adaptable_armor_designs = 1 } }
+		}
+	}
+
+	focus = {
+		id = AST_tank_refit
+		icon = GFX_goal_continuous_armor_production
+		prerequisite = { focus = AST_jungle_blitz }
+		x = -1
+		y = 1
+		relative_position_id = AST_jungle_blitz
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = AST_tank_conversion_spirit
+		}
+	}
+
+	focus = {
 		id = AST_sentinel_tank_project
 		icon = GFX_goal_generic_army_tanks
-		prerequisite = { focus = AST_daimler_dingo }
-		x = -2
-		y = 4
-		relative_position_id = AST_additional_militia_training
+		prerequisite = { focus = AST_jungle_blitz }
+		x = 1
+		y = 1
+		relative_position_id = AST_jungle_blitz
 
 		cost = 5
 
@@ -400,58 +556,60 @@
 
 		completion_reward = {
 			add_tech_bonus = {
-				name = AST_sentinel_tank_project
-				bonus = 1.0
-				uses = 2
+				name = AST_sentinel_tank
+				bonus = 1
+				ahead_reduction = 1
+				uses = 1
 				category = armor
 			}
 		}
 	}
 
-	focus = {
-		id = AST_airborne_defence
-		icon = GFX_goal_generic_special_forces
-		prerequisite = { focus = AST_specialize_equipment }
-		x = 2
-		y = 4
-		relative_position_id = AST_additional_militia_training
+	# focus = {
+	# 	id = AST_airborne_defence
+	# 	icon = GFX_goal_generic_special_forces
+	# 	prerequisite = { focus = AST_tank_pounder }
+	# 	#prerequisite = { focus = AST_volunteer_air_observers_corps }
+	# 	x = 2
+	# 	y = 4
+	# 	relative_position_id = AST_additional_militia_training
 
-		cost = 5
+	# 	cost = 5
 
-		ai_will_do = {
-			factor = 1
-		}
+	# 	ai_will_do = {
+	# 		factor = 1
+	# 	}
 
-		available = {
+	# 	available = {
 
-		}
+	# 	}
 		
-		bypass = {
+	# 	bypass = {
 
-		}
+	# 	}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_RESEARCH  }
+	# 	cancel_if_invalid = yes
+	# 	continue_if_invalid = no
+	# 	available_if_capitulated = yes
+	# 	search_filters = { FOCUS_FILTER_RESEARCH  }
 
-		completion_reward = {
-			add_doctrine_cost_reduction = {
-				name = land_doc_bonus
-				cost_reduction = 0.75
-				uses = 1
-				category = special_forces_doctrine
-			}
-		}
-	}
+	# 	completion_reward = {
+	# 		add_tech_bonus = {
+	# 			name = AST_airborne_defence
+	# 			bonus = 0.75
+	# 			uses = 1
+	# 			category = para_tech
+	# 		}
+	# 	}
+	# }
 
 	focus = {
 		id = AST_introduce_unconventional_warfare
 		icon = GFX_goal_generic_army_doctrines
-		prerequisite = { focus = AST_sentinel_tank_project focus = AST_airborne_defence }
+		prerequisite = { focus = AST_fund_owen_gun_research }
 		x = 0
-		y = 5
-		relative_position_id = AST_additional_militia_training
+		y = 1
+		relative_position_id = AST_fund_owen_gun_research
 
 		cost = 5
 
@@ -473,7 +631,9 @@
 		search_filters = { FOCUS_FILTER_RESEARCH  }
 
 		completion_reward = {
-			army_experience = 5
+			army_experience = 10
+			custom_effect_tooltip = RAJ_jungle_training_effect
+			hidden_effect = { set_technology = { jungle_warfare = 1 } }
 			add_doctrine_cost_reduction = {
 				name = AST_introduce_unconventional_warfare
 				cost_reduction = 0.5
@@ -488,8 +648,8 @@
 		icon = GFX_goal_generic_amphibious_assault
 		prerequisite = { focus = AST_introduce_unconventional_warfare }
 		x = -1
-		y = 6
-		relative_position_id = AST_additional_militia_training
+		y = 1
+		relative_position_id = AST_introduce_unconventional_warfare
 
 		cost = 5
 
@@ -517,6 +677,7 @@
 				uses = 2
 				category = special_forces_doctrine
 			}
+			add_ideas = AST_z_special_unit_idea
 		}
 	}
 
@@ -525,8 +686,8 @@
 		icon = GFX_goal_generic_special_forces
 		prerequisite = { focus = AST_introduce_unconventional_warfare }
 		x = 1
-		y = 6
-		relative_position_id = AST_additional_militia_training
+		y = 1
+		relative_position_id = AST_introduce_unconventional_warfare
 
 		cost = 5
 
@@ -550,13 +711,51 @@
 		completion_reward = {
 			add_tech_bonus = {
 				name = AST_m_special_unit
-				bonus = 1.0
-				ahead_reduction = 2
+				bonus = 1
+				ahead_reduction = 1
 				uses = 1
-				technology = tech_recon
-				technology = tech_recon2
-				technology = tech_recon3
-				technology = tech_recon4
+				category = tp_tech
+			}
+			add_ideas = AST_m_special_unit_idea
+		}
+	}
+
+	focus = {
+		id = AST_central_bureau
+		icon = GFX_goal_generic_radar
+		prerequisite = { focus = AST_additional_militia_training }
+		x = 0
+		y = 1
+		relative_position_id = AST_additional_militia_training
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = AST_central_bureau
+				bonus = 1.0
+				ahead_reduction = 1
+				uses = 2
+				technology = tech_signal_company
+				technology = tech_signal_company2
+				technology = tech_signal_company3
+				technology = tech_signal_company4
 			}
 		}
 	}
@@ -569,7 +768,7 @@
 	focus = {
 		id = AST_cockatoo_island_shipyards
 		icon = GFX_goal_generic_construct_naval_dockyard
-		x = 4
+		x = 10
 		y = 0
 
 		cost = 5
@@ -616,7 +815,7 @@
 	focus = {
 		id = AST_standard_gauge_railway
 		icon = GFX_goal_generic_construct_infrastructure
-		x = 6
+		x = 10
 		y = 0
 
 		cost = 5
@@ -953,7 +1152,7 @@
 	focus = {
 		id = AST_establish_advisory_war_council
 		icon = GFX_goal_generic_demand_territory
-		x = 14
+		x = 18
 		y = 0
 
 		cost = 10
@@ -1155,10 +1354,10 @@
 	focus = {
 		id = AST_rats_of_tobruk
 		icon = GFX_focus_AST_rats_tobruk
-		prerequisite = { focus = AST_volunteer_defence_corps }
-		x = 3
-		y = 2
-		relative_position_id = AST_establish_advisory_war_council
+		prerequisite = { focus = AST_promote_reservists }
+		x = 0
+		y = 1
+		relative_position_id = AST_promote_reservists
 
 		cost = 5
 
@@ -1167,6 +1366,8 @@
 		}
 
 		available = {
+			#Requires UK at war in Africa
+			has_war_with = ITA
 		}
 		
 		bypass = {
@@ -1178,97 +1379,12 @@
 		available_if_capitulated = no
 		search_filters = {  }
 
-		completion_reward = {
-			hidden_effect = {
-				if = {
-					limit = {
-						has_tech = tech_logistics_company
-					}
-					division_template = {
-						name = "Rats of Tobruk"
-						division_names_group = AST_INF_01
-						regiments = {
-							infantry = { x = 0 y = 0 } 
-							infantry = { x = 0 y = 1 } 
-							infantry = { x = 0 y = 2 } 
-							infantry = { x = 0 y = 3 } 
-							infantry = { x = 0 y = 4 }    
-							infantry = { x = 1 y = 0 } 
-							infantry = { x = 1 y = 1 }
-							infantry = { x = 1 y = 2 } 
-							infantry = { x = 1 y = 3 }
-							infantry = { x = 1 y = 4 }
-							infantry = { x = 2 y = 0 }
-							infantry = { x = 2 y = 1 } 
-							infantry = { x = 2 y = 2 } 
-							infantry = { x = 2 y = 3 }
-							artillery_brigade = { x = 3 y = 0 } 
-							artillery_brigade = { x = 3 y = 1 }
-							artillery_brigade = { x = 3 y = 3 }
-							artillery_brigade = { x = 3 y = 2 }
-						}
-						support = {
-					        recon = { x = 0 y = 0 }
-					        engineer = { x = 0 y = 1 }
-					        logistics_company = { x = 0 y = 2 }
-						}
-					}
-					else = {
-						division_template = {
-							name = "Rats of Tobruk"
-							division_names_group = AST_INF_01
-							regiments = {
-							infantry = { x = 0 y = 0 } 
-							infantry = { x = 0 y = 1 } 
-							infantry = { x = 0 y = 2 } 
-							infantry = { x = 0 y = 3 } 
-							infantry = { x = 0 y = 4 }    
-							infantry = { x = 1 y = 0 } 
-							infantry = { x = 1 y = 1 }
-							infantry = { x = 1 y = 2 } 
-							infantry = { x = 1 y = 3 }
-							infantry = { x = 1 y = 4 }
-							infantry = { x = 2 y = 0 }
-							infantry = { x = 2 y = 1 } 
-							infantry = { x = 2 y = 2 } 
-							infantry = { x = 2 y = 3 }
-							artillery_brigade = { x = 3 y = 0 } 
-							artillery_brigade = { x = 3 y = 1 }
-							artillery_brigade = { x = 3 y = 3 }
-							artillery_brigade = { x = 3 y = 2 }
-							}
-							support = {
-						        recon = { x = 0 y = 0 }
-						        engineer = { x = 0 y = 1 }
-							}
-						}
-					}
-				}
+		complete_tooltip = {
 
-				#Spawn unit in Africa
-				if = {
-					limit = {
-						any_country = {
-							is_in_faction_with = AST
-							controls_state = 273
-						}
-						any_country = {
-							is_in_faction_with = AST
-							controls_state = 552
-						}
-					}
-					load_oob = "AST_TFV_rats_africa"					
-					else = {
-						if = {
-							limit = {
-								controls_state = 285
-							}
-							load_oob = "AST_TFV_rats_australia"
-						}
-					}
-				}
-			}
-			custom_effect_tooltip = AST_rats_of_tobruk_tt
+		}
+
+		completion_reward = {
+			add_ideas = AST_rats_of_tobruk_idea
 		}
 	}
 
@@ -1491,7 +1607,7 @@
 	focus = {
 		id = AST_support_the_policy_of_appeasement
 		icon = GFX_goal_generic_improve_relations
-		x = 20
+		x = 24
 		y = 0
 
 		cost = 5
