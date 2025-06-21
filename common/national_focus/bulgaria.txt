@@ -1256,7 +1256,6 @@ focus_tree = {
 			BUL_bzns_low_loyalty_increase_effect = yes
 			BUL_nsm_low_loyalty_decrease_effect = yes
 
-			custom_effect_tooltip = BUL_potential_civil_war_low_requirement_tt
 		}
 	}
 
