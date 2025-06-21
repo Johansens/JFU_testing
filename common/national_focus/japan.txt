@@ -179,7 +179,11 @@
 		}
 
 		bypass = {
-			CHI = { has_capitulated = yes }
+			OR = {
+				CHI = { has_capitulated = yes }
+				NOT = { country_exists= CHI }
+			}
+
 		}
 
 		cancel_if_invalid = yes
