@@ -3,6 +3,43 @@ ideas = {
 
 	country = {
 
+		SAF_rebuild_armored_corps_idea = {
+		
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_license_production
+
+			equipment_bonus = {
+				armor = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+			}
+			
+		}
+
+		SAF_swift_victory_idea = {
+		
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = ITA_bandits_war
+
+			targeted_modifier = {
+				tag = ITA
+				attack_bonus_against = 0.1
+				breakthrough_bonus_against = 0.1
+			}
+			
+		}
+
 		SAF_ossewabrandwag = { 
 			allowed = {
 				always = no

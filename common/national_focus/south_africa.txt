@@ -875,42 +875,42 @@
 		}
 	}
 
-	focus = {
-		id = SAF_establish_the_atomics_energy_board
-		icon = GFX_focus_wonderweapons
-		prerequisite = { focus = SAF_fund_the_university_of_south_africa }
-		x = 0
-		y = 6
-		relative_position_id = SAF_south_african_railways
+	#focus = {
+	#	id = SAF_establish_the_atomics_energy_board
+	#	icon = GFX_focus_wonderweapons
+	#	prerequisite = { focus = SAF_fund_the_university_of_south_africa }
+	#	x = 0
+	#	y = 6
+	#	relative_position_id = SAF_south_african_railways
 
-		cost = 5
+	#	cost = 5
 
-		ai_will_do = {
-			factor = 5
-		}
+	#	ai_will_do = {
+	#		factor = 5
+	#	}
 
-		available = {
+	#	available = {
 
-		}
+	#	}
 		
-		bypass = {
+	#	bypass = {
 
-		}
+	#	}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-        search_filters = { FOCUS_FILTER_RESEARCH }
+	#	cancel_if_invalid = yes
+	#	continue_if_invalid = no
+	#	available_if_capitulated = no
+    #   search_filters = { FOCUS_FILTER_RESEARCH }
 
-		completion_reward = {
-			add_tech_bonus = {
-				name = SAF_establish_the_atomics_energy_board
-				bonus = 1.0
-				uses = 2
-				category = nuclear
-			}
-		}
-	}
+	#	completion_reward = {
+	#		add_tech_bonus = {
+	#			name = SAF_establish_the_atomics_energy_board
+	#			bonus = 1.0
+	#			uses = 2
+	#			category = nuclear
+	#		}
+	#	}
+	#}
 
 	focus = {
 		id = SAF_the_cape_defense_institute
@@ -949,324 +949,104 @@
 	############################
 
 	focus = {
-		id = SAF_special_service_battalion
-		icon = GFX_goal_generic_army_doctrines
-		x = 13
+		id = SAF_the_south_african_army
+		icon = GFX_R56_GOAL_SAF_FLAG
+		x = 16
 		y = 0
 
 		cost = 5
-		available = {
-			SAF = { is_ai = no }
-		}	
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+
 		available_if_capitulated = yes
-        search_filters = { FOCUS_FILTER_RESEARCH }
+        search_filters = { FOCUS_FILTER_ARMY_XP }
 
 		completion_reward = {
-			army_experience = 10
-			add_doctrine_cost_reduction = {
-				name = SAF_special_service_battalion
-				cost_reduction = 0.5
-				uses = 1
-				category = land_doctrine
-			}
-		}
-	}
-
-	focus = {
-		id = SAF_improve_the_three_oh_three
-		icon = GFX_goal_generic_small_arms
-		prerequisite = { focus = SAF_special_service_battalion }
-		x = -1
-		y = 1
-		relative_position_id = SAF_special_service_battalion
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = yes
-        search_filters = { FOCUS_FILTER_RESEARCH }
-
-		completion_reward = {
-			add_tech_bonus = {
-				name = SAF_improve_the_three_oh_three
-				bonus = 1.0
-				uses = 1
-				category = infantry_weapons
-			}
+			army_experience = 35
 		}
 	}
 
 	focus = {
 		id = SAF_q_services_corps
 		icon = GFX_goal_generic_army_motorized
-		prerequisite = { focus = SAF_special_service_battalion }
+		prerequisite = { focus = SAF_the_south_african_army }
 		x = 1
 		y = 1
-		relative_position_id = SAF_special_service_battalion
+		relative_position_id = SAF_the_south_african_army
 
 		cost = 5
 
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
 		available_if_capitulated = no
         search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
 			add_tech_bonus = {
 				name = SAF_q_services_corps
-				bonus = 3.0
-				uses = 1
-				category = motorized_equipment
+				bonus = 1
+				uses = 2
+				technology = tech_logistics_company
+				technology = tech_logistics_company2
+				technology = tech_logistics_company3
+				technology = tech_logistics_company4
 			}
 		}
 	}
-
+	
 	focus = {
-		id = SAF__south_african_military_college
-		icon = GFX_goal_generic_military_sphere
-		prerequisite = { focus = SAF_improve_the_three_oh_three focus = SAF_q_services_corps }
+		id = SAF_queen_of_the_desert
+		icon = GFX_ENG_QUEEN_OF_THE_DESERT
+		prerequisite = { focus =  SAF_the_south_african_army }
 		x = 0
 		y = 2
-		relative_position_id = SAF_special_service_battalion
+		relative_position_id = SAF_the_south_african_army
 
 		cost = 5
 
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
 		available_if_capitulated = yes
-        search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-			army_experience = 10
-			add_doctrine_cost_reduction = {
-				name = SAF__south_african_military_college
-				cost_reduction = 0.5
-				uses = 1
-				category = land_doctrine
-			}
 			add_tech_bonus = {
 				name = SAF_armor_effort
-				bonus = 1.0
+				bonus = 1
 				uses = 1
 				category = armor
 			}
 		}
 	}
 
-	focus = {
-		id = SAF_expand_the_south_african_artillery
-		icon = GFX_goal_generic_army_artillery2
-		prerequisite = { focus = SAF_improve_the_three_oh_three focus = SAF__south_african_military_college }
-		x = -1
-		y = 3
-		relative_position_id = SAF_special_service_battalion
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = yes
-        search_filters = { FOCUS_FILTER_RESEARCH }
-
-		completion_reward = {
-			add_tech_bonus = {
-				name = SAF_expand_the_south_african_artillery
-				bonus = 1.0
-				uses = 1
-				category = artillery
-			}
-		}
-	}
-
-	focus = {
-		id = SAF_sa_engineer_corps
-		icon = GFX_goal_generic_allies_build_infantry
-		prerequisite = { focus = SAF_q_services_corps focus = SAF__south_african_military_college }
-		x = 1
-		y = 3
-		relative_position_id = SAF_special_service_battalion
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = yes
-        search_filters = { FOCUS_FILTER_RESEARCH }
-
-		completion_reward = {
-			add_tech_bonus = {
-				name = SAF_sa_engineer_corps
-				bonus = 1.0
-				uses = 1
-				category = support_tech
-			}
-		}
-	}
-
-	focus = {
-		id = SAF_equipment_effort
-		icon = GFX_goal_generic_army_artillery
-		prerequisite = { focus = SAF_expand_the_south_african_artillery focus = SAF_sa_engineer_corps }
-		x = 0
-		y = 4
-		relative_position_id = SAF_special_service_battalion
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = yes
-        search_filters = { FOCUS_FILTER_RESEARCH }
-
-		completion_reward = {			
-			add_tech_bonus = {
-				name = SAF_equipment_effort
-				bonus = 1.0
-				uses = 1
-				category = infantry_weapons
-				category = artillery
-			}
-		}
-	}
-
-	focus = {
-		id = SAF_mechanization_effort
-		icon = GFX_goal_generic_build_tank
-		prerequisite = { focus = SAF_equipment_effort }
-		x = -1
-		y = 5
-		relative_position_id = SAF_special_service_battalion
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-        search_filters = { FOCUS_FILTER_RESEARCH }
-
-		completion_reward = {			
-			add_tech_bonus = {
-				name = SAF_mechanization_effort
-				bonus = 1.0
-				uses = 1
-				category = cat_mechanized_equipment
-			}
-		}
-	}
-
+	
 	focus = {
 		id = SAF_south_african_special_forces
-		icon = GFX_goal_generic_special_forces
-		prerequisite = { focus = SAF_equipment_effort focus = SAF_sa_engineer_corps }
-		x = 1
-		y = 5
-		relative_position_id = SAF_special_service_battalion
+		icon = GFX_focus_eng_special_air_service
+		prerequisite = { focus = SAF_queen_of_the_desert }
+		x = 3
+		y = 1
+		relative_position_id = SAF_queen_of_the_desert
 
 		cost = 5
 
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
 		available_if_capitulated = yes
         search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 2
+				category = special_forces_doctrine
+			}
+		}
+	}
+	
+	focus = {
+		id = SAF_expand_the_special_forces
+		icon = GFX_R56_FOCUS_GENERIC_ARMY_MODERNIZATIONS
+		prerequisite = { focus = SAF_south_african_special_forces }
+		x = 0
+		y = 1
+		relative_position_id = SAF_south_african_special_forces
+
+		cost = 5
+
+		available_if_capitulated = yes
 
 		completion_reward = {
 			add_doctrine_cost_reduction = {
@@ -1275,16 +1055,108 @@
 				uses = 1
 				category = special_forces_doctrine
 			}
+			add_ideas = special_forces
+		}
+	}
+	
+	focus = {
+		id = SAF_expand_the_south_african_artillery
+		icon = GFX_goal_generic_army_artillery2
+		prerequisite = { focus = SAF_queen_of_the_desert }
+		x = -3
+		y = 1
+		relative_position_id = SAF_queen_of_the_desert
+
+		cost = 5
+
+		available_if_capitulated = yes
+        search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = SAF_expand_the_south_african_artillery
+				bonus = 1
+				uses = 1
+				category = artillery 
+			}
+		}
+	}
+
+	focus = {
+		id = SAF_equipment_effort
+		icon = GFX_goal_generic_army_artillery
+		prerequisite = { focus = SAF_expand_the_south_african_artillery }
+		x = 0
+		y = 1
+		relative_position_id = SAF_expand_the_south_african_artillery
+
+		cost = 5
+
+		available_if_capitulated = yes
+        search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {			
+			add_tech_bonus = {
+				name = SAF_equipment_effort
+				bonus = 1.01
+				uses = 1
+				category = cat_anti_tank
+			}
+		}
+	}
+	
+	focus = {
+		id = SAF_Follow_the_British
+		icon = GFX_R56_GOAL_CAN_WCMC
+		prerequisite = { focus = SAF_queen_of_the_desert }
+		x = -1
+		y = 1
+		relative_position_id = SAF_queen_of_the_desert
+
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				name = SAF_Follow_the_British
+				cost_reduction = 0.25
+				uses = 2
+				category = land_doctrine
+			}
+		}
+	}
+	
+	focus = {
+		id = SAF_New_armor_doctrine
+		icon = GFX_R56_FOCUS_GENERIC_STUDY_FOREIGN_TANKS
+		prerequisite = { focus = SAF_queen_of_the_desert }
+		x = 1
+		y = 1
+		relative_position_id = SAF_queen_of_the_desert
+
+		cost = 5
+
+		available_if_capitulated = yes
+        
+
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				name = SAF_New_armor_doctrine
+				cost_reduction = 0.25
+				uses = 2
+				category = land_doctrine
+			}
 		}
 	}
 
 	focus = {
 		id = SAF_armor_effort
-		icon = GFX_goal_generic_army_tanks
-		prerequisite = { focus = SAF_south_african_special_forces focus = SAF_mechanization_effort }
-		x = 0
-		y = 6
-		relative_position_id = SAF_special_service_battalion
+		icon = GFX_CRUSADER
+		prerequisite = { focus = SAF_New_armor_doctrine focus = SAF_Follow_the_British  }
+		x = -1
+		y = 1
+		relative_position_id = SAF_New_armor_doctrine
 
 		cost = 5
 
@@ -1308,9 +1180,170 @@
 		completion_reward = {
 			add_tech_bonus = {
 				name = SAF_armor_effort
-				bonus = 1.0
+				bonus = 1
 				uses = 1
 				category = armor
+			}
+		}
+	}
+
+	focus = {
+		id = SAF_mechanization_effort
+		icon = GFX_goal_generic_build_tank
+		prerequisite = { focus = SAF_the_south_african_army }
+		x = -1
+		y = 1
+		relative_position_id = SAF_the_south_african_army
+
+		cost = 5
+
+		available_if_capitulated = yes
+        search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {			
+			add_tech_bonus = {
+				name = SAF_mechanization_effort
+				bonus = 1
+				uses = 1
+				category = cat_mechanized_equipment
+			}
+		}
+	}
+	
+	focus = {
+		id = SAF_Swift_Victory
+		icon = GFX_R56_GOAL_ENG_TAKE_OUT_THE_REGIA_MARINA
+		prerequisite = { focus = SAF_armor_effort }
+		x = 1
+		y = 1
+		relative_position_id = SAF_armor_effort
+		
+		mutually_exclusive = { focus = SAF_Rebuild_our_armored_corps }
+		
+		cost = 5
+		
+		available = {
+			AND = {
+				has_war_with = ITA
+				452 = {
+					is_controlled_by = ENG	
+				}
+			}
+		}
+		
+		available_if_capitulated = yes
+
+		completion_reward = {			
+			add_timed_idea = {
+				idea = SAF_swift_victory_idea
+				days = 365
+			}
+		}
+	}
+	
+	focus = {
+		id = SAF_Rebuild_our_armored_corps
+		icon = GFX_R56_GOAL_GENERIC_EXPANDED_PRODUCTION
+		prerequisite = { focus = SAF_armor_effort }
+		x = -1
+		y = 1
+		relative_position_id = SAF_armor_effort
+		
+		mutually_exclusive = { focus = SAF_Swift_Victory }
+		
+		available = {
+			AND = {
+				has_war_with = ITA
+				456 = {
+					NOT = { is_controlled_by = ENG }
+				}
+				457 = {
+					NOT = { is_controlled_by = ENG }
+				}
+				453 = {
+					NOT = { is_controlled_by = ENG }
+				}
+				
+				#Check SAF Tank Count (not me)
+			}
+		}
+		
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {			
+			add_timed_idea = {
+				idea = SAF_rebuild_armored_corps_idea
+				days = 365
+			}
+		}
+	}
+	
+	focus = {
+		id = SAF_improve_the_three_oh_three
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = SAF_Swift_Victory focus = SAF_Rebuild_our_armored_corps  }
+		x = 0
+		y = 1
+		relative_position_id = SAF_Rebuild_our_armored_corps
+
+		cost = 5
+
+		available_if_capitulated = yes
+        search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = SAF_improve_the_three_oh_three
+				bonus = 1
+				uses = 1
+				category = infantry_weapons
+			}
+		}
+	}	
+	focus = {
+		id = SAF_sa_engineer_corps
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = SAF_Swift_Victory focus = SAF_Rebuild_our_armored_corps }
+		x = 0
+		y = 1
+		relative_position_id = SAF_Swift_Victory
+
+		cost = 5
+
+		available_if_capitulated = yes
+        search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = SAF_sa_engineer_corps
+				bonus = 1
+				uses = 2
+				category = support_tech
+			}
+		}
+	}
+	
+	focus = {
+		id = SAF_special_service_battalion
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = SAF_improve_the_three_oh_three }
+		prerequisite = { focus = SAF_sa_engineer_corps }
+		x = -1
+		y = 1
+		relative_position_id = SAF_sa_engineer_corps
+
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				name = SAF_special_service_battalion
+				cost_reduction = 0.5
+				uses = 2
+				category = land_doctrine 
 			}
 		}
 	}
