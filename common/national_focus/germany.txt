@@ -2915,13 +2915,13 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			custom_effect_tooltip = GER_modify_bewegungskrieg_modifier_tt
-			effect_tooltip = {
-				add_to_variable = { 
-					GER_bewegungskrieg_army_infantry_attack_factor = 0.05
-					tooltip = army_infantry_attack_factor_tt
-				}
-			}
+			#custom_effect_tooltip = GER_modify_bewegungskrieg_modifier_tt
+			#effect_tooltip = {
+			#	add_to_variable = { 
+			#		GER_bewegungskrieg_army_infantry_attack_factor = 0.05
+			#		tooltip = army_infantry_attack_factor_tt
+			#	}
+			#}
 		}
 	}			
 
@@ -2934,7 +2934,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = GER_improve_motorized_troops
-		cost = 10
+		cost = 5
 		available = {
 		}
 
@@ -2994,13 +2994,13 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			custom_effect_tooltip = GER_modify_bewegungskrieg_modifier_tt
-			effect_tooltip = {
-				add_to_variable = { 
-					GER_bewegungskrieg_army_artillery_attack_factor = 0.1
-					tooltip = army_artillery_attack_factor_tt
-				}
-			}
+			#custom_effect_tooltip = GER_modify_bewegungskrieg_modifier_tt
+			#effect_tooltip = {
+			#	add_to_variable = { 
+			#		GER_bewegungskrieg_army_artillery_attack_factor = 0.1
+			#		tooltip = army_artillery_attack_factor_tt
+			#	}
+			#}
 		}
 	}
 	
@@ -3038,17 +3038,17 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			custom_effect_tooltip = GER_modify_bewegungskrieg_modifier_tt
-			effect_tooltip = {
-				add_to_variable = { 
-					GER_bewegungskrieg_army_infantry_attack_factor = 0.05
-					tooltip = army_infantry_attack_factor_tt
-				}
-				add_to_variable = { 
-					GER_bewegungskrieg_breakthrough_factor = 0.05
-					tooltip = breakthrough_factor_tt
-				}
-			}
+			#custom_effect_tooltip = GER_modify_bewegungskrieg_modifier_tt
+			#effect_tooltip = {
+			#	add_to_variable = { 
+			#		GER_bewegungskrieg_army_infantry_attack_factor = 0.05
+			#		tooltip = army_infantry_attack_factor_tt
+			#	}
+			#	add_to_variable = { 
+			#		GER_bewegungskrieg_breakthrough_factor = 0.05
+			#		tooltip = breakthrough_factor_tt
+			#	}
+			#}
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
@@ -3947,7 +3947,7 @@ focus_tree = {
 		x = 3
 		y = 1
 		relative_position_id = GER_adopt_new_panzer_doctrine
-		cost = 10
+		cost = 5
 		available = {
 			has_tech = radio
 		}
@@ -8580,17 +8580,17 @@ focus_tree = {
 		available = {
 		}
 		completion_reward = {
-			add_timed_idea = { 
-					idea = GER_entrenching_idea 
-					days = 70 
-			} 
-			hidden_effect = {
-				HUN = { add_timed_idea = { idea = GER_entrenching_idea days = 90 } }
-				ROM = { add_timed_idea = { idea = GER_entrenching_idea days = 90 } }
-				BUL = { add_timed_idea = { idea = GER_entrenching_idea days = 90 } }
-				SPA = { add_timed_idea = { idea = GER_entrenching_idea days = 90 } }
-				ITA = { add_timed_idea = { idea = GER_entrenching_idea days = 90 } }
-				#EFR = { add_timed_idea = { idea = GER_entrenching_idea days = 90 } }
+     		every_country = {
+				limit = { 
+					OR = { 
+						tag = GER 
+						tag = ROM
+						tag = HUN 
+						tag = SPR 
+						tag = BUL  
+					} 
+				}
+			 add_timed_idea = { idea = GER_entrenching_idea days = 90 }
 			}
 		}
 	}
@@ -8642,7 +8642,7 @@ focus_tree = {
 					} 
 				}
 			 add_timed_idea = { idea = GER_typhoon days = 30 }
-		}
+			}
 		}
 	}
 
