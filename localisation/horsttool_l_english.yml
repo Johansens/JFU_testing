@@ -385,8 +385,16 @@
  FRA_operation_dragoon:0 "Operation Dragoon"
  FRA_operation_dragoon_desc:0 "An amphibious landing in Southern France can draw away German units from the Atlantikwall, making a more serious invasion in Northern France more possible."
 
+
+ SAF_the_south_african_army:"The South African Army"
+ SAF_Follow_the_British:"Follow the British"
+ SAF_New_armor_doctrine:"New Armor Doctrine"
+ SAF_expand_the_special_forces:"Expand the Special Forces"
+ SAF_Swift_Victory:"Swift Victory"
+ SAF_Rebuild_our_armored_corps:"Rebuild our Armored Corps"
+ SAF_queen_of_the_desert:0 "Queen of the Desert"
+
  MEX_focus_play_their_game:0 "Armor Effort"
- MEX_focus_tank_workshops:0 "Tank Workshops"
  MEX_focus_army_expansion_programm:0 "Army Expansion Program"
  MEX_focus_lets_start_rolling:0 "Mechanization Effort"
  MEX_focus_Radios_for_trucks:0 "Truck Radios"
@@ -429,6 +437,10 @@
  MEX_focus_rubber_refineries:0 "Rubber Refining"
  MEX_focus_improve_steel_plants:0 "Improved Steel Plants"
  MEX_focus_improved_resource_gain:0 "Mining Permits"
+ MEX_focus_rebuilding_the_army:0 "Rebuilding the Army"
+
+
+
  ROM_nationalize_oil_industry:0 "Nationalise Oil Industry"
 
  MAN_railways_extend_to_port_arthur_desc:0 "We should extend our railway expansion to Dalian to improve trade with Japan"
@@ -962,6 +974,7 @@
  aus_infrastructure_effort_2:0 "Infrastructure Effort II"
  aus_infrastructure_effort_2_desc:0 "Extending our infrastructure further will enable the transports and communications necessary for high-tech clandestine projects." 
 
+
  #tooltips
 
  SOV_behead_the_snake_JFU_tt:0 "Trotsky will be §Rautomatically assasinated §Win 100 days."
@@ -1056,12 +1069,17 @@
  GER_form_the_reichskommissariats_tt:0 "Every state occupied by us \n  Add §YSS Occupation§! which grants:\nlocal Resources: §G+5%§!\nlocal Factories: §G+15%§!\nResistance Target: §G-40%§!\nDamage to Garrisons: §R+50%§!\nRequired Garrisons: §R+15%§!\nDaily Compliance Gain: §R-0.01%§!"
  GER_barbarossa_others_text:0 "§C\nOur allies will benefit from attack plans as well.§!"
  GER_winter_tt:0 "This focus is automatically completed after our §YOperation Barabrossa§! buff ends"
- GER_fortify_the_vaterland_unlock_decisionjfu_tt:0 "Unlocks §Ydecision§! to build multiple §Ydefensive Lines§! in Europe\n§RThis focus is needed for the atlantik wall decision§!"
+ GER_fortify_the_vaterland_unlock_decisionjfu_tt:0 "Unlocks decision to build multiple §Ydefensive Lines§! in Europe\n§RThis focus is needed for the atlantik wall decision§!"
 
 
  ITA_blackshirts_div_cap_20_tt:0 "Modify template cap of §YCamicie Nere§! by §G+20§!."
  ITA_strengthen_the_blackshirts_spawn_divs_10_tt:0 "Create §Y10 Camicie Nere§! divisions in §Y[THIS.GetName]§!."
  ITA_strengthen_the_blackshirts_template_30_tt:0 "Modify template cap of §YCamicie Nere§! by §G+30§!."
+ ITA_incrociatori_pesanti_tt:0 "We gain §Y8§! 1936 Heavy Crusiers production Lines at 80% complete."
+ ITA_navi_da_battaglia_tt:0 "We gain §Y5§! 1936 Battleships production Lines at 80% complete"
+ ITA_cacciatorpediniere_di_scorta_tt:0 "We gain §Y10§! 1940 destroyer production Lines at 80% complete"
+ ITA_incrociatori_leggeri_tt:0 "We gain §Y10§! 1936 Light Cruiser production Lines at 80% complete"
+ ITA_flotta_d_evasione_tt:0 "We gain §Y3§! Super Heavy Battleships prouction Lines at 80% complete"
  
  MIO_range_trait:0 "Unlocks a special Range trait for the Light Aircraft and Naval Aircraft Designer"
  MIO_agility_trait:0 "Unlocks a special Agility trait for the Light Aircraft and Naval Aircraft Designer"
@@ -1115,16 +1133,18 @@
  USA_destroyers_for_bases_JFU_tt:0 "The §YUnited States§!"
  USA_destroyers_for_bases_JFU1_tt:0 "§Rin exchange for 50 old destroyers§!"
 
- BRA_licence_tt:0 "If we chose the §RPromote Centralization§! Focus path we will gain §YForeign Licenses§!, which grants (LIcense production speed §G+10.00%§!)\nIf we instead chose the §RGreater Federalism§! Focus path this effect will be increased by §G+5.00%§!."
- BRA_industry_factory_tt:0 "If we chose the §RGreater Federalism§! Focus path we will modify §Y$BRA_army_modifier$§! by (Factory Output §G+5.00%§!)\nIf we instead chose the §RPromote Centralization§! Focus path this effect will be increased by §G+5.00%§!."
- BRA_mils_construction_tt:0 "If we chose the §RGreater Federalism§! Focus path we will modify §Y$BRA_army_modifier$§! by (§YMilitary Factory§! construction Speed §G+5.00%§!)\nIf we chose the §RPromote Centralization§! Focus path this effect will be increased by §G+5.00%§!."
- BRA_max_planning_tt:0 "If we chose the §RPromote Centralization§! Focus path we will modify §Y$BRA_army_modifier$§! by (Max planning §G+5.00%§!)\nIf we instead chose the §RGreater Federalism§! Focus path this effect will be increased by §G+5.00%§!."
- BRA_army_prof_tt:0 "If we chose the §RPromote Centralization§! Focus path we will modify §Y$BRA_army_modifier$§! by (Division Oranisation §G+5.00%§!, Divison Attack §G+5.00%§!)\nIf we instead chose the §RGreater Federalism§! Focus path this effect will be increased by §G+5.00%§!."
- BRA_conscription_tt:0 "If we chose the §RGreater Federalism§! Focus path we will modify §Y$BRA_army_modifier$§! by (Division Oranisation §G+5.00%§!, Recruitable Population §Y1.00%§!)\nIf we instead chose the §RPromote Centralization§! Focus path we will gain an additional (Division Organisation §G+5.00%§!, Recrutable Population §Y0.50%§!)."
- BRA_artillery_tt:0 "If we chose the §RGreater Federalism§! Focus path we will modify §Y$BRA_army_modifier$§! by (Artillery Attack §G+10.00%§!, Artillery Defence §G10.00%§!)\nIf we instead chose the §RPromote Centralization§! Focus path we will gain §YIncreased Artillery Production§!, which grants (§YTowed Artillery§!: $production_cost_tt$ §G-10.00%§!, §YTowed Rocket Artillery§!: $production_cost_tt$ §G-10.00%§!, §YTowed anti Tank§!: $production_cost_tt$ §G-10.00%§!)."
- BRA_politcal_branches_tt:0 "§RDepending on our politcal choice we change what boni we gain in our army tree§!" 
+ BRA_licence_tt:0 "Add §YForeign Licenses§!, which grants License production speed §G+10.00%§!"
+ BRA_industry_factory_tt:0 "Modify §Y$BRA_army_modifier$§! by: Factory Output §G+5.00%§!"
+ BRA_mils_construction_tt:0 "Modify §Y$BRA_army_modifier$§! by: §YMilitary Factory§! construction Speed §G+5.00%§!"
+ BRA_max_planning_tt:0 "Modify §Y$BRA_army_modifier$§! by (Max planning §G+5.00%§!)"
+ BRA_army_prof_tt:0 "Modify §Y$BRA_army_modifier$§! by: Division Oranisation §G+5.00%§!, Divison Attack §G+5.00%§!"
+ BRA_conscription_tt:0 "Modify §Y$BRA_army_modifier$§! by: Division Oranisation §G+5.00%§!, Recruitable Population §Y1.00%§!"
+ BRA_artillery_tt:0 "Modify §Y$BRA_army_modifier$§! by: Artillery Attack §G+10.00%§!, Artillery Defence §G10.00%§!"
+ #BRA_politcal_branches_tt:0 "§RDepending on our politcal choice we change what boni we gain in our army tree§!" 
  
  MEX_jungle_training_effect_tt:0 "Enables §HExtensive Infantry Forest Training§!\n§HInfantry\n    Forest§!\n      Attack: §G+5%§!\n      Movement: §G+10%§!\n"
+ MEX_mio_trait_hotrolled_armor:0 "MExico armor upgrade"
+
 
  tooltip_MAN_railways:0 "§YBegins work on a railway network across Manchuria§ \n\n§YRailway work is completed every 140 days until all states have been developed. Railway expansion adds 1 civilian factory, 1 infrastructure, and 3 building slot§\n\n"
  
@@ -1272,9 +1292,12 @@
  AST_m_special_unit_idea:0 "M Special Unit"
  AST_rats_of_tobruk_idea:0 "Rats of Tobruk"
 
+ SAF_swift_victory_idea:"Swift Victory against Italy"
+ SAF_rebuild_armored_corps_idea:"Rebuild our Armored Corps"
+
+
  MEX_conscription_campaign:0 "Conscription Campaign"
  MEX_preperation_for_the_new_year:0 "Beach Exercises"
- MEX_brown_water_navy:0 "Brown Water Navy"
  MEX_improvement_of_armor:0 "Armor Improvement"
  MEX_improvement_of_motorization:0 "Motorized Army"
  MEX_defence_effort:0 "Defense Effort"
@@ -1283,8 +1306,6 @@
  MEX_better_pack_arty:0 "Mountain Flatteners"
  MEX_bigger_landings:0 "Bigger Landings"
  MEX_faster_planning:0 "Planning Corps"
- MEX_politicised_army:0 "Politicised Army"
- MEX_politicised_army_2:0 "Depoliticised Army"
  MEX_better_naval_prep_invasion:0 "Preparation for Landing"
  MEX_support_offshore:0 "Offshore Support"
  MEX_Battleship_focus:0 "Mexican Dreadnoughts"
