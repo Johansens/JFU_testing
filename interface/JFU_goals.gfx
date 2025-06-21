@@ -1989,4 +1989,52 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/sov/SOV_armour_development.dds"
 	}
     
+
+    SpriteType = {
+		name = "GFX_R56_GOAL_SAF_FLAG"
+		texturefile = "gfx/interface/goals/saf/r56_goal_SAF_flag.dds"
+	}
+    
+
+    SpriteType = {
+		name = "GFX_ENG_QUEEN_OF_THE_DESERT"
+		texturefile = "gfx/interface/goals/eng/ENG_queen_of_the_desert.dds"
+	}
+    
+
+    SpriteType = {
+		name = "GFX_R56_GOAL_CAN_WCMC"
+		texturefile = "gfx/interface/goals/can/r56_goal_CAN_WCMC.dds"
+	}
+    
+
+    SpriteType = {
+		name = "GFX_R56_FOCUS_GENERIC_STUDY_FOREIGN_TANKS"
+		texturefile = "gfx/interface/goals/generic/r56_focus_generic_study_foreign_tanks.dds"
+	}
+    
+
+    SpriteType = {
+		name = "GFX_R56_GOAL_GENERIC_EXPANDED_PRODUCTION"
+		texturefile = "gfx/interface/goals/generic/r56_goal_generic_expanded_production.dds"
+	}
+    
+
+    SpriteType = {
+		name = "GFX_R56_GOAL_ENG_TAKE_OUT_THE_REGIA_MARINA"
+		texturefile = "gfx/interface/goals/eng/r56_goal_ENG_take_out_the_regia_marina.dds"
+	}
+    
+
+    SpriteType = {
+		name = "GFX_R56_GOAL_AST_DINGO_SCOUT_CAR"
+		texturefile = "gfx/interface/goals/r56_goal_AST_dingo_scout_car.dds"
+	}
+    
+
+    SpriteType = {
+		name = "GFX_R56_FOCUS_GENERIC_ARMY_MODERNIZATIONS"
+		texturefile = "gfx/interface/goals/generic/r56_focus_generic_army_modernizations.dds"
+	}
+    
 }
