@@ -2094,8 +2094,8 @@ focus_tree = {
 				#}
 			}
 			custom_effect_tooltip = BRA_artillery_tt
-				add_to_variable = { JUNO_army_modifier_army_artillery_attack_factor = 0.1 tooltip = artillery_attack_factor_tt }
-				add_to_variable = { JUNO_army_modifier_army_artillery_defence_factor = 0.1 tooltip = army_artillery_defence_factor_tt }
+			add_to_variable = { JUNO_army_modifier_army_artillery_attack_factor = 0.1 }
+			add_to_variable = { JUNO_army_modifier_army_artillery_defence_factor = 0.1 }
 		}
 	}
 
@@ -2261,8 +2261,8 @@ focus = {
 				#	add_to_variable = { JUNO_army_modifier_army_attack_factor = 0.10 }
 				#	add_to_variable = { JUNO_army_modifier_army_org_factor = 0.10 }
 				#}
-					add_to_variable = { JUNO_army_modifier_army_attack_factor = 0.10 }
-					add_to_variable = { JUNO_army_modifier_army_org_factor = 0.10 }
+					add_to_variable = { JUNO_army_modifier_conscription = 0.01 }
+					add_to_variable = { JUNO_army_modifier_army_org_factor = 0.05 }
 			}
 			custom_effect_tooltip = BRA_conscription_tt
 		}
