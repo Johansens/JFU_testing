@@ -2548,6 +2548,20 @@ focus_tree = {
 			available_if_capitulated = yes
 
 			completion_reward = {
+				add_doctrine_cost_reduction = {
+					name = land_doctrine
+					cost_reduction = 0.5
+					uses = 2
+					category = land_doctrine
+				}
+				if = {
+					limit = {
+						has_dlc = "Arms Against Tyranny"
+					}
+					mio:MEX_tga_organization = {
+						unlock_mio_trait_tooltip = MEX_mio_trait_hotrolled_armor
+					}
+				}
 			}
 	}	
 	focus = {
