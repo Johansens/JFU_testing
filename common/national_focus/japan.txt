@@ -431,8 +431,7 @@
 	focus = {
 		id = JAP_take_papua
 		icon = GFX_JAP_ATTACK_INDONESIA
-		prerequisite = { focus = JAP_take_borneo }
-		prerequisite = { focus = JAP_take_philippines }
+		prerequisite = { focus = JAP_take_borneo focus = JAP_take_philippines }
 		x = -1
 		y = 1
 		relative_position_id = JAP_take_borneo
@@ -508,8 +507,7 @@
 	focus = {
 		id = JAP_take_java
 		icon = GFX_JAP_ATTACK_INDONESIA
-		prerequisite = { focus = JAP_take_malaya }
-		prerequisite = { focus = JAP_take_sumatra }
+		prerequisite = { focus = JAP_take_malaya focus = JAP_take_sumatra }
 		x = 1
 		y = 1
 		relative_position_id = JAP_take_malaya
