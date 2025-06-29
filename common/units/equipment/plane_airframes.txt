@@ -423,7 +423,7 @@ equipments = {
 		maximum_speed = 475
 		air_agility = 50
 		air_defence = 12
-		air_attack = 4
+		#air_attack = 4
 		weight = 6
 		naval_strike_attack = 1
 		naval_strike_targetting = 1
@@ -509,6 +509,17 @@ equipments = {
 				}
 			}
 			special_type_slot_3 = {
+				required = no
+				allowed_module_categories = {
+					plane_special_module_small
+					plane_special_module_bomb_sights
+					plane_special_module_radio_navigation
+					plane_special_module_air_ground_radar
+					plane_special_module_air_air_radar
+					plane_special_module_defense_turret
+				}
+			}
+			special_type_slot_4 = {
 				required = no
 				allowed_module_categories = {
 					plane_special_module_small
@@ -1212,7 +1223,7 @@ equipments = {
 		maximum_speed = 475
 		air_agility = 45
 		air_defence = 12
-		air_attack = 4
+		#air_attack = 4
 		weight = 6
 		naval_strike_attack = 1
 		naval_strike_targetting = 1
@@ -1305,6 +1316,17 @@ equipments = {
 					plane_special_module_radio_navigation
 					plane_special_module_air_ground_radar
 					plane_special_module_air_air_radar
+				}
+			}
+			special_type_slot_4 = {
+				required = no
+				allowed_module_categories = {
+					plane_special_module_small
+					plane_special_module_bomb_sights
+					plane_special_module_radio_navigation
+					plane_special_module_air_ground_radar
+					plane_special_module_air_air_radar
+					plane_special_module_defense_turret
 				}
 			}
 		}
