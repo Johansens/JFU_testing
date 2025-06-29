@@ -89,6 +89,14 @@ JAP_light_aircraft_organization = {
 		has_dlc = "Arms Against Tyranny"
 	}
 
+	initial_trait = {
+		equipment_bonus = {
+			air_range = 0.05
+			air_attack = 0.05
+		} 
+	}
+
+
 	add_trait = {
 		token = JAP_agility_focus_trait
 		name = JAP_agility_focus_trait

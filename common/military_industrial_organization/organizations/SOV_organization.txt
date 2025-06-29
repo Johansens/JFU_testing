@@ -707,7 +707,8 @@ SOV_mig_design_bureau_organization = {
 		equipment_bonus = {
 			air_agility = 0.05
 			maximum_speed = 0.05
-			air_defence = 0.2
+			air_defence = 0.1
+			air_attack = 0.1
 		}
 	}
 
@@ -820,7 +821,7 @@ SOV_mig_design_bureau_organization = {
 		}
 
 		equipment_bonus = {
-			#air_defence = @aircraft_air_defence
+			air_defence = @aircraft_air_defence
 			surface_detection = @aircraft_surface_detection
 			sub_detection = @aircraft_sub_detection
 		}
