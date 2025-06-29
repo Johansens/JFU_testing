@@ -51,6 +51,7 @@ RAJ_ammunition_factory_khadki_organization = {
 	allowed = {	
 		has_dlc = "Graveyard of Empires"
 		ROOT = { original_tag = RAJ }
+		always = no
 	}
 	name = RAJ_ammunition_factory_khadki
 	available = {

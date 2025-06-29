@@ -4084,7 +4084,7 @@ focus_tree = {
         y = 1
         relative_position_id = RAJ_temple_entry_movements
         
-        cost = 10
+        cost = 5
 
         ai_will_do = {
             factor = 1
@@ -4111,10 +4111,10 @@ focus_tree = {
                 days = 180
             }
 
-            custom_effect_tooltip = generic_skip_one_line_tt
+            #custom_effect_tooltip = generic_skip_one_line_tt
 
-            custom_effect_tooltip = available_political_advisor
-            show_ideas_tooltip = RAJ_GOE_tara_singh
+            #custom_effect_tooltip = available_political_advisor
+            #show_ideas_tooltip = RAJ_GOE_tara_singh
 
             custom_effect_tooltip = generic_skip_one_line_tt
 

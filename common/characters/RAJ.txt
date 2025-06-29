@@ -1694,9 +1694,11 @@ characters={
 			}
 			visible = {
 				has_completed_focus = RAJ_sikh_religious_guarantees
+				always = no
 			}
 			available = {
 				has_completed_focus = RAJ_sikh_religious_guarantees
+				always = no
 			}
 			traits = {
 				sikh_activist 
