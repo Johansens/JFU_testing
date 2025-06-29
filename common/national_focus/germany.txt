@@ -5391,17 +5391,7 @@ focus_tree = {
 		cancel_if_invalid = no
 
 		available = {
-			custom_trigger_tooltip = {
-				tooltip = GER_war_with_american_country_tt
-				 any_enemy_country = {
-					capital_scope = { 
-						OR = {
-							is_on_continent = north_america
-							is_on_continent = south_america
-						}
-					}
-				}
-			}
+			has_war_with = USA
 		}
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
