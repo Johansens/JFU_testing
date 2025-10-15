@@ -445,6 +445,18 @@ JFU_game_rules_effect = {
 		}
 		SWE = { JFU_comp_startup_effect = yes }
 	}
+	if = {
+		limit = {
+			NOT = {
+				has_game_rule = { 
+					rule = JFU_pre_sets 
+					option = COMPETITIVE_JFU 
+				}					
+			}
+		}
+		SWE = { JFU_normal_startup_effect = yes }
+
+	}
 }
 JFU_other_stuff_on_start_up_effect = {
 	if = { limit = { ai_country_allies = yes } country_lock_all_division_template = yes }
@@ -745,6 +757,36 @@ JFU_comp_startup_effect = {
 		add_ideas = ai_limiter
 		add_ideas = lower_surrender_cap_idea
 	}	
+}
+JFU_normal_startup_effect = {
+	GER = {
+		add_ideas = { volunteers_7 }
+	}
+	HUN = {
+		add_ideas = { volunteers_4 }			
+	}
+	ROM = {
+		add_ideas = { volunteers_3 }			
+	}
+	BUL = {
+		add_ideas = { volunteers_3 }			
+	}
+	MAN = {
+		add_ideas = { volunteers_3 }			
+	}
+	SOV = {
+		add_ideas = { volunteers_8 }			
+	}
+	FRA = {
+		add_ideas = { volunteers_4 }			
+	}
+	ITA = {
+		add_ideas = { volunteers_4 }
+		load_oob = "ITA_1936_nsb"
+	}
+	JAP = {
+		add_ideas = { volunteers_4 }
+	}
 }
 JFU_scripted_events_effect = {
 	ENG = { country_event = { id = britain.16 days = 21 } }
@@ -3465,7 +3507,7 @@ SOV_relocate_civ_moscow = {
 				}
 			}				
 		}
-}
+	}
 }
 SOV_relocate_mil_moscow = {
 	random_owned_controlled_state = {
