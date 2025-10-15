@@ -204,7 +204,7 @@ characters={
 		}
 	}
 
-	EFR_charles_maurras={
+	#EFR_charles_maurras={
 		#advisor={
 		#	slot = political_advisor
 		#	idea_token = charles_maurras
@@ -222,83 +222,89 @@ characters={
 		#		national_integralist 
 		#	}
 		#}
-		name="Charles Maurras"
-		portraits={
-			army={
-				small="GFX_idea_generic_political_advisor_europe_3"
-			}
-		}
-	}
+	#	name="Charles Maurras"
+	#	portraits={
+	#		army={
+	#			small="GFX_idea_generic_political_advisor_europe_3"
+	#		}
+	#	}
+	#}
 	
 	EFR_marius_viple={
-		advisor={
-			slot = political_advisor
-			idea_token = EFR_marius_viple
-			allowed  = {
-					original_tag  = EFR 
-				}
-				traits  = {
-					popular_figurehead 
-				}
-		}
 		name="EFR_marius_viple"
+
 		portraits={
 			army={
 				small="GFX_idea_generic_political_advisor_europe_2"
 			}
 		}
-	}
-	EFR_felix_gouin={
+
 		advisor={
 			slot = political_advisor
-			idea_token = EFR_felix_gouin
-			allowed  = {
-					original_tag  = EFR 
-				}
-				traits  = {
-					captain_of_industry 
-				}
+			idea_token = EFR_marius_viple
+			allowed = {
+				original_tag  = EFR 
+			}
+
+			traits  = {
+				popular_figurehead 
+			}
 		}
+	}
+	EFR_felix_gouin={
+
 		name="EFR_felix_gouin"
 		portraits={
 			army={
 				small="GFX_idea_generic_political_advisor_europe_3"
 			}
 		}
-	}
-	EFR_marcel_bucard={
 		advisor={
 			slot = political_advisor
-			idea_token = marcel_bucard
+			idea_token = EFR_felix_gouin
 			allowed  = {
-					original_tag  = EFR 
-				}
-				traits  = {
-					fascist_demagogue 
-				}
+				original_tag  = EFR 
+			}
+			traits  = {
+				captain_of_industry 
+			}
 		}
+	}
+	EFR_marcel_bucard={
+
 		name="Marcel Bucard"
 		portraits={
 			army={
 				small="GFX_idea_marcel_bucard"
 			}
 		}
-	}
-	EFR_gaston_henry_haye={
 		advisor={
 			slot = political_advisor
-			idea_token = EFR_gaston_henry_haye
+			idea_token = marcel_bucard
 			allowed  = {
-					original_tag  = EFR 
-				}
-				traits  = {
-					silent_workhorse 
-				}
+				original_tag  = EFR 
+			}
+			traits  = {
+				fascist_demagogue 
+			}
 		}
+	}
+	EFR_gaston_henry_haye={
+
 		name="EFR_gaston_henry_haye"
 		portraits={
 			army={
 				small="GFX_idea_generic_political_advisor_europe_5"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = EFR_gaston_henry_haye
+			allowed  = {
+				original_tag  = EFR 
+			}
+			traits  = {
+				silent_workhorse 
 			}
 		}
 	}

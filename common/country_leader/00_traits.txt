@@ -47,7 +47,7 @@ leader_traits = {
 		random = no
 		training_time_army_factor = -0.5
 		mobilization_speed = 1
-		min_export = -1
+		#min_export = -1
 	}
 
 	dictator = {
