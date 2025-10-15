@@ -155,8 +155,8 @@ adjacency_rule =
 	
 	required_provinces = { 9296 316 }
 	
-	icon = 2431
-	offset = { -26 0 -13 }
+	icon = 9296
+	offset = { 5 0 -10 }
 }
 
 #Panama Canal
