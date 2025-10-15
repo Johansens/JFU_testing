@@ -77,7 +77,7 @@ NDefines.NMilitary.RIVER_CROSSING_PENALTY_LARGE = -0.5           -- large river 
 NDefines.NMilitary.RIVER_CROSSING_SPEED_PENALTY = -0.25           -- small river crossing
 NDefines.NMilitary.RIVER_CROSSING_SPEED_PENALTY_LARGE = -0.5     -- large river crossing
 NDefines.NMilitary.ENCIRCLED_DISBAND_MANPOWER_FACTOR = 0            -- WAS 0.2 | Most rulesets ban deleting encircled troops, but at least this prevents some manpower from returning | Deleting encircled divisions is always banned anyways, so this reduces unfair play | percentage of manpower returned when an encircled unit is disbanded
-AMPHIBIOUS_LANDING_PENALTY = -0.7,								-- VANILLA -0.5 amphibious landing penalty
+NDefines.NMilitary.AMPHIBIOUS_LANDING_PENALTY = -0.7				-- VANILLA -0.5 amphibious landing penalty
 
 NDefines.NMilitary.COMBAT_MOVEMENT_SPEED = 0.30 -- VANILLA 0.33
 NDefines.NMilitary.LAND_SPEED_MODIFIER = 0.05	-- VANILLA 0.05
