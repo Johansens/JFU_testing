@@ -173,7 +173,7 @@ focus = {
 
 	focus = {
 		id = FRA_colonial_industry
-		icon = GFX_focus_generic_industry_3
+		icon = GFX_focus_generic_africa_factory
 		prerequisite = { focus = FRA_colonial_infrastructure2 }
 		x = 0
 		y = 2
@@ -662,7 +662,7 @@ focus = {
 	}
 	focus = {
 		id = FRA_encourage_immigration
-		icon = GFX_goal_generic_national_unity
+		icon = GFX_focus_generic_population_growth
 		x = 2
 		y = 1
 
@@ -821,7 +821,7 @@ focus = {
 	}
 	focus = {
 		id = FRA_strengthen_government_support
-		icon = GFX_goal_generic_demand_territory
+		icon = GFX_focus_generic_improve_the_administration
 		available = {
 		}
 	 	prerequisite = {
@@ -848,7 +848,7 @@ focus = {
 	}	
 	focus = {
 		id = FRA_defensive_strategems
-		icon = GFX_goal_generic_fortify_city
+		icon = GFX_R56_GOAL_GENERIC_BASTION_OF_DEMOCRACY
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = FRA_strengthen_government_support_tooltip
@@ -1563,7 +1563,7 @@ focus = {
 	}
 	focus = {
 		id = FRA_cooperation_with_the_communists
-		icon = GFX_focus_generic_soviet_politics
+		icon = GFX_focus_generic_spur_communist_revolutions
 		x = 0
 		y = 1
 
@@ -1723,7 +1723,7 @@ focus = {
 	}
 	focus = {
 		id = FRA_national_uprising
-		icon = GFX_goal_generic_dangerous_deal
+		icon = GFX_focus_FIN_weapon_caches
 		x = -1
 		y = 1
 

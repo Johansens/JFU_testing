@@ -1370,10 +1370,9 @@ characters = {
 		}
 
 		scientist = {
-			traits = { scientist_trait_nuclear_specialist scientist_trait_fast_learner }
+			traits = { scientist_trait_armored_specialist }
 			skills = {
-				specialization_nuclear = 2
-				specialization_naval = 2
+				specialization_land = 2
 			}
 		}	
 	}

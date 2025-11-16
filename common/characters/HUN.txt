@@ -1807,9 +1807,6 @@ characters = {
 	HUN_sandor_magyarossy = {
 		instance = {
 			allowed = {
-				NOT = {
-					has_dlc = "Gotterdammerung"
-				}
 			}
 
 			name = HUN_sandor_magyarossy
@@ -1827,7 +1824,7 @@ characters = {
 					original_tag = HUN
 				}
 				traits = {
-					air_air_combat_training_1
+					air_air_combat_training_2
 				}
 				cost =  50
 				ai_will_do = {

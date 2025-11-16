@@ -190,80 +190,6 @@ country_event = {
 	}
 }
 
-
-#UK independence
-country_event = {
-	id = GOE_RAJ.31
-	title = GOE_RAJ.31.t	
-	desc = GOE_RAJ.31.desc	
-	picture = GFX_report_event_generic_sign_treaty2
-	is_triggered_only = yes
-	option = {
-		name = GOE_RAJ.31.a
-		ai_chance = {
-			base = 1
-		}
-		add_timed_idea = {
-			idea = idea_RAJ_sold_parts_of_india_to_private_investors
-			days = 365
-		}
-		custom_effect_tooltip =  GOE_RAJ.31.a_tt
-	}
-
-	option = {
-		name = GOE_RAJ.31.b
-		trigger = {
-			is_ai = no
-			FROM = { is_ai = yes }
-		}
-
-		ai_chance = {
-			base = 0
-		}
-
-		add_timed_idea = {
-			idea = idea_RAJ_great_depression_1
-			days = 365
-		}
-
-		if = {
-			limit = {
-				FROM = { has_completed_focus = RAJ_great_depression_price_controls }
-			}
-			FROM = {	
-				uncomplete_national_focus = {
-					focus = RAJ_great_depression_price_controls
-					uncomplete_children = yes
-					refund_political_power = yes
-				}
-			}
-		}
-
-		FROM = { set_country_flag = ENG_rejected_eic } #activate the other AI strat
-
-
-		if = {
-			limit = {
-				FROM = { has_idea = idea_RAJ_price_controls }
-			}
-			remove_ideas = {
-				idea_RAJ_price_controls
-			}
-		} 
-
-		if = {
-			limit = {
-				FROM = { has_idea = idea_RAJ_price_controls_2 }
-			}
-			remove_ideas = {
-				idea_RAJ_price_controls_2
-			}
-		} 
-
-
-	}
-}
-
 #UK - Mughal uprising
 country_event = {
 	id = GOE_RAJ.33
@@ -1364,7 +1290,6 @@ country_event = {
 	option = {
 
 		name = GOE_RAJ_famine.7.a
-		unlock_decision_category_tooltip = RAJ_GOE_famine_cat
 		if = { #If by some chance the state is lost pre famine or cheesed away, take another one 
 			limit = {
 				var:global.famine_state = {

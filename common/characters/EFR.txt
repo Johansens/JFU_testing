@@ -348,7 +348,7 @@ characters={
 		name="EFR_philippe_henriot"
 		portraits={
 			army={
-				small="GFX_idea_EFR_philippe_henriot"
+				small="GFX_idea_FRA_philippe_henriot"
 			}
 		}
 	}
@@ -369,7 +369,7 @@ characters={
 		name="EFR_pierre_pucheu"
 		portraits={
 			army={
-				small="GFX_idea_EFR_pierre_pucheu"
+				small="GFX_idea_FRA_pierre_pucheu"
 			}
 		}
 	}
@@ -446,7 +446,7 @@ characters={
 		name="EFR_henri_giraud"
 		portraits={
 			army={
-				small="GFX_idea_EFR_henri_giraud"
+				small="GFX_idea_henri_giraud"
 			}
 		}
 	}
@@ -455,13 +455,13 @@ characters={
 			slot = high_command
 			idea_token = EFR_jean_francois_jannekeyn
 			ledger  = army 
-				allowed  = {
-					original_tag  = EFR 
-				}
-				cost = 75
-				traits  = {
-					army_infantry_2 
-				}
+			allowed  = {
+				original_tag  = EFR 
+			}
+			cost = 75
+			traits  = {
+				army_infantry_2 
+			}
 		}
 		name="EFR_jean_francois_jannekeyn"
 		portraits={
@@ -489,7 +489,7 @@ characters={
 		name="EFR_frederic_irene_joliot_curie"
 		portraits={
 			army={
-				small="GFX_idea_EFR_frederic_irene_joliot_curie"
+				small="GFX_idea_frederic_irene_joliot_curie"
 			}
 		}
 	}

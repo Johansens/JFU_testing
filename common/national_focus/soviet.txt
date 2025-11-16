@@ -1259,13 +1259,6 @@ focus_tree = {
 		completion_reward = {
 			add_to_variable = { SOV_soviet_airforce_air_cas_present_factor = 0.1 }
 			custom_effect_tooltip = SOV_ground_support_ns_tt
-
-			add_tech_bonus = {
-				name = SOV_ground_support
-				bonus = 1
-				uses = 1
-				category = light_air
-			}
 			260 = {
 				set_building_level = {
 					type = air_base
@@ -1466,13 +1459,9 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = SOV_pc_of_mechanical_engineering
-		cost = 10
+		cost = 5
 
 		available = {
-			OR = {
-				has_tech = improved_medium_tank_chassis
-				has_tech = improved_medium_tank
-			}
 		}
 		
 		search_filters = {FOCUS_FILTER_RESEARCH}
@@ -1483,110 +1472,9 @@ focus_tree = {
 
 			add_tech_bonus = {
 				name = SOV_superior_war_machines
-				bonus = 0.75
-				uses = 2
+				bonus = 1
+				uses = 1
 				category = armor
-			}
-			if = {
-				limit = {
-					has_dlc = "No Step Back"
-				}
-				#T-34 tank template
-				if = {
-					limit = {
-						OR = {
-							has_tech = artillery3
-							has_tech = antitank3
-						}
-					}
-					create_equipment_variant = {
-						name = "T-34"
-						type = medium_tank_chassis_2
-						parent_version = 0
-						modules = {
-							main_armament_slot = tank_medium_cannon_2
-							turret_type_slot = tank_medium_two_man_tank_turret
-							suspension_type_slot = tank_christie_suspension
-							armor_type_slot = tank_welded_armor
-							engine_type_slot = tank_diesel_engine
-							special_type_slot_1 = sloped_armor
-						}
-						upgrades = {
-							tank_nsb_engine_upgrade = 10
-							tank_nsb_armor_upgrade = 7
-						}
-						icon = "gfx/interface/technologies/SOV_imp_main_tank.dds"
-					}
-				}
-				else_if = {
-					limit = {
-						OR = {
-							has_tech = artillery1
-							has_tech = antitank1
-						}
-					}
-					create_equipment_variant = {
-						name = "T-34"
-						type = medium_tank_chassis_2
-						parent_version = 0
-						modules = {
-							main_armament_slot = tank_medium_cannon
-							turret_type_slot = tank_medium_two_man_tank_turret
-							suspension_type_slot = tank_christie_suspension
-							armor_type_slot = tank_welded_armor
-							engine_type_slot = tank_diesel_engine
-							special_type_slot_1 = sloped_armor
-						}
-						upgrades = {
-							tank_nsb_engine_upgrade = 10
-							tank_nsb_armor_upgrade = 7
-						}
-						icon = "gfx/interface/technologies/SOV_imp_main_tank.dds"
-					}
-				}
-				else_if = { #Why? You ruined your T-34
-					limit = {
-						has_tech = interwar_artillery
-					}
-					create_equipment_variant = {
-						name = "T-34"
-						type = medium_tank_chassis_2
-						parent_version = 0
-						modules = {
-							main_armament_slot = tank_small_cannon_2
-							turret_type_slot = tank_medium_two_man_tank_turret
-							suspension_type_slot = tank_christie_suspension
-							armor_type_slot = tank_welded_armor
-							engine_type_slot = tank_diesel_engine
-							special_type_slot_1 = sloped_armor
-						}
-						upgrades = {
-							tank_nsb_engine_upgrade = 10
-							tank_nsb_armor_upgrade = 7
-						}
-						icon = "gfx/interface/technologies/SOV_imp_main_tank.dds"
-					}
-				}
-				else = { #Don't do this to yourself dude
-					create_equipment_variant = {
-						name = "T-34"
-						type = medium_tank_chassis_2
-						parent_version = 0
-						modules = {
-							main_armament_slot = tank_small_cannon
-							turret_type_slot = tank_medium_two_man_tank_turret
-							suspension_type_slot = tank_christie_suspension
-							armor_type_slot = tank_welded_armor
-							engine_type_slot = tank_diesel_engine
-							special_type_slot_1 = sloped_armor
-						}
-						upgrades = {
-							tank_nsb_engine_upgrade = 10
-							tank_nsb_armor_upgrade = 7
-						}
-						icon = "gfx/interface/technologies/SOV_imp_main_tank.dds"
-					}
-				}
 			}
 		}
 	}
@@ -1628,7 +1516,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = SOV_superior_war_machines
-		cost = 10
+		cost = 5
 
 		available = {
 		}
@@ -1638,9 +1526,9 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = {
 				name = SOV_soviet_artillery_tech_bonus_name_default
-				bonus = 0.75
-				uses = 2
-				ahead_reduction = 2
+				bonus = 1
+				uses = 1
+				ahead_reduction = 1
 				category = artillery
 			}
 			
@@ -1654,163 +1542,6 @@ focus_tree = {
 			}
 
 			add_ideas = SOV_defense_industry_artillery_bonus
-
-			#SU-85/100 tank template (AT)
-			if = {
-				limit = {
-					has_tech = antitank5
-				}
-				create_equipment_variant = {
-					name = "SU-100"
-					type = medium_tank_destroyer_chassis_2
-					parent_version = 0
-					modules = {
-						main_armament_slot = tank_high_velocity_cannon_3
-						turret_type_slot = tank_medium_fixed_superstructure_turret
-						suspension_type_slot = tank_christie_suspension
-						armor_type_slot = tank_welded_armor
-						engine_type_slot = tank_diesel_engine
-						special_type_slot_1 = sloped_armor
-					}
-					upgrades = {
-						tank_nsb_engine_upgrade = 10
-						tank_nsb_armor_upgrade = 8
-					}
-				}
-			}
-			else_if = {
-				limit = {
-					has_tech = antitank2
-				}
-				create_equipment_variant = {
-					name = "SU-100"
-					type = medium_tank_destroyer_chassis_2
-					parent_version = 0
-					modules = {
-						main_armament_slot = tank_high_velocity_cannon_2
-						turret_type_slot = tank_medium_fixed_superstructure_turret
-						suspension_type_slot = tank_christie_suspension
-						armor_type_slot = tank_welded_armor
-						engine_type_slot = tank_diesel_engine
-						special_type_slot_1 = sloped_armor
-					}
-					upgrades = {
-						tank_nsb_engine_upgrade = 10
-						tank_nsb_armor_upgrade = 8
-					}
-				}
-			}
-			else_if = { #You really should invest some time in research AT...
-				limit = {
-					has_tech = interwar_antitank
-				}
-				create_equipment_variant = {
-					name = "SU-85"
-					type = medium_tank_destroyer_chassis_2
-					parent_version = 0
-					modules = {
-						main_armament_slot = tank_high_velocity_cannon
-						turret_type_slot = tank_medium_fixed_superstructure_turret
-						suspension_type_slot = tank_christie_suspension
-						armor_type_slot = tank_welded_armor
-						engine_type_slot = tank_diesel_engine
-						special_type_slot_1 = sloped_armor
-					}
-					upgrades = {
-						tank_nsb_engine_upgrade = 10
-						tank_nsb_armor_upgrade = 8
-					}
-					
-				}
-			}
-			else = { #This is just blasphemy
-				create_equipment_variant = {
-					name = "SU-85"
-					type = medium_tank_destroyer_chassis_2
-					parent_version = 0
-					modules = {
-						main_armament_slot = tank_heavy_cannon
-						turret_type_slot = tank_medium_fixed_superstructure_turret
-						suspension_type_slot = tank_christie_suspension
-						armor_type_slot = tank_welded_armor
-						engine_type_slot = tank_diesel_engine
-						special_type_slot_1 = sloped_armor
-					}
-					upgrades = {
-						tank_nsb_engine_upgrade = 10
-						tank_nsb_armor_upgrade = 8
-					}
-					
-				}
-			}
-
-			#SU-122 tank template (SPG)
-			if = {
-				limit = {
-					has_tech = artillery4
-				}
-				create_equipment_variant = {
-					name = "SU-122"
-					type = medium_tank_artillery_chassis_2
-					parent_version = 0
-					modules = {
-						main_armament_slot = tank_heavy_howitzer
-						turret_type_slot = tank_medium_fixed_superstructure_turret
-						suspension_type_slot = tank_bogie_suspension
-						armor_type_slot = tank_riveted_armor
-						engine_type_slot = tank_diesel_engine
-						special_type_slot_1 = sloped_armor
-					}
-					upgrades = {
-						tank_nsb_engine_upgrade = 10
-						tank_nsb_armor_upgrade = 8
-					}
-					
-				}
-			}
-			else_if = {
-				limit = {
-					has_tech = artillery1
-				}
-				create_equipment_variant = {
-					name = "SU-122"
-					type = medium_tank_artillery_chassis_2
-					parent_version = 0
-					modules = {
-						main_armament_slot = tank_medium_howitzer_2
-						turret_type_slot = tank_medium_fixed_superstructure_turret
-						suspension_type_slot = tank_bogie_suspension
-						armor_type_slot = tank_riveted_armor
-						engine_type_slot = tank_diesel_engine
-						special_type_slot_1 = sloped_armor
-					}
-					upgrades = {
-						tank_nsb_engine_upgrade = 10
-						tank_nsb_armor_upgrade = 8
-					}
-					
-				}
-			}
-			else = { #You really need some arty research
-				create_equipment_variant = {
-					name = "SU-122"
-					type = medium_tank_artillery_chassis_2
-					parent_version = 0
-					modules = {
-						main_armament_slot = tank_medium_howitzer
-						turret_type_slot = tank_medium_fixed_superstructure_turret
-						suspension_type_slot = tank_bogie_suspension
-						armor_type_slot = tank_riveted_armor
-						engine_type_slot = tank_diesel_engine
-						special_type_slot_1 = sloped_armor
-					}
-					upgrades = {
-						tank_nsb_engine_upgrade = 10
-						tank_nsb_armor_upgrade = 8
-					}
-					
-				}
-			}
 		}
 	}
 
@@ -1822,7 +1553,7 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = SOV_pc_of_mechanical_engineering
-		cost = 10
+		cost = 5
 
 		available = {
 		}

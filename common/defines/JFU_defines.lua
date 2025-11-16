@@ -1,6 +1,6 @@
 NDefines.NGame.LAG_DAYS_FOR_LOWER_SPEED = 480			
 NDefines.NGame.LAG_DAYS_FOR_PAUSE = 20
-NDefines.NGame.GAME_SPEED_SECONDS = { 600.0, 0.12, 0.23, 0.07, 0.0 }
+NDefines.NGame.GAME_SPEED_SECONDS = { 600.0, 0.13, 0.25, 0.09, 0.0 }
 NDefines.NGame.DIPLOMACY_ACCEPT_ATTACHE_BASE = 200
 NDefines.NGame.DIPLOMACY_ACCEPT_ATTACHE_OPINION_TRASHHOLD = 10
 NDefines.NGame.COMBAT_LOG_MAX_MONTHS = 14 							    -- WAS 48 | drastically cuts down on save file sizes after WW2 starts and well into barbarossa
@@ -136,14 +136,14 @@ NDefines.NAir.AIR_WING_MAX_STATS_BOMBING = 200	-- vanilla 100
 NDefines.NNavy.MISSION_SUPREMACY_RATIOS = { 						-- supremacy multipliers for different mission types   | Strikeforce/Naval Invasion Support now 0 supremacy to avoid free supremacy
 	0.0, -- HOLD
 	1.0, -- PATROL		
-	0.0, -- STRIKE FORCE 
+	0.3, -- STRIKE FORCE 
 	0.2, -- CONVOY RAIDING
 	0.5, -- CONVOY ESCORT
 	0.0, -- MINES PLANTING	
 	0.0, -- MINES SWEEPING	
 	0.0, -- TRAIN
 	0.0, -- RESERVE_FLEET
-	0.2, -- NAVAL_INVASION_SUPPORT
+	0.3, -- NAVAL_INVASION_SUPPORT
 }
 
 NDefines.NNavy.TRAINING_ACCIDENT_CHANCES = 0
@@ -212,3 +212,10 @@ NDefines.NOperatives.AGENCY_CREATION_FACTORIES = 0
 NDefines.NIntel.ARMY_INTEL_COMBAT_BONUS_MAX_BONUS = 0
 
 NDefines.NIndustrialOrganisation.DESIGN_TEAM_CHANGE_XP_COST = 0	-- Flat cost added to the XP cost of a new equipment design. If 0, cost is entirely disabled.
+
+NDefines.NProject.RECRUIT_SCIENTIST_COST = {						-- Amount of pp to hire a scientist based on available scientist
+		5,			-- pp cost if no available scientist
+		10,			-- pp cost if 1 available scientist
+		25,			-- pp cost if 2 available scientist
+		50			-- pp cost if more than 2 available scientist
+	}

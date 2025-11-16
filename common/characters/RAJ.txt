@@ -45,7 +45,6 @@ characters={
 					original_tag = RAJ
 				}
 				visible = {
-					NOT = { has_completed_focus = RAJ_incorporation_of_the_east_india_company }
 					has_completed_focus = RAJ_mahatma
 				}
 				available = {
@@ -1666,7 +1665,6 @@ characters={
 				has_dlc = "Graveyard of Empires"
 			}
 			visible = {
-				NOT = { has_completed_focus = RAJ_incorporation_of_the_east_india_company }
 			}
 			available = {
 			}
@@ -2283,20 +2281,6 @@ characters={
 		portraits = {
 			civilian = {
 				small = "GFX_portrait_RAJ_jim_corbett_small"
-			}
-		}
-
-		advisor = {
-			slot = political_advisor
-			idea_token = RAJ_jim_corbett
-			allowed = {
-				original_tag = RAJ
-			}
-			visible = {
-				has_completed_focus = RAJ_lobby_parliment
-			}
-			traits = {
-				RAJ_conservationalist
 			}
 		}
 	}

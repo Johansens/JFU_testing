@@ -1,41 +1,6 @@
 
 on_actions = {
 
-
-	on_release_as_puppet = {
-		effect = {
-			if = {
-				limit = {
-					FROM = {
-						original_tag = RAJ
-						has_completed_focus = RAJ_princely_autonomy
-					}
-
-					ROOT = {
-						is_raj_releasable = yes
-					}
-				}
-
-				add_ideas = idea_RAJ_princely_autonomy
-			}
-
-			if = {
-				limit = {
-					FROM = {
-						original_tag = RAJ
-						has_completed_focus = RAJ_funnel_british_investments_into_princely_states
-					}
-
-					ROOT = {
-						NOT = { has_country_flag = has_recieved_civ_from_funnel_british_investments }
-						is_raj_releasable = yes
-					}
-				}
-				FROM = { build_civ_in_indian_releasables_once = yes } 
-			}
-		}
-	}
-
 	on_weekly_RAJ = {
 		effect = {
 			controlled_civilian_factories_excluding_trade = yes

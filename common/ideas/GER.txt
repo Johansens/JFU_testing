@@ -1107,15 +1107,6 @@ ideas = {
 				has_government = fascism
 			}
 
-			on_remove = {
-				if = { 
-					limit = { 
-						tag = GER 
-					} 
-					complete_national_focus = GER_winter 
-				}
-			}
-
 			removal_cost = -1
 
 			picture = generic_acquire_tanks

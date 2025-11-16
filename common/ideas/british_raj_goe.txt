@@ -616,7 +616,7 @@ ideas = {
 				trade_laws_cost_factor = 1
 				mobilization_laws_cost_factor = 1
 				economy_cost_factor = 1
-				production_speed_buildings_factor = -0.03
+				production_speed_arms_factory_factor = -0.2
 			}
 		}
 
@@ -1078,7 +1078,7 @@ ideas = {
 				always = yes
 			}
 			modifier = {
-				production_speed_industrial_complex_factor = 0.07
+				production_speed_industrial_complex_factor = 0.10
 				production_speed_infrastructure_factor = 0.15
 
 			}
@@ -1265,6 +1265,29 @@ ideas = {
 			}
 		}
 
+
+		idea_RAJ_great_depression_2 = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = great_depression
+
+			modifier = {
+				consumer_goods_factor = 0.20
+				industrial_capacity_factory = -0.1
+				industrial_capacity_dockyard = -0.1
+				stability_factor = -0.05
+			}
+		}
+
 		idea_RAJ_sold_parts_of_india_to_private_investors = {
 
 			allowed = {
@@ -1354,28 +1377,6 @@ ideas = {
 			}
 		}
 
-
-		idea_RAJ_great_depression_2 = {
-
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-
-			picture = great_depression
-
-			modifier = {
-				consumer_goods_factor = 0.10
-				industrial_capacity_factory = -0.05
-				industrial_capacity_dockyard = -0.05
-				stability_factor = -0.05
-			}
-		}
 
 		idea_RAJ_bose_hiding_afghanistan = {
 			picture = prc_the_long_march

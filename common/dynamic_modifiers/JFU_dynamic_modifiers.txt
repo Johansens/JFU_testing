@@ -185,6 +185,24 @@ FIN_economy_modifier = {
 	production_factory_max_efficiency_factor = FINeco_pec
 }
 
+RAJ_economy_modifier = {
+	enable = { always = yes }
+	icon = GFX_idea_EST_exploit_the_banks
+
+	consumer_goods_factor = RAJeco_cgf
+	stability_factor = RAJeco_stab
+	industrial_capacity_factory = RAJeco_FO
+	industrial_capacity_dockyard = RAJeco_DO
+	production_speed_buildings_factor = RAJeco_cs 
+	production_speed_industrial_complex_factor = RAJeco_csc
+	local_building_slots_factor = RAJeco_lbsf
+	min_export = RAJeco_me
+	production_factory_max_efficiency_factor = RAJeco_pec
+	production_factory_efficiency_gain_factor = RAJeco_peg
+	industrial_concern_cost_factor = RAJeco_icc
+}
+
+
 emergency_dday_modifier = { #STATE MODIFIER
 	enable = { always = yes }
 

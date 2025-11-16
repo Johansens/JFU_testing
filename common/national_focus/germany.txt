@@ -2612,20 +2612,8 @@ focus_tree = {
 		relative_position_id = GER_armament_rationalization
 		cost = 5
 		available = {
-			has_war_with_major = yes
-			OR = {
-				has_war_support > 0.89
-				surrender_progress > 0
-			}
-			any_enemy_country = {
-				ic_ratio = {
-					tag = ROOT
-					ratio > 0.5
-				}
-			}
+			has_war_with = SOV
 		}
-
-		continue_if_invalid = yes
 
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_INDUSTRY FOCUS_FILTER_MANPOWER FOCUS_FILTER_HISTORICAL }
 
@@ -2637,13 +2625,13 @@ focus_tree = {
 			custom_effect_tooltip = GER_gain_totaler_krieg_remove_total_mob_tt
 			add_ideas = totaler_krieg_economy
 
-				custom_effect_tooltip = generic_skip_one_line_tt
-				unlock_decision_tooltip = {
-					decision = women_in_the_workforce
-					show_effect_tooltip = yes # default is no
-					show_modifiers = yes # default is no
-				} 
-				activate_decision = women_in_the_workforce
+			custom_effect_tooltip = generic_skip_one_line_tt
+			unlock_decision_tooltip = {
+				decision = women_in_the_workforce
+				show_effect_tooltip = yes # default is no
+				show_modifiers = yes # default is no
+			} 
+			activate_decision = women_in_the_workforce
 		}
 	}
 
@@ -3949,7 +3937,7 @@ focus_tree = {
 		relative_position_id = GER_adopt_new_panzer_doctrine
 		cost = 5
 		available = {
-			has_tech = radio
+			has_completed_focus = GER_treaty_with_the_ussr
 		}
 
 		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_RESEARCH FOCUS_FILTER_INDUSTRY }
@@ -3960,7 +3948,7 @@ focus_tree = {
 				#ahead_reduction = 1
 				bonus = 1
 				uses = 1
-				category = cat_medium_armor
+				technology = advanced_medium_tank_chassis
 			}
 
 			custom_effect_tooltip = generic_skip_one_line_tt
@@ -7629,7 +7617,7 @@ focus_tree = {
 		relative_position_id = GER_army_indoctrination
 		cost = 10
 		available = {
-			has_war_with_major = yes
+			has_war_with = SOV
 			has_tech = advanced_machine_tools
 		}
 
@@ -7641,7 +7629,7 @@ focus_tree = {
 				#bonus = 1
 				ahead_reduction = 1
 				uses = 1
-				category = armor
+				technology = main_battle_tank_chassis
 				category = artillery
 				category = naval_equipment
 			}
@@ -7831,13 +7819,7 @@ focus_tree = {
 		relative_position_id = GER_anschluss
 		cost = 5
 		available = {
-			custom_trigger_tooltip = { 
-				tooltip = GER_demonstration_of_military_achievements_trigger
-				OR = {
-					num_subjects > 2
-					check_variable = { GER_occupied_states_europe > 19 }
-				}
-			}
+			has_war = yes
 		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL_CHARACTER FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_MANPOWER }
@@ -8838,6 +8820,14 @@ focus_tree = {
 				HOL = { load_oob = "HOL_CHROM_SPAWN"}
 				BEL = { load_oob = "BEL_CHROM_SPAWN"}
 				DEN = { load_oob = "DEN_CHROM_SPAWN"}
+				if = {
+					limit = {
+						FRA = {
+							is_ai = yes 
+						}
+					}				
+					FRA = { load_oob = "FRA_AI_spawn"}
+				}
 			}
 		}
 	}
@@ -8983,71 +8973,6 @@ focus_tree = {
 
 		dynamic = yes
 		
-		alternate_icon = GFX_focus_GER_support_the_fuhrer_historical
-
-		icon = {
-			trigger = {
-				has_country_leader = {
-					ruling_only = yes
-					character = GER_fritz_todt
-				}
-			}
-			value = GFX_focus_GER_fuhrerprinzip_todt
-		}
-		icon = {
-			trigger = {
-				has_country_leader = {
-					ruling_only = yes
-					character = GER_albert_speer
-				}
-			}
-			value = GFX_focus_GER_fuhrerprinzip_speer
-		}
-		icon = {
-			trigger = {
-				has_country_leader = {
-					ruling_only = yes
-					character = GER_hermann_goring
-				}
-			}
-			value = GFX_focus_GER_fuhrerprinzip_goring
-		}
-		icon = {
-			trigger = {
-				has_country_leader = {
-					ruling_only = yes
-					character = GER_heinrich_himmler
-				}
-			}
-			value = GFX_focus_GER_fuhrerprinzip_himmler
-		}
-		icon = {
-			trigger = {
-				has_country_leader = {
-					ruling_only = yes
-					character = GER_joseph_goebbels
-				}
-			}
-			value = GFX_focus_GER_fuhrerprinzip_goebbels
-		}
-		icon = {
-			trigger = {
-				has_country_leader = {
-					ruling_only = yes
-					character = GER_rudolf_hess
-				}
-			}
-			value = GFX_focus_GER_fuhrerprinzip_hess
-		}
-		icon = {
-			trigger = {
-				has_country_leader = {
-					ruling_only = yes
-					character = GER_martin_bormann
-				}
-			}
-			value = GFX_focus_GER_fuhrerprinzip_bormann
-		}
 		icon = GFX_focus_GER_support_the_fuhrer
 
 		prerequisite = { focus = GER_remilitarize_the_rhineland }
@@ -12739,35 +12664,9 @@ focus_tree = {
 		y = 3
 		relative_position_id = GER_todt
 		available = {
-			OR = {
-				custom_trigger_tooltip = { tooltip = blau_failed date > 1942.11.22 }
-				custom_trigger_tooltip = { 
-					tooltip = endsieg_states 
-					any_state = {
-						OR = {
-							is_core_of = GER
-							#POL
-							state = 98
-							state = 10
-							state = 92
-							state = 88
-							#DDAY
-							state = 31
-							state = 25
-							state = 33
-							state = 24
-							state = 16
-							state = 785
-							state = 34
-						}
-						controller = { has_war_with = GER }
-					}
-				}
-
-				any_country = {
-					is_in_faction_with = GER
-					surrender_progress > 0.1
-				}
+			any_country = {
+				is_in_faction_with = GER
+				surrender_progress > 0.1
 			}
 		}
 		cost = 5

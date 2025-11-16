@@ -986,7 +986,7 @@ SOV_relocation:0 "Sowjetische Fabrikumsetzung"
 SOV_relocation2:0 "Sowjetische Fabrikumsetzung"  
 SOV_spawn:0 "Stalin-Linie Spawns"
 JFU_SOVIET_SMALL:0 "Sowjetischer Antikrebs-AC"
-SOV_small_barb_enable_tt:0 "Gibt den Sowjets nur einen Flughafen zur Verwaltung, sodass ACing einfacher ist"
+SOV_small_barb_enable_tt:0 "Gibt den Sowjets und Deutschen nur einen Flughafen zur Verwaltung, sodass ACing einfacher ist"
 SOV_small_barb:0 "Deutsche haben die Entscheidung für Small Barb getroffen"
 
 JFU_decisions:0 "JFU Entscheidungen"

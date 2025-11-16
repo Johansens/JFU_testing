@@ -26,19 +26,6 @@ RAJ_GOE_independence_movement = {
 	visible_when_empty = no
 }
 
-RAJ_GOE_tea_exports_cat = {
-	icon = GFX_decision_category_gre_investment_decisions
-
-	allowed = {
-		is_raj_or_raj_inheritor = yes
-		has_dlc = "Graveyard of Empires"
-	}
-
-	visible = {
-		has_completed_focus = RAJ_tea_exports
-	}
-}
-
 RAJ_GOE_sikh_recruitment_cat = {
 	icon = GFX_decision_category_army_reform
 
@@ -50,21 +37,6 @@ RAJ_GOE_sikh_recruitment_cat = {
 
 	visible = {
 		has_completed_focus = RAJ_punjab_autonomy
-	}
-}
-
-RAJ_GOE_famine_cat = {
-	priority = 101
-	icon = GFX_decision_category_army_reform
-	scripted_gui = RAJ_famine_scripted_ui
-	allowed = {
-
-		is_raj_or_raj_inheritor = yes
-		has_dlc = "Graveyard of Empires"
-	}
-
-	visible = {
-		NOT = { has_country_flag = famine_is_over }
 	}
 }
 
@@ -81,7 +53,6 @@ RAJ_GOE_india_indivisible_cat = {
 	visible = {
 		OR = {
 			has_completed_focus = RAJ_india_indivisible
-			has_completed_focus = RAJ_trade_federation_of_india
 		}
 	}
 }
@@ -132,18 +103,6 @@ RAJ_GOE_eic_cat = {
 		}
 	}	
 		
-}
-
-RAJ_GOE_eic_hostile_takeover_cat = {
-	icon = GFX_decision_category_jap_intervene_in_china
-	allowed = {
-		is_raj_or_raj_inheritor = yes
-		has_dlc = "Graveyard of Empires"
-	}
-
-	visible = {
-		has_completed_focus = RAJ_hostile_takeover
-	}		
 }
 
 RAJ_GOE_mughal_independence_category = {

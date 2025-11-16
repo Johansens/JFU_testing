@@ -876,7 +876,17 @@ country_event = {
 		add_war_support = 0.1
 	}
 }
-
+country_event = {
+	id = JFU_events.11
+	title = "Soviet Winter"
+	desc = ""
+	picture = GFX_report_event_vienna_award_hungary
+	hidden = yes
+	is_triggered_only = yes	
+	immediate = {
+		complete_national_focus = GER_winter
+	}
+}
 
 add_namespace = horsthelp
 

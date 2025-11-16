@@ -1908,6 +1908,17 @@
 				category = heavy_air
 				category = medium_air			
 			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			if = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}
+				mio:JAP_CAS_organization = {
+					add_mio_funds = 2000
+					add_mio_funds_gain_factor = 0.1
+					add_mio_research_bonus = 0.05
+				}
+			}
 		}
 	}
 
@@ -1972,11 +1983,12 @@
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			add_doctrine_cost_reduction = {
-				name = JAP_carrier_warfare_experiments
-				cost_reduction = 0.25
-				uses = 2
-				category = cat_base_strike
+
+			add_tech_bonus = {
+				name = JAP_supremacy_of_the_battlefleet
+				bonus = 1.0
+				uses = 1
+				category = cv_tech
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt
 			IF = {
@@ -2077,6 +2089,13 @@
 
 
 		completion_reward = {
+			add_doctrine_cost_reduction = {
+				name = JAP_carrier_warfare_experiments
+				cost_reduction = 0.25
+				uses = 2
+				category = cat_base_strike
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt	
 			add_ideas = JAP_first_air_fleet
 		}
 	}

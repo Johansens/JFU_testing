@@ -1068,7 +1068,7 @@
  ost_wall_tt:0 "We will gain level 3 forts in all porvinzes bordering the Soviet Union"
  GER_form_the_reichskommissariats_tt:0 "Every state occupied by us \n  Add §YSS Occupation§! which grants:\nlocal Resources: §G+5%§!\nlocal Factories: §G+15%§!\nResistance Target: §G-40%§!\nDamage to Garrisons: §R+50%§!\nRequired Garrisons: §R+15%§!\nDaily Compliance Gain: §R-0.01%§!"
  GER_barbarossa_others_text:0 "§C\nOur allies will benefit from attack plans as well.§!"
- GER_winter_tt:0 "This focus is automatically completed after our §YOperation Barabrossa§! buff ends"
+ GER_winter_tt:0 "This focus is automatically completed when §YOperation Barbarossa§! failed"
  GER_fortify_the_vaterland_unlock_decisionjfu_tt:0 "Unlocks decision to build multiple §Ydefensive Lines§! in Europe\n§RThis focus is needed for the atlantik wall decision§!"
 
 
@@ -1353,7 +1353,7 @@
  SOV_relocation2:0 "Soviet factory relocation"  
  SOV_spawn:0 "Stalin Line Spawn ins"
  JFU_SOVIET_SMALL:0 "Soviet anti-cancer AC"
- SOV_small_barb_enable_tt:0 "Gives Soviet only one Airport to manage, so ACing is easier"
+ SOV_small_barb_enable_tt:0 "Gives Soviet and Germany only one Airport to manage, so ACing is easier"
  SOV_small_barb:0 "Germans clicked Small Barb Decision"
 
  JFU_decisions:0 " JFU Decisions"

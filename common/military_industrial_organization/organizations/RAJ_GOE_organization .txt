@@ -51,7 +51,6 @@ RAJ_ammunition_factory_khadki_organization = {
 	allowed = {	
 		has_dlc = "Graveyard of Empires"
 		ROOT = { original_tag = RAJ }
-		always = no
 	}
 	name = RAJ_ammunition_factory_khadki
 	available = {
@@ -67,7 +66,7 @@ RAJ_ammunition_factory_khadki_organization = {
 		special_trait_background  = yes
 		position = { x=-1 y=0 }
 		available = { 
-		#	RAJ = { has_completed_focus = RAJ_gun_and_shell_factory_cossipore } 
+			RAJ = { has_completed_focus = RAJ_gun_and_shell_factory_cossipore } 
 		}
 		production_bonus = {
 			production_efficiency_cap_factor = 0.05
@@ -88,7 +87,7 @@ RAJ_ammunition_factory_khadki_organization = {
 		special_trait_background  = yes
 		position = { x=0 y=1 }
 		available = { 
-		#	RAJ = { has_completed_focus = RAJ_ordnance_factory_khamaria_jabalpur } 
+			RAJ = { has_completed_focus = RAJ_ordnance_factory_khamaria_jabalpur } 
 		}
 		equipment_bonus = {
 			soft_attack = 0.05
@@ -109,7 +108,7 @@ RAJ_ammunition_factory_khadki_organization = {
 		special_trait_background  = yes
 		position = { x=0 y=1 }
 		available = { 
-		#	RAJ = { has_completed_focus = RAJ_rifle_factory_ishapore_west_bengal } 
+			RAJ = { has_completed_focus = RAJ_rifle_factory_ishapore_west_bengal } 
 		}
 
 		equipment_bonus = {
@@ -121,24 +120,6 @@ RAJ_ammunition_factory_khadki_organization = {
 		organization_modifier = {
 			military_industrial_organization_research_bonus = 0.02
 		
-		}
-	}
-
-	trait = {
-		token = RAJ_mio_trait_ordnance_factory_kanpur_uttar_pradesh_inf
-		name = RAJ_ordnance_factory_kanpur_uttar_pradesh
-		icon = GFX_generic_mio_department_icon_facilities
-		relative_position_id = generic_mio_trait_drum_pattern_sights
-			
-
-		special_trait_background  = yes
-		position = { x=1 y=0 }
-		available = { 
-		#	RAJ = { has_completed_focus = RAJ_ordnance_factory_kanpur_uttar_pradesh } 
-		}
-		organization_modifier = {
-			military_industrial_organization_research_bonus = 0.15
-			military_industrial_organization_funds_gain = 0.2
 		}
 	}
 
@@ -170,7 +151,7 @@ RAJ_ordnance_factory_kanpur_organization = {
 		special_trait_background  = yes
 		position = { x=1 y=1 }
 		available = { 
-		#	RAJ = { has_completed_focus = RAJ_cordite_factory_aruvankadu_tamil_nadu } 
+			RAJ = { has_completed_focus = RAJ_cordite_factory_aruvankadu_tamil_nadu } 
 		}
 		production_bonus = {
 			production_cost_factor = 0.03
@@ -181,23 +162,6 @@ RAJ_ordnance_factory_kanpur_organization = {
 			ap_attack = 0.06
 		}
 
-	}
-
-	trait = {
-		token = RAJ_mio_trait_ordnance_factory_kanpur_uttar_pradesh_art
-		name = RAJ_mio_trait_ordnance_factory_kanpur_uttar_pradesh_art
-		icon = GFX_generic_mio_department_icon_facilities
-		relative_position_id = generic_mio_trait_big_guns
-
-		special_trait_background  = yes
-		position = { x=-1 y=0 }
-		available = { 
-		#	RAJ = { has_completed_focus = RAJ_ordnance_factory_kanpur_uttar_pradesh } 
-		}
-		organization_modifier = {
-			military_industrial_organization_research_bonus = 0.15
-			military_industrial_organization_funds_gain = 0.15
-		}
 	}
 
 	
@@ -213,33 +177,16 @@ RAJ_ordnance_factory_medak_organization = {
 
 	available = {
 	}
-	trait = {
-		token = RAJ_mio_trait_apc_research_effort
-		name = RAJ_mio_trait_apc_research_effort
-		icon = GFX_generic_mio_department_icon_facilities
-		relative_position_id = generic_mio_trait_closed_chassi
-
-		special_trait_background  = yes
-		position = { x=1 y=0 }
-		available = { 
-		#	RAJ = { has_completed_focus = RAJ_ordnance_factory_medak } 
-		}
-		organization_modifier = {
-			military_industrial_organization_research_bonus = 0.2
-		}
-	}
 
 	trait = {
 		token = RAJ_mio_trait_chariot_of_victory
 		name = RAJ_mio_trait_chariot_of_victory
 		icon = GFX_generic_mio_department_icon_mechanized_hull
-		relative_position_id = RAJ_mio_trait_apc_research_effort
 		limit_to_equipment_type = { mechanized_equipment }
 		special_trait_background  = yes
-		position = { x=0 y=1 }	
+		position = { x=9 y=0 }	
 		available = { 
-		#	RAJ = { has_completed_focus = RAJ_chariot_of_victory } 
-		always = no
+			RAJ = { has_completed_focus = RAJ_chariot_of_victory } 
 		}
 
 		equipment_bonus = {

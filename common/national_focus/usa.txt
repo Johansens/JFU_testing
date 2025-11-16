@@ -1094,7 +1094,7 @@ focus_tree = {
 	}
 	focus = {
 		id = USA_emergency_dday
-		icon = GFX_focus_attack_germany
+		icon = GFX_focus_generic_naval_invasion
 		x = 1
 		y = 1
 

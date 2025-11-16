@@ -2037,4 +2037,10 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/generic/r56_focus_generic_army_modernizations.dds"
 	}
     
+
+    SpriteType = {
+		name = "GFX_R56_GOAL_GENERIC_BASTION_OF_DEMOCRACY"
+		texturefile = "gfx/interface/goals/generic/r56_goal_generic_bastion_of_democracy.dds"
+	}
+    
 }
