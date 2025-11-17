@@ -4,6 +4,8 @@ ger_inner_circle_inlay_window = {
 
     internal = yes
     visible = {
+        NOT = { has_completed_focus = GER_oppose_hitler_ww }
+        NOT = { has_completed_focus = GER_oppose_hitler }
         has_government = fascism
     }
 

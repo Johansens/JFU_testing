@@ -76,12 +76,12 @@ weather_sandstorm = { # on Region
 	local_org_regain = -0.2
 	naval_strike = -0.9
 	org_loss_when_moving = 0.25
-	supply_factor = -0.05
+	supply_factor = -0.15
 	truck_attrition_factor = 3.0
 }
 
 weather_arctic_water = { # on Region
-	#naval_attrition = 0.1
+	naval_attrition = 0.1
 	naval_retreat_speed = -0.05
 	navy_casualty_on_sink = 0.2
 	positioning = -0.2
@@ -102,7 +102,7 @@ weather_extreme_cold = { # on Province
 	local_org_regain = -0.05
 	supply_factor = -0.15
 	truck_attrition_factor = 1.0
-	winter_attrition = 0.25
+	winter_attrition = 0.5
 }
 weather_very_cold = { # on Province
 	army_attack_factor = -0.1
@@ -124,8 +124,8 @@ weather_extreme_hot = { # on Province
 }
 weather_ground_snow_medium = { # on Province
 	army_attack_factor = -0.2
-	army_speed_factor = -0.2
-	army_attack_speed_factor = -0.25
+	army_speed_factor = -0.3
+	army_attack_speed_factor = -0.35
 	breakthrough_factor = -0.15
 	org_loss_when_moving = 0.1
 	supply_factor = -0.20
@@ -134,9 +134,9 @@ weather_ground_snow_medium = { # on Province
 }
 weather_ground_snow_high = { # on Province
 	army_attack_factor = -0.4
-	army_speed_factor = -0.5
-	army_attack_speed_factor = -0.5
-	breakthrough_factor = -0.3
+	army_speed_factor = -0.7
+	army_attack_speed_factor = -0.75
+	breakthrough_factor = -0.4
 	local_org_regain = -0.05
 	org_loss_when_moving = 0.25
 	supply_factor = -0.40
@@ -311,7 +311,10 @@ free_license = {
 ITA_military_agreements = {
 	valid_relation_trigger = {
 		FROM = {
-			is_in_faction_with = ROOT
+			OR = {
+				is_in_faction_with = ROOT
+				has_government = ROOT
+			}
 		}
 	}
 	license_purchase_cost = 0 #base cost reduction
@@ -356,6 +359,7 @@ war_support_during_war = { #Applied during war, scaled from 0-100% with war supp
 
 
 attache_sent = {
+	war_support_factor = 0.1
 }
 
 # Difficulty modifiers
@@ -580,6 +584,8 @@ intel_network_state_level_bonus = {
 
 # modifiers applied to enemy divisions in an intel network
 intel_network_state_level_penalty = {
+	max_planning_factor = -1
+	max_dig_in = -5
 }
 
 # modifiers enabled by the creation of the intelligence agency
@@ -724,7 +730,30 @@ CHL_from_support_chile_static_modifier = {
 	send_volunteer_divisions_required = -0.9
 	send_volunteer_factor = 0.6
 }
-trade_major = {trade_cost_for_target_factor = -0.9 extra_trade_to_target_factor = 1.0	}
-trade_vichy = { trade_cost_for_target_factor = -0.9 }
-trade_soviet = { trade_cost_for_target_factor = -0.5 }
-trade_halfed = { trade_cost_for_target_factor = -0.5 } 
+
+# This is scaled based on support ratio
+naval_general_support = {
+	max_organisation = 0.2
+	navy_max_range_factor = 0.2
+	naval_morale_factor = 0.2
+}
+
+# This is scaled based on support ratio
+naval_repair_support = {
+	naval_critical_effect_factor = -0.25
+	naval_ship_recovery_chance = 0.1
+	naval_attrition = -0.075
+}
+
+### SEA 
+
+JAP_support_ethiopia_static_modifier = {
+	send_volunteers_tension = -0.5
+	send_volunteer_divisions_required = -0.25
+	send_volunteer_factor = 0.25
+}
+
+the_great_wall = {
+	dig_in_speed_factor = 0.15
+	max_dig_in_factor = 0.1
+}

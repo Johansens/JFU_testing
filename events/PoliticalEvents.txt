@@ -44,13 +44,8 @@ country_event = {
 	option = {
 		name = political.19.c
 		trigger = {
-			#Special case CHI PRC
 			OR = {
-				NOT = { tag = CHI }
-				AND = {
-					NOT = { country_exists = PRC }
-					tag = CHI
-				}			
+				NOT = { tag = CHI }			
 			}
 		}
 		set_politics = {

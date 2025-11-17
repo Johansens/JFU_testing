@@ -193,6 +193,12 @@ defined_text = {
 defined_text = {
 	name = GetMolotovInMRPact
 	text = {
+		trigger = {
+			SOV = { has_completed_focus = SOV_policy_of_collective_security }
+		}
+		localization_key = MR_pact_litvinov
+	}
+	text = {
 		localization_key = MR_pact_molotov 
 	}
 }
@@ -200,12 +206,6 @@ defined_text = {
 # MOLOTOV-RIBBENTROP PACT NAME - RIBBENTROP
 defined_text = {
 	name = GetRibbentropInMRPact
-	#text = { #TODO_Manu: Any other option here tack
-	#	trigger = {
-	#		GER = { has_completed_focus = XXX }
-	#	}
-	#	localization_key = Some_dude
-	#}
 	text = {
 		localization_key = MR_pact_ribbentrop
 	}
@@ -421,6 +421,35 @@ defined_text = {
 			has_government = communism
 		}
 		localization_key = GER_expand_kriegsmarinewerft_communism 
+	}
+}
+
+# The Kriegsmarine focus
+defined_text = {
+	name = GetStrengthenKriegsmarineName
+	text = {
+		trigger = {
+			has_government = fascism
+		}
+		localization_key = GER_strengthen_kriegsmarine_fascism
+	}
+	text = {
+		trigger = {
+			has_government = neutrality
+		}
+		localization_key = GER_strengthen_kriegsmarine_neutrality 
+	}
+	text = {
+		trigger = {
+			has_government = democratic
+		}
+		localization_key = GER_strengthen_kriegsmarine_democratic 
+	}
+	text = {
+		trigger = {
+			has_government = communism
+		}
+		localization_key = GER_strengthen_kriegsmarine_communism 
 	}
 }
 
