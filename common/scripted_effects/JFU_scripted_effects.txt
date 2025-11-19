@@ -2025,7 +2025,7 @@ JFU_pregrinded_effect = {
 			} 
 		add_ideas = { scw_pre_grinded_nerf2 }
 		}			
-		SPR_antonio_cordon_garcia = { add_skill_level = 2 }
+		#SPR_antonio_cordon_garcia = { add_skill_level = 2 }
 		SPR_antonio_cordon_garcia = { add_attack = 2 }
         SPR_antonio_cordon_garcia = { add_defense = 4 }
        	#SPR_antonio_cordon_garcia = { add_planning = 1 }
@@ -2047,7 +2047,7 @@ JFU_pregrinded_effect = {
             add_unit_leader_trait = logistics_wizard
 			add_unit_leader_trait = aggressive_assaulter
 		}
-		SPA_francisco_franco = { add_skill_level = 1 }
+		#SPA_francisco_franco = { add_skill_level = 1 }
 		SPA_francisco_franco = { add_attack = 4 }
         SPA_francisco_franco = { add_defense = 1 }
         SPA_francisco_franco = { add_planning = 1 }
@@ -2084,7 +2084,7 @@ JFU_pregrinded_effect = {
 			add_unit_leader_trait = ranger
 			add_unit_leader_trait = desert_fox
         }
-		SPR_gonzalo_queipo_de_llano = { add_skill_level = 1 }
+		#SPR_gonzalo_queipo_de_llano = { add_skill_level = 1 }
 		SPR_gonzalo_queipo_de_llano = { add_attack = 4 }
         SPR_gonzalo_queipo_de_llano = { add_defense = 1 }
         SPR_gonzalo_queipo_de_llano = { add_planning = 3 }
@@ -2251,7 +2251,7 @@ JFU_pregrinded_effect = {
 			add_unit_leader_trait = logistics_wizard
 			add_unit_leader_trait = thorough_planner
 		}
-		MAN_akira_muto = { add_skill_level = 1 }
+		#MAN_akira_muto = { add_skill_level = 1 }
 		MAN_akira_muto = { add_attack = 4 }
         #MAN_akira_muto = { add_defense = 4 }
         #MAN_akira_muto = { add_planning = 2 }
@@ -2360,7 +2360,7 @@ JFU_pregrinded_effect = {
 			add_unit_leader_trait = trickster
 			add_unit_leader_trait = desert_fox
 		}
-		FRA_maxime_weygand = { add_skill_level = 1 }
+		#FRA_maxime_weygand = { add_skill_level = 1 }
 		FRA_maxime_weygand = { add_attack = 1 }
         FRA_maxime_weygand = { add_planning = 2 }
 		FRA_maxime_weygand = { add_logistics = 2 }		
@@ -2394,7 +2394,7 @@ JFU_pregrinded_effect = {
 		FRA_charles_de_gaulle = {
 			add_unit_leader_trait = logistics_wizard
 		}
-		FRA_charles_huntziger = { add_skill_level = 1 }
+		#FRA_charles_huntziger = { add_skill_level = 1 }
 		FRA_charles_huntziger = { add_attack = 4 }
 		FRA_charles_huntziger = { add_defense = 3 }
 		#FRA_charles_huntziger = { add_planning = 1 }
@@ -2426,7 +2426,7 @@ JFU_pregrinded_effect = {
             add_unit_leader_trait = defensive_doctrine
 			add_unit_leader_trait = logistics_wizard
 		}
-		SOV_nikolay_vatutin = { add_skill_level = 1 }
+		#SOV_nikolay_vatutin = { add_skill_level = 1 }
 		SOV_nikolay_vatutin = { add_attack = 1 }
 		SOV_nikolay_vatutin = { add_defense = 1 }
 		SOV_nikolay_vatutin = { add_planning = 1 }
@@ -2440,7 +2440,7 @@ JFU_pregrinded_effect = {
 			add_unit_leader_trait = trickster	
 			add_unit_leader_trait = organizer		
 		}
-		SOV_dmitry_lelyushenko = { add_skill_level = 2 }
+		#SOV_dmitry_lelyushenko = { add_skill_level = 2 }
 		SOV_dmitry_lelyushenko = { add_attack = 3 }
 		SOV_dmitry_lelyushenko = { add_defense = 3 }
 		SOV_dmitry_lelyushenko = { add_logistics = 4 }	
@@ -2457,7 +2457,7 @@ JFU_pregrinded_effect = {
 			add_unit_leader_trait = fortress_buster
 			add_unit_leader_trait = winter_specialist
 		}
-		SOV_andrey_grechko = { add_skill_level = 1 }
+		#SOV_andrey_grechko = { add_skill_level = 1 }
 		SOV_andrey_grechko = { add_attack = 3 }
 		SOV_andrey_grechko = { add_defense = 1 }
 		SOV_andrey_grechko = { add_planning = 1 }
@@ -2470,7 +2470,7 @@ JFU_pregrinded_effect = {
 			add_unit_leader_trait = cavalry_leader	
 			add_unit_leader_trait = cavalry_expert				
 		}
-		SOV_vasily_chuykov = { add_skill_level = 2 }
+		#SOV_vasily_chuykov = { add_skill_level = 2 }
 		SOV_vasily_chuykov = { add_attack = 1 }
 		SOV_vasily_chuykov = { add_defense = 3 }
 		SOV_vasily_chuykov = { add_planning = 1 }
@@ -2600,7 +2600,7 @@ JFU_pregrinded_effect = {
 			add_unit_leader_trait = thorough_planner
 			add_unit_leader_trait = aggressive_assaulter			
 		}
-		USA_geoffrey_keyes = { add_skill_level = 2 }
+		#USA_geoffrey_keyes = { add_skill_level = 2 }
 		USA_geoffrey_keyes = { add_attack = 4 }
 		USA_geoffrey_keyes = { add_defense = 4 }
 		USA_geoffrey_keyes = { add_planning = 1 }
@@ -2653,7 +2653,7 @@ JFU_pregrinded_effect = {
 			add_unit_leader_trait = guerilla_fighter
 			add_unit_leader_trait = expert_improviser			
 		}
-		SAF_guy_hallifax = { add_skill_level = 1 }
+		#SAF_guy_hallifax = { add_skill_level = 1 }
 		SAF_guy_hallifax = {
 			add_unit_leader_trait = trickster
 			add_unit_leader_trait = pre_grinded
@@ -2707,7 +2707,7 @@ JFU_pregrinded_effect = {
 			add_unit_leader_trait = guerilla_fighter	
 			add_unit_leader_trait = commando	
 		}
-		AST_alan_vasey = { add_skill_level = 1 }
+		#AST_alan_vasey = { add_skill_level = 1 }
 		AST_alan_vasey = { add_attack = 2 }
 		AST_alan_vasey = {
 			add_unit_leader_trait = trickster
@@ -2744,13 +2744,13 @@ JFU_pregrinded_effect = {
 			add_unit_leader_trait = commando
 			add_unit_leader_trait = guerilla_fighter
 		}
-		BRA_augusto_rademaker = { add_skill_level = 1 }
+		#BRA_augusto_rademaker = { add_skill_level = 1 }
 		BRA_augusto_rademaker = {
 			add_unit_leader_trait = commando
 		}
 	}
 	MEX = {
-		MEX_heliodoro_charis = { add_skill_level = 1 }
+		#MEX_heliodoro_charis = { add_skill_level = 1 }
 		MEX_heliodoro_charis = { add_logistics = 1 }
 		MEX_heliodoro_charis = {
 			add_unit_leader_trait = trickster
@@ -2762,7 +2762,7 @@ JFU_pregrinded_effect = {
 			add_unit_leader_trait = guerilla_fighter
 			add_unit_leader_trait = naval_invader
 		}
-		MEX_gildardo_magana = { add_skill_level = 1 }
+		#MEX_gildardo_magana = { add_skill_level = 1 }
 		MEX_gildardo_magana = { add_attack = 1 }
 		MEX_gildardo_magana = {
 			add_unit_leader_trait = trickster
@@ -2777,11 +2777,11 @@ JFU_pregrinded_effect = {
 		MEX_gildardo_magana = {
 			add_unit_leader_trait = logistics_wizard
 		}
-		MEX_lazaro_cardenas = { add_skill_level = 1 }
+		#MEX_lazaro_cardenas = { add_skill_level = 1 }
 		MEX_lazaro_cardenas = {
 			add_unit_leader_trait = commando
 		}
-		MEX_abelardo_rodriguez = { add_skill_level = 1 }
+		#MEX_abelardo_rodriguez = { add_skill_level = 1 }
 		MEX_abelardo_rodriguez = { add_attack = 2 }
 		MEX_abelardo_rodriguez = {
 			add_unit_leader_trait = trickster
@@ -2808,7 +2808,7 @@ JFU_pregrinded_effect = {
 		}
 	}
 	RAJ = {
-		RAJ_frank_messervy = { add_skill_level = 1 }
+		#RAJ_frank_messervy = { add_skill_level = 1 }
 		RAJ_frank_messervy = {
 			add_unit_leader_trait = trickster
 			add_unit_leader_trait = pre_grinded
@@ -2818,7 +2818,7 @@ JFU_pregrinded_effect = {
 			add_unit_leader_trait = guerilla_fighter
 			add_unit_leader_trait = tank_gens			
 		}
-		RAJ_douglas_gracey = { add_skill_level = 1 }
+		#RAJ_douglas_gracey = { add_skill_level = 1 }
 		RAJ_douglas_gracey = {
 			add_unit_leader_trait = pre_grinded
 			add_unit_leader_trait = guerilla_fighter
@@ -2843,7 +2843,7 @@ JFU_pregrinded_effect = {
 			add_unit_leader_trait = naval_invader
 			add_unit_leader_trait = hill_fighter				
 		}	
-		NZL_william_stevens = { add_skill_level = 1 }
+		#NZL_william_stevens = { add_skill_level = 1 }
 		NZL_william_stevens = {
 			add_unit_leader_trait = pre_grinded
 			add_unit_leader_trait = guerilla_fighter
@@ -2861,7 +2861,7 @@ JFU_pregrinded_effect = {
 		NZL_bernard_freyberg = {
 			add_unit_leader_trait = commando
 		}
-		NZL_alan_vasey = { add_skill_level = 1 }
+		#NZL_alan_vasey = { add_skill_level = 1 }
 		NZL_alan_vasey = { add_attack = 2 }
 		NZL_alan_vasey = {
 			add_unit_leader_trait = trickster
@@ -2888,7 +2888,7 @@ JFU_pregrinded_effect = {
 		}
 	}
 	IRE = {
-		IRE_michael_costello = { add_skill_level = 2 }	
+		#IRE_michael_costello = { add_skill_level = 2 }	
 		IRE_michael_costello = {
 			add_unit_leader_trait = trickster
 			add_unit_leader_trait = pre_grinded
@@ -2898,7 +2898,7 @@ JFU_pregrinded_effect = {
 			add_unit_leader_trait = naval_invader
 			add_unit_leader_trait = urban_assault_specialist				
 		}
-		IRE_maurice_gamelin = { add_skill_level = 2 }		
+		#IRE_maurice_gamelin = { add_skill_level = 2 }		
 		IRE_maurice_gamelin = {
 			add_unit_leader_trait = trickster
 			add_unit_leader_trait = pre_grinded
@@ -2914,7 +2914,7 @@ JFU_pregrinded_effect = {
 		}	
 	}	
 	NOR = {
-		NOR_jacob_hivden_haug = { add_skill_level = 2 }	
+		#NOR_jacob_hivden_haug = { add_skill_level = 2 }	
 		NOR_jacob_hivden_haug = {
 			add_unit_leader_trait = trickster
 			add_unit_leader_trait = pre_grinded
@@ -2924,7 +2924,7 @@ JFU_pregrinded_effect = {
 			add_unit_leader_trait = naval_invader
 			add_unit_leader_trait = urban_assault_specialist				
 		}
-		NOR_wilhelm_von_tangen_hansteen = { add_skill_level = 1 }		
+		#NOR_wilhelm_von_tangen_hansteen = { add_skill_level = 1 }		
 		NOR_wilhelm_von_tangen_hansteen = {
 			add_unit_leader_trait = trickster
 			add_unit_leader_trait = pre_grinded
@@ -5127,4 +5127,31 @@ ROOT_call_against_greece = {
 			enemy = GRE
 		}
 	}		
+}
+
+ETH_upgrade_state_category = {
+	IF = {
+		limit = { has_state_category = wasteland }
+		set_state_category = pastoral
+	}
+	ELSE_IF = {
+		limit = { has_state_category = pastoral }
+		set_state_category = rural
+	}
+	ELSE_IF = {
+		limit = { has_state_category = rural }
+		set_state_category = town
+	}
+	ELSE_IF = {
+		limit = { has_state_category = town }
+		set_state_category = large_town
+	}
+	ELSE_IF = {
+		limit = { has_state_category = large_town }
+		set_state_category = city
+	}
+	ELSE_IF = {
+		limit = { has_state_category = city }
+		set_state_category = large_city
+	}
 }

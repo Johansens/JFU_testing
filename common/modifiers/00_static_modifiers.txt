@@ -757,3 +757,8 @@ the_great_wall = {
 	dig_in_speed_factor = 0.15
 	max_dig_in_factor = 0.1
 }
+
+trade_major = {trade_cost_for_target_factor = -0.9 extra_trade_to_target_factor = 1.0	}
+trade_vichy = { trade_cost_for_target_factor = -0.9 }
+trade_soviet = { trade_cost_for_target_factor = -0.5 }
+trade_halfed = { trade_cost_for_target_factor = -0.5 } 

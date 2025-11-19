@@ -575,7 +575,6 @@ middle_east = {
 		236 # South Arabia
 		239 # Alborz
 		116 # Central Iranian Range
-		298 # Eastern Zagros
 		
 	}
 	cancel = {
@@ -616,14 +615,10 @@ persia = {
 	regions = {
 		239 # Alborz
 		116 # Central Iranian Range
-		298 # Eastern Zagros
 		203 # Persian Gulf
 		232 # Levant
 		28 # Middle East
 		241 # Dash-E Kavir
-		297 # Eastern Iranian Range
-		291 # Baluchistan
-		289 # South Afghanistan 
 		134 # Caucasus
 	}
 	cancel = {
@@ -731,10 +726,7 @@ south_east_asia = {
 		142  # North Indochina
 		73  # Gulf of Thailand
 		187  # Sumatra
-		293  # Tenasserim
-		294  # Rangoon
 		101  # Bay of Bengal
-		292  # Shan States
 			
 	}
 	cancel = {
@@ -747,14 +739,12 @@ south_east_asia = {
 			OR = {
 				any_enemy_country = {
 					OR = {
-						controls_state = 1021 # Singapore
 						controls_state = 336 # Malaya
 						controls_state = 289 # Siam
 						controls_state = 671 # Tonkin
 						controls_state = 672 # Sumatra
 					}
 				}
-				controls_state = 1021 # Singapore
 				controls_state = 336 # Malaya
 				controls_state = 289 # Siam
 				controls_state = 671 # Tonkin
@@ -772,12 +762,9 @@ bengal = {
 	name = theater_bengal
 	regions = {
 		101  # Bay of Bengal
-		290  # Bengal
 		231 # East Ghats
 		230 # Cape Comorin
-		294 # Rangoon
 		141 # Eastern India
-		293  # Tenasserim
 		31  # Deccan Plateau
 	}
 	cancel = {
@@ -794,7 +781,6 @@ bengal = {
 						controls_state = 423 # French Madras
 						controls_state = 431 # Calcutta
 						controls_state = 431 # East Bengal
-						controls_state = 995 # Rangoon
 						controls_state = 289 # Siam
 					}
 				}
@@ -802,7 +788,6 @@ bengal = {
 				controls_state = 423 # French Madras
 				controls_state = 431 # Calcutta
 				controls_state = 431 # East Bengal
-				controls_state = 995 # Rangoon
 				controls_state = 289 # Siam
 			}
 		}
@@ -818,12 +803,7 @@ northern_india = {
 	regions = {
 		153  # Northern India
 		190  # Pakistan
-		162 # North Afghanistan
-		289 # South Afghanistan
-		291 # Baluchistan
-		296 # Gujarat
 		251  # Ngari
-		297  # Eastern Iranian range
 		104  # Arabian Sea
 	}
 	cancel = {

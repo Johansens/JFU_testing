@@ -80,9 +80,9 @@ bookmarks = {
 				JAP_militarism
 			}	
 			focuses = {
-				JAP_the_zero
-				JAP_intervene_in_china
-				JAP_strike_on_the_southern_resource_area
+				#JAP_the_zero
+				#JAP_intervene_in_china
+				#JAP_strike_on_the_southern_resource_area
 			}			
 		}
 		"ITA"={

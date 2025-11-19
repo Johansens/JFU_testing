@@ -88,15 +88,12 @@ state_groups = {
         1004 # North Khorasan
         1005 # Qataghan
         1007 # Maymanah
-        1028 # Kankyou
 
         # Mongolian neighbor states
         612 # Xilingol
         621 # Suiyuan
         756 # Jiuquan
         760 # Dabancheng
-        1040 # Alxa
-        1043 # Pailingmiao
     }
 
     # Mediterranean States for Mare Nostrum 
@@ -281,8 +278,6 @@ state_groups = {
         676 #Mosul
         680 #Deir-az-Zur
         350 #Diyarbakir
-        1010 #Al-Anbar
-        1011 #Al-Basrah
 
         347 #Izmit
         49 #Ankara

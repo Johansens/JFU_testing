@@ -53,7 +53,6 @@ JAP_is_home_islands_state = {
 		OR = {
 			state = 536 # Hokkaido 
 			state = 533 # Kita-Tohoku
-			state = 1019 # Minami-Tohoku
 			state = 534 # Koshinetsu
 			state = 535 # Hokuriku
 			state = 282 # Kanto
@@ -61,9 +60,7 @@ JAP_is_home_islands_state = {
 			state = 531 # Kansai
 			state = 530 # Shikoku
 			state = 529 # Sanyo
-			state = 1020 # Sanin
 			state = 528 # Hokubu Kyushu
-			state = 1018 # Minami Kyushu
 			state = 526 # Okinawa
 			#state = 537 # Karafuto
 		}
@@ -74,11 +71,7 @@ JAP_is_home_islands_state = {
 is_korean_state = {
 	OR = {
 		state = 525
-		state = 1029
-		state = 1031
-		state = 1030
 		state = 527
-		state = 1028
 	}
 }
 
@@ -86,9 +79,6 @@ is_korean_state = {
 is_south_korean_state = {
 	OR = {
 		state = 525
-		state = 1029
-		state = 1031
-		state = 1030
 	}
 }
 
@@ -96,7 +86,6 @@ is_south_korean_state = {
 is_north_korean_state = {
 	OR = {
 		state = 527
-		state = 1028
 	}
 }
 

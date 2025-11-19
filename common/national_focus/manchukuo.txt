@@ -278,7 +278,9 @@
 
 
 		available = {
-		JAP = { has_completed_focus = JAP_greater_east_asian_co_prosperity_sphere }
+			#JAP = { 
+			#	has_completed_focus = JAP_greater_east_asian_co_prosperity_sphere 
+			#}
 		}
 
 

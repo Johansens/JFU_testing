@@ -1477,7 +1477,7 @@ technologies = {
 		}
 
 		enable_subunits = {
-			modern_tank_destroyer_brigade
+			#modern_tank_destroyer_brigade
 		}
 
 		research_cost = 0.5
@@ -1518,7 +1518,7 @@ technologies = {
 		}
 
 		enable_subunits = {
-			modern_sp_artillery_brigade
+		#	modern_sp_artillery_brigade
 		}
 
 		research_cost = 0.5
@@ -1559,7 +1559,7 @@ technologies = {
 		}
 
 		enable_subunits = {
-			modern_sp_anti_air_brigade
+			#modern_sp_anti_air_brigade
 		}
 
 		research_cost = 0.5
@@ -2336,26 +2336,26 @@ technologies = {
 			}
 		}
 
-		modern_tank_destroyer_brigade = {
-			mountain = {
-				attack = 0.15
-				movement = 0.15 
-			}
-		}
+		#modern_tank_destroyer_brigade = {
+		#	mountain = {
+		#		attack = 0.15
+		#		movement = 0.15 
+		#	}
+		#}
 
-		modern_sp_artillery_brigade = {
-			mountain = {
-				attack = 0.15
-				movement = 0.15 
-			}
-		}
+		#modern_sp_artillery_brigade = {
+		#	mountain = {
+		#		attack = 0.15
+		#		movement = 0.15 
+		#	}
+		#}
 
-		modern_sp_anti_air_brigade = {
-			mountain = {
-				attack = 0.15
-				movement = 0.15 
-			}
-		}
+		#modern_sp_anti_air_brigade = {
+		#	mountain = {
+		#		attack = 0.15
+		#		movement = 0.15 
+		#	}
+		#}
 
 		heavy_armor = {
 			mountain = {
@@ -2418,6 +2418,25 @@ technologies = {
 			cat_anti_tank
 			artillery
 			mio_cat_all_artillery_equipment
+		}
+	}
+
+	jungle_adaptable_armor_designs = {
+
+		allow = { always = no } #Only obtained through Focus
+
+		research_cost = 1
+
+		category_tanks = {
+			jungle = {
+				attack = 0.05
+				defence = 0.05
+				movement = 0.1
+			}
+		}
+		
+		ai_will_do = {
+			factor = 0
 		}
 	}
 	

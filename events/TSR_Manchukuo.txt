@@ -37,10 +37,6 @@ country_event = {
 			modifier = {
 				OR = {
 					has_country_flag = MAN_AI_RANDOM_OBEDIENCE_CHINA
-					has_game_rule = {
-						rule = MAN_ai_behavior
-						option = OBEDIENCE_CHINA
-					}
 				}
 				factor = 20
 			}
@@ -464,68 +460,6 @@ country_event = {
 		}
 	}
 
-	#Mongolia and Tuva
-	option = {
-		name = tsr_manchukuo.9.b
-		ai_chance = { 
-			base = 20
-			modifier = {
-				factor = 2
-				FROM = {
-					is_in_faction_with = ROOT
-				}
-			}
-			modifier = {
-				factor = 2
-				has_opinion = {
-					target = FROM
-					value < 90
-				}
-			}
-			#they're a bully
-			modifier = {
-				factor = 2
-				fighting_army_strength_ratio = {
-					tag = FROM
-					ratio < 0.7
-				}
-			}
-		}
-		trigger = {
-			always = no
-		}
-		ELSE = {
-			330 = { transfer_state_to = FROM }
-			820 = { transfer_state_to = FROM }
-			818 = { transfer_state_to = FROM }
-			817 = { transfer_state_to = FROM }
-			819 = { transfer_state_to = FROM }
-		}
-		IF = {
-			limit = {
-				TAN = {
-					exists = yes
-					is_in_faction_with = ROOT
-				}
-			}
-			TAN = {	
-				country_event = {
-					id = tsr_manchukuo.10
-					hours = 2
-				}
-			}
-		}
-		ELSE = {
-			329 = { transfer_state_to = FROM }
-		}
-		FROM = {
-			country_event = {
-				id = tsr_manchukuo.20
-				hours = 6
-			}
-		}
-	}
-
 	#Manchuria
 	option = {
 		name = tsr_manchukuo.9.c
@@ -620,10 +554,6 @@ country_event = {
 				329 = {
 					is_owned_and_controlled_by = ROOT
 				}
-				TAN = {
-					is_in_faction_with = ROOT
-					exists = yes
-				}
 			}
 			560 = { is_owned_and_controlled_by = ROOT }
 			561 = { is_owned_and_controlled_by = ROOT }
@@ -636,23 +566,6 @@ country_event = {
 		657 = { transfer_state_to = FROM }
 		409 = { transfer_state_to = FROM }
 		408 = { transfer_state_to = FROM }
-		IF = {
-			limit = {
-				TAN = {
-					exists = yes
-					is_in_faction_with = ROOT
-				}
-			}
-			TAN = {	
-				country_event = {
-					id = tsr_manchukuo.10
-					hours = 2
-				}
-			}
-		}
-		ELSE = { 
-			329 = { transfer_state_to = FROM }
-		}
 
 		FROM = {
 			country_event = {
@@ -748,12 +661,12 @@ country_event = {
 		ai_chance = {
 			base = 20
 		}
-		add_timed_idea = {
-			idea = MAN_xingan_army_resigned
-			days = 365
-		}
-		retire_character = MAN_urzhin_garmaev
-		retire_character = MAN_jonjurjab
+		#add_timed_idea = {
+		#	idea = MAN_xingan_army_resigned
+		#	days = 365
+		#}
+		#retire_character = MAN_urzhin_garmaev
+		#retire_character = MAN_jonjurjab
 		hidden_effect = { set_country_flag = MAN_xingan_army_resigned }
 	}
 
@@ -763,10 +676,10 @@ country_event = {
 		ai_chance = {
 			base = 15
 		}
-		add_timed_idea = {
-			idea = MAN_xingan_army_appeased
-			days = 725
-		}
+		#add_timed_idea = {
+		#	idea = MAN_xingan_army_appeased
+		#	days = 725
+		#}
 		add_stability = -0.1
 		add_political_power = -25
 		hidden_effect = { set_country_flag = MAN_xingan_army_government }
@@ -906,14 +819,6 @@ country_event = {
 				hours = 2
 			}
 		}
-		effect_tooltip = {
-			FROM = {
-				annex_country = {
-					target = RNG
-					transfer_troops = yes
-				}
-			}
-		}
 	}
 	
 	#nah
@@ -945,10 +850,6 @@ country_event = {
 		name = tsr_manchukuo.17.a
 		ai_chance = { 
 			base = 10
-		}
-		annex_country = {
-			target = RNG
-			transfer_troops = yes
 		}
 	}
 }
@@ -1082,7 +983,7 @@ country_event = {
 			original_tag = MAN
 		}
 
-		transfer_state = 1039
+		#transfer_state = 1039
 	}
 
 	option = {
@@ -1092,9 +993,9 @@ country_event = {
 				original_tag = MAN
 			}
 		}
-		effect_tooltip = {
-			1039 = { set_state_owner_to = MAN }
-		}
+		#effect_tooltip = {
+		#	1039 = { set_state_owner_to = MAN }
+		#}
 	}
 }
 

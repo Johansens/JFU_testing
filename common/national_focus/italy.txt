@@ -2613,19 +2613,6 @@ focus_tree = {
 			else = {
 				add_ideas = ITA_bandits_war_no_lar
 			}
-
-			# AI will never swap to another doctrine tree once they have started one, regardless of the AI weights, so AI needs to have it replaced manually
-			hidden_effect = {
-				if = {
-					limit = {
-						is_ai = yes
-					}
-					set_technology = {
-						trench_warfare = 0
-						mobile_warfare = 1
-					}
-				}
-			}
 		}
 	}
 
@@ -4368,7 +4355,7 @@ focus_tree = {
 				name = ITA_incrociatori_leggeri
 				bonus = 2
 				uses = 1
-				category = cl_tech
+				category = ca_tech
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt
 			custom_effect_tooltip = ITA_incrociatori_leggeri_tt			

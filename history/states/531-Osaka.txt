@@ -32,6 +32,9 @@ state = {
 			11960 20 # Kyoto
 		}
 
+		victory_points = {
+			1136 1 # Maizuru
+		}
 	}
 
 	provinces = {

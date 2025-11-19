@@ -27,22 +27,6 @@ defined_text = { #Correct title (male/female/communist)
 		}
 		localization_key = JAP_emperor_nobuhito
 	}
-	text = {
-		trigger = {
-			has_government = communism
-			NOT = {
-				has_completed_focus = JAP_the_labor_farmer_faction_ascendant
-			}
-		}
-		localization_key = JAP_kyuichi_tokuda
-	}
-	text = {
-		trigger = {
-			has_government = communism
-			has_completed_focus = JAP_the_labor_farmer_faction_ascendant
-		}
-		localization_key = JAP_kanson_arahata
-	}
 	text = { #Default name
 		localization_key = JAP_emperor_hirohito
 	}

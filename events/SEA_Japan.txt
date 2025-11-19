@@ -33,14 +33,6 @@ country_event = {
 				OR = {
 					AND = {
 						is_historical_focus_on = yes
-						has_game_rule = {
-							rule = JAP_ai_behavior
-							option = DEFAULT
-						}
-					}
-					has_game_rule = {
-						rule = JAP_ai_behavior
-						option = FASCIST
 					}
 					has_country_flag = JAP_AI_RANDOM_FASCIST
 				}
@@ -81,288 +73,6 @@ country_event = {
 		custom_effect_tooltip = generic_skip_one_line_tt
 		
 		complete_national_focus = JAP_sea_purge_the_kodoha_faction
-
-		hidden_effect = {
-			set_country_flag = JAP_aizawas_trial_over_flag
-		}
-
-	}
-
-	# It's shougunating time heck yea
-	option = { 
-		name = SEA_japan.1.b
-		ai_chance = {
-			base = 0
-			modifier = {
-				add = 100
-				OR = {
-					has_country_flag = JAP_AI_RANDOM_NEUTRALITY
-					has_game_rule = {
-						rule = JAP_ai_behavior
-						option = NEUTRALITY
-					}
-				}
-			}
-		}
-
-		custom_effect_tooltip = JAP_kodoha_coup_will_succeed_tt
-		
-		retire_character = JAP_takahashi_korekiyo
-		set_country_flag = JAP_takahashi_korekiyo_was_killed
-	
-		retire_character = JAP_jotaro_watanabe
-		set_country_flag = JAP_jotaro_watanabe_was_killed
-		
-		IF = {
-			limit = {
-				has_dlc = "No Compromise, No Surrender"
-			}
-			# Due to one of the other assassinations failing, they will go harder for Saionji Kinmochi instead, killing hnm. 
-			retire_character = JAP_saionji_kinmochi
-		}
-
-		custom_effect_tooltip = generic_skip_one_line_tt
-		
-		IF = {
-			limit = {
-				has_dlc = "No Compromise, No Surrender"
-			}
-			IF = {
-				limit = {
-					has_country_leader = {
-						ruling_only = yes
-						character = JAP_keisuke_okada
-					}	
-				}
-				kill_country_leader = yes
-			}
-			add_country_leader_role = {
-				character =  JAP_jinzaburo_masaki
-				promote_leader = yes
-				country_leader = {
-					ideology = japan_militarism_ideology
-					expire = "1952.1.1.1"
-					traits = { JAP_military_prime_minister } 
-				}
-			}
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-			
-			complete_national_focus = JAP_revere_the_emperor_destroy_the_traitors
-			#custom_effect_tooltip = focus_effects_are_as_follows_tt
-			#effect_tooltip = {
-			#	
-			#}
-		}
-		ELSE = {
-			complete_national_focus = JAP_support_the_kodoha_faction
-		}
-
-		hidden_effect = {
-			set_country_flag = JAP_aizawas_trial_over_flag
-		}
-
-	}
-
-	# We have come to the conclusion that fascism = bad
-	option = { 
-		name = SEA_japan.1.c
-		ai_chance = {
-			base = 0
-			modifier = {
-				add = 100
-				OR = {
-					has_country_flag = JAP_AI_RANDOM_COMMUNIST
-					has_game_rule = {
-						rule = JAP_ai_behavior
-						option = COMMUNIST
-					}
-					has_country_flag = JAP_AI_RANDOM_DEMOCRATIC
-					has_game_rule = {
-						rule = JAP_ai_behavior
-						option = DEMOCRATIC
-					}
-					has_country_flag = JAP_AI_RANDOM_COMMUNIST_2
-					has_game_rule = {
-						rule = JAP_ai_behavior
-						option = COMMUNIST_2
-					}
-				}
-			}
-		}
-		trigger = {
-			has_dlc = "No Compromise, No Surrender"
-		}
-
-		custom_effect_tooltip = JAP_kodoha_coup_will_fail_non_historically_tt
-		IF = {
-			limit = {
-				NOT = {
-					has_country_flag = JAP_korekiyo_protected_flag
-				}
-			}
-			retire_character = JAP_takahashi_korekiyo
-			set_country_flag = JAP_takahashi_korekiyo_was_killed
-		}
-		IF = {
-			limit = {
-				NOT = {
-					has_country_flag = JAP_watanabe_protected_flag
-				}
-			}
-			retire_character = JAP_jotaro_watanabe
-			set_country_flag = JAP_jotaro_watanabe_was_killed
-		}
-		IF = {
-			limit = {
-				OR = {
-					has_country_flag = JAP_watanabe_protected_flag
-					has_country_flag = JAP_korekiyo_protected_flag
-				}
-			}
-			# Due to one of the other assassinations failing, they will go harder for Saionji Kinmochi instead, killing hnm. remove Kinmochi etc
-			retire_character = JAP_saionji_kinmochi
-		}
-
-		custom_effect_tooltip = generic_skip_one_line_tt
-
-		add_country_leader_role = {
-			character = JAP_keisuke_okada
-			promote_leader = yes
-			country_leader = {
-				ideology = conservatism
-				expire = "1952.1.1.1"
-				traits = { JAP_moderate_politician_dem } 
-			}
-		}	
-
-		set_politics = {
-			ruling_party = democratic
-			elections_allowed = yes
-			last_election = "1936.02.01"
-			election_frequency = 48
-		}	
-
-		add_popularity = {
-			ideology = democratic
-			popularity = 0.15
-		}	
-
-		custom_effect_tooltip = generic_skip_one_line_tt
-		
-		complete_national_focus = JAP_okadas_military_purge_speech
-		custom_effect_tooltip = focus_effects_are_as_follows_tt
-		effect_tooltip = {
-			JAP_small_government_faction_gain = yes
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			custom_effect_tooltip = JAP_okadas_military_purge_speech_tt
-		}
-
-		hidden_effect = {
-			set_country_flag = JAP_aizawas_trial_over_flag
-		}
-
-	}
-
-	# We have come to the conclusion that fascism = bad (non sea dem)
-	option = { 
-		name = SEA_japan.1.d
-		ai_chance = {
-			base = 0
-			modifier = {
-				add = 100
-				OR = {
-					has_country_flag = JAP_AI_RANDOM_DEMOCRATIC
-					has_game_rule = {
-						rule = JAP_ai_behavior
-						option = DEMOCRATIC
-					}
-				}
-			}
-		}
-		trigger = {
-			NOT = {
-				has_dlc = "No Compromise, No Surrender"
-			}
-		}
-
-		custom_effect_tooltip = JAP_kodoha_coup_will_fail_non_historically_tt
-		IF = {
-			limit = {
-				NOT = {
-					has_country_flag = JAP_korekiyo_protected_flag
-				}
-			}
-			retire_character = JAP_takahashi_korekiyo
-			set_country_flag = JAP_takahashi_korekiyo_was_killed
-		}
-		IF = {
-			limit = {
-				NOT = {
-					has_country_flag = JAP_watanabe_protected_flag
-				}
-			}
-			retire_character = JAP_jotaro_watanabe
-			set_country_flag = JAP_jotaro_watanabe_was_killed
-		}
-
-		custom_effect_tooltip = generic_skip_one_line_tt
-		
-		complete_national_focus = JAP_strengthen_civilian_government
-
-		hidden_effect = {
-			set_country_flag = JAP_aizawas_trial_over_flag
-		}
-
-	}
-
-	# We have come to the conclusion that fascism = bad (non sea com)
-	option = { 
-		name = SEA_japan.1.e
-		ai_chance = {
-			base = 0
-			modifier = {
-				add = 100
-				OR = {
-					has_country_flag = JAP_AI_RANDOM_COMMUNIST
-					has_game_rule = {
-						rule = JAP_ai_behavior
-						option = COMMUNIST
-					}
-				}
-			}
-		}
-		trigger = {
-			NOT = {
-				has_dlc = "No Compromise, No Surrender"
-			}
-		}
-
-		custom_effect_tooltip = JAP_kodoha_coup_will_fail_non_historically_tt
-		IF = {
-			limit = {
-				NOT = {
-					has_country_flag = JAP_korekiyo_protected_flag
-				}
-			}
-			retire_character = JAP_takahashi_korekiyo
-			set_country_flag = JAP_takahashi_korekiyo_was_killed
-		}
-		IF = {
-			limit = {
-				NOT = {
-					has_country_flag = JAP_watanabe_protected_flag
-				}
-			}
-			retire_character = JAP_jotaro_watanabe
-			set_country_flag = JAP_jotaro_watanabe_was_killed
-		}
-
-		custom_effect_tooltip = generic_skip_one_line_tt
-		
-		complete_national_focus = JAP_the_unthinkable_option
 
 		hidden_effect = {
 			set_country_flag = JAP_aizawas_trial_over_flag
@@ -1102,40 +812,6 @@ country_event = {
 					set_state_flag = MEN_occupied_state_suiyuan_campaign
 				}
 			}
-
-			ROOT = {
-				white_peace = {
-					tag = SHX
-				}
-			}
-			every_country = {
-				limit = {
-					is_ally_with = ROOT
-					has_war_with = SHX
-				}
-				white_peace = {
-					tag = SHX
-				}
-			}
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			IF = {
-				limit = {
-					SHX = {
-						exists = yes
-						NOT = {
-							is_ally_with = ROOT
-						}
-					}
-				}
-				SHX = {
-					country_event = {
-						id = SEA_japan_foreign_policy.30
-						hours = 2
-					}	
-				}
-			}
 		}
 	}
 	
@@ -1235,24 +911,6 @@ country_event = {
 		}	
 
 		custom_effect_tooltip = generic_skip_one_line_tt
-
-		IF = {
-			limit = {
-				XIC = {
-					exists = yes
-					NOT = {
-						is_ally_with = ROOT
-						has_war_with = ROOT
-					}
-				}
-			}
-			create_wargoal = {
-				type = annex_everything
-				target = XIC
-				expire = 0
-			}	
-			custom_effect_tooltip = generic_skip_one_line_tt
-		}
 
 		FROM = {
 			country_event = {
@@ -2249,11 +1907,6 @@ country_event = {
 		name = SEA_japan_foreign_policy.54.a
 
 		add_stability = -0.05
-		
-		add_popularity = {
-			ideology = MON
-			popularity = -0.1
-		}	
 
 		add_political_power = -50
 
@@ -2285,15 +1938,15 @@ country_event = {
 
 		custom_effect_tooltip = generic_skip_one_line_tt
 
-		every_possible_country = {
-			limit = {
-				has_character = MEN_jodbajab
-			}
-			set_nationality = {
-			    target_country = ROOT
-			    character = MEN_jodbajab
-			}
-		}
+		#every_possible_country = {
+		#	limit = {
+		#		has_character = MEN_jodbajab
+		#	}
+		#	set_nationality = {
+		#	    target_country = ROOT
+		#	    character = MEN_jodbajab
+		#	}
+		#}
 
 		set_country_flag = MON_jodbajab_arrived_in_the_country_flag
 
@@ -2325,280 +1978,17 @@ country_event = {
 
 		custom_effect_tooltip = generic_skip_one_line_tt
 
-		every_possible_country = {
-			limit = {
-				has_character = MAN_jonjurjab
-			}
-			set_nationality = {
-			    target_country = ROOT
-			    character = MAN_jonjurjab
-			}
-		}
+		#every_possible_country = {
+		#	limit = {
+		#		has_character = MAN_jonjurjab
+		#	}
+		#	set_nationality = {
+		#	    target_country = ROOT
+		#	    character = MAN_jonjurjab
+		#	}
+		#}
 
 		set_country_flag = MON_jonjurjab_arrived_in_the_country_flag
-
-	}
-
-}
-
-# [FROM.GetAdjective] Pressure for Submission - event for MON
-country_event = {
-	id = SEA_japan_foreign_policy.57
-	title = SEA_japan_foreign_policy.57.t
-	desc = SEA_japan_foreign_policy.57.desc
-	picture = GFX_report_event_japanese_officers
-	
-	is_triggered_only = yes
-
-	fire_only_once = yes
-	
-	# We can't fight them
-	option = { 
-		name = SEA_japan_foreign_policy.57.a
-		ai_chance = {
-			base = 100
-			modifier = {
-				factor = 0
-				is_subject = yes
-			}
-		}
-
-		FROM = {
-			puppet = {
-				target = ROOT
-				end_wars = yes
-			}	 
-		}
-
-		custom_effect_tooltip = generic_skip_one_line_tt
-
-		set_politics = {
-			ruling_party = fascism
-			elections_allowed = no
-		}		
-		add_popularity = {
-			ideology = fascism
-			popularity = 0.2
-		}	
-		add_manpower = 3000
-		army_experience = 50
-		add_political_power = 100
-
-		IF = {
-			limit = {
-				has_country_flag = MON_jonjurjab_arrived_in_the_country_flag
-			}
-			add_country_leader_role = {
-				character = MAN_jonjurjab
-				promote_leader = yes
-				country_leader = {
-					ideology = japan_militarism_ideology
-					expire = "1952.1.1.1"
-					traits = { spirit_of_genghis } 
-				}
-			}
-			add_country_leader_role = {
-				character = MAN_jonjurjab
-				promote_leader = yes
-				country_leader = {
-					ideology = emperor_fascism
-					expire = "1952.1.1.1"
-					traits = { spirit_of_genghis } 
-				}
-			}
-		}
-		ELSE_IF = {
-			limit = {
-				has_country_flag = MON_jodbajab_arrived_in_the_country_flag
-			}
-			add_country_leader_role = {
-				character = MEN_jodbajab
-				promote_leader = yes
-				country_leader = {
-					ideology = japan_militarism_ideology
-					expire = "1952.1.1.1"
-					traits = { spirit_of_genghis } 
-				}
-			}
-			add_country_leader_role = {
-				character = MEN_jodbajab
-				promote_leader = yes
-				country_leader = {
-					ideology = emperor_fascism
-					expire = "1952.1.1.1"
-					traits = { spirit_of_genghis } 
-				}
-			}
-		}
-
-		JAP_setup_faction_wide_aoe_effects_from = yes
-
-	}
-
-	# We must protect the revolution!
-	option = { 
-		name = SEA_japan_foreign_policy.57.b
-		ai_chance = {
-			base = 0
-			modifier = {
-				add = 25
-				is_in_faction_with = SOV
-			}
-			modifier = {
-				add = 10
-				is_historical_focus_on = yes 
-			}
-		}
-
-		custom_effect_tooltip = MON_japan_starts_a_popular_civil_war_tt
-
-		hidden_effect = {
-			IF = {
-				limit = {
-					has_country_flag = MON_jonjurjab_arrived_in_the_country_flag
-				}
-
-				start_civil_war = {
-				    ideology = fascism
-				    size = 0.7
-				    keep_all_characters = yes
-				    states = all
-				    states_filter = {
-				        OR = {
-				        	state = 819
-				        	state = 817
-				        	state = 818
-				        }
-				        is_controlled_by = ROOT
-				    }
-
-			    	PREV = {  # Original country
-			            MAN_jonjurjab = { # Character
-			                set_nationality = PREV.PREV
-			                # Transfers to breakaway
-			            }
-		        	}
-		        	IF = {
-		        		limit = {
-		        			PREV.PREV = {
-		        				NOT = {
-		        					has_country_leader = {
-		        						ruling_only = yes
-		        						character = MAN_jonjurjab
-		        					}
-		        				}
-		        				has_civil_war = yes
-		        			}
-		        		}
-		        		PREV.PREV = {
-		        			add_country_leader_role = {
-		        				character = MAN_jonjurjab
-		        				promote_leader = yes
-		        				country_leader = {
-		        					ideology = japan_militarism_ideology
-		        					expire = "1952.1.1.1"
-		        					traits = { spirit_of_genghis } 
-		        				}
-		        			}
-		        			add_country_leader_role = {
-		        				character = MAN_jonjurjab
-		        				promote_leader = yes
-		        				country_leader = {
-		        					ideology = emperor_fascism
-		        					expire = "1952.1.1.1"
-		        					traits = { spirit_of_genghis } 
-		        				}
-		        			}
-		        		}
-		        	}
-
-		        	PREV.PREV = {
-		        		FROM = {
-		        			puppet = {
-		        				target = PREV
-		        				end_wars = no
-		        				end_civil_wars = no
-		        			}	 
-		        		}
-		        	}
-
-		        }
-
-			}
-			ELSE_IF = {
-				limit = {
-					has_country_flag = MON_jodbajab_arrived_in_the_country_flag
-				}
-
-				start_civil_war = {
-				    ideology = fascism
-				    size = 0.7
-				    keep_all_characters = yes
-				    states = all
-				    states_filter = {
-				        OR = {
-				        	state = 819
-				        	state = 817
-				        	state = 818
-				        }
-				        is_controlled_by = ROOT
-				    }
-
-			    	PREV = {  # Original country
-			            MEN_jodbajab = { # Character
-			                set_nationality = PREV.PREV
-			                # Transfers to breakaway
-			            }
-		        	}
-		        	IF = {
-		        		limit = {
-		        			PREV.PREV = {
-		        				NOT = {
-		        					has_country_leader = {
-		        						ruling_only = yes
-		        						character = MEN_jodbajab
-		        					}
-		        				}
-		        				has_civil_war = yes
-		        			}
-		        		}
-		        		PREV.PREV = {
-		        			add_country_leader_role = {
-		        				character = MEN_jodbajab
-		        				promote_leader = yes
-		        				country_leader = {
-		        					ideology = japan_militarism_ideology
-		        					expire = "1952.1.1.1"
-		        					traits = { spirit_of_genghis } 
-		        				}
-		        			}
-		        			add_country_leader_role = {
-		        				character = MEN_jodbajab
-		        				promote_leader = yes
-		        				country_leader = {
-		        					ideology = emperor_fascism
-		        					expire = "1952.1.1.1"
-		        					traits = { spirit_of_genghis } 
-		        				}
-		        			}
-		        		}
-		        	}
-
-		        	PREV.PREV = {
-		        		FROM = {
-		        			puppet = {
-		        				target = PREV
-		        				end_wars = no
-		        				end_civil_wars = no
-		        			}	 
-		        		}
-		        	}
-
-		        }
-
-			}
-
-		}
 
 	}
 
@@ -2796,17 +2186,8 @@ country_event = {
 
 		custom_effect_tooltip = generic_skip_one_line_tt
 
-		CHI_wang_jingwei = {
-			set_nationality = RNG
-		}
+
 		hidden_effect = {
-			RNG = {
-				country_event = {
-					id = SEA_japan_foreign_policy.62
-					hours = 2
-					random_hours = 6
-				}	
-			}
 		}
 
 	}
@@ -2818,29 +2199,12 @@ country_event = {
 			base = 0
 		}
 
-		RNG = {
-			change_tag_from = ROOT
-		}
-
 		custom_effect_tooltip = generic_skip_one_line_tt
 
 		add_command_power = -25
 		add_war_support = -0.01
 
 		custom_effect_tooltip = generic_skip_one_line_tt
-
-		CHI_wang_jingwei = {
-			set_nationality = RNG
-		}
-		hidden_effect = {
-			RNG = {
-				country_event = {
-					id = SEA_japan_foreign_policy.62
-					hours = 2
-					random_hours = 6
-				}	
-			}
-		}
 
 	}
 
@@ -2865,33 +2229,6 @@ country_event = {
 		}
 		
 		# This all makes for a much better tooltip
-		hidden_effect = {
-			CHI_wang_jingwei = {
-				remove_country_leader_role = {
-					ideology = despotism
-				}
-			}
-		}
-		add_country_leader_role = {
-			character = CHI_wang_jingwei
-			promote_leader = yes
-			country_leader = {
-				ideology = despotism
-				expire = "1965.1.1.1"
-				traits = { eager_collaborator generallissimo } 
-			}
-		}	
-		hidden_effect = {
-			add_country_leader_role = {
-				character = CHI_wang_jingwei
-				promote_leader = yes
-				country_leader = {
-					ideology = emperor_fascism
-					expire = "1965.1.1.1"
-					traits = { eager_collaborator generallissimo } 
-				}
-			}	
-		}
 
 	}
 
@@ -2928,29 +2265,6 @@ country_event = {
 		name = SEA_japan_foreign_policy.63.a
 		ai_chance = {
 			base = 100
-		}
-		
-		RNG = {
-			country_event = {
-				id = SEA_japan_foreign_policy.64
-				hours = 2
-				random_hours = 4
-			}	
-		}
-		custom_effect_tooltip = GAME_OVER_TT
-		effect_tooltip = {
-			RNG = {
-				annex_country = {
-					target = ROOT
-					transfer_troops = yes
-				}	
-			}	
-			every_state = {
-				limit = {
-					is_core_of = ROOT
-				}
-				add_core_of = RNG
-			}
 		}
 
 	}
@@ -3150,21 +2464,12 @@ country_event = {
 			    }
 			    keep_all_characters = yes
 			    set_country_flag = RAJ_japanese_azad_hind_state_flag
-			    IF = {
-			    	limit = {
-			    		PREV = {
-			    			NOT = {
-			    				has_completed_focus = RAJ_forward_bloc
-			    			}
-			    		}
-			    	}
-    			    PREV = {  # Original country
-    		            RAJ_subhas_chanda_bose = { # Character
-    		                set_nationality = PREV.PREV
-    		                # Transfers to breakaway
-    		            }
-    	        	}
-			    }
+			    RAJ = {  # Original country
+					RAJ_subhas_chanda_bose = { # Character
+						set_nationality = PREV.PREV
+						# Transfers to breakaway
+					}
+				}
 			   	
 	        	IF = {
 	        		limit = {
@@ -3245,21 +2550,12 @@ country_event = {
 			    }
 			    keep_all_characters = yes
 			    set_country_flag = RAJ_japanese_azad_hind_state_flag
-			    IF = {
-			    	limit = {
-			    		PREV = {
-			    			NOT = {
-			    				has_completed_focus = RAJ_forward_bloc
-			    			}
-			    		}
-			    	}
-    			    PREV = {  # Original country
-    		            RAJ_subhas_chanda_bose = { # Character
-    		                set_nationality = PREV.PREV
-    		                # Transfers to breakaway
-    		            }
-    	        	}
-			    }
+			    RAJ = {  # Original country
+					RAJ_subhas_chanda_bose = { # Character
+						set_nationality = PREV.PREV
+						# Transfers to breakaway
+					}
+				}
 			   	
 	        	IF = {
 	        		limit = {
@@ -3336,21 +2632,12 @@ country_event = {
 			    }
 			    keep_all_characters = yes
 			    set_country_flag = RAJ_japanese_azad_hind_state_flag
-			    IF = {
-			    	limit = {
-			    		PREV = {
-			    			NOT = {
-			    				has_completed_focus = RAJ_forward_bloc
-			    			}
-			    		}
-			    	}
-    			    PREV = {  # Original country
-    		            RAJ_subhas_chanda_bose = { # Character
-    		                set_nationality = PREV.PREV
-    		                # Transfers to breakaway
-    		            }
-    	        	}
-			    }
+			    RAJ = {  # Original country
+					RAJ_subhas_chanda_bose = { # Character
+						set_nationality = PREV.PREV
+						# Transfers to breakaway
+					}
+				}
 			   	
 	        	IF = {
 	        		limit = {
@@ -3512,277 +2799,6 @@ country_event = {
 		#}
 
 	}
-}
-
-# Japan Establishes the Second Philippine Republic - event for PHI
-country_event = { 
-	id = SEA_japan_foreign_policy.69
-	title = SEA_japan_foreign_policy.69.t
-	desc = SEA_japan_foreign_policy.69.desc 
-	picture = GFX_report_event_generic_read_write
-
-	is_triggered_only = yes
-
-	# Fight them back, destroy any traitors!
-	option = { 
-		name = SEA_japan_foreign_policy.69.a	
-
-		IF = {
-			limit = {
-				OR = {
-					has_government = democratic
-					has_government = communism
-				}
-			}
-			start_civil_war = {
-			    ideology = JAP
-			    size = 0.7
-			    army_ratio = 0
-			    navy_ratio = 0
-			    air_ratio = 0
-			    states = all
-			    states_filter = {
-			        is_controlled_by = JAP
-			    }
-			    keep_all_characters = yes
-			    set_country_flag = PHI_japanese_philippines_flag
-			    PREV = {  # Original country
-		            PHI_jose_laurel = { # Character
-		                set_nationality = PREV.PREV
-		                # Transfers to breakaway
-		            }
-	        	}
-	        	IF = {
-	        		limit = {
-	        			PREV.PREV = {
-	        				NOT = {
-	        					has_country_leader = {
-	        						ruling_only = yes
-	        						character = PHI_jose_laurel
-	        					}
-	        				}
-	        			}
-	        		}
-	        		PREV.PREV = {
-	        			add_country_leader_role = {
-	        				character = PHI_jose_laurel
-	        				promote_leader = yes
-	        				country_leader = {
-	        					ideology = japan_militarism_ideology
-	        					expire = "1952.1.1.1"
-	        					traits = { PHI_puppet_president } 
-	        				}
-	        			}
-	        			add_country_leader_role = {
-	        				character = PHI_jose_laurel
-	        				promote_leader = yes
-	        				country_leader = {
-	        					ideology = fascism_ideology
-	        					expire = "1952.1.1.1"
-	        					traits = { PHI_puppet_president } 
-	        				}
-	        			}
-	        		}
-	        	}
-			}
-
-			random_country = {
-				limit = {
-					has_country_flag = PHI_japanese_philippines_flag
-				}
-				set_cosmetic_tag = PHI_second_republic_tag
-				FROM = {
-					set_autonomy = {
-						target = PREV
-						autonomous_state = autonomy_wtt_imperial_protectorate
-						end_wars = no
-						end_civil_wars = no
-					}
-					PREV = {
-						country_event = {
-							id = SEA_japan_foreign_policy.68
-							hours = 0
-						}	
-					}
-				}
-				every_state = {
-					limit = {
-						is_core_of = PHI
-						is_controlled_by = JAP
-					}
-					set_state_controller_to = PREV
-				}
-			}
-			
-		}
-		ELSE_IF = {
-			limit = {
-				has_government = neutrality
-			}
-			start_civil_war = {
-			    ideology = fascism
-			    size = 0.7
-			    army_ratio = 0
-			    navy_ratio = 0
-			    air_ratio = 0
-			    states = all
-			    states_filter = {
-			        is_controlled_by = JAP
-			    }
-			    keep_all_characters = yes
-			    set_country_flag = PHI_japanese_philippines_flag
-			    PREV = {  # Original country
-		            PHI_jose_laurel = { # Character
-		                set_nationality = PREV.PREV
-		                # Transfers to breakaway
-		            }
-	        	}
-	        	IF = {
-	        		limit = {
-	        			PREV.PREV = {
-	        				NOT = {
-	        					has_country_leader = {
-	        						ruling_only = yes
-	        						character = PHI_jose_laurel
-	        					}
-	        				}
-	        			}
-	        		}
-	        		PREV.PREV = {
-	        			add_country_leader_role = {
-	        				character = PHI_jose_laurel
-	        				promote_leader = yes
-	        				country_leader = {
-	        					ideology = japan_militarism_ideology
-	        					expire = "1952.1.1.1"
-	        					traits = { PHI_puppet_president } 
-	        				}
-	        			}
-	        			add_country_leader_role = {
-	        				character = PHI_jose_laurel
-	        				promote_leader = yes
-	        				country_leader = {
-	        					ideology = fascism_ideology
-	        					expire = "1952.1.1.1"
-	        					traits = { PHI_puppet_president } 
-	        				}
-	        			}
-	        		}
-	        	}
-			}
-			random_country = {
-				limit = {
-					has_country_flag = PHI_japanese_philippines_flag
-				}
-				set_cosmetic_tag = PHI_second_republic_tag
-				FROM = {
-					set_autonomy = {
-						target = PREV
-						autonomous_state = autonomy_wtt_imperial_protectorate
-						end_wars = no
-						end_civil_wars = no
-					}
-					PREV = {
-						country_event = {
-							id = SEA_japan_foreign_policy.68
-							hours = 2
-						}	
-					}
-				}
-				every_state = {
-					limit = {
-						is_core_of = PHI
-						is_controlled_by = JAP
-					}
-					set_state_controller_to = PREV
-				}
-			}
-		}
-		ELSE = {
-			start_civil_war = {
-			    ideology = neutrality
-			    size = 0.7
-			    army_ratio = 0
-			    navy_ratio = 0
-			    air_ratio = 0
-			    states = all
-			    states_filter = {
-			        is_controlled_by = JAP
-			    }
-			    keep_all_characters = yes
-			    set_country_flag = PHI_japanese_philippines_flag
-			    PREV = {  # Original country
-		            PHI_jose_laurel = { # Character
-		                set_nationality = PREV.PREV
-		                # Transfers to breakaway
-		            }
-	        	}
-	        	IF = {
-	        		limit = {
-	        			PREV.PREV = {
-	        				NOT = {
-	        					has_country_leader = {
-	        						ruling_only = yes
-	        						character = PHI_jose_laurel
-	        					}
-	        				}
-	        			}
-	        		}
-	        		PREV.PREV = {
-	        			add_country_leader_role = {
-	        				character = PHI_jose_laurel
-	        				promote_leader = yes
-	        				country_leader = {
-	        					ideology = emperor_fascism
-	        					expire = "1952.1.1.1"
-	        					traits = { PHI_puppet_president } 
-	        				}
-	        			}
-	        			add_country_leader_role = {
-	        				character = PHI_jose_laurel
-	        				promote_leader = yes
-	        				country_leader = {
-	        					ideology = oligarchism
-	        					expire = "1952.1.1.1"
-	        					traits = { PHI_puppet_president } 
-	        				}
-	        			}	
-	        		}
-	        	}
-			}
-			random_country = {
-				limit = {
-					has_country_flag = PHI_japanese_philippines_flag
-				}
-				set_cosmetic_tag = PHI_second_republic_tag
-				FROM = {
-					set_autonomy = {
-						target = PREV
-						autonomous_state = autonomy_wtt_imperial_protectorate
-						end_wars = no
-						end_civil_wars = no
-					}
-					PREV = {
-						country_event = {
-							id = SEA_japan_foreign_policy.68
-							hours = 2
-						}	
-					}
-				}
-				every_state = {
-					limit = {
-						is_core_of = PHI
-						is_controlled_by = JAP
-					}
-					set_state_controller_to = PREV
-				}
-			}
-		}
-		
-
-	}
-
-	
 }
 
 # Japan Demands our Conditional Surrender - event for SOV
@@ -4519,12 +3535,6 @@ country_event = {
 	# Perhaps a second isolation would benefit us...
 	option = {
 		name = SEA_japan_foreign_policy.84.a
-
-		uncomplete_national_focus = {
-			focus = JAP_utilize_our_polish_friendship
-			uncomplete_children = no
-			refund_political_power = no
-		}	
 
 		custom_effect_tooltip = generic_skip_one_line_tt
 
@@ -5913,9 +4923,6 @@ country_event = {
 					limit = {
 						OR = {
 							state = 336
-							state = 999
-							state = 1024
-							state = 1023
 							state = 333
 							state = 334
 							state = 724
@@ -5995,9 +5002,6 @@ country_event = {
 				limit = {
 					OR = {
 						state = 336
-						state = 999
-						state = 1024
-						state = 1023
 						state = 333
 						state = 334
 						state = 724
@@ -6745,459 +5749,6 @@ country_event = {
 
 	}
 
-}
-
-# Japan incites a communist civil war - event for KOR 
-country_event = { 
-	id = SEA_japan_foreign_policy.131
-	title = SEA_japan_foreign_policy.131.t
-	desc = SEA_japan_foreign_policy.131.desc
-	picture = GFX_report_event_generic_communist_militia
-
-	is_triggered_only = yes
-
-	option = { #we are communist now!
-		name = SEA_japan_foreign_policy.131.a
-		ai_chance = {
-			base = 98
-		}
-
-		hidden_effect = {
-			random_owned_controlled_state = {
-				limit = {
-					is_core_of = ROOT
-				}
-				set_variable = { ROOT.temp_capital = THIS.id }
-			}
-		}
-
-		set_party_name = {
-		    ideology = communism
-		    long_name = KOR_communism_namro_party_long
-		    name = KOR_communism_namro_party
-		}
-		add_popularity = {
-			ideology = communism
-			popularity = 0.4
-		}	
-
-		start_civil_war = {
-			ideology = ROOT
-			ruling_party = communism
-			size = 0.5 
-			states = all
-			states_filter = {
-			    OR = {
-			    	state = 527
-			    	state = 1028
-			    	state = 525
-			    }
-			    is_controlled_by = ROOT
-			}
-		}
-
-		add_country_leader_role = {
-			character = KOR_pak_hon_yong
-			promote_leader = yes
-			country_leader = {
-				ideology = stalinism
-				expire = "1952.1.1.1"
-				traits = { JAP_socialist_revolutionary } 
-			}
-		}
-
-		random_country = {
-			limit = {
-				original_tag = KOR
-				has_government = communism
-				is_subject = no
-			}
-			FROM = {
-				puppet = {
-				    target = PREV
-				    end_wars = no
-				    end_civil_wars = no
-				}
-			}
-		}
-
-		hidden_effect = {
-			random_country = {
-				limit = {
-					original_tag = KOR
-					NOT = {
-						has_government = communism
-					}
-				}
-				FROM = {
-					declare_war_on = {
-						target = PREV
-						type = annex_everything
-					}	
-				}
-			}
-		}
-
-	}
-
-	option = { #Fight back the red menace!
-		name = SEA_japan_foreign_policy.131.b
-		ai_chance = {
-			base = 2
-		}
-
-		hidden_effect = {
-			random_owned_controlled_state = {
-				limit = {
-					is_core_of = ROOT
-				}
-				set_variable = { ROOT.temp_capital = THIS.id }
-			}
-		}
-
-		start_civil_war = {
-			ideology = communism
-			ruling_party = ROOT
-			size = 0.5 
-			states = all
-			states_filter = {
-			    OR = {
-			    	state = 1031
-			    	state = 1030
-			    	state = 1029
-			    }
-			    is_controlled_by = ROOT
-			}
-			PREV = {  # Original country
-				KOR_pak_hon_yong = { # Character
-				    set_nationality = PREV.PREV
-				    # Transfers to breakaway
-				}
-			}
-			IF = {
-				limit = {
-					PREV.PREV = {
-						NOT = {
-							has_country_leader = {
-								ruling_only = yes
-								character = KOR_pak_hon_yong
-							}
-						}
-						has_civil_war = yes
-					}
-				}
-				PREV.PREV = {
-					add_country_leader_role = {
-						character = KOR_pak_hon_yong
-						promote_leader = yes
-						country_leader = {
-							ideology = stalinism
-							expire = "1952.1.1.1"
-							traits = { JAP_socialist_revolutionary } 
-						}
-					}	
-				}
-			}
-			PREV.PREV = {
-				set_party_name = {
-				    ideology = communism
-				    long_name = KOR_communism_namro_party_long
-				    name = KOR_communism_namro_party
-				}
-				add_popularity = {
-					ideology = communism
-					popularity = 0.4
-				}	
-			}
-		}
-
-		random_country = {
-			limit = {
-				original_tag = KOR
-				has_government = communism
-				is_subject = no
-			}
-			FROM = {
-				puppet = {
-				    target = PREV
-				    end_wars = no
-				    end_civil_wars = no
-				}
-			}
-		}
-
-		hidden_effect = {
-			random_country = {
-				limit = {
-					original_tag = KOR
-					NOT = {
-						has_government = communism
-					}
-				}
-				FROM = {
-					declare_war_on = {
-						target = PREV
-						type = annex_everything
-					}	
-				}
-			}
-		}
-
-		
-	}
-}
-
-
-# Japan demands our Submission - event for south east asian nations 
-country_event = {
-	id = SEA_japan_foreign_policy.132
-	title = SEA_japan_foreign_policy.132.t
-	desc = SEA_japan_foreign_policy.132.desc
-	picture = GFX_report_event_japanese_officers
-	
-	is_triggered_only = yes
-
-	fire_only_once = no
-	
-	# This is an opportunity for us 
-	option = { 
-		name = SEA_japan_foreign_policy.132.a
-		ai_chance = {
-			base = 70
-			modifier = {
-				has_war_support < 0.5
-				factor = 2
-			}
-			modifier = {
-				strength_ratio = { tag = JAP ratio < 0.8 }
-				factor = 2
-			}
-			modifier = {
-				is_in_faction = no
-				JAP = { is_in_faction = yes }
-				factor = 2
-			}
-		}
-
-		FROM = {
-			country_event = {
-				# FROM folds
-				id = SEA_japan_foreign_policy.133
-				days = 1
-				random_days = 2
-			}
-		}
-		effect_tooltip = {
-			FROM = {
-				puppet = {
-					target = ROOT
-					end_wars = yes
-					end_civil_wars = no
-				}	
-			}	
-		}
-
-	}
-
-	# We must maintain our independence at all costs!
-	option = { 
-		name = SEA_japan_foreign_policy.132.b
-		ai_chance = {
-			base = 30
-			modifier = {
-				has_war_support > 0.5
-				factor = 1.5
-			}
-			modifier = {
-				strength_ratio = { tag = JAP ratio > 1.5 }
-				factor = 2
-			}
-			modifier = {
-				has_stability < 0.5
-				factor = 0.5
-			}
-			modifier = {
-				is_historical_focus_on = yes 
-				factor = 0
-			}
-		}
-
-		add_war_support = 0.05
-
-		custom_effect_tooltip = generic_skip_one_line_tt
-
-		FROM = {
-			country_event = {
-				# FROM refuses to fold
-				id = SEA_japan_foreign_policy.134
-				days = 1
-				random_days = 2
-			}
-		}
-		effect_tooltip = {
-			FROM = {
-				create_wargoal = {
-					type = puppet_wargoal_focus
-					target = ROOT
-					expire = 0
-				}	
-			}
-		}
-
-	}
-}
-
-# FROM submits to our rule - event for JAP
-country_event = {
-	id = SEA_japan_foreign_policy.133
-	title = SEA_japan_foreign_policy.133.t
-	desc = SEA_japan_foreign_policy.133.desc
-	picture = GFX_report_event_chinese_japanese_handshake
-	
-	is_triggered_only = yes
-
-	fire_only_once = no
-
-	# Perfect!
-	option = {
-		name = SEA_japan_foreign_policy.133.a
-
-		puppet = {
-			target = FROM
-			end_wars = yes
-			end_civil_wars = no
-		}		 
-
-		custom_effect_tooltip = generic_skip_one_line_tt
-
-		JAP_setup_faction_wide_aoe_effects_root = yes
-
-	}
-}
-
-# [FROM.GetLeader] Rejects our Demands - event for JAP
-country_event = {
-	id = SEA_japan_foreign_policy.134
-	title = SEA_japan_foreign_policy.134.t
-	desc = SEA_japan_foreign_policy.134.desc
-	picture = GFX_report_event_japanese_army_parade
-	
-	is_triggered_only = yes
-
-	fire_only_once = no
-
-	# Then we must take back our territory by force!
-	option = {
-		name = SEA_japan_foreign_policy.134.a
-
-		create_wargoal = {
-			type = puppet_wargoal_focus
-			target = FROM
-			expire = 0
-		}	
-
-	}
-
-}
-
-country_event = { # Proclamation of the Second Philippine Republic - event for PSR
-	id = SEA_japan_foreign_policy.135
-	title = SEA_japan_foreign_policy.135.t
-	desc = SEA_japan_foreign_policy.135.desc 
-	picture = GFX_report_event_generic_read_write
-
-	is_triggered_only = yes
-
-	option = { # Prosperity is within sight!
-		name = SEA_japan_foreign_policy.135.a	
-		    
-    	IF = {
-    		limit = {
-    			ROOT = {
-    				NOT = {
-    					has_country_leader = {
-    						ruling_only = yes
-    						character = PHI_jose_laurel
-    					}
-    				}
-    				has_character = PHI_jose_laurel
-    			}
-    		}
-    		PREV.PREV = {
-    			add_country_leader_role = {
-    				character = PHI_jose_laurel
-    				promote_leader = yes
-    				country_leader = {
-    					ideology = japan_militarism_ideology
-    					expire = "1952.1.1.1"
-    					traits = { PHI_puppet_president } 
-    				}
-    			}
-    			promote_character = {
-    				character = PHI_jose_laurel 
-    				ideology = japan_militarism_ideology 
-    			}
-    			add_country_leader_role = {
-    				character = PHI_jose_laurel
-    				promote_leader = yes
-    				country_leader = {
-    					ideology = falangism
-    					expire = "1952.1.1.1"
-    					traits = { PHI_puppet_president } 
-    				}
-    			}
-    			promote_character = {
-    				character = PHI_jose_laurel 
-    				ideology = falangism 
-    			}
-    		}
-    	}
-    	ELSE_IF = {
-    		limit = {
-    			ROOT = {
-    				NOT = {
-    					has_country_leader = {
-    						ruling_only = yes
-    						character = PHI_artemio_ricarte
-    					}
-    				}
-    				has_character = PHI_artemio_ricarte
-    			}
-    		}
-    		add_country_leader_role = {
-    			character = PHI_artemio_ricarte
-    			promote_leader = yes
-    			country_leader = {
-    				ideology = japan_militarism_ideology
-    				expire = "1952.1.1.1"
-    				traits = { PHI_philippine_nationalist_leader } 
-    			}
-    		}
-    		promote_character = {
-    			character = PHI_artemio_ricarte 
-    			ideology = japan_militarism_ideology 
-    		}
-    		add_country_leader_role = {
-    			character = PHI_artemio_ricarte
-    			promote_leader = yes
-    			country_leader = {
-    				ideology = fascism_ideology
-    				expire = "1952.1.1.1"
-    				traits = { PHI_philippine_nationalist_leader } 
-    			}
-    		}
-    		promote_character = {
-    			character = PHI_artemio_ricarte 
-    			ideology = fascism_ideology 
-    		}
-    	}
-		
-
-		custom_effect_tooltip = generic_skip_one_line_tt
-		
-		JAP_setup_faction_wide_aoe_effects_from = yes	
-
-	}
 }
 
 # An Attack on Pearl Harbor - event for USA 
@@ -8048,7 +6599,7 @@ country_event = {
 		
 		# So that you are going down a branch that actually has the specified focus 
 		OR = {
-			has_completed_focus = JAP_revere_the_emperor_destroy_the_traitors
+			
 			has_completed_focus = JAP_sea_purge_the_kodoha_faction
 		}
 
@@ -8172,24 +6723,6 @@ country_event = {
 	# The Liberal Machida Chūji
 	option = {
 		name = SEA_japan_popup_events.16.a
-		ai_chance = {
-			base = 50 
-			modifier = {
-				factor = 0 
-				OR = {
-					has_country_flag = JAP_AI_RANDOM_COMMUNIST
-					has_game_rule = {
-						rule = JAP_ai_behavior
-						option = COMMUNIST
-					}
-					has_country_flag = JAP_AI_RANDOM_COMMUNIST_2
-					has_game_rule = {
-						rule = JAP_ai_behavior
-						option = COMMUNIST_2
-					}
-				}
-			}
-		}
 		
 		IF = {
 			limit = {
@@ -8240,19 +6773,6 @@ country_event = {
 	# The Socialist Abe Isoo
 	option = {
 		name = SEA_japan_popup_events.16.b
-		ai_chance = {
-			base = 30 
-			modifier = {
-				factor = 0
-				OR = {
-					has_country_flag = JAP_AI_RANDOM_DEMOCRATIC
-					has_game_rule = {
-						rule = JAP_ai_behavior
-						option = DEMOCRATIC
-					}
-				}
-			}
-		}
 		
 		add_country_leader_role = {
 			character = JAP_abe_isoo
@@ -8281,24 +6801,6 @@ country_event = {
 	# President of the House of Peers, Tokugawa Iesato
 	option = {
 		name = SEA_japan_popup_events.16.c
-		ai_chance = {
-			base = 20 
-			modifier = {
-				factor = 0 
-				OR = {
-					has_country_flag = JAP_AI_RANDOM_COMMUNIST
-					has_game_rule = {
-						rule = JAP_ai_behavior
-						option = COMMUNIST
-					}
-					has_country_flag = JAP_AI_RANDOM_COMMUNIST_2
-					has_game_rule = {
-						rule = JAP_ai_behavior
-						option = COMMUNIST_2
-					}
-				}
-			}
-		}
 		
 		add_country_leader_role = {
 			character = JAP_tokugawa_iesato
@@ -8489,7 +6991,6 @@ country_event = {
 					}
 					transfer_state = 613
 				}
-				add_state_claim = 1034
 			}
 			country_event = { id = SEA_japan_popup_events.21 }
 		}
@@ -8512,15 +7013,7 @@ country_event = {
 
 		add_war_support = 0.05
 
-		IF = {
-			limit = {
-				NOT = {
-					has_completed_focus = JAP_subdue_the_kwantung_army
-					has_completed_focus = JAP_revoke_the_peace_preservation_law
-				}
-			}
-			custom_effect_tooltip = JAP_first_strike_blocked_due_to_kwantung_army_tt
-		}
+		custom_effect_tooltip = JAP_first_strike_blocked_due_to_kwantung_army_tt
 
 		custom_effect_tooltip = generic_skip_one_line_tt
 
@@ -8535,42 +7028,12 @@ country_event = {
 					}
 				}
 			}
-			hidden_effect = {
-				IF = {
-					limit = {
-						NOT = {
-							has_completed_focus = JAP_subdue_the_kwantung_army
-							has_completed_focus = JAP_revoke_the_peace_preservation_law
-						}
-					}
-					CHI = {
+			CHI = {
 						set_country_flag = JAP_first_strike_principle_blocked
 					}
-				}
-			}
 			declare_war_on = {
 				target = CHI
 				type = annex_everything
-			}
-			IF = {
-				limit = {
-					MAN = {
-						is_subject_of = ROOT
-						NOT = {
-							OR = {
-								has_completed_focus = MAN_assertiveness
-								has_completed_focus = MAN_tsr_assertiveness
-							}
-						}
-					}
-				}
-				MAN = {
-					add_to_war = {
-					    targeted_alliance = ROOT
-					    enemy = CHI
-					    hostility_reason = asked_to_join
-					}
-				}
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt
 		}
@@ -8585,19 +7048,9 @@ country_event = {
 				}
 			}
 
-			hidden_effect = {
-				IF = {
-					limit = {
-						NOT = {
-							has_completed_focus = JAP_subdue_the_kwantung_army
-							has_completed_focus = JAP_revoke_the_peace_preservation_law
-						}
-					}
-					613 = {
-						OWNER = {
-							set_country_flag = JAP_first_strike_principle_blocked
-						}
-					}
+			613 = {
+				OWNER = {
+					set_country_flag = JAP_first_strike_principle_blocked
 				}
 			}
 
@@ -8649,8 +7102,6 @@ country_event = {
 				transfer_state = 613
 			}
 		}
-
-		add_state_claim = 1034
 		
 		add_ai_strategy = {
 			type = antagonize
@@ -8659,216 +7110,6 @@ country_event = {
 		}
 		
 	}
-}
-
-# The Siege of Osaka Castle - event for JAP 
-country_event = {
-	id = SEA_japan_popup_events.22
-	title = SEA_japan_popup_events.22.t
-	desc = SEA_japan_popup_events.22.desc
-	picture = GFX_report_event_JAP_kodoha_coup_attempt_occupation
-	
-	is_triggered_only = yes
-
-	fire_only_once = yes
-
-	# The time has come to bring back the spirit of the Taishō Era!
-	option = {
-		name = SEA_japan_popup_events.22.a
-		
-		# Kick off the democratic civil war 
-
-		JAP_trigger_democratic_civil_war = yes
-
-	}
-
-	after = {
-		hidden_effect = {
-			IF = {
-				limit = {
-					any_country = {
-						original_tag = JAP
-						has_government = fascism
-						num_divisions < 20
-					}
-				}
-				random_country = {
-					limit = {
-						original_tag = JAP
-						has_government = fascism
-					}
-					random_state = {
-						limit = {
-							is_core_of = JAP
-							is_controlled_by = PREV
-						}
-						create_unit = {
-						    division = "name = \"14. Dai-Nippon Teikoku Rikugun Hohei Shidan\" division_template = \"Dai-Nippon Teikoku Rikugun Hohei Shidan\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
-						    owner = PREV
-						}
-						create_unit = {
-						    division = "name = \"15. Dai-Nippon Teikoku Rikugun Hohei Shidan\" division_template = \"Dai-Nippon Teikoku Rikugun Hohei Shidan\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
-						    owner = PREV
-						}
-						create_unit = {
-						    division = "name = \"16. Dai-Nippon Teikoku Rikugun Hohei Shidan\" division_template = \"Dai-Nippon Teikoku Rikugun Hohei Shidan\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
-						    owner = PREV
-						}
-						create_unit = {
-						    division = "name = \"17. Dai-Nippon Teikoku Rikugun Hohei Shidan\" division_template = \"Dai-Nippon Teikoku Rikugun Hohei Shidan\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
-						    owner = PREV
-						}
-					}
-				}
-				random_state = {
-					limit = {
-						is_core_of = JAP
-						is_controlled_by = PREV
-					}
-					create_unit = {
-					    division = "name = \"18. Dai-Nippon Teikoku Rikugun Hohei Shidan\" division_template = \"Dai-Nippon Teikoku Rikugun Hohei Shidan\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
-					    owner = PREV
-					}
-					create_unit = {
-					    division = "name = \"19. Dai-Nippon Teikoku Rikugun Hohei Shidan\" division_template = \"Dai-Nippon Teikoku Rikugun Hohei Shidan\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
-					    owner = PREV
-					}
-					create_unit = {
-					    division = "name = \"20. Dai-Nippon Teikoku Rikugun Hohei Shidan\" division_template = \"Dai-Nippon Teikoku Rikugun Hohei Shidan\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
-					    owner = PREV
-					}
-					create_unit = {
-					    division = "name = \"21. Dai-Nippon Teikoku Rikugun Hohei Shidan\" division_template = \"Dai-Nippon Teikoku Rikugun Hohei Shidan\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
-					    owner = PREV
-					}
-				}
-				random_state = {
-					limit = {
-						is_core_of = JAP
-						is_controlled_by = PREV
-					}
-					create_unit = {
-					    division = "name = \"22. Dai-Nippon Teikoku Rikugun Hohei Shidan\" division_template = \"Dai-Nippon Teikoku Rikugun Hohei Shidan\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
-					    owner = PREV
-					}
-					create_unit = {
-					    division = "name = \"23. Dai-Nippon Teikoku Rikugun Hohei Shidan\" division_template = \"Dai-Nippon Teikoku Rikugun Hohei Shidan\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
-					    owner = PREV
-					}
-				}
-			}
-		}
-	}
-
-}
-
-# The Complacent Emperor - event for JAP 
-country_event = {
-	id = SEA_japan_popup_events.23
-	title = SEA_japan_popup_events.23.t
-	desc = SEA_japan_popup_events.23.desc
-	picture = GFX_report_event_JAP_diet_speech
-	
-	is_triggered_only = yes
-
-	fire_only_once = yes
-
-	# Very well, Nobuhito will take his place
-	option = {
-		name = SEA_japan_popup_events.23.a
-
-		custom_effect_tooltip = JAP_nobuhito_takes_up_the_throne_tt
-
-		custom_effect_tooltip = generic_skip_one_line_tt
-
-		add_timed_idea = {
-			idea = JAP_royal_support_for_civilian_government_idea
-			days = 365
-		}	
-
-		hidden_effect = {
-			set_country_flag = JAP_nobuhito_is_the_current_regent_or_emperor_flag
-		}
-
-	}
-
-}
-
-# The Imperial Army Surrenders - event for JAP 
-country_event = {
-	id = SEA_japan_popup_events.24
-	title = SEA_japan_popup_events.24.t
-	desc = SEA_japan_popup_events.24.desc
-	picture = GFX_report_event_JAP_workers_celebrating
-	
-	is_triggered_only = yes
-
-	fire_only_once = yes
-
-	# We have reclaimed our future!
-	option = {
-		name = SEA_japan_popup_events.24.a
-		
-		add_popularity = {
-			ideology = democratic
-			popularity = 0.05
-		}	
-
-		custom_effect_tooltip = generic_skip_one_line_tt
-
-		add_war_support = 0.05
-
-	}
-
-}
-
-# The General Election - event for JAP 
-country_event = {
-	id = SEA_japan_popup_events.25
-	title = SEA_japan_popup_events.25.t
-	desc = SEA_japan_popup_events.25.desc
-	picture = GFX_report_event_JAP_workers_celebrating
-	
-	is_triggered_only = yes
-
-	fire_only_once = yes
-
-	# The Rikken Minseitō is victorious!
-	option = {
-		name = SEA_japan_popup_events.25.a
-		ai_chance = { 
-			base = 50 
-		}
-		
-		JAP_small_government_faction_gain = yes
-
-		custom_effect_tooltip = generic_skip_one_line_tt
-
-		complete_national_focus = {
-			focus = JAP_rikken_minseito_victory
-			use_side_message = yes
-		}
-
-	}
-
-	# The Rikken Seiyūkai is victorious!
-	option = {
-		name = SEA_japan_popup_events.25.b
-		ai_chance = { 
-			base = 50 
-		}
-		
-		JAP_small_government_faction_gain = yes
-
-		custom_effect_tooltip = generic_skip_one_line_tt
-
-		complete_national_focus = {
-			focus = JAP_rikken_seiyukai_victory
-			use_side_message = yes
-		}
-
-	}
-
 }
 
 # The Kwantung Army's Coup D'etat - event for MAN 
@@ -9123,7 +7364,7 @@ country_event = {
 		}
 		trigger = {
 
-			1018 = {
+			528 = {
 				NOT = {
 					has_dynamic_modifier = {
 						modifier = JAP_state_infiltrated_by_the_jcp
@@ -9136,7 +7377,7 @@ country_event = {
 
 		IF = {
 			limit = {
-				1018 = {
+				528 = {
 					NOT = {
 						has_dynamic_modifier = {
 							modifier = JAP_state_infiltrated_by_the_jcp
@@ -9144,7 +7385,7 @@ country_event = {
 					}
 				}
 			}
-			1018 = {
+			528 = {
 				IF = {
 					limit = {
 						has_dynamic_modifier = {
@@ -9175,202 +7416,6 @@ country_event = {
 		}
 
 	}
-}
-
-# The Miyazaki Incident - event for JAP 
-country_event = {
-	id = SEA_japan_popup_events.29
-	title = SEA_japan_popup_events.29.t
-	desc = SEA_japan_popup_events.29.desc
-	picture = GFX_report_event_JAP_kodoha_coup_attempt_occupation
-	
-	is_triggered_only = yes
-
-	fire_only_once = yes
-
-	# The Revolution has finally begun!
-	option = {
-		name = SEA_japan_popup_events.29.a
-		
-		# Kick off the communist civil war 
-
-		JAP_trigger_communist_civil_war = yes
-
-	}
-
-	after = {
-
-		hidden_effect = {
-			random_country = {
-				limit = {
-					original_tag = JAP
-					has_government = democratic
-				}
-				every_other_country = {
-					limit = {
-						original_tag = JAP
-					}
-					PREV = {
-						declare_war_on = {
-						    target = PREV
-						    type = civil_war
-						}
-					}
-				}
-			}
-
-			every_core_state = {
-				limit = {
-					has_state_flag = JAP_mountain_villages_operation_units_active_here
-				}
-				create_unit = {
-					division = "division_template = \"Sanson Kōsakutai\" start_experience_factor = 0.1 start_equipment_factor = 0.7"
-					owner = ROOT
-					count = 2
-					allow_spawning_on_enemy_provs = yes
-				}
-			}	
-
-			IF = {
-				limit = {
-					any_country = {
-						original_tag = JAP
-						has_government = fascism
-						num_divisions < 20
-					}
-				}
-				random_country = {
-					limit = {
-						original_tag = JAP
-						has_government = fascism
-					}
-					random_state = {
-						limit = {
-							is_core_of = JAP
-							is_controlled_by = PREV
-						}
-						create_unit = {
-						    division = "name = \"14. Dai-Nippon Teikoku Rikugun Hohei Shidan\" division_template = \"Dai-Nippon Teikoku Rikugun Hohei Shidan\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
-						    owner = PREV
-						}
-						create_unit = {
-						    division = "name = \"15. Dai-Nippon Teikoku Rikugun Hohei Shidan\" division_template = \"Dai-Nippon Teikoku Rikugun Hohei Shidan\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
-						    owner = PREV
-						}
-						create_unit = {
-						    division = "name = \"16. Dai-Nippon Teikoku Rikugun Hohei Shidan\" division_template = \"Dai-Nippon Teikoku Rikugun Hohei Shidan\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
-						    owner = PREV
-						}
-						create_unit = {
-						    division = "name = \"17. Dai-Nippon Teikoku Rikugun Hohei Shidan\" division_template = \"Dai-Nippon Teikoku Rikugun Hohei Shidan\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
-						    owner = PREV
-						}
-					}
-				}
-				random_state = {
-					limit = {
-						is_core_of = JAP
-						is_controlled_by = PREV
-					}
-					create_unit = {
-					    division = "name = \"18. Dai-Nippon Teikoku Rikugun Hohei Shidan\" division_template = \"Dai-Nippon Teikoku Rikugun Hohei Shidan\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
-					    owner = PREV
-					}
-					create_unit = {
-					    division = "name = \"19. Dai-Nippon Teikoku Rikugun Hohei Shidan\" division_template = \"Dai-Nippon Teikoku Rikugun Hohei Shidan\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
-					    owner = PREV
-					}
-					create_unit = {
-					    division = "name = \"20. Dai-Nippon Teikoku Rikugun Hohei Shidan\" division_template = \"Dai-Nippon Teikoku Rikugun Hohei Shidan\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
-					    owner = PREV
-					}
-					create_unit = {
-					    division = "name = \"21. Dai-Nippon Teikoku Rikugun Hohei Shidan\" division_template = \"Dai-Nippon Teikoku Rikugun Hohei Shidan\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
-					    owner = PREV
-					}
-				}
-				random_state = {
-					limit = {
-						is_core_of = JAP
-						is_controlled_by = PREV
-					}
-					create_unit = {
-					    division = "name = \"22. Dai-Nippon Teikoku Rikugun Hohei Shidan\" division_template = \"Dai-Nippon Teikoku Rikugun Hohei Shidan\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
-					    owner = PREV
-					}
-					create_unit = {
-					    division = "name = \"23. Dai-Nippon Teikoku Rikugun Hohei Shidan\" division_template = \"Dai-Nippon Teikoku Rikugun Hohei Shidan\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
-					    owner = PREV
-					}
-				}
-			}
-		}
-
-	}
-
-}
-
-# Debate on the Future Direction of the State - event for JAP 
-country_event = {
-	id = SEA_japan_popup_events.30
-	title = SEA_japan_popup_events.30.t
-	desc = SEA_japan_popup_events.30.desc
-	picture = GFX_report_event_JAP_workers_celebrating
-	
-	is_triggered_only = yes
-
-	fire_only_once = yes
-
-	# The Kōza-ha are in the right here
-	option = {
-		name = SEA_japan_popup_events.30.a
-		ai_chance = { 
-			base = 50 
-			modifier = {
-				factor = 0
-				OR = {
-					has_country_flag = JAP_AI_RANDOM_COMMUNIST_2
-					has_game_rule = {
-						rule = JAP_ai_behavior
-						option = COMMUNIST_2
-					}
-				}
-			}
-		}
-		
-		custom_effect_tooltip = JAP_supported_the_kozaha_idea_tt
-
-		hidden_effect = {
-			set_country_flag = JAP_supported_the_kozaha_idea_flag
-		}
-
-	}
-
-	# The Rōnō-ha's ideals shine brightest today
-	option = {
-		name = SEA_japan_popup_events.30.b
-		ai_chance = { 
-			base = 50 
-			modifier = {
-				factor = 0
-				OR = {
-					has_country_flag = JAP_AI_RANDOM_COMMUNIST
-					has_game_rule = {
-						rule = JAP_ai_behavior
-						option = COMMUNIST
-					}
-				}
-			}
-		}
-		
-		custom_effect_tooltip = JAP_supported_the_rounoha_idea_tt
-
-		hidden_effect = {
-			set_country_flag = JAP_supported_the_rounoha_idea_flag
-		}
-
-	}
-
 }
 
 # A Leader for the Kōza-ha - event for JAP 
@@ -9576,16 +7621,6 @@ country_event = {
 		ai_chance = { 
 			base = 75
 		}
-		
-		every_owned_state = {
-			limit = {
-				is_core_of = ANU
-			}
-			add_dynamic_modifier = {
-				modifier = JAP_ainu_revoluton_theory_implemented_dm
-				scope = ROOT
-			}	
-		}
 
 	}
 
@@ -9594,28 +7629,6 @@ country_event = {
 		name = SEA_japan_popup_events.34.b
 		ai_chance = { 
 			base = 25 
-		}
-		trigger = {
-			ANU = {
-				exists = no
-			}
-		}
-		
-		every_owned_state = {
-			limit = {
-				is_core_of = ANU
-			}
-			transfer_state_to = ANU
-		}
-
-		custom_effect_tooltip = generic_skip_one_line_tt
-
-		puppet = ANU
-
-		ANU = {
-			add_political_power = 150
-			add_stability = 0.1
-			add_war_support = 0.1
 		}
 
 	}
@@ -9896,16 +7909,6 @@ country_event = {
 
 		OR = {
 			# Wuhan 
-			1036 = {
-				OR = {
-					is_controlled_by = JAP
-					JAP = {
-						any_subject_country = {
-							controls_state = PREV
-						}
-					}
-				}
-			}
 			# Hanoi
 			671 = {
 				OR = {
@@ -9919,17 +7922,6 @@ country_event = {
 			}
 			# Changde 
 			750 = {
-				OR = {
-					is_controlled_by = JAP
-					JAP = {
-						any_subject_country = {
-							controls_state = PREV
-						}
-					}
-				}
-			}
-			# Yanan
-			1032 = {
 				OR = {
 					is_controlled_by = JAP
 					JAP = {
@@ -10410,8 +8402,6 @@ country_event = {
 		has_civil_war = no
 		has_war = yes
 
-		has_completed_focus = JAP_crush_the_internal_factions
-
 		any_core_state = {
 			JAP_is_home_islands_state = yes
 			NOT = {
@@ -10422,7 +8412,7 @@ country_event = {
 		NOT = {
 			has_global_flag = JAP_national_emergency_declared
 		}
-		
+		always = no
 	}
 
 	mean_time_to_happen = { days = 84 }
@@ -10472,14 +8462,12 @@ country_event = {
 
 		has_civil_war = no
 
-		has_completed_focus = JAP_mitsumasa_yonai_focus
-
 		JAP_army_faction_is_tier_4 = yes
 
 		NOT = {
 			has_global_flag = JAP_yonai_replaced_by_kenzo
 		}
-		
+		always = no
 	}
 
 	mean_time_to_happen = { days = 70 }
@@ -12440,19 +10428,20 @@ news_event = {
 	major = yes
 	
 	trigger = {
-		995 = { 
-			controller = {
-				OR = {
-					original_tag = JAP
-					is_ally_with = JAP
-				}
-			}
-		}
-		OR = {
-			995 = {
-				is_owned_by = ENG
-			}
-		}
+		always = no
+		#995 = { 
+		#	controller = {
+		#		OR = {
+		#			original_tag = JAP
+		#			is_ally_with = JAP
+		#		}
+		#	}
+		#}
+		#OR = {
+		#	995 = {
+		#		is_owned_by = ENG
+		#	}
+		#}
 		JAP = { has_war_with = ENG }
 		NOT = { has_global_flag = fall_of_rangoon }
 	}

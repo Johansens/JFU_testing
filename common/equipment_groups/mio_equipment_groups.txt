@@ -36,7 +36,7 @@ mio_cat_eq_all_tank_destroyers = { #Includes Super Heavy Tank Chassis
 		medium_tank_destroyer_chassis
 		heavy_tank_destroyer_chassis
 		super_heavy_tank_destroyer_chassis
-		modern_tank_destroyer_chassis
+		#modern_tank_destroyer_chassis
 	}
 }
 
@@ -56,7 +56,7 @@ mio_cat_eq_all_tanks = { #Includes All Tank Chassis
 		medium_tank_destroyer_chassis
 		heavy_tank_destroyer_chassis
 		super_heavy_tank_destroyer_chassis
-		modern_tank_destroyer_chassis
+		#modern_tank_destroyer_chassis
 	}
 }
 

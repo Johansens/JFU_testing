@@ -1638,90 +1638,6 @@ faction_goal_develop_baku_oil_fields = {
 	}
 }
 
-# Iraqi Oil
-faction_goal_develop_iraqi_oil = {
-	name = develop_iraqi_oil_goal_name
-	description = develop_iraqi_oil_goal_desc
-	category = short_term
-	group = resources_to_market_icon
-	allowed = {
-		
-	}
-	visible = {
-		OR = {
-			291 = { is_controlled_by_ROOT_or_ally = yes }
-			676 = {	is_controlled_by_ROOT_or_ally = yes }
-			1010 = { is_controlled_by_ROOT_or_ally = yes }	
-		}
-	}
-	available = {
-		FROM = {
-			has_tech = excavation1
-			has_tech = excavation2
-		}
-		291 = { is_controlled_by_ROOT_or_ally = yes }
-		676 = {	is_controlled_by_ROOT_or_ally = yes }
-		1010 = { is_controlled_by_ROOT_or_ally = yes }	
-	}
-	completed = {
-		291 = {
-			CONTROLLER = { has_tech = excavation3 }
-			infrastructure > 4
-		}
-		676 = {
-			CONTROLLER = { has_tech = excavation3 }
-			infrastructure > 4
-		}
-		1010 = {
-			CONTROLLER = { has_tech = excavation3 }
-			infrastructure > 4
-		}
-	}
-	complete_effect = {
-		add_faction_power_projection = 100
-		291 = {
-			add_resource = {
-			    type = oil
-			    amount = 6
-			}
-		}
-		676 = {
-			add_resource = {
-			    type = oil
-			    amount = 4
-			}
-		}
-		1010 = {
-			add_resource = {
-			    type = oil
-			    amount = 2
-			}
-		}
-	}
-	ai_will_do = {
-		base = 1 # Everyone should always kiiiinda care about oil
-		modifier = {
-			add = 1 # State owners should care more
-			controls_state = 46
-		}
-		modifier = {
-			add = -1 # If the alliance is doing well with fuel avoid taking this...
-			fuel_ratio > 0.9
-			all_allied_country = {
-				fuel_ratio > 0.9
-			}
-		}
-		modifier = {
-			add = 1 # Powers with low fuel should care about oil a bit more
-			fuel_ratio < 0.4
-		}
-		modifier = {
-			add = 1 # Powers with very low fuel should care about oil A LOT
-			fuel_ratio < 0.1
-		}
-	}
-}
-
 # Persian Oil
 faction_goal_develop_persian_oil = {
 	name = develop_persian_oil_goal_name
@@ -2007,8 +1923,6 @@ faction_goal_develop_malayan_riches = {
 		OR = {
 			333 = { is_controlled_by_ROOT_or_ally = yes }
 			336 = {	is_controlled_by_ROOT_or_ally = yes }
-			1021 = { is_controlled_by_ROOT_or_ally = yes }
-			1024 = { is_controlled_by_ROOT_or_ally = yes }
 		}
 	}
 	available = {
@@ -2018,8 +1932,6 @@ faction_goal_develop_malayan_riches = {
 		}
 		333 = { is_controlled_by_ROOT_or_ally = yes }
 		336 = {	is_controlled_by_ROOT_or_ally = yes }
-		1021 = { is_controlled_by_ROOT_or_ally = yes }
-		1024 = { is_controlled_by_ROOT_or_ally = yes }
 	}
 	completed = {
 		333 = {
@@ -2027,14 +1939,6 @@ faction_goal_develop_malayan_riches = {
 			infrastructure > 4
 		}
 		336 = {
-			CONTROLLER = { has_tech = excavation3 }
-			infrastructure > 4
-		}
-		1021 = {
-			CONTROLLER = { has_tech = excavation3 }
-			infrastructure > 4
-		}
-		1024 = {
 			CONTROLLER = { has_tech = excavation3 }
 			infrastructure > 4
 		}
@@ -2073,26 +1977,6 @@ faction_goal_develop_malayan_riches = {
 			    amount = 4
 			}
 		}
-		1021 = {
-			add_resource = {
-			    type = aluminium
-			    amount = 3
-			}
-			add_resource = {
-			    type = tungsten
-			    amount = 12
-			}
-			add_resource = {
-			    type = steel
-			    amount = 4
-			}
-		}
-		1024 = {
-			add_resource = {
-			    type = rubber
-			    amount = 8
-			}
-		}
 	}
 	ai_will_do = {
 		base = 0
@@ -2101,8 +1985,6 @@ faction_goal_develop_malayan_riches = {
 			OR = {
 				controls_state = 333
 				controls_state = 336
-				controls_state = 1021
-				controls_state = 1024
 			}
 		}
 		modifier = {
@@ -4087,251 +3969,6 @@ faction_goal_fortify_suez_canal = {
 	}
 }
 
-# Gulf of Aden
-faction_goal_expand_gulf_of_aden_bases = {
-	name = expand_gulf_of_aden_bases_goal_name
-	description = control_gulf_of_aden_bases_goal_desc
-	category = short_term
-	group = FOCUS_FILTER_CONSOLIDATION
-	allowed = {
-		
-	}
-	visible = {
-		992 = { is_controlled_by_ROOT_or_ally = yes }
-	}
-	available = {
-
-	}
-	completed = {
-		992 = {
-			air_base > 2
-			any_province_building_level = {
-				province = {
-					all_provinces = yes
-				}
-				building = naval_base
-				level > 2
-			}
-		}
-	}
-	complete_effect = {
-		add_faction_power_projection = 100
-		custom_effect_tooltip = generic_skip_one_line_tt
-		custom_effect_tooltip = TARGET_STATE_CONTROLLERS
-		every_faction_member = { 
-			visible_when_empty = yes
-			limit = {
-				controls_state = 992
-			}
-			add_faction_initiative = 1
-		}
-	}
-	ai_will_do = {
-		base = 0
-		modifier = {
-			add = 2 # If convoys being threatened try to secure the suez supply lines better
-			convoy_threat > 0.5
-			collection_size = {
-				input = {
-					input = game:all_states
-					operators = {
-						limit = {
-							is_controlled_by_ROOT_or_ally = yes 
-							is_on_continent = europe
-						}
-					}
-					name = COLLECTION_FACTION_STATES_IN_EUROPE
-				}
-				value > 0
-			}
-			collection_size = {
-				input = {
-					input = game:all_states
-					operators = {
-						limit = {
-							is_controlled_by_ROOT_or_ally = yes 
-							is_on_continent = asia
-						}
-					}
-					name = COLLECTION_FACTION_STATES_IN_ASIA
-				}
-				value > 0
-			}
-		}
-		modifier = {
-			add = 1 # If naval power seek to control access
-			has_navy_size = {
-				size > 5
-				type = capital_ship
-			}
-		}
-	}
-}
-
-# Strait of Hormuz
-faction_goal_fortify_strait_of_hormuz = {
-	name = fortify_strait_of_hormuz_goal_name
-	description = fortify_strait_of_hormuz_goal_desc
-	category = short_term
-	group = FOCUS_FILTER_CONSOLIDATION
-	allowed = {
-
-	}
-	visible = {
-		OR = {
-			412 = { is_controlled_by_ROOT_or_ally = yes }
-			1013 = { is_controlled_by_ROOT_or_ally = yes }
-		}
-	}
-	available = {
-		412 = { is_controlled_by_ROOT_or_ally = yes }
-		1013 = { is_controlled_by_ROOT_or_ally = yes }
-	}
-	completed = {
-		custom_trigger_tooltip = {
-            tooltip = fortify_strait_of_hormuz_tooltip
-			412 = {
-				any_province_building_level = {
-					province = {
-						id = 7982
-					}
-					building = coastal_bunker
-					level > 0
-				}
-				any_province_building_level = {
-					province = {
-						id = 7982
-					}
-					building = bunker
-					level > 0
-				}
-			}
-			1013 = {
-				any_province_building_level = {
-					province = {
-						id = 13369
-					}
-					building = coastal_bunker
-					level > 0
-				}
-				any_province_building_level = {
-					province = {
-						id = 13369
-					}
-					building = bunker
-					level > 0
-				}
-			}
-			OR = {
-				AND = {
-					divisions_in_state = { state = 412 size > 0 }
-					divisions_in_state = { state = 1013 size > 0 }
-				}
-				any_allied_country = {
-					divisions_in_state = { state = 412 size > 0 }
-					divisions_in_state = { state = 1013 size > 0 }
-				}
-			}
-		}
-	}
-	complete_effect = {
-		add_faction_power_projection = 100
-		custom_effect_tooltip = generic_skip_one_line_tt
-		custom_effect_tooltip = TARGET_STATE_CONTROLLERS
-		every_faction_member = { 
-			visible_when_empty = yes
-			limit = {
-				OR = {
-					controls_state = 412
-					controls_state = 1013
-				}
-			}
-			add_faction_initiative = 1
-		}
-		412 = {
-			add_building_construction = {
-				type = anti_air_building
-				level = 1
-				instant_build = yes
-			}
-			add_building_construction = {
-				type = coastal_bunker
-				level = 1
-				province = 7982
-				instant_build = yes
-			}
-			add_building_construction = {
-				type = bunker
-				level = 1
-				province = 7982
-				instant_build = yes
-			}
-		}
-		1013 = {
-			add_building_construction = {
-				type = anti_air_building
-				level = 1
-				instant_build = yes
-			}
-			add_building_construction = {
-				type = coastal_bunker
-				level = 1
-				province = 13369
-				instant_build = yes
-			}
-			add_building_construction = {
-				type = bunker
-				level = 1
-				province = 13369
-				instant_build = yes
-			}
-		}
-	}
-	ai_will_do = {
-		base = 1
-		modifier = {
-			add = 2 # If convoys being threatened try to secure the suez supply lines better
-			convoy_threat > 0.5
-			collection_size = {
-				input = {
-					input = game:all_states
-					operators = {
-						limit = {
-							is_controlled_by_ROOT_or_ally = yes
-							OR = {
-								is_on_continent = europe
-								is_on_continent = asia
-							}
-						}
-					}
-					name = COLLECTION_FACTION_STATES_IN_EUROPE_OR_ASIA
-				}
-				value > 0
-			}
-			collection_size = {
-				input = {
-					input = game:all_states
-					operators = {
-						limit = {
-							is_controlled_by_ROOT_or_ally = yes 
-							is_on_continent = middle_east
-						}
-					}
-					name = COLLECTION_FACTION_STATES_IN_MIDDLE_EAST
-				}
-				value > 0
-			}
-		}
-		modifier = {
-			add = 1 # If naval power seek to control access
-			has_navy_size = {
-				size > 5
-				type = capital_ship
-			}
-		}
-	}
-}
-
 # Ceylon
 faction_goal_expand_ceylonese_bases = {
 	name = expand_ceylonese_bases_goal_name
@@ -4423,13 +4060,13 @@ faction_goal_expand_singapore_naval_base = {
 		
 	}
 	visible = {
-		1021 = { is_controlled_by_ROOT_or_ally = yes }
+		336 = { is_controlled_by_ROOT_or_ally = yes }
 	}
 	available = {
 
 	}
 	completed = {
-		1021 = {
+		336 = {
 			air_base > 7
 			any_province_building_level = {
 				province = {
@@ -4454,11 +4091,11 @@ faction_goal_expand_singapore_naval_base = {
 		every_faction_member = { 
 			visible_when_empty = yes
 			limit = {
-				controls_state = 1021
+				controls_state = 336
 			}
 			add_faction_initiative = 1
 		}
-		1021 = {
+		336 = {
 			add_building_construction = {
 				type = anti_air_building
 				level = 1
@@ -4583,10 +4220,6 @@ faction_goal_fortify_manila_bay = {
 				size > 5
 				type = capital_ship
 			}
-		}
-		modifier = {
-			add = 1 # If PHI prioritize this
-			original_tag = PHI
 		}
 	}
 }

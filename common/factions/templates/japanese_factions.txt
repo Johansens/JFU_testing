@@ -40,15 +40,14 @@ faction_template_new_order_in_east_asia_faction = {
 		faction_goal_control_the_chinese_capitals
 
 		# Long Term 
-		faction_goal_align_china
+		#faction_goal_align_china
 		
 		#faction_goal_war_on_communism_in_asia
 	}
 
 	default_rules = {
-		joining_rule_non_communist
-		joining_rule_east_asia_only
-		faction_peace_china_focus
+		joining_rule_non_communist	
+		#faction_peace_china_focus
 		change_leader_rule_industry
 	}
 
@@ -69,12 +68,12 @@ faction_template_JAP_sino_japanese_pact = {
 		faction_goal_industrial_expansion
 
 		# Long Term 
-		faction_goal_war_on_communism_in_asia
+		#faction_goal_war_on_communism_in_asia
 	}
 
 	default_rules = {
 		joining_rule_non_communist
-		joining_rule_east_asia_only
+		
 		change_leader_rule_industry
 		dismissal_rule_offensive_war
 	}
@@ -98,14 +97,14 @@ faction_template_geacps_faction = {
 		faction_goal_secure_the_oil_supply
 
 		# Long Term 
-		faction_goal_align_china
-		faction_goal_war_on_communism_in_asia
+		#faction_goal_align_china
+		#faction_goal_war_on_communism_in_asia
 
 	}
 
 	default_rules = {
 		joining_rule_non_communist
-		joining_rule_asia_pacific_ocenania_only
+		
 		faction_peace_rule_puppeting_focus
 		change_leader_rule_industry
 		dismissal_rule_offensive_war
@@ -128,7 +127,7 @@ faction_template_JAP_pan_asian_revolutuonary_front = {
 		faction_goal_secure_the_oil_supply
 
 		# Long Term 
-		faction_goal_align_china
+		#faction_goal_align_china
 	}
 
 	default_rules = {
@@ -154,7 +153,7 @@ faction_template_JAP_alternative_communist_international = {
 		faction_goal_indifference_is_a_threat
 
 		# Long Term 
-		faction_goal_align_china
+		#faction_goal_align_china
 		
 		#faction_goal_secure_the_oil_supply
 	}

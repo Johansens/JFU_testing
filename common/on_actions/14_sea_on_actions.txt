@@ -55,26 +55,6 @@ on_actions = {
 			}
 		}
 
-		effect = {
-			every_country = {
-				limit = {
-					is_chinese_warlord = yes
-				}
-				
-				add_to_array = { global.is_chinese_warlord = THIS } 
-				set_variable = { press_warlord_to_become_puppet_political_power_cost = CHI.press_warlord_to_become_puppet_political_power_cost }
-				set_variable = { press_warlord_to_become_puppet_influence_points_cost = CHI.press_warlord_to_become_puppet_influence_points_cost }
-				set_variable = { press_warlord_to_become_puppet_influence_points_trigger = CHI.press_warlord_to_become_puppet_influence_points_trigger }
-
-				#This is used for IntegrationDecisions
-				set_variable = { CHI_warlord_integration_pp_cost = 50 }
-			}
-
-			YUN = {
-				set_variable = { political_power_warlord_integration_cost = 100 }
-			}
-		}
-
 		#JAPAN - Add Chinese States to an array for Strategic Offensives Decision purposes
 		effect = {
 			
@@ -121,10 +101,6 @@ on_actions = {
 			every_state = {
 				limit = {
 					OR = {
-						state = 1031
-						state = 1030
-						state = 1029
-						state = 1028
 						state = 527
 					}
 				}
@@ -318,60 +294,6 @@ on_actions = {
 						}
 					}
 				}
-				ROOT = {
-					if = {
-						limit = {
-							has_completed_focus = CHI_the_hump_sea
-							NOT = { 
-								has_idea = CHI_the_hump_sea_hidden 
-								any_enemy_country = {
-									controls_state = 601
-									controls_state = 434
-									controls_state = 747
-								}		
-							}
-
-						}
-
-						add_ideas = CHI_the_hump_sea_hidden
-					}
-
-					if = {
-						limit = {
-							has_completed_focus = CHI_the_hanoi_route
-							NOT = { 
-								has_idea = CHI_the_hanoi_route_hidden 
-								any_enemy_country = {
-									controls_state = 325
-									controls_state = 671
-								}
-							}
-						}
-						
-						add_ideas = CHI_the_hanoi_route_hidden	
-					}
-
-					if = {
-						limit = {
-							has_completed_focus = CHI_the_burma_road
-							NOT = { 
-								has_idea = CHI_the_burma_road_hidden 
-								any_enemy_country = {
-									controls_state = 995
-									controls_state = 640
-									controls_state = 998
-									controls_state = 434
-									controls_state = 990
-									controls_state = 432
-									controls_state = 288
-									controls_state = 997
-									controls_state = 996	
-								}
-							}
-						}
-						add_ideas = CHI_the_burma_road_hidden
-					}
-				}
 			}
 			else_if = {
 				limit = {
@@ -395,22 +317,6 @@ on_actions = {
 								}		
 							}
 
-						}
-
-						if = {
-							limit = {
-								has_completed_focus = CHI_the_northwest_highway
-								NOT = { has_idea = CHI_northwest_highway_hidden }
-							}
-							add_ideas = CHI_northwest_highway_hidden
-						}
-
-						if = {
-							limit = {
-								has_completed_focus = CHI_facilitate_operation_zet
-								NOT = { has_idea = CHI_operation_zet_hidden }
-							}
-							add_ideas = CHI_operation_zet_hidden
 						}
 
 						set_variable = { CHI_soviet_support_army_armor_attack_factor = CHI_soviet_support_army_armor_attack_factor_default }
@@ -465,92 +371,6 @@ on_actions = {
 
 		}
 
-		effect = { #BEL-inspired fall of Phillipines
-			IF = {
-				limit = {
-					has_dlc = "No Compromise, No Surrender"
-					FROM.FROM = {
-						state = 327
-					}
-					FROM = {
-						original_tag = PHI
-						has_war = yes
-						has_civil_war = no
-
-						owns_state = 327
-					}
-				}
-				FROM = {
-					country_event = {
-						id = SEA_PHI_political_events.54
-						hours = 6
-					}
-				}
-			}
-		}
-
-		#We need to switch out Guerilla Bases to Sabotage Operations because Guerillas only operate on non-core territory - but the fight doesn't stop just because the state changes hands!
-		effect = {
-			if = {
-				limit = {
-					has_dlc = "No Compromise, No Surrender"
-					FROM.FROM = {
-						OR = {
-							is_core_of = CHI
-						}
-						is_core_of = ROOT
-						NOT = {
-							has_dynamic_modifier = {
-								modifier = PRC_anti_japanese_base
-							}
-						}
-						OR = {
-							has_dynamic_modifier = {
-								modifier = PRC_guerilla_cells_active_1
-							}
-							has_dynamic_modifier = {
-								modifier = PRC_guerilla_cells_active_2
-							}
-						}
-					}
-				}
-				if = {
-					limit = {
-						FROM.FROM = {
-							has_dynamic_modifier = {
-								modifier = PRC_guerilla_cells_active_1
-							}
-						}
-					}
-					FROM.FROM = {
-						remove_dynamic_modifier = {
-							modifier = PRC_guerilla_cells_active_1
-						}
-						add_dynamic_modifier = {
-							modifier = PRC_anti_japanese_base
-						}
-					}
-				}
-				else_if = {
-					limit = {
-						FROM.FROM = {
-							has_dynamic_modifier = {
-								modifier = PRC_guerilla_cells_active_2
-							}
-						}
-					}
-					FROM.FROM = {
-						remove_dynamic_modifier = {
-							modifier = PRC_guerilla_cells_active_2
-						}
-						add_dynamic_modifier = {
-							modifier = PRC_anti_japanese_base
-						}
-					}
-				}
-			}
-		}
-
 		effect = {
 			if = {
 				limit = {
@@ -561,7 +381,6 @@ on_actions = {
 						OR = {
 							state = 743 #Qingdao
 							state = 598 #Jiangsu
-							state = 1034 #Suzhou
 							state = 613 #Shanghai
 							state = 596 #Zhejiand
 							state = 595 #Fujian
@@ -573,107 +392,10 @@ on_actions = {
 				}
 			}
 		}
-
-		# Changing out the presidential palace building for  
-		effect = {
-			# New owner is CHI
-			IF = {
-				limit = {
-					ROOT = { tag = CHI }
-					FROM.FROM = { state = 1035 }
-				}
-				1035 = {
-					remove_building = {
-						type = landmark_nanjing_presidential_palace_prc
-						level = 1
-						province = 11913
-					}
-					add_building_construction = {
-						type = landmark_nanjing_presidential_palace
-						level = 1
-						instant_build = yes
-						province = 11913
-					}
-				}
-			}
-			IF = {
-				limit = {
-					ROOT = { tag = CHI }
-					FROM.FROM = { state = 1035 }
-				}
-				1035 = {
-					remove_building = {
-						type = landmark_nanjing_presidential_palace_gen
-						level = 1
-						province = 11913
-					}
-					add_building_construction = {
-						type = landmark_nanjing_presidential_palace
-						level = 1
-						instant_build = yes
-						province = 11913
-					}
-				}
-			}
-
-			IF = {
-				limit = {
-					FROM = { tag = CHI }
-					FROM.FROM = { state = 1035 }
-				}
-				1035 = {
-					remove_building = {
-						type = landmark_nanjing_presidential_palace
-						level = 1
-						province = 11913
-					}
-					add_building_construction = {
-						type = landmark_nanjing_presidential_palace_prc
-						level = 1
-						instant_build = yes
-						province = 11913
-					}
-				}
-			}
-			IF = {
-				limit = {
-					FROM = { tag = CHI }
-					FROM.FROM = { state = 1035 }
-				}
-				1035 = {
-					remove_building = {
-						type = landmark_nanjing_presidential_palace
-						level = 1
-						province = 11913
-					}
-					add_building_construction = {
-						type = landmark_nanjing_presidential_palace_gen
-						level = 1
-						instant_build = yes
-						province = 11913
-					}
-				}
-			}
-		}
 	}
 
 	# FROM is the country invited, THIS and ROOT are the faction leader.
 	on_offer_join_faction = {
-
-		effect = {
-			IF = {
-				limit = {
-					ROOT = {
-						original_tag = JAP
-						has_completed_focus = JAP_educate_the_peasants
-					}
-				}
-				ROOT = {
-					JAP_one_more_member_increase_peasants_education_strength = yes
-				}
-				
-			}
-		}
 
 		effect = { # Adding the correct stuff for puppets for German Mitteleuropa stuff
 			IF = {
@@ -714,21 +436,6 @@ on_actions = {
 	#FROM is faction leader on join faction requests. THIS DOES NOT FIRE ON ADD_TO_FACTION EFFECT! USE ON_OFFER_JOIN_FACTION!
 	on_join_faction = { 
 
-		effect = {
-			IF = {
-				limit = {
-					FROM = {
-						original_tag = JAP
-						has_completed_focus = JAP_educate_the_peasants
-					}
-				}
-				FROM = {
-					JAP_one_more_member_increase_peasants_education_strength = yes
-				}
-				
-			}
-		}
-
 		effect = { # Adding the correct stuff for puppets for Japanese GEACPS stuff
 			IF = {
 				limit = {
@@ -764,117 +471,6 @@ on_actions = {
 
 	# ROOT is the nation being puppeted, FROM is the overlord. 	OBS: Trigger the following commands whenever a country is puppeted in a peace conference only.
 	on_puppet = {
-
-		effect = {
-			IF = {
-				limit = {
-					FROM = {
-						original_tag = JAP
-						has_completed_focus = JAP_educate_the_peasants
-					}
-					ROOT = {
-						NOT = { is_in_faction_with = FROM }
-					}
-				}
-				FROM = {
-					JAP_one_more_member_increase_peasants_education_strength = yes
-				}
-			}
-				
-
-			if = {
-				limit = {
-					FROM = { 
-						original_tag = CHI
-						has_completed_focus = CHI_appoint_sympathetic_judges 
-					}
-
-					ROOT = {
-						is_chinese_warlord = yes
-						NOT = { has_idea = idea_CHI_sympathetic_judges }
-					}
-				}
-
-				ROOT = {
-					add_ideas = idea_CHI_sympathetic_judges
-				}
-			}
-
-			if = {
-				limit = {
-					FROM = { 
-						original_tag = CHI
-						has_completed_focus = CHI_take_control_of_the_executive_yuan 
-					}
-
-					ROOT = {
-						is_chinese_warlord = yes
-					}
-				}
-
-				every_subject_country = {
-					limit = {
-						is_chinese_warlord = yes
-						NOT = { tag = ROOT }
-					}
-
-					add_autonomy_ratio = { 
-						value = var:CHI.executive_yuan_autonomy_ratio
-						localization = CHI_take_control_of_the_executive_yuan
-					}
-				}
-
-			}
-		}
-
-		effect = { #Adding 
-			if = {
-				limit = {
-					has_dlc = "No Compromise, No Surrender"
-					ROOT = {
-						is_chinese_warlord = yes
-						
-					}
-
-					FROM = {
-						original_tag = CHI
-					}
-
-					NOT = {
-						is_in_array = {
-							array = FROM.warlord_subjects
-							value = ROOT
-						}
-					}
-				}
-
-				add_to_array = { FROM.warlord_subjects = ROOT }
-
-				if = {
-					limit = {
-						FROM = {
-							OR = {
-								has_government = neutrality
-								has_government = fascism
-							}
-						}
-						ROOT = {
-							NOT = { has_autonomy_state = autonomy_sea_integrated_warlord_subject }
-							NOT = { has_autonomy_state = autonomy_sea_warlord_subject }
-						}
-					}
-					FROM = {
-						set_autonomy = {
-							target=ROOT
-							autonomy_state = autonomy_sea_warlord_subject
-							freedom_level = 0.6 # 0-1 
-							end_wars  = no # default yes. will not cancel non civil wars if set to no
-							end_civil_wars = no # default yes. will not cancel civil wars if set to no
-						}
-					}
-				}
-			}
-		}
 
 		effect = { # Adding the correct stuff for puppets for Japanese GEACPS stuff
 			IF = {
@@ -914,73 +510,6 @@ on_actions = {
 
 	}
 
-	# FROM is the faction Leader, ROOT is the country leaving the faction 
-	on_leave_faction = {
-
-
-		effect = {
-			IF = {
-				limit = {
-					FROM = {
-						original_tag = JAP
-						has_completed_focus = JAP_educate_the_peasants
-					}
-				}
-				FROM = {
-					JAP_one_less_member_decrease_peasants_education_strength = yes
-				}
-			}
-		}
-
-		effect = {	#PHI: return oil/advisors if no longer allied with USA/JAP
-			if = {
-				limit = {
-					original_tag = PHI
-				}
-				if = {
-					limit = {
-						has_resources_rights = {
-							state = 371
-						}
-						NOT = {
-							is_ally_with = USA
-						}
-					}
-					remove_resource_rights = 371
-				}
-				if = {
-					limit = {
-						has_character = JAP_kiyoshi_hasegawa
-						NOT = {
-							is_ally_with = JAP
-						}
-					}
-					set_nationality = {
-						target_country = JAP
-						character = JAP_kiyoshi_hasegawa
-					}
-				}
-			}
-		}
-
-		effect = {
-			if = {
-				limit = {
-					original_tag = PHI
-					FROM = {
-						original_tag = USA
-					}
-				}
-				set_country_flag = {
-					flag = PHI_recently_broke_USA_alliance
-					days = 45
-					value = 1
-				}
-			}
-		}
-
-	}
-
 	# ROOT is the nation being released, FROM is the overlord. Trigger the following commands whenever puppeting through the occupied territories menu during peace time (or when releasing from non-core but owned territory).
 	on_release_as_puppet = {
 
@@ -1006,31 +535,6 @@ on_actions = {
 	}
 
 	on_ruling_party_change = {
-
-		effect = {
-
-			# To tie Philippine ideoloy with Japan's ideology
-			IF = {
-				limit = {
-					original_tag = JAP 
-				}
-				PHI = {
-					if = {
-						limit = {
-							has_dynamic_modifier = { modifier = PHI_japan_aligned_ideology } 
-						}
-						PHI_check_japanese_ideology_and_adapt = yes
-					}
-				}
-			}
-
-			if = {
-				limit = {
-					original_tag = PHI
-				}
-				PHI_refresh_ruling_ideology_drift = yes
-			}
-		}
 
 		effect = {
 
@@ -1249,27 +753,6 @@ on_actions = {
 					}
 				}
 
-				CHI = {
-					every_enemy_country = {
-						limit = {
-							is_in_array = {
-								array = CHI.nine_power_treaty_signatories
-								value = ROOT
-							}
-						}
-
-
-						remove_from_array = {
-							array = CHI.nine_power_treaty_signatories
-							value = THIS
-						}
-
-						CHI = {
-							CHI_reduce_nine_power_malus = yes
-						}
-					}
-				}
-
 			}
 		}
 
@@ -1280,9 +763,6 @@ on_actions = {
 					ROOT = { 
 						original_tag = JAP
 						has_completed_focus = JAP_the_imperial_defense_plan
-						NOT = {
-							has_completed_focus = JAP_implement_army_reforms 
-						}
 						OR = { #If japan has one of these Ideas, there's no need to check for any other criteria
 							NOT = {
 								has_idea = JAP_first_strike_principle_1
@@ -1386,9 +866,6 @@ on_actions = {
 					ROOT = { 
 						original_tag = JAP
 						has_completed_focus = JAP_the_imperial_defense_plan
-						NOT = {
-							has_completed_focus = JAP_implement_army_reforms 
-						}
 						OR = { #If japan has one of these Ideas, there's no need to check for any other criteria
 							NOT = {
 								has_idea = JAP_kantai_kessen_1
@@ -2368,61 +1845,6 @@ on_actions = {
 	
 	on_monthly_CHI = {
 		effect = {
-			CHI_is_corruption_in_government_on_balance_good = yes
-			CHI_update_claimed_and_core_states = yes
-
-			if = {
-				limit = {
-					has_completed_focus = CHI_denounce_feudalism
-				}
-
-				every_subject_country = {
-					limit = {
-						is_literally_china = yes
-						NOT = {
-							is_in_array = {
-								array = ROOT.warlord_subjects
-								value = THIS
-							}
-						}
-					}
-					add_to_array = {
-						array = ROOT.warlord_subjects
-						value = THIS
-					}
-				}
-
-				for_each_scope_loop = {
-					array = ROOT.warlord_subjects
-
-					if = {
-						limit = {
-							OR = {
-								exists = no
-								is_subject = no
-								NOT = { is_ally_with = ROOT }
-							}
-						}
-						remove_from_array = {
-							array = ROOT.warlord_subjects
-							value = THIS 
-						}
-					}
-					
-				}
-				if = {
-					limit = {
-						
-						check_variable = { warlord_subjects^num > 0 }
-					}
-
-					set_temp_variable = { t_warlord_subjects_pp_gain = warlord_subjects_pp_gain_base }
-					multiply_temp_variable = { t_warlord_subjects_pp_gain = warlord_subjects^num }
-					add_political_power = var:t_warlord_subjects_pp_gain
-					log = "fwjaifjwai [var:t_warlord_subjects_pp_gain]"
-				}
-			}
-
 		}
 		effect = {
 			IF = {
@@ -2430,12 +1852,6 @@ on_actions = {
 					has_dynamic_modifier = {
 						modifier = CHI_soviet_support
 					}
-				}
-				IF = {
-					limit = {
-						has_completed_focus = CHI_sell_lend_lease
-					}
-					add_cic = var:CHI_soviet_support_cic_amount
 				}
 			}
 			IF = {
@@ -2448,15 +1864,10 @@ on_actions = {
 							OR = {
 								controls_state = 325
 								controls_state = 671
-								controls_state = 995
 								controls_state = 640
-								controls_state = 998
 								controls_state = 434
-								controls_state = 990
 								controls_state = 432
 								controls_state = 288
-								controls_state = 997
-								controls_state = 996
 								controls_state = 601
 								controls_state = 434
 								controls_state = 747
@@ -2499,122 +1910,6 @@ on_actions = {
 
 		}
 
-		effect = {
-			IF = {
-				limit = {
-					has_completed_focus = CHI_continue_the_ding_xian_experiment
-					any_core_state = {
-						NOT = { 
-							has_dynamic_modifier = { modifier = CHI_electrification_and_mass_education_modifier }
-						}
-					}
-				}
-
-				IF = {
-					limit = {
-						check_variable = { CHI_electrification_cooldown > 0 }
-					}
-					set_variable = { CHI_electrification_cooldown = 0 }
-
-					random_core_state = {
-						limit = {
-							has_dynamic_modifier = { modifier = CHI_electrification_and_mass_education_modifier }
-							NOT = {
-								OR = {
-									is_island_state = yes
-									has_state_category = large_island
-									has_state_category = small_island
-									has_state_category = tiny_island
-								}
-							}
-						}
-						random_neighbor_state = {
-							limit = {
-								NOT = {
-									has_dynamic_modifier = { modifier = CHI_electrification_and_mass_education_modifier }
-								}
-								is_core_of = ROOT
-								OWNER = {
-									is_literally_china = yes
-									NOT = {
-										has_war_with = CHI
-									}
-								}
-							}
-							add_dynamic_modifier = { modifier = CHI_electrification_and_mass_education_modifier }
-						}
-					}
-				}
-				ELSE = {
-					add_to_variable = { CHI_electrification_cooldown = 1 }
-				}	
-			}
-		}
-
-	}
-
-
-	#ROOT is winner #FROM gets annexed - This will also fire on_annex
-	on_civil_war_end = {
-
-		effect = {
-			# Give Japan a celebratory event when the democratic side wins the civil war 
-			IF = {
-				limit = {
-					original_tag = JAP
-					has_government = democratic
-					has_completed_focus = JAP_revoke_the_peace_preservation_law
-					FROM = {
-						original_tag = JAP
-						has_government = fascism 
-					}
-				}
-				country_event = {
-					id = SEA_japan_popup_events.24
-					hours = 1
-				}	
-			}
-		}
-
-	}
-
-	on_civil_war_end_before_annexation = {
-		effect = {
-			if = {
-				limit = {
-					FROM = {
-						original_tag = SPR
-						has_volunteers_amount_from = {
-							tag = PHI
-							count > 0
-						}
-					}
-				}
-				PHI = {
-					set_country_flag = PHI_support_scw_faction_lost
-				}
-			}
-			if = {
-				limit = {
-					original_tag = SPR
-					has_volunteers_amount_from = {
-						tag = PHI
-						count > 0
-					}
-					NOT = {
-						any_other_country = {
-							original_tag = SPR
-							NOT = {
-								tag = FROM
-							}
-						}
-					}
-				}
-				PHI = {
-					set_country_flag = PHI_support_scw_faction_won
-				}
-			}
-		}
 	}
 
 
@@ -2664,87 +1959,11 @@ on_actions = {
 		}
 
 		#ACHIEVEMENTS
-		effect = {
-			if = {
-				limit = {
-					is_ironman = yes #This only applies if you can get achievements
-					date < 1940.1.1
-					has_global_flag = achievement_PRC_battle_royale
-					FROM = {
-						tag = PRC #using tag here instead of original_tag because that's what the achievement needs
-					}
-					ROOT = {
-						OR = {
-							tag = CHI
-							tag = JAP
-						}
-					}
-				}
-				if = {
-					limit = {
-						ROOT = { tag = CHI}
-					}
-					FROM = { set_country_flag = PRC_capitulated_CHI }
-				}
-				if = {
-					limit = {
-						ROOT = { tag = JAP}
-					}
-					FROM = { set_country_flag = PRC_capitulated_JAP }
-				}
-			}
-			if = {
-				limit = {
-					is_ironman = yes #This only applies if you can get achievements
-					FROM = {
-						tag = JAP #using tag here instead of original_tag because that's what the achievement needs
-						has_government = democratic
-					}
-					ROOT = {
-						tag = GER #using tag here instead of original_tag because that's what the achievement needs
-						GER = {
-							has_government = fascism
-						}
-					}
-				}
-				set_global_flag = achievement_JAP_capitulated_fascist_germany
-			}
-		}
 
 	}
 
 
 	on_subject_autonomy_level_change = {
-		effect = {	#PHI: return oil/advisors if no longer allied with USA/JAP
-			if = {
-				limit = {
-					original_tag = PHI
-				}
-				if = {
-					limit = {
-						has_resources_rights = {
-							state = 371
-						}
-						NOT = {
-							is_ally_with = USA
-						}
-					}
-					remove_resource_rights = 371
-				}
-				if = {
-					limit = {
-						has_character = JAP_kiyoshi_hasegawa
-						NOT = {
-							is_ally_with = JAP
-						}
-					}
-					set_nationality = {
-						target_country = JAP
-						character = JAP_kiyoshi_hasegawa
-					}
-				}
-			}
-		}
 		effect = {	#JAP: lose US puppet cosmetic tag if no longer a US puppet 
 			IF = {
 				limit = {
@@ -2752,78 +1971,6 @@ on_actions = {
 					has_cosmetic_tag = JAP_us_occupation
 				}
 				drop_cosmetic_tag = yes
-			}
-		}
-	}
-
-	on_war = {
-		effect = {
-			if = {
-				limit = {
-					original_tag = PHI
-				}
-				PHI_update_war_flag = yes
-			}
-			set_country_flag = guardians_of_peace_been_at_war_flag
-		}
-	}
-
-	on_peace = {
-		effect = {
-			if = {
-				limit = {
-					original_tag = PHI
-				}
-				PHI_update_war_flag = yes
-			}
-		}
-	}
-
-	on_new_term_election = {
-		effect = {
-			if = {
-				limit = {
-					original_tag = PHI
-					has_government = democratic
-					date < 1942.01.01
-				}
-				PHI = {
-					country_event = SEA_PHI_political_events.63
-				}
-			}
-		}
-	}
-
-	on_exile_government_reinstated = {
-		effect = {
-			if = {
-				limit = {
-					original_tag = PHI
-					has_government = democratic
-					date > 1943.1.1
-				}
-				set_country_flag = PHI_early_presidential_election
-				country_event = {
-					id = SEA_PHI_political_events.63
-					days = 250
-				}
-			}
-		}
-	}
-
-	on_uncapitulation = {
-		effect = {		#feel free to remove this same block in exile_government_reinstated if the two always coincide
-			if = {
-				limit = {
-					original_tag = PHI
-					has_government = democratic
-					date > 1943.1.1
-				}
-				set_country_flag = PHI_early_presidential_election
-				country_event = {
-					id = SEA_PHI_political_events.63
-					days = 250
-				}
 			}
 		}
 	}

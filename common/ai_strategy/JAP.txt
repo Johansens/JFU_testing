@@ -352,7 +352,7 @@ northern_expansion = {
 	enable = {
 		OR = {
 			has_completed_focus = JAP_kantokuen
-			has_completed_focus = JAP_prepare_for_war_with_the_soviet_union
+			#has_completed_focus = JAP_prepare_for_war_with_the_soviet_union
 		}
 		country_exists = SOV
 	}
@@ -542,9 +542,6 @@ JAP_philippines_and_garrison = {
 			625
 			628
 			627
-			1027
-			1026
-			1025
 		}
 
 		# ai areas that the orders will use these buffers in
@@ -619,30 +616,6 @@ jap_conserve_fuel_for_usa_fight = {
 		type = naval_mission_threshold
 		id = "MISSION_CONVOY_ESCORT"
 		value = 150 #puts our threshold at 250
-	}
-}
-
-germany_ally = {
-	allowed = {
-		original_tag = JAP
-	}
-	enable = {
-		has_completed_focus = JAP_technological_exchange
-		country_exists = GER
-	}
-	abort = {
-		NOT = { country_exists = GER }
-	}
-
-	ai_strategy = {
-		type = befriend
-		id = GER
-		value = 200
-	}
-	ai_strategy = {
-		type = alliance
-		id = GER
-		value = 200
 	}
 }
 
@@ -1038,18 +1011,6 @@ jap_invasions_of_gxc_are_super_tough_and_waste_manpower_unless_its_hainan = {
 	}
 
 	ai_strategy = {
-		type = invade
-		id = GXC 
-		value = -250
-	}
-
-	ai_strategy = {
-		type = invade
-		id = GDC
-		value = -100
-	}
-
-	ai_strategy = {
 	    type = invasion_unit_request
 	    state = 591
 	    value = 500
@@ -1264,9 +1225,6 @@ JAP_unit_buffer_for_home_islands_invasion_force = {
 			282
 			533
 			536
-			1018
-			1020
-			1019
 		}
 
 		# ai areas that the orders will use these buffers in

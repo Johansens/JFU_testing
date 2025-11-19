@@ -8,10 +8,6 @@ ideas = {
 			}
 			ai_will_do = {
 				factor = 1
-				modifier = {
-					factor = 0
-					NOT = { has_dlc = "No Step Back" }
-				}
 			}
 		}
 		industrial_destruction_spirit = {
@@ -23,19 +19,13 @@ ideas = {
 				}
 			}
 			research_bonus = {
-				heavy_air = 0.05
+				heavy_air = 0.1
 			}
 			modifier = {
-				large_plane_airframe_design_cost_factor = -0.75
-				#strat_bomber_equipment_design_cost_factor = -0.75
-				#jet_strat_bomber_equipment_design_cost_factor = -0.75
+				strategic_bomb_visibility  = -0.05
 			}
 			ai_will_do = {
 				factor = 1
-				modifier = {
-					factor = 0
-					NOT = { has_dlc = "No Step Back" }
-				}
 			}
 		}
 		dive_bombing_spirit = {
@@ -50,17 +40,10 @@ ideas = {
 				cas_bomber = 0.05
 			}
 			modifier = {
-				small_plane_cas_airframe_design_cost_factor = -0.75
-				cv_small_plane_cas_airframe_design_cost_factor = -0.75
-				#CAS_equipment_design_cost_factor = -0.75
-				#cv_CAS_equipment_design_cost_factor = -0.75
+				air_bombing_targetting = 0.05
 			}
 			ai_will_do = {
 				factor = 1
-				modifier = {
-					factor = 0
-					NOT = { has_dlc = "No Step Back" }
-				}
 			}
 		}
 		material_destruction_spirit = {
@@ -72,19 +55,13 @@ ideas = {
 				}
 			}
 			research_bonus = {
-				tactical_bomber = 0.05
+				medium_air = 0.15
 			}
 			modifier = {
-				medium_plane_airframe_design_cost_factor = -0.75
-				#tac_bomber_equipment_design_cost_factor = -0.75
-				#jet_tac_bomber_equipment_design_cost_factor = -0.75
+				
 			}
 			ai_will_do = {
 				factor = 1
-				modifier = {
-					factor = 0
-					NOT = { has_dlc = "No Step Back" }
-				}
 			}
 		}
 		industry_liasons_spirit = {
@@ -92,15 +69,9 @@ ideas = {
 			available = { has_air_academy = yes }
 			research_bonus = {
 				light_air = 0.15
-				medium_air = 0.15
-				heavy_air = 0.15
 			}
 			ai_will_do = {
 				factor = 1
-				modifier = {
-					factor = 0
-					NOT = { has_dlc = "No Step Back" }
-				}
 			}
 		}
 		
@@ -109,28 +80,20 @@ ideas = {
 			available = { has_air_academy = yes }
 			modifier = {
 				air_training_xp_gain_factor = 0.25
+				air_fuel_consumption_factor = -0.05
 			}
 			ai_will_do = {
 				factor = 1
-				modifier = {
-					factor = 0
-					NOT = { has_dlc = "No Step Back" }
-				}
 			}
 		}
 		branch_independence_spirit = {
 			ledger = air
 			available = { has_air_academy = yes }
 			modifier = {
-				experience_gain_air = 0.1
-				airforce_intel_to_others = -5
+				command_power_gain_mult = 0.05
 			}
 			ai_will_do = {
 				factor = 1
-				modifier = {
-					factor = 0
-					NOT = { has_dlc = "No Step Back" }
-				}
 			}
 		}
 		air_crew_surveys_spirit = {
@@ -142,10 +105,6 @@ ideas = {
 			}
 			ai_will_do = {
 				factor = 1
-				modifier = {
-					factor = 0
-					NOT = { has_dlc = "No Step Back" }
-				}
 			}
 		}
 	}
@@ -160,10 +119,6 @@ ideas = {
 			}
 			ai_will_do = {
 				factor = 1
-				modifier = {
-					factor = 0
-					NOT = { has_dlc = "No Step Back" }
-				}
 			}
 		}
 		cag_night_fighting_spirit = {
@@ -175,10 +130,6 @@ ideas = {
 			}
 			ai_will_do = {
 				factor = 1
-				modifier = {
-					factor = 0
-					NOT = { has_dlc = "No Step Back" }
-				}
 			}
 		}
 		veteran_air_instructors_spirit = {
@@ -189,10 +140,6 @@ ideas = {
 			}
 			ai_will_do = {
 				factor = 1
-				modifier = {
-					factor = 0
-					NOT = { has_dlc = "No Step Back" }
-				}
 			}
 		}
 		centralized_control_spirit = {
@@ -200,14 +147,10 @@ ideas = {
 			available = { has_air_force_command = yes }
 			modifier = {
 				air_superiority_detect_factor = 0.1
-				air_mission_efficiency = 0.1
+				air_mission_efficiency = 0.05
 			}
 			ai_will_do = {
 				factor = 1
-				modifier = {
-					factor = 0
-					NOT = { has_dlc = "No Step Back" }
-				}
 			}
 		}
 		steel_wings_steel_hearts_spirit = {
@@ -223,13 +166,6 @@ ideas = {
 			}
 			ai_will_do = {
 				factor = 1
-				modifier = {
-					factor = 0
-					OR = {
-						NOT = { has_dlc = "No Step Back" }
-						NOT = { has_government = communism }
-					}
-				}
 			}
 		}
 		home_defence_spirit = {
@@ -240,10 +176,6 @@ ideas = {
 			}
 			ai_will_do = {
 				factor = 1
-				modifier = {
-					factor = 0
-					NOT = { has_dlc = "No Step Back" }
-				}
 			}
 		}
 		air_power_projection_spirit = {
@@ -254,10 +186,6 @@ ideas = {
 			}
 			ai_will_do = {
 				factor = 1
-				modifier = {
-					factor = 0
-					NOT = { has_dlc = "No Step Back" }
-				}
 			}
 		}
 		massed_strike_spirit = {
@@ -273,10 +201,6 @@ ideas = {
 			}
 			ai_will_do = {
 				factor = 1
-				modifier = {
-					factor = 0
-					NOT = { has_dlc = "No Step Back" }
-				}
 			}
 		}
 		continuous_strike_spirit = {
@@ -292,10 +216,6 @@ ideas = {
 			}
 			ai_will_do = {
 				factor = 1
-				modifier = {
-					factor = 0
-					NOT = { has_dlc = "No Step Back" }
-				}
 			}
 		}
 		strategic_strike_spirit = { 
@@ -311,10 +231,6 @@ ideas = {
 			}
 			ai_will_do = {
 				factor = 1
-				modifier = {
-					factor = 0
-					NOT = { has_dlc = "No Step Back" }
-				}
 			}
 		}
 	}

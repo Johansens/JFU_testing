@@ -193,12 +193,6 @@ defined_text = {
 defined_text = {
 	name = GetMolotovInMRPact
 	text = {
-		trigger = {
-			SOV = { has_completed_focus = SOV_policy_of_collective_security }
-		}
-		localization_key = MR_pact_litvinov
-	}
-	text = {
 		localization_key = MR_pact_molotov 
 	}
 }

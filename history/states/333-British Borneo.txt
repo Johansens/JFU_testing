@@ -1,11 +1,14 @@
-state=
-{
-	id=333
-	name="STATE_333"
-	manpower = 889800
-	resources={
+state = {
+
+	id = 333
+	name = "STATE_333"
+
+	manpower = 589800
+
+	resources = {
 		rubber=40 # was: 72
 		oil=12 # was: 18
+		coal = 1 # initial distribution
 	}
 	
 	state_category = rural
@@ -20,6 +23,7 @@ state=
 		}
 		buildings = {
 			infrastructure = 2
+
 			1208 = {
 				naval_base = 1
 			}

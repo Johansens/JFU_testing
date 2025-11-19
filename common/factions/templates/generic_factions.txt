@@ -487,7 +487,7 @@ faction_template_hipanic_alliance_faction = {
 	}
 
 	default_rules = {
-		joining_rule_hispanic_only
+		
 		change_leader_rule_manpower
 	}
 
@@ -618,38 +618,6 @@ faction_template_asian_dominance = {
 		
 		# Long term
 		faction_goal_rule_the_waves
-	}
-
-	default_rules = {
-		joining_rule_same_continent_only
-		faction_peace_rule_puppeting_focus
-		generate_wargoal_threat_reduction_20
-		change_leader_rule_manpower
-	}
-
-}
-
-# Middle Eastern Dominance 
-faction_template_middle_east_dominance = {
-	name = middle_east_dominance_faction
-	manifest = faction_manifest_middle_east_dominance
-	can_leader_join_other_factions = yes
-	icon = GFX_faction_logo_generic_15
-	visible = {
-		capital_scope = {
-			is_on_continent = middle_east
-		}
-	}
-	
-	goals = {
-		# Short term
-		# faction_goal_growing_the_faction
-
-		# Medium term
-		faction_goal_control_persian_oil
-
-		# Long term
-		faction_goal_defeating_our_enemies
 	}
 
 	default_rules = {

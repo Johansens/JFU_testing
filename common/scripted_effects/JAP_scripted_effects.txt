@@ -170,7 +170,7 @@ JAP_create_ignatius_lincoln_operative = {
 		traits = { operative_seducer operative_well_groomed operative_natural_orator }
 		bypass_recruitment = no
 		available_to_spy_master = yes
-		nationalities = { HUN AUS TIB CHI ISR }
+		nationalities = { HUN AUS CHI }
 	}
 }
 
@@ -438,25 +438,7 @@ JAP_add_or_modify_rounouha_modifier = {
 # Setup faction-wide effects where JAP is FROM (Update here when new things are added)
 JAP_setup_faction_wide_aoe_effects_from = {
 	
-	IF = {
-		limit = {
-			NOT = {
-				has_dlc = "No Compromise, No Surrender"
-			}
-			FROM = {
-				original_tag = JAP
-				has_completed_focus = JAP_the_flying_geese
-				is_in_tech_sharing_group = jap_geacps_research
-			}
-			ROOT = {
-				NOT = {
-					is_in_tech_sharing_group = jap_geacps_research
-				}
-			}
-		}
-		add_to_tech_sharing_group = jap_geacps_research 
-		custom_effect_tooltip = generic_skip_one_line_tt
-	}
+
 
 	IF = {
 		limit = {
@@ -464,7 +446,7 @@ JAP_setup_faction_wide_aoe_effects_from = {
 				original_tag = JAP
 				OR = {
 					has_completed_focus = JAP_develop_the_yen_bloc
-					has_completed_focus = JAP_a_common_currency_for_all_of_asia
+					
 				}
 			}
 			ROOT = {
@@ -493,48 +475,12 @@ JAP_setup_faction_wide_aoe_effects_from = {
 		custom_effect_tooltip = generic_skip_one_line_tt
 	}
 
-	IF = {
-		limit = {
-			FROM = {
-				original_tag = JAP
-				has_completed_focus = JAP_the_minitry_of_pan_asian_development
-			}
-			ROOT = {
-				NOT = {
-					has_idea = JAP_ministry_of_pan_asian_development_idea
-				}
-			}
-		}
-		add_ideas = JAP_ministry_of_pan_asian_development_idea
-		custom_effect_tooltip = generic_skip_one_line_tt
-	}
-
 }
 
 # Setup faction-wide effects where JAP is ROOT (Update here when new things are added)
 JAP_setup_faction_wide_aoe_effects_root = {
 	
-	IF = {
-		limit = {
-			ROOT = {
-				NOT = {
-					has_dlc = "No Compromise, No Surrender"
-				}
-				original_tag = JAP
-				has_completed_focus = JAP_the_flying_geese
-				is_in_tech_sharing_group = jap_geacps_research
-			}
-			FROM = {
-				NOT = {
-					is_in_tech_sharing_group = jap_geacps_research
-				}
-			}
-		}
-		FROM = {
-			add_to_tech_sharing_group = jap_geacps_research 
-		}
-		custom_effect_tooltip = generic_skip_one_line_tt
-	}
+
 
 	IF = {
 		limit = {
@@ -542,7 +488,7 @@ JAP_setup_faction_wide_aoe_effects_root = {
 				original_tag = JAP
 				OR = {
 					has_completed_focus = JAP_develop_the_yen_bloc
-					has_completed_focus = JAP_a_common_currency_for_all_of_asia
+					
 				}
 			}
 			FROM = {
@@ -571,24 +517,6 @@ JAP_setup_faction_wide_aoe_effects_root = {
 		}
 		FROM = {
 			add_ideas = JAP_ministry_of_greater_east_asia_idea
-		}
-		custom_effect_tooltip = generic_skip_one_line_tt
-	}
-
-	IF = {
-		limit = {
-			ROOT = {
-				original_tag = JAP
-				has_completed_focus = JAP_the_minitry_of_pan_asian_development
-			}
-			FROM = {
-				NOT = {
-					has_idea = JAP_ministry_of_pan_asian_development_idea
-				}
-			}
-		}
-		FROM = {
-			add_ideas = JAP_ministry_of_pan_asian_development_idea
 		}
 		custom_effect_tooltip = generic_skip_one_line_tt
 	}
@@ -598,33 +526,14 @@ JAP_setup_faction_wide_aoe_effects_root = {
 # Setup faction-wide effects where JAP is neither ROOT nor FROM (Update here when new things are added)
 JAP_setup_faction_wide_aoe_effects_JAP = {
 	
-	IF = {
-		limit = {
-			NOT = {
-				has_dlc = "No Compromise, No Surrender"
-			}
-			JAP = {
-				has_completed_focus = JAP_the_flying_geese
-				is_in_tech_sharing_group = jap_geacps_research
-			}
-			ROOT = {
-				NOT = {
-					is_in_tech_sharing_group = jap_geacps_research
-				}
-			}
-		}
-		ROOT = {
-			add_to_tech_sharing_group = jap_geacps_research 
-		}
-		custom_effect_tooltip = generic_skip_one_line_tt
-	}
+
 
 	IF = {
 		limit = {
 			JAP = {
 				OR = {
 					has_completed_focus = JAP_develop_the_yen_bloc
-					has_completed_focus = JAP_a_common_currency_for_all_of_asia
+					
 				}
 			}
 			ROOT = {
@@ -652,23 +561,6 @@ JAP_setup_faction_wide_aoe_effects_JAP = {
 		}
 		ROOT = {
 			add_ideas = JAP_ministry_of_greater_east_asia_idea
-		}
-		custom_effect_tooltip = generic_skip_one_line_tt
-	}
-
-	IF = {
-		limit = {
-			JAP = {
-				has_completed_focus = JAP_the_minitry_of_pan_asian_development
-			}
-			ROOT = {
-				NOT = {
-					has_idea = JAP_ministry_of_pan_asian_development_idea
-				}
-			}
-		}
-		ROOT = {
-			add_ideas = JAP_ministry_of_pan_asian_development_idea
 		}
 		custom_effect_tooltip = generic_skip_one_line_tt
 	}
@@ -678,33 +570,13 @@ JAP_setup_faction_wide_aoe_effects_JAP = {
 # Setup faction-wide effects where JAP is ROOT, but target is THIS (Update here when new things are added)
 JAP_setup_faction_wide_aoe_effects_root_this = {
 	
-	IF = {
-		limit = {
-			NOT = {
-				has_dlc = "No Compromise, No Surrender"
-			}
-			ROOT = {
-				has_completed_focus = JAP_the_flying_geese
-				is_in_tech_sharing_group = jap_geacps_research
-			}
-			THIS = {
-				NOT = {
-					is_in_tech_sharing_group = jap_geacps_research
-				}
-			}
-		}
-		THIS = {
-			add_to_tech_sharing_group = jap_geacps_research 
-		}
-		custom_effect_tooltip = generic_skip_one_line_tt
-	}
+
 
 	IF = {
 		limit = {
 			ROOT = {
 				OR = {
 					has_completed_focus = JAP_develop_the_yen_bloc
-					has_completed_focus = JAP_a_common_currency_for_all_of_asia
 				}
 			}
 			THIS = {
@@ -732,23 +604,6 @@ JAP_setup_faction_wide_aoe_effects_root_this = {
 		}
 		THIS = {
 			add_ideas = JAP_ministry_of_greater_east_asia_idea
-		}
-		custom_effect_tooltip = generic_skip_one_line_tt
-	}
-
-	IF = {
-		limit = {
-			ROOT = {
-				has_completed_focus = JAP_the_minitry_of_pan_asian_development
-			}
-			THIS = {
-				NOT = {
-					has_idea = JAP_ministry_of_pan_asian_development_idea
-				}
-			}
-		}
-		THIS = {
-			add_ideas = JAP_ministry_of_pan_asian_development_idea
 		}
 		custom_effect_tooltip = generic_skip_one_line_tt
 	}

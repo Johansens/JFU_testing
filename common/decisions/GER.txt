@@ -423,17 +423,7 @@ GER_operational_planning_category = {
 						#type = armor
 					}
 					divisions_in_state = {
-						state = 977
-						size > 5
-						#type = armor
-					}
-					divisions_in_state = {
 						state = 34
-						size > 5
-						#type = armor
-					}
-					divisions_in_state = {
-						state = 980
 						size > 5
 						#type = armor
 					}

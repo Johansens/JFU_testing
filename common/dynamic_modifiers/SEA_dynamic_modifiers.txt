@@ -587,13 +587,7 @@ KOR_resistance_against_colonial_rule_dm = { #STATE MODIFIER
 	enable = { always = yes }
 
 	remove_trigger = {
-		NOT = { 
-			OWNER = { 
-				original_tag = KOR 
-				is_subject_of = JAP
-			} 
-			OWNER = { original_tag = JAP } 
-		}
+		always = no
 	}
 
 	icon = GFX_modifiers_generic_resistance
@@ -907,7 +901,8 @@ CHI_gung_ho_idea = {
 	icon = GFX_idea_CHI_initiate_gung_ho_movement
 	enable = {
 		has_war = yes 
-		has_completed_focus = CHI_initiate_the_gung_ho_movement
+		always = no
+		#has_completed_focus = CHI_initiate_the_gung_ho_movement
 	}
 
 	war_support_factor = CHI_gung_ho_idea_war_support_factor 
@@ -1606,7 +1601,7 @@ PHI_strong_guerrilla_presence = { #STATE MODIFIER
 
 	remove_trigger = {
 		controller = {
-			NOT = { has_war_with = PHI }
+			NOT = { has_war_with = USA }
 		}
 	}
 }

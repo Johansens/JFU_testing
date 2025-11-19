@@ -15,7 +15,7 @@ generic_tank_organization = {
 	icon = GFX_idea_generic_tank_manufacturer_1
 
 	allowed = {
-		NOT = { OR = {  tag = GER tag = ENG tag = SOV tag = FRA tag = ITA tag = JAP tag = USA tag = BEL tag = ETH tag = SWI tag = BUL tag = GRE tag = TUR tag = MEX tag = CZE tag = ROM tag = CHI tag = POL tag = AST tag = SAF tag = NZL tag = CAN } }
+		NOT = { OR = {  tag = GER tag = ENG tag = SOV tag = FRA tag = ITA tag = JAP tag = USA tag = BEL tag = ETH tag = BUL tag = GRE tag = MEX tag = CZE tag = ROM tag = CHI tag = POL tag = AST tag = SAF tag = NZL tag = CAN } }
 		NOT = {
 			AND = {
 				OR = { tag = FIN tag = NOR tag = SWE }

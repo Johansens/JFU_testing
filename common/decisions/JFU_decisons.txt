@@ -1,4 +1,53 @@
 political_actions1 = {
+
+	CHI_kwantung_army_impatience_dummy = { # Fake mission to show how long until war
+
+		activation = {
+			always = no
+		}
+		available = {
+			hidden_trigger = { always = no }
+		}
+		visible = {
+			original_tag = CHI
+			is_subject = no 
+			NOT = { has_war_with = JAP }
+		}
+
+		is_good = no
+
+		days_mission_timeout = JAP.kwantung_army_timeout_dummy_time_var #JAP.JAP_marco_polo_remaining_days:days_left
+
+		cancel_if_not_visible = yes 
+
+		timeout_effect = {
+
+			effect_tooltip = {
+				IF = {
+					limit = {
+						CHI = { #if CHI owns one of these states, they get the event
+							OR = {
+								controls_state = 608
+								controls_state = 597
+								controls_state = 614
+							}
+						}
+					}
+					CHI = {
+						country_event = {
+							id = china.1
+							days = 1
+							random_days = 3
+						}	
+					}
+				}
+				add_named_threat = { threat = 2 name = JAP_intervene_in_china } # From threat = 1 to 2 due to no escalation tension
+			}
+		}
+	}
+
+
+
 	#	 ██████╗ ███████╗██████╗ 
 	#	██╔════╝ ██╔════╝██╔══██╗
 	#	██║  ███╗█████╗  ██████╔╝
@@ -483,7 +532,9 @@ political_actions1 = {
 		icon = jap_conquer_china
 		fire_only_once = yes
 		allowed = { tag = JAP }
-		available = { has_completed_focus = JAP_intervene_in_china  }
+		available = { 
+		#	has_completed_focus = JAP_intervene_in_china  
+		}
 		cost = 0
 		visible = { 
 			has_game_rule = { 
@@ -513,7 +564,10 @@ political_actions1 = {
 		icon = jap_conquer_china
 		fire_only_once = yes
 		allowed = { tag = JAP }
-		available = { has_completed_focus = JAP_intervene_in_china date > 1938.01.01 }
+		available = { 
+			#has_completed_focus = JAP_intervene_in_china 
+			date > 1938.01.01 
+		}
 		cost = 0
 		visible = { 
 			has_game_rule = { 

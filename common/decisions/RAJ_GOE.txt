@@ -954,15 +954,11 @@ RAJ_GOE_mughal_independence_category = {
 		highlight_states = { 
 			highlight_state_targets = {
 				state = 440
-				state = 986
 				state = 439
 				state = 441
 				state = 787
 				state = 442
-				state = 987
 				state = 445
-				state = 988
-				state = 1012
 				state = 444
 			}
 		}

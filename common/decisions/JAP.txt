@@ -965,20 +965,8 @@ foreign_politics = {
 				525 = {
 					is_controlled_by_ROOT_or_ally = no
 				}
-				1029 = {
-					is_controlled_by_ROOT_or_ally = no
-				}
-				1031 = {
-					is_controlled_by_ROOT_or_ally = no
-				}
-				1030 = {
-					is_controlled_by_ROOT_or_ally = no
-				}
 				# North Korea
 				527 = {
-					is_controlled_by_ROOT_or_ally = no
-				}
-				1028 = {
 					is_controlled_by_ROOT_or_ally = no
 				}
 				NOT = {
@@ -1071,20 +1059,8 @@ foreign_politics = {
 				525 = {
 					is_controlled_by_ROOT_or_ally = no
 				}
-				1029 = {
-					is_controlled_by_ROOT_or_ally = no
-				}
-				1031 = {
-					is_controlled_by_ROOT_or_ally = no
-				}
-				1030 = {
-					is_controlled_by_ROOT_or_ally = no
-				}
 				# North Korea
 				527 = {
-					is_controlled_by_ROOT_or_ally = no
-				}
-				1028 = {
 					is_controlled_by_ROOT_or_ally = no
 				}
 				NOT = {
@@ -1195,20 +1171,8 @@ foreign_politics = {
 				525 = {
 					is_controlled_by_ROOT_or_ally = no
 				}
-				1029 = {
-					is_controlled_by_ROOT_or_ally = no
-				}
-				1031 = {
-					is_controlled_by_ROOT_or_ally = no
-				}
-				1030 = {
-					is_controlled_by_ROOT_or_ally = no
-				}
 				# North Korea
 				527 = {
-					is_controlled_by_ROOT_or_ally = no
-				}
-				1028 = {
 					is_controlled_by_ROOT_or_ally = no
 				}
 				factor = 10
@@ -1352,7 +1316,6 @@ foreign_politics = {
 			OR = {
 				has_completed_focus = JAP_the_persimmon_has_ripened
 				has_completed_focus = JAP_a_green_persimmon
-				has_completed_focus = JAP_free_asians_from_soviet_opression
 			}
 		}
 
@@ -1562,162 +1525,6 @@ foreign_politics = {
 		}
 	}
 
-	JAP_core_KOR_state = {
-		icon = GFX_decision_infiltrate_state
-	
-		allowed = {
-			original_tag = JAP
-		}
-		
-		visible = {
-			has_completed_focus = JAP_integrate_the_government_general
-		}
-		
-		available = {
-			#NOT = { has_country_flag = JAP_coring_KOR_state_in_progress_flag }
-			FROM = {
-				compliance > 40
-			}
-		}
-
-		state_target = any_controlled_state
-	    
-	    target_trigger = {
-	        FROM = {
-	        	NOT = { is_core_of = ROOT }
-	        	is_fully_controlled_by = ROOT
-	        	is_core_of = KOR
-	        }
-	    }
-	    on_map_mode = map_only
-
-	    cost = 30		
-
-		fire_only_once = yes
-
-		days_remove = 30
-
-		complete_effect = {
-			#hidden_effect = {
-			#	set_country_flag = { flag = JAP_coring_KOR_state_in_progress_flag value = 1 days = 31 }
-			#}
-		}
-
-		remove_effect = {
-			#hidden_effect = {
-			#	clr_country_flag = JAP_coring_KOR_state_in_progress_flag
-			#}
-			IF = {
-				limit = {
-					FROM = {
-						NOT = {
-							is_owned_by = ROOT
-						}
-					}
-				}
-				FROM = {
-					add_core_of = ROOT
-					transfer_state_to = ROOT
-				}
-			}
-			ELSE = {
-				FROM = {
-					add_core_of = ROOT
-				}
-			}
-		}
-
-		cancel_trigger = {
-			FROM = {
-				NOT = { is_fully_controlled_by = ROOT }
-			}
-		}
-
-		cancel_effect = {
-			#hidden_effect = {
-			#	clr_country_flag = JAP_coring_KOR_state_in_progress_flag
-			#}
-		}
-	}
-
-	JAP_core_MAN_state = {
-		icon = GFX_decision_infiltrate_state
-	
-		allowed = {
-			original_tag = JAP
-		}
-		
-		visible = {
-			has_completed_focus = JAP_integrate_the_great_empire_of_manchuria
-		}
-		
-		available = {
-			#NOT = { has_country_flag = JAP_coring_MAN_state_in_progress_flag }
-			FROM = {
-				compliance > 40
-			}
-		}
-
-		state_target = any_controlled_state
-	    
-	    target_trigger = {
-	        FROM = {
-	        	NOT = { is_core_of = ROOT }
-	        	is_fully_controlled_by = ROOT
-	        	is_core_of = MAN
-	        }
-	    }
-	    on_map_mode = map_only
-
-	    cost = 30		
-
-		fire_only_once = yes
-
-		days_remove = 30
-
-		complete_effect = {
-			#hidden_effect = {
-			#	set_country_flag = { flag = JAP_coring_MAN_state_in_progress_flag value = 1 days = 31 }
-			#}
-		}
-
-		remove_effect = {
-			#hidden_effect = {
-			#	clr_country_flag = JAP_coring_MAN_state_in_progress_flag
-			#}
-			IF = {
-				limit = {
-					FROM = {
-						NOT = {
-							is_owned_by = ROOT
-						}
-					}
-				}
-				FROM = {
-					add_core_of = ROOT
-					transfer_state_to = ROOT
-				}
-			}
-			ELSE = {
-				FROM = {
-					add_core_of = ROOT
-				}
-			}
-		}
-
-		cancel_trigger = {
-			FROM = {
-				NOT = { is_fully_controlled_by = ROOT }
-			}
-		}
-
-		cancel_effect = {
-			#hidden_effect = {
-			#	clr_country_flag = JAP_coring_MAN_state_in_progress_flag
-			#}
-		}
-	}
-
 }
 
 #Category allowed for JAP
@@ -1876,53 +1683,6 @@ JAP_southern_expansion = {
 
 political_actions = {
 
-	JAP_break_the_london_naval_treaty = {
-
-		icon = generic_break_treaty
-
-		allowed = {
-			original_tag = JAP
-		}
-
-		available = {
-
-		}
-
-		visible = {
-			has_idea = JAP_the_london_naval_treaty
-			has_completed_focus = JAP_join_the_london_naval_treaty
-		}
-
-		fire_only_once = yes
-
-
-		modifier = {
-
-		}
-
-		days_remove = 0
-		days_re_enable = 0
-
-		cost = 25
-
-		ai_will_do = {
-			factor = 0
-		}
-
-		complete_effect = {
-			remove_ideas = JAP_the_london_naval_treaty
-			FRA = { add_opinion_modifier = { target = ROOT modifier = JAP_broke_the_london_naval_treaty } }
-			USA = { add_opinion_modifier = { target = ROOT modifier = JAP_broke_the_london_naval_treaty } }
-			ENG = { add_opinion_modifier = { target = ROOT modifier = JAP_broke_the_london_naval_treaty } }
-			FRA = { remove_opinion_modifier = { target = ROOT modifier = JAP_join_the_london_naval_treaty } }
-			USA = { remove_opinion_modifier = { target = ROOT modifier = JAP_join_the_london_naval_treaty } }
-			ENG = { remove_opinion_modifier = { target = ROOT modifier = JAP_join_the_london_naval_treaty } }
-			remove_opinion_modifier = { target = FRA modifier = JAP_join_the_london_naval_treaty }
-			remove_opinion_modifier = { target = USA modifier = JAP_join_the_london_naval_treaty }
-			remove_opinion_modifier = { target = ENG modifier = JAP_join_the_london_naval_treaty }
-		}		
-	}
-
 	# Promote Hayao Tada to Lieutenant General
 	JAP_promote_hayao_tada_to_lieutenant_general_decision  = {
 
@@ -2028,8 +1788,7 @@ operations = {
 		available = {
 			OR = {
 				has_completed_focus = JAP_sea_purge_the_kodoha_faction
-				has_completed_focus = JAP_support_the_kodoha_faction
-				has_completed_focus = JAP_revere_the_emperor_destroy_the_traitors
+				
 			}
 			NOT = {
 				has_war_with = SOV
@@ -2037,7 +1796,7 @@ operations = {
 				has_non_aggression_pact_with = SOV
 				SOV = { is_puppet_of = JAP }
 			}
-			1028 = {
+			527 = {
 				any_neighbor_state = {
 					is_controlled_by = SOV
 				}
@@ -2047,14 +1806,13 @@ operations = {
 		visible = {
 			NOT = {
 				has_global_flag = JAP_kalkin_gol
-				has_completed_focus = JAP_okadas_military_purge_speech
 			}
 		}
 
 		highlight_states = {
 	 		highlight_state_targets = {
 				state = 408
-				state = 1028
+				state = 527
 			} 
 		}
 		
@@ -2083,7 +1841,7 @@ operations = {
 		war_with_on_remove = SOV
 
 		complete_effect = {
-			1028 = {
+			527 = {
 				save_event_target_as = JAP_SOV_attacker_state
 				set_state_flag = border_incident_active
 			}
@@ -2214,7 +1972,7 @@ operations = {
 
 		highlight_states = {
 			highlight_state_targets = {
-				state = 1028
+				state = 527
 				state = 408
 			} 
 		}
@@ -2239,7 +1997,7 @@ operations = {
 			hidden_effect = {
 				SOV = { remove_targeted_decision = { target = JAP decision = JAP_border_conflict_escalation_warning_SOV } }
 				SOV = {
-					1028 = {
+					527 = {
 						clr_state_flag = border_incident_active
 					}
 					408 = {
@@ -2258,7 +2016,7 @@ operations = {
 		allowed = { always = no } #Activated from effect
 
 		available = {
-			1028 = {
+			527 = {
 				OR = {
 					is_fully_controlled_by = ROOT
 					CONTROLLER = {
@@ -2270,7 +2028,7 @@ operations = {
 				}
 			}
 			divisions_in_border_state = {
-				state = 1028
+				state = 527
 				border_state = 408
 				size > 0
 			}
@@ -2278,7 +2036,7 @@ operations = {
 
 		highlight_states = {
 			highlight_state_targets = {
-				state = 1028
+				state = 527
 				state = 408	
 			} 
 		}
@@ -2298,7 +2056,7 @@ operations = {
 			start_border_war = {
 				change_state_after_war = no
 				attacker = {
-					state = 1028
+					state = 527
 					num_provinces = 4
 					on_win = japan_border_conflict.2
 					on_lose = japan_border_conflict.3
@@ -2329,14 +2087,14 @@ operations = {
 		allowed = { always = no } #Activated from effect
 
 		available = {
-			1028 = { has_border_war = no }
+			527 = { has_border_war = no }
 			408 = { has_border_war = no }
 		}
 		
 		highlight_states = {
 			highlight_state_targets = {
 				state = 408
-				state = 1028
+				state = 527
 			} 
 		}
 
@@ -2359,7 +2117,7 @@ operations = {
 		timeout_effect = {
 			cancel_border_war = {
 				defender = 408
-				attacker = 1028
+				attacker = 527
 			}
 			hidden_effect = {
 				remove_targeted_decision = { target = SOV decision = JAP_border_conflict_escalate_conflict }
@@ -2381,7 +2139,7 @@ operations = {
 
 		highlight_states = {
 			highlight_state_targets = {
-				state = 1028
+				state = 527
 				state = 408
 			} 
 		}
@@ -2395,13 +2153,6 @@ operations = {
 				is_historical_focus_on = no 
 			}
 			modifier = {
-				add = 50 
-				AND = {
-					tag = JAP 
-					has_completed_focus = JAP_support_the_kodoha_faction
-				}
-			}
-			modifier = {
 				factor = 0
 				has_war = yes 
 			}
@@ -2413,7 +2164,7 @@ operations = {
 			if = {
 				limit = { original_tag = SOV }
 				set_border_war_data = {
-					attacker = 1028
+					attacker = 527
 					defender = 408
 					defender_modifier = 0.15
 					combat_width = 100
@@ -2436,7 +2187,7 @@ operations = {
 			}
 			else = {
 				set_border_war_data = {
-					attacker = 1028
+					attacker = 527
 					defender = 408
 					attacker_modifier = 0.15
 					combat_width = 100
@@ -2479,7 +2230,7 @@ operations = {
 		highlight_states = {
  			highlight_state_targets = {
 				state = 408
-				state = 1028
+				state = 527
 			} 
 		}
 
@@ -2490,13 +2241,6 @@ operations = {
 			modifier = {
 				add = 100 
 				is_historical_focus_on = no 
-			}
-			modifier = {
-				add = 50 
-				AND = {
-					tag = JAP 
-					has_completed_focus = JAP_support_the_kodoha_faction
-				}
 			}
 			modifier = {
 				factor = 0
@@ -2514,7 +2258,7 @@ operations = {
 			if = {
 				limit = { original_tag = SOV }
 				408 = { save_event_target_as = their_state }
-				1028 = { save_event_target_as = our_state }
+				527 = { save_event_target_as = our_state }
 				JAP = {
 					country_event = { id = japan_border_conflict.6 hours = 1 }
 					hidden_effect = {
@@ -2523,7 +2267,7 @@ operations = {
 			 	}
 			}
 			else = {
-				1028 = { save_event_target_as = our_state }
+				527 = { save_event_target_as = our_state }
 				408 = { save_event_target_as = their_state }
 				SOV = {
 					country_event = { id = japan_border_conflict.5 hours = 1 }
@@ -2539,12 +2283,12 @@ operations = {
 			cancel_border_war = {
 				dont_fire_events = yes
 				defender = 408
-				attacker = 1028
+				attacker = 527
 			}
 			declare_war_on = { target = FROM type = annex_everything }
 			if = {
 				limit = { original_tag = SOV }
-				1028 = {
+				527 = {
 					clr_state_flag = border_incident_active
 				}
 				408 = {
@@ -2554,7 +2298,7 @@ operations = {
 			}
 			else = {
 				FROM = {
-					1028 = {
+					527 = {
 						clr_state_flag = border_incident_active
 					}
 					408 = {
@@ -2576,7 +2320,7 @@ operations = {
 
 		highlight_states = {
 			highlight_state_targets = {
-				state = 1028
+				state = 527
 				state = 408
 			} 
 		}
@@ -2595,13 +2339,13 @@ operations = {
 				limit = { original_tag = SOV }
 				finalize_border_war = {
 					attacker_win = yes
-					attacker = 1028
+					attacker = 527
 					defender = 408
 				}
 			}
 			else = {
 				finalize_border_war = {
-					attacker = 1028
+					attacker = 527
 					defender = 408
 					defender_win = yes
 				}
@@ -2618,7 +2362,7 @@ operations = {
 		}
 
 		available = {
-
+			always = no
 		}
 
 		visible = {
@@ -2626,7 +2370,6 @@ operations = {
 			GER = { has_completed_focus = GER_molotov_ribbentrop_pact }
 			GER = { NOT = { has_war_with = SOV } }
 			NOT = { has_war_with = SOV }
-			has_completed_focus = JAP_preemptive_war
 		}
 
 		fire_only_once = yes
@@ -2680,11 +2423,7 @@ prospect_for_resources = {
 		}
 
 		visible = {
-			OR = {
-				has_completed_focus = JAP_establish_the_northern_resource_area
-				has_completed_focus = JAP_sea_establish_the_northern_resource_area
-				has_completed_focus = JAP_transformation_of_nature
-			}
+			always = no
 		}
 
 		fire_only_once = no
@@ -2734,16 +2473,7 @@ prospect_for_resources = {
 		}
 
 		visible = {
-			OR = {
-				has_completed_focus = JAP_establish_the_northern_resource_area
-				has_completed_focus = JAP_sea_establish_the_northern_resource_area
-				has_completed_focus = JAP_transformation_of_nature
-			}
-			516 = {
-				NOT = {
-					has_state_flag = tunguska_coal_developed
-				}
-			}
+			always = no
 		}
 
 		fire_only_once = no
@@ -2794,16 +2524,7 @@ prospect_for_resources = {
 		}
 
 		visible = {
-			OR = {
-				has_completed_focus = JAP_establish_the_northern_resource_area
-				has_completed_focus = JAP_sea_establish_the_northern_resource_area
-				has_completed_focus = JAP_transformation_of_nature
-			}
-			566 = {
-				NOT = {
-					has_state_flag = irkutsk_coal_developed
-				}
-			}
+			always = no
 		}
 
 		fire_only_once = no
@@ -2866,15 +2587,7 @@ prospect_for_resources = {
 		}
 
 		visible = {
-			OR = {
-				has_completed_focus = JAP_transformation_of_nature
-				has_completed_focus = JAP_sea_exploit_southern_resource_area
-			}
-			623 = {
-				NOT = {
-					has_state_flag = luzon_chromium_developed
-				}
-			}
+			always = no
 		}
 
 		fire_only_once = no
@@ -2925,7 +2638,6 @@ prospect_for_resources = {
 
 		visible = {
 			OR = {
-				has_completed_focus = JAP_transformation_of_nature
 				has_completed_focus = JAP_sea_exploit_southern_resource_area
 			}
 			627 = {
@@ -2983,7 +2695,6 @@ prospect_for_resources = {
 
 		visible = {
 			OR = {
-				has_completed_focus = JAP_transformation_of_nature
 				has_completed_focus = JAP_sea_exploit_southern_resource_area
 			}
 			625 = {
@@ -3041,7 +2752,6 @@ prospect_for_resources = {
 
 		visible = {
 			OR = {
-				has_completed_focus = JAP_transformation_of_nature
 				has_completed_focus = JAP_sea_exploit_southern_resource_area
 			}
 			725 = {
@@ -3137,64 +2847,6 @@ prospect_for_resources = {
 	#	}
 	#}
 
-	JAP_develop_singapore_aluminium_deposits = { #1021
-		icon = aluminium
-		
-		allowed = {
-			original_tag = JAP
-		}
-
-		highlight_states = {
- 			highlight_state_targets = {
-				state = 1021
-			} 
-		}
-
-		available = {
-			1021 = { is_controlled_by_ROOT_or_subject = yes }
-			has_tech = excavation2
-		}
-
-		visible = {
-			OR = {
-				has_completed_focus = JAP_transformation_of_nature
-				has_completed_focus = JAP_sea_exploit_southern_resource_area
-			}
-			1021 = {
-				NOT = {
-					has_state_flag = singapore_aluminium_developed
-				}
-			}
-		}
-
-		fire_only_once = no
-
-		cancel_trigger = {
-			1021 = { is_controlled_by_ROOT_or_subject = no }
-		}
-
-		cost = 25
-		days_remove = 60
-
-		modifier = {
-			civilian_factory_use = 3
-		}
-
-		ai_will_do = {
-			base = 1
-		}
-
-		remove_effect = {
-			1021 = {
-				add_resource = {
-					type = aluminium
-					amount = 12
-				}
-				set_state_flag = singapore_aluminium_developed
-			}
-		}
-	}
-
 	JAP_develop_riau_oil_deposits = { #672
 		icon = oil
 
@@ -3215,7 +2867,6 @@ prospect_for_resources = {
 
 		visible = {
 			OR = {
-				has_completed_focus = JAP_transformation_of_nature
 				has_completed_focus = JAP_sea_exploit_southern_resource_area
 			}
 			672 = {
@@ -3273,7 +2924,6 @@ prospect_for_resources = {
 
 		visible = {
 			OR = {
-				has_completed_focus = JAP_transformation_of_nature
 				has_completed_focus = JAP_sea_exploit_southern_resource_area
 			}
 			334 = {
@@ -3331,7 +2981,6 @@ prospect_for_resources = {
 
 		visible = {
 			OR = {
-				has_completed_focus = JAP_transformation_of_nature
 				has_completed_focus = JAP_sea_exploit_southern_resource_area
 			}
 			669 = {
@@ -3389,7 +3038,6 @@ prospect_for_resources = {
 
 		visible = {
 			OR = {
-				has_completed_focus = JAP_transformation_of_nature
 				has_completed_focus = JAP_sea_exploit_southern_resource_area
 			}
 			335 = {
@@ -3461,7 +3109,7 @@ prospect_for_resources = {
 
 		visible = {
 			OR = {
-				has_completed_focus = JAP_transformation_of_nature
+				
 				has_completed_focus = JAP_develop_the_chinese_resources
 			}
 			
@@ -3521,7 +3169,7 @@ prospect_for_resources = {
 
 		visible = {
 			OR = {
-				has_completed_focus = JAP_transformation_of_nature
+				
 				has_completed_focus = JAP_develop_the_chinese_resources
 			}
 			
@@ -3575,7 +3223,7 @@ prospect_for_resources = {
 
 		visible = {
 			OR = {
-				has_completed_focus = JAP_transformation_of_nature
+				
 				has_completed_focus = JAP_develop_the_chinese_resources
 			}
 			
@@ -3629,7 +3277,7 @@ prospect_for_resources = {
 
 		visible = {
 			OR = {
-				has_completed_focus = JAP_transformation_of_nature
+				
 				has_completed_focus = JAP_develop_the_chinese_resources
 			}
 			
@@ -3743,10 +3391,7 @@ JAP_kodoha_insurgency_decisions = {
 				add = 100
 				OR = {
 					has_country_flag = JAP_AI_RANDOM_DEMOCRATIC
-					has_game_rule = {
-						rule = JAP_ai_behavior
-						option = DEMOCRATIC
-					}
+
 				}
 			}
 		}
@@ -3803,10 +3448,6 @@ JAP_kodoha_insurgency_decisions = {
 				add = 10
 				OR = {
 					has_country_flag = JAP_AI_RANDOM_DEMOCRATIC
-					has_game_rule = {
-						rule = JAP_ai_behavior
-						option = DEMOCRATIC
-					}
 				}
 			}
 		}
@@ -3885,9 +3526,6 @@ JAP_kwantung_army_decisions = {
 			has_civil_war = no
 			is_subject = no 
 			NOT = { has_war_with = CHI }
-			NOT = {
-				has_completed_focus = JAP_subdue_the_kwantung_army
-			}
 		}
 
 		cancel_if_not_visible = yes
@@ -3896,38 +3534,55 @@ JAP_kwantung_army_decisions = {
 
 		timeout_effect = {
 
-			IF = {
-				limit = {
-					OR = {
-						CHI = { #if CHI owns one of these states, they get the event
-							OR = {
-								controls_state = 608
-								controls_state = 614
-								controls_state = 743 
-							}
-						}
-					}	
-				}
-				CHI = {
-					country_event = {
-						id = china.1
-						days = 1
-						random_days = 3
-					}	
-				}
+			#IF = {
+			#	limit = {
+			#		OR = {
+			#			CHI = { #if CHI owns one of these states, they get the event
+			#				OR = {
+			#					controls_state = 608
+			#					controls_state = 614
+			#					controls_state = 743 
+			#				}
+			#			}
+			#		}	
+			#	}
+			#	CHI = {
+			#		country_event = {
+			#			id = china.1
+			#			days = 1
+			#			random_days = 3
+			#		}	
+			#	}
+			#}
+			#ELSE = {
+			#	608 = {
+			#		OWNER = {
+			#			country_event = {
+			#				id = china.1
+			#				days = 1
+			#				random_days = 3
+			#			}
+			#		}
+			#	}
+			#}
+			annex_country = { target = CHI transfer_troops = no }
+			hidden_effect = {
+				country_event = { days = 5 id = news.1 }
+				USA = { country_event = { id = panay_incident.1 days = 60 }}
+				USA = { add_war_support = 0.125 }
+				add_named_threat = { threat = 40 name = JAP_intervene_in_china } 
+				every_state = {
+                    limit = {
+                        is_core_of = CHI
+                        is_controlled_by = JAP
+                    }
+                    set_compliance = 100
+                }
+				add_ideas = peace_training 
+				add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 40000 }
+				country_event = { id = super.35 hours = 0 }
 			}
-			ELSE = {
-				608 = {
-					OWNER = {
-						country_event = {
-							id = china.1
-							days = 1
-							random_days = 3
-						}
-					}
-				}
-			}
-			add_named_threat = { threat = 2 name = JAP_intervene_in_china } # From threat = 1 to 2 due to no escalation tension
+			#add_named_threat = { threat = 2 name = JAP_intervene_in_china } # From threat = 1 to 2 due to no escalation tension
 
 			hidden_effect = {
 				set_country_flag = JAP_kwantung_army_went_in_on_china
@@ -4006,9 +3661,6 @@ JAP_kwantung_army_decisions = {
 			has_civil_war = no
 			is_subject = no 
 			NOT = { has_war_with = CHI }
-			NOT = {
-				has_completed_focus = JAP_subdue_the_kwantung_army
-			}
 			613 = {
 				OWNER = {
 					is_literally_china = yes
@@ -4103,19 +3755,7 @@ JAP_kwantung_army_decisions = {
 		}
 
 		visible = { 
-			OR = {
-				has_subject = RNG
-				has_subject = CHI
-				AND = {
-					has_completed_focus = JAP_subdue_the_kwantung_army
-					owns_state = 613 # Shanghai
-				}
-			}
-			has_completed_focus = JAP_reorganized_national_government
-			OR = {
-				has_government = neutrality
-				has_government = fascism
-			}
+			always = no
 		}
 	
 		available = {
@@ -4147,18 +3787,6 @@ JAP_kwantung_army_decisions = {
 		fire_only_once = yes
 
 		remove_effect = {
-
-			IF = {
-				limit = {
-					has_subject = RNG
-				}
-				FROM = {
-					every_core_state = {
-						add_claim_by = RNG
-					}
-				}
-				custom_effect_tooltip = generic_skip_one_line_tt
-			}
 
 			create_wargoal = {
 				type = annex_everything
@@ -4309,7 +3937,6 @@ JAP_spiritual_mobilization_decisions = {
 		visible = { 
 			OR = {
 				has_completed_focus = JAP_sea_national_spiritual_mobliization_movement
-				has_completed_focus = JAP_the_yamato_spirit
 			}
 			OR = {
 				has_government = neutrality
@@ -4380,7 +4007,6 @@ JAP_spiritual_mobilization_decisions = {
 		visible = { 
 			OR = {
 				has_completed_focus = JAP_sea_national_spiritual_mobliization_movement
-				has_completed_focus = JAP_the_yamato_spirit
 			}
 			OR = {
 				has_government = neutrality
@@ -4441,7 +4067,6 @@ JAP_spiritual_mobilization_decisions = {
 		visible = { 
 			OR = {
 				has_completed_focus = JAP_sea_national_spiritual_mobliization_movement
-				has_completed_focus = JAP_the_yamato_spirit
 			}
 			OR = {
 				has_government = neutrality
@@ -6869,348 +6494,6 @@ JAP_imperial_influence_decision_cat = {
 # The Propaganda Department
 JAP_the_propaganda_department_decisions = {
 
-	# Establish Contact with Thubten Kunphela
-	JAP_estabish_contact_with_thubten_kumphela_decision  = {
-
-		priority = 15
-
-		icon = GFX_decision_generic_political_discourse
-
-		ai_will_do = {
-			base = 50
-		}
-	
-		allowed = {  
-			original_tag = JAP 
-		}
-
-		visible = { 
-			has_completed_focus = JAP_an_expedition_to_tibet
-			OR = {
-				has_government = neutrality
-				has_government = fascism
-			}
-			TIB = {
-				exists = yes
-				is_subject = no
-				NOT = {
-					has_government = fascism
-				}
-			}
-		}
-	
-		available = {
-			
-		}
-
-		#days_remove = 70
-
-		#days_re_enable = 180
-
-		cost = 50
-
-		cancel_trigger = {
-		}
-
-        cancel_effect = {
-        }
-
-		modifier = {
-		}
-
-		complete_effect = { 
-
-			TIB = {
-				country_event = {
-					id = SEA_japan_foreign_policy.24
-					hours = 12
-					random_hours = 24
-				}	
-			}	
-			effect_tooltip = {
-				TIB = {
-					add_stability = -0.03
-					
-					add_popularity = {
-						ideology = fascism
-						popularity = 0.05
-					}	
-				}
-			}
-
-			hidden_effect = {
-				set_country_flag = JAP_approached_the_tibet_impr_party_flag
-			}
-
-		}
-
-		fire_only_once = yes
-
-		remove_effect = {
-
-		}
-
-	}
-
-	# Establish a Trongdra Regiment in Exile
-	JAP_estabish_a_trongdra_regiment_in_exile  = {
-
-		priority = 14
-
-		icon = GFX_decision_generic_protection
-
-		ai_will_do = {
-			base = 50
-		}
-	
-		allowed = {  
-			original_tag = JAP 
-		}
-
-		visible = { 
-			has_completed_focus = JAP_an_expedition_to_tibet
-			OR = {
-				has_government = neutrality
-				has_government = fascism
-			}
-			TIB = {
-				exists = yes
-				is_subject = no
-				NOT = {
-					has_government = fascism
-				}
-			}
-		}
-	
-		available = {
-			has_country_flag = JAP_approached_the_tibet_impr_party_flag
-		}
-
-		#days_remove = 70
-
-		#days_re_enable = 180
-
-		cost = 25
-
-		cancel_trigger = {
-		}
-
-        cancel_effect = {
-        }
-
-		modifier = {
-		}
-
-		complete_effect = { 
-
-			TIB = {
-				country_event = {
-					id = SEA_japan_foreign_policy.25
-					hours = 12
-					random_hours = 24
-				}	
-			}	
-			effect_tooltip = {
-				TIB = {
-					add_manpower = -500
-
-					add_stability = -0.1
-					
-					add_popularity = {
-						ideology = fascism
-						popularity = 0.1
-					}	
-				}
-			}
-
-			hidden_effect = {
-				set_country_flag = JAP_militarized_the_tibet_impr_party_flag
-			}
-
-		}
-
-		fire_only_once = yes
-
-		remove_effect = {
-
-		}
-
-	}
-	
-	# Influence the Tibetan People
-	JAP_influence_tibetan_people_decision  = {
-
-		priority = 10
-
-		icon = GFX_decision_eng_propaganda_campaigns
-
-		ai_will_do = {
-			base = 50
-		}
-	
-		allowed = {  
-			original_tag = JAP 
-		}
-
-		visible = { 
-			has_completed_focus = JAP_an_expedition_to_tibet
-			OR = {
-				has_government = neutrality
-				has_government = fascism
-			}
-			TIB = {
-				exists = yes
-				is_subject = no
-				NOT = {
-					has_government = fascism
-					has_idea = JAP_japanese_influence_growing_tibet_2
-				}
-			}
-		}
-	
-		available = {
-			has_country_flag = JAP_approached_the_tibet_impr_party_flag
-		}
-
-		#days_remove = 70
-
-		days_re_enable = 180
-
-		cost = 50
-
-		cancel_trigger = {
-		}
-
-        cancel_effect = {
-        }
-
-		modifier = {
-		}
-
-		complete_effect = { 
-
-			TIB = {
-				country_event = {
-					id = SEA_japan_foreign_policy.23
-					hours = 12
-					random_hours = 24
-				}	
-			}	
-			effect_tooltip = {
-				TIB = {
-					add_timed_idea = {
-						idea = JAP_japanese_influence_growing_tibet_2
-						days = 176
-					}		
-				}
-			}
-
-		}
-
-		fire_only_once = no
-
-		remove_effect = {
-
-		}
-
-	}
-
-	# Coup the Tibetan Government
-	JAP_coup_the_tibetan_government_decision  = {
-
-		priority = 12
-
-		icon = GFX_decision_generic_civil_support
-
-		ai_will_do = {
-			base = 50
-		}
-	
-		allowed = {  
-			original_tag = JAP 
-		}
-
-		visible = { 
-			has_completed_focus = JAP_an_expedition_to_tibet
-			OR = {
-				has_government = neutrality
-				has_government = fascism
-			}
-			TIB = {
-				exists = yes
-				is_subject = no
-				NOT = {
-					has_government = fascism
-				}
-			}
-		}
-	
-		available = {
-			TIB = {
-				fascism > 0.35
-				is_subject = no
-				NOT = {
-					has_government = fascism
-				}
-			}
-			has_country_flag = JAP_militarized_the_tibet_impr_party_flag
-		}
-
-		#days_remove = 70
-
-		#days_re_enable = 180
-
-		cost = 75
-
-		cancel_trigger = {
-		}
-
-        cancel_effect = {
-        }
-
-		modifier = {
-		}
-
-		complete_effect = { 
-
-			TIB = {
-				country_event = {
-					id = SEA_japan_foreign_policy.26
-					hours = 12
-					random_hours = 24
-				}	
-			}	
-			custom_effect_tooltip = if_they_accept_tt
-			effect_tooltip = {
-				puppet = TIB
-				TIB = {
-					set_politics = {
-						ruling_party = fascism
-						elections_allowed = no
-					}		
-					add_popularity = {
-						ideology = fascism
-						popularity = 0.2
-					}	
-					add_manpower = 2500
-					army_experience = 50
-				}
-			}
-
-			hidden_effect = {
-				set_country_flag = JAP_militarized_the_tibet_impr_party_flag
-			}
-
-		}
-
-		fire_only_once = yes
-
-		remove_effect = {
-
-		}
-
-	}
-
 	# Organize Tonarigumi in [FROM.GetNameDef]
 	JAP_create_subject_tonarigumi = {
 		icon = GFX_decision_generic_military
@@ -7534,149 +6817,6 @@ JAP_the_propaganda_department_decisions = {
 		}
 	}
 
-	JAP_jeweled_spear_claim_decision = {
-
-		priority = 30
-
-		icon = GFX_decision_generic_planted_spear
-
-		on_map_mode = map_and_decisions_view
-
-		allowed = { 
-		}
-
-		highlight_states = {
-			highlight_states_trigger = {
-				is_owned_by = FROM
-			}
-		}
-
-		target_trigger = {
-			#Target is FROM
-			FROM = {
-				NOT = {
-					is_ally_with = ROOT
-				}
-				capital_scope = {
-					OR = {
-						is_on_continent = asia
-						is_on_continent = middle_east
-						is_on_continent = australia
-					}
-				}
-				NOT = {
-					is_in_array = {
-						array = country_whose_states_were_claimed_by_the_spear_array
-						value = THIS
-					}	
-				}
-			}
-		}
-
-		visible = {
-			has_completed_focus = JAP_the_jeweled_spear_has_struck
-			FROM = {
-				any_owned_state = {
-					NOT = { is_claimed_by = ROOT }
-				}
-			}
-			OR = {
-				any_controlled_state = {
-					any_neighbor_state = {
-						controller = {
-							original_tag = FROM
-						}
-					}
-				}
-				any_subject_country = {
-					any_controlled_state = {
-						any_neighbor_state = {
-							controller = {
-								original_tag = FROM
-							}
-						}
-					}
-				}
-				# This is the best way to also be able to target coastal nations with how the above targetting works
-				FROM = {
-					capital_scope = {
-						is_coastal = yes
-					}
-				}
-			}
-		}
-
-		available = {
-			is_subject = no
-			all_of_scopes = {
-				array = struck_by_the_jeweled_spear_array 
-				is_controlled_by = ROOT
-				tooltip = JAP_jeweled_spear_claim_availability_tt 
-			}
-		}
-
-		cost = 10
-
-		fire_only_once = yes
-
-		ai_will_do = {
-			base = 10
-		}
-
-		complete_effect = {
-
-			hidden_effect = {
-				FROM = {
-					add_to_array = {
-						array = country_whose_states_were_claimed_by_the_spear_array
-						value = PREV #optional, if not defined adds scope
-					} 
-				}
-				FROM = {
-					capital_scope = {
-						#add_to_array = {
-						#	array = claimed_countrys_capital_used_to_expel_barbarians_array
-						#	value = PREV #optional, if not defined adds scope
-						#} 
-						set_state_flag = can_renew_sonno_joi_flag
-					}
-				}
-			}
-
-			every_state = {
-				limit = { 
-					is_owned_by = FROM 
-					OR = {
-						is_on_continent = asia
-						is_on_continent = middle_east
-						is_on_continent = australia
-					}
-				}
-				ROOT = { 
-					add_to_array = {
-						array = struck_by_the_jeweled_spear_array
-						value = PREV #optional, if not defined adds scope
-					} 
-				}
-				add_claim_by = ROOT
-			}
-
-			IF = {
-				limit = {
-					NOT = {
-						has_war_with = FROM
-					}
-				}
-				custom_effect_tooltip = generic_skip_one_line_tt
-				create_wargoal = {
-					type = annex_everything
-					target = FROM
-				}	
-			}
-
-		}	
-	}
-
 	JAP_core_asian_state = {
 
 		icon = GFX_decision_generic_form_nation
@@ -7694,7 +6834,7 @@ JAP_the_propaganda_department_decisions = {
 		}
 		
 		visible = {
-			has_completed_focus = JAP_hakko_ichiu
+			always = no
 		}
 		
 		available = {
@@ -7801,12 +6941,6 @@ JAP_the_co_prosperity_sphere_decisions = {
 				factor = 2
 				any_enemy_country = {
 					has_war_with = FROM
-				}
-			}
-			modifier = {
-				factor = 0.5
-				FROM = {
-					is_enemy_ideology = yes
 				}
 			}
 			modifier = {
@@ -8089,83 +7223,6 @@ JAP_the_co_prosperity_sphere_decisions = {
 
 	}
 
-	# Empower the Yi Dynasty
-	JAP_empower_the_yi_dynasty_decision  = {
-
-		priority = 10
-
-		icon = GFX_decision_generic_monarchy
-
-		ai_will_do = {
-			base = 10
-		}
-	
-		allowed = {  
-			original_tag = JAP 
-		}
-
-		visible = { 
-			has_completed_focus = JAP_sea_greater_east_asian_co_properity_sphere
-			has_subject = KOR
-			KOR = {
-				NOT = {
-					has_government = fascism
-				}
-			}
-		}
-	
-		available = {
-			
-		}
-
-		#days_remove = 70
-
-		#days_re_enable = 180
-
-		cost = 25
-
-		cancel_trigger = {
-		}
-
-        cancel_effect = {
-        }
-
-		modifier = {
-		}
-
-		complete_effect = { 
-
-			KOR = {
-				country_event = {
-					id = SEA_japan_popup_events.35
-					hours = 6
-				}	
-			}
-			custom_effect_tooltip = if_they_accept_tt
-			effect_tooltip = {
-				KOR = {
-					set_politics = {
-						ruling_party = fascism
-						elections_allowed = no
-					}	
-					add_popularity = {
-						ideology = fascism
-						popularity = 0.3
-					}	
-					add_political_power = 100
-				}
-			}
-
-		}
-
-		fire_only_once = yes
-
-		remove_effect = {
-
-		}
-
-	}
-
 }
 
 # PROPAGANDA EFFORTS
@@ -8294,8 +7351,8 @@ JAP_state_shintoism_decisions = {
 
 		visible = { 
 			OR = {
-				has_completed_focus = JAP_a_new_take_on_state_shintoism
-				has_completed_focus = JAP_the_spirit_of_the_imperial_nation
+				
+				
 				has_completed_focus = JAP_enact_religious_organizations_law
 			}
 			OR = {
@@ -8356,8 +7413,8 @@ JAP_state_shintoism_decisions = {
 
 		visible = { 
 			OR = {
-				has_completed_focus = JAP_a_new_take_on_state_shintoism
-				has_completed_focus = JAP_the_spirit_of_the_imperial_nation
+				
+				
 				has_completed_focus = JAP_enact_religious_organizations_law
 			}
 			#OR = {
@@ -8418,8 +7475,8 @@ JAP_state_shintoism_decisions = {
 
 		visible = { 
 			OR = {
-				has_completed_focus = JAP_a_new_take_on_state_shintoism
-				has_completed_focus = JAP_the_spirit_of_the_imperial_nation
+				
+				
 				has_completed_focus = JAP_enact_religious_organizations_law
 			}
 			OR = {
@@ -8480,8 +7537,7 @@ JAP_state_shintoism_decisions = {
 
 		visible = { 
 			OR = {
-				has_completed_focus = JAP_a_new_take_on_state_shintoism
-				has_completed_focus = JAP_the_spirit_of_the_imperial_nation
+				
 				has_completed_focus = JAP_enact_religious_organizations_law
 			}
 			#OR = {
@@ -8539,10 +7595,7 @@ economy_decisions = {
 		}
 		
 		visible = {
-			OR = {
-				has_completed_focus = JAP_give_it_your_all_for_the_emperor
-				has_completed_focus = JAP_ganbarou
-			}
+			always = no
 		}
 		
 		available = {
@@ -8611,7 +7664,7 @@ economy_decisions = {
 		}
 		
 		visible = {
-			has_completed_focus = JAP_further_rural_investments
+			always = no
 		}
 		
 		available = {
@@ -8669,8 +7722,7 @@ economy_decisions = {
 		}
 		
 		visible = {
-			has_completed_focus = JAP_fukumotoism
-			check_variable = { JAP_economic_redistribtuion_level < JAP_economic_redistribtuion_max }
+			always = no
 		}
 		
 		available = {
@@ -8794,15 +7846,7 @@ JAP_the_peoples_state_decisions = {
 		}
 		
 		visible = {
-			has_completed_focus = JAP_okadas_military_purge_speech
-			NOT = {
-				has_completed_focus = JAP_revoke_the_peace_preservation_law
-			}
-			any_owned_state = {
-				has_dynamic_modifier = {
-					modifier = JAP_state_under_army_control
-				}	
-			}
+			always = no
 		}
 
 		ai_will_do = {
@@ -8914,10 +7958,8 @@ JAP_the_peoples_state_decisions = {
 		}
 
 		visible = {
-			has_completed_focus = JAP_bribe_generals
-			NOT = {
-				has_completed_focus = JAP_revoke_the_peace_preservation_law
-			}
+			always = no
+			
 		}
 
 		cancel_trigger = {
@@ -8978,10 +8020,8 @@ JAP_the_peoples_state_decisions = {
 		}
 
 		visible = {
-			has_completed_focus = JAP_bribe_generals
-			NOT = {
-				has_completed_focus = JAP_revoke_the_peace_preservation_law
-			}
+			always = no
+			
 		}
 
 		cancel_trigger = {
@@ -9033,10 +8073,6 @@ JAP_the_peoples_state_decisions = {
 
 		ai_will_do = {
 			base = 100
-			modifier = {
-				add = -100
-				has_completed_focus = JAP_secretly_rebuild_the_party
-			}
 		}
 
 		days_remove = 70
@@ -9046,10 +8082,8 @@ JAP_the_peoples_state_decisions = {
 		}
 
 		visible = {
-			has_completed_focus = JAP_build_an_anti_army_coalition
-			NOT = {
-				has_completed_focus = JAP_revoke_the_peace_preservation_law
-			}
+			always = no
+			
 		}
 
 		cancel_trigger = {
@@ -9095,10 +8129,7 @@ JAP_the_peoples_state_decisions = {
 		}
 
 		visible = {
-			has_completed_focus = JAP_secretly_rebuild_the_party
-			NOT = {
-				has_completed_focus = JAP_revoke_the_peace_preservation_law
-			}
+			always = no
 		}
 
 		cancel_trigger = {
@@ -9134,20 +8165,7 @@ JAP_the_peoples_state_decisions = {
 		}
 		
 		visible = {
-			has_completed_focus = JAP_secretly_rebuild_the_party
-			NOT = {
-				has_completed_focus = JAP_revoke_the_peace_preservation_law
-			}
-			any_owned_state = {
-				has_dynamic_modifier = {
-					modifier = JAP_state_under_rebel_control
-				}	
-				NOT = {
-					has_dynamic_modifier = {
-						modifier = JAP_state_infiltrated_by_the_jcp
-					}	
-				}
-			}
+			always = no
 		}
 
 		ai_will_do = {
@@ -9249,11 +8267,8 @@ JAP_the_peoples_state_decisions = {
 		}
 
 		visible = {
-			has_completed_focus = JAP_anti_militarist_speeches_in_the_diet
-			has_country_flag = JAP_jcp_distanced_themselves_from_the_soviets_flag
-			NOT = {
-				has_completed_focus = JAP_revoke_the_peace_preservation_law
-			}
+			always = no
+			
 		}
 
 		cancel_trigger = {
@@ -9299,11 +8314,7 @@ JAP_the_peoples_state_decisions = {
 		}
 
 		visible = {
-			has_completed_focus = JAP_organize_the_student_movements
-			has_country_flag = JAP_jcp_distanced_themselves_from_the_soviets_flag
-			NOT = {
-				has_completed_focus = JAP_revoke_the_peace_preservation_law
-			}
+			always = no
 		}
 
 		cancel_trigger = {
@@ -9333,10 +8344,7 @@ JAP_the_peoples_state_decisions = {
 		}
 		
 		visible = {
-			has_completed_focus = JAP_mountain_village_operation_units
-			NOT = {
-				has_completed_focus = JAP_revoke_the_peace_preservation_law
-			}
+			always = no
 		}
 
 		ai_will_do = {
@@ -9428,7 +8436,7 @@ JAP_the_peoples_state_decisions = {
 			282 = {
 				is_capital = no
 			}
-			has_completed_focus = JAP_revoke_the_peace_preservation_law
+			always = no
 		}
 
 		available = {
@@ -9463,10 +8471,7 @@ JAP_the_peoples_state_decisions = {
 		}
 		
 		visible = {
-			has_completed_focus = JAP_organize_underground_resistance
-			NOT = {
-				has_completed_focus = JAP_revoke_the_peace_preservation_law
-			}
+			always = no
 		}
 
 		ai_will_do = {
@@ -9531,10 +8536,7 @@ JAP_the_peoples_state_decisions = {
 		}
 		
 		visible = {
-			has_completed_focus = JAP_organize_underground_resistance
-			NOT = {
-				has_completed_focus = JAP_revoke_the_peace_preservation_law
-			}
+			always = no
 		}
 
 		ai_will_do = {
@@ -9599,10 +8601,7 @@ JAP_the_peoples_state_decisions = {
 		}
 		
 		visible = {
-			has_completed_focus = JAP_organize_underground_resistance
-			NOT = {
-				has_completed_focus = JAP_revoke_the_peace_preservation_law
-			}
+			always = no
 		}
 
 		ai_will_do = {
@@ -9698,7 +8697,7 @@ JAP_the_peoples_state_decisions = {
 		}
 
 		visible = { 
-			has_completed_focus = JAP_revoke_the_peace_preservation_law
+			always = no
 			any_enemy_country = {
 				original_tag = JAP
 			}
@@ -9773,105 +8772,6 @@ JAP_the_peoples_state_decisions = {
 
 	}
 
-	# Sabotage Behind Enemy Lines
-	JAP_organize_the_fifth_column_decision = {
-		icon = generic_assassination
-		state_target = yes
-
-		target_array = ROOT.core_states
-
-		priority = 5
-
-		target_root_trigger = {
-			has_completed_focus = JAP_organize_the_fifth_column
-		}
-
-		target_trigger = {
-			FROM = {
-				is_core_of = ROOT
-			}
-		}
-
-		available = {
-			ROOT = { NOT = { has_country_flag = JAP_organize_the_fifth_column_flag } }
-		}
-		ai_will_do = {
-			base = 100 # This is generally a good thing to do
-			modifier = {
-				add = FROM.state_strategic_value # Prioritize important states
-				always = yes
-			}
-			modifier = {
-				factor = 2
-				always = yes
-			}
-		}
-
-		visible = {
-			FROM = {
-				OR = {
-					controller = {
-						original_tag = JAP
-						NOT = {
-							tag = ROOT
-						}
-					}
-					AND = {
-						is_controlled_by = ROOT
-						NOT = { is_fully_controlled_by = ROOT }
-					}
-				}
-				owner = {
-					original_tag = JAP
-					NOT = {
-						tag = ROOT
-					}
-				}
-				any_neighbor_state = { is_controlled_by = ROOT }
-			}
-			has_civil_war = yes
-		}
-
-		on_map_mode = map_only
-		fire_only_once = yes
-
-		custom_cost_trigger = {
-			command_power > 14
-		}
-		custom_cost_text = SOV_sabotage_behind_enemy_lines_cost
-		days_remove = 14
-
-		complete_effect = {
-			hidden_effect = {
-				add_command_power = -15
-				set_country_flag = {
-				    flag = JAP_organize_the_fifth_column_flag
-				    days = 15
-				    value = 1
-				}
-			}
-		}
-		remove_effect = {
-			damage_units = {
-				state = FROM
-				limit = { 
-					original_tag = JAP
-					NOT = {
-						tag = ROOT
-					} 
-				}
-				org_damage = 0.25
-				str_damage = 0.1
-				ratio = yes
-				army = yes
-				navy = no
-			}
-			custom_effect_tooltip = JAP_organize_the_fifth_column_decision_tt
-			clr_country_flag = JAP_organize_the_fifth_column_flag
-		}
-
-	}
-
 	### MISSIONS ###
 
 	# Army Securing Control over Osaka
@@ -9895,9 +8795,7 @@ JAP_the_peoples_state_decisions = {
 
 		visible = {
 			tag = JAP
-			NOT = {
-				has_completed_focus = JAP_revoke_the_peace_preservation_law
-			}
+			
 		}
 
 		cancel_if_not_visible = yes
@@ -9939,9 +8837,7 @@ JAP_the_peoples_state_decisions = {
 
 		visible = {
 			tag = JAP
-			NOT = {
-				has_completed_focus = JAP_revoke_the_peace_preservation_law
-			}
+			
 		}
 
 		cancel_if_not_visible = yes
@@ -9998,9 +8894,7 @@ JAP_the_peoples_state_decisions = {
 
 		visible = {
 			tag = JAP
-			NOT = {
-				has_completed_focus = JAP_revoke_the_peace_preservation_law
-			}
+			
 		}
 
 		cancel_if_not_visible = yes
@@ -10041,9 +8935,7 @@ JAP_the_peoples_state_decisions = {
 
 		visible = {
 			tag = JAP
-			NOT = {
-				has_completed_focus = JAP_revoke_the_peace_preservation_law
-			}
+			
 		}
 
 		cancel_if_not_visible = yes
@@ -10091,9 +8983,7 @@ JAP_the_peoples_state_decisions = {
 
 		visible = {
 			tag = JAP
-			NOT = {
-				has_completed_focus = JAP_revoke_the_peace_preservation_law
-			}
+			
 		}
 
 		cancel_if_not_visible = yes
@@ -10134,9 +9024,7 @@ JAP_the_peoples_state_decisions = {
 
 		visible = {
 			tag = JAP
-			NOT = {
-				has_completed_focus = JAP_revoke_the_peace_preservation_law
-			}
+			
 		}
 
 		cancel_if_not_visible = yes
@@ -10209,9 +9097,7 @@ JAP_the_peoples_state_decisions = {
 
 		visible = {
 			tag = JAP
-			NOT = {
-				has_completed_focus = JAP_revoke_the_peace_preservation_law
-			}
+			
 		}
 
 		cancel_if_not_visible = yes
@@ -10252,9 +9138,7 @@ JAP_the_peoples_state_decisions = {
 
 		visible = {
 			tag = JAP
-			NOT = {
-				has_completed_focus = JAP_revoke_the_peace_preservation_law
-			}
+			
 		}
 
 		cancel_if_not_visible = yes
@@ -10295,9 +9179,7 @@ JAP_the_peoples_state_decisions = {
 
 		visible = {
 			tag = JAP
-			NOT = {
-				has_completed_focus = JAP_revoke_the_peace_preservation_law
-			}
+			
 		}
 
 		cancel_if_not_visible = yes
@@ -10341,9 +9223,7 @@ JAP_the_peoples_state_decisions = {
 
 		visible = {
 			tag = JAP
-			NOT = {
-				has_completed_focus = JAP_revoke_the_peace_preservation_law
-			}
+			
 		}
 
 		cancel_if_not_visible = yes
@@ -10379,7 +9259,7 @@ JAP_investing_in_foreign_industries_cat = {
 		}
 
 		visible = {
-			has_completed_focus = JAP_invest_in_foreign_industries
+			always = no
 		}
 
 		available = {
@@ -10405,7 +9285,6 @@ JAP_investing_in_foreign_industries_cat = {
 					}
 				}
 				OR = {
-					state = 1023 # Brunei
 					state = 288 # Magwe 
 				}
 			}
@@ -10455,7 +9334,7 @@ JAP_investing_in_foreign_industries_cat = {
 		}
 
 		visible = {
-			has_completed_focus = JAP_invest_in_foreign_industries
+			always = no
 		}
 
 		available = {
@@ -10532,7 +9411,7 @@ JAP_investing_in_foreign_industries_cat = {
 		}
 
 		visible = {
-			has_completed_focus = JAP_invest_in_foreign_industries
+			always = no
 		}
 
 		available = {
@@ -10609,7 +9488,7 @@ JAP_investing_in_foreign_industries_cat = {
 		}
 
 		visible = {
-			has_completed_focus = JAP_invest_in_foreign_industries
+			always = no
 		}
 
 		available = {
@@ -10636,7 +9515,6 @@ JAP_investing_in_foreign_industries_cat = {
 				}
 				OR = {
 					state = 724 # Northern Mandalay
-					state = 1024 # Sabah 
 					state = 673 # Sulawesi
 					state = 333 # Sarawak 
 				}
@@ -10707,7 +9585,7 @@ JAP_investing_in_foreign_industries_cat = {
 	    }
 
 	    visible = { 
-			has_completed_focus = JAP_seek_foreign_investments
+			always = no
 		}
 	
 		available = {
@@ -10858,12 +9736,6 @@ JAP_west_pacific_treaty_org_allied_trade_cat = {
 				}
 			}
 			modifier = {
-				factor = 0.5
-				FROM = {
-					is_enemy_ideology = yes
-				}
-			}
-			modifier = {
 				factor = 2
 				FROM = {
 					has_government = ROOT
@@ -10932,7 +9804,7 @@ JAP_west_pacific_treaty_org_allied_trade_cat = {
 		}
 
 		visible = {	
-			has_completed_focus = JAP_form_greater_east_asian_customs_union
+			always = no
 		}
 
 		fire_only_once = yes
@@ -10982,12 +9854,6 @@ JAP_west_pacific_treaty_org_economic_integration_cat = {
 				}
 			}
 			modifier = {
-				factor = 0.5
-				FROM = {
-					is_enemy_ideology = yes
-				}
-			}
-			modifier = {
 				factor = 2
 				FROM = {
 					has_government = ROOT
@@ -11032,7 +9898,7 @@ JAP_west_pacific_treaty_org_economic_integration_cat = {
 		}
 
 		visible = {	
-			has_completed_focus = JAP_form_greater_east_asian_currency_union
+			always = no
 		}
 
 		fire_only_once = yes
@@ -11069,12 +9935,6 @@ JAP_west_pacific_treaty_org_economic_integration_cat = {
 				factor = 2
 				any_enemy_country = {
 					has_war_with = FROM
-				}
-			}
-			modifier = {
-				factor = 0.5
-				FROM = {
-					is_enemy_ideology = yes
 				}
 			}
 			modifier = {
@@ -11126,7 +9986,7 @@ JAP_west_pacific_treaty_org_economic_integration_cat = {
 		}
 
 		visible = {	
-			has_completed_focus = JAP_an_integrated_union
+			always = no
 		}
 
 		fire_only_once = yes
@@ -11181,7 +10041,7 @@ JAP_west_pacific_treaty_org_economic_integration_cat = {
 		}
 
 		visible = {
-			has_completed_focus = JAP_an_integrated_union
+			always = no
 		}
 
 		available = {
@@ -11240,7 +10100,7 @@ JAP_west_pacific_treaty_org_economic_integration_cat = {
 		}
 
 		visible = {
-			has_completed_focus = JAP_greater_east_asian_federation
+			always = no
 		}
 
 		available = {
@@ -11300,9 +10160,8 @@ JAP_west_pacific_treaty_org_economic_integration_cat = {
 		}
 		
 		visible = {
-			has_completed_focus = JAP_greater_east_asian_federation
+			always = no
 		}
-		
 		available = {
 			FROM = {
 				NOT = { has_state_flag = JAP_coring_this_asian_state_in_progress_flag }
@@ -11847,98 +10706,4 @@ JAP_boeitai_category = {
 
 # Tecnically not a Japan only thing, but a "all chinese enemies one"
 war_measures = {
-
-
-	CHI_china_pledging_to_hold_state_mission = {
-
-		icon = GFX_decision_generic_prepare_civil_war
-
-		highlight_states = {
-			highlight_states_trigger = {
-				has_state_flag = CHI_holding_state_mission_flag
-			} 
-		}
-
-		allowed = {
-			always = no #overridden by activate_mission
-		}
-
-		visible = {
-			has_war_with = CHI
-			is_major = yes
-		}
-
-		available = {
-			custom_trigger_tooltip = {
-				tooltip = CHI_holding_state_mission_trigger
-				CHI = {
-					NOT = {
-						has_active_mission = CHI_holding_state_mission
-					}
-				}
-			}
-			
-		}
-		
-		days_mission_timeout = CHI.CHI_holding_state_mission_time_var 
-
-		complete_effect = {
-
-			effect_tooltip = {
-				CHI = {
-					add_war_support = -0.05
-				}
-			}
-
-		}
-
-		is_good = no
-
-		timeout_effect = {
-
-			effect_tooltip = {
-				CHI = {
-					add_war_support = 0.05
-					add_cic = var:demonstrate_resolve_cic_reward
-					if = {
-						limit = {
-							NOT = {
-								has_dynamic_modifier = {
-									modifier = CHI_american_support
-								}
-							}
-						}
-
-						add_equipment_to_stockpile = {
-							type = artillery_equipment
-							amount = var:demonstrate_resolve_art_reward
-							producer = SOV
-						}
-					}
-					else = {
-						add_equipment_to_stockpile = {
-							type = artillery_equipment
-							amount = var:demonstrate_resolve_art_reward
-							producer = USA
-						}
-					}
-					every_subject_country = {
-						add_autonomy_score = { 
-							value = -30 
-							localization = CHI_holding_state_mission
-						}
-					}
-				}
-			}
-
-			
-		}
-		
-	}
-
-
-
-
-
-
 }

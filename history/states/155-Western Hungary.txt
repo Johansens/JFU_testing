@@ -8,6 +8,7 @@ state = {
 	resources = {
 		tungsten = 30.000
 		steel = 30.000
+		coal = 1 # more coal is added through a focus
 	}
 
 	history = {
