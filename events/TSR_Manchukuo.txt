@@ -252,7 +252,6 @@ country_event = {
 			states_filter = {
 				OR = {
 					state = 611
-					state = 1043
 				}
 			    is_controlled_by = ROOT
 			}

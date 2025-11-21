@@ -614,7 +614,7 @@ faction_template_asian_dominance = {
 		# faction_goal_an_infantry_army
 
 		# Medium term
-		faction_goal_control_chinese_metals
+		#faction_goal_control_chinese_metals
 		
 		# Long term
 		faction_goal_rule_the_waves

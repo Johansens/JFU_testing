@@ -403,9 +403,6 @@ JAP_needs_some_supply_hubs = {
 	}
 	enable = {
 		has_war_with = CHI
-		1039 = {
-			state_is_fully_controlled_by_ROOT_or_subject = yes
-		}
 		608 = {
 			state_is_fully_controlled_by_ROOT_or_subject = yes
 		}
@@ -446,9 +443,6 @@ JAP_get_shanghaid_in_shanghai = {
 
 		OR = {
 			597 = {
-				state_is_fully_controlled_by_ROOT_or_subject = no
-			}
-			1038 = {
 				state_is_fully_controlled_by_ROOT_or_subject = no
 			}
 		}
@@ -688,12 +682,6 @@ JAP_template_design = {
 		type = template_prio
 		id = heavy_armor
 		value = -100
-	}
-
-	ai_strategy = {
-		type = template_prio
-		id = paratroopers
-		value = -10
 	}
 
 	ai_strategy = {

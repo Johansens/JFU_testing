@@ -72,9 +72,7 @@ JAP_historical_plan = {
 		JAP_form_the_kido_butai # 35
 		JAP_naval_armaments_program #35
 		JAP_invest_in_senbu # 35
-		JAP_intensify_anti_guerilla_operations # 35
 		JAP_imperial_rule_assistance_association # 35 12th October
-		JAP_reorganized_national_government # 35
 		JAP_sea_greater_east_asian_co_properity_sphere # 70 June 1940, historically later
 		JAP_nanshin_ron # 35
 

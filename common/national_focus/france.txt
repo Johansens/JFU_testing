@@ -139,6 +139,10 @@ focus = {
 					level = 2
 					instant_build = yes
 				}
+				add_resource = {
+					type = coal
+					amount = 10
+				}
 			}
 		}
 	}
@@ -166,6 +170,10 @@ focus = {
 					type = infrastructure
 					level = 3
 					instant_build = yes
+				}
+				add_resource = {
+					type = coal
+					amount = 10
 				}
 			}
 		}

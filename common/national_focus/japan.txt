@@ -247,7 +247,7 @@ focus_tree = {
 		}
 
 		available = {
-			is_subject = no
+			always = no
 		}
 
 		bypass = {
@@ -3692,12 +3692,6 @@ focus_tree = {
 			modifier = {
 				factor = 0 
 				OR = {
-					1036 = {
-						is_controlled_by_ROOT_or_subject = yes
-					}
-					1037 = {
-						is_controlled_by_ROOT_or_subject = yes
-					}
 					327 = {
 						is_controlled_by_ROOT_or_subject = yes
 					}
@@ -3813,7 +3807,7 @@ focus_tree = {
 		id = JAP_invest_in_senbu
 		icon = GFX_focus_generic_concessions
 		#mutually_exclusive = { focus = JAP_the_harakiri_debate }
-		x = 0
+		x = -1
 		y = 1
 		relative_position_id = JAP_revisit_the_thirteen_demands
 
@@ -3861,13 +3855,13 @@ focus_tree = {
 		id = JAP_reinforce_the_beijing_garrison
 		icon = GFX_focus_JAP_reinforce_the_east_hebei_garrisons
 		#mutually_exclusive = { focus = JAP_the_harakiri_debate }
-		x = 2
+		x = 1
 		y = 1
 		relative_position_id = JAP_revisit_the_thirteen_demands
 
 		prerequisite = { focus = JAP_revisit_the_thirteen_demands }
 
-		cost = 2
+		cost = 1
 
 		ai_will_do = {
 			factor = 1
@@ -3999,116 +3993,11 @@ focus_tree = {
 	}
 
 	focus = {
-		id = JAP_intensify_anti_guerilla_operations
-		icon = GFX_focus_generic_attack_chinese_soviets
-		#mutually_exclusive = { focus = JAP_the_harakiri_debate }
-		x = -1
-		y = 2
-		relative_position_id = JAP_strategic_offensives
-
-		prerequisite = { focus = JAP_strategic_offensives }
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			always = no
-		}
-
-		bypass = {
-			
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		search_filters = { FOCUS_FILTER_HISTORICAL }
-
-		completion_reward = {
-
-			custom_effect_tooltip = JAP_intensify_anti_guerilla_operations_tt
-				
-			
-		}
-	}
-
-	focus = {
-		id = JAP_reorganized_national_government
-		icon = GFX_focus_JAP_reorganized_national_government
-		#mutually_exclusive = { focus = JAP_the_harakiri_debate }
-		x = 0
-		y = 1
-		relative_position_id = JAP_strategic_offensives
-
-		prerequisite = { focus = JAP_strategic_offensives }
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			is_subject = no
-			OR = {
-				has_government = neutrality
-				has_government = fascism
-			}
-			613 = {
-				state_is_fully_controlled_by_ROOT_or_subject = yes
-			}
-		}
-
-		bypass = {
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		search_filters = { FOCUS_FILTER_HISTORICAL }
-
-		completion_reward = {
-
-			# Establishes the Reorganized National Government
-
-			custom_effect_tooltip =  generic_skip_one_line_tt
-
-			custom_effect_tooltip =  generic_skip_one_line_tt
-
-			custom_effect_tooltip = JAP_reorganized_national_government_tt
-
-			IF = {
-				limit = {
-					has_dlc = "La Resistance"
-				}
-				custom_effect_tooltip =  generic_skip_one_line_tt
-				JAP_create_yoshio_kodama_operative = yes
-			}
-
-			IF = {
-				limit = {
-					USA = {
-						has_war = no
-					}
-				}
-				custom_effect_tooltip = generic_skip_one_line_tt
-				USA = { add_war_support = 0.05 }
-			}
-
-		}
-	}
-
-	focus = {
 		id = JAP_develop_the_chinese_resources
 		icon = GFX_goal_generic_construct_civilian
 		#mutually_exclusive = { focus = JAP_the_harakiri_debate }
 		x = 0
-		y = 3
+		y = 2
 		relative_position_id = JAP_reinforce_the_beijing_garrison
 
 		prerequisite = { focus = JAP_reinforce_the_beijing_garrison }
@@ -4178,113 +4067,6 @@ focus_tree = {
 			unlock_decision_category_tooltip = prospect_for_resources
 			
 				
-			
-		}
-	}
-
-	focus = {
-		id = JAP_form_the_jikyoku_iinkai
-		icon = GFX_focus_generic_fascist_propaganda
-		#mutually_exclusive = { focus = JAP_the_harakiri_debate }
-		x = 1
-		y = 1
-		relative_position_id = JAP_reinforce_the_beijing_garrison
-
-		prerequisite = { focus = JAP_reinforce_the_beijing_garrison }
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			USA = {
-				exists = yes
-				NOT = {
-					is_ally_with = ROOT
-				}
-			}
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_POLITICAL }
-
-		completion_reward = {
-
-			add_political_power = 75
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			USA = {
-				country_event = {
-					id = SEA_japan_foreign_policy.35
-					hours = 12
-					random_hours = 24
-				}	
-			}
-			effect_tooltip = {
-				USA = {
-					IF = {
-						limit = {
-							NOT = {
-								has_war_with = JAP
-							}
-						}
-						add_war_support = -0.05
-					}
-					ELSE = {
-						add_timed_idea = {
-							idea = JAP_pro_japanese_sentiments_for_usa_idea
-							days = 180
-						}	
-					}
-				}
-			}
-			
-			IF = {
-				limit = {
-					has_dlc = "La Resistance"
-				}
-				custom_effect_tooltip = generic_skip_one_line_tt
-				JAP_create_john_farnsworth_operative = yes
-				custom_effect_tooltip = generic_skip_one_line_tt
-			}
-
-			IF = {
-				limit = {
-					USA = {
-						NOT = {
-							has_war_with = ROOT
-						}
-					}
-				}
-				add_opinion_modifier = {
-					target = USA
-					modifier = japanese_committee_on_trade_and_information_pom
-				}	
-				USA = {
-					add_opinion_modifier = {
-						target = ROOT
-						modifier = japanese_committee_on_trade_and_information_pom
-					}	
-				}
-			}
-
-			hidden_effect = {
-				set_global_flag = { 
-					flag = JAP_has_recently_tried_to_block_usa_support_for_china_flag 
-					value = 1 
-					days = 121 
-				}
-			}
 			
 		}
 	}
@@ -4562,7 +4344,6 @@ focus_tree = {
 					state_is_fully_controlled_by_ROOT_or_subject = yes
 					any_province_building_level = {
 						province = {
-							id = 6969
 							id = 11822
 							id = 12043
 							id = 3900
@@ -5251,6 +5032,10 @@ focus_tree = {
 
 		cost = 5
 
+		available = {
+			always = no
+		}
+
 		ai_will_do = {
 			factor = 1
 		}
@@ -5388,7 +5173,6 @@ focus_tree = {
 						is_fully_controlled_by = ROOT
 						any_province_building_level = {
 							province = {
-								id = 6969
 								id = 11822
 								id = 12043
 								id = 3900
@@ -5404,7 +5188,6 @@ focus_tree = {
 						type = bunker
 						level = 3
 						province = {
-							id = 6969
 							id = 11822
 							id = 12043
 							id = 3900

@@ -260,42 +260,6 @@ country_event = {
 		ELSE = {
 			614 = { add_claim_by = ROOT }
 		}
-		IF = {
-			limit = {
-				1039 = {
-					OWNER = {
-						is_literally_china = yes
-
-						NOT = {
-							original_tag = ROOT 
-							original_tag = FROM 
-							has_country_flag = JAP_already_sent_demand_for_northern_chinese_concessions
-						}
-					}
-				}
-			}
-
-			if = {
-				limit = {
-					OWNER = {
-						owns_state = 608
-					}
-				}
-
-				hidden_effect = { #to hide duplicate events in tooltip in the most
-					OWNER = {
-						set_country_flag = JAP_already_sent_demand_for_northern_chinese_concessions
-						country_event = { id = SEA_china.28 days = 2 }
-					}
-				}
-			}
-			else = {
-				OWNER = {
-					set_country_flag = JAP_already_sent_demand_for_northern_chinese_concessions
-					country_event = { id = SEA_china.28 days = 2 }
-				}
-			}
-		}
 
 		#### SND STATES
 

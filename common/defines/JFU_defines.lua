@@ -133,31 +133,31 @@ NDefines.NAir.FIELD_EXPERIENCE_SCALE = 0.0008						-- WAS 0.0004 | This affects 
 NDefines.NAir.NAVAL_COMBAT_EXTERNAL_PLANES_JOIN_RATIO = 0.03       -- WAS 0.05 | Changed due to plane count changes 
 NDefines.NAir.AIR_WING_MAX_STATS_BOMBING = 200	-- vanilla 100
 
-NDefines.NNavy.MISSION_SUPREMACY_RATIOS = { 						-- supremacy multipliers for different mission types   | Strikeforce/Naval Invasion Support now 0 supremacy to avoid free supremacy
-	0.0, -- HOLD
-	1.0, -- PATROL		
-	0.3, -- STRIKE FORCE 
-	0.2, -- CONVOY RAIDING
-	0.5, -- CONVOY ESCORT
-	0.0, -- MINES PLANTING	
-	0.0, -- MINES SWEEPING	
-	0.0, -- TRAIN
-	0.0, -- RESERVE_FLEET
-	0.3, -- NAVAL_INVASION_SUPPORT
-}
+--NDefines.NNavy.MISSION_SUPREMACY_RATIOS = { 						-- supremacy multipliers for different mission types   | Strikeforce/Naval Invasion Support now 0 supremacy to avoid free supremacy
+--	0.0, -- HOLD
+--	1.0, -- PATROL		
+--	0.3, -- STRIKE FORCE 
+--	0.2, -- CONVOY RAIDING
+--	0.5, -- CONVOY ESCORT
+--	0.0, -- MINES PLANTING	
+--	0.0, -- MINES SWEEPING	
+--	0.0, -- TRAIN
+--	0.0, -- RESERVE_FLEET
+--	0.3, -- NAVAL_INVASION_SUPPORT
+--}
 
 NDefines.NNavy.TRAINING_ACCIDENT_CHANCES = 0
 NDefines.NNavy.ACCIDENTS_CHANCE_BALANCE_FACTOR = 0					-- WAS 0.004
 NDefines.NNavy.NAVAL_MINES_IN_REGION_MAX = 1.0
 NDefines.NNavy.NAVAL_TRANSFER_BASE_SPEED = 10                      -- WAS 6 | Increased so moving troops around the world is faster and theaters dont seem so disconnected (particularly aimed at improving Allied gameplay experience)
-NDefines.NNavy.ADMIRAL_TASKFORCE_CAP = 20                         -- WAS 10 | Increased so players can use their same submarine or escort admiral without penalties
+--NDefines.NNavy.ADMIRAL_TASKFORCE_CAP = 20                         -- WAS 10 | Increased so players can use their same submarine or escort admiral without penalties
 NDefines.NNavy.NAVAL_MINES_DECAY_AT_PEACE_TIME = 1000                    -- WAS 0.25 
-NDefines.NNavy.SUPPLY_NEED_FACTOR = 0
-NDefines.NNavy.CONVOY_EFFICIENCY_LOSS_MODIFIER = 0.5 --  WAS 1.25, reduced so players have more time to deal with it | How much efficiency drops when losing convoys. If modifier is 0.5, then losing 100% of convoys in short period, the efficiency will drop by 50%.
-NDefines.NNavy.NAVAL_COMBAT_AIR_CARRIER_TARGET_SCORE = 50 -- VANILLA 200
-NDefines.NNavy.MAX_ORG_ON_MANUAL_MOVE = 1.0	-- vanilla 0.6 org will clamped to this ratio on manual move 
-NDefines.NNavy.MISSION_MAX_REGIONS = 5 			--vanilla 0 | Limit of the regions that can be assigned to naval mission. Set to 0 for unlimited.
-NDefines.NNavy.INITIAL_ALLOWED_DOCKYARD_RATIO_FOR_REPAIRS = 1.0				-- initially countries will allocate this ratio of dockyards for repairs
+--NDefines.NNavy.SUPPLY_NEED_FACTOR = 0
+--NDefines.NNavy.CONVOY_EFFICIENCY_LOSS_MODIFIER = 0.5 --  WAS 1.25, reduced so players have more time to deal with it | How much efficiency drops when losing convoys. If modifier is 0.5, then losing 100% of convoys in short period, the efficiency will drop by 50%.
+--NDefines.NNavy.NAVAL_COMBAT_AIR_CARRIER_TARGET_SCORE = 50 -- VANILLA 200
+--NDefines.NNavy.MAX_ORG_ON_MANUAL_MOVE = 1.0	-- vanilla 0.6 org will clamped to this ratio on manual move 
+--NDefines.NNavy.MISSION_MAX_REGIONS = 5 			--vanilla 0 | Limit of the regions that can be assigned to naval mission. Set to 0 for unlimited.
+--NDefines.NNavy.INITIAL_ALLOWED_DOCKYARD_RATIO_FOR_REPAIRS = 1.0				-- initially countries will allocate this ratio of dockyards for repairs
 
 
 NDefines.NProduction.MIN_LICENSE_ACTIVE_DAYS = 1                 -- License can be cancelled at any time now, down from 30 | 
