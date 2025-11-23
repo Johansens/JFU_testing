@@ -55,20 +55,7 @@ focus_tree = {
 	inlay_window = {
 		id = jap_imperial_influence_inlay_window
 		
-		position = { X = 10000 y = 700 }
-
-
-		override_position = {
-			x = 4400
-			y = 700
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = JAP_sea_purge_the_kodoha_faction
-			}
-		}
+		position = { X = 2200 y = 820 }
 
 	}
 
@@ -89,7 +76,7 @@ focus_tree = {
 		icon = GFX_focus_JAP_purge_the_kodoha_faction
 		mutually_exclusive = { 
 		}
-		x = 35
+		x = 12
 		y = 0
 		
 
@@ -138,15 +125,6 @@ focus_tree = {
 			activate_mission = JAP_kwantung_army_impatience
 				
 			hidden_effect = {
-				IF = {
-					limit = {
-						has_game_rule = {
-							rule = obsolete_focus_branches_visibility
-							option = HIDE
-						}
-					}
-					mark_focus_tree_layout_dirty = yes
-				}
 
 				set_global_flag = { 
 					flag = JAP_marco_polo_remaining_days
@@ -325,70 +303,9 @@ focus_tree = {
 	}
 
 	focus = {
-		id = JAP_reprimand_hamada_kunimatsu
-		icon = GFX_focus_JAP_reprimand_hamada_kunimatsu
-		mutually_exclusive = { focus = JAP_the_harakiri_debate }
-		x = -2
-		y = 1
-		relative_position_id = JAP_promulgate_the_military_ministers_system
-
-		prerequisite = { focus = JAP_promulgate_the_military_ministers_system }
-
-		cost = 2
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			has_country_flag = JAP_harakiri_debate_has_taken_place_flag
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		search_filters = { FOCUS_FILTER_POLITICAL_CHARACTER FOCUS_FILTER_IMPERIAL_INFLUENCE }
-
-		completion_reward = {
-
-			add_war_support = -0.05
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			IF = {
-				limit = {
-					has_idea = JAP_collapsing_government_idea
-				}
-				remove_ideas = JAP_collapsing_government_idea
-				custom_effect_tooltip = generic_skip_one_line_tt
-			}
-
-			add_country_leader_role = {
-				character = JAP_kazushige_ugaki
-				promote_leader = yes
-				country_leader = {
-					ideology = japan_militarism_ideology
-					expire = "1952.1.1.1"
-					traits = { JAP_diplomatic_prime_minister } 
-				}
-			}
-
-			JAP_big_government_faction_gain = yes
-				
-			
-		}
-	}
-
-	focus = {
 		id = JAP_the_harakiri_debate
 		icon = GFX_focus_JAP_the_harakiri_debate
-		mutually_exclusive = { focus = JAP_reprimand_hamada_kunimatsu }
-		x = 2
+		x = 0
 		y = 1
 		relative_position_id = JAP_promulgate_the_military_ministers_system
 
@@ -584,178 +501,14 @@ focus_tree = {
 	}
 
 	focus = {
-		id = JAP_reiterate_the_three_principles_of_hirota
-		icon = GFX_goal_generic_forceful_treaty
-		#mutually_exclusive = { focus = JAP_the_harakiri_debate }
-		x = 0
-		y = 1
-		relative_position_id = JAP_reprimand_hamada_kunimatsu
-
-		prerequisite = { focus = JAP_reprimand_hamada_kunimatsu }
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			always = no
-		}
-
-		bypass = {
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		search_filters = { FOCUS_FILTER_POLITICAL }
-
-		completion_reward = {
-
-			add_timed_idea = {
-				idea = JAP_anti_communist_crackdowns_idea
-				days = 360
-			}	
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			CHI = {
-				country_event = {
-					id = SEA_japan_foreign_policy.32
-					hours = 12
-					random_hours = 24
-				}	
-			}
-			custom_effect_tooltip = if_they_accept_tt
-			effect_tooltip = {
-				CHI = {
-					add_timed_idea = {
-						idea = JAP_anti_communist_crackdowns_idea
-						days = 360
-					}	
-
-					add_timed_idea = {
-						idea = CHI_suppression_of_anti_japanese_sentiments_idea
-						days = 360
-					}
-				}
-			}
-			
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			JAP_small_government_faction_gain = yes
-			
-		}
-	}
-
-	focus = {
-		id = JAP_formalize_japan_china_manchukuo_alliance
-		icon = GFX_focus_GER_ally_chiang_kai_shek
-		#mutually_exclusive = { focus = JAP_the_harakiri_debate }
-		x = -1
-		y = 1
-		relative_position_id = JAP_reiterate_the_three_principles_of_hirota
-
-		prerequisite = { focus = JAP_reiterate_the_three_principles_of_hirota }
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			is_subject = no
-			is_in_faction = no
-			has_government = neutrality
-			CHI = {
-				is_subject = no
-				NOT = {
-					has_government = communism
-					has_war_with = ROOT
-				}
-			}
-			has_global_flag = CHI_accepted_JAP_demands_to_suppress_communism_and_more_flag
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-
-		search_filters = {  }
-
-		completion_reward = {
-
-			CHI = {
-				country_event = {
-					id = SEA_japan_foreign_policy.42
-					hours = 6
-					random_hours = 12
-				}	
-			}
-			custom_effect_tooltip = if_they_accept_tt
-			effect_tooltip = {
-				CHI = {
-					IF = {
-						limit = {
-							is_faction_leader = yes
-						}
-						dismantle_faction = yes
-					}
-					
-					add_timed_idea = {
-						idea = JAP_japanese_chinese_friendship
-						days = 730
-					}
-
-					every_other_country = {
-						limit = {
-							AND = {
-								NOT = { 
-									tag = JAP 
-									is_ally_with = JAP
-								}
-							}
-							capital_scope = {
-								is_on_continent = asia
-							}
-						}
-						add_opinion_modifier = { target = CHI modifier = sino_japanese_alliance_threat }
-					}	
-				}
-				custom_effect_tooltip = generic_skip_one_line_tt
-				ROOT = {
-					add_timed_idea = {
-						idea = JAP_japanese_chinese_friendship
-						days = 730
-					}
-					
-					set_rule = { can_create_factions = yes }
-					create_faction_from_template = faction_template_JAP_sino_japanese_pact
-					add_to_faction = CHI
-					add_named_threat = { threat = 3 name = SEA_japan_foreign_policy.42.t }
-				}
-			}
-			
-		}
-	}
-
-	focus = {
 		id = JAP_sea_national_spiritual_mobliization_movement
 		icon = GFX_focus_JAP_national_spiritual_mobilization_movement
 		#mutually_exclusive = { focus = JAP_the_harakiri_debate }
-		x = 2
-		y = 1
-		relative_position_id = JAP_reiterate_the_three_principles_of_hirota
+		x = 0
+		y = 2
+		relative_position_id = JAP_konoes_first_cabinet
 
-		prerequisite = { focus = JAP_reiterate_the_three_principles_of_hirota focus = JAP_konoes_first_cabinet }
+		prerequisite = { focus = JAP_konoes_first_cabinet }
 
 		cost = 5
 
@@ -3748,118 +3501,63 @@ focus_tree = {
 
 	##### SHARED FOREIGN POLICY BRANCH #####
 
-	focus = {
-		id = JAP_revisit_the_thirteen_demands
-		icon = GFX_focus_generic_treaty
-		#mutually_exclusive = { focus = JAP_the_harakiri_debate }
-		x = -13
-		y = 1
-		relative_position_id = JAP_sea_purge_the_kodoha_faction
-
-		prerequisite = { focus = JAP_sea_purge_the_kodoha_faction }
-
-		cost = 3
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			JAP_army_faction_is_not_subdued = yes
-		}
-
-		bypass = {
-			OR = {
-				has_war_with = CHI
-				has_subject = CHI
-			}
-		}
-
-		cancel_if_invalid = no
-		continue_if_invalid = yes
-		available_if_capitulated = no
-
-		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT }
-
-		completion_reward = {
-				
-			add_war_support = 0.05
-			add_political_power = 25
-
-			IF = {
-				limit = {
-					CHI = {
-						exists = yes
-					}
-				}
-				CHI = {
-					add_opinion_modifier = {
-						target = ROOT
-						modifier = JAP_revisited_21_demands_neg_op_mod
-					}	
-				}
-			}
-			
-		}
-	}
-
-	focus = {
-		id = JAP_invest_in_senbu
-		icon = GFX_focus_generic_concessions
-		#mutually_exclusive = { focus = JAP_the_harakiri_debate }
-		x = -1
-		y = 1
-		relative_position_id = JAP_revisit_the_thirteen_demands
-
-		prerequisite = { focus = JAP_revisit_the_thirteen_demands }
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		search_filters = { FOCUS_FILTER_HISTORICAL }
-
-		completion_reward = {
-				
-			add_ideas = JAP_senbu_idea
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			custom_effect_tooltip = JAP_unlock_senbu_occupation_law_tt
-			show_ideas_tooltip = senbu_occupation_law_fake_idea
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			country_event = {
-				id = SEA_japan_foreign_policy.41
-			}	
-
-		}
-	}
+	#focus = {
+	#	id = JAP_invest_in_senbu
+	#	icon = GFX_focus_generic_concessions
+	#	#mutually_exclusive = { focus = JAP_the_harakiri_debate }
+	#	x = -1
+	#	y = 1
+	#	relative_position_id = JAP_revisit_the_thirteen_demands
+	#
+	#	prerequisite = { focus = JAP_revisit_the_thirteen_demands }
+	#
+	#	cost = 5
+	#
+	#	ai_will_do = {
+	#		factor = 1
+	#	}
+	#
+	#	available = {
+	#		
+	#	}
+	#
+	#	bypass = {
+	#		
+	#	}
+	#
+	#	cancel_if_invalid = yes
+	#	continue_if_invalid = no
+	#	available_if_capitulated = no
+	#
+	#	search_filters = { FOCUS_FILTER_HISTORICAL }
+	#
+	#	completion_reward = {
+	#			
+	#		add_ideas = JAP_senbu_idea
+	#
+	#		custom_effect_tooltip = generic_skip_one_line_tt
+	#
+	#		custom_effect_tooltip = JAP_unlock_senbu_occupation_law_tt
+	#		show_ideas_tooltip = senbu_occupation_law_fake_idea
+	#
+	#		custom_effect_tooltip = generic_skip_one_line_tt
+	#
+	#		country_event = {
+	#			id = SEA_japan_foreign_policy.41
+	#		}	
+	#
+	#	}
+	#}
 
 	focus = {
 		id = JAP_reinforce_the_beijing_garrison
 		icon = GFX_focus_JAP_reinforce_the_east_hebei_garrisons
 		#mutually_exclusive = { focus = JAP_the_harakiri_debate }
-		x = 1
+		x = -1
 		y = 1
-		relative_position_id = JAP_revisit_the_thirteen_demands
+		relative_position_id = JAP_konoes_first_cabinet
 
-		prerequisite = { focus = JAP_revisit_the_thirteen_demands }
+		prerequisite = { focus = JAP_konoes_first_cabinet }
 
 		cost = 1
 
@@ -3872,27 +3570,6 @@ focus_tree = {
 		}
 
 		bypass = {
-			OR = {
-				AND = {
-					608 = {
-						NOT = {
-							is_controlled_by = CHI
-						}
-					}
-					597 = {
-						NOT = {
-							is_controlled_by = CHI
-						}
-					}
-					614 = {
-						NOT = {
-							is_controlled_by = CHI
-						}
-					}
-				}
-				has_war_with = CHI
-				has_subject = CHI
-			}
 		}
 
 		will_lead_to_war_with = CHI
@@ -3904,24 +3581,23 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_ANNEXATION FOCUS_FILTER_MANPOWER }
 
 		completion_reward = {
-
+			add_war_support = 0.05
 			add_manpower = 15000
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-			IF = {
-				limit = {
-					has_active_mission = JAP_kwantung_army_impatience
-				}
-
-				add_days_mission_timeout = {
-				    mission = JAP_kwantung_army_impatience
-				    days = -420 
-				}
-				custom_effect_tooltip = JAP_reinforce_the_beijing_garrison_tt
-
-			}
+			custom_effect_tooltip = JAP_CHI_WAR_TT
 
 			hidden_effect = {
+				IF = {
+					limit = {
+						has_active_mission = JAP_kwantung_army_impatience
+					}
+
+					add_days_mission_timeout = {
+						mission = JAP_kwantung_army_impatience
+						days = -420 
+					}
+					custom_effect_tooltip = JAP_reinforce_the_beijing_garrison_tt
+
+				}
 				set_global_flag = JAP_triggered_war_with_china_manually_flag
 				CHI = {
 					add_days_mission_timeout = {
@@ -3934,142 +3610,64 @@ focus_tree = {
 		}
 	}
 
-	focus = {
-		id = JAP_strategic_offensives
-		icon = GFX_goal_generic_position_armies
-		#mutually_exclusive = { focus = JAP_the_harakiri_debate }
-		x = -1
-		y = 1
-		relative_position_id = JAP_reinforce_the_beijing_garrison
+	#focus = {
+	#	id = JAP_strategic_offensives
+	#	icon = GFX_goal_generic_position_armies
+	#	#mutually_exclusive = { focus = JAP_the_harakiri_debate }
+	#	x = -1
+	#	y = 1
+	#	relative_position_id = JAP_reinforce_the_beijing_garrison
+	#
+	#	prerequisite = { focus = JAP_reinforce_the_beijing_garrison }
+	#
+	#	cost = 5
+	#
+	#	ai_will_do = {
+	#		factor = 1
+	#	}
+	#
+	#	available = {
+	#		any_enemy_country = {
+	#			is_literally_china = yes
+	#		}
+	#		NOT = {
+	#			has_idea = JAP_surprise_invasion_idea
+	#		}
+	#	}
+	#
+	#	bypass = {
+	#		OR = {
+	#			owns_state = 613
+	#			CHI = {
+	#				is_subject_of = ROOT
+	#			}
+	#		}
+	#	}
+	#
+	#	cancel_if_invalid = yes
+	#	continue_if_invalid = no
+	#	available_if_capitulated = no
+	#
+	#	search_filters = { FOCUS_FILTER_HISTORICAL }
+	#
+	#	completion_reward = {
+	#
+	#		custom_effect_tooltip = JAP_strategic_offensives_tt
+	#
+	#		IF = {
+	#			limit = {
+	#				USA = {
+	#					has_war = no
+	#				}
+	#			}
+	#			custom_effect_tooltip = generic_skip_one_line_tt
+	#			USA = { add_war_support = 0.05 }
+	#		}
+	#			
+	#		
+	#	}
+	#}
 
-		prerequisite = { focus = JAP_reinforce_the_beijing_garrison }
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			any_enemy_country = {
-				is_literally_china = yes
-			}
-			NOT = {
-				has_idea = JAP_surprise_invasion_idea
-			}
-		}
-
-		bypass = {
-			OR = {
-				owns_state = 613
-				CHI = {
-					is_subject_of = ROOT
-				}
-			}
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		search_filters = { FOCUS_FILTER_HISTORICAL }
-
-		completion_reward = {
-
-			custom_effect_tooltip = JAP_strategic_offensives_tt
-
-			IF = {
-				limit = {
-					USA = {
-						has_war = no
-					}
-				}
-				custom_effect_tooltip = generic_skip_one_line_tt
-				USA = { add_war_support = 0.05 }
-			}
-				
-			
-		}
-	}
-
-	focus = {
-		id = JAP_develop_the_chinese_resources
-		icon = GFX_goal_generic_construct_civilian
-		#mutually_exclusive = { focus = JAP_the_harakiri_debate }
-		x = 0
-		y = 2
-		relative_position_id = JAP_reinforce_the_beijing_garrison
-
-		prerequisite = { focus = JAP_reinforce_the_beijing_garrison }
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			has_tech = excavation1
-			605 = { state_is_fully_controlled_by_ROOT_or_subject = yes }
-			325 = { state_is_fully_controlled_by_ROOT_or_subject = yes }
-			597 = { state_is_fully_controlled_by_ROOT_or_subject = yes }
-			614 = { state_is_fully_controlled_by_ROOT_or_subject = yes }
-			602 = { state_is_fully_controlled_by_ROOT_or_subject = yes }
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		search_filters = {  }
-
-		completion_reward = {
-
-			605 = {
-				add_resource = {
-					type = aluminium
-					amount = 8
-				}
-			}
-			325 = {
-				add_resource = {
-					type = aluminium
-					amount = 12
-				}
-				add_resource = {
-					type = tungsten
-					amount = 8
-				}
-			}
-			597 = {
-				add_resource = {
-					type = aluminium
-					amount = 8
-				}
-			}
-			614 = {
-				add_resource = {
-					type = coal
-					amount = 12
-				}
-			}
-			602 = {
-				add_resource = {
-					type = tungsten
-					amount = 10
-				}
-			}
-			
-			unlock_decision_category_tooltip = prospect_for_resources
-			
-				
-			
-		}
-	}
 
 
 
@@ -4078,7 +3676,7 @@ focus_tree = {
 		id = JAP_nanshin_ron
 		icon = GFX_focus_JAP_nanshin_ron
 		#mutually_exclusive = { focus = JAP_the_harakiri_debate }
-		x = -21
+		x = 6
 		y = 1
 		relative_position_id = JAP_sea_purge_the_kodoha_faction
 
@@ -4161,64 +3759,6 @@ focus_tree = {
 	}
 
 	focus = {
-		id = JAP_soviet_japanese_neutrality_pact
-		icon = GFX_focus_chi_mission_to_the_soviet_union
-		#mutually_exclusive = { focus = JAP_the_harakiri_debate }
-		x = 3
-		y = 1
-		relative_position_id = JAP_nanshin_ron
-
-		dynamic = yes
-
-		prerequisite = { focus = JAP_nanshin_ron }
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			SOV = {
-				exists = yes
-			}
-			NOT = {
-				has_war_with = SOV
-			}
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_INDUSTRY }
-
-		completion_reward = {
-
-			SOV = { 
-				country_event = { 
-					id = wtt_japan.11 
-					days = 1
-				} 
-			}
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			custom_effect_tooltip = JAP_soviet_japanese_neutrality_pact_tt
-
-			hidden_effect = {
-				set_country_flag = JAP_soviet_japanese_neutrality_pact_flag # Used to temporarily block the Persimmon focuses
-			}
-
-		}
-
-	}
-
-	focus = {
 		id = JAP_unsinkable_aircraft_carriers
 		icon = GFX_focus_generic_air_bases
 		#mutually_exclusive = { focus = JAP_the_harakiri_debate }
@@ -4228,7 +3768,7 @@ focus_tree = {
 
 		prerequisite = { focus = JAP_nanshin_ron }
 
-		cost = 5
+		cost = 2
 
 		ai_will_do = {
 			factor = 1
@@ -4436,7 +3976,7 @@ focus_tree = {
 
 		prerequisite = { focus = JAP_unsinkable_aircraft_carriers }
 
-		cost = 10
+		cost = 2
 
 		ai_will_do = {
 			factor = 1
@@ -4478,7 +4018,7 @@ focus_tree = {
 				}
 				add_dynamic_modifier = {
 					modifier = JAP_operation_MO_military_offensive
-					days = 180
+					days = 120
 					scope = JAP
 				}
 			}
@@ -4496,7 +4036,7 @@ focus_tree = {
 
 		prerequisite = { focus = JAP_isolate_oceania }
 
-		cost = 5
+		cost = 2
 
 		ai_will_do = {
 			factor = 1
@@ -4523,47 +4063,8 @@ focus_tree = {
 			
 			add_timed_idea = {
 				idea = JAP_battle_for_oceania
-				days = 425
+				days = 180
 			}	
-
-			IF = {
-				limit = {
-					AST = {
-						exists = yes
-						NOT = {	
-							is_ally_with = ROOT
-						}
-						NOT = {
-							has_war_with = ROOT
-						}
-					}
-				}
-				custom_effect_tooltip = generic_skip_one_line_tt
-				create_wargoal = {
-					type = puppet_wargoal_focus
-					target = AST
-					expire = 0
-				}	
-			}
-			IF = {
-				limit = {
-					NZL = {
-						exists = yes
-						NOT = {	
-							is_ally_with = ROOT
-						}
-						NOT = {
-							has_war_with = ROOT
-						}
-					}
-				}
-				custom_effect_tooltip = generic_skip_one_line_tt
-				create_wargoal = {
-					type = puppet_wargoal_focus
-					target = NZL
-					expire = 0
-				}	
-			}
 			
 		}
 	}
@@ -4578,7 +4079,7 @@ focus_tree = {
 
 		prerequisite = { focus = JAP_battle_for_australia }
 
-		cost = 5
+		cost = 2
 
 		ai_will_do = {
 			factor = 1
@@ -4605,69 +4106,8 @@ focus_tree = {
 
 			add_timed_idea = {
 				idea = JAP_operation_an_idea
-				days = 365
+				days = 120
 			}	
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-			
-			IF = {
-				limit = {
-					NOT = {
-						has_war_with = AST
-						has_wargoal_against = {
-							target = AST
-						}
-						has_subject = AST
-						is_in_faction_with = AST
-					}
-				}
-				create_wargoal = {
-					type = puppet_wargoal_focus
-					target = AST
-					expire = 0
-				}		
-			}
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			IF = {
-				limit = {
-					NOT = {
-						has_war_with = NZL
-						has_wargoal_against = {
-							target = NZL
-						}
-						has_subject = NZL
-						is_in_faction_with = NZL
-					}
-				}
-				create_wargoal = {
-					type = puppet_wargoal_focus
-					target = NZL
-					expire = 0
-				}		
-			}
-
-			add_ai_strategy = {
-				type = antagonize
-				id = AST
-				value = 100
-			}
-			add_ai_strategy = {
-				type = antagonize
-				id = NZL
-				value = 100
-			}
-			add_ai_strategy = {
-				type = conquer
-				id = AST
-				value = 50
-			}
-			add_ai_strategy = {
-				type = conquer
-				id = NZL
-				value = 50
-			}
 			
 		}
 	}
@@ -4799,48 +4239,16 @@ focus_tree = {
 	}
 
 	focus = {
-		id = JAP_demand_tonkinese_bases
-		icon = GFX_focus_generic_attack_indochina
+		id = JAP_occupy_indochina
+		icon = GFX_focus_JAP_occupy_indochina
 		#mutually_exclusive = { focus = JAP_the_harakiri_debate }
-		x = -2
+		x = -1
 		y = 1
 		relative_position_id = JAP_nanshin_ron
 
 		prerequisite = { focus = JAP_nanshin_ron }
 
-		cost = 5
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-		}
-
-		bypass = {
-		}
-
-		cancel_if_invalid = no
-		continue_if_invalid = yes
-		available_if_capitulated = no
-
-		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION }
-
-		completion_reward = {
-		}
-	}
-
-	focus = {
-		id = JAP_occupy_indochina
-		icon = GFX_focus_JAP_occupy_indochina
-		#mutually_exclusive = { focus = JAP_the_harakiri_debate }
-		x = 0
-		y = 1
-		relative_position_id = JAP_demand_tonkinese_bases
-
-		prerequisite = { focus = JAP_demand_tonkinese_bases }
-
-		cost = 5
+		cost = 1
 
 		ai_will_do = {
 			factor = 1
@@ -4851,7 +4259,7 @@ focus_tree = {
 		}
 
 		bypass = {
-
+			always = yes
 		}
 
 		cancel_if_invalid = yes
@@ -4866,47 +4274,13 @@ focus_tree = {
 	}
 
 	focus = {
-		id = JAP_sea_pressure_siam
-		icon = GFX_focus_generic_befriend_siam
-		mutually_exclusive = { focus = JAP_occupy_siam }
-		x = -1
-		y = 2
-		relative_position_id = JAP_demand_tonkinese_bases
-
-		prerequisite = { focus = JAP_demand_tonkinese_bases }
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-		}
-
-		bypass = {
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		search_filters = { FOCUS_FILTER_HISTORICAL }
-
-		completion_reward = {
-			
-		}
-	}
-
-	focus = {
 		id = JAP_occupy_siam
 		icon = GFX_focus_generic_attack_siam
-		mutually_exclusive = { focus = JAP_sea_pressure_siam }
-		x = 1
-		y = 2
-		relative_position_id = JAP_demand_tonkinese_bases
+		x = 0
+		y = 1
+		relative_position_id = JAP_occupy_indochina
 
-		prerequisite = { focus = JAP_demand_tonkinese_bases }
+		prerequisite = { focus = JAP_occupy_indochina }
 
 		cost = 5
 
@@ -4918,6 +4292,7 @@ focus_tree = {
 		}
 
 		bypass = {
+			always = yes
 		}
 
 		will_lead_to_war_with = SIA
@@ -4937,13 +4312,13 @@ focus_tree = {
 		id = JAP_strike_the_southern_road
 		icon = GFX_focus_jap_strike_south
 		#mutually_exclusive = { focus = JAP_sea_pressure_siam }
-		x = -1
+		x = 0
 		y = 1
 		relative_position_id = JAP_occupy_siam
 
-		prerequisite = { focus = JAP_occupy_siam focus = JAP_sea_pressure_siam }
+		prerequisite = { focus = JAP_occupy_siam }
 
-		cost = 10
+		cost = 0.2
 
 		ai_will_do = {
 			factor = 1
@@ -4957,13 +4332,6 @@ focus_tree = {
 				}
 				JAP_naval_faction_is_at_least_influential = yes
 			}
-			OR = {
-				has_government = fascism
-				AND = {
-					has_war_support > 0.95
-					has_army_manpower = { size > 999999 }
-				}
-			}
 		}
 
 		bypass = {
@@ -4976,6 +4344,49 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_ANNEXATION FOCUS_FILTER_IMPERIAL_INFLUENCE }
 
 		completion_reward = {
+			declare_war_on_all_allies = yes
+			custom_effect_tooltip = JAP_declare_tt
+			hidden_effect = {
+				if = { limit = { country_exists = MAN }	MAN = { add_to_war = { targeted_alliance = JAP enemy = ENG } } }
+				if = { limit = { country_exists = SIA }	SIA = { add_to_war = { targeted_alliance = JAP enemy = ENG } } }
+				#add_timed_idea = { idea = JAP_tora_tora_tora_idea days = 180 }
+				#MAN = { add_timed_idea = { idea = JAP_tora_tora_tora_idea days = 180 } }
+				#SIA = { add_timed_idea = { idea = JAP_tora_tora_tora_idea days = 180 } }
+				every_state = { 
+					limit = { 
+						ALLIED_asia_states = yes
+					}
+					add_dynamic_modifier = { 
+						modifier =  JAP_suprise_attack_dynamic 
+						days = 180 
+					}  
+				}			
+			}
+			hidden_effect = {
+				every_country = {
+					limit = {
+						axis = yes
+					}
+					remove_ideas = { GER_the_blitzkrieg }
+				}
+				every_country = {
+					limit = {
+						allies = yes
+					}
+					remove_ideas = { ENG_operation_compass }
+				}
+				every_state = {
+					limit = { 
+						has_dynamic_modifier = {
+							modifier = no_entrenchment_africa
+						}
+					}
+					remove_dynamic_modifier = {
+						modifier = no_entrenchment_africa
+					}
+				}
+				country_event = { id = super.4 hours = 0 }						
+			}
 		}
 
 	}
@@ -5024,7 +4435,7 @@ focus_tree = {
 		id = JAP_hokushin_ron
 		icon = GFX_focus_JAP_hokushin_ron
 		#mutually_exclusive = { focus = JAP_the_harakiri_debate }
-		x = -28
+		x = 10
 		y = 1
 		relative_position_id = JAP_sea_purge_the_kodoha_faction
 
@@ -5096,279 +4507,10 @@ focus_tree = {
 	}
 
 	focus = {
-		id = JAP_ensure_temporary_peace_with_china
-		icon = GFX_focus_generic_mountain_fortification
-		#mutually_exclusive = { focus = JAP_the_harakiri_debate }
-		x = 2
-		y = 1
-		relative_position_id = JAP_hokushin_ron
-
-		prerequisite = { focus = JAP_hokushin_ron }
-
-		cost = 5
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			CHI = {
-				exists = yes
-				is_subject = no
-				NOT = {
-					has_war_with = ROOT
-				}
-			}
-		}
-
-		bypass = {
-			OR = {
-				has_war_with = CHI
-				has_subject = CHI
-				owns_state = 608 # Beijing
-			}
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		search_filters = {  }
-
-		completion_reward = {
-
-			CHI = { 
-				country_event = {
-					id = wtt_japan.11 
-					days = 1
-					random_days = 2
-				}
-			} 
-
-			IF = {
-				limit = {
-					has_active_mission = JAP_kwantung_army_impatience
-				}
-
-				custom_effect_tooltip = generic_skip_one_line_tt
-
-				add_days_mission_timeout = {
-				    mission = JAP_kwantung_army_impatience
-				    days = 840 
-				}
-				hidden_effect = {
-					add_days_mission_timeout = {
-					    mission = CHI_kwantung_army_impatience_dummy
-					    days = 840 
-					}
-				}
-
-			}
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			IF = {
-				limit = {
-					609 = {
-						is_fully_controlled_by = ROOT
-						any_province_building_level = {
-							province = {
-								id = 11822
-								id = 12043
-								id = 3900
-								id = 1052
-							}
-							building = bunker
-							level < 5
-						}	
-					}
-				}
-				609 = {
-					add_building_construction = {
-						type = bunker
-						level = 3
-						province = {
-							id = 11822
-							id = 12043
-							id = 3900
-							id = 1052
-						}
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = coastal_bunker
-						level = 3
-						province = 3900
-						instant_build = yes
-					}
-				}
-			}
-
-			IF = {
-				limit = {
-					MAN = {
-						is_subject_of = ROOT
-					}
-				}
-				MAN = {
-					610 = {
-						IF = {
-							limit = { 
-								is_controlled_by = PREV 
-								any_province_building_level = {
-									province = {
-										id = 3955
-									}
-									building = bunker
-									level < 5
-								}
-							}
-							add_building_construction = {
-								type = bunker
-								level = 3
-								province = 3955
-								instant_build = yes
-							}
-						}
-					}
-				}
-			}
-			ELSE_IF = {
-				limit = {
-					610 = {
-						is_fully_controlled_by = ROOT
-						any_province_building_level = {
-							province = {
-								id = 3955
-							}
-							building = bunker
-							level < 5
-						}
-					}
-				}
-				610 = {
-					add_building_construction = {
-						type = bunker
-						level = 3
-						province = 3955
-						instant_build = yes
-					}
-				}
-			}
-			ELSE_IF = {
-				limit = {
-					611 = {
-						is_fully_controlled_by = ROOT
-						any_province_building_level = {
-							province = {
-								id = 1137
-								id = 6904
-								id = 9776
-							}
-							building = bunker
-							level < 5
-						}
-					}
-				}
-				611 = {
-					add_building_construction = {
-						type = bunker
-						level = 3
-						province = {
-							id = 1137
-							id = 6904
-							id = 9776
-						}
-						instant_build = yes
-					}
-				}
-			}
-
-			hidden_effect = {
-				set_country_flag = JAP_chinese_japanese_neutrality_pact_flag # Used to temporarily block the Persimmon focuses
-			}
-			
-		}
-	}
-
-	focus = {
-		id = JAP_a_mongol_volunteer_army
-		icon = GFX_focus_secret_rearmament
-		#mutually_exclusive = { focus = JAP_the_harakiri_debate }
-		x = 0
-		y = 1
-		relative_position_id = JAP_ensure_temporary_peace_with_china
-
-		prerequisite = { focus = JAP_ensure_temporary_peace_with_china }
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			761 = {
-				state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes
-			}
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		search_filters = { FOCUS_FILTER_MANPOWER }
-
-		completion_reward = {
-
-			custom_effect_tooltip = JAP_a_mongol_volunteer_army_1_tt
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-			
-			add_ideas = JAP_mongolian_independence_army_reestablished_idea
-			custom_effect_tooltip = JAP_a_mongol_volunteer_army_tt
-			hidden_effect = {
-				IF = {
-					limit = {
-						MAN = {
-							is_ally_with = ROOT
-						}
-					}
-					MAN = {
-						add_ideas = JAP_mongolian_independence_army_reestablished_idea
-					}
-				}
-			}
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-				
-			IF = {
-				limit = {
-					MAN = {
-						exists = no
-						761 = { # Hulunbuir
-							is_owned_and_controlled_by = ROOT
-						}
-					}
-				}
-				#MAN = {
-				#	MAN_jonjurjab = { set_nationality = ROOT }
-				#	MAN_urzhin_garmaev = { set_nationality = ROOT }
-				#}
-			}
-			
-		}
-	}
-
-	focus = {
 		id = JAP_strenghten_manchukuo_imperial_army
 		icon = GFX_focus_JAP_strenghten_manchukuo_imperial_army
 		#mutually_exclusive = { focus = JAP_the_harakiri_debate }
-		x = -2
+		x = -1
 		y = 1
 		relative_position_id = JAP_hokushin_ron
 
@@ -5431,96 +4573,10 @@ focus_tree = {
 	}
 
 	focus = {
-		id = JAP_strenghten_manchukuo_imperial_airforce
-		icon = GFX_focus_JAP_strenghten_manchukuo_imperial_airforce
-		#mutually_exclusive = { focus = JAP_the_harakiri_debate }
-		x = 0
-		y = 1
-		relative_position_id = JAP_strenghten_manchukuo_imperial_army
-
-		prerequisite = { focus = JAP_strenghten_manchukuo_imperial_army }
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			MAN = {
-				exists = yes
-				is_ally_with = ROOT
-			}
-		}
-
-		bypass = {
-			
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		search_filters = {  }
-
-		completion_reward = {
-			
-			MAN = {
-				air_experience = 25
-				add_breakthrough_progress = {
-					specialization = specialization_air
-					value = 0.5
-				}
-
-				custom_effect_tooltip = generic_skip_one_line_tt
-
-				add_tech_bonus = {
-					name = JAP_create_a_manchurian_imperial_air_force
-					bonus = 1.0
-					uses = 1
-					category = tactical_bomber
-					category = cat_strategic_bomber
-					category = naval_bomber
-					category = cas_bomber
-				}
-				add_tech_bonus = {
-					name = JAP_create_a_manchurian_imperial_air_force
-					bonus = 1.0
-					uses = 1
-					category = light_fighter
-					category = cat_heavy_fighter
-				}
-
-				custom_effect_tooltip = generic_skip_one_line_tt
-
-				every_owned_state = {
-					limit = {
-						is_fully_controlled_by = MAN
-						is_owned_by = MAN
-					}
-					add_building_construction = {
-						type = air_base
-						level = 2
-						instant_build = yes
-					}
-				}
-
-				custom_effect_tooltip = generic_skip_one_line_tt
-
-				add_autonomy_ratio = {
-					value = -0.08333
-					localization = JAP_build_up_the_manchurian_army
-				}
-			}
-			
-		}
-	}
-
-	focus = {
 		id = JAP_utilize_ainu_expertise
 		icon = GFX_focus_JAP_utilize_ainu_expertise
 		#mutually_exclusive = { focus = JAP_the_harakiri_debate }
-		x = 0
+		x = 1
 		y = 1
 		relative_position_id = JAP_hokushin_ron
 
@@ -5705,55 +4761,11 @@ focus_tree = {
 
 		available = {
 			JAP_army_faction_is_at_least_influential = yes
-			IF = {
-				limit = {
-					has_dlc = "No Compromise, No Surrender"
-				}
-				OR = {
-					has_completed_focus = JAP_imperial_rule_assistance_association
-				}
-			}
-			ELSE = {
-				OR = {
-					has_completed_focus = JAP_imperial_rule_assistance_association
-				}
-			}
-			is_subject = no
-			SOV = {
-				exists = yes
-			}
-			NOT = {
-				has_war_with = SOV
-			}
-			OR = {
-				NOT = {
-					has_completed_focus = JAP_soviet_japanese_neutrality_pact
-				}
-				AND = {
-					has_country_flag = {
-					 	flag = JAP_soviet_japanese_neutrality_pact_flag
-					 	days > 365
-					} 
-					custom_trigger_tooltip = {
-						tooltip = JAG_neutality_pact_focus_days_tt
-						has_country_flag = {
-							flag = JAP_soviet_japanese_neutrality_pact_flag
-							days > 365
-						}
-					}
-				}
-			}
+			has_completed_focus = JAP_imperial_rule_assistance_association
+			always = no
 		}
 
 		bypass = {
-			OR = {				
-				has_war_with = SOV
-				has_wargoal_against = SOV
-				has_subject = SOV
-				SOV = {
-					exists = no
-				}
-			}
 		}
 
 		will_lead_to_war_with = SOV
@@ -5765,59 +4777,6 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 
 		completion_reward = {
-
-			hidden_effect = {
-					SOV = {
-						set_country_flag = JAP_first_strike_principle_blocked
-					}
-				}
-
-				custom_effect_tooltip = JAP_first_strike_blocked_due_to_kwantung_army_tt
-
-				custom_effect_tooltip = generic_skip_one_line_tt
-
-			declare_war_on = {
-				target = SOV
-				type = annex_everything
-			}
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			every_state = {
-				limit = {
-					OR = {
-						state = 408
-						state = 409
-						state = 655
-						state = 657
-						state = 560
-						state = 561
-						state = 563
-						state = 564
-						state = 566
-						state = 565
-						state = 574
-						state = 876
-						state = 877
-						state = 644
-						state = 562
-						state = 874
-						state = 637
-						state = 822
-						state = 875
-					}
-					is_owned_by = SOV
-					NOT = {
-						is_claimed_by = ROOT
-						is_core_of = ROOT
-					}
-				}
-				add_claim_by = ROOT
-			}
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			custom_effect_tooltip = JAP_peace_out_soviets_dec_tt
 			
 		}
 	}
@@ -5853,48 +4812,12 @@ focus_tree = {
 
 		available = {
 			JAP_army_faction_is_at_least_influential = yes
-			IF = {
-				limit = {
-					has_dlc = "No Compromise, No Surrender"
-				}
-				OR = {
-					has_completed_focus = JAP_imperial_rule_assistance_association
-				}
-			}
-			ELSE = {
-				OR = {
-					has_completed_focus = JAP_imperial_rule_assistance_association
-				}
-			}
-			is_subject = no
-			SOV = {
-				exists = yes
-			}
-			NOT = {
-				has_war_with = SOV
-			}
-			OR = {
-				NOT = {
-					has_completed_focus = JAP_soviet_japanese_neutrality_pact
-				}
-				AND = {
-					has_country_flag = {
-					 	flag = JAP_soviet_japanese_neutrality_pact_flag
-					 	days > 365
-					} 
-					custom_trigger_tooltip = {
-						tooltip = JAG_neutality_pact_focus_days_tt
-						has_country_flag = {
-							flag = JAP_soviet_japanese_neutrality_pact_flag
-							days > 365
-						}
-					}
-				}
-			}
+			has_completed_focus = JAP_imperial_rule_assistance_association
 			SOV = {
 				has_war = yes
 				surrender_progress > 0.5
 			}
+			always = no
 		}
 
 		bypass = {
@@ -5917,49 +4840,6 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 
 		completion_reward = {
-
-			declare_war_on = {
-				target = SOV
-				type = annex_everything
-			}
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			every_state = {
-				limit = {
-					OR = {
-						state = 408
-						state = 409
-						state = 655
-						state = 657
-						state = 560
-						state = 561
-						state = 563
-						state = 564
-						state = 566
-						state = 565
-						state = 574
-						state = 876
-						state = 877
-						state = 644
-						state = 562
-						state = 874
-						state = 637
-						state = 822
-						state = 875
-					}
-					is_owned_by = SOV
-					NOT = {
-						is_claimed_by = ROOT
-						is_core_of = ROOT
-					}
-				}
-				add_claim_by = ROOT
-			}
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			custom_effect_tooltip = JAP_peace_out_soviets_dec_tt
 			
 		}
 	}
@@ -6089,7 +4969,7 @@ focus_tree = {
 		}
 		
 		relative_position_id = JAP_sea_purge_the_kodoha_faction
-		x = 16
+		x = 25
 		y = 0
 
 		cost = 5
@@ -6144,6 +5024,68 @@ focus_tree = {
 				
 		}
 
+	}
+
+
+	focus = {
+		id = JAP_develop_the_chinese_resources
+		icon = GFX_goal_generic_construct_civilian
+		#mutually_exclusive = { focus = JAP_the_harakiri_debate }
+		x = 0
+		y = 1
+		relative_position_id = JAP_ministry_of_commerce_and_industry
+
+		prerequisite = { focus = JAP_ministry_of_commerce_and_industry }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_tech = excavation1
+			has_full_control_of_state = 605
+			has_full_control_of_state = 325
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = {  }
+
+		completion_reward = {
+
+			328 = {
+				add_resource = {
+					type = aluminium
+					amount = 100
+				}
+			}
+			716 = {
+				add_resource = {
+					type = steel
+					amount = 160
+				}
+			}
+			716 = {
+				add_resource = {
+					type = coal
+					amount = 12
+				}
+			}
+			716 = {
+				add_resource = {
+					type = tungsten
+					amount = 10
+				}
+			}
+		}
 	}
 
 	focus = {
@@ -6412,9 +5354,9 @@ focus_tree = {
 				limit = {
 					has_dlc = "Arms Against Tyranny"
 				}	
-				mio:JAP_mitsubishi_organization = {
-					add_mio_funds_gain_factor = 0.15
-				}
+				#mio:JAP_mitsubishi_organization = {
+				#	add_mio_funds_gain_factor = 0.15
+				#}
 				mio:JAP_mitsubishi_heavy_industries_organization = {
 					add_mio_funds_gain_factor = 0.15
 				}
@@ -7551,7 +6493,7 @@ focus_tree = {
 			has_resources_in_collection = {
 				collection = collection:country_and_all_subjects
 				resource = rubber
-				amount > 299
+				amount > 349
 				extracted = yes
 			}
 		
@@ -9675,9 +8617,6 @@ focus_tree = {
 				mio:JAP_kokura_arsenal_organization = {
 					add_mio_size = 1
 				}
-				mio:JAP_nagoya_arsenal_organization = {
-					add_mio_size = 1
-				}
 				custom_effect_tooltip = generic_skip_one_line_tt
 			}
 
@@ -10664,7 +9603,7 @@ focus_tree = {
 				limit = {
 					has_dlc = "Arms Against Tyranny"
 				}	
-				mio:JAP_mitsubishi_organization = {
+				mio:JAP_light_aircraft_organization = {
 					add_mio_funds_gain_factor = 0.05
 					add_mio_research_bonus = 0.05
 				}
@@ -10699,7 +9638,7 @@ focus_tree = {
 				create_equipment_variant = {
 					name = "A6M Zero-Sen"
 					type = cv_small_plane_airframe_2
-					design_team = mio:JAP_mitsubishi_organization
+					design_team = mio:JAP_light_aircraft_organization
 					allow_without_tech = no
 					modules = {
 						fixed_main_weapon_slot = light_mg_2x
@@ -10770,7 +9709,7 @@ focus_tree = {
 				limit = {
 					has_dlc = "Arms Against Tyranny"
 				}	
-				mio:JAP_mitsubishi_organization = {
+				mio:JAP_light_aircraft_organization = {
 					add_mio_size = 1
 				}
 				custom_effect_tooltip = generic_skip_one_line_tt
@@ -10973,7 +9912,6 @@ focus_tree = {
 		}
 
 		available = {
-			has_war = yes
 		}
 
 		bypass = {
@@ -11110,7 +10048,7 @@ focus_tree = {
 				limit = {
 					has_dlc = "Arms Against Tyranny"
 				}	
-				mio:JAP_aichi_organization = {
+				mio:JAP_light_aircraft_organization = {
 					add_mio_size = 1
 				}
 				custom_effect_tooltip = generic_skip_one_line_tt

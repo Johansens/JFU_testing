@@ -2149,7 +2149,7 @@ JFU_pregrinded_effect = {
 		}
 		JAP_akira_muto = { add_skill_level = 2 }
 		JAP_akira_muto = { add_attack = 4 }
-        JAP_akira_muto = { add_defense = 3 }
+        #JAP_akira_muto = { add_defense = 3 }
         JAP_akira_muto = { add_planning = 2 }
 		JAP_akira_muto = { add_logistics = 3 }
         JAP_akira_muto = {

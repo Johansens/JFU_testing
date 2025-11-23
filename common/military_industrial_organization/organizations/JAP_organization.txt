@@ -1450,31 +1450,28 @@ JAP_mitsubishi_kobe_shipyard_organization = {
 
 ###########################
 
+JAP_light_aircraft_organization = {
+	include = generic_light_aircraft_organization
+	icon = GFX_idea_supermarine
 
-JAP_mitsubishi_organization = {
-	include = generic_high_agility_fighter_aircraft_organization
-	icon = GFX_idea_JAP_mitsubishi_airplanes
-	
-	allowed = {
-		original_tag = JAP
-	}
-	
-	visible = {
-	}
-	
-	available = {
-
+	allowed = {	
+		tag = JAP 
+		has_dlc = "Arms Against Tyranny"
 	}
 
+	initial_trait = {
+		equipment_bonus = {
+			air_range = 0.05
+			air_attack = 0.05
+		} 
+	}
 	add_trait = {
 		token = JAP_mio_trait_zaibatsu_production_capabilities_trait
 		name = JAP_mio_trait_zaibatsu_production_capabilities_trait
 		icon = GFX_generic_mio_trait_icon_efficiency_gain
 		special_trait_background = yes
 
-		relative_position_id = generic_mio_trait_minimum_weapon_requirements
-
-		position = { x = 1 y = 0 }  
+		position = { x = 8 y = 0 }  
 		
 		visible = {
 			FROM = { original_tag = JAP }
@@ -1504,69 +1501,12 @@ JAP_mitsubishi_organization = {
 	}
 
 	add_trait = {
-		token = JAP_mio_trait_special_government_contracts_mitsubishi_trait
-		name = JAP_mio_trait_special_government_contracts_mitsubishi_trait
-		icon = GFX_generic_mio_trait_icon_efficiency_cap
-		special_trait_background = yes
-
-		relative_position_id = generic_mio_trait_minimum_weapon_requirements
-
-		position = { x = 2 y = 1 }  
-		
-		visible = {
-			FROM = { original_tag = JAP }
-		}
-
-		available = {
-			has_mio_size > 5
-			FROM = {
-				NOT = { has_country_flag = JAP_mio_trait_special_government_contracts_taken_flag }
-			}
-		}
-
-		on_complete = {
-			custom_effect_tooltip = generic_trait_will_not_be_available_in_other_organizations
-			FROM = {
-				set_country_flag = JAP_mio_trait_special_government_contracts_taken_flag 
-			}
-			custom_effect_tooltip = generic_skip_one_line_tt
-			FROM = {
-				remove_trait = {
-				    character = JAP_koyata_iwasaki
-				    slot = political_advisor
-				    trait = JAP_mitsubishi_president
-				}
-				custom_effect_tooltip = generic_skip_one_line_tt
-				add_trait = {
-				    character = JAP_koyata_iwasaki
-				    slot = political_advisor
-				    trait = JAP_mitsubishi_president_2
-				}
-			}
-		}
-
-		organization_modifier = {
-		    military_industrial_organization_research_bonus = 0.02
-		}
-
-		production_bonus = {
-			
-		}
-
-		ai_will_do = {
-			base = 2
-		}
-	}
-
-	add_trait = {
 		token = JAP_mio_trait_unified_research_and_development
 		name = JAP_mio_trait_unified_research_and_development
 		icon = GFX_generic_mio_department_icon_facilities
 		special_trait_background = yes
 
-		relative_position_id = generic_mio_trait_minimum_weapon_requirements
-
-		position = { x = 2 y = 0 }  
+		position = { x = 8 y = 1 }  
 		
 		visible = {
 			FROM = { original_tag = JAP }
@@ -1598,91 +1538,50 @@ JAP_mitsubishi_organization = {
 			base = 2
 		}
 	}
+	#add_trait = {
+	#	token = JAP_agility_focus_trait
+	#	name = JAP_agility_focus_trait
+	#
+	#	icon = GFX_generic_mio_trait_icon_air_agility
+	#	special_trait_background = yes
+	#	
+	#	position = { x=2 y=-1 }
+	#	relative_position_id = generic_mio_trait_fuselage_ordinance_rack
+	#
+	#	available = {
+	#		FROM = {
+	#			has_completed_focus = JAP_agility_focus
+	#		}
+	#	}
+	#
+	#	equipment_bonus = {
+	#		air_defence = 0.15
+	#		air_attack = 0.10
+	#	} 
+	#}
 
-	add_trait = {
-		token = PHI_mio_trait_engine_filters
-		name = PHI_mio_trait_engine_filters
-		icon = GFX_generic_mio_trait_icon_reliability
-		special_trait_background = yes
-
-		position = { x = 1 y = 1 }  
-		
-		visible = {
-			always = no
-		}
-
-		available = {
-		}
-
-		relative_position_id = generic_mio_trait_fabric_skin
-		any_parent = { generic_mio_trait_fabric_skin generic_mio_trait_metal_skin }
-
-		on_complete = {
-		}
-
-		equipment_bonus = {
-			reliability = 0.10
-		}
-
-		ai_will_do = {
-			base = 2
-		}
-	}
-
-} 
-
-JAP_aichi_organization = {
-	include = generic_range_focused_aircraft_organization
-	icon = GFX_idea_aichi
-	allowed = {	
-		original_tag = JAP
-		has_dlc = "Arms Against Tyranny"
-	}
-	available = {
-		
-	}
-
-	add_trait = {
-		token = JAP_mio_trait_unified_research_and_development
-		name = JAP_mio_trait_unified_research_and_development
-		icon = GFX_generic_mio_department_icon_facilities
-		special_trait_background = yes
-
-		relative_position_id = generic_mio_trait_extra_cargo_doors
-
-		position = { x = -1 y = 0 }  
-		
-		visible = {
-			FROM = { original_tag = JAP }
-		}
-
-		available = {
-			FROM = {
-				has_completed_focus = JAP_sea_unify_the_air_forces
-				NOT = { has_country_flag = JAP_mio_trait_unified_research_and_development_taken_flag }
-			}
-		}
-
-		on_complete = {
-			custom_effect_tooltip = generic_trait_will_not_be_available_in_other_organizations
-			FROM = {
-				set_country_flag = JAP_mio_trait_unified_research_and_development_taken_flag
-			}
-		}
-
-		organization_modifier = {
-		    military_industrial_organization_research_bonus = 0.15
-		}
-
-		production_bonus = {
-			production_capacity_factor = 0.1
-		}
-
-		ai_will_do = {
-			base = 2
-		}
-	}
-
+	#add_trait = {
+	#	token = JAP_range_focus_trait
+	#	name = JAP_range_focus_trait
+	#
+	#	icon = GFX_generic_mio_trait_icon_air_agility
+	#	special_trait_background = yes
+	#	
+	#	position = { x=2 y=0 }
+	#	relative_position_id = generic_mio_trait_fuselage_ordinance_rack
+	#
+	#	available = {
+	#		FROM = {
+	#			has_completed_focus = JAP_range_focus
+	#		}
+	#	}
+	#
+	#	equipment_bonus = {
+	#		air_range = 0.10
+	#		air_defence = 0.10
+	#		air_attack = 0.05
+	#	} 
+	#}
 }
 
 JAP_nakajima_organization = {
@@ -2580,79 +2479,6 @@ JAP_tokyo_automobile_industries_organization = {
 			base = 2
 		}
 	}
-}
-
-JAP_nagoya_arsenal_organization = {
-	include = generic_support_equipment_organization
-	icon = GFX_idea_JAP_nagoya_arsenal
-	
-	allowed = {	
-		OR = {
-			original_tag = JAP 
-			original_tag = MAN
-		}
-		has_dlc = "Arms Against Tyranny"
-	}
-
-	available = {
-		# When in a Foreign MIO, countries need to be at peace with original country
-		IF = {
-			limit = {
-				FROM = { NOT = { original_tag = JAP } }
-			}
-			FROM = { NOT = { has_war_with = JAP } }
-		}
-
-		IF = {
-			limit = {
-				FROM = { original_tag = MAN }
-			}
-			FROM = {
-				OR = {
-					is_subject_of = JAP
-					is_in_faction_with = JAP
-				}
-			}
-		}
-	}
-
-	add_trait = {
-		token = JAP_mio_trait_military_arsenal_trait
-		name = JAP_mio_trait_military_arsenal_trait
-		icon = GFX_generic_mio_trait_icon_production_capacity
-		special_trait_background = yes
-
-		relative_position_id = generic_mio_trait_anti_tank_rifle
-
-		position = { x = 1 y = 0 }  
-		
-		visible = {
-			FROM = { original_tag = JAP }
-		}
-
-		available = {
-			FROM = {
-				JAP_army_faction_is_not_subdued = yes
-			}
-		}
-
-		on_complete = {
-			
-		}
-
-		organization_modifier = {
-		    
-		}
-
-		production_bonus = {
-			production_capacity_factor = 0.05
-		}
-
-		ai_will_do = {
-			base = 2
-		}
-	}
-
 }
 
 JAP_kayaba_industry_organization = {

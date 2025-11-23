@@ -36,7 +36,6 @@ JAP_historical_plan = {
 		JAP_expand_kawagoe_army_arsenal # 35
 		JAP_establish_showa_aircraft_idnsutry # 35	
 		JAP_expand_hiratsuka_navy_arsenal # 35
-		JAP_revisit_the_thirteen_demands # 35
 		JAP_imperial_headquarters_liasion_conference # 35
 
 		# 1937
@@ -55,7 +54,6 @@ JAP_historical_plan = {
 		JAP_sea_state_general_mobilization_law # 35
 		JAP_enact_religious_organizations_law # 35
 		JAP_new_order_movement # 70
-		JAP_strategic_offensives # 35
 		JAP_sea_guide_the_zaibatsus # 35
 		JAP_approach_mitsubishi #70
 
@@ -71,7 +69,6 @@ JAP_historical_plan = {
 		JAP_form_cabinet_intelligence_bureau # 35
 		JAP_form_the_kido_butai # 35
 		JAP_naval_armaments_program #35
-		JAP_invest_in_senbu # 35
 		JAP_imperial_rule_assistance_association # 35 12th October
 		JAP_sea_greater_east_asian_co_properity_sphere # 70 June 1940, historically later
 		JAP_nanshin_ron # 35
@@ -80,12 +77,9 @@ JAP_historical_plan = {
 		JAP_issue_the_senjinkun_military_code # 35
 		JAP_develop_new_fighters # 70
 		JAP_sea_tripartite_pact # 35 if bypassed, potentially moves later attack dates 35 das forward
-		JAP_soviet_japanese_neutrality_pact #35 April 1941
-		JAP_demand_tonkinese_bases # 35 September 1941
 		JAP_unsinkable_aircraft_carriers # 35
 		JAP_issue_the_shinmin_no_michi_manifesto # 35
 		JAP_occupy_indochina # 35
-		JAP_sea_pressure_siam # 35
 		JAP_strike_the_southern_road # 70
 
 		# 1942

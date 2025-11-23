@@ -1090,7 +1090,9 @@
  JAP_plunder_territories_tt:0 "§YGuam§!, §YLuzon§!, §YHong Kong§! and the §YPhilipinies§! are fully  controlled by §YJapan§!"
  JAP_plunder_territories2_tt:0 "§YSingapore§!, §YSumatra§! and §YBorneo§! are fully controlled by §YJapan§!"
  JAP_plunder_territories3_tt:0 "§YJava§!, §YSulawesi§! and §YPapua§! are fully controlled by §YJapan§!"
- 
+ JAP_CHI_WAR_TT:0 "§RThis focus will reduce the days till the china war starts to zero§!"
+
+
  MLL_dynamic_modifer_tt:0 "Modify §YLow Legitimacy§! by\nStabilty §G+10.00%§!\nWar Support §G+10.00%§!"
  MLL_remove_tt:0 "Remove §YLow Legitmiacy§! which granted \nStabilty §R-20.00%§!\nWar Support §R-20.00%§!"
  

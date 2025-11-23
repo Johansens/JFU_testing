@@ -607,17 +607,17 @@ senbu_occupation_law = {
 	fallback_law = foreign_civilian_oversight
 
 	visible = {
-		
-		AND = {
-			original_tag = JAP
-			has_completed_focus = JAP_invest_in_senbu
-			FROM = { 
-				OR = {
-					is_literally_china = yes
-					tag = MAN
-				}
-			}
-		}
+		always = no
+		#AND = {
+		#	original_tag = JAP
+		#	has_completed_focus = JAP_invest_in_senbu
+		#	FROM = { 
+		#		OR = {
+		#			is_literally_china = yes
+		#			tag = MAN
+		#		}
+		#	}
+		#}
 		
 	}
 

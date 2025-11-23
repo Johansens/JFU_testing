@@ -104,6 +104,157 @@ faction_goal_building_up_guam = {
 #  # #  #  #  #  # #  # 
  ##  #  # ### #  # #  # 
 
+faction_goal_unlock_research = {
+	name = faction_goal_unlock_research_name
+	description = faction_goal_unlock_research_desc
+	category = short_term
+	group = FOCUS_FILTER_INTERNAL_AFFAIRS
+	available = {
+		FROM = { num_faction_members > 2 }
+	}
+	visible = {
+		FROM = { has_faction_research_unlocked = no }
+	}
+	select_effect = {
+		set_temp_variable = { total_techs = 0 }
+		every_collection_element = {
+			input = {
+				input = game:scope
+				operators =  {
+					faction_members
+				}
+			}
+			add_to_temp_variable = { total_techs = num_researched_technologies }
+		}
+		
+		multiply_temp_variable = {
+			var = total_techs
+			value = 1.20
+		}
+		scope:faction = {
+			set_variable = { unlock_military_techs_researched_target = total_techs }
+		}
+	}
+	completed = {
+		scope:faction = {
+			hidden_trigger = {
+				tooltip_evaluation = eval
+				set_temp_variable = { unlock_military_techs_researched_compare = 0 }			
+				all_collection_elements = {
+					collection = {
+						input = game:scope
+						operators =  { faction_members }
+					}
+					add_to_temp_variable = { unlock_military_techs_researched_compare = num_researched_technologies }
+				}
+				set_temp_variable = { unlock_military_techs_researched_compare_temp_target = unlock_military_techs_researched_compare }
+				multiply_temp_variable = { unlock_military_techs_researched_compare_temp_target = 1.20 }
+			}
+			if = {
+				limit = {
+					has_variable = unlock_military_techs_researched_target
+				}
+				check_variable = {
+					var = unlock_military_techs_researched_compare
+					value = unlock_military_techs_researched_target
+					compare = greater_than
+					tooltip = "GOAL_T_TRIGGER_A"
+				}
+			}
+			else = {
+				check_variable = {
+					var = unlock_military_techs_researched_compare
+					value = unlock_military_techs_researched_compare_temp_target
+					compare = greater_than
+					tooltip = "GOAL_T_TRIGGER_A"
+				}
+			}
+		}
+	}
+	complete_effect = {
+		set_faction_research_unlocked = yes
+		add_faction_initiative = 1
+	}
+	ai_will_do = {
+		base = 1000 # They should always do this if they can
+	}
+}
+
+faction_goal_unlock_military = {
+	name = faction_goal_unlock_military_name
+	description = faction_goal_unlock_military_desc
+	category = short_term
+	group = FOCUS_FILTER_INTERNAL_AFFAIRS
+	available = {
+		FROM = { num_faction_members > 2 }
+	}
+	visible = {
+		FROM = { has_faction_military_unlocked = no }
+	}
+	select_effect = {
+		set_temp_variable = { total_divs = 0 }
+		every_collection_element = {
+			input = {
+				input = game:scope
+				operators =  {
+					faction_members
+				}
+			}
+			add_to_temp_variable = { total_divs = num_armies }
+		}
+		
+		multiply_temp_variable = {
+			var = total_divs
+			value = 1.20
+		}
+		scope:faction = {
+			set_variable = { unlock_target = total_divs }
+		}
+	}
+	completed = {
+		scope:faction = {
+			hidden_trigger = {
+				tooltip_evaluation = eval
+				set_temp_variable = { unlock_compare = 0 }			
+				all_collection_elements = {
+					collection = {
+						input = game:scope
+						operators =  { faction_members }
+					}
+					add_to_temp_variable = { unlock_compare = num_armies }
+					set_temp_variable = { unlock_military_techs_researched_compare_temp_target = unlock_compare }
+					multiply_temp_variable = { unlock_military_techs_researched_compare_temp_target = 1.20 }
+				}
+			}
+			if = {
+				limit = {
+					has_variable = unlock_target
+				}
+				check_variable = {
+					var = unlock_compare
+					value = unlock_target
+					compare = greater_than
+					tooltip = "GOAL_T_TRIGGER_B"
+				}
+			}
+			else = {
+				check_variable = {
+					var = unlock_compare
+					value = unlock_military_techs_researched_compare_temp_target
+					compare = greater_than
+					tooltip = "GOAL_T_TRIGGER_B"
+				}
+			}
+		}
+	}
+	complete_effect = {
+		set_faction_military_unlocked = yes
+		add_faction_initiative = 1
+	}
+	ai_will_do = {
+		base = 1000 # They should always do this if they can
+	}
+}
 
  ###  ##  ###   ##  #  # 
    # #  # #  # #  # ## # 
@@ -1611,6 +1762,78 @@ faction_goal_develop_baku_oil_fields = {
 			add_resource = {
 			    type = oil
 			    amount = 14
+			}
+		}
+	}
+	ai_will_do = {
+		base = 1 # Everyone should always kiiiinda care about oil
+		modifier = {
+			add = 1 # State owners should care more
+			controls_state = 46
+		}
+		modifier = {
+			add = -1 # If the alliance is doing well with fuel avoid taking this...
+			fuel_ratio > 0.9
+			all_allied_country = {
+				fuel_ratio > 0.9
+			}
+		}
+		modifier = {
+			add = 1 # Powers with low fuel should care about oil a bit more
+			fuel_ratio < 0.4
+		}
+		modifier = {
+			add = 1 # Powers with very low fuel should care about oil A LOT
+			fuel_ratio < 0.1
+		}
+	}
+}
+
+# Iraqi Oil
+faction_goal_develop_iraqi_oil = {
+	name = develop_iraqi_oil_goal_name
+	description = develop_iraqi_oil_goal_desc
+	category = short_term
+	group = resources_to_market_icon
+	allowed = {
+		
+	}
+	visible = {
+		OR = {
+			291 = { is_controlled_by_ROOT_or_ally = yes }
+			676 = {	is_controlled_by_ROOT_or_ally = yes }
+		}
+	}
+	available = {
+		FROM = {
+			has_tech = excavation1
+			has_tech = excavation2
+		}
+		291 = { is_controlled_by_ROOT_or_ally = yes }
+		676 = {	is_controlled_by_ROOT_or_ally = yes }
+	}
+	completed = {
+		291 = {
+			CONTROLLER = { has_tech = excavation3 }
+			infrastructure > 4
+		}
+		676 = {
+			CONTROLLER = { has_tech = excavation3 }
+			infrastructure > 4
+		}
+	}
+	complete_effect = {
+		add_faction_power_projection = 100
+		291 = {
+			add_resource = {
+			    type = oil
+			    amount = 6
+			}
+		}
+		676 = {
+			add_resource = {
+			    type = oil
+			    amount = 4
 			}
 		}
 	}
@@ -3963,6 +4186,87 @@ faction_goal_fortify_suez_canal = {
 			add = 2 # If major naval power seek to control access
 			has_navy_size = {
 				size > 20
+				type = capital_ship
+			}
+		}
+	}
+}
+
+# Gulf of Aden
+faction_goal_expand_gulf_of_aden_bases = {
+	name = expand_gulf_of_aden_bases_goal_name
+	description = control_gulf_of_aden_bases_goal_desc
+	category = short_term
+	group = FOCUS_FILTER_CONSOLIDATION
+	allowed = {
+		
+	}
+	visible = {
+		659 = { is_controlled_by_ROOT_or_ally = yes }
+	}
+	available = {
+
+	}
+	completed = {
+		659 = {
+			air_base > 2
+			any_province_building_level = {
+				province = {
+					all_provinces = yes
+				}
+				building = naval_base
+				level > 2
+			}
+		}
+	}
+	complete_effect = {
+		add_faction_power_projection = 100
+		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = TARGET_STATE_CONTROLLERS
+		every_faction_member = { 
+			visible_when_empty = yes
+			limit = {
+				controls_state = 659
+			}
+			add_faction_initiative = 1
+		}
+	}
+	ai_will_do = {
+		base = 0
+		modifier = {
+			add = 2 # If convoys being threatened try to secure the suez supply lines better
+			convoy_threat > 0.5
+			collection_size = {
+				input = {
+					input = game:all_states
+					operators = {
+						limit = {
+							is_controlled_by_ROOT_or_ally = yes 
+							is_on_continent = europe
+						}
+					}
+					name = COLLECTION_FACTION_STATES_IN_EUROPE
+				}
+				value > 0
+			}
+			collection_size = {
+				input = {
+					input = game:all_states
+					operators = {
+						limit = {
+							is_controlled_by_ROOT_or_ally = yes 
+							is_on_continent = asia
+						}
+					}
+					name = COLLECTION_FACTION_STATES_IN_ASIA
+				}
+				value > 0
+			}
+		}
+		modifier = {
+			add = 1 # If naval power seek to control access
+			has_navy_size = {
+				size > 5
 				type = capital_ship
 			}
 		}

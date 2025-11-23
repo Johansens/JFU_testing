@@ -362,7 +362,10 @@ JAP_intervene_in_china = {
 		}
 
 		visible = {
-			has_completed_focus = JAP_strategic_offensives #JAP_secure_china
+			GER = {
+				has_war = yes
+			}
+			#has_completed_focus = JAP_strategic_offensives #JAP_secure_china
 			any_enemy_country = {
 				is_literally_china = yes
 			}
@@ -3108,11 +3111,11 @@ prospect_for_resources = {
 		}
 
 		visible = {
-			OR = {
-				
-				has_completed_focus = JAP_develop_the_chinese_resources
-			}
-			
+			#OR = {
+			#	
+			#	has_completed_focus = JAP_develop_the_chinese_resources
+			#}
+			always = no
 			597 = {
 				NOT = {
 					has_state_flag = shandong_aluminium_developed
@@ -3168,11 +3171,11 @@ prospect_for_resources = {
 		}
 
 		visible = {
-			OR = {
-				
-				has_completed_focus = JAP_develop_the_chinese_resources
-			}
-			
+			#OR = {
+			#	
+			#	has_completed_focus = JAP_develop_the_chinese_resources
+			#}
+			always = no
 			621 = {
 				NOT = {
 					has_state_flag = suiyuan_steel_developed
@@ -3222,11 +3225,11 @@ prospect_for_resources = {
 		}
 
 		visible = {
-			OR = {
-				
-				has_completed_focus = JAP_develop_the_chinese_resources
-			}
-			
+			#OR = {
+			#	
+			#	has_completed_focus = JAP_develop_the_chinese_resources
+			#}
+			always = no
 			325 = {
 				NOT = {
 					has_state_flag = yunnan_aluminium_developed
@@ -3276,11 +3279,11 @@ prospect_for_resources = {
 		}
 
 		visible = {
-			OR = {
-				
-				has_completed_focus = JAP_develop_the_chinese_resources
-			}
-			
+			#OR = {
+			#	
+			#	has_completed_focus = JAP_develop_the_chinese_resources
+			#}
+			always = no
 			605 = {
 				NOT = {
 					has_state_flag = sichuan_aluminium_developed
@@ -3836,7 +3839,7 @@ JAP_kwantung_army_decisions = {
 		}
 
 		visible = { 
-			has_completed_focus = JAP_strategic_offensives
+			#has_completed_focus = JAP_strategic_offensives
 			any_enemy_country = {
 				is_literally_china = yes
 			}
@@ -4475,7 +4478,7 @@ JAP_imperial_influence_decision_cat = {
 			}
 			NOT = {
 				has_completed_focus = JAP_the_harakiri_debate
-				has_completed_focus = JAP_reprimand_hamada_kunimatsu
+				#has_completed_focus = JAP_reprimand_hamada_kunimatsu
 			}
 		}
 	
@@ -6653,15 +6656,10 @@ JAP_the_propaganda_department_decisions = {
 		target_array = global.asian_and_oceanian_countries
 	    
 	    target_trigger = {
-	        FROM = {
-	        	NOT = {
-	        		has_war_with = ROOT
-	        		is_subject_of = ROOT
-	        	}
-	        	NOT = {
-	        		has_country_flag = JAP_has_already_attempted_to_influence_this_nation_flag
-	        	}
-	        }
+	        OR = {
+				tag = MAN
+				tag = SIA
+			}
 	    }
 
 	    on_map_mode = decision_view_only 
@@ -6751,10 +6749,10 @@ JAP_the_propaganda_department_decisions = {
 	    
 	    target_trigger = {
 	        FROM = {
-	        	NOT = {
-	        		has_war_with = ROOT
-	        		is_subject_of = ROOT
-	        	}
+	        	OR = {
+					tag = MAN
+					tag = SIA
+				}
 	        	has_country_flag = JAP_country_that_accepted_japanese_influence_flag
 	        }
 	    }

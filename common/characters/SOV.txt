@@ -1724,9 +1724,6 @@ characters = {
 					has_character_flag = SOV_character_purged_flag 
 				}
 			}
-			available = {
-
-			}
 			traits = {
 				popular_figurehead 
 			}

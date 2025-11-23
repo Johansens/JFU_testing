@@ -71,7 +71,7 @@ NDefines.NMilitary.BATALION_NOT_CHANGED_EXPERIENCE_DROP = 0.0
 NDefines.NMilitary.COMBAT_MINIMUM_TIME = 2 		-- VANILLA 4
 NDefines.NMilitary.ARMY_FUEL_COST_MULT = 0.5	-- VANILLA 0.5             --fuel cost multiplier for all army related stuff
 NDefines.NMilitary.EXPERIENCE_COMBAT_FACTOR = 0.10 -- VANILLA 0.25
-NDefines.NMilitary.UNIT_EXPERIENCE_PER_TRAINING_DAY = 0  -- VANILLA 0.0015
+--NDefines.NMilitary.UNIT_EXPERIENCE_PER_TRAINING_DAY = 0  -- VANILLA 0.0015
 NDefines.NMilitary.RIVER_CROSSING_PENALTY = -0.3                 -- small river crossing
 NDefines.NMilitary.RIVER_CROSSING_PENALTY_LARGE = -0.5           -- large river crossing
 NDefines.NMilitary.RIVER_CROSSING_SPEED_PENALTY = -0.25           -- small river crossing
@@ -88,6 +88,8 @@ NDefines.NMilitary.LAND_COMBAT_STR_DAMAGE_MODIFIER = 0.0575	-- VANILLA 0.053
 NDefines.NMilitary.PREFERRED_TACTIC_CHARACTER_SKILL_LEVEL_REQUIRED = 4 -- VANILLA 5(pregrinded change) -- Which level a field marhal or general has to be before they can pick their preferred tactic
 NDefines.NMilitary.MIN_DIVISION_BRIGADE_HEIGHT = 5		-- VANILLA 4 -- Min height of regiments in division designer.
 NDefines.NMilitary.RELIABILTY_RECOVERY = 0.0 -- WAS 0.1 factor affecting how much equipment is returned "from the dead"
+
+NDefines.NDoctrines.MIN_MASTERY_GAIN_PER_DAY = 0.45                         -- If we have any mastery gain, it will be boosted to be at least this much per day (lower cap)
 
 
 NDefines.NResistance.RESISTANCE_TARGET_BASE = 25.0	
