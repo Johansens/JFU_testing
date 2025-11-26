@@ -162,9 +162,14 @@ ideas = {
 		mass_assault_academy_spirit = {
 			ledger = army
 			available = {
+				
 				AND = { 
-				has_military_academy = yes 
-				has_doctrine = mass_assault
+					has_military_academy = yes 
+					OR = {
+						tag = SOV
+						has_doctrine = mass_assault
+					}
+
 				}
 			}
 			modifier = {

@@ -26,14 +26,6 @@ mobile_infantry = {
 
     # EFFECTS
     enable_tactic = tactic_overwhelming_fire
-    effect = {
-        add_tech_bonus = {
-            bonus = 0.5
-            uses = 1
-            category = motorized_equipment
-            name = SUBDOCTRINE_MOBILE_INFANTRY
-        }
-    }
 
     rewards = {
         cavalry_charge = {
@@ -502,6 +494,18 @@ commandos = {
                     soft_attack = 0.1
                 }
             }
+            mot_recon = {
+                battalion_mult = {
+                    category = category_all_infantry
+                    soft_attack = 0.1
+                }
+            }
+            light_tank_recon = {
+                battalion_mult = {
+                    category = category_all_infantry
+                    soft_attack = 0.1
+                }
+            }
             
             infantry = {
                 desert = {
@@ -614,15 +618,6 @@ irregulars = {
                 max_organisation = 10
                 soft_attack = 0.1
             }
-
-            effect = {
-                add_tech_bonus = {
-                    bonus = 0.5
-                    uses = 2
-                    category = support_tech
-                    name = SUBDOCTRINE_IRREGULARS
-                }
-             }
         }
 
     }

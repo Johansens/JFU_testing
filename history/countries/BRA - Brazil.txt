@@ -37,6 +37,7 @@ set_technology = {
 	special_forces_mountaineers = 1
 	special_forces_marines = 1
 	special_forces_paratroopers = 1
+	special_forces_rangers = 1
 }
 if = {
 	limit = {

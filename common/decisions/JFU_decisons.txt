@@ -537,6 +537,8 @@ political_actions1 = {
 		}
 		cost = 0
 		visible = { 
+			always 
+			= no
 			has_game_rule = { 
 				rule = JFU_CHINA_WAR 
 				option = CHINA_WAR 
@@ -574,6 +576,7 @@ political_actions1 = {
 				rule = JFU_CHINA_WAR 
 				option = NO_CHINA_WAR 
 			} 
+			always = no
 		}
 		complete_effect = {
 			annex_country = { target = CHI transfer_troops = no }

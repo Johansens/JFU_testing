@@ -1249,59 +1249,9 @@ focus_tree = {
 		}
 
 		available = {
-			is_subject = no
-			any_country = {
-				original_tag = GER
-				has_government = fascism
-				NOT = { has_war_with = ROOT }
-			}
-			any_country = {
-				original_tag = ITA
-				has_government = fascism
-				NOT = { has_war_with = ROOT }
-			}
 		}
 
 		bypass = {
-			OR = {
-				custom_trigger_tooltip = {
-					tooltip = JAP_sign_tripartite_pact_bypass_tt
-					OR = {
-						NOT = {
-							any_country = {
-								original_tag = GER
-								has_government = fascism
-							}
-						}
-						any_country = {
-							original_tag = GER
-							has_government = fascism
-							has_war_with = ROOT
-						}
-						NOT = {
-							any_country = {
-								original_tag = ITA
-								has_government = fascism
-							}
-						}
-						any_country = {
-							original_tag = ITA
-							has_government = fascism
-							has_war_with = ROOT
-						}	
-					}	
-				}
-				AND = {
-					GER = {
-						has_government = fascism
-						has_war_with = ITA
-					}
-					ITA = {
-						has_government = fascism
-						has_war_with = GER
-					}
-				}
-			}
 		}
 
 		cancel_if_invalid = yes
@@ -1311,44 +1261,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_POLITICAL_CHARACTER }
 
 		completion_reward = {
-
-			random_country = {
-				limit = {
-					original_tag = GER
-					has_government = fascism
-				}
-				country_event = { id = wtt_japan.109 days = 1 }
-			}
 			custom_effect_tooltip = if_they_accept_tt
-			effect_tooltip = {
-				
-				give_guarantee = ITA
-				give_guarantee = GER
-				diplomatic_relation = {
-				    country = ITA
-				    relation = non_aggression_pact
-				    active = yes
-				}
-				diplomatic_relation = {
-				    country = GER
-				    relation = non_aggression_pact
-				    active = yes
-				}
-				
-				GER = {
-					give_guarantee = ITA
-					give_guarantee = ROOT
-					diplomatic_relation = {
-					    country = ITA
-					    relation = non_aggression_pact
-					    active = yes
-					}
-				}
-				ITA = {
-					give_guarantee = ROOT
-					give_guarantee = GER
-				}
-			}
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 			
@@ -1377,11 +1290,6 @@ focus_tree = {
 		}
 
 		available = {
-			is_subject = no
-			GER = {
-				has_government = ROOT
-			}
-			NOT = { has_war_with = GER }
 		}
 
 		bypass = {
@@ -1416,7 +1324,7 @@ focus_tree = {
 			}
 			add_tech_bonus = {
 				name = JAP_sea_mil_tech_coop_with_germany
-				bonus = 0.5
+				bonus = 0.75
 				uses = 1
 				category = air_equipment	
 			}
@@ -1527,6 +1435,13 @@ focus_tree = {
 						id = SEA_japan_popup_events.50
 					}	
 				}
+				every_state = {
+                    limit = {
+                        is_core_of = SIA
+                        is_controlled_by = JAP
+                    }
+                    set_compliance = 100
+                }
 			}
 			
 		}
@@ -3775,50 +3690,6 @@ focus_tree = {
 		}
 
 		available = {
-			OR = {
-				647 = {
-					state_is_fully_controlled_by_ROOT_or_subject = yes
-				}
-				684 = {
-					state_is_fully_controlled_by_ROOT_or_subject = yes
-				}
-				633 = {
-					state_is_fully_controlled_by_ROOT_or_subject = yes
-				}
-				646 = {
-					state_is_fully_controlled_by_ROOT_or_subject = yes
-				}
-				#638 = {
-				#	state_is_fully_controlled_by_ROOT_or_subject = yes
-				#}
-				725 = {
-					state_is_fully_controlled_by_ROOT_or_subject = yes
-				}
-				639 = {
-					state_is_fully_controlled_by_ROOT_or_subject = yes
-				}
-				643 = {
-					state_is_fully_controlled_by_ROOT_or_subject = yes
-				}
-				734 = {
-					state_is_fully_controlled_by_ROOT_or_subject = yes
-				}
-				636 = {
-					state_is_fully_controlled_by_ROOT_or_subject = yes
-				}
-				635 = {
-					state_is_fully_controlled_by_ROOT_or_subject = yes
-				}
-				#726 = {
-				#	state_is_fully_controlled_by_ROOT_or_subject = yes
-				#}
-				648 = {
-					state_is_fully_controlled_by_ROOT_or_subject = yes
-				}
-				645 = {
-					state_is_fully_controlled_by_ROOT_or_subject = yes
-				}
-			}
 		}
 
 		bypass = {
@@ -4255,11 +4126,10 @@ focus_tree = {
 		}
 
 		available = {
-			
+			EFR = { has_country_flag = vichy_france_established }
 		}
 
 		bypass = {
-			always = yes
 		}
 
 		cancel_if_invalid = yes
@@ -4269,7 +4139,14 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_ANNEXATION }
 
 		completion_reward = {
-			
+			custom_effect_tooltip = JAP_INDOCHINA_tt
+			hidden_effect = {
+				transfer_state = 670 
+				transfer_state = 286 
+				transfer_state = 741 
+				transfer_state = 671 
+				transfer_state = 728 
+			}
 		}
 	}
 
@@ -4325,7 +4202,7 @@ focus_tree = {
 		}
 
 		available = {
-			is_subject = no
+			date > 1940.12.31
 			IF = {
 				limit = {
 					is_ai = no
@@ -4349,9 +4226,9 @@ focus_tree = {
 			hidden_effect = {
 				if = { limit = { country_exists = MAN }	MAN = { add_to_war = { targeted_alliance = JAP enemy = ENG } } }
 				if = { limit = { country_exists = SIA }	SIA = { add_to_war = { targeted_alliance = JAP enemy = ENG } } }
-				#add_timed_idea = { idea = JAP_tora_tora_tora_idea days = 180 }
-				#MAN = { add_timed_idea = { idea = JAP_tora_tora_tora_idea days = 180 } }
-				#SIA = { add_timed_idea = { idea = JAP_tora_tora_tora_idea days = 180 } }
+				add_timed_idea = { idea = JAP_tora_tora_tora_idea days = 180 }
+				MAN = { add_timed_idea = { idea = JAP_tora_tora_tora_idea days = 180 } }
+				SIA = { add_timed_idea = { idea = JAP_tora_tora_tora_idea days = 180 } }
 				every_state = { 
 					limit = { 
 						ALLIED_asia_states = yes
@@ -4408,11 +4285,9 @@ focus_tree = {
 		}
 
 		available = {
-			is_subject = no
 			667 = {
 				state_is_fully_controlled_by_ROOT_or_subject = yes
 			}
-			always = no
 		}
 
 		bypass = {
@@ -4426,6 +4301,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_ANNEXATION }
 
 		completion_reward = {
+			transfer_state = 721
 		}
 	}
 
@@ -7188,18 +7064,18 @@ focus_tree = {
 
 		completion_reward = {
 
-			IF = {
-				limit = {
-					MAN = {
-						exists = yes
-						is_ally_with = ROOT
-					}
-				}
-				MAN = {
-					add_ideas = MAN_hydroelectric_power
-				}
-				custom_effect_tooltip = generic_skip_one_line_tt
-			}
+			#IF = {
+			#	limit = {
+			#		MAN = {
+			#			exists = yes
+			#			is_ally_with = ROOT
+			#		}
+			#	}
+			#	MAN = {
+			#		add_ideas = MAN_hydroelectric_power
+			#	}
+			#	custom_effect_tooltip = generic_skip_one_line_tt
+			#}
 
 			716 = {
 				add_building_construction = {
@@ -7539,7 +7415,6 @@ focus_tree = {
 		}
 		
 		available = {
-			always = no
 		}
 
 		bypass = {
@@ -7579,7 +7454,6 @@ focus_tree = {
 		}
 
 		available = {
-			always = no
 		}
 
 		bypass = {
@@ -7642,14 +7516,14 @@ focus_tree = {
 		completion_reward = {
 
 			
-			#1029 = {
-			#	add_building_construction = {
-			#		type = dam
-			#		level = 1
-			#		instant_build = yes
-			#		province = 1148
-			#	}
-			#}
+			525 = {
+				add_building_construction = {
+					type = dam
+					level = 1
+					instant_build = yes
+					province = 1148
+				}
+			}
 			custom_effect_tooltip = {
 				localization_key = building_state_modifier|dam
 				INDENT = "    "
@@ -7695,55 +7569,36 @@ focus_tree = {
 
 		completion_reward = {
 
-			IF = {
-				limit = {
-					527 = {
-						state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes
+			527 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = {
+						id = 11835
+						id = 9918
+						id = 9795
+						id = 11828
+						id = 6963
 					}
+					instant_build = yes
 				}
-				527 = {
-					add_building_construction = {
-						type = bunker
-						level = 2
-						province = {
-							id = 11835
-							id = 9918
-							id = 9795
-							id = 11828
-							id = 6963
-						}
-						instant_build = yes
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = {
+						id = 4052
+						id = 1003
 					}
-					add_building_construction = {
-						type = bunker
-						level = 3
-						province = {
-							id = 4052
-							id = 1003
-						}
-						instant_build = yes
-					}
+					instant_build = yes
 				}
-				IF = {
-					limit = {
-						527 = {
-							free_building_slots = {
-								building = arms_factory
-								size > 0
-								include_locked = yes
-							}	
-						}
-					}
-					527 = {
-						add_extra_state_shared_building_slots = 1
-						add_building_construction = {
-							type = arms_factory
-							level = 1
-							instant_build = yes
-						}	
-					}
-				}
-				custom_effect_tooltip = generic_skip_one_line_tt
+			}
+			527 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}	
 			}
 		}
 	}
@@ -7786,24 +7641,13 @@ focus_tree = {
 
 		completion_reward = {
 
-			IF = {
-				limit = {
-					525 = {
-						free_building_slots = {
-							building = arms_factory
-							size > 1
-							include_locked = yes
-						}	
-					}
-				}
-				525 = {
-					add_extra_state_shared_building_slots = 2
-					add_building_construction = {
-						type = arms_factory
-						level = 2
-						instant_build = yes
-					}	
-				}
+			525 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}	
 			}
 			
 		}
@@ -8055,8 +7899,8 @@ focus_tree = {
 			}
 			add_tech_bonus = {
 				name = JAP_rethink_armor_doctrine
-				bonus = 0.5
-				uses = 2
+				bonus = 1
+				uses = 1
 				category = armor	
 			}
 
@@ -8110,47 +7954,7 @@ focus_tree = {
 
 		available = {
 			JAP_army_faction_is_at_least_influential = yes
-			custom_trigger_tooltip = {
-				tooltip = JAP_foreign_tank_modernization_cooperation_tt
-				OR = {
-					GER = {
-						OR = {
-							is_in_faction_with = ROOT
-							has_guaranteed = ROOT
-						}
-					}
-					FRA = {
-						OR = {
-							is_in_faction_with = ROOT
-							has_guaranteed = ROOT
-						}
-					}
-					ENG = {
-						OR = {
-							is_in_faction_with = ROOT
-							has_guaranteed = ROOT
-						}
-					}
-					ITA = {
-						OR = {
-							is_in_faction_with = ROOT
-							has_guaranteed = ROOT
-						}
-					}
-					USA = {
-						OR = {
-							is_in_faction_with = ROOT
-							has_guaranteed = ROOT
-						}
-					}
-					SOV = {
-						OR = {
-							is_in_faction_with = ROOT
-							has_guaranteed = ROOT
-						}
-					}
-				}
-			}
+			GER = { has_war_with = ENG}
 		}
 
 		bypass = {
@@ -8167,8 +7971,8 @@ focus_tree = {
 			
 			add_tech_bonus = {
 				name = JAP_foreign_tank_modernization_cooperation
-				bonus = 0.75
-				uses = 2
+				bonus = 1
+				uses = 1
 				category = armor
 			}
 			add_breakthrough_progress = {
@@ -9609,13 +9413,15 @@ focus_tree = {
 				}
 				custom_effect_tooltip = generic_skip_one_line_tt
 			}
-			
+
+
 			add_tech_bonus = {
 				name = JAP_develop_new_fighters
 				bonus = 1
-				ahead_reduction = 1
-				category = light_air
+				ahead_reduction = 0.5
+				technology = improved_small_airframe
 			}
+
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
@@ -9704,7 +9510,11 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-			
+			add_tech_bonus = {
+				name = JAP_develop_new_fighters
+				bonus = 1
+				technology = advanced_small_airframe				
+			}			
 			IF = {
 				limit = {
 					has_dlc = "Arms Against Tyranny"

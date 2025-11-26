@@ -111,6 +111,7 @@ set_technology = {
 	special_forces_mountaineers = 1
 	special_forces_marines = 1
 	special_forces_paratroopers = 1
+	special_forces_rangers = 1
 	bicycle_infantry = 1
 	gwtank_chassis = 1 #nsb man
 
@@ -461,7 +462,7 @@ set_popularities = {
 }
 
 # Wowow nice faction
-create_faction = Axis
+create_faction_from_template = faction_template_axis
 add_to_faction = GER
 add_to_faction = HUN
 add_to_faction = ROM

@@ -505,7 +505,7 @@ set_technology = {
 	special_forces_mountaineers = 1
 	special_forces_marines = 1
 	special_forces_paratroopers = 1
-
+	special_forces_rangers = 1
 	motorised_infantry = 1
 	tech_support = 1
 	tech_engineers = 1
@@ -690,6 +690,7 @@ set_popularities = {
 }
 
 create_faction = Comintern
+#create_faction_from_template = faction_template_comintern
 add_to_faction = SOV
 
 if = {

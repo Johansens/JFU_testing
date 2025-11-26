@@ -424,6 +424,7 @@ set_technology = {
 	special_forces_mountaineers = 1
 	special_forces_marines = 1
 	special_forces_paratroopers = 1
+	special_forces_rangers = 1
 	gw_artillery = 1
 	interwar_antiair = 1
 	bicycle_infantry = 1 # They start with it now 
