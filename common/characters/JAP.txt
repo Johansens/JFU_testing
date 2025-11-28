@@ -3304,7 +3304,7 @@ characters = {
 				}
 
 				available = {
-					has_completed_focus = JAP_sea_tripartite_pact
+					has_completed_focus = JAP_sea_mil_tech_coop_with_germany
 				}
 
 				traits = {
@@ -3346,7 +3346,7 @@ characters = {
 						has_war_with = GER
 					}
 					OR = {
-						has_completed_focus = JAP_sea_tripartite_pact
+						has_completed_focus = JAP_sea_mil_tech_coop_with_germany
 					}
 				}
 
@@ -5355,7 +5355,7 @@ characters = {
 			}
 
 			available = {
-				has_completed_focus = JAP_sea_tripartite_pact
+				has_completed_focus = JAP_sea_mil_tech_coop_with_germany
 			}
 
 			traits = {

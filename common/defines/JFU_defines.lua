@@ -44,6 +44,9 @@ NDefines.NDiplomacy.BASE_SEND_ATTACHE_COST = 0				-- vanilla 100 Political power
 NDefines.NDiplomacy.BASE_SEND_ATTACHE_CP_COST = 0			-- vanilla 50 Command Power sent attache usage cost
 NDefines.NDiplomacy.EMBARGO_COST = 999							-- vanilla 100	-- One-time cost
 NDefines.NDiplomacy.REVOKE_EMBARGO_COST = 999						-- vanilla 0	-- Cost to remove an existing embargo
+NDefines.NDiplomacy.NAVAL_BLOCKADE_BASE_COST = 999 			-- Base PP cost for issuing a naval blockade
+NDefines.NDiplomacy.NAVAL_BLOCKADE_DAILY_COST = 10					-- Daily PP cost for one naval blockade
+
 
 NDefines.NMilitary.BASE_DIVISION_BRIGADE_GROUP_COST = 0
 NDefines.NMilitary.BASE_DIVISION_BRIGADE_CHANGE_COST = 0

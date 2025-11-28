@@ -1494,7 +1494,7 @@ focus = {
 	
 	focus = {
 		id = USA_support_rock_island
-		icon = GFX_goal_generic_army_artillery
+		icon = GFX_focus_PHI_small_arms_and_artillery_requisition
 		x = 2
 		y = 1
 		relative_position_id = USA_selective_training_act
@@ -1650,7 +1650,7 @@ focus = {
 	}
 	focus = {
 		id = USA_armored_infantry
-		icon = GFX_goal_generic_build_tank
+		icon = GFX_focus_PHI_trucks_and_transport_requisition
 		x = 2
 		y = 4
 		prerequisite = { focus = USA_main_battle_tanks focus = USA_tank_destroyer_doctrine }

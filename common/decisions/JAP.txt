@@ -3948,7 +3948,10 @@ JAP_spiritual_mobilization_decisions = {
 		}
 	
 		available = {
-			has_war = yes
+			OR = {
+				date > 1939.01.01
+				has_war = yes
+			}
 		}
 
 		#days_remove = 70
@@ -4018,7 +4021,10 @@ JAP_spiritual_mobilization_decisions = {
 		}
 	
 		available = {
-			has_war = yes
+			OR = {
+				date > 1939.01.01
+				has_war = yes
+			}
 		}
 
 		#days_remove = 70
@@ -4078,7 +4084,10 @@ JAP_spiritual_mobilization_decisions = {
 		}
 	
 		available = {
-			has_war = yes
+			OR = {
+				date > 1939.01.01
+				has_war = yes
+			}
 		}
 
 		#days_remove = 70
@@ -4426,8 +4435,6 @@ JAP_spiritual_mobilization_decisions = {
 		}
 
 	}
-
-
 }
 
 

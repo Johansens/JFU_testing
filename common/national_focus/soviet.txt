@@ -2830,7 +2830,7 @@ focus_tree = {
 
 	focus = {
 		id = SOV_organization_of_the_partisans
-		icon = GFX_focus_focus_fra_maquis
+		icon = GFX_focus_CHI_guerrilla_warfare
 		prerequisite = { focus = SOV_desperate_measures }
 		x = 3
 		y = 1

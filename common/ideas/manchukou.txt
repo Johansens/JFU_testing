@@ -1,7 +1,29 @@
 ideas = {
 	
 	country = {
+		MAN_hydroelectric_power = {
 
+			picture = por_hydroelectric_power
+
+			allowed = {
+				OR = {
+					original_tag = KOR
+					original_tag = MAN
+					original_tag = FOR
+				}
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_buildings_factor = 0.05
+				consumer_goods_factor = -0.05
+			}
+		}
+		
 		MAN_banditry = {
 
 			available = {

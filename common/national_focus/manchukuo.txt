@@ -30,7 +30,7 @@
 	
 	focus = {
 		id = MAN_obediencex
-		icon = GFX_focus_CZE_german_puppet
+		icon = GFX_focus_JAP_align_the_concordia_association
 		prerequisite = { focus = MAN_pacify_the_countrysidex }
 		x = 0
 		y = 1
@@ -44,7 +44,7 @@
 
 	focus = {
 		id = MAN_army_modernizationx
-		icon = GFX_goal_generic_small_arms
+		icon = GFX_focus_JAP_strenghten_manchukuo_imperial_army
 		prerequisite = { focus = MAN_obediencex }
 		x = 5
 		y = 1
@@ -119,9 +119,9 @@
 		}
 	}
 	
-			focus = {
+	focus = {
 		id = MAN_trade_delegationx
-		icon = GFX_goal_generic_trade
+		icon = GFX_focus_PHI_develop_japanese_trade_connections
 		prerequisite = { focus = MAN_invite_japanese_investorsx }
 		prerequisite = { focus = MAN_hoankyokux }
 		x = -1
@@ -171,7 +171,7 @@
 
 	focus = {
 		id = MAN_social_research_unitx_2
-		icon = GFX_focus_research
+		icon = GFX_focus_JAP_expand_the_showa_research_association
 		prerequisite = { focus = MAN_social_research_unitx }
 		x = 0
 		y = 1
@@ -191,7 +191,7 @@
 
 	focus = {
 		id = MAN_national_defense_statex
-		icon = GFX_goal_generic_build_tank
+		icon = GFX_focus_PHI_encourage_japanese_investment
 		prerequisite = { focus = MAN_trade_delegationx }
 		x = 0
 		y = 1
@@ -760,7 +760,7 @@
 	}
 	focus = {
 		id = MAN_dockyards
-		icon = GFX_focus_generic_destroyer
+		icon = GFX_focus_MAN_manchurian_navy
 		x = 1
 		y = 1
 
@@ -980,7 +980,7 @@
 	
 		focus = {
 		id = MAN_railways_extend_to_pyongyang
-		icon = GFX_FOCUS_MAN_RAIL
+		icon = GFX_focus_SOV_south_manchuria_railway
 		x = 1
 		y = 1
 
@@ -1470,7 +1470,7 @@
 	
 	focus = {
 		id = MAN_mamcc
-		icon = GFX_goal_generic_air_bomber
+		icon = GFX_focus_JAP_strenghten_manchukuo_imperial_airforce
 		x = 0
 		y = 1
 

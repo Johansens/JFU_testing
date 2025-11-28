@@ -514,7 +514,7 @@ JFU_equipment_on_start_up_effect = {
 		add_equipment_to_stockpile = { type = support_equipment_1 amount = 801 }
 		add_equipment_to_stockpile = { type = motorized_equipment_1 amount = 880 }
 		add_equipment_to_stockpile = { type = artillery_equipment_1 amount = 25 }
-		add_equipment_to_stockpile = { type = light_tank_chassis_1 amount = 180 producer = JAP variant_name = "Type 95 Ha-Go" }	
+		add_equipment_to_stockpile = { type = light_tank_chassis_2 amount = 180 producer = JAP variant_name = "Type 95 Ha-Go" }	
 		add_equipment_to_stockpile = { type = train_equipment_1 amount = 300 }
 		add_dynamic_modifier = { modifier = pacific_war_japan }	
 	}
