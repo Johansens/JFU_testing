@@ -2,18 +2,47 @@ state={
 	id=757
 	name="STATE_757"
 	provinces={
-		   9763
+		12299
 	}
-	manpower=1
-	buildings_max_level_factor=1.000
-	state_category = rural
-	history={
-		owner = SWE
-		buildings = {
-			infrastructure = 0
-		}
+	state_category = large_town
+	
+	manpower = 557745
+
+	resources = {
+		steel = 10
+		tungsten =29
+		aluminium = 5
+	}
+
+	history = {
+
+		owner = ENG
 		add_core_of = SWE
 
+		victory_points = {
+			12299 10 # Singapore
+		}
+
+		buildings = {
+
+			infrastructure = 2
+			industrial_complex = 1
+			air_base = 6
+
+			12299 = {
+				naval_base = 8
+				coastal_bunker = 3
+				naval_supply_hub = 1
+				naval_headquarters = {
+					level = 1
+					allowed = {
+						has_dlc = "No Compromise, No Surrender"
+					}
+				}
+			}
+
+		}
+		
 	}
 
 	local_supplies=0.0 

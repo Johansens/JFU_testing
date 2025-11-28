@@ -9761,7 +9761,7 @@
 9760;130;6;194;land;false;hills;2
 9761;130;9;9;land;false;hills;7
 9762;130;9;159;land;false;hills;6
-9763;130;9;214;land;false;plains;7
+9763;130;9;214;land;true;urban;6
 9764;130;12;74;land;true;urban;1
 9765;130;12;179;land;false;plains;1
 9766;130;12;224;land;false;mountain;6

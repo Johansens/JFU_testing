@@ -76,7 +76,6 @@ JAP_historical_plan = {
 		# 1941
 		JAP_issue_the_senjinkun_military_code # 35
 		JAP_develop_new_fighters # 70
-		JAP_sea_tripartite_pact # 35 if bypassed, potentially moves later attack dates 35 das forward
 		JAP_unsinkable_aircraft_carriers # 35
 		JAP_issue_the_shinmin_no_michi_manifesto # 35
 		JAP_occupy_indochina # 35

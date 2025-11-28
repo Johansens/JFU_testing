@@ -1502,7 +1502,7 @@ focus = {
 		available_if_capitulated = yes
 
 		completion_reward = { 
-			336 = {
+			757 = {
 				set_building_level = {
 					type = coastal_bunker
 					level = 3
@@ -1515,6 +1515,9 @@ focus = {
 					province = 12299
 					instant_build = yes
 				}
+			}
+			336 = {
+
 				set_building_level = {
 					type = anti_air_building
 					level = 2
@@ -1582,13 +1585,16 @@ focus = {
 		}
 
 		completion_reward = {
-			336 = {
+			757 = {
 				set_building_level = {
 					type = bunker
 					level = 4
 					province = 12299
 					instant_build = yes
 				}
+			}
+			336 = {
+
 				set_building_level = {
 					type = anti_air_building
 					level = 5
@@ -2238,7 +2244,7 @@ focus = {
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 						# Singapore
-			336 = {
+			757 = {
 				#add_building_construction = {
 				#	type = air_base
 				#	level = 2
