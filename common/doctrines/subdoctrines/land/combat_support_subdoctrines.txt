@@ -32,7 +32,7 @@ fire_concentration = {
      enable_tactic = tactic_overwhelming_fire
 
      artillery_brigade = {
-        combat_width = -0.8
+        soft_attack = 0.1
      }
      category_line_artillery = {
         max_organisation = 5
@@ -196,7 +196,7 @@ flying_batteries = {
             }
             mot_recon = {
                 battalion_mult = {
-                    category = category_self_propelled_artillery
+                    category = category_line_artillery
                     soft_attack = 0.05
                     defense = 0.1
                 }
@@ -204,7 +204,7 @@ flying_batteries = {
             }
             light_tank_recon = {
                 battalion_mult = {
-                    category = category_self_propelled_artillery
+                    category = category_line_artillery
                     soft_attack = 0.05
                     defense = 0.1
                 }

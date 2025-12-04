@@ -1242,7 +1242,7 @@ focus_tree = {
 
 		prerequisite = { focus = JAP_new_order_movement }
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -4917,13 +4917,7 @@ focus_tree = {
 			716 = {
 				add_resource = {
 					type = coal
-					amount = 12
-				}
-			}
-			716 = {
-				add_resource = {
-					type = tungsten
-					amount = 10
+					amount = 40
 				}
 			}
 		}
@@ -7781,12 +7775,12 @@ focus_tree = {
 					has_dlc = "Arms Against Tyranny"
 				}	
 				mio:JAP_osaka_army_arsenal_organization = {
-					add_mio_funds_gain_factor = 0.05
+					add_mio_funds_gain_factor = 0.1
 				}
 				custom_effect_tooltip = generic_skip_one_line_tt
 			}
 
-			army_experience = 15
+			army_experience = 25
 			add_mastery_bonus = {
 				bonus = 0.1
 				days = 240
@@ -7849,15 +7843,9 @@ focus_tree = {
 
 			add_tech_bonus = {
 				name = JAP_rethink_armor_doctrine
-				bonus = 0.25
+				bonus = 1
 				uses = 1
 				category = cat_mechanized_equipment
-			}
-			add_doctrine_cost_reduction = {
-				name = JAP_rethink_armor_doctrine
-				cost_reduction = 0.25
-				uses = 1
-				category = land_doctrine
 			}
 			add_tech_bonus = {
 				name = JAP_rethink_armor_doctrine
@@ -7933,7 +7921,7 @@ focus_tree = {
 			
 			add_tech_bonus = {
 				name = JAP_foreign_tank_modernization_cooperation
-				bonus = 1
+				bonus = 0.75
 				uses = 1
 				category = armor
 			}
@@ -8000,14 +7988,14 @@ focus_tree = {
 					has_dlc = "Arms Against Tyranny"
 				}	
 				mio:JAP_mitsubishi_heavy_industries_organization = {
-					add_mio_size = 1
+					add_mio_funds = 2000
 				}
 				custom_effect_tooltip = generic_skip_one_line_tt
 			}
 
 			add_tech_bonus = {
 				name = JAP_domestic_tank_modernization_program
-				bonus = 0.5
+				bonus = 1
 				uses = 1
 				category = armor
 			}
@@ -8047,17 +8035,6 @@ focus_tree = {
 
 		available = {
 			JAP_army_faction_is_at_least_influential = yes
-			IF = {
-				limit = {
-					has_dlc = "No Step Back"
-				}
-				has_tech = basic_heavy_tank_chassis
-			}
-			ELSE_IF = {
-				limit = {
-					has_tech = basic_heavy_tank
-				}
-			}
 		}
 
 		bypass = {
@@ -8075,13 +8052,6 @@ focus_tree = {
 			add_breakthrough_progress = {
 				specialization = specialization_land
 				value = 0.25
-			}
-
-			add_tech_bonus = {
-				name = JAP_the_ultimate_tank
-				bonus = 0.75
-				uses = 2
-				category = cat_heavy_armor	
 			}
 
 			custom_effect_tooltip = generic_skip_one_line_tt
@@ -8112,70 +8082,7 @@ focus_tree = {
 			add_to_variable = { JAP_army_motorized_attack_factor = 0.05 tooltip = motorized_attack_factor_tt }
 			add_to_variable = { JAP_army_mechanized_attack_factor = 0.05 tooltip = mechanized_attack_factor_tt }
 
-			IF = {
-				limit = {
-					has_dlc = "No Step Back"
-				}
-
-				IF = {
-					limit = {
-						has_tech = super_heavy_tank_chassis
-					}
-					custom_effect_tooltip = generic_skip_one_line_tt
-					#O-I
-					create_equipment_variant = {
-						name = "O-I"
-						type = super_heavy_tank_chassis_1
-						parent_version = 0
-						design_team = mio:JAP_mitsubishi_heavy_industries_organization
-						modules = {
-							main_armament_slot = tank_super_heavy_cannon
-							turret_type_slot = tank_super_heavy_four_man_tank_turret
-							suspension_type_slot = tank_christie_suspension
-							armor_type_slot = tank_cast_armor
-							engine_type_slot = tank_gasoline_engine
-							special_type_slot_1 = secondary_turret_hmg
-							special_type_slot_2 = additional_machine_guns
-							special_type_slot_3 = squeezebore_adaptor
-						}
-						upgrades = {
-							tank_nsb_engine_upgrade = 5
-							tank_nsb_armor_upgrade = 8
-						}
-						icon = "GFX_JAP_improved_heavy_tank_medium" 
-					}
-				}
-				ELSE = {
-					custom_effect_tooltip = JAP_the_ultimate_tank_tt
-					effect_tooltip = {
-						#O-I
-						create_equipment_variant = {
-							name = "O-I"
-							type = super_heavy_tank_chassis_1
-							parent_version = 0
-							design_team = mio:JAP_mitsubishi_heavy_industries_organization
-							modules = {
-								main_armament_slot = tank_super_heavy_cannon
-								turret_type_slot = tank_super_heavy_four_man_tank_turret
-								suspension_type_slot = tank_christie_suspension
-								armor_type_slot = tank_cast_armor
-								engine_type_slot = tank_gasoline_engine
-								special_type_slot_1 = secondary_turret_hmg
-								special_type_slot_2 = additional_machine_guns
-								special_type_slot_3 = squeezebore_adaptor
-							}
-							upgrades = {
-								tank_nsb_engine_upgrade = 5
-								tank_nsb_armor_upgrade = 8
-							}
-							icon = "GFX_JAP_improved_heavy_tank_medium" 
-						}
-					}
-				}
-
-				custom_effect_tooltip = generic_skip_one_line_tt
-
-			}
+			custom_effect_tooltip = generic_skip_one_line_tt
 
 			IF = {
 				limit = {
@@ -8231,18 +8138,12 @@ focus_tree = {
 					has_dlc = "Arms Against Tyranny"
 				}	
 				mio:JAP_kokura_arsenal_organization = {
-					add_mio_funds_gain_factor = 0.05
+					add_mio_funds_gain_factor = 0.1
 				}
 				custom_effect_tooltip = generic_skip_one_line_tt
 			}
 			
-			army_experience = 15
-			add_doctrine_cost_reduction = {
-				name = JAP_rely_on_supremacy_of_the_will
-				cost_reduction = 0.25
-				uses = 1
-				category = land_doctrine
-			}
+			army_experience = 25
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
@@ -8296,21 +8197,15 @@ focus_tree = {
 
 			add_tech_bonus = {
 				name = JAP_adopt_new_assault_doctrine
-				bonus = 0.25
+				bonus = 1
 				uses = 1
 				category = artillery
 			}
 			add_tech_bonus = {
 				name = JAP_adopt_new_assault_doctrine
-				bonus = 0.25
+				bonus = 1
 				uses = 1
 				category = infantry_weapons
-			}
-			add_doctrine_cost_reduction = {
-				name = JAP_adopt_new_assault_doctrine
-				cost_reduction = 0.25
-				uses = 1
-				category = land_doctrine
 			}
 			
 			custom_effect_tooltip = generic_skip_one_line_tt
@@ -8318,19 +8213,19 @@ focus_tree = {
 			JAP_add_or_modify_imperial_army = yes
 			add_to_variable = { JAP_army_army_infantry_attack_factor = 0.05 tooltip = army_infantry_attack_factor_tt }
 
-			IF = {
-				limit = {
-					has_character = JAP_shunroku_hata
-					JAP_shunroku_hata = {
-						is_field_marshal = no
-					}
-				}
-				custom_effect_tooltip = generic_skip_one_line_tt
-				JAP_shunroku_hata = {
-					promote_leader = yes
-					add_unit_leader_trait = offensive_doctrine
-				}
-			} 
+			#IF = {
+			#	limit = {
+			#		has_character = JAP_shunroku_hata
+			#		JAP_shunroku_hata = {
+			#			is_field_marshal = no
+			#		}
+			#	}
+			#	custom_effect_tooltip = generic_skip_one_line_tt
+			#	JAP_shunroku_hata = {
+			#		promote_leader = yes
+			#		add_unit_leader_trait = offensive_doctrine
+			#	}
+			#} 
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
@@ -8381,14 +8276,14 @@ focus_tree = {
 					has_dlc = "Arms Against Tyranny"
 				}	
 				mio:JAP_kokura_arsenal_organization = {
-					add_mio_size = 1
+					add_mio_funds = 1000
 				}
 				custom_effect_tooltip = generic_skip_one_line_tt
 			}
 
 			add_tech_bonus = {
 				name = JAP_develop_lethal_infantry_equipment
-				bonus = 0.75
+				bonus = 1
 				uses = 1
 				category = infantry_weapons
 			}
@@ -8466,17 +8361,17 @@ focus_tree = {
 					has_dlc = "Arms Against Tyranny"
 				}	
 				mio:JAP_osaka_army_arsenal_artillery_organization = {
-					add_mio_size = 1
+					add_mio_funds = 1000
 				}
 				mio:JAP_hitachi_arms_department_organization = {
-					add_mio_size = 1
+					add_mio_funds = 1000
 				}
 				custom_effect_tooltip = generic_skip_one_line_tt
 			}
 
 			add_tech_bonus = {
 				name = JAP_develop_sophisticated_artillery_equipment
-				bonus = 0.75
+				bonus = 1
 				uses = 2
 				category = artillery
 			}
@@ -8485,7 +8380,7 @@ focus_tree = {
 
 			add_breakthrough_progress = {
 				specialization = specialization_land
-				value = 0.25
+				value = 0.5
 			}
 
 			custom_effect_tooltip = generic_skip_one_line_tt
@@ -8600,9 +8495,6 @@ focus_tree = {
 		}
 
 		available = {
-			714 = { 
-				state_is_fully_controlled_by_ROOT_or_subject = yes
-			}	
 		}
 
 		bypass = {
@@ -8616,39 +8508,6 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_IMPERIAL_INFLUENCE }
 
 		completion_reward = {
-			
-			714 = {
-				IF = {
-					limit = {
-						any_province_building_level = {
-							province = {
-								id = 7832
-							}
-							building = supply_node
-							level < 1
-						}
-					}
-					add_building_construction = {
-						type = supply_node
-						level = 1
-						province = 7832
-						instant_build = yes
-					}
-				}
-				IF = {
-					limit = {
-						air_base < 7
-					}
-					add_building_construction = {
-						type = air_base
-						level = 2
-						instant_build = yes
-					}
-				}
-				build_railway = { #From Southern to Northern Supply Hub in Heilungkiang
-					path = { 4506 1588 12618 7832 }
-				}
-			}
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
@@ -8728,10 +8587,6 @@ focus_tree = {
 		}
 
 		available = {
-			OR = {
-				has_war_support > 0.79
-				surrender_progress > 0
-			}
 		}
 
 		bypass = {
@@ -8796,13 +8651,6 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_MILITARY_CHARACTER }
 
 		completion_reward = {
-
-			add_tech_bonus = {
-				name = JAP_sea_mountaineers
-				bonus = 1
-				uses = 1
-				category = mountaineers_tech
-			}
 			IF = {
 				limit = {
 					has_dlc = "Arms Against Tyranny"
@@ -8816,14 +8664,14 @@ focus_tree = {
 				custom_effect_tooltip = generic_skip_one_line_tt
 			}
 
-			random_army_leader = {	
-				limit = {
-					NOT = {
-						has_trait = trait_mountaineer
-					}
-				}	
-				add_trait = { trait = trait_mountaineer }
-			}
+			#random_army_leader = {	
+			#	limit = {
+			#		NOT = {
+			#			has_trait = trait_mountaineer
+			#		}
+			#	}	
+			#	add_trait = { trait = trait_mountaineer }
+			#}
 			
 			JAP_add_or_modify_imperial_army = yes
 			add_to_variable = { JAP_army_acclimatization_cold_climate_gain_factor = 0.1 tooltip = acclimatization_cold_climate_gain_factor_tt }
@@ -8867,13 +8715,6 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_MILITARY_CHARACTER }
 
 		completion_reward = {
-			
-			add_tech_bonus = {
-				name = JAP_jungle_adaptation
-				bonus = 1
-				uses = 1
-				category = rangers_tech_cat
-			}
 			IF = {
 				limit = {
 					has_dlc = "No Compromise, No Surrender"
@@ -8887,17 +8728,17 @@ focus_tree = {
 				custom_effect_tooltip = generic_skip_one_line_tt
 			}
 
-			IF = {
-				limit = {
-					has_character = JAP_masakazu_kawabe
-					JAP_masakazu_kawabe = {
-						NOT = { has_trait = jungle_rat }
-					}
-				}
-				JAP_masakazu_kawabe = {
-					add_trait = { trait = jungle_rat }
-				}
-			}
+			#IF = {
+			#	limit = {
+			#		has_character = JAP_masakazu_kawabe
+			#		JAP_masakazu_kawabe = {
+			#			NOT = { has_trait = jungle_rat }
+			#		}
+			#	}
+			#	JAP_masakazu_kawabe = {
+			#		add_trait = { trait = jungle_rat }
+			#	}
+			#}
 
 			JAP_add_or_modify_imperial_army = yes
 			add_to_variable = { JAP_army_acclimatization_hot_climate_gain_factor = 0.1 tooltip = acclimatization_hot_climate_gain_factor_tt }
@@ -8927,7 +8768,7 @@ focus_tree = {
 		}
 
 		available = {
-			has_war_with = USA
+			
 			#JAP_army_faction_is_at_least_influential = yes
 		}
 
@@ -9033,6 +8874,7 @@ focus_tree = {
 		}
 
 		available = {
+			has_war_with = USA
 			JAP_army_faction_is_at_least_influential = yes
 		}
 
@@ -9190,7 +9032,6 @@ focus_tree = {
 		}
 
 		available = {
-			has_war_with_major = yes
 			JAP_army_faction_is_at_least_influential = yes
 		}
 
@@ -9370,7 +9211,7 @@ focus_tree = {
 					has_dlc = "Arms Against Tyranny"
 				}	
 				mio:JAP_light_aircraft_organization = {
-					add_mio_funds_gain_factor = 0.05
+					add_mio_funds_gain_factor = 0.1
 					add_mio_research_bonus = 0.05
 				}
 				custom_effect_tooltip = generic_skip_one_line_tt
@@ -9759,10 +9600,10 @@ focus_tree = {
 					has_dlc = "Arms Against Tyranny"
 				}	
 				mio:JAP_kawanishi_aircraft_company_organization = {
-					add_mio_size = 2
+					add_mio_funds = 1000
 				}
 				mio:JAP_tachikawa_aircraft_company_organization = {
-					add_mio_size = 2
+					add_mio_funds = 1000
 				}
 				custom_effect_tooltip = generic_skip_one_line_tt
 			}
@@ -9821,7 +9662,7 @@ focus_tree = {
 					has_dlc = "Arms Against Tyranny"
 				}	
 				mio:JAP_light_aircraft_organization = {
-					add_mio_size = 1
+					add_mio_funds = 1000
 				}
 				custom_effect_tooltip = generic_skip_one_line_tt
 			}
@@ -9912,7 +9753,7 @@ focus_tree = {
 					has_dlc = "Arms Against Tyranny"
 				}	
 				mio:JAP_nakajima_organization = {
-					add_mio_size = 1
+					add_mio_funds = 1000
 				}
 				custom_effect_tooltip = generic_skip_one_line_tt
 			}
@@ -10006,14 +9847,7 @@ focus_tree = {
 
 		completion_reward = {
 
-			air_experience = 25
-			
-			add_doctrine_cost_reduction = {
-				name = JAP_adopt_new_air_doctrine
-				cost_reduction = 0.25
-				uses = 2
-				category = air_doctrine
-			}
+			air_experience = 50
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
@@ -10069,14 +9903,7 @@ focus_tree = {
 
 		completion_reward = {
 
-			air_experience = 25
-
-			add_doctrine_cost_reduction = {
-				name = JAP_sea_unify_the_air_forces
-				cost_reduction = 0.25
-				uses = 2
-				category = air_doctrine
-			}
+			air_experience = 50
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
@@ -10224,8 +10051,8 @@ focus_tree = {
 				custom_effect_tooltip = generic_skip_one_line_tt
 				mio:JAP_tokyo_automobile_industries_organization = {
 					set_mio_name_key = JAP_isuzu_motors
-					add_mio_size = 2
-					add_mio_funds_gain_factor = 0.05
+					add_mio_funds = 1000
+					add_mio_funds_gain_factor = 0.1
 					
 				}
 				hidden_effect = {
@@ -10341,8 +10168,8 @@ focus_tree = {
 
 			add_tech_bonus = {
 				name = JAP_sea_jet_prototypes
-				bonus = 0.33
-				uses = 2
+				bonus = 1
+				uses = 1
 				category = jet_technology
 			}		
 
@@ -10392,7 +10219,7 @@ focus_tree = {
 
 			add_tech_bonus = {
 				name = JAP_rockets_development
-				bonus = 0.5
+				bonus = 1
 				uses = 1
 				category = rocketry
 			}
@@ -10458,46 +10285,12 @@ focus_tree = {
 
 		completion_reward = {
 
-			if = {
-				limit = {
-					282 = {
-						is_fully_controlled_by = ROOT
-						free_building_slots = {
-							building = dockyard
-							size > 2
-							include_locked = yes
-						}
-					}
-				}
-				282 = {
-					add_extra_state_shared_building_slots = 3
-					add_building_construction = {
-						type = dockyard
-						level = 3
-						instant_build = yes
-					}
-				}
-			}
-			else = {
-				random_core_state = {
-					limit = {
-						is_fully_controlled_by = ROOT
-						NOT = {
-							has_state_category = small_island
-							has_state_category = tiny_island
-						}
-						free_building_slots = {
-							building = dockyard
-							size > 2
-							include_locked = yes
-						}
-					}
-					add_extra_state_shared_building_slots = 3
-					add_building_construction = {
-						type = dockyard
-						level = 3
-						instant_build = yes
-					}
+			282 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = dockyard
+					level = 4
+					instant_build = yes
 				}
 			}
 
@@ -10509,7 +10302,8 @@ focus_tree = {
 				custom_effect_tooltip = available_mio_tt
 				show_mio_tooltip = JAP_kure_naval_arsenal_organization
 				mio:JAP_kure_naval_arsenal_organization = {
-					add_mio_size = 2
+					add_mio_funds = 1000
+					add_mio_funds_gain_factor = 0.10
 				}
 			}
 			ELSE = {
@@ -10563,7 +10357,7 @@ focus_tree = {
 			
 			add_tech_bonus = {
 				name = JAP_expand_navy_technical_department
-				bonus = 0.5
+				bonus = 1
 				uses = 1
 				category = naval_equipment
 			}
@@ -10645,47 +10439,18 @@ focus_tree = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 
 			524 = { #Taiwan
-				IF = {
-					limit = {
-						state_is_fully_controlled_by_ROOT_or_subject = yes
-					}
-					IF = {
-						limit = {
-							air_base < 7
-						}
-						add_building_construction = {
-							type = air_base
-							level = 2
-							instant_build = yes
-						}
-					}
-					IF = {
-						limit = {
-							naval_supply_hub < 1
-						}
-						add_building_construction = {
-							type = naval_supply_hub
-							level = 1
-							province = 12068
-							instant_build = yes
-						}
-					}
+				set_building_level = {
+					type = air_base
+					level = 10
+					instant_build = yes
 				}
 			}
 
 			custom_effect_tooltip = generic_skip_one_line_tt
-			
-			add_tech_bonus = {
-				name = JAP_expand_the_snlf
-				bonus = 1
-				uses = 1
-				category = marine_tech
-			}
 			IF = {
 				limit = {
 					has_dlc = "Arms Against Tyranny"
 				}		
-				add_potential_special_forces_tree = yes
 				add_doctrine_cost_reduction = {
 					name = JAP_expand_the_snlf
 					cost_reduction = 0.5
@@ -10701,15 +10466,15 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			custom_effect_tooltip = JAP_prepare_the_southern_front_tt
-			effect_tooltip = {
-				add_timed_idea = {
-					idea = JAP_strike_south_idea
-					days = 180
-				}
-			}
+			#custom_effect_tooltip = JAP_prepare_the_southern_front_tt
+			#effect_tooltip = {
+			#	add_timed_idea = {
+			#		idea = JAP_strike_south_idea
+			#		days = 180
+			#	}
+			#}
 
-			custom_effect_tooltip = generic_skip_one_line_tt
+			#custom_effect_tooltip = generic_skip_one_line_tt
 
 			custom_effect_tooltip = available_military_high_command
 			show_ideas_tooltip = JAP_toyoaki_horiuchi
@@ -10760,7 +10525,8 @@ focus_tree = {
 					has_dlc = "Arms Against Tyranny"
 				}	
 				mio:JAP_kawasaki_dockyards_organization = {
-					add_mio_size = 1
+					add_mio_funds = 1000
+					add_mio_funds_gain_factor = 0.10
 				}
 				custom_effect_tooltip = generic_skip_one_line_tt
 			}
@@ -10786,14 +10552,14 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			random_navy_leader = {	
-				limit = {
-					NOT = {
-						has_trait = air_controller
-					}
-				}	
-				add_trait = { trait = air_controller }
-			}
+			#random_navy_leader = {	
+			#	limit = {
+			#		NOT = {
+			#			has_trait = air_controller
+			#		}
+			#	}	
+			#	add_trait = { trait = air_controller }
+			#}
 			
 		}
 
@@ -10840,10 +10606,10 @@ focus_tree = {
 					has_dlc = "Arms Against Tyranny"
 				}	
 				mio:JAP_yokosuka_naval_arsenal_organization = {
-					add_mio_funds_gain_factor = 0.15
+					add_mio_funds_gain_factor = 0.10
 				}
 				mio:JAP_yokosuka_organization = {
-					add_mio_funds_gain_factor = 0.15
+					add_mio_funds_gain_factor = 0.10
 				}
 				custom_effect_tooltip = generic_skip_one_line_tt
 			}
@@ -10947,54 +10713,48 @@ focus_tree = {
 					has_dlc = "Arms Against Tyranny"
 				}	
 				mio:JAP_yokosuka_naval_arsenal_organization = {
-					add_mio_size = 1
+					add_mio_funds = 1000
+					add_mio_funds_gain_factor = 0.1
 				}
 				custom_effect_tooltip = generic_skip_one_line_tt
 			}
 
 			navy_experience = 50
 
-			add_doctrine_cost_reduction = {
-				name = JAP_balanced_naval_approach
-				cost_reduction = 0.25
-				uses = 2
-				category = naval_doctrine
-			}
-
 			custom_effect_tooltip = generic_skip_one_line_tt
 
 			add_tech_bonus = {
 				name = JAP_balanced_naval_approach
-				bonus = 0.5
+				bonus = 1
 				uses = 1
 				category = mio_cat_tech_all_carrier_and_modules
 			}
 
 			add_tech_bonus = {
 				name = JAP_balanced_naval_approach
-				bonus = 0.5
+				bonus = 1
 				uses = 1
 				category = mio_cat_tech_all_capital_ship_and_modules
 			}
 			
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			random_navy_leader = {	
-				limit = {
-					NOT = {
-						has_trait = air_controller
-					}
-				}	
-				add_trait = { trait = air_controller }
-			}
-			random_navy_leader = {	
-				limit = {
-					NOT = {
-						has_trait = ironside
-					}
-				}	
-				add_trait = { trait = ironside }
-			}
+			#random_navy_leader = {	
+			#	limit = {
+			#		NOT = {
+			#			has_trait = air_controller
+			#		}
+			#	}	
+			#	add_trait = { trait = air_controller }
+			#}
+			#random_navy_leader = {	
+			#	limit = {
+			#		NOT = {
+			#			has_trait = ironside
+			#		}
+			#	}	
+			#	add_trait = { trait = ironside }
+			#}
 
 		}
 
@@ -11042,7 +10802,8 @@ focus_tree = {
 					has_dlc = "Arms Against Tyranny"
 				}	
 				mio:JAP_kure_naval_arsenal_organization = {
-					add_mio_size = 1
+					add_mio_funds = 1000
+					add_mio_funds_gain_factor = 0.1
 				}
 				custom_effect_tooltip = generic_skip_one_line_tt
 			}
@@ -11068,14 +10829,14 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			random_navy_leader = {	
-				limit = {
-					NOT = {
-						has_trait = ironside
-					}
-				}	
-				add_trait = { trait = ironside }
-			}
+			#random_navy_leader = {	
+			#	limit = {
+			#		NOT = {
+			#			has_trait = ironside
+			#		}
+			#	}	
+			#	add_trait = { trait = ironside }
+			#}
 		}
 
 	}
@@ -11774,7 +11535,7 @@ focus_tree = {
 
 			add_tech_bonus = {
 				name = JAP_assure_superior_naval_quality
-				bonus = 0.33
+				bonus = 0.5
 				uses = 2
 				category = naval_armor
 			}	
@@ -12089,7 +11850,7 @@ focus_tree = {
 				}
 				add_tech_bonus = {
 					name = JAP_f_go_nuclear_project
-					bonus = 0.25
+					bonus = 1
 					uses = 1
 					category = nuclear
 				}

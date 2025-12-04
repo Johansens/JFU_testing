@@ -2756,19 +2756,25 @@ focus_tree = {
 
 		completion_reward = {
 			add_command_power = 25
-			army_experience = 15
+			army_experience = 50
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			add_doctrine_cost_reduction = {
-				name = GER_the_prussian_legacy
-				cost_reduction = 0.5
-				uses = 2
-				category = cat_grand_battle_plan
+			add_mastery_bonus = {
+				name =  GER_the_prussian_legacy
+				bonus = 0.1
+				days = 240
+				track = combat_support
+				grand_doctrine = grand_battleplan
 			}
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
+			add_mastery_bonus = {
+				name =  GER_the_prussian_legacy
+				bonus = 0.1
+				days = 240
+				track = infantry
+				grand_doctrine = grand_battleplan
+			}
+			
 			#custom_effect_tooltip = GER_unlock_operational_planning_bewegungskrieg_tt
 			#effect_tooltip = { #This is done for tooltip purposes
 			#	add_dynamic_modifier = { modifier = GER_bewegungskrieg_modifier }
@@ -2881,17 +2887,8 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_MILITARY_CHARACTER FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			army_experience = 15
+			army_experience = 25
 			
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			add_doctrine_cost_reduction = {
-				name = GER_lessons_of_the_great_war
-				cost_reduction = 0.25
-				uses = 2
-				category = land_doctrine
-			}
-
 			custom_effect_tooltip = generic_skip_one_line_tt
 
 			show_unit_leaders_tooltip = GER_friedrich_schulz
@@ -3011,16 +3008,9 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH FOCUS_FILTER_MILITARY_CHARACTER }
 
 		completion_reward = {
-			army_experience = 15
+			army_experience = 25
 			
 			custom_effect_tooltip = generic_skip_one_line_tt
-
-			add_doctrine_cost_reduction = {
-				name = GER_stormtroopers
-				cost_reduction = 0.25
-				uses = 1
-				category = land_doctrine
-			}
 			add_tech_bonus = {
 				name = GER_stormtroopers
 				bonus = 0.5
@@ -3225,12 +3215,6 @@ focus_tree = {
 
 		completion_reward = {
 			army_experience = 25
-			add_doctrine_cost_reduction = {
-				name = GER_instill_auftragstaktik
-				cost_reduction = 0.25
-				uses = 1
-				category = land_doctrine
-			}
 			
 			custom_effect_tooltip = generic_skip_one_line_tt
 
@@ -3316,7 +3300,7 @@ focus_tree = {
 					name = GER_establish_the_skijager
 					cost_reduction = 0.5
 					uses = 2
-					category = cat_mountaineers_doctrine
+					category = special_forces_doctrine
 				}
 			}
 		}
@@ -3867,11 +3851,19 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			add_doctrine_cost_reduction = {
+			add_mastery_bonus = {
 				name = GER_adopt_new_panzer_doctrine
-				cost_reduction = 0.5
-				uses = 1
-				category = cat_mobile_warfare
+				bonus = 0.1
+				days = 240
+				track = armor
+				grand_doctrine = new_mobile_warfare
+			}
+			add_mastery_bonus = {
+				name = GER_adopt_new_panzer_doctrine
+				bonus = 0.1
+				days = 240
+				track = infantry
+				grand_doctrine = new_mobile_warfare
 			}
 
 			custom_effect_tooltip = generic_skip_one_line_tt
@@ -3905,16 +3897,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_HISTORICAL FOCUS_FILTER_MILITARY_CHARACTER }
 
 		completion_reward = {
-			army_experience = 15
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			add_doctrine_cost_reduction = {
-				name = GER_adopt_new_panzer_doctrine
-				cost_reduction = 0.25
-				uses = 2
-				category = land_doctrine
-			}
+			army_experience = 25
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
@@ -4375,11 +4358,12 @@ focus_tree = {
 
 		completion_reward = {
 
-			add_doctrine_cost_reduction = {
+			add_mastery_bonus = {
 				name = GER_dive_bombers
-				cost_reduction = 0.25
-				uses = 1
-				category = battlefield_support_tree
+				bonus = 0.2
+				days = 180
+				track = strike_aircraft
+				grand_doctrine = new_battlefield_support
 			}
 			add_tech_bonus = {
 				name = GER_dive_bombers
@@ -4459,11 +4443,12 @@ focus_tree = {
 			custom_effect_tooltip = available_military_high_command
 			show_ideas_tooltip = erhard_milch
 
-			add_doctrine_cost_reduction = {
+			add_mastery_bonus = {
 				name = GER_tactical_bombers
-				cost_reduction = 0.25
-				uses = 2
-				category = operational_integrity_tree
+				bonus = 0.2
+				days = 180
+				grand_doctrine = new_operational_integrity
+				track = medium_aircraft
 			}
 			add_tech_bonus = {
 				name = GER_tactical_bombers
@@ -4541,11 +4526,12 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			add_doctrine_cost_reduction = {
+			add_mastery_bonus = {
 				name = GER_uralbomber_program
-				cost_reduction = 0.25
-				uses = 2
-				category = strategic_destruction_tree
+				bonus = 0.2
+				days = 180
+				grand_doctrine = new_strategic_destruction
+				track = heavy_aircraft
 			}
 			add_tech_bonus = {
 				name = GER_uralbomber_program
@@ -4681,7 +4667,7 @@ focus_tree = {
 					name = GER_fallschirmjager
 					cost_reduction = 0.25
 					uses = 2
-					category = cat_paratroopers_doctrine
+					category = special_forces_doctrine
 				}
 			}
 			add_tech_bonus = {
@@ -4722,14 +4708,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_MILITARY_CHARACTER FOCUS_FILTER_HISTORICAL FOCUS_FILTER_AIR_XP FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			air_experience = 25
-			add_doctrine_cost_reduction = {
-				name = GER_form_the_jagdwaffe
-				cost_reduction = 0.5
-				uses = 1
-				category = air_doctrine
-			}
-
+			air_experience = 50
 
 			GER_modify_airforce_modifier = yes
 			add_to_variable = { 
@@ -4847,15 +4826,6 @@ focus_tree = {
 		completion_reward = {
 			add_command_power = 25
 			air_experience = 25
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			add_doctrine_cost_reduction = {
-				name = GER_reorganize_the_luftwaffe
-				cost_reduction = 0.25
-				uses = 2
-				category = air_doctrine
-			}
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
@@ -5505,8 +5475,20 @@ focus_tree = {
 		complete_tooltip = {
 		}
 		completion_reward = {
-			add_ideas = GER_plan_z_idea
+			add_mastery_bonus = {
+				name = GER_plan_z
+				bonus = 0.2
+				days = 180
+				grand_doctrine = new_fleet_in_being
+				
+			}
+			
 			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			add_ideas = GER_plan_z_idea
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
 			IF = {
 				limit = { 
 					58 = {
@@ -5525,8 +5507,11 @@ focus_tree = {
 						province = 6389 
 					}
 				}
+			
 			}
+			
 			custom_effect_tooltip = generic_skip_one_line_tt
+			
 			if = {
 				limit = {
 					has_dlc = "Arms Against Tyranny"
@@ -6167,13 +6152,6 @@ focus_tree = {
 			
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			add_doctrine_cost_reduction = {
-				name = GER_re_establish_the_seekriegsleitung
-				cost_reduction = 0.5
-				uses = 1
-				category = naval_doctrine
-			}
-
 			custom_effect_tooltip = generic_skip_one_line_tt
 			custom_effect_tooltip = available_chief_of_navy
 			show_ideas_tooltip = GER_rolf_carls
@@ -6209,7 +6187,7 @@ focus_tree = {
 					name = GER_marinestosstrupp
 					cost_reduction = 0.25
 					uses = 2
-					category = cat_marines_doctrine
+					category = special_forces_doctrine
 				}
 			}
 			add_tech_bonus = {
@@ -6449,11 +6427,12 @@ focus_tree = {
 		complete_tooltip = {
 		}
 		completion_reward = {
-			add_doctrine_cost_reduction = {
+			add_mastery_bonus = {
 				name = GER_trade_interdiction
-				cost_reduction = 0.25
-				uses = 2
-				category = trade_interdiction_tree	
+				bonus = 0.2
+				days = 180
+				grand_doctrine = new_convoy_raiding
+				
 			}
 
 			custom_effect_tooltip = generic_skip_one_line_tt
@@ -6694,11 +6673,13 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_MILITARY_CHARACTER }
 
 		completion_reward = {
-			add_doctrine_cost_reduction = {
+
+			add_mastery_bonus = {
 				name = GER_wolfpack_tactics
-				cost_reduction = 0.25
-				uses = 1
-				category = trade_interdiction_tree	
+				bonus = 0.1
+				days = 240
+				grand_doctrine = new_convoy_raiding
+				track = submarines
 			}
 
 			custom_effect_tooltip = generic_skip_one_line_tt
@@ -7519,12 +7500,6 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_MILITARY_CHARACTER FOCUS_FILTER_ARMY_XP }
 
 		completion_reward = {
-			add_doctrine_cost_reduction = {
-				cost_reduction = 0.5
-				uses = 2
-				category = land_doctrine
-				name = GER_autonomy_in_the_kriegsschulen
-			}
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 

@@ -9,7 +9,8 @@ add_relation_modifier = {
 }
 oob = "USA_1936"
 
-
+#create_faction_from_template = faction_template_usa_commonwealth
+#add_to_faction = USA
 
 if = {
 	limit = { has_dlc = "Man the Guns" }

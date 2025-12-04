@@ -247,79 +247,88 @@ technologies = {
 		}
 	}
 
-	#Conversion branch - Enabled in DoD
-	#improved_equipment_conversion = {
-	#
-	#	equipment_conversion_speed = 0.40
 
-	#	allow_branch = {
-	#		has_dlc = "Death or Dishonor"
-	#	}
+	#Conversion branch - Enabled in DoD - Repurposed for Coal Energy Gain in NCNS - To be replaced in future
+	improved_equipment_conversion = {
+		energy_gain_factor = 0.15
+		#equipment_conversion_speed = 0.40
 
-	#	path = {
-	#		leads_to_tech = advanced_equipment_conversion
-	#		research_cost_coeff = 1
-	#	}
+		path = {
+			leads_to_tech = advanced_equipment_conversion
+			research_cost_coeff = 1
+		}
 		
-	#	research_cost = 2
-	#	start_year = 1937
+		research_cost = 2
+		start_year = 1937
 		
-	#	folder = {
-	#		name = industry_folder
-	#		position = { x = 2 y = 4 }
-	#	}
+		folder = {
+			name = industry_folder
+			position = { x = 2 y = 4 }
+		}
 
-	#	ai_will_do = {
-	#		factor = 1
+		ai_will_do = {
+			factor = 1
 
-	#		modifier = {
-	#			factor = 2
-	#			date > "1937.1.1"
-	#		}
+			modifier = {
+				factor = 2
+				date > "1937.1.1"
+			}
 
-	#		modifier = {
-	#			factor = 0
-	#			NOT = { has_government = fascism }
-	#		}
-	#	}
+			modifier = {
+				factor = 2
+				coal > 0
+			}
+			modifier = {
+				factor = 2
+				coal > 8
+			}
+		}
 		
-	#	categories = {
-	#		industry
-	#		cat_production
-	#	}
-	#}
+		categories = {
+			industry
+			cat_production
+			construction_tech
+			excavation_tech		
+		}
+	}
 	
-	#advanced_equipment_conversion = {
-		
-	#	equipment_conversion_speed = 0.40
+	advanced_equipment_conversion = {
+		energy_gain_factor = 0.15
+		#equipment_conversion_speed = 0.40
 
-	#	research_cost = 2
-	#	start_year = 1939
+		research_cost = 2
+		start_year = 1939
 		
-	#	folder = {
-	#		name = industry_folder
-	#		position = { x = 2 y = 6 }
-	#	}
+		folder = {
+			name = industry_folder
+			position = { x = 2 y = 6 }
+		}
 		
-	#	ai_will_do = {
-	#		factor = 1
+		ai_will_do = {
+			factor = 1
 
-	#		modifier = {
-	#			factor = 2
-	#			date > "1937.1.1"
-	#		}
+			modifier = {
+				factor = 2
+				date > "1939.1.1"
+			}
 
-	#		modifier = {
-	#			factor = 0
-	#			NOT = { has_government = fascism }
-	#		}
-	#	}
+			modifier = {
+				factor = 2
+				coal > 0
+			}
+			modifier = {
+				factor = 2
+				coal > 8
+			}
+		}
 		
-	#	categories = {
-	#		industry
-	#		cat_production
-	#	}
-	#}
+		categories = {
+			industry
+			cat_production
+			construction_tech
+			excavation_tech	
+		}
+	}
 
 	###############
 	concentrated_industry = {
@@ -1201,7 +1210,7 @@ technologies = {
 	excavation1 = {
 		
 		local_resources_factor = 0.10
-		
+		local_resources_coal_factor = 0.05
 		path = {
 			research_cost_coeff = 1
 		}
@@ -1288,7 +1297,7 @@ technologies = {
 	excavation2 = {
 		
 		local_resources_factor = 0.10
-		
+		local_resources_coal_factor = 0.05
 		path = {
 			research_cost_coeff = 1
 		}
@@ -1387,7 +1396,7 @@ technologies = {
 	excavation3 = {
 		
 		local_resources_factor = 0.10
-		
+		local_resources_coal_factor = 0.05
 		path = {
 			research_cost_coeff = 1
 		}
@@ -1482,7 +1491,7 @@ technologies = {
 	excavation4 = {
 		
 		local_resources_factor = 0.10
-		
+		local_resources_coal_factor = 0.05
 		path = {
 			research_cost_coeff = 1
 		}
@@ -1567,7 +1576,7 @@ technologies = {
 	excavation5 = {
 		
 		local_resources_factor = 0.10
-		
+		local_resources_coal_factor = 0.05
 		path = {
 			research_cost_coeff = 1
 		}

@@ -2,7 +2,9 @@
 ####
 #### NO STEP BACK
 ####
-
+create_faction_from_template = faction_template_sov
+#create_faction = Comintern
+add_to_faction = SOV
 
 #You don't want Russian party names? Just remove these lines
 set_party_name = {
@@ -496,7 +498,7 @@ set_variable = { SOV_planned_economy_industry_repair_factor = 0 } #Victory Over 
 set_variable = { SOV_planned_economy_consumer_goods_factor = 0 } #Victory Over Devastation
 
 
-#Add synthetic refineries tech
+
 set_technology = {
 	synth_oil_experiments = 1
 		infantry_weapons = 1
@@ -689,9 +691,6 @@ set_popularities = {
 	communism = 88
 }
 
-create_faction = Comintern
-#create_faction_from_template = faction_template_comintern
-add_to_faction = SOV
 
 if = {
 	limit = {

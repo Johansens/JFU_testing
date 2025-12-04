@@ -147,9 +147,7 @@ superior_firepower = {
     category_line_artillery = {
         soft_attack = 0.1
     }
-    category_support_artillery = {
-        soft_attack = 0.05
-    }
+
 
 
     milestones = {
@@ -221,9 +219,11 @@ superior_firepower = {
             #Operations
             enable_tactic = tactic_tactical_withdrawal
             category_army = {
-                default_morale = 0.4
+                default_morale = 0.2
             }
-            planning_decay_rate_factor = -0.1
+            category_support_artillery = {
+                soft_attack = 0.1
+            }
 
             effect = {
                 if = {
@@ -278,7 +278,7 @@ grand_battleplan = {
             #Infantry 
             #additional_brigade_column_size = 1
             enable_tactic = tactic_elastic_defense
-            max_planning = 0.1
+            max_planning = 0.05
 
             effect = {
                 if = {
