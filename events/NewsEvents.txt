@@ -2914,6 +2914,7 @@ news_event = {
 		446 = { is_owned_by = ENG }
 		GER = { has_war_with = ENG }
 		NOT = { has_global_flag = fall_of_cairo }
+		always = no
 	}
 	
 	immediate = {
@@ -3086,6 +3087,7 @@ news_event = {
 		446 = { is_owned_by = ENG }
 		ITA = { has_war_with = ENG }
 		NOT = { has_global_flag = fall_of_cairo_ita }
+		always = no
 	}
 	
 	immediate = {

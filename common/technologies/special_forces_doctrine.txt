@@ -423,7 +423,7 @@ technologies = {
 		#xor = { special_forces_mountaineers special_forces_paratroopers }
 		
 		force_use_small_tech_layout = yes
-		naval_invasion_capacity = 5
+		#naval_invasion_plan_cap = 5
 		naval_invasion_division_cap = 3
 		naval_invasion_planning_bonus_speed = 2	
 		enable_subunits = {

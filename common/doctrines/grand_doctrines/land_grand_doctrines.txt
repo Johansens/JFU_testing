@@ -56,8 +56,7 @@ new_mobile_warfare = {
         }
         {
             #Artillery/Support
-	        planning_speed = 0.1
-            org_loss_at_low_org_factor = -0.1
+	        breakthrough_factor = 0.1
             enable_tactic = tactic_overwhelming_fire
             effect = {
                 if = {
@@ -176,7 +175,6 @@ superior_firepower = {
             category_support_battalions = {
                 max_organisation = 10
             }
-            planning_decay_rate_factor = -0.1
             enable_tactic = tactic_barrage
 
             effect = {
@@ -278,8 +276,9 @@ grand_battleplan = {
             #Infantry 
             #additional_brigade_column_size = 1
             enable_tactic = tactic_elastic_defense
-            max_planning = 0.05
-
+            #max_planning = 0.05
+            max_dig_in_factor = 0.05
+            planning_speed = 0.25
             effect = {
                 if = {
                     limit = {
@@ -296,7 +295,7 @@ grand_battleplan = {
         }
         {
             #Artillery/Support
-            coordination_bonus = 0.1
+            coordination_bonus = 0.05
             enable_tactic = tactic_overwhelming_fire
 
             effect = {
@@ -334,7 +333,7 @@ grand_battleplan = {
         }
         {
             #Operations
-            coordination_bonus = 0.1
+            coordination_bonus = 0.05
             max_command_power = 30
 
             effect = {
@@ -389,7 +388,7 @@ mass_assault = {
             #Infantry
             enable_tactic = tactic_human_wave_tactics
             #additional_brigade_column_size = 1
-
+            land_reinforce_rate = 0.02
             effect = {
                 if = {
                     limit = {
@@ -426,7 +425,8 @@ mass_assault = {
         }
         {
             #Armor
-            land_reinforce_rate = 0.02
+            land_reinforce_rate = 0.03
+            dig_in_speed_factor = 0.05
             enable_tactic = tactic_overwhelming_fire
 
             effect = {
@@ -448,8 +448,8 @@ mass_assault = {
             enable_tactic = tactic_backhand_blow
             weekly_casualties_war_support = 0.001
             minimum_training_level = -0.05
-            dig_in_speed_factor = 0.05
 
+            supply_factor = 0.1
             effect = {
                 if = {
                     limit = {

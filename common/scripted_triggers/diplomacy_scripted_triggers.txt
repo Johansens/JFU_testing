@@ -44,8 +44,8 @@ DIPLOMACY_LEND_LEASE_ENABLE_TRIGGER = {
 			date > 1940.01.01
 		}
 	}
-	if = { limit = { FROM = { axis = yes  } } 	NOT = { ROOT = { OR = { tag = MAN tag = JAP } } } }
-	if = { limit = { FROM = { OR = { tag = MAN tag = JAP } } } 	NOT = { ROOT = { axis = yes  } } }
+	if = { limit = { FROM = { europa_axis = yes } }	NOT = { ROOT = { asia_axis = yes } } }
+	if = { limit = { FROM = { asia_axis = yes } }	NOT = { ROOT = { europa_axis = yes  } } }
 	if = { 
 		limit = {
 			FROM = { axis = yes}

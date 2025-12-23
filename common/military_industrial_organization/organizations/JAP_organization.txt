@@ -1538,50 +1538,50 @@ JAP_light_aircraft_organization = {
 			base = 2
 		}
 	}
-	#add_trait = {
-	#	token = JAP_agility_focus_trait
-	#	name = JAP_agility_focus_trait
-	#
-	#	icon = GFX_generic_mio_trait_icon_air_agility
-	#	special_trait_background = yes
-	#	
-	#	position = { x=2 y=-1 }
-	#	relative_position_id = generic_mio_trait_fuselage_ordinance_rack
-	#
-	#	available = {
-	#		FROM = {
-	#			has_completed_focus = JAP_agility_focus
-	#		}
-	#	}
-	#
-	#	equipment_bonus = {
-	#		air_defence = 0.15
-	#		air_attack = 0.10
-	#	} 
-	#}
+	add_trait = {
+		token = JAP_agility_focus_trait
+		name = JAP_agility_focus_trait
+	
+		icon = GFX_generic_mio_trait_icon_air_agility
+		special_trait_background = yes
+		
+		position = { x=1 y=1 }
+		relative_position_id = generic_mio_trait_fuselage_ordinance_rack
+	
+		available = {
+			FROM = {
+				has_completed_focus = JAP_sea_sturdy_aircraft
+			}
+		}
+	
+		equipment_bonus = {
+			air_defence = 0.15
+			air_attack = 0.10
+		} 
+	}
 
-	#add_trait = {
-	#	token = JAP_range_focus_trait
-	#	name = JAP_range_focus_trait
-	#
-	#	icon = GFX_generic_mio_trait_icon_air_agility
-	#	special_trait_background = yes
-	#	
-	#	position = { x=2 y=0 }
-	#	relative_position_id = generic_mio_trait_fuselage_ordinance_rack
-	#
-	#	available = {
-	#		FROM = {
-	#			has_completed_focus = JAP_range_focus
-	#		}
-	#	}
-	#
-	#	equipment_bonus = {
-	#		air_range = 0.10
-	#		air_defence = 0.10
-	#		air_attack = 0.05
-	#	} 
-	#}
+	add_trait = {
+		token = JAP_range_focus_trait
+		name = JAP_range_focus_trait
+	
+		icon = GFX_generic_mio_trait_icon_air_agility
+		special_trait_background = yes
+		
+		position = { x=1 y=2 }
+		relative_position_id = generic_mio_trait_fuselage_ordinance_rack
+	
+		available = {
+			FROM = {
+				has_completed_focus = JAP_sea_long_operational_range
+			}
+		}
+	
+		equipment_bonus = {
+			air_range = 0.20
+			air_defence = 0.05
+			air_attack = 0.05
+		} 
+	}
 }
 
 JAP_nakajima_organization = {
@@ -1840,6 +1840,50 @@ JAP_yokosuka_organization = {
 		}
 	}
 
+	add_trait = {
+		token = JAP_agility_focus_trait
+		name = JAP_agility_focus_trait
+
+		icon = GFX_generic_mio_trait_icon_air_agility
+		special_trait_background = yes
+		
+		position = { x=4 y=1 }
+		relative_position_id = generic_mio_trait_navigation_equipment
+
+		available = {
+			FROM = {
+				has_completed_focus = JAP_sea_sturdy_aircraft
+			}
+		}
+
+		equipment_bonus = {
+			air_defence = 0.15
+			air_attack = 0.10
+		} 
+	}
+
+	add_trait = {
+		token = JAP_range_focus_trait
+		name = JAP_range_focus_trait
+
+		icon = GFX_generic_mio_trait_icon_air_agility
+		special_trait_background = yes
+		
+		position = { x=4 y=2 }
+		relative_position_id = generic_mio_trait_navigation_equipment
+
+		available = {
+			FROM = {
+				has_completed_focus = JAP_sea_long_operational_range
+			}
+		}
+
+		equipment_bonus = {
+			air_range = 0.20
+			air_defence = 0.05
+			air_attack = 0.05
+		} 
+	}
 }
 
 JAP_kawanishi_aircraft_company_organization = {

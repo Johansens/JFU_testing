@@ -466,19 +466,21 @@ country_event = {
 		name = "So it be"
 
 		hidden_effect = {
-			ITA = { add_to_war = { targeted_alliance = GER enemy = ENG } add_timed_idea = { idea = GER_the_blitzkrieg days = 365 } set_technology = { Blitzkrieg_ON = 1 } }
-			GER = { add_timed_idea = { idea = GER_the_blitzkrieg days = 365 } set_technology = { Blitzkrieg_ON = 1 popup = no } }
-			SPR = { add_timed_idea = { idea = GER_the_blitzkrieg days = 365 } set_technology = { Blitzkrieg_ON = 1 popup = no } }
-			HUN = { add_timed_idea = { idea = GER_the_blitzkrieg days = 365 } set_technology = { Blitzkrieg_ON = 1 popup = no } }
-			BUL = { add_timed_idea = { idea = GER_the_blitzkrieg days = 365 } set_technology = { Blitzkrieg_ON = 1 popup = no } }
-			ROM = { add_timed_idea = { idea = GER_the_blitzkrieg days = 365 } set_technology = { Blitzkrieg_ON = 1 popup = no } }
-			ENG = { add_timed_idea = { idea = ENG_operation_compass days = 365 } set_technology = { Blitzkrieg_ON = 1 popup = no } }
-			FRA = { add_timed_idea = { idea = ENG_operation_compass days = 365 } set_technology = { Blitzkrieg_ON = 1 popup = no } }
-			CAN = { add_timed_idea = { idea = ENG_operation_compass days = 365 } set_technology = { Blitzkrieg_ON = 1 popup = no } }
-			SAF = { add_timed_idea = { idea = ENG_operation_compass days = 365 } set_technology = { Blitzkrieg_ON = 1 popup = no } }
-			RAJ = { add_timed_idea = { idea = ENG_operation_compass days = 365 } set_technology = { Blitzkrieg_ON = 1 popup = no } }
-			AST = { add_timed_idea = { idea = ENG_operation_compass days = 365 } set_technology = { Blitzkrieg_ON = 1 popup = no } }
-			NZL = { add_timed_idea = { idea = ENG_operation_compass days = 365 } set_technology = { Blitzkrieg_ON = 1 popup = no } }
+			ITA = { add_to_war = { targeted_alliance = GER enemy = ENG } 
+			#add_timed_idea = { idea = GER_the_blitzkrieg days = 365 } set_technology = { Blitzkrieg_ON = 1 } 
+			}
+			#GER = { add_timed_idea = { idea = GER_the_blitzkrieg days = 365 } set_technology = { Blitzkrieg_ON = 1 popup = no } }
+			#SPR = { add_timed_idea = { idea = GER_the_blitzkrieg days = 365 } set_technology = { Blitzkrieg_ON = 1 popup = no } }
+			#HUN = { add_timed_idea = { idea = GER_the_blitzkrieg days = 365 } set_technology = { Blitzkrieg_ON = 1 popup = no } }
+			#BUL = { add_timed_idea = { idea = GER_the_blitzkrieg days = 365 } set_technology = { Blitzkrieg_ON = 1 popup = no } }
+			#ROM = { add_timed_idea = { idea = GER_the_blitzkrieg days = 365 } set_technology = { Blitzkrieg_ON = 1 popup = no } }
+			#ENG = { add_timed_idea = { idea = ENG_operation_compass days = 365 } set_technology = { Blitzkrieg_ON = 1 popup = no } }
+			#FRA = { add_timed_idea = { idea = ENG_operation_compass days = 365 } set_technology = { Blitzkrieg_ON = 1 popup = no } }
+			#CAN = { add_timed_idea = { idea = ENG_operation_compass days = 365 } set_technology = { Blitzkrieg_ON = 1 popup = no } }
+			#SAF = { add_timed_idea = { idea = ENG_operation_compass days = 365 } set_technology = { Blitzkrieg_ON = 1 popup = no } }
+			#RAJ = { add_timed_idea = { idea = ENG_operation_compass days = 365 } set_technology = { Blitzkrieg_ON = 1 popup = no } }
+			#AST = { add_timed_idea = { idea = ENG_operation_compass days = 365 } set_technology = { Blitzkrieg_ON = 1 popup = no } }
+			#NZL = { add_timed_idea = { idea = ENG_operation_compass days = 365 } set_technology = { Blitzkrieg_ON = 1 popup = no } }
 			country_event = { id = JFU_events.8 days = 365 }		
 		}
 	}
@@ -495,7 +497,11 @@ news_event = {
 	hidden = yes
 	major = yes
 	trigger = {
-		907 = { is_controlled_by = ITA }
+		OR = {
+			907 = { is_controlled_by = ITA }
+			907 = { is_controlled_by = GER }
+		}
+
 		907 = { is_owned_by = ENG }
 		GER = { has_war_with = ENG }
 		NOT = { has_global_flag = fall_of_cairo }

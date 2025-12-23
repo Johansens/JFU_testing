@@ -620,6 +620,7 @@ JFU_equipment_on_start_up_effect = {
 		add_dynamic_modifier = { modifier = pacific_war_allies }
 	}
 	SIA = {
+		add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 2000 }
 		add_equipment_to_stockpile = { type = train_equipment_1 amount = 50 }
 		add_equipment_to_stockpile = { type = motorized_equipment_1 amount = 200 }
 		add_equipment_to_stockpile = { type = convoy_1 amount = 100 producer = SIA }
@@ -651,6 +652,7 @@ JFU_comp_startup_effect = {
 	EFR = { add_ideas = JFU_no_tradeback }
 	JAP = { add_ideas = JFU_no_tradeback }
 	MAN = { add_ideas = JFU_no_tradeback }
+	SIA = { add_ideas = JFU_no_tradeback }
 	#ENG = { add_timed_idea = { idea = JFU_no_tradeback days = 730 } }
 	#USA = { add_timed_idea = { idea = JFU_no_tradeback days = 730 } }
 	#FRA = { add_timed_idea = { idea = JFU_no_tradeback days = 730 } }
@@ -740,7 +742,7 @@ JFU_comp_startup_effect = {
 			instant_build = yes
 		}
 	}	
-	605 = {
+	283 = {
 		add_extra_state_shared_building_slots = 15
 		add_building_construction = {
 			type = arms_factory
@@ -2025,10 +2027,10 @@ JFU_pregrinded_effect = {
 			} 
 		add_ideas = { scw_pre_grinded_nerf2 }
 		}			
-		#SPR_antonio_cordon_garcia = { add_skill_level = 2 }
+		SPR_antonio_cordon_garcia = { add_skill_level = 2 }
 		SPR_antonio_cordon_garcia = { add_attack = 2 }
         SPR_antonio_cordon_garcia = { add_defense = 4 }
-       	#SPR_antonio_cordon_garcia = { add_planning = 1 }
+       	SPR_antonio_cordon_garcia = { add_planning = 1 }
 		SPR_antonio_cordon_garcia = { add_logistics = 3 }
         SPR_antonio_cordon_garcia = {
         	add_unit_leader_trait = pre_grinded
@@ -2047,7 +2049,7 @@ JFU_pregrinded_effect = {
             add_unit_leader_trait = logistics_wizard
 			add_unit_leader_trait = aggressive_assaulter
 		}
-		#SPA_francisco_franco = { add_skill_level = 1 }
+		SPA_francisco_franco = { add_skill_level = 1 }
 		SPA_francisco_franco = { add_attack = 4 }
         SPA_francisco_franco = { add_defense = 1 }
         SPA_francisco_franco = { add_planning = 1 }
@@ -2084,7 +2086,7 @@ JFU_pregrinded_effect = {
 			add_unit_leader_trait = ranger
 			add_unit_leader_trait = desert_fox
         }
-		#SPR_gonzalo_queipo_de_llano = { add_skill_level = 1 }
+		SPR_gonzalo_queipo_de_llano = { add_skill_level = 1 }
 		SPR_gonzalo_queipo_de_llano = { add_attack = 4 }
         SPR_gonzalo_queipo_de_llano = { add_defense = 1 }
         SPR_gonzalo_queipo_de_llano = { add_planning = 3 }
@@ -2292,8 +2294,8 @@ JFU_pregrinded_effect = {
         MAN_kenkichi_ueda = {
         	add_unit_leader_trait = pre_grinded
             add_unit_leader_trait = trait_engineer
-            add_unit_leader_trait = panzer_expert
             add_unit_leader_trait = panzer_leader
+            add_unit_leader_trait = combined_arms_expert
 			add_unit_leader_trait = hill_fighter
 			add_unit_leader_trait = trait_mountaineer
 			add_unit_leader_trait = trait_engineer
@@ -2311,6 +2313,48 @@ JFU_pregrinded_effect = {
 			add_unit_leader_trait = defensive_doctrine
             add_unit_leader_trait = logistics_wizard
 		}
+	}
+	SIA = {
+		SIA_Phahon = { add_attack = 4 }
+		SIA_Phahon = { add_defense = 4 }
+		SIA_Phahon = { add_planning = 2 }
+		SIA_Phahon = { add_logistics = 1 }
+		SIA_Phahon = {
+			add_unit_leader_trait = pre_grinded
+            add_unit_leader_trait = commando
+            add_unit_leader_trait = fortress_buster
+            add_unit_leader_trait = trait_mountaineer
+            add_unit_leader_trait = infantry_expert
+			add_unit_leader_trait = expert_improviser
+			add_unit_leader_trait = trait_engineer
+			add_unit_leader_trait = fortress_buster
+            add_unit_leader_trait = panzer_expert
+            add_unit_leader_trait = panzer_leader
+            add_unit_leader_trait = ranger
+		}
+		SIA_Plaek_Phibun = {  add_attack = 4  }
+		SIA_Plaek_Phibun = { add_defense = 2 }
+		SIA_Plaek_Phibun = { add_planning = 2 }
+		SIA_Plaek_Phibun = { add_logistics = 3 }
+        SIA_Plaek_Phibun = {
+        	add_unit_leader_trait = pre_grinded
+            add_unit_leader_trait = organizer
+            add_unit_leader_trait = infantry_expert
+            add_unit_leader_trait = infantry_leader
+            add_unit_leader_trait = trait_engineer
+            add_unit_leader_trait = trickster
+			add_unit_leader_trait = hill_fighter
+			add_unit_leader_trait = trait_mountaineer
+            add_unit_leader_trait = panzer_expert
+            add_unit_leader_trait = panzer_leader
+            add_unit_leader_trait = aggressive_assaulter
+        }
+		SIA_Plaek_Phibun = { promote_leader = yes}
+		SIA_Plaek_Phibun = {
+			add_unit_leader_trait = offensive_doctrine
+			add_unit_leader_trait = logistics_wizard
+			add_unit_leader_trait = thorough_planner
+		}	
 	}
 	FIN = {
 		FIN_erik_heinrichs = { add_attack = 2 }
@@ -2426,7 +2470,7 @@ JFU_pregrinded_effect = {
             add_unit_leader_trait = defensive_doctrine
 			add_unit_leader_trait = logistics_wizard
 		}
-		#SOV_nikolay_vatutin = { add_skill_level = 1 }
+		SOV_nikolay_vatutin = { add_skill_level = 1 }
 		SOV_nikolay_vatutin = { add_attack = 1 }
 		SOV_nikolay_vatutin = { add_defense = 1 }
 		SOV_nikolay_vatutin = { add_planning = 1 }
@@ -2440,7 +2484,7 @@ JFU_pregrinded_effect = {
 			add_unit_leader_trait = trickster	
 			add_unit_leader_trait = organizer		
 		}
-		#SOV_dmitry_lelyushenko = { add_skill_level = 2 }
+		SOV_dmitry_lelyushenko = { add_skill_level = 2 }
 		SOV_dmitry_lelyushenko = { add_attack = 3 }
 		SOV_dmitry_lelyushenko = { add_defense = 3 }
 		SOV_dmitry_lelyushenko = { add_logistics = 4 }	
@@ -2457,7 +2501,7 @@ JFU_pregrinded_effect = {
 			add_unit_leader_trait = fortress_buster
 			add_unit_leader_trait = winter_specialist
 		}
-		#SOV_andrey_grechko = { add_skill_level = 1 }
+		SOV_andrey_grechko = { add_skill_level = 1 }
 		SOV_andrey_grechko = { add_attack = 3 }
 		SOV_andrey_grechko = { add_defense = 1 }
 		SOV_andrey_grechko = { add_planning = 1 }
@@ -2470,7 +2514,7 @@ JFU_pregrinded_effect = {
 			add_unit_leader_trait = cavalry_leader	
 			add_unit_leader_trait = cavalry_expert				
 		}
-		#SOV_vasily_chuykov = { add_skill_level = 2 }
+		SOV_vasily_chuykov = { add_skill_level = 2 }
 		SOV_vasily_chuykov = { add_attack = 1 }
 		SOV_vasily_chuykov = { add_defense = 3 }
 		SOV_vasily_chuykov = { add_planning = 1 }
@@ -2830,7 +2874,7 @@ JFU_pregrinded_effect = {
 		RAJ_douglas_gracey = { promote_leader = yes }
 		RAJ_douglas_gracey = {
 			add_unit_leader_trait = logistics_wizard
-			add_unit_leader_trait = defensive_doctrine
+			#add_unit_leader_trait = defensive_doctrine
 		}
 	}
 	NZL = {	
@@ -5154,4 +5198,38 @@ ETH_upgrade_state_category = {
 		limit = { has_state_category = city }
 		set_state_category = large_city
 	}
+}
+swap_great_depression = {
+
+			if = {
+				limit = { has_idea = SIA_Great_Depression_I }
+				swap_ideas = {
+					remove_idea = SIA_Great_Depression_I
+					add_idea = SIA_Great_Depression_II
+				}
+			}
+			else_if = {
+				limit = { has_idea = SIA_Great_Depression_II }
+				
+				swap_ideas = {
+					remove_idea = SIA_Great_Depression_II
+					add_idea = SIA_Great_Depression_III
+				}
+			
+			}
+			else_if = {
+				limit = { has_idea = SIA_Great_Depression_III }
+				
+				swap_ideas = {
+					remove_idea = SIA_Great_Depression_III
+					add_idea = SIA_Great_Depression_IV
+				}
+			
+			}
+			else_if = {
+				limit = { has_idea = SIA_Great_Depression_IV }
+				remove_ideas = SIA_Great_Depression_IV
+			}
+
+
 }

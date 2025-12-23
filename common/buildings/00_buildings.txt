@@ -361,6 +361,7 @@ buildings = {
 		naval_supply_hub = yes
 		infrastructure_construction_effect = yes
 		only_costal = yes
+		allied_build = yes
 		tags = { naval_buildings_tag }
 		building_prerequisite = {
 			building_dependency = {
@@ -681,7 +682,7 @@ buildings = {
 
 	
 	energy_infrastructure = {
-		base_cost = 12000
+		base_cost = 8000
 		icon_frame = 30
 		value = 1
 
@@ -700,7 +701,7 @@ buildings = {
 	}
 	
 	industrial_infrastructure = {
-		base_cost = 12000
+		base_cost = 8000
 		icon_frame = 31
 		value = 1
 

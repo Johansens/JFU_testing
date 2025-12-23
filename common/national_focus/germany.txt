@@ -8113,6 +8113,7 @@ focus_tree = {
 				EFR = { remove_ideas = JFU_no_tradeback }
 				JAP = { remove_ideas = JFU_no_tradeback }
 				MAN = { remove_ideas = JFU_no_tradeback }
+				SIA = { remove_ideas = JFU_no_tradeback }
 			}
 			custom_effect_tooltip = GER_danzig_or_war_tt
 			add_named_threat = { threat = 5 name = GER_danzig_or_war }
@@ -8233,6 +8234,10 @@ focus_tree = {
 					}
 					add_resource = {
 						type = Tungsten
+						amount = 50
+					}
+					add_resource = {
+						type = chromium
 						amount = 50
 					}
 				}
@@ -8577,7 +8582,7 @@ focus_tree = {
 		available_if_capitulated = yes
 		
 		available = {
-			NOT = { SOV = { has_completed_focus = SOV_lessons_of_war } }  
+			#NOT = { SOV = { has_completed_focus = SOV_lessons_of_war } }  
 			NOT = { controls_state = 219 }
 		}
 

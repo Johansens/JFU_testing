@@ -361,8 +361,8 @@ technologies = {
 			engine_4_1x
 			engine_4_2x
 			engine_4_3x
-			engine_4_4x
-			engine_4_6x	
+			#engine_4_4x
+			#engine_4_6x	
 		}		
 		path = {
 			leads_to_tech = modern_small_airframe
@@ -698,7 +698,7 @@ technologies = {
 			medium_plane_scout_plane_airframe_3
 		}
 		enable_equipment_modules = {
-			engine_4_1x
+			#engine_4_1x
 			engine_4_2x
 			engine_4_3x
 			engine_4_4x
@@ -979,8 +979,8 @@ technologies = {
 			large_plane_maritime_patrol_plane_airframe_3
 		}
 		enable_equipment_modules = {
-			engine_4_1x
-			engine_4_2x
+			#engine_4_1x
+			#engine_4_2x
 			engine_4_3x
 			engine_4_4x
 			engine_4_6x	

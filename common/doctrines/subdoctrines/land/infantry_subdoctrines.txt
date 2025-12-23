@@ -454,8 +454,12 @@ commandos = {
 
     ai_will_do = { base = 0 }
     enable_tactic = tactic_infantry_charge
-    category_light_infantry = {
-        max_strength = 0.15
+    logistics_company = {
+        battalion_mult = {
+            category = category_light_infantry
+            max_strength = 5
+            add = yes
+        }
     }
 
     # EFFECTS

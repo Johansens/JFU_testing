@@ -1033,7 +1033,7 @@
  kursk_failed:0 "Operation Citadelle has failed"
  GER_prio_fighter_tt:0 "Add '§YFighter Priority§!', which grants \n(§YFighter§!: $production_cost_tt$ §G-10.00%§!, §YLight§!, §YMedium§! and §YHeavy Armor§!: $production_cost_tt$ §R+15.00%§!)"
  GER_prio_tanks_tt:0 "Add '§YArmor Priority§!', which grants \n(§YLight§!, §YMedium§! and §YHeavy Armor§!: $production_cost_tt$ §G-10.00%§!, §YFighter§!: $production_cost_tt$ §R+15.00%§!)"
- GER_SWE_deal_tt:0 "We will broker a trade deal with @SWE§YSweden§! giving us access to their §YSteal§! and §YTungsten§! (adds §Y80§! Steel and §Y50§! Tungesten in Oslo)"
+ GER_SWE_deal_tt:0 "We will broker a trade deal with @SWE§YSweden§! giving us access to their §YSteal§!, §YTungsten§! and §YChromium§! (adds §Y80§! Steel, §Y50§! Tungesten and §Y50§! Chromium in Oslo)"
  endsieg_tanks_tt:0 "§HOur§! §CDivision Attack on core territory§! §Hand§! §CDivision Defense on core territory§! §Hwill increase by§! §C10%§!.\n§RWe will also double our Total war Modifier§!"
  endsieg_tt:0 "§HWe will deploy §G72 40w infantry divisions§! to hold the line.§!\n\n"
  das_letzte_aufgebot_tt:0 "§HOur§! §CDivision Attack on core territory§! §Hand§! §CDivision Defense on core territory§! §Hwill increase by an additonal§! §C10%§!."
@@ -1237,6 +1237,10 @@
 
  MAN_opiumtrade:0 "Opium Trade"
  MAN_agriculturaltrade:09 "Agricultural Trade"
+ MAN_importjap:0 "Manchu Japanese trade"
+
+
+ SIA_importjap:0 "Siam Japanese Trade"
 
  fin_sisu:0 "Sisu"
  fin_sisu2:0 "Sisu"
@@ -1358,6 +1362,8 @@
  SOV_small_barb_enable_tt:0 "Gives Soviet and Germany only one Airport to manage, so ACing is easier"
  SOV_small_barb:0 "Germans clicked Small Barb Decision"
 
+
+ JFU_no_asia_test:0 "JFU No Asia"
  JFU_decisions:0 " JFU Decisions"
  JFU_templates:0 "JFU Template Decisions"
  political_actions1:0 "JFU Political Actions"
@@ -1817,6 +1823,8 @@
  resourcetungsten1:0 "[?resource@tungsten|0+]"
  resourcechromium:0 "[?resource@chromium|0Y]"
  resourcechromium1:0 "[?resource@chromium|0+]"
+ coal_yellow_tt:0 "[?resource@coal|0Y]" 
+ coal_green_tt:0 "[?resource@coal|0+]"
 
  GER_reichskommissariat_highlighted_required_states_80_comp:0 "§Y[ROOT.GetNameWithFlag]§! or a subject control all §YHighlighted States§! with compliance higher then §Y80%§!"
  GER_reichskommissariat_highlighted_required_states_70_comp:0 "§Y[ROOT.GetNameWithFlag]§! or a subject control all §YHighlighted States§! with compliance higher then §Y70%§!"

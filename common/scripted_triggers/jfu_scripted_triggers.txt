@@ -14,6 +14,27 @@ axis = {
 	}
 }
 
+europa_axis = {
+	OR = {
+		tag = GER
+		tag = ITA
+		tag = HUN
+		tag = ROM
+		tag = SPR
+		tag = BUL
+		tag = EFR
+		tag = FIN
+	}	
+}
+
+asia_axis = {
+	OR = {
+		tag = JAP
+		tag = SIA
+		tag = MAN
+	}
+}
+
 allies = {
 	OR = {
 		tag = ENG

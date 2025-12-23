@@ -36,8 +36,8 @@ pacific_war_aallies = {
 GER_endsieg = {
 	enable = { always = yes }
 	icon = "GFX_idea_generic_fascism_drift_2"
-	war_support_weekly_factor = germany_war_war_support_weekly_factor
-	stability_weekly_factor = germany_war_stability_weekly_factor
+	war_support_weekly = germany_war_war_support_weekly_factor
+	stability_weekly = germany_war_stability_weekly_factor
 	army_core_attack_factor = germany_war_army_core_attack_factor
 	army_core_defence_factor = germany_war_army_core_defence_factor	
 	consumer_goods_factor = germany_war_consumer_goods_factor
@@ -231,4 +231,33 @@ FRA_maginot_defence_modifier = {
 	supply_combat_penalties_on_core_factor = -0.50
 	cas_damage_reduction = 0.75
 	
+}
+SIA_Principles = {
+	enable = { always = yes }
+
+	icon = GFX_idea_supreme_power
+	
+	stability_factor = 0.1
+	
+	political_power_factor = SIA_Principles_Political_Power
+	army_core_attack_factor = SIA_Principles_Attack
+    army_core_defence_factor = SIA_Principles_Defense
+	consumer_goods_factor = SIA_Principles_Consumer_Goods
+	conscription_factor = SIA_Principles_Recruitable
+	compliance_growth = SIA_Principles_Compliance
+	research_speed_factor = SIA_Principles_Research
+}
+
+SIA_Cultural_Mandate = {
+
+	enable = { always = yes }
+
+	icon = GFX_idea_supreme_power
+	
+	conscription_factor = SIA_mandate_conscription_factor
+	stability_factor = SIA_mandate_stability_factor
+	war_support_factor = SIA_mandate_war_support_factor
+	weekly_manpower = SIA_mandate_weekly_manpower
+	consumer_goods_factor = SIA_mandate_consumer_goods_factor
+	industrial_capacity_factory = SIA_mandate_industrial_capacity_factory
 }

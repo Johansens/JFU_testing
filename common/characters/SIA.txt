@@ -1,9 +1,36 @@
-characters={
-	SIA_phraya_phahon={
+characters = {
+    SIA_Plaek_Phibun = {
+		name = SIA_Plaek_Phibun
+		portraits={
+			civilian={
+				large = GFX_portrait_phibun
+			}
+			army = {
+				large = GFX_portrait_phibun
+				small="GFX_portrait_phibun_small"
+			}
+		}
+		
+		corps_commander={
+			traits={ politically_connected infantry_leader}
+			skill=4
+			attack_skill=3
+			defense_skill=3
+			planning_skill=3
+			logistics_skill=2
+			legacy_id=0
+		}
+	}
+	
+	SIA_Phahon={
 		name="Phraya Phahon"
 		portraits={
 			civilian={
 				large=GFX_portrait_Phraya_Phahon
+			}
+			army = {
+				large = GFX_portrait_Phraya_Phahon
+				small="GFX_portrait_phahon_small"
 			}
 		}
 		country_leader={
@@ -11,465 +38,423 @@ characters={
 			expire="1965.1.1.1"
 			id=-1
 		}
+		
+		corps_commander={
+			traits={ career_officer politically_connected infantry_leader }
+			skill=4
+			attack_skill=3
+			defense_skill=2
+			planning_skill=3
+			logistics_skill=4
+			legacy_id=0
+		}
 	}
-
-	SIA_nangklao_suriyawongse={
-		name="Nangklao Suriyawongse"
+	
+    SIA_Rama_VII = {
+		name = SIA_Rama_VII
 		portraits={
 			civilian={
-				large=GFX_portrait_Nangklao_Suriyawongse
+				large = GFX_portrait_rama
 			}
 		}
-		country_leader={
-			ideology=gen_nazism
-			expire="1953.1.1.12"
-			id=-1
-		}
 	}
-
-	SIA_plaek_phibunsongkhram={
-		name="Plaek Phibunsongkhram"
+	
+	SIA_pridi_bhanomyong={
+		name = SIA_pridi_bhanomyong
 		portraits={
 			civilian={
-				large=GFX_portrait_Plaek_Phibunsongkhram
+				large = GFX_idea_pridi
 			}
 		}
-		country_leader={
-			ideology=fascism_ideology
-			expire="1953.1.1.12"
-			id=-1
+	}
+		
+	SIA_Peoples_Assembly = {
+		name = SIA_Peoples_Assembly
+		portraits = {
+			civilian = {
+				large = GFX_portrait_SOV_supreme_soviet
+			}
 		}
 	}
-
-	SIA_tianliang_huntrakool={
-		advisor={
-			
-			
-			slot = high_command
-			idea_token = SIA_tianliang_huntrakool
-			ledger = army
-				allowed = {
-					original_tag = SIA
+	
+	SIA_Prince_Boworadet = {
+			name = SIA_Prince_Boworadet
+			portraits = {
+				civilian = {
+					large = GFX_portrait_boworadet
 				}
-				traits = {
-					army_armored_2
+				army = {
+					large = GFX_portrait_boworadet
+					small="GFX_portrait_bowaradet_small"
 				}
-				cost = 100
-				ai_will_do = {
-					factor = 1.000
-				}
+			}
 		}
-		name="Tianliang Huntrakool"
+		
+	SIA_Prince_Naris={
+		name=SIA_Prince_Naris
 		portraits={
 			army={
-				small="GFX_idea_generic_army_asia_3"
+				small="GFX_portrait_narisara"
 			}
 		}
-	}
-
-	SIA_phra_silpasakrakorn={
 		advisor={
-			cost = 100
+			slot = political_advisor
+			idea_token = Prince_Naris
+			allowed = {
+				original_tag = SIA
+			}
+			traits = {
+				the_great_craftsman 
+			}
+		}		
+	}
+	
+	SIA_Paribatra_Sukhumbandhu={
+		name=SIA_Paribatra_Sukhumbandhu
+		portraits={
+			army={
+				small="GFX_portrait_paribatra"
+			}
+		}
+		
+		advisor={
+			slot = political_advisor
+			idea_token = Paribatra_Sukhumbandhu
+			allowed = {
+				original_tag = SIA
+			}
+			
+			available = {
+				has_completed_focus = SIA_Invite_Paribatra_to_Return
+			}
+			
+			traits = {
+				war_industrialist 
+			}
+		}		
+	}
+	
+	SIA_Prince_Damrong={
+		name=SIA_Prince_Damrong
+		portraits={
+			army={
+				small="GFX_portrait_damrong"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = Prince_Damrong
+			allowed = {
+				original_tag = SIA
+			}
+			traits = {
+				education_reformer 
+			}
+		}		
+	}
+	
+	## New Advisors (Political)
+	
+	SIA_Khuang_Aphaiwong={
+		name=SIA_Khuang_Aphaiwong
+		portraits={
+			army={
+				small="GFX_portrait_khuang"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = Khuang_Aphaiwong
+			allowed = {
+				original_tag = SIA
+			}
+			traits = {
+				conservative_democrat 
+			}
+		}		
+	}
+	
+	SIA_Wichit_Whichitwathakan={
+		name=SIA_Wichit_Whichitwathakan
+		portraits={
+			army={
+				small="GFX_portrait_whichit"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = Wichit_Whichitwathakan
+			allowed = {
+				original_tag = SIA
+			}
+			available = {
+            }
+			traits = {
+				little_goebbels 
+			}
+		}		
+	}
+	
+	SIA_Tua_Lapanukrom={
+		name=SIA_Tua_Lapanukrom
+		portraits={
+			army={
+				small="GFX_portrait_tua"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = Tua_Lapanukrom
+			allowed = {
+				original_tag = SIA
+			}
+			traits = {
+				minister_of_science 
+			}
+		}		
+	}
+	
+	SIA_Charun_Rattanakul={
+		name=SIA_Charun_Rattanakul
+		portraits={
+			army={
+				small="GFX_portrait_charun"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = Charun_Rattanakul
+			allowed = {
+				original_tag = SIA
+			}
+			traits = {
+				minister_of_transportation 
+			}
+		}		
+	}
+	
+	## Theorists
+	
+	SIA_Chalermkiat_Wattanangkul={
+		name=SIA_Chalermkiat_Wattanangkul
+		portraits={
+			army={
+				small="GFX_portrait_chalermkiat"
+			}
+		}
+		advisor={
+			cost = 150
 			
 			slot = theorist
-			idea_token = SIA_phra_silpasakrakorn
-			ledger = air
+			idea_token = Chalermkiat_Wattanangkul
+			ledger = army
 				allowed = {
 					original_tag = SIA
 				}
 				
 				traits = {
-					air_warfare_theorist
+					close_air_support_proponent
 				}
-		}
-		name="Phra Silpasakrakorn"
+			}	
+	}
+	
+	SIA_Krawin_Thampitak={
+		name=SIA_Krawin_Thampitak
 		portraits={
 			army={
-				small="GFX_idea_generic_air_asia_3"
+				small="GFX_portrait_krawin"
 			}
 		}
-	}
-
-	SIA_luang_sinthusongkhramchai={
-		advisor={
-			
-			
+		advisor = {
 			slot = high_command
-			idea_token = SIA_luang_sinthusongkhramchai
-			ledger = navy
+			idea_token = Krawin_Thampitak
+			ledger = army
+
+			allowed = {
+				original_tag = SIA
+			}
+
+			visible = {
+				
+			}
+
+			available = {	
+			}
+
+			traits = {
+				army_commando_2
+			}
+			cost = 100
+			ai_will_do = {
+				base = 0.5
+			}
+		}	
+	}
+	
+	SIA_Sindhu_Songkramchai={
+		name=SIA_Sindhu_Songkramchai
+		portraits={
+			army={
+				small="GFX_portrait_sindhu"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = Sindhu_Songkramchai
+			ledger = army
+
+			allowed = {
+				original_tag = SIA
+			}
+
+			visible = {
+			}
+
+			available = {
+			}
+
+			traits = {
+				army_artillery_2
+			}
+			cost = 100
+			ai_will_do = {
+				base = 0.5
+			}
+		}	
+	}
+	
+	SIA_Munee_Mahasantana={
+		name=SIA_Munee_Mahasantana
+		portraits={
+			army={
+				small="GFX_portrait_munee"
+			}
+		}
+		advisor={
+			cost = 150
+			
+			slot = theorist
+			idea_token = Munee_Mahasantana
+			ledger = army
 				allowed = {
 					original_tag = SIA
 				}
+				
 				traits = {
-					air_naval_strike_2
+					victory_through_airpower
 				}
-				cost = 100
-				ai_will_do = {
-					factor = 1.000
-				}
-		}
-		name="Luang Sinthusongkhramchai"
-		portraits={
-			army={
-				small="GFX_idea_generic_air_asia_1"
+			}	
+	}
+	
+	# Generals / Admirals Courtesy of KrasnaMerah
+	
+	SIA_Thawan_Thamrongnawasawat = {
+		name = SIA_Thawan_Thamrongnawasawat
+		portraits = {
+			navy = {
+				small = GFX_portrait_thamrong_small
+			}
+			army = {
+				large = GFX_portrait_thamrong
 			}
 		}
-	}
-
-	SIA_thawon_thamrongnawasawat={
-		advisor={
-			
-			
+		advisor = {
 			slot = navy_chief
-			idea_token = SIA_thawon_thamrongnawasawat
+			idea_token = SIA_thawan_thamrongnawasawat_chief
 			allowed = {
-					original_tag = SIA
-				}
-				traits = {
-					navy_chief_maneuver_2
-				}
-				cost = 100
-				ai_will_do = {
-					factor = 1.000
-				}
-		}
-		name="Thawon Thamrongnawasawat"
-		portraits={
-			army={
-				small="GFX_idea_generic_navy_asia_3"
+				original_tag = SIA
 			}
-		}
-	}
-
-	SIA_phraya_preechacholayudha={
-		advisor={
-			
-			
-			slot = high_command
-			idea_token = SIA_phraya_preechacholayudha
-			ledger = navy
-				allowed = {
-					original_tag = SIA
-				}
-				traits = {
-					navy_submarine_2
-				}
-				cost = 100
-				ai_will_do = {
-					factor = 1.000
-				}
-		}
-		name="Phraya Preechacholayudha"
-		portraits={
-			army={
-				small="GFX_idea_generic_navy_asia_1"
+			available = {
 			}
-		}
-	}
-
-	SIA_pridi_phanomyong={
-		advisor={
-			
-			
-			slot = high_command
-			idea_token = SIA_pridi_phanomyong
-			ledger = navy
-				allowed = {
-					original_tag = SIA
-				}
-				traits = {
-					navy_screen_2
-				}
-				cost = 100
-				ai_will_do = {
-					factor = 1.000
-				}
-		}
-		name="Pridi Phanomyong"
-		portraits={
-			army={
-				small="GFX_idea_generic_navy_asia_3"
+			traits = {
+				navy_chief_maneuver_2
 			}
-		}
-	}
-
-	SIA_sindhu_kamalanavin={
-		advisor={
-			
-			
-			slot = high_command
-			idea_token = SIA_sindhu_kamalanavin
-			ledger = army
-				allowed = {
-					original_tag = SIA
-				}
-				traits = {
-					army_logistics_2
-				}
-				cost = 100
-				ai_will_do = {
-					factor = 1.000
-				}
-		}
-		name="Sindhu Kamalanavin"
-		portraits={
-			army={
-				small="GFX_idea_generic_army_asia_1"
-			}
-		}
-	}
-
-	SIA_phraya_chitnasongkhla={
-		advisor={
-			
-			
-			slot = army_chief
-			idea_token = SIA_phraya_chitnasongkhla
-			allowed = {
-					original_tag = SIA
-				}
-				traits = {
-					army_chief_offensive_2
-				}
-				cost = 100
-				ai_will_do = {
-					factor = 1.000
-				}
-		}
-		name="Phraya Chitnasongkhla"
-		portraits={
-			army={
-				small="GFX_idea_generic_army_asia_4"
-			}
-		}
-	}
-
-	SIA_phraya_thayarnpikart={
-		advisor={
-			
-			
-			slot = high_command
-			idea_token = SIA_phraya_thayarnpikart
-			ledger = air
-				allowed = {
-					original_tag = SIA
-				}
-				traits = {
-					air_close_air_support_2
-				}
-				cost = 100
-				ai_will_do = {
-					factor = 1.000
-				}
-		}
-		name="Phraya Thayarnpikart"
-		portraits={
-			army={
-				small="GFX_idea_generic_air_asia_3"
-			}
-		}
-	}
-
-	SIA_phra_vechayanrangsarit={
-		advisor={
-			
-			
-			slot = air_chief
-			idea_token = SIA_phra_vechayanrangsarit
-			allowed = {
-					original_tag = SIA
-				}
-				traits = {
-					air_chief_ground_support_2
-				}
-				cost = 100
-				ai_will_do = {
-					factor = 1.000
-				}
-		}
-		name="Phra Vechayanrangsarit"
-		portraits={
-			army={
-				small="GFX_idea_generic_air_asia_2"
-			}
-		}
-	}
-
-	SIA_manphya_khanphialong={
-		advisor={
 			cost = 100
-			
-			slot = theorist
-			idea_token = SIA_manphya_khanphialong
-			ledger = army
-				allowed = {
-					original_tag = SIA
-				}
-				
-				traits = {
-					military_theorist
-				}
-		}
-		name="Manphya Khanphialong"
-		portraits={
-			army={
-				small="GFX_idea_generic_army_asia_5"
+			ai_will_do = {
+				factor = 1.000
 			}
+		}
+		navy_leader = {
+			traits = { navy_career_officer spotter }
+			skill = 2
+			attack_skill = 1
+			defense_skill = 2
+			maneuvering_skill = 2
+			coordination_skill = 1
 		}
 	}
 
-	SIA_luang_phibunsongkhram={
-		advisor={
-			
-			
-			slot = army_chief
-			idea_token = SIA_luang_phibunsongkhram
-			allowed = {
-					original_tag = SIA
-				}
-				traits = {
-					army_chief_morale_2
-				}
-				cost = 100
-				ai_will_do = {
-					factor = 1.000
-				}
-		}
-		name="Luang Phibunsongkhram"
-		portraits={
-			army={
-				small="GFX_idea_generic_army_asia_2"
+	SIA_Sindhu_Kamalanavin_v2 = {
+		name = SIA_Sindhu_Kamalanavin_v2
+		portraits = {
+			army = {
+				small = "GFX_portrait_kamalanavin_small"
+				large = "GFX_portrait_kamalanavin"
 			}
 		}
-	}
-
-	SIA_phraya_wichcitcholathai={
-		advisor={
-			
-			
-			slot = navy_chief
-			idea_token = SIA_phraya_wichcitcholathai
-			allowed = {
-					original_tag = SIA
-				}
-				traits = {
-					navy_chief_decisive_battle_2
-				}
-				cost = 100
-				ai_will_do = {
-					factor = 1.000
-				}
-		}
-		name="Phraya Wichcitcholathai"
-		portraits={
-			army={
-				small="GFX_idea_generic_navy_asia_1"
-			}
-		}
-	}
-
-	SIA_sawat_phutianands={
-		advisor={
-			cost = 100
-			
-			slot = theorist
-			idea_token = SIA_sawat_phutianands
+		advisor = {
+			slot = high_command
+			idea_token = SIA_sindhu_kamalanavin_high_command
 			ledger = navy
-				allowed = {
-					original_tag = SIA
-				}
-				
-				traits = {
-					naval_theorist
-				}
-		}
-		name="Sawat Phutianands"
-		portraits={
-			army={
-				small="GFX_idea_generic_navy_asia_3"
-			}
-		}
-	}
-
-	SIA_phraya_chalermarkiart={
-		advisor={
-			
-			
-			slot = air_chief
-			idea_token = SIA_phraya_chalermarkiart
 			allowed = {
-					original_tag = SIA
-				}
-				traits = {
-					air_chief_night_operations_2
-				}
-				cost = 100
-				ai_will_do = {
-					factor = 1.000
-				}
-		}
-		name="Phraya Chalermarkiart"
-		portraits={
-			army={
-				small="GFX_idea_generic_air_asia_3"
+				original_tag = SIA
 			}
+			available = {
+				NOT = {
+					has_idea = SIA_sindhu_kamalanavin_minister
+				}
+			}
+			traits = {
+				air_naval_strike_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		navy_leader = {
+			traits = { blockade_runner aviation_enthusiast }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 2
+			maneuvering_skill = 2
+			coordination_skill = 2
 		}
 	}
-
-	SIA_kuang_abhayavongsa={
-		advisor={
-			slot = political_advisor
-			idea_token = SIA_kuang_abhayavongsa
-			allowed  = {
-					original_tag  = SIA
-				}
-				traits  = {
-					silent_workhorse 
-				}
-		}
-		name="Kuang Abhayavongsa"
-		portraits={
-			army={
-				small="GFX_idea_generic_political_advisor_asia_3"
+	
+	SIA_Mangkorn_Phromyothi = {
+		name = SIA_Mangkorn_Phromyothi
+		portraits = {
+			army = {
+				small = GFX_portrait_mangkorn_small
+				large = GFX_portrait_mangkorn
 			}
 		}
-	}
-
-	SIA_thawee_punyaketu={
-		advisor={
-			slot = political_advisor
-			idea_token = SIA_thawee_punyaketu
-			allowed  = {
-					original_tag  = SIA
-				}
-				traits  = {
-					captain_of_industry 
-				}
-		}
-		name="Thawee Punyaketu"
-		portraits={
-			army={
-				small="GFX_idea_generic_political_advisor_asia_1"
+		advisor = {
+			slot = high_command
+			idea_token = SIA_mangkorn_phromyothi_high_command
+			ledger = army
+			allowed = {
+				original_tag = SIA
+			}
+			available = {
+			}
+			traits = {
+				army_infantry_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
 			}
 		}
-	}
-
-	SIA_phot_bhahalyodin={
-		advisor={
-			slot = political_advisor
-			idea_token = SIA_phot_bhahalyodin
-			allowed  = {
-					original_tag  = SIA
-				}
-				traits  = {
-					prince_of_terror 
-				}
-		}
-		name="Phot Bhahalyodin"
-		portraits={
-			army={
-				small="GFX_idea_generic_political_advisor_asia_2"
-			}
+		corps_commander = {
+			traits = { infantry_leader }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 2
+			legacy_id = -1
 		}
 	}
 }

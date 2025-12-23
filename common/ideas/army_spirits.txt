@@ -27,7 +27,7 @@ ideas = {
 			ledger = army
 			available = { has_military_academy = yes }
 			modifier = {
-				max_planning = 0.03
+				max_planning = 0.05
 				custom_modifier_tooltip = meticulous_preparation_spirit_tt
 			}
 			ai_will_do = {
@@ -144,8 +144,8 @@ ideas = {
 			ledger = army
 			available = {
 				AND = { 
-				has_military_academy = yes 
-				has_doctrine = grand_battleplan
+					has_military_academy = yes 
+					has_doctrine = grand_battleplan
 				}
 			}
 			modifier = {
@@ -153,7 +153,7 @@ ideas = {
 				acclimatization_cold_climate_gain_factor = 0.50 
 				acclimatization_hot_climate_gain_factor  = 0.50
 				truck_attrition_factor = -0.25
-				supply_node_range = 0.025
+				supply_node_range = 0.05
 			}
 			ai_will_do = {
 				factor = 1
@@ -182,9 +182,15 @@ ideas = {
 		}
 		professional_officer_corps_spirit = {
 			ledger = army
+			available = {
+				NOT = {
+					has_doctrine = new_mobile_warfare
+				}
+			}
 			modifier = {
 				experience_gain_army_unit_factor = 0.15
 				max_command_power = 30
+				command_power_gain = 0.1
 			}
 			ai_will_do = {
 				factor = 1
@@ -289,7 +295,7 @@ ideas = {
 			available = { has_doctrine = grand_battleplan }
 			ledger = army
 			modifier = {
-				naval_invasion_capacity = 10
+				naval_invasion_plan_cap = 6
 				extra_paratrooper_supply_grace = 24
 				extra_marine_supply_grace = 24
 				special_forces_out_of_supply_factor = -0.2
@@ -441,8 +447,8 @@ ideas = {
 				}
 			}
 			modifier = {
-				resistance_target_on_our_occupied_states = 0.25
-				resistance_growth_on_our_occupied_states = 0.5			    		  			    			    			 			    			 				
+				army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.05			    		  			    			    			 			    			 				
 			}
 			ai_will_do = {
 				factor = 1
@@ -471,7 +477,8 @@ ideas = {
 			}
 
 			modifier = {
-				army_experience_from_volunteers = 0.5    		  			    			    			 			    			 				
+				army_core_attack_factor = -0.05
+				special_forces_attack_factor = 0.05   		  			    			    			 			    			 				
 			}
 
 			ai_will_do = {
@@ -518,7 +525,7 @@ ideas = {
 			modifier = {
 				org_loss_when_moving = -0.15
 				army_speed_factor = 0.05
-				land_reinforce_rate	= 0.01
+				land_reinforce_rate	= 0.015
 			}
 			ai_will_do = {
 				factor = 1
@@ -582,7 +589,7 @@ ideas = {
 			}
 			modifier = {
 				tactic_barrage_preferred_weight_factor = 1
-				breakthrough_factor = 0.05
+				breakthrough_factor = 0.075
 			}
 			ai_will_do = {
 				factor = 1
@@ -594,9 +601,9 @@ ideas = {
 			available = { has_doctrine = grand_battleplan }
 			modifier = {
 				tactic_planned_attack_preferred_weight_factor = 1
-				supply_consumption_factor = -0.05
-				air_fuel_consumption_factor = -0.05
-				navy_fuel_consumption_factor = -0.05
+				supply_consumption_factor = -0.075
+				air_fuel_consumption_factor = -0.075
+				navy_fuel_consumption_factor = -0.075
 			}
 			ai_will_do = {
 				factor = 1
@@ -608,7 +615,7 @@ ideas = {
 			available = { has_doctrine = mass_assault }
 			modifier = {
 				tactic_relentless_assault_preferred_weight_factor = 1
-				army_strength_factor = 0.1
+				army_strength_factor = 0.075
 			}
 			ai_will_do = {
 				factor = 1

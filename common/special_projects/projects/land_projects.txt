@@ -12,6 +12,8 @@ sp_amphibious_drive = {
 			OR = {
 				has_tech = improved_medium_tank_chassis
 				has_tech = advanced_light_tank_chassis
+				has_tech = amphibious_tank_chassis
+				has_tech = improved_heavy_tank_chassis
 			}
 		}
 	}
@@ -210,12 +212,12 @@ sp_land_military_engineering_vehicles = {
 		}
 
 		country_effects = {
-			if = {
-				limit = {
-					has_dlc = "Gotterdammerung"
-				}
-				SP_create_variant_based_on_country_assault_engineer = yes
-			}
+			#if = {
+			#	limit = {
+			#		has_dlc = "Gotterdammerung"
+			#	}
+			#	SP_create_variant_based_on_country_assault_engineer = yes
+			#}
 
 			custom_effect_tooltip = {
 				localization_key = SP_UNLOCK_TECH

@@ -994,10 +994,12 @@ ideas = {
 				supply_consumption_factor = -0.1 
 				army_org_regain = 0.1 
 				supply_node_range = 0.1
+				max_dig_in = -5
+				air_range_factor = 0.1
 				custom_modifier_tooltip = hp_spirit	
 			}
 			equipment_bonus = {
-				small_plane_airframe = {  air_defence = 0.1 instant = yes }
+				small_plane_airframe = {  air_defence = 0.2 instant = yes }
 			}
 		}
 		ENG_operation_compass = {
@@ -1008,7 +1010,8 @@ ideas = {
 			cancel={
 			}
 			modifier = {
-				heat_attrition_factor = -0.5  
+				heat_attrition_factor = -0.5
+				max_dig_in = -5  
 				#army_strength_factor = 0.3 
 				custom_modifier_tooltip = hp_spirit_allies
 			}			

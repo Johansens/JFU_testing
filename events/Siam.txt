@@ -1,0 +1,456 @@
+	add_namespace = SIA
+	
+## Ask for Japan Mediation
+
+	country_event = {
+		id = SIA.1
+		title = SIA.1.t
+		desc = SIA.1.desc
+		
+		is_triggered_only = yes
+		
+		fire_only_once = yes
+		
+		option = {
+			name = SIA.1.a
+			
+			SIA = { country_event = SIA.6 }
+			
+			ai_chance = {
+			
+				base = 0
+			}
+		}
+		
+		option = {
+			name = SIA.1.b
+			
+			SIA = { country_event = SIA.7 }
+			
+			ai_chance = {
+			
+				base = 0
+			}
+		}
+	}
+	
+## Call for Vote Phibun
+	
+	country_event = {
+		id = SIA.2
+		title = SIA.2.t
+		desc = SIA.2.desc
+		
+		picture = GFX_report_event_czech_soldiers_01
+		
+		is_triggered_only = yes
+		
+		fire_only_once = yes
+		
+		option = {
+			name = SIA.2.a
+			
+			set_politics = {
+				ruling_party = fascism
+				elections_allowed = yes
+			}
+			
+			add_country_leader_role = {
+				character = SIA_Plaek_Phibun
+					country_leader = { 
+						ideology = fascism_ideology
+						traits = { dictator }
+						expire = "1965.1.1"
+						id = -1
+					}
+				promote_leader = yes				
+			}
+		}
+	}
+	
+	# What path?
+	
+	country_event = {
+		id = SIA.3
+		title = SIA.3.t
+		desc = SIA.3.desc
+		
+		is_triggered_only = yes
+		
+		fire_only_once = yes
+		
+		
+		## Attempt to maintain control
+		
+		option = {
+			name = SIA.3.a
+			
+			set_country_flag = SIA_Fascism_Rise
+			
+			ai_chance = {
+			
+				base = 5
+				
+			}
+		}
+	}
+	
+	# Growth of Phibon influence
+	
+	country_event = {
+		id = SIA.4
+		title = SIA.4.t
+		desc = SIA.4.desc
+		
+		picture = GFX_report_event_czech_soldiers_01
+				
+		fire_only_once = yes
+
+		trigger = {
+			has_country_flag = SIA_Fascism_Rise
+		}
+
+		mean_time_to_happen = {
+			days = 10
+		}
+
+		
+		## Attempt to maintain control
+		
+		option = {
+			name = SIA.4.a
+					
+			add_popularity = {
+				ideology = fascism
+				popularity = .1
+			}
+			
+			set_country_flag = SIA_Phibon_Gaining_Power
+		}
+	}
+	
+	
+	# Japanese Mediation Accept
+	
+	country_event = {
+		id = SIA.6
+		title = SIA.6.t
+		desc = SIA.6.desc
+		
+		is_triggered_only = yes
+		fire_only_once = yes
+
+		option = {
+			name = SIA.6.a
+			
+			white_peace = FRA
+			
+			set_state_owner = 670
+			set_state_owner = 741
+			transfer_state = 670
+			transfer_state = 741
+		}
+	}
+	
+	# Japanese Mediation Decline
+
+	country_event = {
+		id = SIA.7
+		title = SIA.7.t
+		desc = SIA.7.desc
+		
+		is_triggered_only = yes
+		fire_only_once = yes
+
+		option = {
+			name = SIA.7.a
+		}
+	}
+	
+	# France Demand Event
+	
+	country_event = {
+		id = SIA.8
+		title = SIA.8.t
+		desc = SIA.8.desc
+		
+		is_triggered_only = yes
+		
+		fire_only_once = yes
+		
+		
+		## Not give it
+		
+		option = {
+			name = SIA.8.a
+			
+			SIA = { country_event = SIA.10 }
+			
+			ai_chance = {
+			
+				base = 7
+			}
+		}
+		
+		# Give it
+		
+		option = {
+			name = SIA.8.b
+			
+			SIA = { country_event = SIA.9 }
+			
+			ai_chance = {
+			
+				base = 3
+			}
+		}
+	}
+	
+	# Accept
+	
+	country_event = {
+		id = SIA.9
+		title = SIA.9.t
+		desc = SIA.9.desc
+		
+		is_triggered_only = yes
+		fire_only_once = yes
+
+		option = {
+			name = SIA.9.a
+						
+			set_state_owner = 670
+			set_state_owner = 741
+			set_state_owner = 671
+			set_state_owner = 286
+			transfer_state = 670
+			transfer_state = 741
+			transfer_state = 671
+			transfer_state = 286
+		}
+	}
+	
+	# Decline
+	
+	country_event = {
+		id = SIA.10
+		title = SIA.10.t
+		desc = SIA.10.desc
+		
+		is_triggered_only = yes
+		fire_only_once = yes
+
+		option = {
+			name = SIA.10.a
+			
+			add_timed_idea = {
+					idea = SIA_Revenge_Against_France
+					days = 365
+			}
+		}
+	}
+	
+	# Japan bully event
+	
+	country_event = {
+		id = SIA.11
+		title = SIA.11.t
+		desc = SIA.11.desc
+		
+		fire_only_once = yes
+		is_triggered_only = yes
+
+		## Join
+		
+		option = {
+			name = SIA.11.a
+			
+			JAP = { add_to_faction = SIA }
+			
+			ai_chance = {
+			
+				base = 50
+			}
+		}
+	}
+
+	country_event = {
+		id = SIA.34
+		title = SIA.34.t
+		desc = SIA.34.desc
+		
+		picture = GFX_event_bangkok_floods
+				
+		fire_only_once = yes
+		is_triggered_only = no
+
+		trigger = {
+			always = no
+			date > 1942.11.01
+		}
+
+		mean_time_to_happen = {
+			days = 29
+		}
+		
+		## Attempt to maintain control
+		
+		option = {
+			name = SIA.34.a
+			
+			add_ideas = SIA_Pad_Thai
+		}
+		
+		option = {
+			name = SIA.34.b
+			
+			add_ideas = SIA_Pad_Thai_II
+		}
+	}
+	
+	# Mandates
+		#1
+	country_event = {
+		id = SIA.35
+		title = SIA.35.t
+		desc = SIA.35.desc
+		
+		picture = GFX_event_cultural_mandate_1
+				
+		fire_only_once = yes
+		is_triggered_only = yes
+				
+		option = {
+			name = SIA.35.a
+		}
+	}
+		#2
+	country_event = {
+		id = SIA.36
+		title = SIA.36.t
+		desc = SIA.36.desc
+		
+		picture = GFX_event_cultural_mandate_2
+				
+		fire_only_once = yes
+		is_triggered_only = yes
+				
+		option = {
+			name = SIA.36.a
+		}
+	}
+		#3
+	country_event = {
+		id = SIA.37
+		title = SIA.37.t
+		desc = SIA.37.desc
+		
+		picture = GFX_event_cultural_mandate_5
+				
+		fire_only_once = yes
+		is_triggered_only = yes
+				
+		option = {
+			name = SIA.37.a
+		}
+	}
+		#4
+	country_event = {
+		id = SIA.38
+		title = SIA.38.t
+		desc = SIA.38.desc
+		
+		picture = GFX_event_cultural_mandate_10
+				
+		fire_only_once = yes
+		is_triggered_only = yes
+				
+		option = {
+			name = SIA.38.a
+		}
+	}
+	
+	# Burma Railroad
+	
+	country_event = {
+		id = SIA.40
+		title = SIA.40.t
+		desc = SIA.40.desc
+		
+		picture = GFX_event_burma_railway
+				
+		fire_only_once = yes
+		is_triggered_only = no
+
+		trigger = {
+			OR = {
+				288 = { is_controlled_by = SIA }
+				288 = { is_controlled_by = JAP }
+			}
+		}
+
+		mean_time_to_happen = {
+			days = 60
+
+		}
+				
+		option = {
+			name = SIA.40.a
+			
+			set_country_flag = SIA_Burma_Railroad_Started_1			
+			build_railway = {
+				level = 1
+				build_only_on_allied = no
+				controller_priority = {
+					base = 1
+					modifier = {
+						tag = SIA
+						add = 2
+					}
+				}
+				fallback = no
+				start_province = 7408
+				target_province = 1330
+			} 
+		}
+	}
+	
+	country_event = {
+		id = SIA.41
+		title = SIA.41.t
+		desc = SIA.41.desc
+		
+		picture = GFX_event_burma_railway
+				
+		fire_only_once = yes
+		is_triggered_only = no
+
+		trigger = {
+			is_ally_with = JAP
+		
+			has_country_flag = SIA_Burma_Railroad_Started_1
+		}
+
+		mean_time_to_happen = {
+			days = 60
+		}
+				
+		option = {
+			name = SIA.41.a
+			
+			build_railway = {
+				level = 2
+				build_only_on_allied = no
+				controller_priority = {
+					base = 1
+					modifier = {
+						tag = SIA
+						add = 2
+					}
+				}
+				fallback = no
+				start_province = 7408
+				target_province = 1330
+			}
+		}
+	}

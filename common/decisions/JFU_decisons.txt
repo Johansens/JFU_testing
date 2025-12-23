@@ -80,6 +80,19 @@ political_actions1 = {
 					#add_ideas = ENG_ireland_rebalance
 				}
 				country_event = { id = super.1 hours = 1}
+				add_timed_idea = { idea = GER_the_blitzkrieg days = 500 } set_technology = { Blitzkrieg_ON = 1 popup = no } 
+				ITA = { add_timed_idea = { idea = GER_the_blitzkrieg days = 500 } set_technology = { Blitzkrieg_ON = 1 popup = no } }
+				SPR = { add_timed_idea = { idea = GER_the_blitzkrieg days = 500 } set_technology = { Blitzkrieg_ON = 1 popup = no } }
+				HUN = { add_timed_idea = { idea = GER_the_blitzkrieg days = 500 } set_technology = { Blitzkrieg_ON = 1 popup = no } }
+				BUL = { add_timed_idea = { idea = GER_the_blitzkrieg days = 500 } set_technology = { Blitzkrieg_ON = 1 popup = no } }
+				ROM = { add_timed_idea = { idea = GER_the_blitzkrieg days = 500 } set_technology = { Blitzkrieg_ON = 1 popup = no } }
+				ENG = { add_timed_idea = { idea = ENG_operation_compass days = 500 } set_technology = { Blitzkrieg_ON = 1 popup = no } }
+				FRA = { add_timed_idea = { idea = ENG_operation_compass days = 500 } set_technology = { Blitzkrieg_ON = 1 popup = no } }
+				CAN = { add_timed_idea = { idea = ENG_operation_compass days = 500 } set_technology = { Blitzkrieg_ON = 1 popup = no } }
+				SAF = { add_timed_idea = { idea = ENG_operation_compass days = 500 } set_technology = { Blitzkrieg_ON = 1 popup = no } }
+				RAJ = { add_timed_idea = { idea = ENG_operation_compass days = 500 } set_technology = { Blitzkrieg_ON = 1 popup = no } }
+				AST = { add_timed_idea = { idea = ENG_operation_compass days = 500 } set_technology = { Blitzkrieg_ON = 1 popup = no } }
+				NZL = { add_timed_idea = { idea = ENG_operation_compass days = 500 } set_technology = { Blitzkrieg_ON = 1 popup = no } }
 			}
 		}
 	}
@@ -1126,15 +1139,46 @@ political_actions1 = {
 		available = { SIA = { is_ai = yes } }
 		cost = 0
 		complete_effect = {
-			annex_country = { target = SIA transfer_troops = yes }
-			hidden_effect = { 
-				every_state = {
-					limit = {
-						is_core_of = SIA
-					}
-				set_compliance = 100
+			set_country_flag = JAP_siam_annex
+			SIA = {
+				give_resource_rights = { receiver = JAP state = 289 }
+				give_resource_rights = { receiver = JAP state = 724 }
+			}
+			536 = {
+				add_extra_state_shared_building_slots = 6
+				add_building_construction = {
+					type = industrial_complex
+					level = 5
+					instant_build = yes
+				}	
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
 				}
 			}
+			hidden_effect = {
+				289 = {
+					remove_building = {
+						type = industrial_complex 
+						level = 5
+					}
+					remove_building = {
+						type = arms_factory 
+						level = 1
+					}				
+				}
+			}
+
+			#annex_country = { target = SIA transfer_troops = yes }
+			#hidden_effect = { 
+			#	every_state = {
+			#		limit = {
+			#			is_core_of = SIA
+			#		}
+			#	set_compliance = 100
+			#	}
+			#}
 		}
 	}
 	"Annex Manchu" = {
@@ -1636,7 +1680,7 @@ JFU_decisions = {
 	
 		icon = GFX_decision_generic_air
 			
-			allowed = {
+		allowed = {
 		}
 		
 		available = {NOT = {has_country_flag = ENG_air_LL}} 
@@ -1651,10 +1695,11 @@ JFU_decisions = {
 		
 		timeout_effect = {
 			if = { 
-				limit =  { has_country_flag = ENG_air_LL 
+				limit =  { 
+					has_country_flag = ENG_air_LL 
 				}
-			air_to_england = yes
-			activate_mission = send_air_to_eng1
+				air_to_england = yes
+				activate_mission = send_air_to_eng1
 			}
 		}	
 	}
@@ -1710,12 +1755,15 @@ JFU_decisions = {
 		allowed = { original_tag = ENG }
 		days_remove = 120
 
-		available = {NOT = { FRA = { owns_state = 16 }}  check_variable = { FRA.FRA_legitimacy < 100 }
-						FRA = { has_country_flag = france_is_kill}}
+		available = {
+			NOT = { FRA = { owns_state = 16 }}  
+			check_variable = { FRA.FRA_legitimacy < 100 }
+			FRA = { has_country_flag = france_is_kill}
+		}
 		visible = {	tag = ENG }
 		cost = 0
 		complete_effect = {
-		custom_effect_tooltip = "French Legitimacy will increase by 20"
+			custom_effect_tooltip = "French Legitimacy will increase by 20"
 			add_to_variable =  { var = FRA.FRA_legitimacy value = 20 }
 		}
 	}
@@ -1829,6 +1877,58 @@ JFU_decisions = {
             factor = 0
         }
     }
+	JFU_no_asia_test = {
+		icon = generic_operation
+		fire_only_once = yes
+		allowed = { 
+			always = yes
+		}
+		visible = {
+			AND = {
+				date < 1936.02.01
+				has_country_flag = host
+			}
+		}
+		available = { 
+			NOT = { has_global_flag = JFU_no_asia }
+		}
+		cost = 0
+		complete_effect = {
+			set_global_flag = JFU_no_asia
+
+			ENG = {
+				annex_country = { target = IRE transfer_troops = no }
+				113 =   { add_core_of = ENG }
+				134 =   { add_core_of = ENG }
+				135 =   { add_core_of = ENG }
+				113 = {
+					add_extra_state_shared_building_slots = 4
+					add_building_construction = {
+						type = arms_factory
+						level = 4
+						instant_build = yes
+					}					
+				}
+				add_research_slot = 1
+			}
+			USA = {
+				give_resource_rights = { receiver = ENG state = 375 }
+				give_resource_rights = { receiver = CAN state = 379 }
+			}
+			every_country = {
+				limit = {
+					OR = {
+						tag = USA
+						tag = RAJ
+						tag = MEX
+						tag = BRA
+						tag = MAN
+					}
+				}
+				add_ideas = ai_limiter
+			}
+		}		
+	}
 }
 
 JFU_templates = {

@@ -1,3 +1,9 @@
+
+SIA_THAI = {
+    color = rgb { 45 42 74 }
+    color_ui = rgb { 255 73 121 }
+}
+
 MAL_UK = {
     color = rgb { 201 56 93 }
     color_ui = rgb { 255 73 121 }

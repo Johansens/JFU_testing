@@ -348,13 +348,75 @@ focus_tree = {
         }
     }
 
+
+
     focus = {
-        id = RAJ_boycott_british_made_goods
-        icon = GFX_focus_eng_decolonization
+        id = RAJ_local_resistance_to_land_taxes
+        icon = GFX_focus_SOV_breadbasket_of_the_union
+
         prerequisite = { focus = RAJ_swadeshi_movement }
         x = -2
         y = 1
-        relative_position_id = RAJ_swadeshi_movement
+        relative_position_id = RAJ_swadeshi_movement       
+        cost = 10
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        available = {
+            NOT = {
+                has_idea = idea_RAJ_great_depression_2
+                has_idea = idea_RAJ_great_depression_1
+            }
+        }
+        
+        bypass = {
+
+        }
+
+        cancel_if_invalid = yes
+        continue_if_invalid = no
+        available_if_capitulated = no
+
+        search_filters = {FOCUS_FILTER_POLITICAL}
+        search_filters = {FOCUS_FILTER_INDUSTRY}
+
+        completion_reward = {
+            443 = {
+                add_extra_state_shared_building_slots = 1
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 1
+                    instant_build = yes
+                }
+            }
+            438 = {
+                add_extra_state_shared_building_slots = 1
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 1
+                    instant_build = yes
+                }
+            }
+
+            custom_effect_tooltip = generic_skip_one_line_tt
+            add_timed_idea = {
+                idea = idea_RAJ_government_budget_shortfall
+                days = 365
+            }
+            
+        }
+    }
+    
+    focus = {
+        id = RAJ_boycott_british_made_goods
+        icon = GFX_focus_eng_decolonization
+        prerequisite = { focus = RAJ_agricultural_cooperatives   }
+        prerequisite = { focus = RAJ_local_resistance_to_land_taxes }
+        x = 0
+        y = 2
+        relative_position_id = RAJ_local_resistance_to_land_taxes
        
         cost = 5
 
@@ -550,64 +612,6 @@ focus_tree = {
         }
     }
 
-
-
-    focus = {
-        id = RAJ_local_resistance_to_land_taxes
-        icon = GFX_focus_SOV_breadbasket_of_the_union
-        prerequisite = { focus = RAJ_agricultural_cooperatives   }
-        prerequisite = { focus = RAJ_boycott_british_made_goods }
-        x = 0
-        y = 2
-        relative_position_id = RAJ_boycott_british_made_goods
-       
-        cost = 5
-
-        ai_will_do = {
-            factor = 1
-        }
-
-        available = {
-
-        }
-        
-        bypass = {
-
-        }
-
-        cancel_if_invalid = yes
-        continue_if_invalid = no
-        available_if_capitulated = no
-
-        search_filters = {FOCUS_FILTER_POLITICAL}
-        search_filters = {FOCUS_FILTER_INDUSTRY}
-
-        completion_reward = {
-            443 = {
-                add_extra_state_shared_building_slots = 1
-                add_building_construction = {
-                    type = industrial_complex
-                    level = 1
-                    instant_build = yes
-                }
-            }
-            438 = {
-                add_extra_state_shared_building_slots = 1
-                add_building_construction = {
-                    type = industrial_complex
-                    level = 1
-                    instant_build = yes
-                }
-            }
-
-            custom_effect_tooltip = generic_skip_one_line_tt
-            add_timed_idea = {
-                idea = idea_RAJ_government_budget_shortfall
-                days = 365
-            }
-            
-        }
-    }
 
     focus = {
         id = RAJ_tenancy_reforms
@@ -918,7 +922,7 @@ focus_tree = {
                     log = "INFRA BUILT: [?ROOT.agcoop_infra_build_counter]"
                     set_temp_variable = { t_infra_build_counter  = ROOT.agcoop_infra_build_counter }
 
-                    modulo_temp_variable = { var = t_infra_build_counter value = 2 } #every other infra counts as a civ
+                    modulo_temp_variable = { var = t_infra_build_counter value = 3 } #every other infra counts as a civ
 
                     if = {
                         limit = {
@@ -1093,7 +1097,7 @@ focus_tree = {
         y = 1
         relative_position_id = RAJ_enrollment_of_dali_children
        
-        cost = 5
+        cost = 10
 
         ai_will_do = {
             factor = 1
@@ -1437,7 +1441,7 @@ focus_tree = {
     focus = {
         id = RAJ_haripura_session_of_the_indian_national_congress
         icon = GFX_goal_generic_dangerous_deal
-        prerequisite = {  focus  = RAJ_local_resistance_to_land_taxes }
+        prerequisite = {  focus  = RAJ_boycott_british_made_goods }
         x = -2
         y = 0
         relative_position_id = RAJ_cripps_mission_dlc
@@ -2901,7 +2905,7 @@ focus_tree = {
 
         available = {
             has_war_support > 0.5
-
+            date > 1939.01.01
         }
         
         bypass = {
@@ -2920,15 +2924,6 @@ focus_tree = {
                     NOT = { has_idea = war_economy }
                 }
                 add_ideas = war_economy
-            }
-
-            custom_effect_tooltip = generic_skip_one_line_tt
-
-            every_owned_state = {
-                limit = {
-                    has_resistance = yes
-                }
-                add_resistance = -10
             }
         }
     }
@@ -3031,7 +3026,7 @@ focus_tree = {
         y = 1
         relative_position_id = RAJ_learn_from_the_crown
 
-        cost = 10
+        cost = 5
 
         available = {
         }
@@ -3162,18 +3157,18 @@ focus_tree = {
             effect_tooltip = {
                 RAJ = {
                     add_equipment_to_stockpile = { 
-                        type = motorized_equipment_1
-                        amount = 1600
+                        type = infantry_equipment_1
+                        amount = 5000
                         producer = ENG
                     }
                     add_equipment_to_stockpile = { 
-                        type = train_equipment
-                        amount = 10
+                        type = anti_air_equipment_1
+                        amount = 1000
                         producer = ENG
                     }
                     add_equipment_to_stockpile = { 
                         type = support_equipment
-                        amount = 500
+                        amount = 1000
                         producer = ENG
                     }
                 }
@@ -5516,7 +5511,7 @@ focus_tree = {
                 category = engineers_tech # optional 
                 # technology  = technology_id # optional
             }
-           try_build_mil_in_core_otherwise_build_in_controlled_2_mil = yes
+           try_build_mil_in_core_otherwise_build_in_controlled = yes
         }
     }
     
@@ -5968,7 +5963,6 @@ focus_tree = {
             #}
 
             try_build_mil_in_core_otherwise_build_in_controlled_2_mil = yes
-            try_build_mil_in_core_otherwise_build_in_controlled = yes
         }
     }
     
