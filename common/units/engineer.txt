@@ -62,7 +62,7 @@ sub_units = {
 
 		can_be_parachuted = yes
 		forest = {
-			defence = 0.25
+			defence = 0.15
 			movement = 0.05
 		}
 
@@ -71,11 +71,11 @@ sub_units = {
 		}
 
 		jungle = {
-			defence = 0.25
+			defence = 0.20
 		}
 
 		marsh = {
-			defence = 0.25
+			defence = 0.20
 			movement = 0.2
 		}
 
@@ -85,7 +85,7 @@ sub_units = {
 		}
 
 		river = {
-			defence = 0.25
+			defence = 0.20
 			movement = 0.25
 		}
 
@@ -328,12 +328,12 @@ sub_units = {
 
 		forest = {
 			attack = 0.05 #More than reg eng (0)
-			defence = 0.1 #Less than reg engineers (0.25)
+			defence = 0.05 #Less than reg engineers (0.25)
 		}
 
 		hills = {
 			attack = 0.05 # more than reg engineers (0)
-			defence = 0.1
+			defence = 0.05
 		}
 
 		jungle = {
@@ -354,7 +354,7 @@ sub_units = {
 
 		river = {
 			attack = 0.05 #More than reg engineers (0)
-			defence = 0.1 #Less than reg engineers (0.25)
+			defence = 0.05 #Less than reg engineers (0.25)
 			movement = 0.25
 		}
 
@@ -442,7 +442,7 @@ sub_units = {
 		}
 
 		forest = {
-			defence = 0.25
+			defence = 0.15
 			movement = 0.1 #More than reg engineers (0.05)
 		}
 
@@ -460,12 +460,12 @@ sub_units = {
 		}
 
 		jungle = {
-			defence = 0.15 #Less than reg engineers (0.25)
+			defence = 0.10 #Less than reg engineers (0.25)
 			movement = 0.05 #More than reg eng (0)
 		}
 
 		marsh = {
-			defence = 0.15 #Less than reg engineers (0.25)
+			defence = 0.10 #Less than reg engineers (0.25)
 			movement = 0.2
 		}
 
@@ -476,7 +476,7 @@ sub_units = {
 
 		river = {
 			attack = 0.1 #More than reg engineers (0)
-			defence = 0.15 #Less than reg engineers (0.25)
+			defence = 0.10 #Less than reg engineers (0.25)
 			movement = 0.4 #More than reg eng (0.25)
 		}
 

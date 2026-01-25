@@ -662,7 +662,7 @@ focus_tree = {
 						option = NO_CHINA_WAR 
 					} 
 				}
-				date > 1938.01.01
+				date > 1938.06.01
 			}
 		}
 		continue_if_invalid = yes

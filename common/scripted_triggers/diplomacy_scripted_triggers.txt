@@ -44,6 +44,12 @@ DIPLOMACY_LEND_LEASE_ENABLE_TRIGGER = {
 			date > 1940.01.01
 		}
 	}
+	if = {
+		limit = {
+			tag = FRA
+		}
+		has_global_flag = fall_of_france
+	}
 	if = { limit = { FROM = { europa_axis = yes } }	NOT = { ROOT = { asia_axis = yes } } }
 	if = { limit = { FROM = { asia_axis = yes } }	NOT = { ROOT = { europa_axis = yes  } } }
 	if = { 
@@ -71,6 +77,12 @@ DIPLOMACY_INCOMING_LEND_LEASE_ENABLE_TRIGGER = {
 			FROM = { allies = yes}
 		}
 		NOT = {	ROOT = { axis = yes } }
+	}
+	if = {
+		limit = {
+			NOT = { has_global_flag = fall_of_france }
+		}
+		NOT = { ROOT = { tag = FRA } }
 	}
 }
 DIPLOMACY_REQUEST_LICENSED_PRODUCTION_ENABLE_TRIGGER = {
