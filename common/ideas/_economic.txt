@@ -31,6 +31,7 @@ ideas = {
 			}
 
 			allowed_to_remove = {
+				has_completed_focus = USA_the_giant_wakes
 				OR = {
 					has_war_support > 0.5
 					has_war = yes
