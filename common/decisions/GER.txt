@@ -347,6 +347,7 @@ GER_seize_gold_reserves_cat = {
 					set_state_flag = GER_seize_gold_reserves_state_flag
 					add_dynamic_modifier = { modifier = GER_overburdened_state_modifier days = 90 }
 				}
+				set_country_flag = GER_dont_seize_gold_reserves_flag
 			}
 			ROOT = {			
 				divide_temp_variable = { occupied_state_num_factory = 200 } #This is necessary since a single factory will increase the occupied_state_num_factory number to 1, which in turn translates to -100% when subtracting from the Consumer Goods. Dividing it by 100 here will give you 1% instead, which is more like what we want.

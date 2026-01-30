@@ -58,6 +58,12 @@ DIPLOMACY_LEND_LEASE_ENABLE_TRIGGER = {
 		}
 		NOT = {	ROOT = { allies = yes } }
 	}
+	if = {
+		limit = {
+			FROM = { tag = SOV}
+		}
+		NOT = {	ROOT = { allies = yes } } 		
+	}
 	if = { 
 		limit = {
 			FROM = { allies = yes}
@@ -77,6 +83,12 @@ DIPLOMACY_INCOMING_LEND_LEASE_ENABLE_TRIGGER = {
 			FROM = { allies = yes}
 		}
 		NOT = {	ROOT = { axis = yes } }
+	}
+	if = {
+		limit = {
+			FROM = { allies = yes }
+		}
+		NOT = {	ROOT = { tag = SOV } } 		
 	}
 	if = {
 		limit = {

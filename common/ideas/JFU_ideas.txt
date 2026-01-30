@@ -1,6 +1,22 @@
 ideas = {
 
 	hidden_ideas = {
+		NO_AIR_MINORS = {
+			picture = generic_infantry_bonus   
+			
+			allowed = {  always = yes  }  
+			
+			removal_cost = -1 
+			
+			equipment_bonus = {
+				large_plane_airframe = {
+					build_cost_ic = 10 instant = yes
+				}
+				medium_plane_airframe = {
+					build_cost_ic = 10 instant = yes
+				}							
+			}			
+		}
 		qol_start_eff = {
 	    	
 			picture = generic_infantry_bonus   

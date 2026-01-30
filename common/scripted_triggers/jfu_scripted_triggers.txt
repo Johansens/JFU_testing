@@ -110,6 +110,8 @@ atlantikwall_states = {
 		state = 23
 		state = 19
 		state = 806
+		state = 909
+		state = 912
 	}
 }
 ITA_africa_states = { 

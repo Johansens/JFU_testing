@@ -644,15 +644,22 @@ JFU_equipment_on_start_up_effect = {
 JFU_comp_startup_effect = {
 	GER = { add_ideas = JFU_no_tradeback }
 	ITA = { add_ideas = JFU_no_tradeback }
-	HUN = { add_ideas = JFU_no_tradeback }
-	ROM = { add_ideas = JFU_no_tradeback }
-	BUL = { add_ideas = JFU_no_tradeback }
-	SPR = { add_ideas = JFU_no_tradeback }
-	FIN = { add_ideas = JFU_no_tradeback }
-	EFR = { add_ideas = JFU_no_tradeback }
+	HUN = { add_ideas = JFU_no_tradeback add_ideas = NO_AIR_MINORS }
+	ROM = { add_ideas = JFU_no_tradeback add_ideas = NO_AIR_MINORS }
+	BUL = { add_ideas = JFU_no_tradeback add_ideas = NO_AIR_MINORS }
+	SPR = { add_ideas = JFU_no_tradeback add_ideas = NO_AIR_MINORS }
+	FIN = { add_ideas = JFU_no_tradeback add_ideas = NO_AIR_MINORS }
+	EFR = { add_ideas = JFU_no_tradeback add_ideas = NO_AIR_MINORS }
 	JAP = { add_ideas = JFU_no_tradeback }
-	MAN = { add_ideas = JFU_no_tradeback }
-	SIA = { add_ideas = JFU_no_tradeback }
+	MAN = { add_ideas = JFU_no_tradeback add_ideas = NO_AIR_MINORS }
+	SIA = { add_ideas = JFU_no_tradeback add_ideas = NO_AIR_MINORS }
+	SAF = { add_ideas = NO_AIR_MINORS }
+	MEX = { add_ideas = NO_AIR_MINORS }
+	CAN = { add_ideas = NO_AIR_MINORS }
+	AST = { add_ideas = NO_AIR_MINORS }
+	BRA = { add_ideas = NO_AIR_MINORS }
+	NZL = { add_ideas = NO_AIR_MINORS }
+	FRA = { add_ideas = NO_AIR_MINORS }
 	#ENG = { add_timed_idea = { idea = JFU_no_tradeback days = 730 } }
 	#USA = { add_timed_idea = { idea = JFU_no_tradeback days = 730 } }
 	#FRA = { add_timed_idea = { idea = JFU_no_tradeback days = 730 } }
