@@ -1020,9 +1020,18 @@ ideas = {
 				port_strike = 1
 				carrier_capacity_penalty_reduction = -0.5
 				sortie_efficiency = 0.5
-				naval_strike_attack_factor = 0.12
-				naval_strike_targetting_factor = 0.12
-				naval_strike_agility_factor = 0.12
+				naval_strike_attack_factor = 0.2
+				naval_strike_targetting_factor = 0.2
+				naval_strike_agility_factor = 0.2
+				naval_defense_factor = 0.1
+                naval_damage_factor = 0.1
+                naval_detection = 0.15
+                naval_speed_factor = 0.1
+				army_attack_factor = 0.10
+				breakthrough_factor = 0.20
+				amphibious_invasion_defence = 0.50
+				supply_consumption_factor = -0.10
+				no_supply_grace = 150
 			}
 		}
 
