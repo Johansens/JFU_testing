@@ -700,7 +700,7 @@ characters={
 		}
 		
 		navy_leader={
-			traits={ gunnery_expert bold navy_career_officer blockade_runner superior_tactician  }
+			traits={ gunnery_expert bold navy_career_officer superior_tactician  }
 			skill=5
 			attack_skill=5
 			defense_skill=4
@@ -719,7 +719,7 @@ characters={
 			}
 		}
 		navy_leader={
-			traits={ aviation_enthusiast naval_lineage blockade_runner }
+			traits={ aviation_enthusiast naval_lineage }
 			skill=4
 			attack_skill=3
 			defense_skill=2
