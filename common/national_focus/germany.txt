@@ -112,7 +112,7 @@ focus_tree = {
 		#relative_position_id = GER_strengthen_the_kriegsmarine
 
 		available = {
-			always = no
+			#always = no
 		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL_CHARACTER }
@@ -513,7 +513,7 @@ focus_tree = {
 			modify_building_resources = {
         	   building = synthetic_refinery
         	   resource = rubber
-        	   amount = 4
+        	   amount = 3
         	}
 
 			custom_effect_tooltip = generic_skip_one_line_tt
