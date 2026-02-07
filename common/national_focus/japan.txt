@@ -4211,7 +4211,7 @@ focus_tree = {
 
 		available = {
 			date > 1940.12.31
-			JAP_naval_faction_is_at_least_influential = yes
+			#JAP_naval_faction_is_at_least_influential = yes
 			is_ai = no
 		}
 
