@@ -2293,13 +2293,15 @@ JFU_templates = {
 
 					motorized_rocket_brigade = { x = 2 y = 0 }
 					motorized_rocket_brigade = { x = 2 y = 1 }
-					motorized_rocket_brigade = { x = 2 y = 2 }
-					motorized_rocket_brigade = { x = 2 y = 3 }
 
 					marine = { x = 3 y = 0 }
 					marine = { x = 3 y = 1 }
 					marine = { x = 3 y = 2 }
 					marine = { x = 3 y = 3 }
+					marine = { x = 3 y = 4 }
+
+					marine = { x = 4 y = 0 }
+					marine = { x = 4 y = 1 }
 
 				}
 				support = { 
@@ -2343,13 +2345,15 @@ JFU_templates = {
 
 					artillery_brigade = { x = 2 y = 0 }
 					artillery_brigade = { x = 2 y = 1 }
-					artillery_brigade = { x = 2 y = 2 }
-					artillery_brigade = { x = 2 y = 3 }
 
 					marine = { x = 3 y = 0 }
 					marine = { x = 3 y = 1 }
 					marine = { x = 3 y = 2 }
 					marine = { x = 3 y = 3 }
+					marine = { x = 3 y = 4 }
+
+					marine = { x = 4 y = 0 }
+					marine = { x = 4 y = 1 }
 
 				}
 				support = { 
