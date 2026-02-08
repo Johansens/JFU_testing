@@ -254,11 +254,7 @@ technologies = {
 		}
 		
 		mountaineers = {
-			Mountain = {
-				attack = 0.10
-				movement = 0.05
-			}
-			Hills = {
+			jungle = {
 				attack = 0.10
 				movement = 0.05
 			}
@@ -347,8 +343,40 @@ technologies = {
 		
 		force_use_small_tech_layout = yes
 		
-		category_mountaineers = {
-			breakthrough = 0.10
+		artillery_brigade = {
+			Mountain = {
+				attack = 0.10
+			}
+		}			
+		mot_artillery_brigade = {
+			Mountain = {
+				attack = 0.10
+			}
+		}	
+		rocket_artillery_brigade = {
+			Mountain = {
+				attack = 0.10
+			}
+		}	
+		mot_rocket_artillery_brigade = {
+			Mountain = {
+				attack = 0.10
+			}
+		}	
+		motorized_rocket_brigade = {
+			Mountain = {
+				attack = 0.10
+			}
+		}	
+		anti_tank_brigade = {
+			Mountain = {
+				attack = 0.10
+			}
+		}
+		mot_anti_tank_brigade = {
+			Mountain = {
+				attack = 0.10
+			}
 		}
 		
 		xor = { mountaineers_keystone_2 }
@@ -584,7 +612,7 @@ technologies = {
 				attack = 0.05
 			}
 			amphibious = {
-				attack = 0.10
+				attack = 0.05
 			}
 		}
 			
@@ -699,8 +727,15 @@ technologies = {
 		
 		xor = { marines_commandoes }
 		
-		army_bonus_air_superiority_factor = 0.10
-		
+		marine = {
+			marsh = {
+				attack = 0.10
+				movement = 0.05
+			}
+			river = {
+				attack = 0.05
+			}
+		}	
 		doctrine = yes	
 		research_cost = 2.25
 		
@@ -796,15 +831,8 @@ technologies = {
 			research_cost_coeff = 1
 		}		
 		marine = {
-			marsh = {
-				attack = 0.05
-				movement = 0.05
-			}
-			river = {
-				attack = 0.05
-			}
 			amphibious = {
-				attack = 0.10
+				attack = 0.05
 			}
 		}		
 		doctrine = yes	
@@ -840,8 +868,40 @@ technologies = {
 		allow_branch = { has_dlc = "Man the Guns" }
 
 
-		category_marines = {
-			breakthrough = 0.10
+		artillery_brigade = {
+			amphibious = {
+				attack = 0.10
+			}
+		}			
+		mot_artillery_brigade = {
+			amphibious = {
+				attack = 0.10
+			}
+		}	
+		rocket_artillery_brigade = {
+			amphibious = {
+				attack = 0.10
+			}
+		}	
+		mot_rocket_artillery_brigade = {
+			amphibious = {
+				attack = 0.10
+			}
+		}	
+		motorized_rocket_brigade = {
+			amphibious = {
+				attack = 0.10
+			}
+		}	
+		anti_tank_brigade = {
+			amphibious = {
+				attack = 0.10
+			}
+		}
+		mot_anti_tank_brigade = {
+			amphibious = {
+				attack = 0.10
+			}
 		}
 
 	xor = { marines_expeditionary_support }		
@@ -914,40 +974,8 @@ technologies = {
 		xp_research_type = army
 		xp_unlock_cost = 60
 
-		artillery_brigade = {
-			amphibious = {
-				attack = 0.10
-			}
-		}			
-		mot_artillery_brigade = {
-			amphibious = {
-				attack = 0.10
-			}
-		}	
-		rocket_artillery_brigade = {
-			amphibious = {
-				attack = 0.10
-			}
-		}	
-		mot_rocket_artillery_brigade = {
-			amphibious = {
-				attack = 0.10
-			}
-		}	
-		motorized_rocket_brigade = {
-			amphibious = {
-				attack = 0.10
-			}
-		}	
-		anti_tank_brigade = {
-			amphibious = {
-				attack = 0.10
-			}
-		}
-		mot_anti_tank_brigade = {
-			amphibious = {
-				attack = 0.10
-			}
+		marine = {
+			defense = 0.10
 		}
 
 
@@ -1035,10 +1063,10 @@ technologies = {
 	paras_dispersed_drop = {
 
 		xp_research_type = army
-		xp_unlock_cost = 60
+		xp_unlock_cost = 999
 		
 		force_use_small_tech_layout = yes
-		
+	
 		path = {
 			leads_to_tech = paras_airborne_light_armor
 			research_cost_coeff = 1
@@ -1049,12 +1077,12 @@ technologies = {
 		doctrine = yes	
 		research_cost = 4.5
 		
-		#rangers = {
-			#snow = {
-			#	attack = 0.10
-			#	movement = 0.05
-		#	}
-		#}
+		paratrooper = {
+			forest = {
+				attack = 0.10
+				movement = 0.05
+			}
+		}	
 		
 		categories = {
 			special_forces_doctrine
@@ -1078,8 +1106,8 @@ technologies = {
 	
 	paras_combat_drop = {
 
-		xp_research_type = air
-		xp_unlock_cost = 60
+		xp_research_type = army
+		xp_unlock_cost = 999
 		
 		force_use_small_tech_layout = yes
 		
@@ -1089,16 +1117,16 @@ technologies = {
 			leads_to_tech = paras_airborne_light_armor
 			research_cost_coeff = 1
 		}
-		
+	
 		doctrine = yes	
 		research_cost = 4.5
 		
-		#rangers = {
-		#	jungle = {
-		#		attack = 0.10
-		#		movement = 0.05
-		#	}
-		#}
+		paratrooper = {
+			hills = {
+				attack = 0.10
+				movement = 0.05
+			}
+		}	
 		
 		categories = {
 			special_forces_doctrine
@@ -1123,14 +1151,10 @@ technologies = {
 	paras_airborne_light_armor = {
 
 		xp_research_type = army
-		xp_unlock_cost = 60
+		xp_unlock_cost = 999
 		
 		force_use_small_tech_layout = yes
-		
-		#category_all_infantry = {
-		#	max_organisation = 15
-		#}
-		
+
 		path = {
 			leads_to_tech = paras_combat_1
 			research_cost_coeff = 1
@@ -1144,16 +1168,12 @@ technologies = {
 		doctrine = yes	
 		research_cost = 4.5
 
-		#rangers = {
-		#	forest = {
-		#		attack = 0.05
-		#		movement = 0.05
-		#	}
-		#	jungle = {
-		#		attack = 0.05
-		#		movement = 0.05
-		#	}
-		#}		
+		paratrooper = {
+			Urban = {
+				attack = 0.10
+				movement = 0.05
+			}
+		}	
 		
 		categories = {
 			special_forces_doctrine
@@ -1189,12 +1209,12 @@ technologies = {
 		
 		xor = { paras_combat_2 }
 		
-		#rangers = {
-		#	hills = {
-		#		attack = 0.10
-		#		movement = 0.05
-		#	}
-		#}		
+		paratrooper = {
+			desert = {
+				attack = 0.10
+				movement = 0.05
+			}
+		}		
 			
 		doctrine = yes	
 		research_cost = 2.25
@@ -1232,12 +1252,11 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		#rangers = {
-		#	Urban = {
-		#		attack = 0.10
-		#		movement = 0.05
-		#	}
-		#}		
+		paratrooper = {
+			fort = {
+				attack = 0.10
+			}
+		}			
 		
 		xor = { paras_combat_1 }
 		
@@ -1282,16 +1301,15 @@ technologies = {
 			research_cost_coeff = 1
 		}	
 
-		#rangers = {
-		#	forest = {
-		#		attack = 0.05
-		#		movement = 0.05
-		#	}
-		#	jungle = {
-		#		attack = 0.05
-		#		movement = 0.05
-		#	}
-		#}
+		paratrooper = {
+			Urban = {
+				attack = 0.10
+				movement = 0.05
+			}
+			fort = {
+				attack = 0.10
+			}
+		}	
 			
 		doctrine = yes	
 		research_cost = 2.25
@@ -1372,10 +1390,10 @@ technologies = {
 		xp_unlock_cost = 60
 		
 		force_use_small_tech_layout = yes
-		
-		#rangers = {
-		#	breakthrough = 0.10
-		#}
+					
+		paratrooper = {
+			breakthrough = 0.10
+		}
 
 		xor = { paras_keystone_2 }
 
@@ -1408,9 +1426,9 @@ technologies = {
 		xp_research_type = army
 		xp_unlock_cost = 60
 
-		#rangers = {
-		#	defense = 0.10
-		#}	
+		paratrooper = {
+			defense = 0.10
+		}	
 
 		force_use_small_tech_layout = yes
 		
