@@ -37,8 +37,8 @@ ideas = {
 			ledger = navy
 			available = {
 				AND = { 
-				has_naval_academy = yes
-				has_doctrine = new_fleet_in_being
+					has_naval_academy = yes
+					has_doctrine = new_fleet_in_being
 				}
 			}
 
@@ -54,8 +54,8 @@ ideas = {
 			ledger = navy
 			available = {
 				AND = { 
-				has_naval_academy = yes
-				has_doctrine = new_convoy_raiding
+					has_naval_academy = yes
+					has_doctrine = new_convoy_raiding
 				}
 			}
 
@@ -71,8 +71,8 @@ ideas = {
 			ledger = navy
 			available = {
 				AND = { 
-				has_naval_academy = yes
-				has_doctrine = new_base_strike
+					has_naval_academy = yes
+					has_doctrine = new_base_strike
 				}
 			}
 
@@ -116,10 +116,6 @@ ideas = {
 			ledger = navy
 			visible = { has_dlc = "No Compromise, No Surrender" }
 			available = { 
-				OR = {
-					has_doctrine = new_base_strike 
-					has_doctrine = naval_gunfire_support
-				}
 			}
 
 			modifier = {
@@ -142,11 +138,7 @@ ideas = {
 		stay_at_your_posts_navy_spirit = {
 			ledger = navy
 			visible = { has_dlc = "No Compromise, No Surrender" }
-			available = { 
-				OR = {
-					has_doctrine = new_convoy_raiding 
-					has_doctrine = screen_support_focus
-				}
+			available = {
 			}
 
 			modifier = {
@@ -159,12 +151,7 @@ ideas = {
 	navy_spirit = {
 		jeune_ecole_spirit = {
 			ledger = navy
-			available = {
-				OR = {
-					has_doctrine = new_convoy_raiding
-					has_doctrine = jeune_ecole
-				}
-			}
+			available = {  }
 			research_bonus = {
 				dd_tech = 0.20
 			}
@@ -184,7 +171,7 @@ ideas = {
 		}
 		integrated_designers_spirit = {
 			ledger = navy
-			available = { has_doctrine = new_convoy_raiding }
+			available = {  }
 			visible = { has_dlc = "Man the Guns" }
 			research_bonus = {
 				ship_modules_tech = 0.20
@@ -195,7 +182,7 @@ ideas = {
 		}
 		naval_reform_spirit = {
 			ledger = navy
-			available = { has_doctrine = new_base_strike }
+			available = {  }
 			modifier = {
 				experience_gain_navy_factor = 0.25
 			}
@@ -205,7 +192,7 @@ ideas = {
 		}
 		naval_refit_yards_spirit = {
 			ledger = navy
-			available = { has_doctrine = new_fleet_in_being }
+			available = {  }
 			modifier = {
 				refit_speed = 0.25
 				repair_speed_factor = 0.25
@@ -265,7 +252,10 @@ ideas = {
 		}
 		sea_lane_denial_navy_spirit = {
 			ledger = navy
-			visible = { has_dlc = "No Compromise, No Surrender" }
+			visible = {
+				has_dlc = "No Compromise, No Surrender"
+				always = no
+			}
 			available = { 
 				OR = {
 					has_doctrine = new_convoy_raiding 
@@ -319,7 +309,7 @@ ideas = {
 	naval_command_spirit = {
 		close_combat_navy_spirit = {
 			ledger = navy
-			available = { has_doctrine = new_convoy_raiding }
+			available = {  }
 			modifier ={
 				navy_screen_attack_factor = 0.05
 				naval_torpedo_screen_penetration_factor = 0.05
@@ -330,12 +320,7 @@ ideas = {
 		}
 		night_fighting_spirit = {
 			ledger = navy
-			available = {
-				OR = {
-					has_doctrine = torpedo_primacy
-					has_doctrine = new_base_strike
-				}
-			}
+			available = {  }
 			modifier = {
 				night_spotting_chance = 0.1
 				naval_night_attack = 0.1
@@ -347,12 +332,7 @@ ideas = {
 		}
 		surprise_attacks_spirit = { 
 			ledger = navy
-			available = { 
-				OR = {
-					has_doctrine = new_base_strike
-					has_doctrine = massed_carrier_fleet
-			 	}
-			 }
+			available = {  }
 			modifier = {
 				naval_retreat_speed_after_initial_combat = 0.1
 				naval_retreat_chance_after_initial_combat = 0.1
@@ -363,12 +343,7 @@ ideas = {
 		}
 		efficient_communications_spirit = {
 			ledger = navy
-			available = { 
-				OR = {
-					has_doctrine = new_fleet_in_being 
-					has_doctrine = line_of_battle
-				}
-			}
+			available = {  }
 			modifier = {
 				positioning = 0.15
 			}
@@ -385,11 +360,7 @@ ideas = {
 		surface_raiders_spirit = {
 			ledger = navy
 			available = {
-				OR = {
-					has_doctrine = new_convoy_raiding
-					has_doctrine = armored_raiders
-
-				} 
+				has_doctrine = new_convoy_raiding
 			}
 			modifier = {
 				screening_without_screens = 0.2
@@ -415,7 +386,7 @@ ideas = {
 		}
 		inclimate_weather_experience_spirit = {
 			ledger = navy
-			available = { has_doctrine = new_convoy_raiding }
+			available = {  }
 			modifier = {
 				navy_weather_penalty = -0.4
 			}
@@ -425,12 +396,7 @@ ideas = {
 		}
 		brave_commanders_spirit = {
 			ledger = navy
-			available = {
-				OR = {
-					has_doctrine = new_fleet_in_being
-					has_doctrine = capital_hunters
-				}
-			}
+			available = {  }
 			modifier = {
 				naval_critical_score_chance_factor = 0.15
 				naval_retreat_chance = -0.05
@@ -454,10 +420,6 @@ ideas = {
 			ledger = navy
 			visible = { has_dlc = "No Compromise, No Surrender" }
 			available = { 
-				OR = {
-					has_doctrine = new_convoy_raiding
-					has_doctrine = coastal_defence_fleet
-				}
 			}
 			modifier = {
 				naval_enemy_fleet_size_ratio_penalty_factor = 0.20
@@ -479,10 +441,6 @@ ideas = {
 			ledger = navy
 			visible = { has_dlc = "No Compromise, No Surrender" }
 			available = {
-				OR = {
-					has_doctrine = new_fleet_in_being
-					has_doctrine = escort_carrier_support
-				}
 			}
 			modifier = {
 				spotting_chance = 0.10
@@ -505,10 +463,6 @@ ideas = {
 			ledger = navy
 			visible = { has_dlc = "No Compromise, No Surrender" }
 			available = {
-				OR = {
-					has_doctrine = new_base_strike
-					has_doctrine = light_task_forces
-				}
 			}
 			modifier = {
 				screening_efficiency = 0.10
@@ -532,10 +486,6 @@ ideas = {
 			ledger = navy
 			visible = { has_dlc = "No Compromise, No Surrender" }
 			available = {
-				OR = {
-					has_doctrine = new_base_strike
-					has_doctrine = battlecruiser_supremacy
-				}
 			}
 			modifier = {
 				naval_coordination = 0.15
@@ -557,14 +507,10 @@ ideas = {
 			ledger = navy
 			visible = { has_dlc = "No Compromise, No Surrender" }
 			available = {
-				OR = {
-					has_doctrine = new_fleet_in_being
-					has_doctrine = battleship_antiair_screen
-				}
 			}
 				
 			modifier = {
-				navy_anti_air_attack_factor = 0.15	
+				navy_anti_air_attack_factor = 0.10	
 			}
 
 			ai_will_do = {
@@ -586,10 +532,6 @@ ideas = {
 			ledger = navy
 			visible = { has_dlc = "No Compromise, No Surrender" }
 			available = { 
-				OR = {
-					has_doctrine = new_convoy_raiding
-					has_doctrine = patrol_boats
-				}
 			}
 			modifier = {
 					navy_visibility = -0.10

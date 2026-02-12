@@ -109,8 +109,8 @@ ideas = {
 			ledger = army
 			available = {
 				AND = {
-				has_military_academy = yes 
-				has_doctrine = new_mobile_warfare	
+					has_military_academy = yes 
+					has_doctrine = new_mobile_warfare	
 				}
 			}
 			modifier = {
@@ -126,15 +126,15 @@ ideas = {
 			ledger = army
 			available = { 
 				AND = {
-				has_military_academy = yes 
-				has_doctrine = superior_firepower	
+					has_military_academy = yes 
+					has_doctrine = superior_firepower	
 				}
 			}
 
 			modifier = {
 				custom_modifier_tooltip = superior_firepower_academy_spirit_tt
-				air_cas_present_factor = 0.075
-				initiative_factor = 0.04
+				air_cas_present_factor = 0.05
+				initiative_factor = 0.03
 			}
 			ai_will_do = {
 				factor = 1
@@ -161,15 +161,10 @@ ideas = {
 		}
 		mass_assault_academy_spirit = {
 			ledger = army
-			available = {
-				
+			available = {	
 				AND = { 
 					has_military_academy = yes 
-					OR = {
-						tag = SOV
-						has_doctrine = mass_assault
-					}
-
+					has_doctrine = mass_assault
 				}
 			}
 			modifier = {
@@ -183,9 +178,7 @@ ideas = {
 		professional_officer_corps_spirit = {
 			ledger = army
 			available = {
-				NOT = {
-					has_doctrine = new_mobile_warfare
-				}
+				has_military_academy = yes
 			}
 			modifier = {
 				experience_gain_army_unit_factor = 0.15
@@ -205,7 +198,7 @@ ideas = {
 			ledger = army
 			modifier = {
 				dig_in_speed_factor = 0.25
-				railway_gun_bombardment_factor = 0.25
+				railway_gun_bombardment_factor = 0.1
 			}
 			ai_will_do = {
 				factor = 1
@@ -215,10 +208,6 @@ ideas = {
 		proper_heritage_spirit = {
 			ledger = army
 			available = {
-				OR = {
-					has_doctrine = grand_battleplan
-					has_doctrine = mounted_infantry
-				}
 			}
 			modifier = {
 				cavalry_attack_factor = 0.05
@@ -259,7 +248,7 @@ ideas = {
 			ledger = army
 			visible = { has_government = fascism }
 			modifier = {
-				offensive_war_stability_factor = 0.1
+				political_power_gain = 0.1
 				mobilization_laws_cost_factor = -0.25
 			}
 			ai_will_do = {
@@ -296,7 +285,6 @@ ideas = {
 			ledger = army
 			modifier = {
 				naval_invasion_plan_cap = 6
-				extra_paratrooper_supply_grace = 24
 				extra_marine_supply_grace = 24
 				special_forces_out_of_supply_factor = -0.2
 			}
@@ -310,6 +298,7 @@ ideas = {
 			available = { has_doctrine = mass_assault }
 			modifier = {
 				army_infantry_defence_factor = 0.05
+				land_reinforce_rate = 0.02
 			}
 			ai_will_do = {
 				factor = 1
@@ -439,12 +428,8 @@ ideas = {
 		spirit_of_defiance_army_spirit = {
 			ledger = army
 			visible = { has_dlc = "No Compromise, No Surrender" }
-			available = { 
-				OR = {
-					has_doctrine = mass_assault 
-					has_doctrine = guerilla_war
-					has_doctrine = peoples_war
-				}
+			available = {
+				has_doctrine = mass_assault
 			}
 			modifier = {
 				army_core_attack_factor = 0.05
@@ -452,17 +437,6 @@ ideas = {
 			}
 			ai_will_do = {
 				factor = 1
-				modifier = {
-					factor = 0
-					NOT = { has_dlc = "No Compromise, No Surrender" }
-				}
-				modifier = {
-					factor = 2
-					OR = {
-					has_doctrine = guerilla_war
-					has_doctrine = peoples_war
-					}
-				}
 			}
 		}
 
@@ -498,11 +472,7 @@ ideas = {
 	division_command_spirit = {
 		static_warfare_spirit = {
 			ledger = army
-			available = { 
-				OR = {
-					has_doctrine = grand_battleplan	
-					has_doctrine = great_war_infantry
-				}
+			available = {
 			}
 			modifier = {
 				tactic_elastic_defense_preferred_weight_factor = 1
@@ -517,10 +487,6 @@ ideas = {
 		flexible_organization_spirit = {
 			ledger = army
 			available = {
-				OR = {
-					has_doctrine = new_mobile_warfare 
-					has_doctrine = infiltration_tactics
-				}
 			}
 			modifier = {
 				org_loss_when_moving = -0.15
@@ -534,7 +500,7 @@ ideas = {
 
 		aggressive_reconnaisance_spirit = {
 			ledger = army
-			available = { has_doctrine = new_mobile_warfare }
+			available = {}
 			modifier = {
 				tactic_infantry_charge_preferred_weight_factor = 1
 				intel_from_combat_factor = 0.25
@@ -547,11 +513,11 @@ ideas = {
 
 		reserve_officers_spirit = {
 			ledger = army
-			available = { has_doctrine = superior_firepower }
+			available = {}
 			modifier = {
 				tactic_delay_preferred_weight_factor = 1
-				training_time_army_factor = -0.15
-				experience_loss_factor = -0.15
+				training_time_army_factor = -0.10
+				experience_loss_factor = -0.10
 			}
 			ai_will_do = {
 				factor = 1
@@ -560,7 +526,7 @@ ideas = {
 
 		victory_or_death_spirit = {
 			ledger = army
-			available = { has_doctrine = mass_assault }	
+			available = {}	
 			modifier = {
 				tactic_human_wave_tactics_preferred_weight_factor = 1
 				org_loss_at_low_org_factor = -0.25
@@ -625,10 +591,6 @@ ideas = {
 			ledger = army
 			visible = { has_dlc = "No Compromise, No Surrender" }
 			available = { 
-				OR = { 
-					has_doctrine = superior_firepower
-					has_doctrine = tank_destroyer_force
-				}
 			}
 			
 			modifier = {
@@ -659,10 +621,6 @@ ideas = {
 			ledger = army
 			visible = { has_dlc = "No Compromise, No Surrender" }
 			available = {
-				OR = {
-					has_doctrine = superior_firepower 
-					has_doctrine = self_propelled_support
-				}
 			}
 			
 			modifier = {
@@ -707,11 +665,7 @@ ideas = {
 		rapid_emplacement_army_spirit = {
 			ledger = army
 			visible = { has_dlc = "No Compromise, No Surrender" }
-			available = { 
-				OR = {
-				has_doctrine = superior_firepower
-				has_doctrine = flying_batteries
-				}
+			available = {
 			}
 				
 				modifier = {
@@ -774,7 +728,6 @@ ideas = {
 		quick_improvisation_spirit = {
 			ledger = army
 			available = {
-				has_doctrine = new_mobile_warfare
 			}
 			modifier = {
 				command_abilities_cost_factor = -0.20
