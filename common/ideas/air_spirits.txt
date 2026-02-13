@@ -48,12 +48,7 @@ ideas = {
 		}
 		material_destruction_spirit = {
 			ledger = air
-			available = { 
-				AND = {
-					has_air_academy = yes
-					has_doctrine = new_operational_integrity
-				}
-			}
+			available = { has_air_academy = yes }
 			research_bonus = {
 				medium_air = 0.15
 			}
@@ -77,7 +72,12 @@ ideas = {
 		
 		effective_training_programs_spirit = {
 			ledger = air
-			available = { has_air_academy = yes }
+			available = { 
+				AND = {
+					has_air_academy = yes
+					has_doctrine = new_operational_integrity
+				}
+			}
 			modifier = {
 				air_training_xp_gain_factor = 0.25
 				air_fuel_consumption_factor = -0.05
@@ -125,8 +125,8 @@ ideas = {
 			ledger = air
 			visible = { tag = ENG }
 			modifier = {
-				air_carrier_night_penalty_reduction_factor = 0.25
-				carrier_night_traffic = 0.5
+				air_carrier_night_penalty_reduction_factor = 0.15
+				carrier_night_traffic = 0.33
 			}
 			ai_will_do = {
 				factor = 1
