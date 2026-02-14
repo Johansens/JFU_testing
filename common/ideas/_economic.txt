@@ -709,6 +709,17 @@ ideas = {
 				}
 				if = {
 					limit = {
+						original_tag = SIA
+					}
+					NOT = {
+						has_game_rule = {
+							rule = JFU_pre_sets
+							option = COMPETITIVE_JFU
+						}
+					}
+				}
+				if = {
+					limit = {
 						original_tag = GER
 					}
 					NOT = { has_completed_focus = GER_autarky_efforts }
@@ -770,6 +781,17 @@ ideas = {
 				if = {
 					limit = {
 						original_tag = JAP
+					}
+					NOT = {
+						has_game_rule = {
+							rule = JFU_pre_sets
+							option = COMPETITIVE_JFU
+						}
+					}
+				}
+				if = {
+					limit = {
+						original_tag = SIA
 					}
 					NOT = {
 						has_game_rule = {
@@ -869,6 +891,17 @@ ideas = {
 				if = {
 					limit = {
 						original_tag = JAP
+					}
+					NOT = {
+						has_game_rule = {
+							rule = JFU_pre_sets
+							option = COMPETITIVE_JFU
+						}
+					}
+				}
+				if = {
+					limit = {
+						original_tag = SIA
 					}
 					NOT = {
 						has_game_rule = {

@@ -363,6 +363,10 @@ focus_tree = {
 		
 		completion_reward = {
 			JAP = { add_ideas = SIA_importjap }
+			hidden_effect = {
+				MAN = { add_ideas = SIA_importman }
+			}
+
 		}
 		
 		ai_will_do = {
@@ -2197,7 +2201,7 @@ focus = {
 		id = American_Embassy
 		icon = GFX_focus_chi_mission_to_the_us
 		prerequisite = { focus = International_Relations }
-		mutually_exclusive = { focus = German_Embassy}
+		mutually_exclusive = { focus = German_Embassy focus = British_Embassy focus = Soviet_Embassy }
 		relative_position_id = International_Relations
 
 		x = 1
@@ -2392,7 +2396,7 @@ focus = {
 		id = German_Embassy
 		icon = GFX_focus_chi_mission_to_germany
 		prerequisite = { focus = International_Relations }
-		mutually_exclusive = { focus = American_Embassy focus = British_Embassy}
+		mutually_exclusive = { focus = American_Embassy focus = Soviet_Embassy  focus = British_Embassy}
 		relative_position_id = International_Relations
 
 		x = -2
@@ -2535,7 +2539,7 @@ focus = {
 		icon = GFX_focus_chi_mission_to_the_soviet_union
 		prerequisite = { focus = International_Relations }
 		relative_position_id = International_Relations
-
+		mutually_exclusive = { focus = German_Embassy focus = British_Embassy focus = German_Embassy }
 		x = 4
 		y = 1
 		
@@ -2677,7 +2681,7 @@ focus = {
 		id = British_Embassy
 		icon = GFX_focus_chi_british_cooperation
 		prerequisite = { focus = International_Relations }
-		mutually_exclusive = { focus = German_Embassy}
+		mutually_exclusive = { focus = German_Embassy focus = American_Embassy focus = Soviet_Embassy }
 		relative_position_id = International_Relations
 
 		x = -5
@@ -2925,10 +2929,10 @@ focus = {
 		
 		completion_reward = {
 			289 = {
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = arms_factory
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -2956,10 +2960,10 @@ focus = {
 		
 		completion_reward = {
 			724 = {
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = arms_factory
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -3049,7 +3053,7 @@ focus = {
 				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 			}	

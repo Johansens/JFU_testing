@@ -23,6 +23,26 @@ ideas = {
 			}
 		}
 
+		SIA_importman = {
+	
+			available = {
+			}
+			
+			allowed = {
+				always = no
+			}
+	
+			removal_cost = -1
+
+			picture = man_five_year_plan_industry
+			
+			
+			targeted_modifier = {
+				tag = SIA
+				#trade_cost_for_target_factor = -0.6
+				extra_trade_to_target_factor = 1.0
+			}
+		}
 
 		SIA_Pad_Thai = {
 			picture = pad_thai
