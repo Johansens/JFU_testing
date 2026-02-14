@@ -219,7 +219,7 @@ NDefines.NProject.RECRUIT_SCIENTIST_COST = {						-- Amount of pp to hire a scie
 
 NDefines.NFactions.AI_DAYS_TO_SELECT_GOAL = 999		-- was 14
 NDefines.NFactions.FACTION_THEATER_COMMANDER_LAND_SUPPLY_USAGE_MODIFIER_BASE = 0				-- Base value (percentage, negative = good)
-NDefines.NFactions.FACTION_THEATER_COMMANDER_LAND_SUPPLY_USAGE_MODIFIER_SKILL_FACTOR = 0	-- was -0.01 | Value per skill level (percentage, negative = good)
+NDefines.NFactions.FACTION_THEATER_COMMANDER_LAND_SUPPLY_USAGE_MODIFIER_SKILL_FACTOR = -0.005	-- was -0.01 | Value per skill level (percentage, negative = good)
 NDefines.NFactions.FACTION_THEATER_COMMANDER_NAVY_SUPPLY_USAGE_MODIFIER_BASE = 0				-- Base value (percentage, negative = good)
 NDefines.NFactions.FACTION_THEATER_COMMANDER_NAVY_SUPPLY_USAGE_MODIFIER_SKILL_FACTOR = 0	-- was -0.01 | Value per skill level (percentage, negative = good)
 NDefines.NFactions.FACTION_THEATER_COMMANDER_SECONDARY_BONUS = 0							-- was 0.5 | A value that scales the supply usage modifiers if a Land commander is giving the supply bonus to Navy and vice versa
