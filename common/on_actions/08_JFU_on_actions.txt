@@ -869,16 +869,18 @@ on_actions = {
 		}
 	}
 	on_weekly = {
-		ENG ={
-			if = {
-				limit = {
-					NOT = {
-						tag = SOV
-						has_operation_token = E_token_civilian
+		effect = {
+			ENG = {
+				if = {
+					limit = {
+						NOT = {
+							tag = SOV
+							has_operation_token = E_token_civilian
+						}
 					}
 				}
+				JFU_apply_intel = yes
 			}
-			JFU_apply_intel = yes
 		}
 	}
 }
