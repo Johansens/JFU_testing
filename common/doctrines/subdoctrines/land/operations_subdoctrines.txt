@@ -152,20 +152,21 @@ infiltration_tactics = {
 
     # EFFECTS
     enable_tactic = tactic_infantry_assault
-    max_planning = 0.05 
-    #category_army = {
-    #    breakthrough = 0.05
-    #}
+    #max_planning = 0.05 
+    supply_consumption_factor = -0.10
+    command_power_gain = 0.015
+    category_army = {
+        breakthrough = 0.05
+    }
     ai_will_do = { }
 
      rewards = {
         infiltration_assault = {
         #1
             category_army = {
-                breakthrough = 0.10
+                breakthrough = 0.05
                 max_organisation = 5
             }
-
         }
         nightly_assaults = {
         #2
@@ -173,8 +174,7 @@ infiltration_tactics = {
         }
         self_sustaining_infiltration_units = {
         #3
-            supply_consumption_factor = -0.10
-            command_power_gain = 0.015
+
             category_tanks = {
                 max_organisation = 2
             }
@@ -216,7 +216,6 @@ infiltration_tactics = {
                     category = category_cavalry
                     soft_attack = 0.1
                 }
-
             }
 
             category_recon = {
@@ -226,9 +225,8 @@ infiltration_tactics = {
         }
         infiltration_in_depth = {
         #5
-            land_reinforce_rate = 0.02
+            #land_reinforce_rate = 0.02
             org_loss_when_moving = -0.20
-            
         }
     }
 }
