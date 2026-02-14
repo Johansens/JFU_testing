@@ -10,7 +10,7 @@ faction_template_new_order_in_east_asia_faction = {
 		#faction_goal_war_on_communism # Would be autocompleted if done when at war with the PRC 
 
 		# Medium Term 
-		faction_goal_control_the_chinese_capitals
+		#faction_goal_control_the_chinese_capitals
 
 		# Long Term 
 		#faction_goal_align_china
@@ -38,7 +38,7 @@ faction_template_geacps_faction = {
 		# faction_goal_coastal_security
 
 		# Medium Term 
-		faction_goal_secure_the_oil_supply
+		#faction_goal_secure_the_oil_supply
 
 		# Long Term 
 		#faction_goal_align_china

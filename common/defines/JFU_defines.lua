@@ -211,8 +211,18 @@ NDefines.NIntel.ARMY_INTEL_COMBAT_BONUS_MAX_BONUS = 0
 NDefines.NIndustrialOrganisation.DESIGN_TEAM_CHANGE_XP_COST = 0	-- Flat cost added to the XP cost of a new equipment design. If 0, cost is entirely disabled.
 
 NDefines.NProject.RECRUIT_SCIENTIST_COST = {						-- Amount of pp to hire a scientist based on available scientist
-		5,			-- pp cost if no available scientist
-		10,			-- pp cost if 1 available scientist
-		25,			-- pp cost if 2 available scientist
-		50			-- pp cost if more than 2 available scientist
-	}
+	5,			-- pp cost if no available scientist
+	10,			-- pp cost if 1 available scientist
+	25,			-- pp cost if 2 available scientist
+	50			-- pp cost if more than 2 available scientist
+}
+
+NDefines.NFactions.AI_DAYS_TO_SELECT_GOAL = 999		-- was 14
+NDefines.NFactions.FACTION_THEATER_COMMANDER_LAND_SUPPLY_USAGE_MODIFIER_BASE = 0				-- Base value (percentage, negative = good)
+NDefines.NFactions.FACTION_THEATER_COMMANDER_LAND_SUPPLY_USAGE_MODIFIER_SKILL_FACTOR = 0	-- was -0.01 | Value per skill level (percentage, negative = good)
+NDefines.NFactions.FACTION_THEATER_COMMANDER_NAVY_SUPPLY_USAGE_MODIFIER_BASE = 0				-- Base value (percentage, negative = good)
+NDefines.NFactions.FACTION_THEATER_COMMANDER_NAVY_SUPPLY_USAGE_MODIFIER_SKILL_FACTOR = 0	-- was -0.01 | Value per skill level (percentage, negative = good)
+NDefines.NFactions.FACTION_THEATER_COMMANDER_SECONDARY_BONUS = 0							-- was 0.5 | A value that scales the supply usage modifiers if a Land commander is giving the supply bonus to Navy and vice versa
+NDefines.NFactions.MAX_FACTION_THEATERS = 2							-- was 4 |  The maximum number of faction theaters that can be created
+
+
