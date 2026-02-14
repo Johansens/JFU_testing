@@ -1201,6 +1201,7 @@ focus_tree = {
 
 		completion_reward = {
 			add_ideas = FIN_militarized_society
+			add_ideas = all_adults_serve
 		}
 	}
 	
@@ -1641,10 +1642,10 @@ focus_tree = {
 			custom_effect_tooltip = available_designer
 			show_ideas_tooltip = FIN_pohjolan_voima
 			928 = {
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = industrial_complex
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -1764,25 +1765,25 @@ focus_tree = {
 		completion_reward = {
 			add_ideas = FIN_hydro_electric_expansion
 
-			random_core_state = {
-				prioritize = { 927 } #HÄME (Tampere)
-				limit = {
-					is_fully_controlled_by = ROOT
-					free_building_slots = {
-						building = industrial_complex
-						size > 0
-						include_locked = yes
-					}
-					NOT = { has_state_flag = FIN_power_from_the_dams_flag }
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-				set_state_flag = FIN_power_from_the_dams_flag
-			}
+			#random_core_state = {
+			#	prioritize = { 927 } #HÄME (Tampere)
+			#	limit = {
+			#		is_fully_controlled_by = ROOT
+			#		free_building_slots = {
+			#			building = industrial_complex
+			#			size > 0
+			#			include_locked = yes
+			#		}
+			#		NOT = { has_state_flag = FIN_power_from_the_dams_flag }
+			#	}
+			#	add_extra_state_shared_building_slots = 1
+			#	add_building_construction = {
+			#		type = industrial_complex
+			#		level = 1
+			#		instant_build = yes
+			#	}
+			#	set_state_flag = FIN_power_from_the_dams_flag
+			#}
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
@@ -2100,23 +2101,23 @@ focus_tree = {
 				category = infantry_weapons
 			}
 
-			random_core_state = {
-				prioritize = { 149 } #VAASA (Tikkakoski - Jyväskylä)
-				limit = {
-					is_fully_controlled_by = ROOT
-					free_building_slots = {
-						building = arms_factory
-						size > 1
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-			}
+			#random_core_state = {
+			#	prioritize = { 149 } #VAASA (Tikkakoski - Jyväskylä)
+			#	limit = {
+			#		is_fully_controlled_by = ROOT
+			#		free_building_slots = {
+			#			building = arms_factory
+			#			size > 1
+			#			include_locked = yes
+			#		}
+			#	}
+			#	add_extra_state_shared_building_slots = 1
+			#	add_building_construction = {
+			#		type = arms_factory
+			#		level = 1
+			#		instant_build = yes
+			#	}
+			#}
 
 			if = {
 				limit = {
@@ -2174,14 +2175,14 @@ focus_tree = {
 				category = artillery
 			}
 
-			149 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
-				}
-			}
+			#149 = {
+			#	add_extra_state_shared_building_slots = 1
+			#	add_building_construction = {
+			#		type = arms_factory
+			#		level = 1
+			#		instant_build = yes
+			#	}
+			#}
 
 			if = {
 				limit = {
@@ -2303,23 +2304,23 @@ focus_tree = {
 				category = land_doctrine
 			}
 
-			random_core_state = {
-				prioritize = { 149 } #VAASA (Valtion Tykkitehdas premises in Jyväskylä)
-				limit = {
-					is_fully_controlled_by = ROOT
-					free_building_slots = {
-						building = arms_factory
-						size > 0
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-			}
+			#random_core_state = {
+			#	prioritize = { 149 } #VAASA (Valtion Tykkitehdas premises in Jyväskylä)
+			#	limit = {
+			#		is_fully_controlled_by = ROOT
+			#		free_building_slots = {
+			#			building = arms_factory
+			#			size > 0
+			#			include_locked = yes
+			#		}
+			#	}
+			#	add_extra_state_shared_building_slots = 1
+			#	add_building_construction = {
+			#		type = arms_factory
+			#		level = 1
+			#		instant_build = yes
+			#	}
+			#}
 
 			#TOOLTIP STUFF TO MAKE MAINTENANCE A BIT LESS PAINFUL (no vars will show up in tooltips) - Changes to initial modifiers values will have to be adjusted in both dynamic modifiers
 			effect_tooltip = {
