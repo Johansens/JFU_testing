@@ -284,7 +284,7 @@ assault_infantry = {
                 max_organisation = 10
                 battalion_mult = {
                     category = category_all_infantry
-                    breakthrough = 0.2
+                    #breakthrough = 0.2
                 }
                 battalion_mult = {
                     category = category_all_infantry
