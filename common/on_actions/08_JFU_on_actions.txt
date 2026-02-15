@@ -878,8 +878,8 @@ on_actions = {
 							has_operation_token = E_token_civilian
 						}
 					}
+					JFU_apply_intel = yes
 				}
-				JFU_apply_intel = yes
 			}
 		}
 	}

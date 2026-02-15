@@ -363,9 +363,9 @@ focus_tree = {
 		
 		completion_reward = {
 			JAP = { add_ideas = SIA_importjap }
-			hidden_effect = {
-				MAN = { add_ideas = SIA_importman }
-			}
+			#hidden_effect = {
+			#	MAN = { add_ideas = SIA_importman }
+			#}
 
 		}
 		
@@ -2183,11 +2183,9 @@ focus = {
 		cost = 5
 
 		available = {
-			NOT = { has_idea = closed_economy }
 		}
 		
 		completion_reward = {
-			if = { limit = { has_idea = export_focus } add_ideas = free_trade }	
 			
 			add_political_power = 50
 		}
