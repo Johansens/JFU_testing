@@ -534,6 +534,19 @@ adjacency_rule =
 		submarine = yes
 		trade = yes
 	}
+	is_disabled = {
+		or = {
+			AND = {
+				tag = USA
+				USA = {
+					NOT  = {
+						has_global_flag  = EFR_torch_declared
+					}
+				}
+			}
+		}
+
+	}	
 	
 	required_provinces = { 5074 }
 		
