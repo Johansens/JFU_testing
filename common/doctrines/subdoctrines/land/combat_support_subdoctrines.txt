@@ -635,7 +635,7 @@ siege_artillery = {
 
     super_heavy_artillery = {
         battalion_mult = {
-            category = category_army
+            category = category_artillery
             soft_attack = 0.1
             #defense = 0.1
         }
@@ -707,7 +707,7 @@ siege_artillery = {
         urban_strongpoint_sieges = {
 
             category_artillery = {
-                soft_attack = 0.05
+                #soft_attack = 0.05
             }
             super_heavy_artillery = {
                 urban = {
