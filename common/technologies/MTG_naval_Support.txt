@@ -1740,6 +1740,12 @@ technologies = {
 		naval_invasion_plan_cap = 3	
 		#naval_invasion_capacity = 20
 
+		marine = {
+			amphibious = {
+				attack = 0.05
+			}
+		}
+
 		path = {
 			leads_to_tech = mtg_tank_landing_craft
 			research_cost_coeff = 1
