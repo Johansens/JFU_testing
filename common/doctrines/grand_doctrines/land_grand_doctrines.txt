@@ -196,9 +196,9 @@ superior_firepower = {
         {
             #Armor
             enable_tactic = tactic_delay
-            category_army = {
-                default_morale = 0.2
-            }
+            #category_army = {
+            #    default_morale = 0.2
+            #}
 
             effect = {
                 if = {
@@ -217,7 +217,10 @@ superior_firepower = {
         {
             #Operations
             enable_tactic = tactic_tactical_withdrawal
-            category_army = {
+            category_lightinfantry = {
+                default_morale = 0.1
+            }
+            category_artillery = {
                 default_morale = 0.1
             }
             category_support_artillery = {
