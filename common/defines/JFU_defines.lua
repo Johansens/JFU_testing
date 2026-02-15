@@ -153,7 +153,8 @@ NDefines.NNavy.INITIAL_ALLOWED_DOCKYARD_RATIO_FOR_REPAIRS = 1.0				-- initially 
 NDefines.NNavy.DOMINANCE_DAILY_GAIN_FACTOR = 0.1							-- WAS 0.02 | Daily dominance gain, as a fraction of target value 
 NDefines.NNavy.DOMINANCE_DAILY_LOSS_FACTOR = 0.04 							-- WAS 0.04 | Daily dominance loss, as a fraction of previous target value 
 NDefines.NNavy.NAVAL_INVASION_PREPARE_DAYS = 40								-- WAS 60 | base days needed to prepare a naval invasion
-NDefines.NNavy.NAVAL_SUPPLY_HUB_REDUCTION_FACTOR = 0.5						-- WAS 0.0 | naval supply hub will reduce the supply need to the fleet by this ratio
+NDefines.NNavy.NAVAL_SUPPLY_HUB_REDUCTION_FACTOR = 0.5	
+NDefines.NNavy.MIN_SPOTTING_PROGRESS = 1								-- Minimum spotting progress (in percent) per hourly tick
 
 
 
