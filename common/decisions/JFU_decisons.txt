@@ -1940,6 +1940,9 @@ JFU_decisions = {
 				}
 				add_ideas = ai_limiter
 			}
+			AST = {
+				add_ideas = AST_manpower_noasia
+			}
 		}		
 	}
 }
