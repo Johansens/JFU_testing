@@ -504,6 +504,7 @@ technologies = {
 		}
 		motorized_rocket_brigade = {
 			soft_attack = 0.15
+			breakthrough = 0.15
 		}
 
 		path = {
@@ -550,6 +551,7 @@ technologies = {
 		}
 		motorized_rocket_brigade = {
 			soft_attack = 0.15
+			breakthrough = 0.15
 		}
 
 		path = {
@@ -589,7 +591,8 @@ technologies = {
 			rocket_artillery_equipment_2
 		}
 		motorized_rocket_brigade = {
-			soft_attack = 0.3
+			soft_attack = 0.5
+			breakthrough = 0.5
 		}
 		enable_equipment_modules = {
 			tank_rocket_launcher_2
