@@ -33,6 +33,12 @@ FRA_maginot_line_dynamic_modifier = { #State Modifer
 	icon = GFX_modifiers_generic_defense
     state_bunker_max_level_terrain_limit = 6
 }
+GER_maginot_line_dynamic_modifier = { #State Modifer
+	enable = { always = yes }
+
+	icon = GFX_modifiers_generic_defense
+    state_bunker_max_level_terrain_limit = 1
+}
 
 
 ############# RAIDS RELATED ##############

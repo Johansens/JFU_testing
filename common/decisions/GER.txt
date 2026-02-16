@@ -1472,7 +1472,7 @@ GER_fortify_the_vaterland_cat = {
 									id = 3547
 								}
 								building = bunker
-								level < 4 
+								level < 2 
 							}
 						}
 
@@ -1480,7 +1480,7 @@ GER_fortify_the_vaterland_cat = {
 					51 = { #Rhineland
 						add_building_construction = {
 							type = bunker
-							level = 2
+							level = 1
 							province = {
 								id = 3444
 								id = 9522
@@ -1495,15 +1495,13 @@ GER_fortify_the_vaterland_cat = {
 						42 = { #Moselland
 							any_province_building_level = {
 								province = {
-									id = 11470
-									id = 11435
 									id = 9575
 									id = 11531
 									id = 563
 									id = 3558
 								}
 								building = bunker
-								level < 4 
+								level < 6 
 							}
 						}
 
@@ -1511,10 +1509,8 @@ GER_fortify_the_vaterland_cat = {
 					42 = { #Moselland
 						add_building_construction = {
 							type = bunker
-							level = 2
+							level = 5
 							province = {
-								id = 11470
-								id = 11435
 								id = 9575
 								id = 11531
 								id = 563
@@ -1530,13 +1526,12 @@ GER_fortify_the_vaterland_cat = {
 							any_province_building_level = {
 								province = {
 									id = 3530
-									id = 6568
 									id = 6542
 									id = 6712
 									id = 11640
 								}
 								building = bunker
-								level < 4
+								level < 6
 							}
 						}
 
@@ -1544,10 +1539,9 @@ GER_fortify_the_vaterland_cat = {
 					978 = { #Baden
 						add_building_construction = {
 							type = bunker
-							level = 2
+							level = 5
 							province = {
 								id = 3530
-								id = 6568
 								id = 6542
 								id = 6712
 								id = 11640

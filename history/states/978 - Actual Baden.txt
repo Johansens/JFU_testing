@@ -6,6 +6,9 @@ state = {
 	state_category = large_city
 
 	history = {
+		add_dynamic_modifier = {
+			modifier = GER_maginot_line_dynamic_modifier
+		}
 
 		owner = GER
 		add_core_of = GER
