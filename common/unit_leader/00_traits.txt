@@ -1498,7 +1498,7 @@ leader_traits = {
 			forest = {
 				movement = 0.05
 				attack = 0.1
-				defence = 0.1
+				#defence = 0.1
 			}
 		}
 		
