@@ -109,7 +109,7 @@ defensive_postures = {
         elastic_operations = {
             category_all_infantry = {
                 max_organisation = 10
-                defense = 0.10
+                defense = 0.05
             }
         }
         developed_trench_networking = {

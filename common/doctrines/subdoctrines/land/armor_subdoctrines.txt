@@ -364,7 +364,7 @@ mobile_defense = {
 
         mechanized_offensive = {
             mechanized = {
-                defense = 0.1
+                #defense = 0.1
                 soft_attack = 0.1
             }
         }
