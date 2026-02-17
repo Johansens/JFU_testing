@@ -155,6 +155,7 @@ NDefines.NNavy.DOMINANCE_DAILY_LOSS_FACTOR = 0.04 							-- WAS 0.04 | Daily dom
 NDefines.NNavy.NAVAL_INVASION_PREPARE_DAYS = 40								-- WAS 60 | base days needed to prepare a naval invasion
 NDefines.NNavy.NAVAL_SUPPLY_HUB_REDUCTION_FACTOR = 0.5	
 NDefines.NNavy.MIN_SPOTTING_PROGRESS = 1								-- Minimum spotting progress (in percent) per hourly tick
+NDefines.NNavy.LEADER_EXPERIENCE_SCALE = 0
 
 
 
