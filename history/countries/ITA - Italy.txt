@@ -415,6 +415,8 @@ if = {
 		mtg_transport = 1
 		coastal_defense_ships = 1
 		#improved_airplane_launcher = 1
+		basic_dp_light_battery = 1
+		basic_fire_control_system = 1
 	}
 	set_naval_oob = "ITA_1936_naval_mtg"
 }
