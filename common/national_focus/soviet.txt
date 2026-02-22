@@ -799,8 +799,7 @@ focus_tree = {
 		id = SOV_the_ussr_academy_of_sciences
 
 		icon = GFX_FOCUS_SOV_SOCIALIST_SCIENCE
-		prerequisite = { focus = SOV_eastern_development }
-		prerequisite = { focus = SOV_develop_the_urals }
+		prerequisite = { focus = SOV_eastern_development focus = SOV_develop_the_urals }
 		x = 1
 		y = 1
 		relative_position_id = SOV_eastern_development
@@ -813,7 +812,12 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_RESEARCH}
 
 		completion_reward = {
-			add_research_slot = 1
+			if = {
+				limit = {
+					amount_research_slots < 5
+				}
+				add_research_slot = 1
+			}
 		}
 	}
 
@@ -842,7 +846,7 @@ focus_tree = {
 		}
 
 		available = {
-			date > 1937.01.01
+			date > 1936.11.01
 		}
 		
 		search_filters = {FOCUS_FILTER_AIR_XP}
@@ -4105,6 +4109,14 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = SOV_patriarch_sergy
+
+			if = {
+				limit = {
+					amount_research_slots < 5
+				}
+				add_research_slot = 1
+			}
+
 		}
 	}
 
