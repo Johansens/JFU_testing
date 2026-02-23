@@ -928,7 +928,7 @@ focus_tree = {
 				add_to_variable = { SPReco_cs = 0.06 tooltip = production_speed_buildings_factor_tt }
 				add_to_variable = { SPReco_FO = 0.12 tooltip = industrial_capacity_factory_tt }
 				add_to_variable = { SPReco_DO = 0.12 tooltip = industrial_capacity_dockyard_tt }
-				add_to_variable = { SPReco_DO = 0.1 tooltip = production_speed_arms_factory_factor_tt }				
+				add_to_variable = { SPReco_mfcs = 0.1 tooltip = production_speed_arms_factory_factor_tt }				
 			}
 			if = {
 				limit = {
@@ -937,7 +937,7 @@ focus_tree = {
 					}
 				}
 				custom_effect_tooltip = SPR_modify_eco_modifier_tt
-				add_to_variable = { SPReco_DO = 0.1 tooltip = production_speed_arms_factory_factor_tt }				
+				add_to_variable = { SPReco_mfcs = 0.1 tooltip = production_speed_arms_factory_factor_tt }				
 			}				
 			custom_effect_tooltip = generic_skip_one_line_tt
 			add_tech_bonus = {
