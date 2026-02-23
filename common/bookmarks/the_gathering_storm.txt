@@ -10,13 +10,9 @@ bookmarks = {
 			history = "GER_GATHERING_STORM_DESC"
 			ideology = fascism
 			ideas = {
-				sour_loser
-				general_staff
 			}
 			focuses = {
-				GER_anschluss
-				GER_danzig_or_war
-				GER_ussr_war_goal
+
 			}
 		}
 		"SOV"={
@@ -44,7 +40,7 @@ bookmarks = {
 			focuses = {
 				general_rearmament_focus
 				tizard_mission_focus
-				uk_develope_focus
+				#uk_develope_focus
 			}
 		}
 		"USA"={
@@ -84,9 +80,9 @@ bookmarks = {
 				JAP_militarism
 			}	
 			focuses = {
-				JAP_the_zero
-				JAP_intervene_in_china
-				JAP_strike_on_the_southern_resource_area
+				#JAP_the_zero
+				#JAP_intervene_in_china
+				#JAP_strike_on_the_southern_resource_area
 			}			
 		}
 		"ITA"={
@@ -99,7 +95,6 @@ bookmarks = {
 			}	
 			focuses = {
 				ITA_comandante_diavolo
-#				ITA_a_colonial_empire
 				ITA_pact_of_steel
 			}		
 		}
@@ -146,8 +141,8 @@ bookmarks = {
 			}
 			focuses = {
 				SAF_expand_the_cape_corps
-				SAF_expand_the_union
-				SAF_separation_policy
+				SAF_secure_interests_in_africa
+				SAF_outlaw_strikes
 			}
 		}
 		"AST"={
@@ -170,9 +165,6 @@ bookmarks = {
 				
 			}
 			focuses = {
-				NZL_bob_semple_tank
-				NZL_maori_volunteers
-				AST_hmas_assault
 			}
 		}
 		"BRA"={
@@ -228,12 +220,8 @@ bookmarks = {
 			history = "HUN_GATHERING_STORM_DESC"
 			ideology = neutrality
 			ideas = {
-				HUN_treaty_of_triannon
 			}
 			focuses = {
-				HUN_secret_rearmament
-				HUN_renounce_the_treaty_of_trianon
-				HUN_announce_the_gyor_program
 			}
 		}
 
@@ -256,14 +244,14 @@ bookmarks = {
 			history = "SPAIN_GATHERING_STORM_DESC"
 			ideology = democratic
 			ideas = {
-				SPR_military_disloyalty
-				SPA_carlism_1
-				SPR_political_violence
+				#SPR_military_disloyalty
+				#SPA_carlism_1
+				#SPR_political_violence
 			}
 			focuses = {
-				SPR_caudillo_of_spain
-				SPR_fuse_the_parties
-				SPR_adopt_the_26_points
+				#SPR_caudillo_of_spain
+				#SPR_fuse_the_parties
+				#SPR_adopt_the_26_points
 			}
 		}
 
@@ -301,13 +289,8 @@ bookmarks = {
 			history = ""
 			ideology = fascism
 			ideas = {
-				MAN_banditry
-				MAN_kwantung_veto
 			}
 			focuses = {
-				FIN_winter_war
-				FIN_marshal_of_finland
-				FIN_mining
 			}			
 		}
 		"EFR"={

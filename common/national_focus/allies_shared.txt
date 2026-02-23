@@ -1,6 +1,6 @@
 ﻿shared_focus = {
 	id = ALLIES_commonwealth_of_nations 
-	icon = GFX_focus_eng_unite_the_anglosphere 
+	icon = GFX_focus_ARG_join_the_allies 
 	x = 0
 	y = 0
 	offset = {
@@ -9,7 +9,7 @@
 		trigger = {	tag = AST}
 	} 
 	offset = {
-		x = 29  
+		x = 39  
 		y = 5
 		trigger = {	tag = MEX}
 	}
@@ -19,7 +19,7 @@
 		trigger = {	tag = BRA}
 	}
 	offset = {
-		x = 23  
+		x = 27  
 		y = 1
 		trigger = {	tag = SAF}
 	}

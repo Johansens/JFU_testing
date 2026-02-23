@@ -5,18 +5,17 @@ state={
 	manpower = 42633
 	
 	state_category = wasteland
-	impassable = yes 
 
 	history={
 		owner = ITA
 		buildings = {
-			infrastructure = 0
+			infrastructure = 1
 		}
 		add_core_of = SWE
 	}
 
 	provinces={
-		1057  1140 1994 4191  5004  10104   10884  12022 12082  
+		1060 2068  5004 7939 10785 10884 11951  10771 
 	}
 
 	local_supplies=0.0 

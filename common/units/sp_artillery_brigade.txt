@@ -18,6 +18,7 @@ sub_units = {
 		categories = {
 			category_all_armor
 			category_army
+			category_self_propelled_artillery
 		}		
 
 		combat_width = 2
@@ -32,8 +33,7 @@ sub_units = {
 		training_time = 180
 		weight = 1
 		supply_consumption = 0.42
-		hard_attack = -0.25
-		soft_attack = 0.25
+		soft_attack = 0.3
 		breakthrough = -0.9
 
 		suppression = 1.25
@@ -86,6 +86,7 @@ sub_units = {
 		categories = {
 			category_all_armor
 			category_army
+			category_self_propelled_artillery
 		}		
 		combat_width = 2
 
@@ -101,8 +102,7 @@ sub_units = {
 		supply_consumption = 0.46
 
 		breakthrough = -0.9
-		hard_attack = -0.25
-		soft_attack = 0.25
+		soft_attack = 0.3
 		suppression = 1.5
 
 		forest = {
@@ -157,6 +157,7 @@ sub_units = {
 		categories = {
 			category_all_armor
 			category_army
+			category_self_propelled_artillery
 		}
 
 		combat_width = 2
@@ -173,8 +174,7 @@ sub_units = {
 
 		breakthrough = -0.9
 		suppression = 1.5
-		hard_attack = -0.25
-		soft_attack = 0.25
+		soft_attack = 0.3
 
 		forest = {
 		    attack = -0.40
@@ -227,10 +227,11 @@ sub_units = {
 		categories = {
 			category_all_armor
 			category_army
+			category_self_propelled_artillery
 		}
 		
 
-		combat_width = 0
+		combat_width = 2
 
 		need = {
 			super_heavy_tank_artillery_chassis = 20
@@ -245,8 +246,7 @@ sub_units = {
 
 		breakthrough = -0.9
 		suppression = 1.25
-		hard_attack = -0.25
-		soft_attack = 0.25
+		soft_attack = 0.3
 
 		forest = {
 		    attack = -0.5

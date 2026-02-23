@@ -192,7 +192,6 @@ every_possible_country = {
 				}
 				custom_trigger_tooltip = {
 					tooltip = SPA_not_republican_spain_tt
-					NOT = { tag = SPD }
 				}
 			}
 			traits = {
@@ -252,10 +251,6 @@ every_possible_country = {
 						has_global_flag = SPR_carlist_uprising_flag
 					}
 				}
-				custom_trigger_tooltip = {
-					tooltip = SPA_not_republican_spain_tt
-					NOT = { tag = SPD }
-				}
 			}
 			traits = {
 				army_chief_organizational_2
@@ -289,10 +284,7 @@ every_possible_country = {
 						has_global_flag = SPR_carlist_uprising_flag
 					}
 				}
-				custom_trigger_tooltip = {
-					tooltip = SPA_not_republican_spain_tt
-					NOT = { tag = SPD }
-				}
+
 			}
 			traits = {
 				army_chief_defensive_2
@@ -345,10 +337,7 @@ every_possible_country = {
 				original_tag = SPR
 			}
 			available = {
-				custom_trigger_tooltip = {
-					tooltip = SPA_not_republican_spain_tt
-					NOT = { tag = SPD }
-				}
+
 			}
 			traits = {
 				air_chief_reform_2
@@ -375,10 +364,6 @@ every_possible_country = {
 			}
 			available = {
 				has_completed_focus = SPR_the_condor_legion
-				custom_trigger_tooltip = {
-					tooltip = SPA_not_republican_spain_tt
-					NOT = { tag = SPD }
-				}
 			}
 			traits = {
 				army_armored_2
@@ -430,10 +415,7 @@ every_possible_country = {
 				original_tag = SPR
 			}
 			available = {
-				custom_trigger_tooltip = {
-					tooltip = SPA_not_republican_spain_tt
-					NOT = { tag = SPD }
-				}
+
 			}
 			traits = {
 				army_entrenchment_2
@@ -618,10 +600,7 @@ every_possible_country = {
 				NOT = {
 					has_completed_focus = SPR_banish_the_party_leaders
 				}
-				custom_trigger_tooltip = {
-					tooltip = SPA_not_republican_spain_tt
-					NOT = { tag = SPD }
-				}
+
 			}
 			traits = {
 				falangist_syndicalist 
@@ -648,10 +627,7 @@ every_possible_country = {
 			available = {
 				NOT = { has_idea = SPA_ramon_serrano_suner }
 				has_completed_focus = SPR_banish_the_party_leaders
-				custom_trigger_tooltip = {
-					tooltip = SPA_not_republican_spain_tt
-					NOT = { tag = SPD }
-				}
+
 			}
 			traits = {
 				loyal_falangist 
@@ -680,10 +656,7 @@ every_possible_country = {
 					NOT = {
 						has_global_flag = SPR_carlist_uprising_flag
 					}
-				custom_trigger_tooltip = {
-					tooltip = SPA_not_republican_spain_tt
-					NOT = { tag = SPD }
-				}
+
 			}
 			traits = {
 				lifelong_carlist 
@@ -734,10 +707,7 @@ every_possible_country = {
 
 			available = {
 				NOT = { has_idea = SPA_raimundo_fernandez_cuesta }
-				custom_trigger_tooltip = {
-					tooltip = SPA_not_republican_spain_tt
-					NOT = { tag = SPD }
-				}
+
 			}
 			traits = {
 				silent_workhorse 
@@ -786,10 +756,6 @@ every_possible_country = {
 				original_tag = SPA
 			}
 			available = {
-				custom_trigger_tooltip = {
-					tooltip = SPA_not_republican_spain_tt
-					NOT = { tag = SPD }
-				}
 			}
 			traits = {
 				falangist_figurehead 

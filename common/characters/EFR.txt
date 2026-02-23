@@ -1,4 +1,18 @@
 characters={
+	EFR_philippe_petain={ #Fascist Leader
+		name=FRA_philippe_petain
+		portraits={
+			civilian={
+				large=GFX_portrait_FRA_philippe_petain
+			}
+		}
+		country_leader={
+			ideology=fascism_ideology
+			traits={ lion_of_verdun }
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
 	EFR_maxime_weygand={
 		name="Maxime Weygand"
 		advisor={
@@ -28,61 +42,6 @@ characters={
 			planning_skill=5
 			logistics_skill=3
 			legacy_id=-1
-		}
-	}
-	EFR_phillipe_pétain={
-		name="Phillipe Pétain"
-		portraits={
-			civilian={
-				large="gfx/leaders/FRA/Portrait_France_Philippe_Petain.dds"
-			}
-		}
-		country_leader={
-			ideology=fascism_ideology
-			traits={ lion_of_verdun }
-			expire="1965.1.1.1"
-			id=-1
-		}
-	}
-	EFR_jonas_smith={
-		name="Jonas Smith"
-		portraits={
-			civilian={
-				large="GFX_Portrait_Africa_Generic_2"
-			}
-		}
-		country_leader={
-			ideology=conservatism
-			expire="1944.1.1.12"
-			id=-1
-		}
-	}
-	EFR_marcus_smith={
-		name="Marcus Smith"
-		portraits={
-			civilian={
-				large="GFX_Portrait_South_Africa_Political_Leader_Generic_2"
-			}
-		}
-		country_leader={
-			ideology=marxism
-			traits={ captain_of_industry compassionate_gentleman }
-			expire="1943.1.1.12"
-			id=-1
-		}
-	}
-	EFR_alex_walker={
-		name="Alex Walker"
-		portraits={
-			civilian={
-				large="GFX_Portrait_South_Africa_Political_Leader_Generic"
-			}
-		}
-		country_leader={
-			ideology=moderatism
-			traits={ compassionate_gentleman }
-			expire="1942.1.1.12"
-			id=-1
 		}
 	}
 	EFR_charles_huntziger={
@@ -217,7 +176,7 @@ characters={
 					quartermaster_general 
 				}
 		}
-		name="EFR_paul_reynaud"
+		name=EFR_paul_reynaud
 		portraits={
 			army={
 				small="GFX_idea_generic_political_advisor_europe_3"
@@ -245,124 +204,107 @@ characters={
 		}
 	}
 
-	EFR_joe_biden={
-		advisor={
-			slot = political_advisor
-			idea_token = EFR_joe_biden
-			allowed  = {
-					original_tag  = EFR 
-				}
-				available  = {
-					has_completed_focus  = VIC_the_national_bureau_of_statistics 
-				}
-				cost  = 0.000
-				traits  = {
-					scientist 
-				}
-		}
-		name="EFR_joe_biden"
-		portraits={
-			army={
-				small="GFX_idea_generic_political_advisor_europe_1"
-			}
-		}
-	}
-
-	EFR_charles_maurras={
-		advisor={
-			slot = political_advisor
-			idea_token = charles_maurras
-			allowed  = {
-					original_tag  = EFR 
-				}
-				available  = {
-					has_completed_focus  = FRA_national_regeneration 
-				}
-				visible  = {
-					has_dlc = "La Resistance"
-				}
-				cost  = 0.000
-				traits  = {
-					national_integralist 
-				}
-		}
-		name="charles_maurras"
-		portraits={
-			army={
-				small="GFX_idea_generic_political_advisor_europe_3"
-			}
-		}
-	}
+	#EFR_charles_maurras={
+		#advisor={
+		#	slot = political_advisor
+		#	idea_token = charles_maurras
+		#	allowed  = {
+		#		original_tag  = EFR 
+		#	}
+		#	available  = {
+		#		has_completed_focus  = FRA_national_regeneration 
+		#	}
+		#	visible  = {
+		#		has_dlc = "La Resistance"
+		#	}
+		#	cost  = 150
+		#	traits  = {
+		#		national_integralist 
+		#	}
+		#}
+	#	name="Charles Maurras"
+	#	portraits={
+	#		army={
+	#			small="GFX_idea_generic_political_advisor_europe_3"
+	#		}
+	#	}
+	#}
 	
 	EFR_marius_viple={
-		advisor={
-			slot = political_advisor
-			idea_token = EFR_marius_viple
-			allowed  = {
-					original_tag  = EFR 
-				}
-				traits  = {
-					popular_figurehead 
-				}
-		}
 		name="EFR_marius_viple"
+
 		portraits={
 			army={
 				small="GFX_idea_generic_political_advisor_europe_2"
 			}
 		}
-	}
-	EFR_felix_gouin={
+
 		advisor={
 			slot = political_advisor
-			idea_token = EFR_felix_gouin
-			allowed  = {
-					original_tag  = EFR 
-				}
-				traits  = {
-					captain_of_industry 
-				}
+			idea_token = EFR_marius_viple
+			allowed = {
+				original_tag  = EFR 
+			}
+
+			traits  = {
+				popular_figurehead 
+			}
 		}
+	}
+	EFR_felix_gouin={
+
 		name="EFR_felix_gouin"
 		portraits={
 			army={
 				small="GFX_idea_generic_political_advisor_europe_3"
 			}
 		}
-	}
-	EFR_marcel_bucard={
 		advisor={
 			slot = political_advisor
-			idea_token = marcel_bucard
+			idea_token = EFR_felix_gouin
 			allowed  = {
-					original_tag  = EFR 
-				}
-				traits  = {
-					fascist_demagogue 
-				}
+				original_tag  = EFR 
+			}
+			traits  = {
+				captain_of_industry 
+			}
 		}
-		name="marcel_bucard"
+	}
+	EFR_marcel_bucard={
+
+		name="Marcel Bucard"
 		portraits={
 			army={
 				small="GFX_idea_marcel_bucard"
 			}
 		}
-	}
-	EFR_gaston_henry_haye={
 		advisor={
 			slot = political_advisor
-			idea_token = EFR_gaston_henry_haye
+			idea_token = marcel_bucard
 			allowed  = {
-					original_tag  = EFR 
-				}
-				traits  = {
-					silent_workhorse 
-				}
+				original_tag  = EFR 
+			}
+			traits  = {
+				fascist_demagogue 
+			}
 		}
+	}
+	EFR_gaston_henry_haye={
+
 		name="EFR_gaston_henry_haye"
 		portraits={
 			army={
 				small="GFX_idea_generic_political_advisor_europe_5"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = EFR_gaston_henry_haye
+			allowed  = {
+				original_tag  = EFR 
+			}
+			traits  = {
+				silent_workhorse 
 			}
 		}
 	}
@@ -389,24 +331,24 @@ characters={
 		advisor={
 			slot = political_advisor
 			idea_token = EFR_philippe_henriot
-			allowed  = {
-					original_tag  = EFR 
-				}
-				visible  = {
-					has_dlc = "La Resistance"
-				}
-				available  = {
-					has_completed_focus  = FRA_national_regeneration 
-				}
-				cost  = 0.000
-				traits  = {
-					propaganda_expert 
-				}
+			allowed = {
+				original_tag  = EFR 
+			}
+			visible  = {
+				has_dlc = "La Resistance"
+			}
+			available  = {
+				has_completed_focus  = FRA_national_regeneration 
+			}
+			cost = 150
+			traits = {
+				propaganda_expert 
+			}
 		}
 		name="EFR_philippe_henriot"
 		portraits={
 			army={
-				small="GFX_idea_EFR_philippe_henriot"
+				small="GFX_idea_FRA_philippe_henriot"
 			}
 		}
 	}
@@ -427,7 +369,7 @@ characters={
 		name="EFR_pierre_pucheu"
 		portraits={
 			army={
-				small="GFX_idea_EFR_pierre_pucheu"
+				small="GFX_idea_FRA_pierre_pucheu"
 			}
 		}
 	}
@@ -504,7 +446,7 @@ characters={
 		name="EFR_henri_giraud"
 		portraits={
 			army={
-				small="GFX_idea_EFR_henri_giraud"
+				small="GFX_idea_henri_giraud"
 			}
 		}
 	}
@@ -513,13 +455,13 @@ characters={
 			slot = high_command
 			idea_token = EFR_jean_francois_jannekeyn
 			ledger  = army 
-				allowed  = {
-					original_tag  = EFR 
-				}
-				cost = 75
-				traits  = {
-					army_infantry_2 
-				}
+			allowed  = {
+				original_tag  = EFR 
+			}
+			cost = 75
+			traits  = {
+				army_infantry_2 
+			}
 		}
 		name="EFR_jean_francois_jannekeyn"
 		portraits={
@@ -547,7 +489,7 @@ characters={
 		name="EFR_frederic_irene_joliot_curie"
 		portraits={
 			army={
-				small="GFX_idea_EFR_frederic_irene_joliot_curie"
+				small="GFX_idea_frederic_irene_joliot_curie"
 			}
 		}
 	}

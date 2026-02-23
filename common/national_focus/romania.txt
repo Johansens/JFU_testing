@@ -57,7 +57,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = ROM_preserve_greater_romania
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -152,7 +152,7 @@ focus_tree = {
 		completion_reward = {
 			add_ideas = MEFO_bills_axis_minor
 			custom_effect_tooltip = ROM_NDI_focus_tt
-			846 = {
+			46 = {
 				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = arms_factory
@@ -387,7 +387,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = ROM_civil_works
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -443,7 +443,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = ROM_expand_the_university_of_bucharest
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -798,7 +798,7 @@ focus_tree = {
 	focus = {
 		id = ROM_army_maneuvers
 		icon = GFX_goal_generic_army_doctrines
-		x = 14
+		x = 15
 		y = 0
 
 		cost = 5
@@ -823,7 +823,7 @@ focus_tree = {
 		id = ROM_army_war_college
 		icon = GFX_goal_generic_construct_military
 		prerequisite = { focus = ROM_army_maneuvers }
-		x = -1
+		x = 1
 		y = 1
 		relative_position_id = ROM_army_maneuvers
 
@@ -848,6 +848,12 @@ focus_tree = {
 		completion_reward = {
 			add_ideas = ROM_army_war_college
 			custom_effect_tooltip = ROM_war_college_tt
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 2
+				category = special_forces_doctrine
+			}
 			hidden_effect = {
 				create_corps_commander = { 
 					name = "Barbu Paraianu"
@@ -866,10 +872,10 @@ focus_tree = {
 	focus = {
 		id = ROM_the_zb_53
 		icon = GFX_goal_generic_small_arms
-		prerequisite = { focus = ROM_army_war_college }
-		x = 0
+		prerequisite = { focus = ROM_army_maneuvers }
+		x = -3
 		y = 1
-		relative_position_id = ROM_army_war_college
+		relative_position_id = ROM_army_maneuvers
 
 		cost = 5
 
@@ -882,7 +888,7 @@ focus_tree = {
 		}
 
 		bypass = {
-
+ 
 		}
 
 		cancel_if_invalid = yes
@@ -902,10 +908,10 @@ focus_tree = {
 	focus = {		
 		id = ROM_vanatori_de_munte
 		icon = GFX_goal_generic_special_forces
-		prerequisite = { focus = ROM_the_zb_53 }
-		x = -1
-		y = 1
-		relative_position_id = ROM_the_zb_53
+		prerequisite = { focus = ROM_army_war_college }
+		x = 0
+		y = 2
+		relative_position_id = ROM_army_war_college
 
 		cost = 5
 
@@ -926,12 +932,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
 			custom_effect_tooltip = ROM_vanatori_de_munte_unit_tt
-			add_doctrine_cost_reduction = {
-				name = land_doc_bonus
-				cost_reduction = 0.5
-				uses = 2
-				category = special_forces_doctrine
-			}
+			
 			hidden_effect = {
 				division_template = {
 					name = "Vanatori de munte"
@@ -969,10 +970,10 @@ focus_tree = {
 	focus = {
 		id = ROM_artillery_modernization
 		icon = GFX_goal_generic_army_artillery2
-		prerequisite = { focus = ROM_the_zb_53 }
-		x = 1
+		prerequisite = { focus = ROM_army_maneuvers }
+		x = -1
 		y = 1
-		relative_position_id = ROM_the_zb_53
+		relative_position_id = ROM_army_maneuvers
 
 		cost = 5
 
@@ -993,11 +994,10 @@ focus_tree = {
 	focus = {
 		id = ROM_modern_at_guns
 		icon = GFX_goal_generic_army_artillery
-		prerequisite = { focus = ROM_artillery_modernization }
-		mutually_exclusive = { focus = ROM_mobile_tank_destroyers }
-		x = 1
+		prerequisite = { focus = ROM_army_maneuvers }
+		x = -2
 		y = 2
-		relative_position_id = ROM_the_zb_53
+		relative_position_id = ROM_army_maneuvers
 
 		cost = 5
 
@@ -1031,10 +1031,9 @@ focus_tree = {
 		id = ROM_mountain_artillery
 		icon = GFX_goal_generic_production
 		prerequisite = { focus = ROM_artillery_modernization }
-		prerequisite = { focus = ROM_vanatori_de_munte }
-		x = -1
+		x = 0
 		y = 2
-		relative_position_id = ROM_the_zb_53
+		relative_position_id = ROM_artillery_modernization
 
 		cost = 5
 
@@ -1064,10 +1063,10 @@ focus_tree = {
 	focus = {
 		id = ROM_royal_guards_divisions
 		icon = GFX_goal_generic_special_forces
-		prerequisite = { focus = ROM_army_maneuvers }
+		prerequisite = { focus = ROM_mountain_artillery focus = ROM_vanatori_de_munte }
 		x = 1
 		y = 1
-		relative_position_id = ROM_army_maneuvers
+		relative_position_id = ROM_mountain_artillery
 
 		cost = 5
 
@@ -1155,10 +1154,10 @@ focus_tree = {
 	focus = {
 		id = ROM_reserve_divisions
 		icon = GFX_goal_generic_political_pressure
-		prerequisite = { focus = ROM_royal_guards_divisions }
-		x = 1
-		y = 1
-		relative_position_id = ROM_royal_guards_divisions
+		prerequisite = { focus = ROM_army_maneuvers }
+		x = 0
+		y = 2
+		relative_position_id = ROM_army_maneuvers
 
 		cost = 5
 
@@ -1174,10 +1173,10 @@ focus_tree = {
 	focus = {
 		id = ROM_acquire_modern_tanks
 		icon = GFX_goal_generic_army_tanks
-		prerequisite = {  focus = ROM_reserve_divisions	}
-		x = 1
+		prerequisite = {  focus = ROM_army_maneuvers	}
+		x = 2
 		y = 2
-		relative_position_id = ROM_royal_guards_divisions
+		relative_position_id = ROM_army_maneuvers
 
 		cost = 5
 
@@ -1205,12 +1204,10 @@ focus_tree = {
 	focus = {
 		id = ROM_mobile_tank_destroyers
 		icon = GFX_goal_generic_build_tank
-		prerequisite = { focus = ROM_acquire_modern_tanks }
-		prerequisite = { focus = ROM_artillery_modernization }
-		mutually_exclusive = { focus = ROM_modern_at_guns }
-		x = 0
+		prerequisite = { focus = ROM_preserve_greater_romania }
+		x = 2
 		y = 1
-		relative_position_id = ROM_acquire_modern_tanks
+		relative_position_id = ROM_preserve_greater_romania
 
 		cost = 5
 
@@ -1251,10 +1248,10 @@ focus_tree = {
 	focus = {
 		id = ROM_the_maresal
 		icon = GFX_goal_generic_army_tanks
-		prerequisite = { focus = ROM_mobile_tank_destroyers }
-		x = 0
-		y = 3
-		relative_position_id = ROM_reserve_divisions
+		prerequisite = { focus = ROM_army_maneuvers }
+		x = 3
+		y = 1
+		relative_position_id = ROM_army_maneuvers
 
 		cost = 5
 
@@ -1291,7 +1288,7 @@ focus_tree = {
 	focus = {
 		id = ROM_expand_the_galati_shipyards
 		icon = GFX_goal_generic_construct_naval_dockyard
-		x = 16
+		x = 19
 		y = 0
 
 		cost = 5

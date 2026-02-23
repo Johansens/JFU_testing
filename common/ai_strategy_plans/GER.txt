@@ -30,39 +30,26 @@ German_historical = {
 	}
 
 	ai_national_focuses = {
-		# grab as fast as you can if available
-
-		GER_rhineland
-		GER_air_innovation
-		GER_four_year_plan
-		GER_autarky
-		GER_army_innovation
-		GER_soviet_treaty
-		GER_hermann_goring_werke
-		GER_kdf_wagen
-		GER_autobahn
-		GER_german_war_economy
+		GER_remilitarize_the_rhineland
+		GER_reorganize_the_wehrmacht
+		GER_expanding_the_luftwaffe
+		GER_fuhrerprinzip
+		GER_ascension_of_todt
+		GER_the_four_year_plan
+		GER_autarky_achieved
+		GER_institute_price_controls
+		GER_treaty_with_the_ussr
+		GER_construct_the_reichsautobahn
+		GER_kdf_wagen_factories
+		GER_build_the_rur_dam
+		GER_establish_the_reichswerke
 		GER_anschluss
 		GER_demand_sudetenland
-		GER_end_of_czechoslovakia
-		GER_demand_memel
-		GER_coal_liquidization
-		GER_synthetic_rubber
-		GER_mol_rib_pact
-		GER_danzig_or_war
-		GER_army_innovation_2
-		#1940
-		GER_extra_tech_slot
-		GER_west_wall		
-		#1941
-		GER_rocketry_focus
-		#1942
-		GER_tactical_air_effort
-		GER_air_innovation_2
-		GER_naval_rearmament
-		GER_naval_effort
-		GER_atlantikwall
-		GER_wunderwaffe
+		GER_first_vienna_award
+		GER_fate_of_czechoslovakia
+		GER_reassert_eastern_claims
+		GER_molotov_ribbentrop_pact
+
 	}
 
 	research = {
@@ -96,8 +83,6 @@ German_historical = {
 	}
 
 	focus_factors = {
-		GER_rhineland = 1.0
-		GER_danzig_or_war = 1.0
 	}
 
 }

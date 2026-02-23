@@ -1,0 +1,22 @@
+﻿units= {
+
+	fleet = {
+		name = "Kraljevska Mornarica"		
+		naval_base = 3924 # Split
+		task_force = {				
+			name = "Kraljevska Mornarica"			
+			location = 3924 # Split
+			ship = { name = "RC Nicola Fabrizi XXXI" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_2 = { amount = 1 owner = ITA version_name = "Maestrale Class" } } } 
+            ship = { name = "RC Nicola Fabrizi XXXII" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_2 = { amount = 1 owner = ITA version_name = "Maestrale Class" } } } 
+            ship = { name = "RC Nicola Fabrizi XXXIII" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_2 = { amount = 1 owner = ITA version_name = "Maestrale Class" } } } 
+            ship = { name = "RC Nicola Fabrizi XXXIV" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_2 = { amount = 1 owner = ITA version_name = "Maestrale Class" } } } 
+            ship = { name = "RC Nicola Fabrizi XXXV" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_2 = { amount = 1 owner = ITA version_name = "Maestrale Class" } } } 
+            ship = { name = "RC Nicola Fabrizi XXXVI" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_2 = { amount = 1 owner = ITA version_name = "Maestrale Class" } } } 
+            ship = { name = "RC Nicola Fabrizi XXXVII" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_2 = { amount = 1 owner = ITA version_name = "Maestrale Class" } } } 
+            ship = { name = "RC Nicola Fabrizi XXXVIII" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_2 = { amount = 1 owner = ITA version_name = "Maestrale Class" } } } 
+            ship = { name = "RC Nicola Fabrizi IXXXX" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_2 = { amount = 1 owner = ITA version_name = "Maestrale Class" } } } 
+            ship = { name = "RC Nicola Fabrizi XL" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_2 = { amount = 1 owner = ITA version_name = "Maestrale Class" } } } 
+            ship = { name = "RC Nicola Fabrizi XLI" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_2 = { amount = 1 owner = ITA version_name = "Maestrale Class" } } } 		
+        }				
+	}
+} 

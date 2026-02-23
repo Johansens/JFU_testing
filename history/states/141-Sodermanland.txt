@@ -4,13 +4,14 @@ state = {
 	name = "STATE_141" # Svealand
 	manpower = 1
 	state_category = city
-	
 
 	history = {
 		owner = SWE
+
 		victory_points = {
-			6050 25
+			6050 10 # Stockholm
 		}
+
 		buildings = {
 			infrastructure = 0
 		}

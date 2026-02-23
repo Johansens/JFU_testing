@@ -5,9 +5,9 @@ state = {
 	manpower = 1
 	state_category = town
 
+
 	history = {
 		owner = SWE
-
 		buildings = {
 			infrastructure = 0
 

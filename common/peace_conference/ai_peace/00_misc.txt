@@ -13,6 +13,9 @@ peace_ai_desires = {
     }
 	
     generic_influence_cutoff = { #Only do force gov and liberate outside influence range
+
+        # This AI modifier attempts to make the AI start taking a new land area from specific provinces (e.g. ports) rather than starting at a random coast line.
+
         peace_action_type = { take_states puppet }
         enable = {
             ROOT = { tag = ROOT.FROM } #We are negotiating for ourselves
@@ -23,7 +26,12 @@ peace_ai_desires = {
             ROOT.FROM.FROM.FROM = { NOT = { is_core_of = ROOT.FROM } } #It is not ours
             ROOT.FROM.FROM.FROM = {
                 NOT = { is_claimed_by = ROOT.FROM }
-                pc_is_state_outside_influence_for_winner = ROOT.FROM
+                any_country = { #avoid rump states in states that aren't cored by anyone
+                    PREV = {
+                        is_core_of = PREV
+                    }
+                }
+                pc_is_state_outside_influence_for_winner = ROOT.FROM  # NOTE: potentially superflous after the addition of the PEACE_BID_CONTEST_TIE_BREAKER_xxx defines
                 #is_coastal = no
                 NOT = {
                     OR = {
@@ -53,6 +61,9 @@ peace_ai_desires = {
     }
 
     generic_influence_cutoff_force_government_fascism_unaligned = { #Don't do ANYTHING outside influence range
+
+        # This AI modifier attempts to make the AI start taking a new land area from specific provinces (e.g. ports) rather than starting at a random coast line.
+
         peace_action_type = { take_states puppet force_government liberate }
         enable = {
             # ROOT = { tag = ROOT.FROM } #We are negotiating for ourselves
@@ -66,7 +77,12 @@ peace_ai_desires = {
             ROOT.FROM.FROM.FROM = {
                 NOT = { is_claimed_by = ROOT.FROM }
                 ROOT = { pc_is_winner = yes }
-                pc_is_state_outside_influence_for_winner = ROOT
+                any_country = { #avoid rump states in states that aren't cored by anyone
+                    PREV = {
+                        is_core_of = PREV
+                    }
+                }
+                pc_is_state_outside_influence_for_winner = ROOT  # NOTE: potentially superflous after the addition of the PEACE_BID_CONTEST_TIE_BREAKER_xxx defines
                 # is_coastal = no
                 NOT = {
                     OR = {
@@ -188,8 +204,6 @@ peace_ai_desires = {
 
         ai_desire = -75
     }
-
-
 
 
     # Breakaway countries in the Soviet Civil war don't want to liberate stuff

@@ -1124,10 +1124,6 @@ USA_think_about_retaliation = {
 		value = 100
 	}
 	
-	ai_strategy = {
-		type = naval_invasion_supremacy_weight
-		value = 30
-	}
 
 }
 
@@ -1162,11 +1158,6 @@ USA_go_time = {
 		type = consider_weak
 		id = "JAP"
 		value = 75
-	}
-	
-	ai_strategy = {
-		type = naval_invasion_supremacy_weight
-		value = 40
 	}
 
 }
@@ -1256,11 +1247,6 @@ USA_start_buffering_in_pacific = {
 		type = invasion_unit_request
 		area = pacific
 		value = 2
-	}
-	
-	ai_strategy = {
-		type = naval_invasion_supremacy_weight
-		value = 50
 	}
 }
 

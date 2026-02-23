@@ -44,13 +44,25 @@ DIPLOMACY_LEND_LEASE_ENABLE_TRIGGER = {
 			date > 1940.01.01
 		}
 	}
-	if = { limit = { FROM = { axis = yes  } } 	NOT = { ROOT = { OR = { tag = MAN tag = JAP } } } }
-	if = { limit = { FROM = { OR = { tag = MAN tag = JAP } } } 	NOT = { ROOT = { axis = yes  } } }
+	if = {
+		limit = {
+			tag = FRA
+		}
+		has_global_flag = fall_of_france
+	}
+	if = { limit = { FROM = { europa_axis = yes } }	NOT = { ROOT = { asia_axis = yes } } }
+	if = { limit = { FROM = { asia_axis = yes } }	NOT = { ROOT = { europa_axis = yes  } } }
 	if = { 
 		limit = {
 			FROM = { axis = yes}
 		}
 		NOT = {	ROOT = { allies = yes } }
+	}
+	if = {
+		limit = {
+			FROM = { tag = SOV}
+		}
+		NOT = {	ROOT = { allies = yes } } 		
 	}
 	if = { 
 		limit = {
@@ -71,6 +83,18 @@ DIPLOMACY_INCOMING_LEND_LEASE_ENABLE_TRIGGER = {
 			FROM = { allies = yes}
 		}
 		NOT = {	ROOT = { axis = yes } }
+	}
+	if = {
+		limit = {
+			FROM = { allies = yes }
+		}
+		NOT = {	ROOT = { tag = SOV } } 		
+	}
+	if = {
+		limit = {
+			NOT = { has_global_flag = fall_of_france }
+		}
+		NOT = { ROOT = { tag = FRA } }
 	}
 }
 DIPLOMACY_REQUEST_LICENSED_PRODUCTION_ENABLE_TRIGGER = {
@@ -106,3 +130,4 @@ DIPLOMACY_CALL_ALLY_ENABLE_TRIGGER = { always = no }
 DIPLOMACY_REQUEST_INTERNATIONAL_MARKET_ACCESS_RIGHTS_ENABLE_TRIGGER = { always = no } 
 DIPLOMACY_REQUEST_EQUIPMENT_PURCHASE_ENABLE_TRIGGER = { always = no }
 DIPLOMACY_LEAVE_FACTION_ENABLE_TRIGGER = { always = no } 
+DIPLOMACY_OFFER_AIR_BASE_ACCESS_ENABLE_TRIGGER = { always = no }

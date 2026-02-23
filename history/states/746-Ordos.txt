@@ -7,10 +7,9 @@ state={
 	state_category = pastoral
 	
 	
-	history=
-	{
+	history = {
 		owner = CHI
-
+		
 		add_core_of = CHI
 		
 		
@@ -19,6 +18,10 @@ state={
 		}
 	}
 	manpower=500000
+
+	resources = {
+		coal = 8 #initial distribution
+	}
 	buildings_max_level_factor=1.000
 
 	local_supplies=0.0 

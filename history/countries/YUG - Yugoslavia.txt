@@ -1,20 +1,5 @@
 ﻿capital = 107
 
-if = {
-	limit = {
-		NOT = {
-			has_dlc = "No Step Back"
-		}
-	}
-	set_oob = "YUG_1936"
-}
-if = {
-	limit = {
-		has_dlc = "No Step Back"
-	}
-	set_oob = "YUG_1936_nsb"
-}
-
 set_research_slots = 0
 
 recruit_character = YUG_prince_paul
@@ -29,7 +14,7 @@ set_technology = {
 	interwar_antitank = 1
 	gw_artillery = 1
 	interwar_antiair = 1
-	superior_firepower = 1
+	#superior_firepower = 1
 	basic_train = 1
 }
 

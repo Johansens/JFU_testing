@@ -1,4 +1,53 @@
 political_actions1 = {
+
+	CHI_kwantung_army_impatience_dummy = { # Fake mission to show how long until war
+
+		activation = {
+			always = no
+		}
+		available = {
+			hidden_trigger = { always = no }
+		}
+		visible = {
+			original_tag = CHI
+			is_subject = no 
+			NOT = { has_war_with = JAP }
+		}
+
+		is_good = no
+
+		days_mission_timeout = JAP.kwantung_army_timeout_dummy_time_var #JAP.JAP_marco_polo_remaining_days:days_left
+
+		cancel_if_not_visible = yes 
+
+		timeout_effect = {
+
+			effect_tooltip = {
+				IF = {
+					limit = {
+						CHI = { #if CHI owns one of these states, they get the event
+							OR = {
+								controls_state = 608
+								controls_state = 597
+								controls_state = 614
+							}
+						}
+					}
+					CHI = {
+						country_event = {
+							id = china.1
+							days = 1
+							random_days = 3
+						}	
+					}
+				}
+				add_named_threat = { threat = 2 name = JAP_intervene_in_china } # From threat = 1 to 2 due to no escalation tension
+			}
+		}
+	}
+
+
+
 	#	 ██████╗ ███████╗██████╗ 
 	#	██╔════╝ ██╔════╝██╔══██╗
 	#	██║  ███╗█████╗  ██████╔╝
@@ -17,18 +66,33 @@ political_actions1 = {
                 	target = POL
                     type = annex_everything
             }
-	
 			hidden_effect = { 
 				if = { limit = { country_exists = HUN }	HUN = { add_to_war = { targeted_alliance = GER enemy = ENG } } }
 				if = { limit = { country_exists = ROM }	ROM = { add_to_war = { targeted_alliance = GER enemy = ENG } } }
 				if = { limit = { country_exists = BUL }	BUL = { add_to_war = { targeted_alliance = GER enemy = ENG } } }	
 				if = { limit = { country_exists = SPR }	SPR = { add_to_war = { targeted_alliance = GER enemy = ENG } } }	
-				FRA = { set_variable = { DAYSFRANCEHELD= 0 } }
+				FRA = { set_variable = { DAYSFRANCEHELD = 0 } }
 				ENG = { add_to_faction = POL } 
 				declare_war_on_all_allies = yes
-				remove_dynamic_modifier = { modifier = GER_mefo_bills_modifier }
-				ENG = { country_event = { id = britain.24 days = 5 }}
+				#remove_dynamic_modifier = { modifier = GER_mefo_bills_modifier }
+				ENG = { 
+					country_event = { id = britain.24 days = 5 }
+					#add_ideas = ENG_ireland_rebalance
+				}
 				country_event = { id = super.1 hours = 1}
+				add_timed_idea = { idea = GER_the_blitzkrieg days = 500 } set_technology = { Blitzkrieg_ON = 1 popup = no } 
+				ITA = { add_timed_idea = { idea = GER_the_blitzkrieg days = 500 } set_technology = { Blitzkrieg_ON = 1 popup = no } }
+				SPR = { add_timed_idea = { idea = GER_the_blitzkrieg days = 500 } set_technology = { Blitzkrieg_ON = 1 popup = no } }
+				HUN = { add_timed_idea = { idea = GER_the_blitzkrieg days = 500 } set_technology = { Blitzkrieg_ON = 1 popup = no } }
+				BUL = { add_timed_idea = { idea = GER_the_blitzkrieg days = 500 } set_technology = { Blitzkrieg_ON = 1 popup = no } }
+				ROM = { add_timed_idea = { idea = GER_the_blitzkrieg days = 500 } set_technology = { Blitzkrieg_ON = 1 popup = no } }
+				ENG = { add_timed_idea = { idea = ENG_operation_compass days = 500 } set_technology = { Blitzkrieg_ON = 1 popup = no } }
+				FRA = { add_timed_idea = { idea = ENG_operation_compass days = 500 } set_technology = { Blitzkrieg_ON = 1 popup = no } }
+				CAN = { add_timed_idea = { idea = ENG_operation_compass days = 500 } set_technology = { Blitzkrieg_ON = 1 popup = no } }
+				SAF = { add_timed_idea = { idea = ENG_operation_compass days = 500 } set_technology = { Blitzkrieg_ON = 1 popup = no } }
+				RAJ = { add_timed_idea = { idea = ENG_operation_compass days = 500 } set_technology = { Blitzkrieg_ON = 1 popup = no } }
+				AST = { add_timed_idea = { idea = ENG_operation_compass days = 500 } set_technology = { Blitzkrieg_ON = 1 popup = no } }
+				NZL = { add_timed_idea = { idea = ENG_operation_compass days = 500 } set_technology = { Blitzkrieg_ON = 1 popup = no } }
 			}
 		}
 	}
@@ -57,15 +121,15 @@ political_actions1 = {
 				ROOT_call_against_beligum = yes  ROOT_call_against_holland = yes
 			}
 			complete_national_focus = GER_around_maginot
-			if = {
-				limit = { 
-					has_completed_focus = GER_west_wall
-				}
-				add_ideas = "Fall Gelb"
-				else = {
-					custom_effect_tooltip = "You will gain bonus stats against france if the Westwall was constructed"
-				}
-			}
+			#if = {
+			#	limit = { 
+			#		has_completed_focus = GER_west_wall
+			#	}
+			#	add_ideas = "Fall Gelb"
+			#	else = {
+			#		custom_effect_tooltip = "You will gain bonus stats against france if the Westwall was constructed"
+			#	}
+			#}
 		}
 	}
 	
@@ -79,7 +143,7 @@ political_actions1 = {
 			add_tech_bonus = {
 				name = tp_bonus
 				bonus = 1.0
-				ahead_reduction = 2
+				ahead_reduction = 1
 				uses = 1
 				category = tp_tech
 			}
@@ -95,7 +159,7 @@ political_actions1 = {
 					hidden_effect = { 
 				ROOT_call_against_denmark = yes 
 			}		
-			complete_national_focus = GER_weserubung	
+			complete_national_focus = GER_operation_weserubung	
 		}	
 	}
 	GER_weserbung_operation2 = { 
@@ -140,7 +204,10 @@ political_actions1 = {
 				}
 				GER = { add_timed_idea = { idea = axis_barbarossa days = 120 } }
 			}
+			custom_effect_tooltip = GER_barbarossa_others_text
 			hidden_effect = {
+				complete_national_focus = GER_war_with_the_ussr
+				GER = { country_event = { id = JFU_events.11 days = 120 }}
 				if = { limit = { country_exists = HUN }	HUN = { add_to_war = { targeted_alliance = GER enemy = SOV } } }
 				if = { limit = { country_exists = ROM }	ROM = { add_to_war = { targeted_alliance = GER enemy = SOV } } }
 				if = { limit = { country_exists = BUL }	BUL = { add_to_war = { targeted_alliance = GER enemy = SOV } } }
@@ -197,7 +264,7 @@ political_actions1 = {
 					}
 				}
 			}
-			complete_national_focus = GER_ussr_war_goal
+
 		}
 	}
 	GER_fall_blau = {
@@ -208,11 +275,12 @@ political_actions1 = {
 			date > 1942.6.1
 			date < 1942.8.1
 			NOT = { has_idea = axis_barbarossa }
-			has_completed_focus = GER_ussr_war_goal
+			#has_completed_focus = GER_ussr_war_goal
 		}
 		cost = 0
 		complete_effect = {
 			GER = { add_timed_idea = { idea = axis_fall_blau days = 120 } }
+			custom_effect_tooltip = GER_barbarossa_others_text
 			hidden_effect = {
 				HUN = { add_timed_idea = { idea = axis_fall_blau days = 120 } }
 				ROM = { add_timed_idea = { idea = axis_fall_blau days = 120 } }	
@@ -239,6 +307,7 @@ political_actions1 = {
 		cost = 0
 		complete_effect = {
 			GER = { add_timed_idea = { idea = axis_operation_citadelle days = 120 } }
+			custom_effect_tooltip = GER_barbarossa_others_text
 			hidden_effect = {
 				HUN = { add_timed_idea = { idea = axis_operation_citadelle days = 120 } }
 				ROM = { add_timed_idea = { idea = axis_operation_citadelle days = 120 } }	
@@ -280,7 +349,6 @@ political_actions1 = {
 		} 
 		cost = 0
 		complete_effect = {
-
 			if = {
 				limit = { 
 					NOT = {
@@ -308,7 +376,7 @@ political_actions1 = {
 					BUL = {
 						transfer_state = 803
 						transfer_state = 106				
-					} 
+					}
 				}
 
 				ITA = { annex_country = { target = YUG transfer_troops = no } }
@@ -332,10 +400,8 @@ political_actions1 = {
 						add_compliance = 30 
 					}
 					add_ideas = tot_economic_mobilisation
-					load_oob  = "YUG_1936_naval_mtg"
-				
-					
-				} 
+					load_oob  = "YUG_annex_ITA"
+				}
 			}
 		}
 	}
@@ -357,12 +423,11 @@ political_actions1 = {
 				date > 1938.01.01
 			}
 			else = {
-				date > 1938.04.01 
+				date > 1938.04.01
 			}
 		} 
 		cost = 0
 		complete_effect = {
-		
 			if = {
 				limit = { 
 					NOT = {
@@ -372,7 +437,7 @@ political_actions1 = {
 						} 
 					}
 				}
-				declare_war_on = { 
+				declare_war_on = {
 					target = GRE
 					type = annex_everything			
 				}
@@ -390,7 +455,6 @@ political_actions1 = {
 				}
 				ITA = { annex_country = { target = GRE transfer_troops = no } }
 				hidden_effect = {
-					load_oob  = "GRE_1936_naval_mtg"  
 					every_state = {
              			limit = {
               		     	is_core_of = GRE
@@ -402,7 +466,7 @@ political_actions1 = {
               			}
               			add_compliance = 50
 		   			}
-					
+					load_oob  = "GRE_annex_ITA"
 				}
 			}		
 			hidden_effect = {
@@ -481,9 +545,13 @@ political_actions1 = {
 		icon = jap_conquer_china
 		fire_only_once = yes
 		allowed = { tag = JAP }
-		available = { has_completed_focus = JAP_intervene_in_china  }
+		available = { 
+		#	has_completed_focus = JAP_intervene_in_china  
+		}
 		cost = 0
 		visible = { 
+			always 
+			= no
 			has_game_rule = { 
 				rule = JFU_CHINA_WAR 
 				option = CHINA_WAR 
@@ -511,13 +579,17 @@ political_actions1 = {
 		icon = jap_conquer_china
 		fire_only_once = yes
 		allowed = { tag = JAP }
-		available = { has_completed_focus = JAP_intervene_in_china date > 1938.01.01 }
+		available = { 
+			#has_completed_focus = JAP_intervene_in_china 
+			date > 1938.01.01 
+		}
 		cost = 0
 		visible = { 
 			has_game_rule = { 
 				rule = JFU_CHINA_WAR 
 				option = NO_CHINA_WAR 
 			} 
+			always = no
 		}
 		complete_effect = {
 			annex_country = { target = CHI transfer_troops = no }
@@ -578,16 +650,10 @@ political_actions1 = {
 				news_event = { id = news.5005 }
 				if = {
 					limit = {
-						OR = {
-							has_game_rule = {
-								rule = JFU_pre_sets 
-								option = COMPETITIVE_JFU
-							}
-							has_game_rule = {
-								rule = JFU_pre_grinded_generals 
-								option = PRE_GRINDED_GENERALS_ON
-							}					
-						}	
+						has_game_rule = {
+							rule = JFU_pre_sets 
+							option = COMPETITIVE_JFU
+						}
 					}	
 					JFU_update_generals = yes											
 				}
@@ -606,21 +672,15 @@ political_actions1 = {
 		icon = generic_prepare_civil_war
 		fire_only_once = yes
 		allowed = { tag = SOV }
-		available = { GER = { has_completed_focus = GER_mol_rib_pact } }
+		available = { GER = { has_completed_focus = GER_molotov_ribbentrop_pact } }
 		cost = 0
 		complete_effect = {
 			if = {
 				limit = {
 					NOT = {
-						OR = {
-							has_game_rule = {
-								rule = JFU_pre_grinded_generals
-								option = PRE_GRINDED_GENERALS_ON
-							}
-							has_game_rule = {
-								rule = JFU_pre_sets
-								option = COMPETITIVE_JFU
-							}	
+						has_game_rule = {
+							rule = JFU_pre_sets 
+							option = COMPETITIVE_JFU
 						}
 					}
 				}
@@ -631,17 +691,10 @@ political_actions1 = {
 			}
 			if = {
 				limit = {
-					OR = {
-						has_game_rule = {
-							rule = JFU_pre_grinded_generals
-							option = PRE_GRINDED_GENERALS_ON
-						}
-						has_game_rule = {
-							rule = JFU_pre_sets
-							option = COMPETITIVE_JFU
-						}
+					has_game_rule = {
+						rule = JFU_pre_sets 
+						option = COMPETITIVE_JFU
 					}
-
 				}
 				SOV = {
 					transfer_state = 147
@@ -653,7 +706,7 @@ political_actions1 = {
 	"Operation Icebreaker" = {
 		icon = infiltrate_state
 		fire_only_once = yes
-		allowed = { tag =  SOV }
+		allowed = { tag = SOV }
 		available = {
 			NOT = { GER = { has_completed_focus = GER_ussr_war_goal } }
 			OR = { 
@@ -864,6 +917,7 @@ political_actions1 = {
 		available = { 
 			date > 1941.4.1
 		}
+		visible = { NOT = { has_war_with = JAP } }
 		cost  = 0
 		complete_effect = {
 			declare_war_on = {
@@ -946,7 +1000,8 @@ political_actions1 = {
 					transfer_state = 411
 					transfer_state = 421
 					transfer_state = 413 
-					transfer_state = 417  
+					transfer_state = 417 
+					transfer_state = 515 
 				}
 				SOV = {
 					transfer_state = 420
@@ -958,15 +1013,9 @@ political_actions1 = {
 				news_event = { id = news.5002 }
 				if = {
 					limit = {
-						OR = {
-							has_game_rule = {
-								rule = JFU_pre_sets 
-								option = COMPETITIVE_JFU
-							}
-							has_game_rule = {
-								rule = JFU_pre_grinded_generals 
-								option = PRE_GRINDED_GENERALS_ON
-							}					
+						has_game_rule = {
+							rule = JFU_pre_sets 
+							option = COMPETITIVE_JFU
 						}	
 					}	
 					JFU_update_generals = yes											
@@ -1005,7 +1054,7 @@ political_actions1 = {
 		icon = generic_operation
 		fire_only_once = yes
 		allowed = { tag = CAN }
-		available = { SAF = { is_ai = yes } }
+		available = { SAF = { is_ai = yes } USA = { is_ai = no } }
 		visible = {
 		}
 		cost = 0
@@ -1089,15 +1138,46 @@ political_actions1 = {
 		available = { SIA = { is_ai = yes } }
 		cost = 0
 		complete_effect = {
-			annex_country = { target = SIA transfer_troops = yes }
-			hidden_effect = { 
-				every_state = {
-					limit = {
-						is_core_of = SIA
-					}
-				set_compliance = 100
+			set_country_flag = JAP_siam_annex
+			SIA = {
+				give_resource_rights = { receiver = JAP state = 289 }
+				give_resource_rights = { receiver = JAP state = 724 }
+			}
+			536 = {
+				add_extra_state_shared_building_slots = 6
+				add_building_construction = {
+					type = industrial_complex
+					level = 5
+					instant_build = yes
+				}	
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
 				}
 			}
+			hidden_effect = {
+				289 = {
+					remove_building = {
+						type = industrial_complex 
+						level = 5
+					}
+					remove_building = {
+						type = arms_factory 
+						level = 1
+					}				
+				}
+			}
+
+			#annex_country = { target = SIA transfer_troops = yes }
+			#hidden_effect = { 
+			#	every_state = {
+			#		limit = {
+			#			is_core_of = SIA
+			#		}
+			#	set_compliance = 100
+			#	}
+			#}
 		}
 	}
 	"Annex Manchu" = {
@@ -1251,7 +1331,10 @@ JFU_decisions = {
 	"Enable Small Barb" = {
 		icon = generic_operation
 		fire_only_once = yes
-		allowed = { tag = GER }
+		allowed = { 
+			always = yes
+		}
+		visible = { has_country_flag = host }
 		available = { 
 			NOT = { has_global_flag = SOV_small_barb }
 		}
@@ -1259,6 +1342,38 @@ JFU_decisions = {
 		complete_effect = {
 			set_global_flag = SOV_small_barb
 			custom_effect_tooltip = SOV_small_barb_enable_tt
+
+			SOV = {
+				add_ideas = JFU_SOVIET_SMALL
+				219 = {
+					set_building_level = {
+						type = anti_air_building
+						level = 10
+						instant_build = yes
+					}
+					set_building_level = {
+						type = air_base
+						level = 100
+						instant_build = yes
+					}								
+				}
+			}
+			GER = {
+				add_ideas = JFU_SOVIET_SMALL
+				64 = {
+					set_building_level = {
+						type = anti_air_building
+						level = 10
+						instant_build = yes
+					}
+					set_building_level = {
+						type = air_base
+						level = 100
+						instant_build = yes
+					}								
+				}
+			}
+
 		}		
 	}
 	"Iraq Oil" = {
@@ -1382,7 +1497,7 @@ JFU_decisions = {
 		complete_effect = {
 			add_tech_bonus = {
 				name = motorized_bonus
-				ahead_reduction = 2
+				ahead_reduction = 1
 				uses = 1
 				category = motorized_equipment
 			}
@@ -1520,27 +1635,6 @@ JFU_decisions = {
 			} 
 		}
 	}
-	"Small Barb" = {
-		icon = generic_air
-		allowed = { tag = SOV }
-		available = { has_global_flag = SOV_small_barb }
-		cost = 0
-		complete_effect = {
-			add_ideas = JFU_SOVIET_SMALL
-			219 = {
-				set_building_level = {
-					type = anti_air_building
-					level = 10
-					instant_build = yes
-				}
-				set_building_level = {
-					type = air_base
-					level = 100
-					instant_build = yes
-				}								
-			}
-		}		
-	}
 
 	#	██╗   ██╗███████╗ █████╗ 
 	#	██║   ██║██╔════╝██╔══██╗
@@ -1576,7 +1670,7 @@ JFU_decisions = {
 	
 		icon = GFX_decision_generic_air
 			
-			allowed = {
+		allowed = {
 		}
 		
 		available = {NOT = {has_country_flag = ENG_air_LL}} 
@@ -1591,10 +1685,11 @@ JFU_decisions = {
 		
 		timeout_effect = {
 			if = { 
-				limit =  { has_country_flag = ENG_air_LL 
+				limit =  { 
+					has_country_flag = ENG_air_LL 
 				}
-			air_to_england = yes
-			activate_mission = send_air_to_eng1
+				air_to_england = yes
+				activate_mission = send_air_to_eng1
 			}
 		}	
 	}
@@ -1640,7 +1735,7 @@ JFU_decisions = {
 		}
 		cost = 0
 		complete_effect = {
-			FRA = {
+			USA = {
 				transfer_state = 883
 			}
 		}		
@@ -1650,12 +1745,15 @@ JFU_decisions = {
 		allowed = { original_tag = ENG }
 		days_remove = 120
 
-		available = {NOT = { FRA = { owns_state = 16 }}  check_variable = { FRA.FRA_legitimacy < 100 }
-						FRA = { has_country_flag = france_is_kill}}
+		available = {
+			NOT = { FRA = { owns_state = 16 }}  
+			check_variable = { FRA.FRA_legitimacy < 100 }
+			FRA = { has_country_flag = france_is_kill}
+		}
 		visible = {	tag = ENG }
 		cost = 0
 		complete_effect = {
-		custom_effect_tooltip = "French Legitimacy will increase by 20"
+			custom_effect_tooltip = "French Legitimacy will increase by 20"
 			add_to_variable =  { var = FRA.FRA_legitimacy value = 20 }
 		}
 	}
@@ -1671,7 +1769,7 @@ JFU_decisions = {
 		cost = 0
 
 		visible = {
-			NOT = { SAF = { has_completed_focus = SAF_expand_the_union } }
+			NOT = { SAF = { has_completed_focus = SAF_secure_interests_in_africa } }
 		}
 		complete_effect = {
 			SAF = { set_country_flag = ENG_permitted_SAF }
@@ -1769,6 +1867,75 @@ JFU_decisions = {
             factor = 0
         }
     }
+	JFU_no_asia_test = {
+		icon = generic_operation
+		fire_only_once = yes
+		allowed = { 
+			always = yes
+		}
+		visible = {
+			AND = {
+				date < 1936.02.01
+				has_country_flag = host
+			}
+		}
+		available = { 
+			NOT = { has_global_flag = JFU_no_asia }
+		}
+		cost = 0
+		complete_effect = {
+			set_global_flag = JFU_no_asia
+
+			ENG = {
+				annex_country = { target = IRE transfer_troops = no }
+				113 =   { add_core_of = ENG }
+				134 =   { add_core_of = ENG }
+				135 =   { add_core_of = ENG }
+				113 = {
+					add_extra_state_shared_building_slots = 4
+					add_building_construction = {
+						type = arms_factory
+						level = 4
+						instant_build = yes
+					}					
+				}
+				add_research_slot = 1
+			}
+			USA = {
+				give_resource_rights = { receiver = ENG state = 375 }
+				give_resource_rights = { receiver = CAN state = 379 }
+			}
+			CAN = {
+				hidden_effect = { 
+					every_state = {
+						limit = {is_core_of = SAF}
+						add_core_of = CAN
+					}
+					CAN = {
+						add_to_variable = { var = CANgd_cgf value = -0.25 }
+						add_to_variable = { var = CANgd_FO value = 0.10 }
+						add_to_variable = { var = CANgd_DO value = 0.10 }
+					}
+				}
+				annex_country = { target = SAF transfer_troops = yes }
+			}
+			every_country = {
+				limit = {
+					OR = {
+						tag = USA
+						tag = RAJ
+						tag = MEX
+						tag = BRA
+						tag = MAN
+					}
+				}
+				add_ideas = ai_limiter
+			}
+			AST = {
+				add_ideas = AST_manpower_noasia
+			}
+		}		
+	}
 }
 
 JFU_templates = {
@@ -1788,51 +1955,7 @@ JFU_templates = {
 			set_country_flag = JFU_open_tank_templates
 		}
 	}
-	"Motorized Medium Tank" = {
-		icon = generic_tank
-		fire_only_once = yes
-		allowed = {}
-		visible = {
-			NOT = {
-				has_country_flag = JFU_templates_hide
-			}
-			has_country_flag = JFU_open_tank_templates
-		}
-		cost = 0
-		complete_effect = {
-			division_template = {
-				name = "Mot. Medium.42"
-				regiments = {
-					motorized = { x = 0 y = 0 }
-					motorized = { x = 0 y = 1 }
-					motorized = { x = 0 y = 2 }
-					motorized = { x = 0 y = 3 }
-					mot_anti_air_brigade = { x = 0 y = 4 }
-
-					motorized = { x = 1 y = 0 }
-					motorized = { x = 1 y = 1 }
-					motorized = { x = 1 y = 2 }
-					motorized = { x = 1 y = 3 }
-					mot_anti_air_brigade = { x = 1 y = 4 }		
-
-					medium_armor = { x = 2 y = 0 }
-					medium_armor = { x = 2 y = 1 }
-					medium_armor = { x = 2 y = 2 }
-					medium_armor = { x = 2 y = 3 }
-					medium_armor = { x = 2 y = 4 }		
-
-					medium_armor = { x = 3 y = 0 }
-					medium_armor = { x = 3 y = 1 }
-					medium_armor = { x = 3 y = 2 }
-					medium_armor = { x = 3 y = 3 }
-					medium_armor = { x = 3 y = 4 }		
-
-					medium_armor = { x = 4 y = 0 }
-				}
-			}
-		}
-	}
-	"Mechanized Medium Tank" = {
+	"Mechanized Medium Tank + Flame Tank + Armored Engineer " = {
 		icon = generic_tank
 		fire_only_once = yes
 		allowed = {}
@@ -1845,20 +1968,18 @@ JFU_templates = {
 		cost = 0
 		complete_effect = {
 			division_template = {
-				name = "Mec. Medium.42"
+				name = "Mec. Medium.40"
 				division_names_group = GER_ARM_01
 				regiments = {
 					mechanized = { x = 0 y = 0 }
 					mechanized = { x = 0 y = 1 }
 					mechanized = { x = 0 y = 2 }
 					mechanized = { x = 0 y = 3 }
-					mot_anti_air_brigade = { x = 0 y = 4 }
 
 					mechanized = { x = 1 y = 0 }
 					mechanized = { x = 1 y = 1 }
 					mechanized = { x = 1 y = 2 }
-					mechanized = { x = 1 y = 3 }
-					mot_anti_air_brigade = { x = 1 y = 4 }		
+					mechanized = { x = 1 y = 3 }		
 
 					medium_armor = { x = 2 y = 0 }
 					medium_armor = { x = 2 y = 1 }
@@ -1873,6 +1994,13 @@ JFU_templates = {
 					medium_armor = { x = 3 y = 4 }		
 
 					medium_armor = { x = 4 y = 0 }
+					medium_armor = { x = 4 y = 1 }
+				}
+				support = { 
+					engineer = { x = 0 y = 0 } 
+					light_tank_recon = { x = 0 y = 1 }
+					logistics_company = { x = 0 y = 2 } 
+					anti_air = { x = 0 y = 3 } 
 				}
 			}
 		}
@@ -1918,6 +2046,10 @@ JFU_templates = {
 					infantry = { x = 1 y = 2 }
 					infantry = { x = 1 y = 3 }
 					infantry = { x = 1 y = 4 }		
+				}
+				support = { 
+					engineer = { x = 0 y = 0 }  
+					anti_air = { x = 0 y = 1 }
 				}
 			}
 		}
@@ -1992,6 +2124,10 @@ JFU_templates = {
 					infantry = { x = 3 y = 3 }
 					infantry = { x = 3 y = 4 }		
 				}
+				support = { 
+					engineer = { x = 0 y = 0 }  
+					anti_air = { x = 0 y = 1 }
+				}
 			}
 			division_template = {
 				name = "Anti-Infantry"
@@ -2001,6 +2137,10 @@ JFU_templates = {
 					infantry = { x = 0 y = 2 } infantry = { x = 1 y = 2 }	infantry = { x = 2 y = 2 } artillery_brigade = { x = 3 y = 2 }
 					infantry = { x = 0 y = 3 } infantry = { x = 1 y = 3 }	infantry = { x = 2 y = 3 } artillery_brigade = { x = 3 y = 3 }
 					infantry = { x = 0 y = 4 } infantry = { x = 1 y = 4 }	
+				}
+				support = { 
+					engineer = { x = 0 y = 0 }  
+					anti_air = { x = 0 y = 1 }
 				}
 			}					
 			division_template = {
@@ -2012,6 +2152,10 @@ JFU_templates = {
 					infantry = { x = 0 y = 3 } infantry = { x = 1 y = 3 } 							 artillery_brigade = { x = 3 y = 3 }  anti_tank_brigade = { x = 4 y = 3 }
 					infantry = { x = 0 y = 4 } infantry = { x = 1 y = 4 }																						
 				}
+				support = { 
+					engineer = { x = 0 y = 0 }  
+					anti_air = { x = 0 y = 1 }
+				}
 			}	
 			division_template = {
 				name = "Generalist"
@@ -2021,6 +2165,10 @@ JFU_templates = {
 					infantry = { x = 0 y = 2 } 	infantry = { x = 1 y = 2 } infantry = { x = 2 y = 2 } artillery_brigade = { x = 3 y = 2 } anti_tank_brigade = { x = 4 y = 2 }
 					infantry = { x = 0 y = 3 } infantry = { x = 1 y = 3 } infantry = { x = 2 y = 3 }
 					infantry = { x = 0 y = 4 } infantry = { x = 1 y = 4 } 
+				}
+				support = { 
+					engineer = { x = 0 y = 0 }  
+					anti_air = { x = 0 y = 1 }
 				}
 			}	
 		}
@@ -2055,7 +2203,7 @@ JFU_templates = {
 		cost = 0
 		complete_effect = {
 			division_template = {
-				name = "Soft Attack Special Forces"
+				name = "Soft Attack SF + Flame T + Assault Engineer"
 				regiments = {
 					mountaineers = { x = 0 y = 0 } mountaineers = { x = 1 y = 0 } mountaineers = { x = 2 y = 0 } artillery_brigade = { x = 3 y = 0 }
 					mountaineers = { x = 0 y = 1 } mountaineers = { x = 1 y = 1 } mountaineers = { x = 2 y = 1 } artillery_brigade = { x = 3 y = 1 }
@@ -2063,26 +2211,44 @@ JFU_templates = {
 					mountaineers = { x = 0 y = 3 } mountaineers = { x = 1 y = 3 } mountaineers = { x = 2 y = 3 } artillery_brigade = { x = 3 y = 3 }
 					mountaineers = { x = 0 y = 4 } mountaineers = { x = 1 y = 4 }
 				}
-			}	
-			division_template = {
-					name = "All-Purpose Special Forces"
-				regiments = {
-					mountaineers = { x = 0 y = 0 } mountaineers = { x = 1 y = 0 } mountaineers = { x = 2 y = 0 } anti_tank_brigade = { x = 3 y = 0 } artillery_brigade = { x = 4 y = 0 }
-					mountaineers = { x = 0 y = 1 } mountaineers = { x = 1 y = 1 } mountaineers = { x = 2 y = 1 } anti_tank_brigade = { x = 3 y = 1 } artillery_brigade = { x = 4 y = 1 }
-					mountaineers = { x = 0 y = 2 } mountaineers = { x = 1 y = 2 } mountaineers = { x = 2 y = 2 } anti_tank_brigade = { x = 3 y = 2 } artillery_brigade = { x = 4 y = 2 }
-					mountaineers = { x = 0 y = 3 } 	mountaineers = { x = 1 y = 3 } 	mountaineers = { x = 2 y = 3 } 	
-					mountaineers = { x = 0 y = 4 } 	mountaineers = { x = 1 y = 4 }
-																								   
+				support = { 
+					engineer = { x = 0 y = 0 }
+					anti_air = { x = 0 y = 1 }
+					anti_tank = { x = 0 y = 2 }
+					light_tank_recon = { x = 0 y = 3 }
 				}
 			}	
 			division_template = {
-				name = "Hard Attack Special Forces"
+				name = "Mixed SF + Flame T + Assault Engineer"
+				regiments = {
+					mountaineers = { x = 0 y = 0 } mountaineers = { x = 1 y = 0 } mountaineers = { x = 2 y = 0 } anti_tank_brigade = { x = 3 y = 0 } artillery_brigade = { x = 4 y = 0 }
+					mountaineers = { x = 0 y = 1 } mountaineers = { x = 1 y = 1 } mountaineers = { x = 2 y = 1 } anti_air_brigade = { x = 3 y = 1 }  artillery_brigade = { x = 4 y = 1 }
+					mountaineers = { x = 0 y = 2 } mountaineers = { x = 1 y = 2 } mountaineers = { x = 2 y = 2 } 									 artillery_brigade = { x = 4 y = 2 }
+					mountaineers = { x = 0 y = 3 } mountaineers = { x = 1 y = 3 }						   			 								 artillery_brigade = { x = 4 y = 3 }	
+					mountaineers = { x = 0 y = 4 } mountaineers = { x = 1 y = 4 }
+																								   
+				}
+				support = { 
+					engineer = { x = 0 y = 0 }
+					artillery = { x = 0 y = 1 }
+					light_tank_recon = { x = 0 y = 2 }
+					anti_tank = { x = 0 y = 3 }
+				}
+			}	
+			division_template = {
+				name = "Hard Attack SF + Flame T + Assault Engineer"
 				regiments = {
 					mountaineers = { x = 0 y = 0 } mountaineers = { x = 1 y = 0 } mountaineers = { x = 2 y = 0 } mountaineers = { x = 3 y = 0 } 	anti_tank_brigade = { x = 4 y = 0 }
 					mountaineers = { x = 0 y = 1 } mountaineers = { x = 1 y = 1 } mountaineers = { x = 2 y = 1 } mountaineers = { x = 3 y = 1 } 	anti_tank_brigade = { x = 4 y = 1 }
 					mountaineers = { x = 0 y = 2 } mountaineers = { x = 1 y = 2 } mountaineers = { x = 2 y = 2 } artillery_brigade = { x = 3 y = 2 }  anti_tank_brigade = { x = 4 y = 2 }
-					mountaineers = { x = 0 y = 3 } mountaineers = { x = 1 y = 3 } 							 artillery_brigade = { x = 3 y = 3 }  anti_tank_brigade = { x = 4 y = 3 }
+					mountaineers = { x = 0 y = 3 } mountaineers = { x = 1 y = 3 } 							 artillery_brigade = { x = 3 y = 3 }  anti_air_brigade = { x = 4 y = 3 }
 					mountaineers = { x = 0 y = 4 } mountaineers = { x = 1 y = 4 }
+				}
+				support = { 
+					engineer = { x = 0 y = 0 }
+					artillery = { x = 0 y = 1 }
+					light_tank_recon = { x = 0 y = 2 }
+					anti_tank = { x = 0 y = 3 }
 				}
 			}	
 		}
@@ -2104,7 +2270,7 @@ JFU_templates = {
 		cost = 0
 		complete_effect = {
 			division_template = {
-				name = "Katjuscha Marine.43"
+				name = "Katjuscha Marine + Flame T + Assault Engineer"
 				division_names_group = GER_ARM_01
 				regiments = {
 					marine = { x = 0 y = 0 }
@@ -2121,14 +2287,22 @@ JFU_templates = {
 
 					motorized_rocket_brigade = { x = 2 y = 0 }
 					motorized_rocket_brigade = { x = 2 y = 1 }
-					motorized_rocket_brigade = { x = 2 y = 2 }
-					motorized_rocket_brigade = { x = 2 y = 3 }
 
 					marine = { x = 3 y = 0 }
 					marine = { x = 3 y = 1 }
 					marine = { x = 3 y = 2 }
 					marine = { x = 3 y = 3 }
+					marine = { x = 3 y = 4 }
 
+					marine = { x = 4 y = 0 }
+					marine = { x = 4 y = 1 }
+
+				}
+				support = { 
+					engineer = { x = 0 y = 0 }
+					artillery = { x = 0 y = 1 }
+					anti_air = { x = 0 y = 2 }
+					light_tank_recon = { x = 0 y = 3 }
 				}
 			}
 		}
@@ -2148,7 +2322,7 @@ JFU_templates = {
 		cost = 0
 		complete_effect = {
 			division_template = {
-				name = "Marine.43"
+				name = "Marine 40 + Flame T + Assault Engineer"
 				division_names_group = GER_ARM_01
 				regiments = {
 					marine = { x = 0 y = 0 }
@@ -2165,14 +2339,22 @@ JFU_templates = {
 
 					artillery_brigade = { x = 2 y = 0 }
 					artillery_brigade = { x = 2 y = 1 }
-					artillery_brigade = { x = 2 y = 2 }
-					artillery_brigade = { x = 2 y = 3 }
 
 					marine = { x = 3 y = 0 }
 					marine = { x = 3 y = 1 }
 					marine = { x = 3 y = 2 }
 					marine = { x = 3 y = 3 }
+					marine = { x = 3 y = 4 }
 
+					marine = { x = 4 y = 0 }
+					marine = { x = 4 y = 1 }
+
+				}
+				support = { 
+					engineer = { x = 0 y = 0 }
+					artillery = { x = 0 y = 1 }
+					anti_air = { x = 0 y = 2 }
+					light_tank_recon = { x = 0 y = 3 }
 				}
 			}
 		}

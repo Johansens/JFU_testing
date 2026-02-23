@@ -2,7 +2,8 @@ state={
 	id=716
 	name="STATE_716"
 	resources={
-		steel=27.000
+		steel=32
+		coal = 32
 	}
 
 	history={
@@ -15,14 +16,24 @@ state={
 			arms_factory = 2
 			industrial_complex = 1
 			air_base = 5
-			964 = {
+			11764 = {
 				naval_base = 3
 
 			}
-
+			11808 = {
+				landmark_great_wall_section = {
+				    level = 1
+				    allowed = {
+				        has_dlc = "No Compromise, No Surrender"
+				    }
+				}
+			}
 		}
 		victory_points = {
-			11771 3 
+			11771 3
+		}
+		victory_points = {
+			11764 1 
 		}
 
 	}

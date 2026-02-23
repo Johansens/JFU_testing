@@ -68,11 +68,7 @@ debug_decisions = {
 			set_technology = {
 				amphibious_tank_chassis = 1
 				popup = no
-			}			
-			set_technology = {
-				amphibious_drive = 1
-				popup = no
-			}			
+			}						
 			set_technology = {
 				advanced_light_tank_chassis = 1
 				popup = no

@@ -341,48 +341,6 @@ on_actions = {
 		}
 	}
 
-	#ROOT is winner #FROM is loser
-	on_peaceconference_ended = {
-		effect = {
-			if = {
-				limit = {
-					original_tag = GER
-					FROM = { original_tag = HOL }
-				}
-				remove_ideas = HOL_german_defectors_2
-			}
-			if = {
-				limit = {
-					OR = {
-						AND = {
-
-							ROOT = { original_tag = RAJ }
-						}
-						AND = {
-							ROOT = { original_tag = PAK }
-						}
-					}
-				}
-				FROM = {
-					delete_unit_template_and_units = {
-						division_template = "Pakistani Liberation Army"
-					}
-					delete_unit_template_and_units = {
-						division_template = "Hindu Militia"
-					}
-				}
-				ROOT = {
-					delete_unit_template_and_units = {
-						division_template = "Pakistani Liberation Army"
-					}
-					delete_unit_template_and_units = {
-						division_template = "Hindu Militia"
-					}
-				}
-			}
-		}
-	}
-
 	on_nuke_drop = {
 		effect = {			
 			if = {

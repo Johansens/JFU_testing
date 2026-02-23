@@ -173,12 +173,7 @@ characters={
 				original_tag = MEX
 			}
 			available = {
-				if = {
-					limit = {
-						has_dlc = "Man the Guns"
-					}
-					has_completed_focus = MEX_focus_heroic_military_college
-				}
+				has_completed_focus = MEX_focus_rebuilding_the_army
 			}
 			traits = {
 				superior_firepower_expert
@@ -226,10 +221,10 @@ characters={
 		corps_commander={
 			traits={ politically_connected }
 			skill=3
-			attack_skill=3
-			defense_skill=2
+			attack_skill=2
+			defense_skill=1
 			planning_skill=3
-			logistics_skill=2
+			logistics_skill=1
 			legacy_id=704
 		}
 	}
@@ -247,28 +242,28 @@ characters={
 				small=GFX_portrait_MEX_manuel_avila_camacho_small # TODO_Manu: THIS IS A CIVILIAN PORTRAIT FOR HIS POLITICAL ADVISOR ROLE -> Need code support for civilian-small
 			}
 		}
-		advisor={
-			slot = political_advisor
-			idea_token = MEX_manuel_avila
-			cost = 75.000
-			allowed = {
-				original_tag = MEX
-			}
-			available = {
-				if = {
-					limit = {
-						has_dlc = "Man the Guns"
-					}
-					has_completed_focus = MEX_focus_military_budget_review 
-				}
-			}
-			traits = {
-				war_industrialist 
-			}
-			modifier = {
-				mobilization_laws_cost_factor = -0.25
-			}
-		}
+		#advisor={
+		#	slot = political_advisor
+		#	idea_token = MEX_manuel_avila
+		#	cost = 75.000
+		#	allowed = {
+		#		original_tag = MEX
+		#	}
+		#	available = {
+		#		if = {
+		#			limit = {
+		#				has_dlc = "Man the Guns"
+		#			}
+		#			has_completed_focus = MEX_focus_military_budget_review 
+		#		}
+		#	}
+		#	traits = {
+		#		war_industrialist 
+		#	}
+		#	modifier = {
+		#		mobilization_laws_cost_factor = -0.25
+		#	}
+		#}
 
 		corps_commander={
 			traits={ politically_connected }
@@ -337,7 +332,6 @@ characters={
 			legacy_id=707
 		}
 	}
-
 	### THEORISTS ###
 
 	# Treviño up there
@@ -532,11 +526,11 @@ characters={
 		
 		corps_commander={
 			traits={ war_hero }
-			skill=3
+			skill=4
 			attack_skill=4
-			defense_skill=1
-			planning_skill=2
-			logistics_skill=3
+			defense_skill=2
+			planning_skill=5
+			logistics_skill=2
 			legacy_id=701
 		}
 	}

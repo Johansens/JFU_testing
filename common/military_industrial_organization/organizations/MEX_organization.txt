@@ -12,11 +12,38 @@ MEX_tga_organization = {
 	include = generic_tank_organization
 	icon = GFX_idea_MEX_tga
 	allowed = { 
-		has_dlc = "Man the Guns"
 		tag = MEX
 	}
 	available = {
-		owner = { has_completed_focus = MEX_focus_tank_workshops }
+		
+	}
+	add_trait = {  
+		token = MEX_mio_trait_hotrolled_armor
+		name = MEX_mio_trait_hotrolled_armor
+		icon = GFX_generic_mio_department_icon_tank_general_technology
+		special_trait_background = yes
+
+		available = {
+			FROM = {
+				OR = {
+					has_completed_focus = MEX_focus_army_expansion_programm
+				}
+			}
+		}
+
+		position = { x=8 y=0 }  
+		equipment_bonus = {
+			soft_attack = 0.1
+			hard_attack = 0.1
+		}
+
+		ai_will_do = {
+			base = 2
+			modifier = {
+				factor = 1.5
+				date > 1937.1.1
+			}
+		}
 	}
 }
 ### Foreign Subsidiaries

@@ -24,7 +24,7 @@ set_technology = {
 	tech_support = 1
 	tech_engineers = 1
 	tech_recon = 1
-
+	bicycle_infantry = 1
 	gw_artillery = 1
 	interwar_antiair = 1
 
@@ -37,6 +37,7 @@ set_technology = {
 	special_forces_mountaineers = 1
 	special_forces_marines = 1
 	special_forces_paratroopers = 1
+	special_forces_rangers = 1
 }
 add_ideas = {
 	free_trade
@@ -52,10 +53,7 @@ add_relation_modifier = {
 set_convoys = 50
 
 recruit_character = EFR_maxime_weygand
-recruit_character = EFR_phillipe_pétain
-recruit_character = EFR_jonas_smith
-recruit_character = EFR_marcus_smith
-recruit_character = EFR_alex_walker
+recruit_character = EFR_philippe_petain
 recruit_character = EFR_charles_huntziger
 recruit_character = EFR_maurice_gamelin
 recruit_character = EFR_vicente_rojo_lluch
@@ -64,8 +62,7 @@ recruit_character = EFR_francisco_franco
 recruit_character = EFR_emilio_mola
 recruit_character = EFR_paul_reynaud
 recruit_character = EFR_jean_francois_darlan
-recruit_character = EFR_joe_biden
-recruit_character = EFR_charles_maurras
+#recruit_character = EFR_charles_maurras
 recruit_character = EFR_marius_viple
 recruit_character = EFR_felix_gouin
 recruit_character = EFR_marcel_bucard

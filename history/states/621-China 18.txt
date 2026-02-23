@@ -1,10 +1,16 @@
-state={
-	id=621
-	name="STATE_621"
+state = {
+	id = 621
+	name = "STATE_621"
+	manpower = 1582100
+	state_category = pastoral
+
+	resources = {
+		coal = 7 #initial distribution
+	}
 
 	history={
 		owner = CHI
-
+		
 		add_core_of = CHI
 		
 		buildings = {
@@ -12,15 +18,13 @@ state={
 			industrial_complex = 1
 
 		}
-		add_extra_state_shared_building_slots = 1
+
 	}
 
 	provinces={
 		2087 4525 7048 7158 7631 10424 10629 12331 12403 12609 12880 
 	}
-	manpower=1583700
-	buildings_max_level_factor=1.000
-	state_category=pastoral
 
-	local_supplies=4.0 
+	buildings_max_level_factor = 1.000
+	local_supplies = 4.0 
 }

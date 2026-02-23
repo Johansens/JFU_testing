@@ -1,0 +1,42 @@
+SIA_Cultural_Mandates = {
+
+	allowed = {
+		original_tag = SIA
+	}
+	
+	visible = {
+		has_completed_focus = SIA_Cultural_Mandates
+	}
+	
+	available = {
+		
+	}
+	
+	priority = 50
+}
+	
+SIA_propaganda_campaigns = {
+
+	allowed = {
+		original_tag = SIA
+	}
+	
+	visible = {
+		has_completed_focus = SIA_Thai_Propaganda
+	}
+	
+	priority = 25
+}
+	
+SIA_Territorial_Claims = {
+
+	allowed = {
+		original_tag = SIA
+	}
+	
+	visible = {
+		has_completed_focus = SIA_Pan_Thai_Nationalism
+	}
+	
+	priority = 15
+}

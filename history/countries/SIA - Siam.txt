@@ -3,54 +3,77 @@ set_variable = {
     var = min_fuel
     value = 0.200
 }
-oob = "SIA_1936"
-if = {
-	limit = { has_dlc = "Man the Guns" }
-		set_naval_oob = "SIA_1936_naval_mtg"
-	else = {
-		set_naval_oob = "SIA_1936_naval_legacy"
-	}
-}
-if = {
-	limit = { has_dlc = "By Blood Alone" }
-		set_air_oob = "SIA_1936_air_bba"
-	else = {
-		set_air_oob = "SIA_1936_air_legacy"
-		set_technology = {
-			early_fighter = 1
-			CAS1 = 1
-		}
-	}
-}
 
-recruit_character = SIA_phraya_phahon
-recruit_character = SIA_nangklao_suriyawongse
-recruit_character = SIA_tianliang_huntrakool
-recruit_character = SIA_phra_silpasakrakorn
-recruit_character = SIA_luang_sinthusongkhramchai
-recruit_character = SIA_thawon_thamrongnawasawat
-recruit_character = SIA_phraya_preechacholayudha
-recruit_character = SIA_pridi_phanomyong
-recruit_character = SIA_sindhu_kamalanavin
-recruit_character = SIA_phraya_chitnasongkhla
-recruit_character = SIA_phraya_thayarnpikart
-recruit_character = SIA_phra_vechayanrangsarit
-recruit_character = SIA_manphya_khanphialong
-recruit_character = SIA_luang_phibunsongkhram
-recruit_character = SIA_phraya_wichcitcholathai
-recruit_character = SIA_sawat_phutianands
-recruit_character = SIA_phraya_chalermarkiart
-recruit_character = SIA_kuang_abhayavongsa
-recruit_character = SIA_thawee_punyaketu
-recruit_character = SIA_phot_bhahalyodin
+set_variable = { SIA_mandate_conscription_factor = 0.05 }
+set_research_slots = 3
+recruit_character = SIA_Phahon
+#recruit_character = SIA_nangklao_chichalerm
+#recruit_character = SIA_chao_phonphayuhasena
+#recruit_character = SIA_nangklao_suriyawongse
+#recruit_character = SIA_tianliang_huntrakool
+#recruit_character = SIA_phra_silpasakrakorn
+#recruit_character = SIA_luang_sinthusongkhramchai
+##recruit_character = SIA_thawon_thamrongnawasawat
+#recruit_character = SIA_phraya_preechacholayudha
+##recruit_character = SIA_sindhu_kamalanavin
+#recruit_character = SIA_phraya_chitnasongkhla
+#recruit_character = SIA_phraya_thayarnpikart
+#recruit_character = SIA_phra_vechayanrangsarit
+#recruit_character = SIA_manphya_khanphialong
+#recruit_character = SIA_luang_phibunsongkhram
+#recruit_character = SIA_phraya_wichcitcholathai
+#recruit_character = SIA_sawat_phutianands
+#recruit_character = SIA_phraya_chalermarkiart
+#recruit_character = SIA_kuang_abhayavongsa
+#recruit_character = SIA_thawee_punyaketu
+#recruit_character = SIA_phot_bhahalyodin
+recruit_character = SIA_Peoples_Assembly
+recruit_character = SIA_Plaek_Phibun
+recruit_character = SIA_Rama_VII
+recruit_character = SIA_pridi_bhanomyong
+recruit_character = SIA_Prince_Boworadet
+recruit_character = SIA_Prince_Naris
+recruit_character = SIA_Prince_Damrong
+recruit_character = SIA_Paribatra_Sukhumbandhu
+recruit_character = SIA_Khuang_Aphaiwong
+recruit_character = SIA_Wichit_Whichitwathakan
+recruit_character = SIA_Tua_Lapanukrom
+recruit_character = SIA_Charun_Rattanakul
+recruit_character = SIA_Chalermkiat_Wattanangkul
+recruit_character = SIA_Krawin_Thampitak
+recruit_character = SIA_Sindhu_Songkramchai
+recruit_character = SIA_Munee_Mahasantana
+recruit_character = SIA_Thawan_Thamrongnawasawat
+recruit_character = SIA_Sindhu_Kamalanavin_v2
+recruit_character = SIA_Mangkorn_Phromyothi
 
 
 # Starting tech
 set_technology = {
 	tech_trucks = 1
 	infantry_weapons = 1
+	infantry_weapons1 = 1
+
+
+	special_forces_mountaineers = 1
+	special_forces_marines = 1
+	special_forces_paratroopers = 1
+	special_forces_rangers = 1
+
+	motorised_infantry = 1
+	tech_support = 1
+	tech_engineers = 1
+	tech_recon = 1
+	bicycle_infantry = 1	
 	gw_artillery = 1
 	interwar_antiair = 1
+
+	basic_train = 1
+	gwtank_chassis = 1 #nsb man
+
+	fuel_silos = 1 #juggle button
+
+	building_limiter_tech = 1 #air base max level
 }
 if = {
 	limit = { not = { has_dlc = "Man the Guns" } }
@@ -73,6 +96,14 @@ if = {
 }
 set_convoys = 100
 
+add_ideas = {
+	export_focus
+	limited_conscription
+	partial_economic_mobilisation
+	SIA_Thai_Neutrality
+	SIA_Civilian_Wing_Opposition
+	SIA_Great_Depression_I
+}
 
 set_politics = {
 	ruling_party = neutrality
@@ -81,8 +112,10 @@ set_politics = {
 	elections_allowed = no
 }
 set_popularities = {
+	communism = 10
+	democratic = 10
 	fascism = 20
-	neutrality = 80
+	neutrality = 60
 }
 
 ### VARIANTS ###

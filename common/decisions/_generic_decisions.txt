@@ -458,7 +458,7 @@ propaganda_efforts = {
 				add_war_support = 0.10
 			}
 			hidden_effect = {
-				country_event = JFU_events.10
+				country_event = political.33
 			}
 		}
 

@@ -8,8 +8,9 @@ state={
 	
 	resources={
 		steel=10 # was: 8
-		chromium=23 # was: 80
+		chromium=25 # was: 80
 		tungsten = 30
+		coal = 14 # initial distribution
 	}
 
 	history={

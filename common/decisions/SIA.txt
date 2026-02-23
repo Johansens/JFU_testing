@@ -1,0 +1,577 @@
+SIA_Cultural_Mandates = {
+
+
+	SIA_Cultural_Mandate_1_dec = {
+
+		icon = generic_decision
+
+		allowed = {
+			tag = SIA
+		}
+		
+		visible = {
+			
+		}
+		
+		available = {
+			NOT = { has_country_flag = SIA_Cultural_Mandate_in_progress }
+		}
+	
+		fire_only_once = yes
+		days_remove = 60
+		days_re_enable = 0
+		
+		cost = 50
+		
+		modifier = {
+			political_power_cost = 0.2
+		}
+		complete_effect = {
+			set_country_flag = SIA_Cultural_Mandate_in_progress
+		}
+		remove_effect = {
+			
+			#add_ideas = SIA_Cultural_Mandate_1
+			clr_country_flag = SIA_Cultural_Mandate_in_progress
+
+
+			add_to_variable = { 
+				SIA_mandate_conscription_factor = 0.1
+				tooltip = conscription_factor_tt
+			}
+
+			# Event
+			custom_effect_tooltip = generic_skip_one_line_tt
+			country_event = SIA.35
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	SIA_Cultural_Mandate_2_dec = {
+
+		icon = generic_decision
+
+		allowed = {
+			tag = SIA
+		}
+		
+		visible = {
+
+		}
+		
+		available = {
+			NOT = { has_country_flag = SIA_Cultural_Mandate_in_progress }
+		}
+	
+		fire_only_once = yes
+		days_remove = 60
+		days_re_enable = 0
+		
+		cost = 50
+
+		modifier = {
+			political_power_cost = 0.2
+		}
+		complete_effect = {
+			set_country_flag = SIA_Cultural_Mandate_in_progress
+		}
+		remove_effect = {
+			clr_country_flag = SIA_Cultural_Mandate_in_progress
+
+			custom_effect_tooltip = SIA_modify_Mandate_modifier_tt
+			add_to_variable = { 
+				SIA_mandate_stability_factor = 0.1
+				tooltip = stability_factor_tt
+			}
+
+			# Event
+			custom_effect_tooltip = generic_skip_one_line_tt
+			country_event = SIA.36
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	SIA_Cultural_Mandate_3_dec = {
+
+		icon = generic_decision
+
+		allowed = {
+			tag = SIA
+		}
+		
+		visible = {
+
+		}
+		
+		available = {
+			NOT = { has_country_flag = SIA_Cultural_Mandate_in_progress }
+		}
+	
+		fire_only_once = yes
+		days_remove = 60
+		days_re_enable = 0
+		
+		cost = 50
+
+		complete_effect = {
+			
+			
+		}
+
+		modifier = {
+			political_power_cost = 0.2
+		}
+		complete_effect = {
+			set_country_flag = SIA_Cultural_Mandate_in_progress
+		}
+		remove_effect = {
+			clr_country_flag = SIA_Cultural_Mandate_in_progress
+
+			custom_effect_tooltip = SIA_modify_Mandate_modifier_tt
+			add_to_variable = { 
+				SIA_mandate_war_support_factor = 0.1
+				tooltip = war_support_factor_tt
+			}
+			add_to_variable = { 
+				SIA_mandate_weekly_manpower = 500
+				tooltip = weekly_manpower_tt
+			}	
+			add_to_variable = { 
+				SIA_mandate_conscription_factor = 0.1
+				tooltip = conscription_factor_tt
+			}					
+			custom_effect_tooltip = generic_skip_one_line_tt
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	SIA_Cultural_Mandate_4_dec = {
+
+		icon = generic_decision
+
+		allowed = {
+			tag = SIA
+		}
+		
+		visible = {
+
+		}
+		
+		available = {
+			NOT = { has_country_flag = SIA_Cultural_Mandate_in_progress }
+		}
+	
+		fire_only_once = yes
+		days_remove = 60
+		days_re_enable = 0
+		
+		cost = 50
+
+		modifier = {
+			political_power_cost = 0.2
+		}
+		complete_effect = {
+			set_country_flag = SIA_Cultural_Mandate_in_progress
+		}
+		remove_effect = {
+			clr_country_flag = SIA_Cultural_Mandate_in_progress
+
+			custom_effect_tooltip = SIA_modify_Mandate_modifier_tt
+			add_to_variable = { 
+				SIA_mandate_consumer_goods_factor = -0.1
+				tooltip = consumer_goods_factor_tt
+			}
+			
+			# Event
+			custom_effect_tooltip = generic_skip_one_line_tt
+			country_event = SIA.37
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	SIA_Cultural_Mandate_5_dec = {
+
+		icon = generic_decision
+
+		allowed = {
+			tag = SIA
+		}
+		
+		visible = {
+
+		}
+		
+		available = {
+			NOT = { has_country_flag = SIA_Cultural_Mandate_in_progress }
+		}
+	
+		fire_only_once = yes
+		days_remove = 60
+		days_re_enable = 0
+		
+		cost = 50
+
+		complete_effect = {
+			
+			
+		}
+
+		modifier = {
+			political_power_cost = 0.2
+		}
+		complete_effect = {
+			set_country_flag = SIA_Cultural_Mandate_in_progress
+		}
+		remove_effect = {
+			clr_country_flag = SIA_Cultural_Mandate_in_progress
+
+			custom_effect_tooltip = SIA_modify_Mandate_modifier_tt
+			add_to_variable = { 
+				SIA_mandate_industrial_capacity_factory = 0.05
+				tooltip = industrial_capacity_factory_tt
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	SIA_Cultural_Mandate_6_dec = {
+
+		icon = generic_decision
+
+		allowed = {
+			tag = SIA
+		}
+		
+		visible = {
+
+		}
+		
+		available = {
+			NOT = { has_country_flag = SIA_Cultural_Mandate_in_progress }
+		}
+	
+		fire_only_once = yes
+		days_remove = 60
+		days_re_enable = 0
+		
+		cost = 50
+		
+		modifier = {
+			political_power_cost = 0.2
+		}
+		complete_effect = {
+			set_country_flag = SIA_Cultural_Mandate_in_progress
+		}
+		remove_effect = {
+			clr_country_flag = SIA_Cultural_Mandate_in_progress
+
+			custom_effect_tooltip = SIA_modify_Mandate_modifier_tt
+			add_to_variable = { 
+				SIA_mandate_industrial_capacity_factory = 0.05
+				tooltip = industrial_capacity_factory_tt
+			}
+			add_to_variable = { 
+				SIA_mandate_stability_factor = 0.1
+				tooltip = stability_factor_tt
+			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			# Event
+			
+			country_event = SIA.38
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
+
+SIA_propaganda_campaigns = {
+
+	# Factory output
+	
+	SIA_Propaganda_Output_dec = {
+
+		icon = eng_propaganda_campaigns
+
+		allowed = {
+			tag = SIA
+		}
+		
+		days_remove = 90
+		days_re_enable = 14
+		
+		cost = 0
+
+		modifier = {
+			political_power_cost = 0.4
+			
+			industrial_capacity_factory = 0.1
+			industrial_capacity_dockyard = 0.1
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	# consumer goods
+	
+	SIA_Propaganda_Asceticism_dec = {
+
+		icon = eng_propaganda_campaigns
+
+		allowed = {
+			tag = SIA
+		}
+		
+		days_remove = 90
+		days_re_enable = 14
+		
+		cost = 0
+
+		modifier = {
+			political_power_cost = 0.4
+			
+			consumer_goods_factor = -0.15
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	# supply
+	
+	SIA_Propaganda_Supply_dec = {
+
+		icon = eng_propaganda_campaigns
+
+		allowed = {
+			tag = SIA
+		}
+		
+		days_remove = 90
+		days_re_enable = 14
+		
+		cost = 0
+
+		modifier = {
+			political_power_cost = 0.4
+			
+			army_fuel_consumption_factor = -0.15
+			supply_consumption_factor = -0.15
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	# organization 
+	
+	SIA_Propaganda_Org_dec = {
+
+		icon = eng_propaganda_campaigns
+
+		allowed = {
+			tag = SIA
+		}
+		
+		days_remove = 90
+		days_re_enable = 14
+		
+		cost = 0
+
+		modifier = {
+			political_power_cost = 0.4
+			
+			army_org_factor = 0.1
+			army_org_regain = 0.05
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	# speed and attack, org loss when moving
+	
+	SIA_Propaganda_Offensive_dec = {
+
+		icon = eng_propaganda_campaigns
+
+		allowed = {
+			tag = SIA
+		}
+		
+		days_remove = 90
+		days_re_enable = 14
+		
+		cost = 0
+
+		modifier = {
+			political_power_cost = 0.4
+			
+			army_morale_factor = 0.1
+			army_attack_factor = 0.05
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	# manpower, training time
+	
+	SIA_Propaganda_Recruitment_dec = {
+
+		icon = eng_propaganda_campaigns
+
+		allowed = {
+			tag = SIA
+		}
+		
+		days_remove = 90
+		days_re_enable = 14
+		
+		cost = 0
+
+		modifier = {
+			political_power_cost = 0.4
+			
+			training_time_factor = -0.15
+			weekly_manpower = 1000
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+}
+
+SIA_Territorial_Claims = {
+
+	SIA_Demand_Indochina_dec = {
+
+		icon = generic_prepare_civil_war
+
+		allowed = {
+			tag = SIA
+		}
+		
+		days_remove = 1
+		fire_only_once = yes
+
+		cost = 25
+
+		remove_effect = {
+			FRA = { country_event = SIA.8 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	SIA_Sue_France_For_Peace_dec = {
+
+		icon = generic_decision
+
+		allowed = {
+			tag = SIA
+		}
+		
+		visible = {
+			has_war_with = FRA
+			
+			NOT = { has_war_with = BRI }
+		}
+		
+		available = {
+			has_full_control_of_state = 670
+			has_full_control_of_state = 741
+			has_full_control_of_state = 671
+			has_full_control_of_state = 286
+		}
+	
+		fire_only_once = yes
+		days_remove = 10
+		days_re_enable = 0
+		
+		cost = 50
+
+		remove_effect = {
+			white_peace = FRA
+			
+			set_state_owner = 670
+			set_state_owner = 741
+			set_state_owner = 671
+			set_state_owner = 286
+			transfer_state = 670
+			transfer_state = 741
+			transfer_state = 671
+			transfer_state = 286
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	SIA_Sue_Britain_For_Peace_dec = {
+
+		icon = generic_decision
+
+		allowed = {
+			tag = SIA
+		}
+		
+		visible = {
+			has_war_with = BRI
+		}
+		
+		available = {
+			has_full_control_of_state = 640
+			has_full_control_of_state = 288
+			
+			NOT = { has_war_with = FRA }
+		}
+	
+		fire_only_once = yes
+		days_remove = 10
+		days_re_enable = 0
+		
+		cost = 50
+
+		remove_effect = {
+			white_peace = BRI
+			
+			set_state_owner = 640
+			set_state_owner = 288
+			transfer_state = 640
+			transfer_state = 288
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

@@ -47,7 +47,19 @@ if = {
 #	add_dynamic_modifier = { modifier = AFRICA_entrechment_dynamic }	
 #}
 starting_train_buffer = 4
+complete_special_project = {
+	project = sp:sp_air_radar
+	scientist = ENG_robert_watson_watt
+}
 
+add_breakthrough_progress = {
+	specialization = specialization_naval
+	value = 0.6
+}
+add_breakthrough_progress = {
+	specialization = specialization_air
+	value = 0.5
+}
 if = {
 	limit = {
 		has_dlc = "Man the Guns"
@@ -103,8 +115,8 @@ set_technology = {
 	gw_artillery = 1
 	interwar_antiair = 1
 	basic_train = 1
-	trench_warfare = 1
-	fleet_in_being = 1
+	#trench_warfare = 1
+	#fleet_in_being = 1
 	electronic_mechanical_engineering = 1
 	radio = 1
 	radio_detection = 1
@@ -112,13 +124,14 @@ set_technology = {
 	mechanical_computing = 1
 	tech_trucks = 1
 	gwtank_chassis = 1 #nsb man
-
+	bicycle_infantry = 1
 	fuel_silos = 1 #juggle button
 
 	building_limiter_tech = 1 #air base max level
 	special_forces_mountaineers = 1
 	special_forces_marines = 1
 	special_forces_paratroopers = 1
+	special_forces_rangers = 1
 }
 
 if = {
@@ -180,7 +193,7 @@ if = {
 		basic_ship_hull_carrier = 1
 		basic_battery = 1
 		basic_light_battery = 1
-		basic_medium_battery = 1
+		#basic_medium_battery = 1
 		basic_heavy_battery = 1
 		basic_torpedo = 1
 		sonar = 1
@@ -192,8 +205,6 @@ if = {
 		basic_fire_control_system = 1
 		basic_dp_light_battery = 1
 	}
-	set_global_flag = MTG_second_london_conference
-	set_global_flag = { flag = MTG_naval_treaty_signatories value = 5 }
 }
 
 if = {
@@ -265,14 +276,14 @@ set_popularities = {
 }
 
 
-create_faction = Allies
+create_faction_from_template = faction_template_allies
 add_to_faction = ENG
 add_to_faction = FRA
 add_to_faction = CAN
 add_to_faction = AST
 add_to_faction = NZL
 add_to_faction = SAF
-add_to_faction = RAJ		# Must be after puppet
+add_to_faction = RAJ
 add_to_faction = IRE
 
 # Order matters - here Chamberlain becomes starting leader
@@ -341,6 +352,10 @@ recruit_character = ENG_stewart_menzies
 recruit_character = ENG_maxwell_aitken
 recruit_character = ENG_thomas_moore
 
+recruit_character = ENG_john_cockcroft
+recruit_character = ENG_charles_goodeve
+recruit_character = ENG_nevil_shute
+recruit_character = ENG_robert_watson_watt
 
 
 if = {
@@ -509,7 +524,7 @@ if = {
 		type = light_tank_chassis_1
 		parent_version = 0
 		modules = {
-			main_armament_slot = tank_small_cannon
+			main_armament_slot = tank_heavy_machine_gun
 			turret_type_slot = tank_light_one_man_tank_turret
 			suspension_type_slot = tank_christie_suspension
 			armor_type_slot = tank_riveted_armor
@@ -527,11 +542,13 @@ if = {
 		type = light_tank_chassis_1
 		parent_version = 1
 		modules = {
-			main_armament_slot = tank_small_cannon
+			main_armament_slot = tank_heavy_machine_gun
 			turret_type_slot = tank_light_two_man_tank_turret
 			suspension_type_slot = tank_bogie_suspension
 			armor_type_slot = tank_riveted_armor
 			engine_type_slot = tank_gasoline_engine
+			special_type_slot_1 = tank_radio_1
+			special_type_slot_2 = smoke_launchers
 		}
 		icon = "GFX_ENG_basic_light_tank_medium"
 		upgrades = {
@@ -547,10 +564,11 @@ if = {
 		parent_version = 0
 		modules = {
 			main_armament_slot = tank_small_cannon
-			turret_type_slot = tank_light_two_man_tank_turret
+			turret_type_slot = tank_medium_three_man_tank_turret
 			suspension_type_slot = tank_bogie_suspension
 			armor_type_slot = tank_riveted_armor
 			engine_type_slot = tank_gasoline_engine
+			special_type_slot_1 = tank_radio_1
 		}
 		upgrades = {
 			tank_nsb_armor_upgrade = 1
@@ -564,11 +582,12 @@ if = {
 		type = light_tank_chassis_0
 		parent_version = 0
 		modules = {
-			main_armament_slot = tank_small_cannon
+			main_armament_slot = tank_heavy_machine_gun
 			turret_type_slot = tank_light_one_man_tank_turret
 			suspension_type_slot = tank_bogie_suspension
 			armor_type_slot = tank_riveted_armor
 			engine_type_slot = tank_gasoline_engine
+			special_type_slot_1 = secondary_turret_hmg
 		}
 		upgrades = {
 			tank_nsb_armor_upgrade = 3
@@ -609,17 +628,6 @@ if = {
 		modules = {
 			fixed_ship_torpedo_slot = ship_torpedo_sub_1
 			fixed_ship_engine_slot = sub_ship_engine_2
-			rear_1_custom_slot = empty
-		}
-	}
-	create_equipment_variant = {
-		name = "S Class"
-		type = ship_hull_submarine_1
-		name_group = ENG_SS_HISTORICAL
-		parent_version = 0
-		modules = {
-			fixed_ship_torpedo_slot = ship_torpedo_sub_1
-			fixed_ship_engine_slot = sub_ship_engine_1
 			rear_1_custom_slot = ship_torpedo_sub_1
 		}
 	}
@@ -657,59 +665,7 @@ if = {
 			rear_1_custom_slot = ship_depth_charge_1
 		}
 	}
-	create_equipment_variant = {
-		name = "V/W Class"
-		type = ship_hull_light_1
-		name_group = ENG_DD_HISTORICAL
-		parent_version = 0
-		modules = {
-			fixed_ship_battery_slot = dp_light_battery_1
-			fixed_ship_anti_air_slot = ship_anti_air_1
-			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
-			fixed_ship_radar_slot = empty
-			fixed_ship_engine_slot = light_ship_engine_1
-			fixed_ship_torpedo_slot = ship_torpedo_1
-			mid_1_custom_slot = empty
-			rear_1_custom_slot = ship_depth_charge_1
-		}
-		obsolete = yes
-	}
-	create_equipment_variant = {
-		name = "S Class"
-		type = ship_hull_light_1
-		name_group = ENG_DD_HISTORICAL
-		parent_version = 0
-		modules = {
-			fixed_ship_battery_slot = dp_light_battery_1
-			fixed_ship_anti_air_slot = empty
-			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
-			fixed_ship_radar_slot = empty
-			fixed_ship_engine_slot = light_ship_engine_1
-			fixed_ship_torpedo_slot = ship_torpedo_1
-			mid_1_custom_slot = empty
-			rear_1_custom_slot = ship_depth_charge_1
-		}
-		obsolete = yes
-	}
 	# Light Cruisers #
-	create_equipment_variant = {
-		name = "C-Class"
-		type = ship_hull_cruiser_1
-		name_group = ENG_CL_HISTORICAL
-		parent_version = 0
-		modules = {
-			fixed_ship_battery_slot = ship_light_medium_battery_1
-			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
-			fixed_ship_radar_slot = empty
-			fixed_ship_engine_slot = cruiser_ship_engine_1
-			fixed_ship_armor_slot = ship_armor_cruiser_1
-			fixed_ship_secondaries_slot = dp_ship_secondaries_1
-			mid_1_custom_slot = ship_torpedo_1
-			mid_2_custom_slot = empty
-			rear_1_custom_slot = empty
-		}
-		obsolete = yes
-	}
 	create_equipment_variant = {
 		name = "Danae Class"
 		type = ship_hull_cruiser_1
@@ -729,25 +685,6 @@ if = {
 		obsolete = yes
 	}
 	create_equipment_variant = {
-		name = "Emerald Class"
-		type = ship_hull_cruiser_2
-		name_group = ENG_CL_HISTORICAL
-		parent_version = 0
-		modules = {
-			fixed_ship_battery_slot = ship_light_medium_battery_1
-			fixed_ship_anti_air_slot = ship_anti_air_1
-			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
-			fixed_ship_radar_slot = empty
-			fixed_ship_engine_slot = cruiser_ship_engine_2
-			fixed_ship_armor_slot = ship_armor_cruiser_1
-			fixed_ship_secondaries_slot = dp_ship_secondaries_1
-			mid_1_custom_slot = ship_torpedo_1
-			mid_2_custom_slot = ship_torpedo_1
-			rear_1_custom_slot = ship_light_medium_battery_1
-		}
-		obsolete = yes
-	}
-	create_equipment_variant = {
 		name = "Leander Class"
 		type = ship_hull_cruiser_2
 		name_group = ENG_CL_HISTORICAL
@@ -759,71 +696,16 @@ if = {
 			fixed_ship_radar_slot = empty
 			fixed_ship_engine_slot = cruiser_ship_engine_2
 			fixed_ship_armor_slot = ship_armor_cruiser_1
-			fixed_ship_secondaries_slot = dp_ship_secondaries_2
-			front_1_custom_slot = ship_light_medium_battery_2
-			mid_1_custom_slot = dp_ship_secondaries_2
-			mid_2_custom_slot = dp_ship_secondaries_2
+			fixed_ship_secondaries_slot = dp_ship_secondaries_1
+			front_1_custom_slot = empty
+			mid_1_custom_slot = ship_torpedo_1
+			mid_2_custom_slot = ship_airplane_launcher_1
 			rear_1_custom_slot = ship_light_medium_battery_2
 		}
 	}
-	create_equipment_variant = {
-		name = "Adventure Class"						# cruiser minelayer
-		type = ship_hull_cruiser_1
-		name_group = ENG_MINELAYERS_HISTORICAL
-		parent_version = 0
-		modules = {
-			fixed_ship_battery_slot = ship_light_medium_battery_1
-			fixed_ship_anti_air_slot = ship_anti_air_1
-			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
-			fixed_ship_radar_slot = empty
-			fixed_ship_engine_slot = cruiser_ship_engine_1
-			fixed_ship_armor_slot = empty
-			fixed_ship_secondaries_slot = dp_ship_secondaries_2
-			mid_1_custom_slot = ship_mine_layer_1
-			mid_2_custom_slot = ship_mine_layer_1
-			rear_1_custom_slot = ship_mine_layer_1
-		}
-	}
-	create_equipment_variant = {
-			name = "Town Class"
-			type = ship_hull_cruiser_2
-			name_group = ENG_CL_HISTORICAL
-			parent_version = 0
-			modules = {
-				fixed_ship_battery_slot = ship_light_medium_battery_2
-				fixed_ship_anti_air_slot = ship_anti_air_2
-				fixed_ship_fire_control_system_slot = ship_fire_control_system_0
-				fixed_ship_radar_slot = empty
-				fixed_ship_engine_slot = cruiser_ship_engine_2
-				fixed_ship_armor_slot = ship_armor_cruiser_2
-				fixed_ship_secondaries_slot = dp_ship_secondaries_2
-				front_1_custom_slot = ship_anti_air_2
-				mid_1_custom_slot = ship_torpedo_1
-				mid_2_custom_slot = ship_secondaries_2
-				rear_1_custom_slot = ship_light_medium_battery_2
-			}
-		}
 	# Heavy Cruisers #
 	create_equipment_variant = {
 		name = "County Class"
-		type = ship_hull_cruiser_1
-		name_group = ENG_CA_HISTORICAL
-		parent_version = 0
-		modules = {
-			fixed_ship_battery_slot = ship_medium_battery_2
-			fixed_ship_anti_air_slot = ship_anti_air_2
-			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
-			fixed_ship_radar_slot = empty
-			fixed_ship_engine_slot = cruiser_ship_engine_2
-			fixed_ship_armor_slot = ship_armor_cruiser_1
-			fixed_ship_secondaries_slot = dp_ship_secondaries_2
-			mid_1_custom_slot = ship_torpedo_1
-			mid_2_custom_slot = ship_torpedo_1
-			rear_1_custom_slot = ship_medium_battery_2
-		}
-	}
-	create_equipment_variant = {
-		name = "York Class"
 		type = ship_hull_cruiser_1
 		name_group = ENG_CA_HISTORICAL
 		parent_version = 0
@@ -835,32 +717,14 @@ if = {
 			fixed_ship_engine_slot = cruiser_ship_engine_2
 			fixed_ship_armor_slot = ship_armor_cruiser_1
 			fixed_ship_secondaries_slot = dp_ship_secondaries_1
-			mid_1_custom_slot = empty
+			mid_1_custom_slot = ship_airplane_launcher_1
 			mid_2_custom_slot = ship_torpedo_1
-			rear_1_custom_slot = ship_airplane_launcher_1
+			rear_1_custom_slot = ship_medium_battery_2
 		}
-	}
-	create_equipment_variant = {
-		name = "Hawkins Class"
-		type = ship_hull_cruiser_1
-		name_group = ENG_CA_HISTORICAL
-		parent_version = 0
-		modules = {
-			fixed_ship_battery_slot = ship_medium_battery_1
-			fixed_ship_anti_air_slot = ship_anti_air_2
-			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
-			fixed_ship_radar_slot = empty
-			fixed_ship_engine_slot = cruiser_ship_engine_1
-			fixed_ship_armor_slot = ship_armor_cruiser_1
-			fixed_ship_secondaries_slot = ship_secondaries_1
-			mid_2_custom_slot = ship_torpedo_1
-			rear_1_custom_slot = empty
-		}
-		obsolete = yes
 	}
 	# Battlecruisers #
 	create_equipment_variant = {
-		name = "Renown Class"
+		name = "Admiral Class"
 		type = ship_hull_heavy_1
 		name_group = ENG_BC_HISTORICAL
 		parent_version = 0
@@ -871,52 +735,11 @@ if = {
 			fixed_ship_radar_slot = empty
 			fixed_ship_engine_slot = heavy_ship_engine_2
 			fixed_ship_secondaries_slot = dp_ship_secondaries_2
-			fixed_ship_armor_slot = ship_armor_bc_1
+			fixed_ship_armor_slot = ship_armor_bc_2
 			front_1_custom_slot = ship_anti_air_1
-			mid_1_custom_slot = ship_airplane_launcher_1
+			mid_1_custom_slot = empty
 			mid_2_custom_slot = ship_secondaries_1
-			rear_1_custom_slot = empty
-		}
-		obsolete = yes
-	}
-	# Battlecruisers #
-	create_equipment_variant = {
-		name = "Admiral Class"
-		type = ship_hull_heavy_2
-		name_group = ENG_BC_HISTORICAL
-		parent_version = 0
-		modules = {
-			fixed_ship_battery_slot = ship_heavy_battery_2
-			fixed_ship_anti_air_slot = ship_anti_air_2
-			fixed_ship_fire_control_system_slot = ship_fire_control_system_1
-			fixed_ship_radar_slot = empty
-			fixed_ship_engine_slot = heavy_ship_engine_2
-			fixed_ship_secondaries_slot = dp_ship_secondaries_2
-			fixed_ship_armor_slot = ship_armor_bc_2
-			front_1_custom_slot = ship_heavy_battery_2
-			mid_1_custom_slot = ship_secondaries_2
-			mid_2_custom_slot = ship_secondaries_2
-			rear_1_custom_slot = ship_heavy_battery_2
-		}
-	}
-
-	create_equipment_variant = {
-		name = "G3 Design"
-		type = ship_hull_heavy_1
-		name_group = ENG_BC_HISTORICAL
-		parent_version = 0
-		modules = {
-			fixed_ship_battery_slot = ship_heavy_battery_2
-			fixed_ship_anti_air_slot = ship_anti_air_1
-			fixed_ship_fire_control_system_slot = ship_fire_control_system_1
-			fixed_ship_radar_slot = empty
-			fixed_ship_engine_slot = heavy_ship_engine_2
-			fixed_ship_secondaries_slot = ship_secondaries_2
-			fixed_ship_armor_slot = ship_armor_bc_2
-			front_1_custom_slot = ship_heavy_battery_2
-			mid_1_custom_slot = dp_ship_secondaries_1
-			mid_2_custom_slot = ship_anti_air_1
-			rear_1_custom_slot = empty
+			rear_1_custom_slot = ship_heavy_battery_1
 		}
 	}
 	# Battleships #
@@ -927,91 +750,20 @@ if = {
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_heavy_battery_2
-			fixed_ship_anti_air_slot = ship_anti_air_2
+			fixed_ship_anti_air_slot = ship_anti_air_1
 			fixed_ship_fire_control_system_slot = ship_fire_control_system_1
 			fixed_ship_radar_slot = empty
 			fixed_ship_engine_slot = heavy_ship_engine_1
 			fixed_ship_secondaries_slot = ship_secondaries_2
 			fixed_ship_armor_slot = ship_armor_bb_2
 			front_1_custom_slot = ship_heavy_battery_2
-			mid_1_custom_slot = ship_anti_air_2
-			mid_2_custom_slot = ship_anti_air_2
-			rear_1_custom_slot = ship_anti_air_2
+			mid_1_custom_slot = dp_ship_secondaries_1
+			mid_2_custom_slot = empty
+			rear_1_custom_slot = empty
 		}
 		obsolete = yes
 	}
-	create_equipment_variant = {
-		name = "Queen Elizabeth Class"
-		type = ship_hull_heavy_1
-		name_group = ENG_BB_HISTORICAL
-		parent_version = 0
-		modules = {
-			fixed_ship_battery_slot = ship_heavy_battery_1
-			fixed_ship_anti_air_slot = ship_anti_air_1
-			fixed_ship_fire_control_system_slot = ship_fire_control_system_1
-			fixed_ship_radar_slot = empty
-			fixed_ship_engine_slot = heavy_ship_engine_1
-			fixed_ship_secondaries_slot = dp_ship_secondaries_1
-			fixed_ship_armor_slot = ship_armor_bb_1
-			front_1_custom_slot = empty
-			mid_1_custom_slot = ship_airplane_launcher_1
-			mid_2_custom_slot = ship_secondaries_1
-			rear_1_custom_slot = ship_heavy_battery_1
-		}
-		obsolete = yes
-	}
-	create_equipment_variant = {
-		name = "Revenge Class"
-		type = ship_hull_heavy_1
-		name_group = ENG_BB_HISTORICAL
-		parent_version = 0
-		modules = {
-			fixed_ship_battery_slot = ship_heavy_battery_1
-			fixed_ship_anti_air_slot = ship_anti_air_1
-			fixed_ship_fire_control_system_slot = ship_fire_control_system_1
-			fixed_ship_radar_slot = empty
-			fixed_ship_engine_slot = heavy_ship_engine_1
-			fixed_ship_secondaries_slot = ship_secondaries_1
-			fixed_ship_armor_slot = ship_armor_bb_1
-			front_1_custom_slot = empty
-			mid_1_custom_slot = empty
-			mid_2_custom_slot = ship_secondaries_1
-			rear_1_custom_slot = ship_heavy_battery_1
-		}
-		obsolete = yes
-	}
-	create_equipment_variant = {
-		name = "Eagle Class"
-		type = ship_hull_carrier_conversion_bb
-		name_group = ENG_CV_HISTORICAL
-		parent_version = 0
-		modules = {
-			fixed_ship_deck_slot_1 = ship_deck_space
-			fixed_ship_deck_slot_2 = ship_deck_space
-			fixed_ship_anti_air_slot = ship_anti_air_1
-			fixed_ship_radar_slot = empty
-			fixed_ship_engine_slot = heavy_ship_engine_1
-			fixed_ship_secondaries_slot = dp_ship_secondaries_1
-			mid_1_custom_slot = empty
-		}
-		obsolete = yes
-	}
-	
-	create_equipment_variant = {
-		name = "Hermes Class"
-		type = ship_hull_carrier_conversion_ca
-		name_group = ENG_CVL_HISTORICAL
-		parent_version = 0
-		modules = {
-			fixed_ship_deck_slot_1 = ship_deck_space
-			fixed_ship_deck_slot_2 = empty
-			fixed_ship_anti_air_slot = ship_anti_air_1
-			fixed_ship_radar_slot = empty
-			fixed_ship_engine_slot = cruiser_ship_engine_1
-			fixed_ship_secondaries_slot = ship_secondaries_1
-		}
-		obsolete = yes
-	}
+	# aircraft carriers #
 	create_equipment_variant = {
 		name = "Courageous Class"
 		type = ship_hull_carrier_conversion_bb
@@ -1036,7 +788,7 @@ if = {
 			modules = {
 				fixed_ship_deck_slot_1 = ship_deck_space
 				fixed_ship_deck_slot_2 = ship_deck_space
-				fixed_ship_anti_air_slot = ship_anti_air_2
+				fixed_ship_anti_air_slot = ship_anti_air_1
 				fixed_ship_radar_slot = empty
 				fixed_ship_engine_slot = carrier_ship_engine_2
 				fixed_ship_secondaries_slot = dp_ship_secondaries_2

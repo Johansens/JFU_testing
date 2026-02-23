@@ -4,8 +4,9 @@ state={
 	name="STATE_20" # Rhone
 	manpower = 2973200
 	resources={
-		steel=60 # was: 128
+		steel=60 # was 60 was: 128
 		aluminium=35 # was: 72
+		coal = 50
 	}
 
 	state_category = city
@@ -21,6 +22,7 @@ state={
 			industrial_complex = 2
 			air_base = 4
 		}
+
 		add_core_of = FRA
 	}
 

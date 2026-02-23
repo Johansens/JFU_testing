@@ -335,35 +335,16 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		complete_tooltip = {
-			random_state = {
-				limit = {
-					has_state_flag = HUN_support_domestic_industry_IC
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
-			}
 		}
 
 		completion_reward = {
-			random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = industrial_complex
-						size > 1
-						include_locked = yes
-					}
-				}
+			43 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
 					level = 2
 					instant_build = yes
 				}
-				set_state_flag = HUN_support_domestic_industry_IC
 			}
 		}
 	}
@@ -383,19 +364,8 @@ focus_tree = {
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			if = {
-				limit = {
-					43 = {
-						free_building_slots = {
-							building = industrial_complex
-							size > 1
-							include_locked = yes
-						}
-					}
-				}
-				43 = {
-					add_extra_state_shared_building_slots = 3
-				}
+			43 = {
+				add_extra_state_shared_building_slots = 3
 			}
 		}
 	}
@@ -1052,189 +1022,79 @@ focus_tree = {
 		}
 	}
 
-	focus = {
-		id = HUN_focus_desert
-		text = "Africa Campaign"
-		icon = GFX_goal_generic_special_forces
-		prerequisite = { focus = HUN_home_defense }
-		mutually_exclusive = {
-			focus = HUN_focus_forest
-		}
-		x = 1
-		y = 1
-		relative_position_id = HUN_home_defense
+	#focus = {
+	#	id = HUN_focus_desert
+	#	text = "Africa Campaign"
+	#	icon = GFX_goal_generic_special_forces
+	#	prerequisite = { focus = HUN_home_defense }
+	#	mutually_exclusive = {
+	#		focus = HUN_focus_forest
+	#	}
+	#	x = 1
+	#	y = 1
+	#	relative_position_id = HUN_home_defense
 
-		cost = 5
+	#	cost = 5
 
-		ai_will_do = {
-			factor = 50
-		}
+	#	ai_will_do = {
+	#		factor = 50
+	#	}
 
-		available = {
+	#	available = {
 
-		}
+	#	}
 
-		bypass = {
+	#	bypass = {
 
-		}
+	#	}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+	#	cancel_if_invalid = yes
+	#	continue_if_invalid = no
+	#	available_if_capitulated = no
 
-		search_filters = { FOCUS_FILTER_MANPOWER }
-		completion_reward = {
-			custom_effect_tooltip = HUN_light_infantry_divisions_doctrine_tech_desert_tt
-			hidden_effect = { set_technology = { HUN_light_infantry_tech_desert = 1 } }
-			custom_effect_tooltip = HUN_light_infantry_divisions_doctrine_unit_tt
-			hidden_effect = {
-				if = {
-					limit = { has_tech = tech_engineers }
-					division_template = {
-						name = "Light Division"
-						division_names_group = HUN_INF_01
-						priority = 2
-		
-						regiments = {
-							infantry = { x = 0 y = 0 }
-							infantry = { x = 0 y = 1 }
-							infantry = { x = 0 y = 2 }
-				
-		    	   		 	infantry = { x = 1 y = 0 }
-							infantry = { x = 1 y = 1 }
-							infantry = { x = 1 y = 2 }
-						}
-						support = {
-							recon = { x = 0 y = 0 }
-							artillery = { x = 0 y = 1 }
-							engineer = { x = 0 y = 2 }
-						}
-					}
-					else = {
-						division_template = {
-							name = "Light Division"
-							division_names_group = HUN_INF_01
-							priority = 2
-			
-							regiments = {
-								infantry = { x = 0 y = 0 }
-								infantry = { x = 0 y = 1 }
-								infantry = { x = 0 y = 2 }
-					
-			    	   		 	infantry = { x = 1 y = 0 }
-								infantry = { x = 1 y = 1 }
-								infantry = { x = 1 y = 2 }
-							}
-							support = {
-								recon = { x = 0 y = 0 }
-								artillery = { x = 0 y = 1 }
-							}
-						}					
-					}
-				}	
-				random_owned_controlled_state = {
-					prioritize = { 43 }
-					limit = { ROOT = { has_full_control_of_state = PREV } }
-					create_unit = {
-						division = "name = \"1. Light Division\" division_template = \"Light Division\" start_experience_factor = 1.0" 
-						owner = HUN
-					}
-				}
-			}
-		}
-	}
+	#	search_filters = { FOCUS_FILTER_MANPOWER }
+	#	completion_reward = {
+	#		custom_effect_tooltip = HUN_light_infantry_divisions_doctrine_tech_desert_tt
+	#		hidden_effect = { set_technology = { HUN_light_infantry_tech_desert = 1 } }
+	#	}
+	#}
 
-	focus = {
-		id = HUN_focus_forest
-		text = "Unternehmen Barbarossa"
-		icon = GFX_goal_generic_special_forces
-		prerequisite = { focus = HUN_home_defense }
-		mutually_exclusive = {
-			focus = HUN_focus_desert
-		}
-		x = -1
-		y = 1
-		relative_position_id = HUN_home_defense
+	#focus = {
+	#	id = HUN_focus_forest
+	#	text = "Unternehmen Barbarossa"
+	#	icon = GFX_goal_generic_special_forces
+	#	prerequisite = { focus = HUN_home_defense }
+	#	mutually_exclusive = {
+	#		focus = HUN_focus_desert
+	#	}
+	#	x = -1
+	#	y = 1
+	#	relative_position_id = HUN_home_defense
+	#
+	#	cost = 5
+	#
+	#	ai_will_do = {
+	#		factor = 50
+	#	}
+	#
+	#	available = {
+	#
+	#	}
+	#
+	#	bypass = {
+	#
+	#	}
 
-		cost = 5
+	#	cancel_if_invalid = yes
+	#	continue_if_invalid = no
+	#	available_if_capitulated = no
 
-		ai_will_do = {
-			factor = 50
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		search_filters = { FOCUS_FILTER_MANPOWER }
-		completion_reward = {
-			custom_effect_tooltip = HUN_light_infantry_divisions_doctrine_tech_tt
-			hidden_effect = { set_technology = { HUN_light_infantry_tech = 1 } }
-			custom_effect_tooltip = HUN_light_infantry_divisions_doctrine_unit_tt
-			hidden_effect = {
-				if = {
-					limit = { has_tech = tech_engineers }
-					division_template = {
-						name = "Light Division"
-						division_names_group = HUN_INF_01
-						priority = 2
-		
-						regiments = {
-							infantry = { x = 0 y = 0 }
-							infantry = { x = 0 y = 1 }
-							infantry = { x = 0 y = 2 }
-				
-		    	   		 	infantry = { x = 1 y = 0 }
-							infantry = { x = 1 y = 1 }
-							infantry = { x = 1 y = 2 }
-						}
-						support = {
-							recon = { x = 0 y = 0 }
-							artillery = { x = 0 y = 1 }
-							engineer = { x = 0 y = 2 }
-						}
-					}
-					else = {
-						division_template = {
-							name = "Light Division"
-							division_names_group = HUN_INF_01
-							priority = 2
-			
-							regiments = {
-								infantry = { x = 0 y = 0 }
-								infantry = { x = 0 y = 1 }
-								infantry = { x = 0 y = 2 }
-					
-			    	   		 	infantry = { x = 1 y = 0 }
-								infantry = { x = 1 y = 1 }
-								infantry = { x = 1 y = 2 }
-							}
-							support = {
-								recon = { x = 0 y = 0 }
-								artillery = { x = 0 y = 1 }
-							}
-						}					
-					}
-				}	
-				random_owned_controlled_state = {
-					prioritize = { 43 }
-					limit = { ROOT = { has_full_control_of_state = PREV } }
-					create_unit = {
-						division = "name = \"1. Light Division\" division_template = \"Light Division\" start_experience_factor = 1.0" 
-						owner = HUN
-					}
-				}
-			}
-		}
-	}
+	#	search_filters = { FOCUS_FILTER_MANPOWER }
+	#	completion_reward = {
+	#		custom_effect_tooltip = HUN_light_infantry_divisions_doctrine_tech_tt
+	#		hidden_effect = { set_technology = { HUN_light_infantry_tech = 1 } }
+	#	}
+	#}
 
 	focus = {
 		id = HUN_danuvia_submachine_guns

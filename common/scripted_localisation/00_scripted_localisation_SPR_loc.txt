@@ -17,10 +17,4 @@ defined_text = {
 		}
 		localization_key = SPR_NATIONALISTS_INSTRUCTIONS
 	}
-	text = {
-		trigger = {
-			original_tag = SPR
-		}
-		localization_key = SPR_REPUBLICANS_INSTRUCTIONS
-	}
 }

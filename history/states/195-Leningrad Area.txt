@@ -11,15 +11,12 @@ state={
 		victory_points = {
 			3151 30.0
 		}
-  		victory_points = {4893 1}
-		victory_points = {10476 1}
-		victory_points = {8053 1}
-		victory_points = {149 1}
 		buildings = {
 			infrastructure = 4 #was: 7
 			arms_factory = 6
 			industrial_complex = 1
 			dockyard = 3
+			air_base = 10
 			3151 ={
 				naval_base = 10
 				coastal_bunker = 5
@@ -29,7 +26,7 @@ state={
 	}
 
 	provinces={
-		79 149 3151 6174 11068 4893 10476 8053 12871 2062
+		79 149 2062 3151 4893 6174 8053 10476 12871 11068 
 	}
 
 	local_supplies=11.0 

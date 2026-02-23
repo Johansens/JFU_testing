@@ -1,3 +1,9 @@
+
+SIA_THAI = {
+    color = rgb { 45 42 74 }
+    color_ui = rgb { 255 73 121 }
+}
+
 MAL_UK = {
     color = rgb { 201 56 93 }
     color_ui = rgb { 255 73 121 }
@@ -229,11 +235,6 @@ ADU = {
 CAT_aragon = {
 	color = rgb { 166 68 72 }
 	color_ui = rgb { 166 68 72 }
-}
-
-CHI_warlord_PRC = {
-	color = rgb { 245 12 55 }
-	color_ui = rgb { 178 34 60 }
 }
 
 CHI_power_struggle_defeated = {
@@ -803,11 +804,6 @@ FIN_kingdom_of_finland = { #Purple
 FIN_greater_kingdom_of_finland = { #Dark Purple
 	color = rgb { 90 38 106 }
 	color_ui = rgb { 90 38 106 }
-}
-
-FIN_confederated_finno_russian_republics = {
-	color = rgb { 255 231 71 } #Yellow
-	color_ui = rgb { 255 231 71 }
 }
 
 FIN_finnish_democratic_republic = {

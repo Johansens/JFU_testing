@@ -35,8 +35,13 @@ ideas = {
 		}
 		fleet_in_being_academy_spirit = {
 			ledger = navy
-			available = { has_naval_academy = yes }
-			visible = { has_tech = fleet_in_being }
+			available = {
+				AND = { 
+					has_naval_academy = yes
+					has_doctrine = new_fleet_in_being
+				}
+			}
+
 			modifier = {
 				custom_modifier_tooltip = fleet_in_being_academy_spirit_tt
 				naval_torpedo_hit_chance_factor = 0.1
@@ -47,8 +52,13 @@ ideas = {
 		}
 		trade_interdiction_academy_spirit = {
 			ledger = navy
-			available = { has_naval_academy = yes }
-			visible = { has_tech = trade_interdiction }
+			available = {
+				AND = { 
+					has_naval_academy = yes
+					has_doctrine = new_convoy_raiding
+				}
+			}
+
 			modifier = {
 				custom_modifier_tooltip = trade_interdiction_academy_spirit_tt
 				convoy_retreat_speed = 0.2
@@ -59,8 +69,13 @@ ideas = {
 		}
 		base_strike_academy_spirit = {
 			ledger = navy
-			available = { has_naval_academy = yes }
-			visible = { has_tech = base_strike }
+			available = {
+				AND = { 
+					has_naval_academy = yes
+					has_doctrine = new_base_strike
+				}
+			}
+
 			modifier = {
 				custom_modifier_tooltip = base_strike_academy_spirit_tt
 				naval_strike_attack_factor = 0.1
@@ -86,11 +101,49 @@ ideas = {
 			available = { has_naval_academy = yes }
 			modifier = {
 				navy_leader_start_level = 1
-				navy_org_factor = 0.10
+				navy_leader_cost_factor = -0.4
 				custom_modifier_tooltip = naval_academy_scholarships_spirit_tt
 			}
 			ai_will_do = {
 				factor = 1
+				modifier = {
+					factor = 0
+					NOT = { has_dlc = "No Step Back" }
+				}
+			}
+		}
+		ship_to_shore_navy_spirit = {
+			ledger = navy
+			visible = { has_dlc = "No Compromise, No Surrender" }
+			available = { 
+			}
+
+			modifier = {
+				trait_ironside_xp_gain_factor = 0.35
+				shore_bombardment_collateral_damage_factor = 0.50
+			}
+
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = { has_dlc = "No Compromise, No Surrender" }
+				}
+				modifier = {
+					factor = 2
+					has_doctrine = naval_gunfire_support
+				}
+			}
+		}
+		stay_at_your_posts_navy_spirit = {
+			ledger = navy
+			visible = { has_dlc = "No Compromise, No Surrender" }
+			available = {
+			}
+
+			modifier = {
+				trait_blockade_runner_xp_gain_factor = 0.35
+				naval_accidents_chance = -0.15
 			}
 		}
 	}
@@ -98,14 +151,12 @@ ideas = {
 	navy_spirit = {
 		jeune_ecole_spirit = {
 			ledger = navy
+			available = {  }
 			research_bonus = {
 				dd_tech = 0.20
 			}
 			modifier = {
 				convoy_escort_efficiency = 0.25
-			}
-			ai_will_do = {
-				factor = 1
 			}
 		}
 		flexible_contracts_spirit = {
@@ -120,10 +171,10 @@ ideas = {
 		}
 		integrated_designers_spirit = {
 			ledger = navy
+			available = {  }
 			visible = { has_dlc = "Man the Guns" }
 			research_bonus = {
 				ship_modules_tech = 0.20
-				naval_equipment = 0.20
 			}
 			ai_will_do = {
 				factor = 1
@@ -131,6 +182,7 @@ ideas = {
 		}
 		naval_reform_spirit = {
 			ledger = navy
+			available = {  }
 			modifier = {
 				experience_gain_navy_factor = 0.25
 			}
@@ -140,6 +192,7 @@ ideas = {
 		}
 		naval_refit_yards_spirit = {
 			ledger = navy
+			available = {  }
 			modifier = {
 				refit_speed = 0.25
 				repair_speed_factor = 0.25
@@ -155,7 +208,7 @@ ideas = {
 		#}
 		fleet_in_being_navy_spirit = {
 			ledger = navy
-			visible = { has_tech = fleet_in_being }
+			available = { has_doctrine = new_fleet_in_being }
 			research_bonus = {
 				bb_tech = 0.20
 				ca_tech = 0.20 
@@ -169,7 +222,7 @@ ideas = {
 		}
 		trade_interdiction_navy_spirit = {
 			ledger = navy
-			visible = { has_tech = trade_interdiction }
+			available = { has_doctrine = new_convoy_raiding }
 			research_bonus = {
 				ss_tech = 0.20
 			}
@@ -182,7 +235,7 @@ ideas = {
 		}
 		base_strike_navy_spirit = {
 			ledger = navy
-			visible = { has_tech = base_strike }
+			available = { has_doctrine = new_base_strike }
 			research_bonus = {
 				cv_tech = 0.20
 			}
@@ -191,6 +244,64 @@ ideas = {
 			}
 			ai_will_do = {
 				factor = 1.5
+				modifier = {
+					factor = 0
+					NOT = { has_dlc = "No Step Back" }
+				}
+			}
+		}
+		sea_lane_denial_navy_spirit = {
+			ledger = navy
+			visible = {
+				has_dlc = "No Compromise, No Surrender"
+				always = no
+			}
+			available = { 
+				OR = {
+					has_doctrine = new_convoy_raiding 
+					has_doctrine = coastal_minelaying
+				}
+			}
+			
+			research_bonus = {
+				naval_minelaying = 0.30
+			}
+			modifier = {
+				mines_planting_by_fleets_factor = 0.15
+			}
+
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = { has_dlc = "No Compromise, No Surrender" }
+				}
+				modifier = {
+					factor = 2
+					has_doctrine = coastal_minelaying
+				}
+			}
+		}
+		fleet_interoperability_navy_spirit = {
+			ledger = navy
+			visible = { has_dlc = "No Compromise, No Surrender" }
+			research_bonus = {
+				naval_equipment = 0.05
+			}
+			modifier = {
+				naval_morale_factor = 0.20
+			}
+
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = { has_dlc = "No Compromise, No Surrender" }
+				}
+				modifier = {
+					factor = 2
+					has_doctrine = broad_naval_support
+				}
 			}
 		}
 	}
@@ -198,6 +309,7 @@ ideas = {
 	naval_command_spirit = {
 		close_combat_navy_spirit = {
 			ledger = navy
+			available = {  }
 			modifier ={
 				navy_screen_attack_factor = 0.05
 				naval_torpedo_screen_penetration_factor = 0.05
@@ -208,6 +320,7 @@ ideas = {
 		}
 		night_fighting_spirit = {
 			ledger = navy
+			available = {  }
 			modifier = {
 				night_spotting_chance = 0.1
 				naval_night_attack = 0.1
@@ -219,7 +332,7 @@ ideas = {
 		}
 		surprise_attacks_spirit = { 
 			ledger = navy
-			visible = { has_tech = base_strike }
+			available = {  }
 			modifier = {
 				naval_retreat_speed_after_initial_combat = 0.1
 				naval_retreat_chance_after_initial_combat = 0.1
@@ -230,6 +343,7 @@ ideas = {
 		}
 		efficient_communications_spirit = {
 			ledger = navy
+			available = {  }
 			modifier = {
 				positioning = 0.15
 			}
@@ -245,7 +359,9 @@ ideas = {
 		#}
 		surface_raiders_spirit = {
 			ledger = navy
-			visible = { has_tech = trade_interdiction }
+			available = {
+				has_doctrine = new_convoy_raiding
+			}
 			modifier = {
 				screening_without_screens = 0.2
 				naval_retreat_speed = 0.1
@@ -257,7 +373,7 @@ ideas = {
 		}
 		decisive_battle_spirit = {
 			ledger = navy
-			visible = { has_tech = fleet_in_being }
+			available = { has_doctrine = new_fleet_in_being }
 			modifier = {
 				naval_retreat_chance = -0.1
 				naval_retreat_speed = -0.1
@@ -270,6 +386,7 @@ ideas = {
 		}
 		inclimate_weather_experience_spirit = {
 			ledger = navy
+			available = {  }
 			modifier = {
 				navy_weather_penalty = -0.4
 			}
@@ -279,6 +396,7 @@ ideas = {
 		}
 		brave_commanders_spirit = {
 			ledger = navy
+			available = {  }
 			modifier = {
 				naval_critical_score_chance_factor = 0.15
 				naval_retreat_chance = -0.05
@@ -295,6 +413,140 @@ ideas = {
 			}
 			ai_will_do = {
 				factor = 0
+			}
+		}
+
+		naval_tripwire_navy_spirit = {
+			ledger = navy
+			visible = { has_dlc = "No Compromise, No Surrender" }
+			available = { 
+			}
+			modifier = {
+				naval_enemy_fleet_size_ratio_penalty_factor = 0.20
+			}
+
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = { has_dlc = "No Compromise, No Surrender" }
+				}
+				modifier = {
+					factor = 2
+					has_doctrine = coastal_defence_fleet
+				}
+			}
+		}
+		scouting_force_navy_spirit = {
+			ledger = navy
+			visible = { has_dlc = "No Compromise, No Surrender" }
+			available = {
+			}
+			modifier = {
+				spotting_chance = 0.10
+				naval_detection = 0.10
+			}
+
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = { has_dlc = "No Compromise, No Surrender" }
+				}
+				modifier = {
+					factor = 2
+					has_doctrine = escort_carrier_support
+				}
+			}
+		}
+		fleet_defense_navy_spirit = {
+			ledger = navy
+			visible = { has_dlc = "No Compromise, No Surrender" }
+			available = {
+			}
+			modifier = {
+				screening_efficiency = 0.10
+				fighter_sortie_efficiency = 0.10
+			}
+
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = { has_dlc = "No Compromise, No Surrender" }
+				}
+				modifier = {
+					factor = 2
+					has_doctrine = light_task_forces
+					has_doctrine = anti_aircraft_cruisers
+				}
+			}
+		}
+		rapid_concentration_navy_spirit = {
+			ledger = navy
+			visible = { has_dlc = "No Compromise, No Surrender" }
+			available = {
+			}
+			modifier = {
+				naval_coordination = 0.15
+			}
+
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = { has_dlc = "No Compromise, No Surrender" }
+				}
+				modifier = {
+					factor = 2
+					has_doctrine = battlecruiser_supremacy
+				}
+			}
+		}
+		aa_curtain_navy_spirit = {
+			ledger = navy
+			visible = { has_dlc = "No Compromise, No Surrender" }
+			available = {
+			}
+				
+			modifier = {
+				navy_anti_air_attack_factor = 0.10	
+			}
+
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = { has_dlc = "No Compromise, No Surrender" }
+				}
+				modifier = {
+					factor = 2
+					OR = { 
+					has_doctrine = anti_aircraft_cruisers
+					has_doctrine = battleship_antiair_screen
+					}
+				}
+			}
+		}
+		selective_engagement_navy_spirit = {
+			ledger = navy
+			visible = { has_dlc = "No Compromise, No Surrender" }
+			available = { 
+			}
+			modifier = {
+					navy_visibility = -0.10
+			}
+
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = { has_dlc = "No Compromise, No Surrender" }
+				}
+				modifier = {
+					factor = 2
+					has_doctrine = patrol_boats
+				}
 			}
 		}
 	}
