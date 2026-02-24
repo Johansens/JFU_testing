@@ -232,7 +232,7 @@ sub_units = {
 			movement = 0.15
 		}
 		amphibious = {
-			attack = 0.4
+			attack = 0.2
 		}
 	}
 }
