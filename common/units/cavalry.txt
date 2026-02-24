@@ -181,7 +181,6 @@ sub_units = {
 		max_organisation = 60
 		default_morale = 0.3
 		manpower = 1000
-		
 
 		#Misc Abilities
 		training_time = 90
@@ -193,7 +192,6 @@ sub_units = {
 	
 		need = {
 			infantry_equipment = 99
-			anti_air_equipment = 1
 		}
 
 		marsh = {
