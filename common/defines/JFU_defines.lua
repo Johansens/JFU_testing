@@ -72,7 +72,7 @@ NDefines.NMilitary.REINFORCEMENT_REQUEST_DAYS_FREQUENCY = 4	   -- How many days 
 NDefines.NMilitary.BATALION_CHANGED_EXPERIENCE_DROP = 0.0 
 NDefines.NMilitary.BATALION_NOT_CHANGED_EXPERIENCE_DROP = 0.0
 NDefines.NMilitary.COMBAT_MINIMUM_TIME = 2 		-- VANILLA 4
-NDefines.NMilitary.ARMY_FUEL_COST_MULT = 0.5	-- VANILLA 0.5             --fuel cost multiplier for all army related stuff
+NDefines.NMilitary.ARMY_FUEL_COST_MULT = 0.3	-- VANILLA 0.5             --fuel cost multiplier for all army related stuff
 NDefines.NMilitary.EXPERIENCE_COMBAT_FACTOR = 0.10 -- VANILLA 0.25
 --NDefines.NMilitary.UNIT_EXPERIENCE_PER_TRAINING_DAY = 0  -- VANILLA 0.0015
 NDefines.NMilitary.RIVER_CROSSING_PENALTY = -0.3                 -- small river crossing
@@ -105,7 +105,7 @@ NDefines.NResistance.NRESISTANCE_TARGET_MODIFIER_OCCUPIED_IS_EXILE_MAX = 10.0
 
 NDefines.NSupply.RAILWAY_CONVERSION_COOLDOWN = 5
 
-NDefines.NAir.FUEL_COST_MULT = 0.35 -- vanilla 0.35 fuel multiplier for all air missions
+NDefines.NAir.FUEL_COST_MULT = 0.2 -- vanilla 0.35 fuel multiplier for all air missions
 NDefines.NAir.AIR_DEPLOYMENT_DAYS = 0
 NDefines.NAir.COMBAT_DAMAGE_SCALE = 0.25 -- Higher value = more shot down planes
 NDefines.NAir.MISSION_COMMAND_POWER_COSTS = {  -- command power cost per plane to create a mission
@@ -159,6 +159,7 @@ NDefines.NNavy.NAVAL_INVASION_PREPARE_DAYS = 40								-- WAS 60 | base days nee
 NDefines.NNavy.NAVAL_SUPPLY_HUB_REDUCTION_FACTOR = 0.5	
 NDefines.NNavy.MIN_SPOTTING_PROGRESS = 1								-- Minimum spotting progress (in percent) per hourly tick
 NDefines.NNavy.LEADER_EXPERIENCE_SCALE = 0
+NDefines.NNavy.FUEL_COST_MULT = 0.05									 -- vanilla 0.1 fuel multiplier for all naval missions
 
 
 

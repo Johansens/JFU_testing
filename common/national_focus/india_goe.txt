@@ -3409,6 +3409,11 @@ focus_tree = {
                 uses = 1
                 category = support_tech
             }
+
+            set_technology = {
+                elephantry = 1
+                popup = no
+            }
         }
     }
 

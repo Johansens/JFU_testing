@@ -1379,6 +1379,7 @@ JFU_decisions = {
 	"Iraq Oil" = {
 		icon = oil
 		fire_only_once = yes
+		visible = { always = no }
 		allowed = { tag = GER }
 		available = { 
 			NOT = {
