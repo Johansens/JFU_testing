@@ -91,6 +91,9 @@ NDefines.NMilitary.LAND_COMBAT_STR_DAMAGE_MODIFIER = 0.0575	-- VANILLA 0.06
 NDefines.NMilitary.PREFERRED_TACTIC_CHARACTER_SKILL_LEVEL_REQUIRED = 4 -- VANILLA 5(pregrinded change) -- Which level a field marhal or general has to be before they can pick their preferred tactic
 NDefines.NMilitary.MIN_DIVISION_BRIGADE_HEIGHT = 5		-- VANILLA 4 -- Min height of regiments in division designer.
 NDefines.NMilitary.RELIABILTY_RECOVERY = 0.0 -- WAS 0.1 factor affecting how much equipment is returned "from the dead"
+NDefines.NMilitary.COHESION_IMMOBILE_PLANNING_SPEED_MULTIPLIER = 1	-- VANILLA 0.5-- If using the 'immobile' cohesion setting, factor ALL planning speed growth by this
+
+
 
 NDefines.NDoctrines.MIN_MASTERY_GAIN_PER_DAY = 0.45                         -- If we have any mastery gain, it will be boosted to be at least this much per day (lower cap)
 
