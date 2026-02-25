@@ -37,7 +37,7 @@ sub_units = {
 		training_time = 120		
 		weight = 0.5
 		
-		supply_consumption = 0.06
+		supply_consumption = 0.05
 
 		#Offensive Abilities
 		suppression = 2
@@ -191,7 +191,7 @@ sub_units = {
 		supply_consumption = 0.08
 	
 		need = {
-			infantry_equipment = 99
+			infantry_equipment = 150
 		}
 
 		marsh = {
@@ -200,7 +200,7 @@ sub_units = {
 		}
 		plains = {
 			attack = 0.05
-			movement = 0.15
+			movement = 0.10
 		}
 		mountain = {
 			attack = -0.1
@@ -220,7 +220,6 @@ sub_units = {
 		}
 		desert = {
 			attack = 0.1
-			defence = 0.1
 			movement = 0.1
 		}
 		snow = {
@@ -229,7 +228,7 @@ sub_units = {
 		}
 		river = {
 			attack = 0.05
-			movement = 0.15
+			movement = 0.1
 		}
 		amphibious = {
 			attack = 0.2
