@@ -153,7 +153,7 @@ infiltration_tactics = {
     # EFFECTS
     enable_tactic = tactic_infantry_assault
     #max_planning = 0.05 
-    supply_consumption_factor = -0.10
+    #supply_consumption_factor = -0.10
     command_power_gain = 0.015
     category_army = {
         breakthrough = 0.05

@@ -154,8 +154,12 @@ superior_firepower = {
         {
             #Infantry
             enable_tactic = tactic_elastic_defense
-            supply_consumption_factor = -0.1
-
+           
+            #supply_consumption_factor = -0.1
+            
+            category_support_artillery = {
+                soft_attack = 0.1
+            }
             effect = {
                 if = {
                     limit = {
@@ -223,9 +227,7 @@ superior_firepower = {
             category_artillery = {
                 default_morale = 0.1
             }
-            category_support_artillery = {
-                soft_attack = 0.1
-            }
+
 
             effect = {
                 if = {
