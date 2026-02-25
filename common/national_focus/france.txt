@@ -1115,6 +1115,22 @@ focus = {
 				transfer_state = 899
 				transfer_state = 898				
 			}
+			hidden_effect = {
+				557 = { set_compliance = 80 }
+				272 = { set_compliance = 80 }
+				780 = { set_compliance = 80 }
+				556 = { set_compliance = 80 }
+				779 = { set_compliance = 80 }
+				778 = { set_compliance = 80 }
+				777 = { set_compliance = 80 }
+				776 = { set_compliance = 80 }
+				781 = { set_compliance = 80 }
+				781 = { set_compliance = 80 }
+				775 = { set_compliance = 80 }
+				298 = { set_compliance = 80 }
+				899 = { set_compliance = 80 }
+				898 = { set_compliance = 80 }
+			}
 		}
 	}
 	focus = {
@@ -1161,6 +1177,13 @@ focus = {
 				transfer_state = 677
 				transfer_state = 799
 				transfer_state = 553
+			}
+			hidden_effect = {
+				557 = { set_compliance = 80 }
+				680 = { set_compliance = 80 }
+				677 = { set_compliance = 80 }
+				799 = { set_compliance = 80 }
+				533 = { set_compliance = 80 }
 			}
 		}
 	}
@@ -1212,6 +1235,16 @@ focus = {
 			transfer_state = 889
 			transfer_state = 888
 			}
+			hidden_effect = {
+				295 = { set_compliance = 80 }
+				538 = { set_compliance = 80 }
+				718 = { set_compliance = 80 }
+				768 = { set_compliance = 80 }
+				769 = { set_compliance = 80 }
+				890 = { set_compliance = 80 }
+				889 = { set_compliance = 80 }
+				888 = { set_compliance = 80 }
+			}
 		}
 	}
 	focus = {
@@ -1253,6 +1286,12 @@ focus = {
 				transfer_state = 706
 				transfer_state = 708
 				transfer_state = 713
+			}
+			hidden_effect = {
+				543 = { set_compliance = 80 }
+				706 = { set_compliance = 80 }
+				708 = { set_compliance = 80 }
+				713 = { set_compliance = 80 }
 			}
 		}
 	}
