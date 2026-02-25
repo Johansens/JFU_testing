@@ -995,11 +995,9 @@ faction_goal_develop_iraqi_oil = {
 
 	}
 	completed = {
-		every_state = {
-			limit = {
-				africa_oil_states = yes
-			}
-			is_controlled_by_ROOT_or_ally = yes
+		NOT = {
+			ENG = { controls_state = 291 }
+			ENG = { controls_state = 675 }
 		}
 	}
 	complete_effect = {
