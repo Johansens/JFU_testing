@@ -578,14 +578,14 @@ on_actions = {
 					complete_national_focus = NOR_ALLIANCE
 					set_country_flag = GER_has_capitulated_to_germany
 				}
-				if = {
-					limit = {
-						NOR = { is_ai = yes }
-					}
-					ENG = {
-						annex_country = { target = NOR transfer_troops = no }
-					}
-				}
+				#if = {
+				#	limit = {
+				#		NOR = { is_ai = yes }
+				#	}
+				#	ENG = {
+				#		annex_country = { target = NOR transfer_troops = no }
+				#	}
+				#}
 				
 			}
 			if = { 
