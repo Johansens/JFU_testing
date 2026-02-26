@@ -497,6 +497,7 @@ news_event = {
 	hidden = yes
 	major = yes
 	trigger = {
+		always = no
 		OR = {
 			907 = { is_controlled_by = ITA }
 			907 = { is_controlled_by = GER }
