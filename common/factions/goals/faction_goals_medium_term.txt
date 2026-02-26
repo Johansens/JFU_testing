@@ -594,7 +594,7 @@ faction_goal_secure_north_africa_allies = {
 					tag = ITA
 				}
 			}
-			remove_idea = GER_triumph_in_africa
+			remove_ideas = GER_triumph_in_africa
 		}
 	}
 	ai_will_do = {
@@ -1300,56 +1300,56 @@ faction_goal_a_military_base = {
 }
 
 # Iraqi Oil
-faction_goal_control_iraqi_oil = {
-	name = control_iraqi_oil_goal_name
-	description = control_iraqi_oil_goal_desc
-	category = medium_term
-	group = resources_to_market_icon
-	allowed = {
+#faction_goal_control_iraqi_oil = {
+#	name = control_iraqi_oil_goal_name
+#	description = control_iraqi_oil_goal_desc
+#	category = medium_term
+#	group = resources_to_market_icon
+#	allowed = {
 		
-	}
-	visible = {
-		OR = {
-			FROM = { original_tag = GER }
-			any_allied_country = {
-				original_tag = GER
-			}
-		}		
-	}
-	available = {
+#	}
+#	visible = {
+#		OR = {
+#			FROM = { original_tag = GER }
+#			any_allied_country = {
+#				original_tag = GER
+#			}
+#		}		
+#	}
+#	available = {
 
-	}
-	completed = {
-		NOT = {
-			ENG = { controls_state = 291 }
-			ENG = { controls_state = 675 }
-		}
-	}
-	complete_effect = {
-		add_faction_power_projection = 100
-		ITA = {
-			transfer_state = 680 
-			transfer_state = 677
-			transfer_state = 554
-			transfer_state = 553
-			transfer_state = 799
-		}
-		ITA = {
-			every_state = {
-				limit = {
-					africa_oil_states = yes
-				}
-				set_compliance = 80
-			}
-		}
-		291 = {
-			add_resource = {
-			    type = oil
-			    amount = 50
-			}
-		}
-	}
-}
+#	}
+#	completed = {
+#		NOT = {
+#			ENG = { controls_state = 291 }
+#			ENG = { controls_state = 675 }
+#		}
+#	}
+#	complete_effect = {
+#		add_faction_power_projection = 100
+#		ITA = {
+#			transfer_state = 680 
+#			transfer_state = 677
+#			transfer_state = 554
+#			transfer_state = 553
+#			transfer_state = 799
+#		}
+#		ITA = {
+#			every_state = {
+#				limit = {
+#					africa_oil_states = yes
+#				}
+#				set_compliance = 80
+#			}
+#		}
+#		291 = {
+#			add_resource = {
+#			    type = oil
+#			    amount = 50
+#			}
+#		}
+#	}
+#}
 
 # Malayan Riches
 faction_goal_control_malayan_riches = {
