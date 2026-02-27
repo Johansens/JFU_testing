@@ -54,7 +54,7 @@ complete_special_project = {
 
 add_breakthrough_progress = {
 	specialization = specialization_naval
-	value = 0.6
+	value = 0.9
 }
 add_breakthrough_progress = {
 	specialization = specialization_air
