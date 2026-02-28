@@ -312,69 +312,113 @@ faction_goal_rule_the_waves = {
 	category = long_term
 	group = FOCUS_FILTER_NAVY_XP
 	visible = {
-		always = no
-		FROM = {
-			OR = {
-				original_tag = ENG # Britannia always wants to Rule!
-				num_of_naval_factories > 19
-			}
-		}
+		
 	}
 	available = {
-		FROM = {
-			OR = {
-				NOT = { has_government = democratic }
-				NOT = { has_idea = MTG_naval_treaty_adherent }
-			}
+		OR = {
+		tag = ITA
+		tag = ENG
+		tag = JAP
+		tag = USA
 		}
+		
 	}
 	completed = {
-		has_war = yes
-		count_in_collection = {
-			collection = {
-				input = game:scope
-				operators = { faction_members }
-				name = FACTION
-		    }
-			unit = capital_ship
-			size > 59
+		if = {
+			limit = {tag = ITA }
+			ENG = {
+				has_navy_size = {
+					type = capital_ship
+					size < 1
+				}
+			}
 		}
-		alliance_naval_strength_ratio > 2
+		if = {
+			limit = {tag = ENG }
+			ITA = {
+				has_navy_size = {
+					type = capital_ship
+					size < 1
+				}
+			}
+		}
+		if = {
+			limit = {tag = USA}
+			JAP = {
+				has_navy_size = {
+					type = capital_ship
+					size < 1
+				}
+			}
+		}
+		if = {
+			limit = {tag = JAP }
+			USA = {
+				has_navy_size = {
+					type = capital_ship
+					size < 1
+				}
+			}
+		}
 	}
 	complete_effect = {
 		add_faction_power_projection = 300
-		custom_effect_tooltip = generic_skip_one_line_tt
-		custom_effect_tooltip = INFLUENCE_TOP_TWO
-		every_faction_member = {
-			limit = { faction_influence_rank < 3}
-			add_faction_initiative = 1
-			
-		}
-		custom_effect_tooltip = ALL_FACTION_MEMBERS
-		every_faction_member = {
-			random_character = {
-				tooltip = ONE_ADMIRAL	
-				visible_when_empty = yes
-				limit = {
-					is_navy_leader = yes
-					NOT = { has_trait = seawolf }
-					NOT = { has_trait = battleship_adherent }
+		add_faction_initiative = 1
+
+		if = {
+			limit = {tag = ITA }
+			ENG = {
+				has_navy_size = {
+					type = capital_ship
+					size < 1
 				}
-				gain_xp = 400
-				add_coordination = 1
-				add_trait = { trait = battleship_adherent }
 			}
-			add_mastery = {
-				amount = 100
-				track = capital_ships
-			}
-			add_tech_bonus = {
-				name = rule_the_waves_tech_bonus
-				bonus = 1
-				uses = 1
-				category = naval_equipment
+			add_timed_idea = {
+				idea = Rule_the_wave_reward
+				days = 180
 			}
 		}
+		if = {
+			limit = {tag = ENG }
+			ITA = {
+				has_navy_size = {
+					type = capital_ship
+					size < 1
+				}
+			}
+			add_timed_idea = {
+				idea = Rule_the_wave_reward
+				days = 180
+			}
+		}
+		if = {
+			limit = {tag = USA}
+			JAP = {
+				has_navy_size = {
+					type = capital_ship
+					size < 1
+				}
+			}
+			add_timed_idea = {
+				idea = Rule_the_wave_reward
+				days = 180
+			}
+		}
+		if = {
+			limit = {tag = JAP }
+			USA = {
+				has_navy_size = {
+					type = capital_ship
+					size < 1
+				}
+			}
+			add_timed_idea = {
+				idea = Rule_the_wave_reward
+				days = 180
+			}
+		}
+		
+
 	}
 	ai_will_do = {
 		base = 0

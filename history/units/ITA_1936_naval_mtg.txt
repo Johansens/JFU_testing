@@ -135,12 +135,12 @@ units= {
 			ship = { name = "Tiger" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ITA version_name = "Curtatone Class" } } }
 			ship = { name = "Möwe" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ITA version_name = "Curtatone Class" } } }
 			ship = { name = "Albatros" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ITA version_name = "Curtatone Class" } } }
-			ship = { name = "Seeadler" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ITA version_name = "Curtatone Class" } } }
-			ship = { name = "Greif" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ITA version_name = "Curtatone Class" } } }
-			ship = { name = "Falke" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ITA version_name = "Curtatone Class" } } }
-			ship = { name = "Kondor" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ITA version_name = "Curtatone Class" } } }
-			ship = { name = "Wolf" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ITA version_name = "Curtatone Class" } } }
-			ship = { name = "Iltis" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ITA version_name = "Curtatone Class" } } }		
+			ship = { name = "Seeadler" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ITA version_name = "Maestrale Class" } } }
+			ship = { name = "Greif" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ITA version_name = "Maestrale Class" } } }
+			ship = { name = "Falke" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ITA version_name = "Maestrale Class" } } }
+			ship = { name = "Kondor" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ITA version_name = "Maestrale Class" } } }
+			ship = { name = "Wolf" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ITA version_name = "Maestrale Class" } } }
+			ship = { name = "Iltis" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = ITA version_name = "Maestrale Class" } } }		
 			#SUB
 			ship = { name = "RSmg Balilla" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = ITA version_name = "Sirena Class" } } } 
 			ship = { name = "RSmg Antonio Sciesa" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = ITA version_name = "Sirena Class" } } } 
