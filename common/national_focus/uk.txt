@@ -639,7 +639,7 @@ focus_tree = {
 			air_experience = 50
 			IF = {
 				limit = { 
-					126 = {
+					119 = {
 						is_fully_controlled_by = ROOT
 						air_facility < 1
 						land_facility < 1
@@ -647,7 +647,7 @@ focus_tree = {
 						nuclear_facility < 1
 					}
 				}
-				126 = {
+				119 = {
 					add_building_construction = {
 						type = air_facility
 						level = 1
