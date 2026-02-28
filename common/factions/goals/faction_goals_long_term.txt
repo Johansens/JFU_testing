@@ -19,6 +19,125 @@
 #  #  # #   #    # 
 #  # #   # ### ##  
 
+faction_goal_undo_versailles = {
+	name = undo_versailles_goal_name
+	description = undo_versailles_goal_desc
+	category = long_term
+	group = FOCUS_FILTER_WAR_SUPPORT
+	visible = {
+		FROM = { original_tag = GER }
+	}
+	completed = {
+		OR = {
+			AND = {
+				original_tag = GER
+				has_army_manpower = {
+					size > 1000000
+				}
+				controls_state = 28
+				controls_state = 85
+				controls_state = 86
+				controls_state = 188
+				controls_state = 762
+				controls_state = 807
+				controls_state = 912
+			}
+			any_allied_country = {
+				original_tag = GER
+				has_army_manpower = {
+					size > 1000000
+				}
+				controls_state = 28
+				controls_state = 85
+				controls_state = 86
+				controls_state = 188
+				controls_state = 762
+				controls_state = 807
+				controls_state = 912
+			}
+		}
+		42 = { is_demilitarized_zone = no }
+		51 = { is_demilitarized_zone = no }
+		978 = { is_demilitarized_zone = no }
+	}
+	complete_effect = {
+		add_faction_power_projection = 100
+		every_faction_member = {
+			limit = {
+				original_tag = GER
+			}
+			add_faction_initiative = 1
+			swap_ideas = {
+				remove_idea = sour_loser
+				add_idea = triumphant_will
+			}
+		}
+		custom_effect_tooltip = generic_skip_one_line_tt
+		every_faction_member = { 
+			tooltip = INFLUENCE_ABOVE_30_PERCENT
+			visible_when_empty = yes
+			limit = {
+				faction_influence_ratio > 0.3
+			}
+			add_war_support = 0.05
+			add_political_power = 50
+		}
+	}
+	ai_will_do = {
+		base = 1
+		modifier = {
+			add = 9
+			is_historical_focus_on = yes
+		}
+	}
+}
+
+faction_goal_defeat_Communism = {
+	name = "Defeat Communism"
+	description = "Control of the Major Cities of the Soviet Union will ensure a dominant Position for the War"
+	group = FOCUS_FILTER_ANNEXATION
+	category = long_term
+
+	visible = {
+		OR = {
+			FROM = { original_tag = GER }
+			any_allied_country = {
+				original_tag = GER
+			}
+		}
+	}
+
+	available = {
+		OR = {
+			FROM = { original_tag = GER }
+			any_allied_country = {
+				original_tag = GER
+			}
+		}
+	}
+
+	completed = {
+		AND = {
+			195 = {  is_controlled_by_ROOT_or_ally = yes } # Leningrad
+			219 = {  is_controlled_by_ROOT_or_ally = yes } # Moscow
+			217 = {  is_controlled_by_ROOT_or_ally = yes } # Stalingrad
+		}
+	}
+
+	complete_effect = {
+		add_faction_power_projection = 500
+		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = INFLUENCE_TOP_TWO
+		every_faction_member = {
+			limit = {
+				faction_influence_rank < 3
+			}
+			add_faction_initiative = 1
+			add_political_power = 100 
+		}
+	}
+}
+
 
 faction_goal_resource_control = {
 	name = resource_control_goal_name
@@ -26,7 +145,7 @@ faction_goal_resource_control = {
 	category = long_term
 	group = resources_to_market_icon
 	visible = {
-		always = no
+		
 	}
 	available = {
 		
@@ -39,7 +158,7 @@ faction_goal_resource_control = {
 					name = FACTION
 			}
 			resource = oil
-			amount > 499
+			amount > 299
 			extracted = yes # (optional, default: no) checks extracted amount instead of country balance
 		}
 		has_resources_in_collection = {
@@ -59,7 +178,7 @@ faction_goal_resource_control = {
 					name = FACTION
 			}
 			resource = rubber
-			amount > 199
+			amount > 249
 			extracted = yes # (optional, default: no) checks extracted amount instead of country balance
 		}
 		has_resources_in_collection = {
@@ -69,7 +188,7 @@ faction_goal_resource_control = {
 					name = FACTION
 			}
 			resource = aluminium
-			amount > 199
+			amount > 499
 			extracted = yes # (optional, default: no) checks extracted amount instead of country balance
 		}
 		has_resources_in_collection = {
@@ -79,7 +198,7 @@ faction_goal_resource_control = {
 					name = FACTION
 			}
 			resource = chromium
-			amount > 199
+			amount > 299
 			extracted = yes # (optional, default: no) checks extracted amount instead of country balance
 		}
 		has_resources_in_collection = {
@@ -89,7 +208,7 @@ faction_goal_resource_control = {
 					name = FACTION
 			}
 			resource = tungsten
-			amount > 199
+			amount > 299
 			extracted = yes # (optional, default: no) checks extracted amount instead of country balance
 		}
 	
@@ -112,6 +231,97 @@ faction_goal_resource_control = {
 	}
 	ai_will_do = {
 		base = 1
+	}
+}
+
+faction_goal_undoing_brest_litowsk = {
+	name = undoing_brest_litowsk_goal_name
+	description = undoing_brest_litowsk_goal_desc
+	category = long_term
+	group = FOCUS_FILTER_ANNEXATION
+	allowed = {
+		
+	}
+	visible = {
+		FROM = {
+			original_tag = SOV
+		}
+	}
+	completed = {
+		count_triggers = {
+			amount = 2
+			91 = { is_controlled_by = SOV }
+			808 = { is_controlled_by = SOV }
+			146 = { is_controlled_by = SOV }
+		}
+		
+	}
+	complete_effect = {
+		add_faction_power_projection = 500
+		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = THE_FACTION_LEADER
+		add_faction_initiative = 1
+		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = ALL_FACTION_MEMBERS
+		every_state = {
+			limit = {
+				is_controlled_by = SOV
+				NOT = {
+					is_core_of = SOV
+				}
+			}
+			add_compliance = 10
+		}
+	}
+	ai_will_do = {
+		base = 1
+		modifier = {
+			add = 9 # SOV should always prio this
+			original_tag = SOV
+		}
+	}
+}  
+
+faction_goal_secure_north_africa = {
+	name = secure_north_africa_goal_name
+	description = secure_north_africa_goal_desc
+	group = FOCUS_FILTER_ANNEXATION
+	category = long_term
+	visible = {
+		OR = {
+			FROM = { original_tag = GER }
+			any_allied_country = {
+				original_tag = GER 
+			}
+		}
+	}
+	available = {
+	}
+	completed = {
+		AND = {
+			907 = { state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes } 
+		}
+	}
+	complete_effect = {
+		add_faction_power_projection = 500
+		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = INFLUENCE_TOP_TWO
+		every_faction_member = {
+			limit = {
+				OR = {
+					tag = GER
+					tag = ITA
+				}
+			}
+			add_ideas = GER_triumph_in_africa
+		}
+	}
+	ai_will_do = {
+		base = 0
+		modifier = {
+			add = 10
+			is_historical_focus_on = yes
+		}
 	}
 }
 
@@ -139,45 +349,18 @@ faction_goal_contain_japanese_expansion_asia = {
 		
 	}
 	visible = {
+
 		always = no
-		FROM = {
-			original_tag = USA
-			has_country_flag = USA_unlock_contain_japanese_goal
-		}
-		date > 1940.1.1
-		collection_size = {
-			input = {
-				input = collection:country_and_all_subjects_controlled_non_core_states
-				name = COLLECTION_OCCUPIED_STATES_BY_JAPAN_OR_FACTION_MEMBERS
+		OR = {
+			FROM = { original_tag = USA}
+			any_allied_country = {
+				original_tag = USA
 			}
-			value > 29
 		}
 	}
 	completed = {
-		JAP = {
-			IF = {
-				limit = {
-					is_in_faction = no
-				}
-				collection_size = {
-					input = {
-						input = collection:country_and_all_subjects_controlled_non_core_states
-						name = COLLECTION_OCCUPIED_STATES_BY_JAPAN_OR_FACTION_MEMBERS
-					}
-					value < 20
-				}
-			}
-			ELSE = {
-				collection_size = {
-					input = {
-						input = collection:faction_controlled_non_core_states
-						name = COLLECTION_OCCUPIED_STATES_BY_JAPAN_OR_FACTION_MEMBERS
-					}
-					value < 20
-				}
-			}
-		}		
-	}
+
+	}		
 	complete_effect = {
 		add_faction_power_projection = 100
 		every_collection_element = {
@@ -456,6 +639,9 @@ faction_goal_strategic_bombing_campaign = {
 	description = strategic_bombing_campaign_goal_desc
 	category = long_term
 	group = FOCUS_FILTER_AIR_XP
+	visible = {
+		always = no
+	}
 	available = {
 		always = no
 		FROM = {
@@ -555,7 +741,7 @@ faction_goal_liberate_territory = {
 	category = long_term
 	group = FOCUS_FILTER_ANNEXATION
 	visible = {
-		always = no
+		
 		collection_size = {
 			input = {
 				input = collection:faction_owned_core_states
@@ -733,7 +919,6 @@ faction_goal_industrial_domination = {
 	category = long_term
 	group = FOCUS_FILTER_INDUSTRY
 	visible = {
-		always = no
 		count_in_collection = {
 			collection = {
 				input = game:scope
