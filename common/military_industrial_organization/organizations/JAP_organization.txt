@@ -1547,7 +1547,11 @@ JAP_light_aircraft_organization = {
 		
 		position = { x=1 y=1 }
 		relative_position_id = generic_mio_trait_fuselage_ordinance_rack
-	
+
+		visible = {
+			always = no
+		}
+
 		available = {
 			FROM = {
 				has_completed_focus = JAP_sea_sturdy_aircraft
@@ -1569,7 +1573,11 @@ JAP_light_aircraft_organization = {
 		
 		position = { x=1 y=2 }
 		relative_position_id = generic_mio_trait_fuselage_ordinance_rack
-	
+
+		visible = {
+			always = no
+		}
+			
 		available = {
 			FROM = {
 				has_completed_focus = JAP_sea_long_operational_range
