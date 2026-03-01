@@ -1,7 +1,7 @@
 armored_spearhead = {
     track = armor
     name = SUBDOCTRINE_ARMORED_SPEARHEAD
-    description = SUBDOCTRINE_ARMORED_SPEARHEAD_DESC
+    description = armored_spearhead_tt
     icon = GFX_doctrine_armored_spearhead_medium
 
     xp_cost = 100
@@ -148,7 +148,7 @@ armored_spearhead_no_lar = {
 armored_infantry_support = {
     track = armor
     name = SUBDOCTRINE_ARMORED_INFANTRY_SUPPORT
-    description = SUBDOCTRINE_ARMORED_INFANTRY_SUPPORT_DESC
+    description = armored_infantry_support_tt
     icon = GFX_doctrine_armored_infantry_support_medium
 
     xp_cost = 100
@@ -251,7 +251,7 @@ armored_infantry_support = {
 streamlined_deployment = {
     track = armor
     name = SUBDOCTRINE_STREAMLINED_DEPLOYMENT
-    description = SUBDOCTRINE_STREAMLINED_DEPLOYMENT_DESC
+    description = streamlined_deployment_tt
     icon = GFX_doctrine_streamlined_deployment_medium
 
     xp_cost = 100
@@ -330,7 +330,7 @@ streamlined_deployment = {
 tank_destroyer_force = {
      track = armor
     name = SUBDOCTRINE_TANK_DESTROYER_FORCE
-    description = SUBDOCTRINE_TANK_DESTROYER_FORCE_DESC
+    description = tank_destroyer_force_tt
     icon = GFX_doctrine_tank_destroyer_force_medium
 
     xp_cost = 100
@@ -386,7 +386,7 @@ tank_destroyer_force = {
 mobile_defense = {
     track = armor
     name = SUBDOCTRINE_MOBILE_DEFENSE
-    description = SUBDOCTRINE_MOBILE_DEFENSE_DESC
+    description = mobile_defense_tt
     icon = GFX_doctrine_mobile_defense_medium
 
     xp_cost = 100

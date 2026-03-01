@@ -1858,7 +1858,11 @@
  sp_amphibious_drive:0 "Amphibious Drive"
  sp_amphibious_drive_desc:0 "A set of floatation devices and a small screw allow this tank to quickly be rigged to traverse water, either from ship to shore or across a river."
 
- 
+ armored_spearhead_tt:0 "Allrounder Tanks.\nHigh Organization & Breakthrough, Balanced Stats.\n§RGood for Germany and other offensive tank nations.§!"
+ armored_infantry_support_tt:0 "Expensive Tanks.\nLow Organization Organization & Breakthrough, Extremly High Stats.\n§RNot Good if you expect lots of losses. Really good when used in good conditions.§!"
+ streamlined_deployment_tt:0 "Cheap Tanks.\nHigh Organization & Breakthrough, Weak Stats.\n§RGood for Soviet and other defensive tank nations.§!"
+ tank_destroyer_force_tt:0 "Tank Destroyer Tanks.\nMedium Organization & Breakthrough, High Hard Attack on Tank Destroyers.\n§RGood for Soviet and other defensive tank nations if you dont run into lots of enemy infantry.§!"
+ mobile_defense_tt:0 "Light Tanks.\nGood Stats for Light Tank Recon Support.\n§RBest for every infantry nation.§!"
 
  #Herrscher England #
  
