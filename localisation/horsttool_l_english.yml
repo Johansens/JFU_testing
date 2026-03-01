@@ -1840,6 +1840,14 @@
  Juggle1:0 "Juggle"
  Juggle1_desc:0 "Juggle Juggle"
  category_recon_tank_NEED:0 "£unit_light_tank_recon_icon_small §YArmored Recon Company§!:\n  §G-2 Light Tank Chassis Requirement§!"
+ plus_5_main_tanks:0 "£unit_category_tanks_icon_small §YMedium Armor§!:\n  §R+5 Medium Armor Requirement§!"
+ minus_5_main_tanks:0 "£unit_category_tanks_icon_small §YMedium Armor§!:\n  §G-5 Medium Armor Requirement§!"
+
+ plus_5_spg_tanks:0 "£unit_medium_sp_artillery_brigade_icon_small §YMedium Armor Artillery§!:\n  §R+5 Medium Armor Artillery Requirement§!"
+ minus_5_spg_tanks:0 "£unit_medium_sp_artillery_brigade_icon_small §YMedium Armor Artillery§!:\n  §G-5 Medium Armor Artillery Requirement§!"
+
+ plus_5_td_tanks:0 "£unit_medium_tank_destroyer_brigade_icon_small §YMedium Armor Tank Destoyer§!:\n  §R+5 Medium Armor Tank Destroyer Requirement§!"
+ minus_5_td_tanks:0 "£unit_medium_tank_destroyer_brigade_icon_small §YMedium Armor Tank Destoyer§!:\n  §G-5 Medium Armor Tank Destroyer Requirement§!"
 
  ITA_modify_navy_modifier_tt: "Modify §Y$ITA_regia_marina_dynamic_modifier$§! by:"
  MODIFIER_NAVAL_STRIKE_AGILITY_FACTOR_tt: " $MODIFIER_NAVAL_STRIKE_AGILITY_FACTOR$: $RIGHT|+=%1$"

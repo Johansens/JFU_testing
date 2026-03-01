@@ -43,5 +43,11 @@ sub_unit_categories = {
 	category_carrier_nav_bomber
 	category_maritime_patrol_bomber
 	category_recon_tank_NEED
+	plus_5_main_tanks
+	plus_5_td_tanks
+	plus_5_spg_tanks
+	minus_5_main_tanks
+	minus_5_td_tanks
+	minus_5_spg_tanks
 }
  

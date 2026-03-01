@@ -176,7 +176,37 @@ armored_infantry_support = {
 
     # EFFECTS
     enable_tactic = tactic_blitz
+    plus_5_main_tanks = {
+        need = {
+            medium_tank_chassis = 5
+        }
+    }
+    plus_5_td_tanks = {
+        need = {
+            medium_tank_destroyer_chassis = 5
+        }
+    }
+    plus_5_spg_tanks = {
+        need = {
+            medium_tank_artillery_chassis = 5
+        }
+    }
 
+    # minus_5_main_tanks = {
+    #     need = {
+    #         medium_tank_chassis = -5
+    #     }
+    # }
+    # minus_5_td_tanks = {
+    #     need = {
+    #         medium_tank_destroyer_chassis = -5
+    #     }
+    # }
+    # minus_5_spg_tanks = {
+    #     need = {
+    #         medium_tank_artillery_chassis = -5
+    #     }
+    # }
     #TODO jack look if you can make a script effect for production bonuses
 
     rewards = {
@@ -185,8 +215,7 @@ armored_infantry_support = {
             category_all_armor = {
                 soft_attack = 0.1
                 hard_attack = 0.1
-                build_cost_ic = 0.05
-                reliability = -0.05
+                reliability_factor = -0.01
             }
         }
         armored_cohorts = {
@@ -244,12 +273,26 @@ streamlined_deployment = {
         }
 
     }
+    minus_5_main_tanks = {
+        need = {
+            medium_tank_chassis = -5
+        }
+    }
+    minus_5_td_tanks = {
+        need = {
+            medium_tank_destroyer_chassis = -5
+        }
+    }
+    minus_5_spg_tanks = {
+        need = {
+            medium_tank_artillery_chassis = -5
+        }
+    }
 
     rewards = {
         flexible_armored_battalions = {
             category_all_armor = {
-                build_cost_ic = -0.05
-                reliability = 0.1
+                reliability_factor = 0.01
                 
             }
         }
@@ -262,7 +305,7 @@ streamlined_deployment = {
         tank_desant = {
             category_all_armor = {
                 max_organisation = 10
-                max_strength = 0.05
+                max_strength = 5
             }
         }
         full_front_deployment = {
@@ -314,7 +357,7 @@ tank_destroyer_force = {
             category_tank_destroyers = {
                 hard_attack = 0.2
                 soft_attack = 0.1
-                max_strength = 0.05
+                max_strength = 5
                 max_organisation = 10
             }
         }
@@ -381,7 +424,6 @@ mobile_defense = {
             
             light_tank_recon = {
                 breakthrough = 0.2
-                reliability = 0.10
             }
         }
         attached_support = {
