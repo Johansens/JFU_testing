@@ -311,7 +311,7 @@ streamlined_deployment = {
         full_front_deployment = {
             category_all_armor = {
                 hard_attack = 0.05
-                initiative = 0.1
+                initiative = 0.02
             }
 
         }
