@@ -1839,6 +1839,7 @@
 
  Juggle1:0 "Juggle"
  Juggle1_desc:0 "Juggle Juggle"
+ category_recon_tank_NEED:0 "£unit_light_tank_recon_icon_small §YArmored Recon Company§!:\n  §G-2 Light Tank Chassis Requirement§!"
 
  ITA_modify_navy_modifier_tt: "Modify §Y$ITA_regia_marina_dynamic_modifier$§! by:"
  MODIFIER_NAVAL_STRIKE_AGILITY_FACTOR_tt: " $MODIFIER_NAVAL_STRIKE_AGILITY_FACTOR$: $RIGHT|+=%1$"
@@ -1849,8 +1850,10 @@
  sp_amphibious_drive:0 "Amphibious Drive"
  sp_amphibious_drive_desc:0 "A set of floatation devices and a small screw allow this tank to quickly be rigged to traverse water, either from ship to shore or across a river."
 
- #Herrscher England #
+ 
 
+ #Herrscher England #
+ 
 
 
 

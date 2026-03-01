@@ -339,70 +339,71 @@ tank_destroyer_force = {
     }
 }
 
-################################## Hier kann man vllt so light tank boni für inf minor geben oder so ka
-# mobile_defense = {
-#     track = armor
-#     name = SUBDOCTRINE_MOBILE_DEFENSE
-#     description = SUBDOCTRINE_MOBILE_DEFENSE_DESC
-#     icon = GFX_doctrine_mobile_defense_medium
+################################## Hier kann man vllt so light tank boni für inf minor geben oder so ka, damit die hier ne doctrine klicken können die gut is
+mobile_defense = {
+    track = armor
+    name = SUBDOCTRINE_MOBILE_DEFENSE
+    description = SUBDOCTRINE_MOBILE_DEFENSE_DESC
+    icon = GFX_doctrine_mobile_defense_medium
 
-#     xp_cost = 100
-#     xp_type = army
+    xp_cost = 100
+    xp_type = army
 
-#     available = {
-#         always = yes
-#     }
+    available = {
+        always = yes
+    }
 
-#         ai_will_do = {
+        ai_will_do = {
 
-#         base = 1
-#         modifier = {
-#             factor = 25
-#             original_tag = USA
-#         }
+        base = 1
+        modifier = {
+            factor = 25
+            original_tag = USA
+        }
 
-#         modifier = {
-#             factor = 0.5
-#             is_major = no
-#         }
+        modifier = {
+            factor = 0.5
+            is_major = no
+        }
 
-#     }
+    }
+
+    category_recon_tank_NEED = {
+        need = {
+            light_tank_chassis = -2
+        }
+    }
     
-#     rewards = {
+    rewards = {
 
-#         mechanized_offensive = {
-#             category_all_armor = {
-#                 defense = 0.1
-#             }
-#         }
-#         advance_under_fire = {
-#             category_tank_destroyers = {
-#                 hard_attack = 0.2
-#                 soft_attack = 0.1
-#                 max_strength = 0.05
-#                 max_organisation = 10
-#             }
-#         }
-#         attached_support = {
-#             category_all_armor = {
-#                 max_organisation = 10
-#             }
+       
+        advance_under_fire = {
+            
+            light_tank_recon = {
+                breakthrough = 0.2
+                reliability = 0.10
+            }
+        }
+        attached_support = {
+            light_tank_recon = {
+                max_organisation = 20
+            }
+        }
+        combined_anti_armor = {
+           light_tank_recon = {
+                hard_attack = 0.05
+            }
 
-#         }
-#         combined_anti_armor = {
-#            category_all_armor = {
-#                 default_morale = 0.2
-#             }
-
-#         }
-#         tank_on_tank_engagement = {
-#             category_all_armor = {
-#                 breakthrough = 0.1
-#                 maximum_speed = 0.15
-#             }
-#         }    
-#     }
-#}
+        }
+        tank_on_tank_engagement = {
+            light_tank_recon = {
+                soft_attack = 0.05
+                
+            }
+            
+        }    
+    }
+}
 
 
 #################### Die würd ich einfach deleten, 5 reichen ig???
