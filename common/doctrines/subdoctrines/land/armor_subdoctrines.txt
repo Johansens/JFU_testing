@@ -284,6 +284,61 @@ streamlined_deployment = {
 
 }
 
+tank_destroyer_force = {
+     track = armor
+    name = SUBDOCTRINE_TANK_DESTROYER_FORCE
+    description = SUBDOCTRINE_TANK_DESTROYER_FORCE_DESC
+    icon = GFX_doctrine_tank_destroyer_force_medium
+
+    xp_cost = 100
+    xp_type = army
+
+    visible = {
+        has_dlc = "No Compromise, No Surrender"
+    }
+
+    ai_will_do = {
+
+        base = 0
+
+    }  
+
+    rewards = {
+
+        mechanized_offensive = {
+            category_all_armor = {
+                defense = 0.1
+            }
+        }
+        advance_under_fire = {
+            category_tank_destroyers = {
+                hard_attack = 0.2
+                soft_attack = 0.1
+                max_strength = 0.05
+                max_organisation = 10
+            }
+        }
+        attached_support = {
+            category_all_armor = {
+                max_organisation = 10
+            }
+
+        }
+        combined_anti_armor = {
+           category_all_armor = {
+                default_morale = 0.2
+            }
+
+        }
+        tank_on_tank_engagement = {
+            category_all_armor = {
+                breakthrough = 0.1
+                maximum_speed = 0.15
+            }
+        } 
+    }
+}
+
 mobile_defense = {
     track = armor
     name = SUBDOCTRINE_MOBILE_DEFENSE
@@ -311,67 +366,44 @@ mobile_defense = {
         }
 
     }
-
-    armored_engineer = {
-        battalion_mult = {
-            category = category_all_armor
-            entrenchment = 0.02
-        }
-    }
-    category_all_armor = {
-        defense = 0.1
-    }
-
+    
     rewards = {
 
         mechanized_offensive = {
-            mechanized = {
-                #defense = 0.1
-                soft_attack = 0.1
+            category_all_armor = {
+                defense = 0.1
             }
         }
         advance_under_fire = {
-            light_armor = {
-                #breakthrough = 0.1
-                ap_attack = 0.05
-                default_morale = 0.2
-            }
-            medium_armor = {
-                #breakthrough = 0.1
-                ap_attack = 0.05
-                default_morale = 0.2
+            category_tank_destroyers = {
+                hard_attack = 0.2
+                soft_attack = 0.1
+                max_strength = 0.05
+                max_organisation = 10
             }
         }
         attached_support = {
-            assault_engineer = {
-                max_organisation = 10
-            }
-            armored_engineer = {
-                max_organisation = 10
-            }
-            armored_signal = {
+            category_all_armor = {
                 max_organisation = 10
             }
 
         }
         combined_anti_armor = {
-            anti_tank = {
-                battalion_mult = {
-                    category = category_all_armor
-                    hard_attack = 0.05
-                    ap_attack = 0.05
-                }
+           category_all_armor = {
+                default_morale = 0.2
             }
 
         }
         tank_on_tank_engagement = {
             category_all_armor = {
-                hard_attack = 0.1
-                soft_attack = 0.1
+                breakthrough = 0.1
+                maximum_speed = 0.15
             }
         }    
     }
 }
+
+
 
 armored_cavalry = {
     track = armor
@@ -590,74 +622,4 @@ armored_cavalry_no_lar = {
     }
 }
 
-tank_destroyer_force = {
-     track = armor
-    name = SUBDOCTRINE_TANK_DESTROYER_FORCE
-    description = SUBDOCTRINE_TANK_DESTROYER_FORCE_DESC
-    icon = GFX_doctrine_tank_destroyer_force_medium
 
-    xp_cost = 100
-    xp_type = army
-
-    visible = {
-        has_dlc = "No Compromise, No Surrender"
-    }
-
-    ai_will_do = {
-
-        base = 0
-
-    }  
-
-    category_all_armor = {
-        defense = 0.1
-        hard_attack = 0.1
-        ap_attack = 0.1
-    }
-
-    rewards = {
-
-        mobile_anti_tank = {
-            mot_anti_tank_brigade = {
-                max_organisation = 10
-                hard_attack = 0.1
-                ap_attack = 0.1
-            }
-
-        }
-        committed_operational_units = {
-            assault_engineer = {
-                battalion_mult = {
-                    category = category_tank_destroyers
-                    reliability = 0.02
-                    soft_attack = 0.05
-                    hard_attack = 0.1
-                }
-            }
-        }
-        redeployment_priority = {
-            category_tank_destroyers = {
-                supply_consumption = -0.02
-                default_morale = 0.2
-            }
-        }
-
-        independent_counterattacks = {
-            category_tank_destroyers = {
-                max_organisation = 6
-                initiative = 0.02
-            }
-        }
-
-        selfsufficient_battalion = {
-            armored_signal = {
-                battalion_mult = {
-                    category = category_tank_destroyers
-                    hard_attack = 0.1
-                    ap_attack = 0.2
-
-                }
-            }
-        }
-    }
-}
