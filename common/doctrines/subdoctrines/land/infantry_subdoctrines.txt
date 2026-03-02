@@ -357,9 +357,9 @@ mounted_infantry = {
     available = {
         always = yes
     }
-    visible = {
-        has_dlc = "No Compromise, No Surrender"
-    }
+    # visible = {
+    #     has_dlc = "No Compromise, No Surrender"
+    # }
 
     ai_will_do = { 
         base = 1
@@ -445,11 +445,11 @@ commandos = {
     xp_type = army
 
     available = {
-       
+        always = yes
     }
-    visible = {
-        has_dlc = "No Compromise, No Surrender"
-    }
+    # visible = {
+    #     has_dlc = "No Compromise, No Surrender"
+    # }
 
 
     ai_will_do = { base = 0 }
@@ -555,11 +555,11 @@ irregulars = {
     xp_type = army
 
     available = {
-        
+        always = yes
     }
-    visible = {
-        has_dlc = "No Compromise, No Surrender"
-    }
+    # visible = {
+    #     has_dlc = "No Compromise, No Surrender"
+    # }
 
 
     ai_will_do = { 
@@ -642,9 +642,9 @@ peoples_war = {
     available = {
         has_government = communism
     }
-    visible = {
-        has_dlc = "No Compromise, No Surrender"
-    }
+    # visible = {
+    #     has_dlc = "No Compromise, No Surrender"
+    # }
     ai_will_do = {
 
         base = 1

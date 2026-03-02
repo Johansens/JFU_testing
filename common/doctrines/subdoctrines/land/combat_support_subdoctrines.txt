@@ -148,11 +148,11 @@ flying_batteries = {
     xp_type = army
 
     available = {
-    
+        always = yes
     }
-    visible = {
-        has_dlc = "No Compromise, No Surrender"
-    }
+    # visible = {
+    #     has_dlc = "No Compromise, No Surrender"
+    # }
 
     
     ai_will_do = {
@@ -229,9 +229,9 @@ mobile_recon_and_assault = {
     available = {
         always = yes
     }
-    visible = {
-        has_dlc = "La Resistance"
-    }
+    # visible = {
+    #     has_dlc = "La Resistance"
+    # }
     
     ai_will_do = {
 
@@ -313,97 +313,97 @@ mobile_recon_and_assault = {
     }
 }
 
-mobile_recon_and_assault_no_lar = {
-    track = combat_support
-    name = SUBDOCTRINE_MOBILE_RECON_AND_ASSAULT
-    description = SUBDOCTRINE_MOBILE_RECON_AND_ASSAULT_DESC
-    icon = GFX_doctrine_mobile_recon_assault_medium
+# mobile_recon_and_assault_no_lar = {
+#     track = combat_support
+#     name = SUBDOCTRINE_MOBILE_RECON_AND_ASSAULT
+#     description = SUBDOCTRINE_MOBILE_RECON_AND_ASSAULT_DESC
+#     icon = GFX_doctrine_mobile_recon_assault_medium
 
-    xp_cost = 100
-    xp_type = army
+#     xp_cost = 100
+#     xp_type = army
 
-    available = {
-        always = yes
-    }
-    visible = {
-        NOT = {
-            has_dlc = "La Resistance"
-        }
-    }
+#     available = {
+#         always = yes
+#     }
+#     # visible = {
+#     #     NOT = {
+#     #         has_dlc = "La Resistance"
+#     #     }
+#     # }
 
     
-    ai_will_do = {
+#     ai_will_do = {
 
-        base = 1
-        modifier = {
-            factor = 75
-            original_tag = GER
-        }
-        modifier = {
-            factor = 75
-            original_tag = USA
-        }
-        modifier = {
-            factor = 0
-            is_major = no
-        }
-    }
+#         base = 1
+#         modifier = {
+#             factor = 75
+#             original_tag = GER
+#         }
+#         modifier = {
+#             factor = 75
+#             original_tag = USA
+#         }
+#         modifier = {
+#             factor = 0
+#             is_major = no
+#         }
+#     }
     
 
-    light_armor = {
-        max_organisation = 5
-    }
+#     light_armor = {
+#         max_organisation = 5
+#     }
 
-    rewards = {
+#     rewards = {
 
-        motorization_support = {
-            category_mobile_and_mobile_combat_sup = {
-                maximum_speed = 0.1
-                default_morale = 0.2
-            }
+#         motorization_support = {
+#             category_mobile_and_mobile_combat_sup = {
+#                 maximum_speed = 0.1
+#                 default_morale = 0.2
+#             }
 
-        }
-        long_range_reconnaissance = {
-            category_recon = {
-                maximum_speed = 0.15
-            }
-        }
-        mobile_operational_deployments = {
-            light_tank_recon = {
-                battalion_mult = {
-                    category = category_all_armor
-                    breakthrough = 0.1
-                }
-            }
-            mot_artillery_brigade = {
-                soft_attack = 0.05
-            }
+#         }
+#         long_range_reconnaissance = {
+#             category_recon = {
+#                 maximum_speed = 0.15
+#             }
+#         }
+#         mobile_operational_deployments = {
+#             light_tank_recon = {
+#                 battalion_mult = {
+#                     category = category_all_armor
+#                     breakthrough = 0.1
+#                 }
+#             }
+#             mot_artillery_brigade = {
+#                 soft_attack = 0.05
+#             }
 
-        }
-        self_propelled_support_elements = {
-            #category_self_propelled_artillery = {
-            #    soft_attack = 0.10
-            #}
-            #category_self_propelled_anti_air= {
-            #    air_attack = 0.15
-            #    soft_attack = 0.05
-            #}
-            #category_tank_destroyers = {
-            #    hard_attack = 0.05
-            #    ap_attack = 0.05
-            #}
-        }
-        deep_reconnaissance_focus = {
-            category_recon = {
-                maximum_speed = 0.1
-            }
-            light_tank_recon = {
-                recon = 0.2
-                breakthrough = 0.1
-            }
-        }
-    }
-}
+#         }
+#         self_propelled_support_elements = {
+#             #category_self_propelled_artillery = {
+#             #    soft_attack = 0.10
+#             #}
+#             #category_self_propelled_anti_air= {
+#             #    air_attack = 0.15
+#             #    soft_attack = 0.05
+#             #}
+#             #category_tank_destroyers = {
+#             #    hard_attack = 0.05
+#             #    ap_attack = 0.05
+#             #}
+#         }
+#         deep_reconnaissance_focus = {
+#             category_recon = {
+#                 maximum_speed = 0.1
+#             }
+#             light_tank_recon = {
+#                 recon = 0.2
+#                 breakthrough = 0.1
+#             }
+#         }
+#     }
+# }
 
 self_propelled_support = {
 
@@ -416,12 +416,12 @@ self_propelled_support = {
     xp_type = army
 
     available = {
-       
+        always = yes
     }
-    visible = {
-        has_dlc = "No Compromise, No Surrender"
-        always = no
-    }
+    # visible = {
+    #     has_dlc = "No Compromise, No Surrender"
+    #     always = no
+    # }
 
 
     ai_will_do = { base = 0 }
@@ -529,10 +529,11 @@ siege_artillery = {
     xp_type = army
 
     available = {
+        always = yes
     }
-    visible = {
-        has_dlc = "Gotterdammerung"
-    }
+    # visible = {
+    #     has_dlc = "Gotterdammerung"
+    # }
 
     ai_will_do = { base = 0 }
 
