@@ -1864,6 +1864,13 @@
  tank_destroyer_force_tt:0 "Tank Destroyer Tanks.\nMedium Organization & Breakthrough, High Hard Attack on Tank Destroyers.\n§RGood for Soviet and other defensive tank nations if you dont run into lots of enemy infantry.§!"
  mobile_defense_tt:0 "Light Tanks.\nGood Stats for Light Tank Recon Support.\n§RBest for every infantry nation.§!"
 
+ mission_type_tactics_tt:0 "Offensive Infantry.\nGood offensive and defensive stats for Infantry & Special Forces.\n§RGood option for every offensive infantry nation.§!"
+ defensive_tactics_tt:0 "Defensive Infantry.\nGood defensive Stats for Infantry. Ideal for static defensive lines.\n§RGood option for defensive infantry nations.§!"
+ grand_assault_tt:0 "Invasion Infantry.\nGood Stats for everything that supports Invasions.\n§RGood option for nations that have to invade a lot.§!"
+ deep_battle_tt:0 "Tank & Infantry mix.\nStrong defensive stats for both infantry and tanks, while maintaining solid offensive capabilities for tanks.\n§RGood option for Soviet and other Nations that mix infantry with tanks.§!"
+ guerilla_war_tt:0 "Massmob Infantry.\nGood defensive Stats for Infantry. Excellent reinforce rate & organisation.\n§RGood option for defensive infantry nations that fight on heavily moving fronts.§!"
+ rapid_domination_tt:0 "Offensive Tanks.\nHigh attack and other offensive stats.\n§RGood option for every tank nation.§!"
+
  #Herrscher England #
  
 
