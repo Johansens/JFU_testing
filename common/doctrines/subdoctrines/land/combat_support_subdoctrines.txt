@@ -405,119 +405,119 @@ mobile_recon_and_assault = {
 #     }
 # }
 
-self_propelled_support = {
+# self_propelled_support = {
 
-    track = combat_support
-    name = SUBDOCTRINE_SELF_PROPELLED_SUPPORT
-    description = SUBDOCTRINE_SELF_PROPELLED_SUPPORT_DESC
-    icon = GFX_doctrine_self_propelled_support_medium
+#     track = combat_support
+#     name = SUBDOCTRINE_SELF_PROPELLED_SUPPORT
+#     description = SUBDOCTRINE_SELF_PROPELLED_SUPPORT_DESC
+#     icon = GFX_doctrine_self_propelled_support_medium
 
-    xp_cost = 100
-    xp_type = army
+#     xp_cost = 100
+#     xp_type = army
 
-    available = {
-        always = yes
-    }
-    # visible = {
-    #     has_dlc = "No Compromise, No Surrender"
-    #     always = no
-    # }
-
-
-    ai_will_do = { base = 0 }
+#     available = {
+#         always = yes
+#     }
+#     # visible = {
+#     #     has_dlc = "No Compromise, No Surrender"
+#     #     always = no
+#     # }
 
 
-    category_self_propelled_artillery = {
-        soft_attack = 0.05
-    }
-    category_self_propelled_anti_air= {
-        air_attack = 0.05
-    }
-    #category_tank_destroyers = {
-    #    hard_attack = 0.05
-    #}
+#     ai_will_do = { base = 0 }
 
 
-    rewards = {
+#     category_self_propelled_artillery = {
+#         soft_attack = 0.05
+#     }
+#     category_self_propelled_anti_air= {
+#         air_attack = 0.05
+#     }
+#     #category_tank_destroyers = {
+#     #    hard_attack = 0.05
+#     #}
 
-        mobile_battery_management_platoons = {
-            category_self_propelled_artillery = {
-                max_organisation = 5
-            }
-            category_self_propelled_anti_air= {
-                max_organisation = 5
-            }
-            #category_tank_destroyers = {
-            #    max_organisation = 5
-            #}
-        }
-        screening_attacks = {
+
+#     rewards = {
+
+#         mobile_battery_management_platoons = {
+#             category_self_propelled_artillery = {
+#                 max_organisation = 5
+#             }
+#             category_self_propelled_anti_air= {
+#                 max_organisation = 5
+#             }
+#             #category_tank_destroyers = {
+#             #    max_organisation = 5
+#             #}
+#         }
+#         screening_attacks = {
             
-            recon = {
-                battalion_mult = {
-                    category = category_self_propelled_artillery
-                    soft_attack = 0.1
-                    default_morale = 0.1
-                }
-            }
-            mot_recon = {
-                battalion_mult = {
-                    category = category_self_propelled_artillery
-                    soft_attack = 0.1
-                    default_morale = 0.1
-                }
-            }
-            light_tank_recon = {
-                battalion_mult = {
-                    category = category_self_propelled_artillery
-                    soft_attack = 0.1
-                    default_morale = 0.1
-                }
-            }
-        }
-        all_terrain_mobility = {
-            category_self_propelled_artillery = {
-                maximum_speed = 0.2
-            }
-            category_self_propelled_anti_air = {
-                maximum_speed = 0.2
-            }
-            #category_tank_destroyers = {
-            #    maximum_speed = 0.2
-            #}
-        }
-        multirole_support_vehicles = {
-            category_self_propelled_artillery = {
-                hard_attack = 0.05
-            }
-            category_self_propelled_anti_air = {
-                soft_attack = 0.1
-                hard_attack = 0.05
-            }
-            #category_tank_destroyers = {
-            #    soft_attack = 0.05
-            #}
-        }
-        shoot_and_scoot = {
-            category_self_propelled_artillery = {
-                max_organisation = 5
-                default_morale = 0.2
-            }
-            category_self_propelled_anti_air = {
-                max_organisation = 5
-                default_morale = 0.2
-            }
-            #category_tank_destroyers = {
-            #    max_organisation = 15
-            #    hard_attack = 0.05
-            #    default_morale = 0.2
-            #}
-        }
+#             recon = {
+#                 battalion_mult = {
+#                     category = category_self_propelled_artillery
+#                     soft_attack = 0.1
+#                     default_morale = 0.1
+#                 }
+#             }
+#             mot_recon = {
+#                 battalion_mult = {
+#                     category = category_self_propelled_artillery
+#                     soft_attack = 0.1
+#                     default_morale = 0.1
+#                 }
+#             }
+#             light_tank_recon = {
+#                 battalion_mult = {
+#                     category = category_self_propelled_artillery
+#                     soft_attack = 0.1
+#                     default_morale = 0.1
+#                 }
+#             }
+#         }
+#         all_terrain_mobility = {
+#             category_self_propelled_artillery = {
+#                 maximum_speed = 0.2
+#             }
+#             category_self_propelled_anti_air = {
+#                 maximum_speed = 0.2
+#             }
+#             #category_tank_destroyers = {
+#             #    maximum_speed = 0.2
+#             #}
+#         }
+#         multirole_support_vehicles = {
+#             category_self_propelled_artillery = {
+#                 hard_attack = 0.05
+#             }
+#             category_self_propelled_anti_air = {
+#                 soft_attack = 0.1
+#                 hard_attack = 0.05
+#             }
+#             #category_tank_destroyers = {
+#             #    soft_attack = 0.05
+#             #}
+#         }
+#         shoot_and_scoot = {
+#             category_self_propelled_artillery = {
+#                 max_organisation = 5
+#                 default_morale = 0.2
+#             }
+#             category_self_propelled_anti_air = {
+#                 max_organisation = 5
+#                 default_morale = 0.2
+#             }
+#             #category_tank_destroyers = {
+#             #    max_organisation = 15
+#             #    hard_attack = 0.05
+#             #    default_morale = 0.2
+#             #}
+#         }
 
-    }
+#     }
 
     
-}
+# }
 
 siege_artillery = {
     track = combat_support
