@@ -163,7 +163,7 @@ grand_assault = {
         combined_arms_integration = {
         #3
             
-            ground_attack_factor = 0.2
+            air_cas_present_factor = 0.2
         }
         forward_command_posts = {
        #4
@@ -439,7 +439,7 @@ rapid_domination = {
         }
         shock_and_awe = {
         #5
-            ground_attack_factor = 0.1
+            air_cas_present_factor = 0.2
             army_armor_speed_factor = 0.1
             
         }
@@ -505,7 +505,7 @@ deep_battle = {
         }
         operational_depth_control = {
         #5
-            army_bonus_air_superiority_factor = 0.1
+            enemy_army_bonus_air_superiority_factor = -0.1
         }
     }
 }
