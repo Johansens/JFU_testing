@@ -307,7 +307,7 @@ streamlined_deployment = {
         tank_desant = {
             category_all_armor = {
                 max_organisation = 5
-                max_strength = 5
+                max_strength = 3
             }
         }
         full_front_deployment = {
