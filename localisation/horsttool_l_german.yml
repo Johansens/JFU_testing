@@ -1433,6 +1433,13 @@ vp_allies_owns:0 "[ENG.GetFlag] §CAlliierte§!"
 MOD_countdown_to_allied_victory_mission:0 "Bevorstehender §CAlliierter§! §YSieg§!"
 MOD_countdown_to_axis_victory_mission:0 "Bevorstehender §RAchse§! §YSieg§!"
 
+mobile_infantry_tt:0 "Mechanisierte & motorisierte Truppen.\nHoher Angriff und starke Offensivwerte.\n§RGute Wahl für Panzernationen.§!"
+defensive_postures_tt:0 "Defensive Infanterie.\nHohe Verteidigung und starke Verschanzung.\n§RGute Wahl für defensive Infanterienationen.§!"
+large_unit_tactics_tt:0 "Mechanisierte & motorisierte Unterstützung.\nHohe Organisation und Stärke.\n§RGute Wahl für Panzernationen.§!"
+assault_infantry_tt:0 "Offensive Infanterie.\nHoher Angriff und hoher Durchbruch.\n§RGute Wahl für offensive Infanterienationen.§!"
+commandos_tt:0 "Spezialkräfte.\nSehr hohe Gesamtwerte für Spezialkräfte.\n§RGute Wahl für Nationen mit Fokus auf Spezialkräfte.§!"
+peoples_war_tt:0 "Massenmobilisierungs-Infanterie.\nSehr hohe Durchhaltefähigkeit für Infanterie. Gute Einsatzfähigkeit für Milizverbände.\n§RGute Wahl für Anhänger der Massenmobilisierung.§!"
+
 armored_spearhead_tt:0 "Allrounder-Panzer.\nHohe Organisation & Durchbruch, ausgewogene Werte.\n§RGut für Deutschland und andere offensive Panzernationen.§!"
 armored_infantry_support_tt:0 "Teure Panzer.\nNiedrige Organisation & Durchbruch, extrem hohe Werte.\n§RNicht gut, wenn du viele Verluste erwartest. Sehr stark unter guten Bedingungen.§!"
 streamlined_deployment_tt:0 "Günstige Panzer.\nHohe Organisation & Durchbruch, schwache Werte.\n§RGut für die Sowjetunion und andere defensive Panzernationen.§!"

@@ -1872,6 +1872,15 @@
  rapid_domination_tt:0 "Offensive Tanks.\nHigh attack and other offensive stats.\n§RGood option for every tank nation.§!"
  peoples_war_things_not_people:0 "Things not people"
 
+ mobile_infantry_tt:0 "Mechanized & Motorized Stats.\nHigh attack and other offensive stats.\n§RGood option for every tank nation.§!"
+ defensive_postures_tt:0 "Defensive Infantry.\nHigh defense and entrenchment.\n§RGood option for defensive infantry nations.§!"
+ large_unit_tactics_tt:0 "Mechanized & Motorized Utility.\nHigh organization and strength.\n§RGood option for every tank nation.§!"
+ assault_infantry_tt:0 "Offensive Infantry.\nHigh Attack and Breakthrough.\n§RGood option for offensive infantry nations.§!"
+ commandos_tt:0 "Special Forces Infantry.\nHigh overall stats for special forces.\n§RGood option for every special forces infantry nation.§!"
+ peoples_war_tt:0 "Massmob Infantry.\nExcellent sustain for infantry. Good viability for milita infantry.\n§RGood option for massmob lovers.§!"
+
+ peoples_war_things_not_people:0 "Things not people"
+
  #Herrscher England #
  
 
