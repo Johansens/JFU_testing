@@ -36,6 +36,7 @@ armored_spearhead = {
             category_all_armor= {
                 max_organisation = 10
                 default_morale = 0.1
+                initiative = 0.01
             }
         }
         armored_breakthrough_exploits = {
