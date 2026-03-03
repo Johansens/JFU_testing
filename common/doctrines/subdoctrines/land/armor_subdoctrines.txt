@@ -42,7 +42,7 @@ armored_spearhead = {
         armored_breakthrough_exploits = {
         #2
             category_all_armor = {
-                breakthrough = 0.2
+                breakthrough = 0.1
             }
         }
         local_reserves = {
@@ -64,8 +64,8 @@ armored_spearhead = {
         }
         assault_detachments = {
         #5
-            category_tanks= {
-                soft_attack = 0.05
+            category_all_armor = {
+                breakthrough = 0.1
             }
         }
     }
