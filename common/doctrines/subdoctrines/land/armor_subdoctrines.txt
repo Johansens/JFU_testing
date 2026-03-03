@@ -56,10 +56,10 @@ armored_spearhead = {
         tactical_reconnaissance = {
         #4
             category_tank_destroyers = {
-                hard_attack = 0.1
+                hard_attack = 0.2
             }
             category_self_propelled_artillery = {
-                soft_attack = 0.1
+                soft_attack = 0.2
             }
         }
         assault_detachments = {
