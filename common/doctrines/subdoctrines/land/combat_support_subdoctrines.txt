@@ -31,42 +31,58 @@ fire_concentration = {
      # EFFECTS
      enable_tactic = tactic_overwhelming_fire
 
-     artillery_brigade = {
-        soft_attack = 0.1
-     }
-     category_line_artillery = {
-        max_organisation = 5
-     }
+    category_anti_air = {
+        air_attack = 0.1
+    }
+
+
 
      rewards = {
         standing_barrage = {
         #1
             artillery_brigade = {
                 defense = 0.1
+                soft_attack = 0.1            
+            }
+            rocket_artillery_brigade = {
+            #    defense = 0.1
+                soft_attack = 0.1
             }
         }
         predicted_fire = {
         #2
             artillery_brigade = {
-                soft_attack = 0.1
+                max_organisation = 5
+            }
+            rocket_artillery_brigade = {
+                max_organisation = 5
             }
         }
         artillery_groups = {
         #3
-            artillery_brigade = {
+            #artillery_brigade = {
+            #    breakthrough = 0.1
+            #}
+            rocket_artillery_brigade = {
                 breakthrough = 0.1
-                defense = 0.05
             }
         }
         dedicated_air_support = {
         #4
-            category_anti_air = {
-                air_attack = 0.1
+            artillery_brigade = {
+                soft_attack = 0.1
             }
+            rocket_artillery_brigade = {
+                soft_attack = 0.1
+            }
+
         }
         weakpoint_studies = {
         #5
             artillery_brigade = {
+                hard_attack = 0.1
+            }
+            rocket_artillery_brigade = {
                 hard_attack = 0.1
             }
         }
@@ -85,6 +101,9 @@ anti_tank_frontline = {
     available = {
         always = yes
     }
+
+    enable_tactic = tactic_overwhelming_fire
+
 
     ai_will_do = { base = 0 }
 
@@ -115,6 +134,7 @@ anti_tank_frontline = {
         #4
             mot_anti_tank_brigade = {
                 breakthrough = 0.3
+                hard_attack = 0.2
             }
         }
         assault_anti_tank = {
@@ -152,54 +172,46 @@ flying_batteries = {
             NOT = { has_tech = rocket_artillery } 
         }
     }
-    
-    mot_rocket_artillery_brigade = {
+    mot_artillery_brigade = {
         soft_attack = 0.1
-    }
+        defense = 0.1
+    }    
+
 
     rewards = {
         deployment_drills = {
-            mot_rocket_artillery_brigade = {
-                max_organisation = 5
-            }
-            motorized_rocket_brigade = {
-                max_organisation = 5
-            }
-            mot_artillery_brigade = {
+            category_rocket_artillery = {
                 max_organisation = 5
             }
         }
         counter_battery_tasks = {
-            mot_artillery_brigade = {
-                soft_attack = 0.05
+
+            category_rocket_artillery = {
+                soft_attack = 0.1
                 defense = 0.1
             }
         }
         ballistics_corrections = {
-            armored_signal = {
-                battalion_mult = {
-                    category = category_rocket_artillery
-                    initiative = 0.02
-                    supply_consumption = -0.01
-                }
+            #armored_signal = {
+            #    battalion_mult = {
+            #        category = category_rocket_artillery
+            #        initiative = 0.02
+            #        supply_consumption = -0.01
+            #    }
+            #}
+            category_rocket_artillery = {
+                soft_attack = 0.1
             }
-
         }
         mobile_barrages = {
             category_rocket_artillery = {
                 default_morale = 0.05
-                breakthrough = 0.05
+                breakthrough = 0.1
             }
 
         }
         wide_dispersal_positions = {
-            mot_rocket_artillery_brigade = {
-                max_organisation = 5
-            }
-            motorized_rocket_brigade = {
-                max_organisation = 5
-            }
-            mot_artillery_brigade = {
+            category_rocket_artillery = {
                 max_organisation = 5
             }
         }
@@ -526,13 +538,13 @@ siege_artillery = {
 
     ai_will_do = { base = 0 }
 
-    super_heavy_artillery = {
-        battalion_mult = {
-            category = category_line_artillery
-            soft_attack = 0.1
-            #defense = 0.1
-        }
-    }
+    #super_heavy_artillery = {
+    #    battalion_mult = {
+    #        category = category_line_artillery
+    #        soft_attack = 0.1
+    #        #defense = 0.1
+    #    }
+    #}
 
     equipment_bonus = {
         railway_gun_equipment = {
@@ -563,28 +575,21 @@ siege_artillery = {
             super_heavy_artillery = {
                 default_morale = 0.2
             }
-            super_heavy_artillery = {
-                plains = {
-                    movement = 0.1
-                }
-            }
             self_propelled_super_heavy_artillery = {
-                plains = {
-                    movement = 0.1
-                }
+                default_morale = 0.2
             }
 
-            equipment_bonus = {
-                railway_gun_equipment = {
-                    railway_gun_hours_between_redistribution = -0.5
-                    instant = yes
-                }
-                super_heavy_railway_gun_equipment = {
-                    railway_gun_hours_between_redistribution = -0.5
-                    instant = yes
-                }
-                
-            }
+            #equipment_bonus = {
+            #    railway_gun_equipment = {
+            #        railway_gun_hours_between_redistribution = -0.5
+            #        instant = yes
+            #    }
+            #    super_heavy_railway_gun_equipment = {
+            #        railway_gun_hours_between_redistribution = -0.5
+            #        instant = yes
+            #    }
+            #    
+            #}
         }
         precomputed_firing_data = {
             super_heavy_artillery = {
@@ -600,8 +605,32 @@ siege_artillery = {
         urban_strongpoint_sieges = {
 
             super_heavy_artillery = {
-                soft_attack = 0.1
+                soft_attack = 0.3
             }
+            self_propelled_super_heavy_artillery = {
+                soft_attack = 0.3
+            }
+
+        }
+        mobile_artillery_command = {
+            super_heavy_artillery = {
+                max_organisation = 10
+            }
+            self_propelled_super_heavy_artillery = {
+                max_organisation = 10
+                #maximum_speed = 0.5
+            }
+
+            #equipment_bonus = {
+            #    railway_gun_equipment = {
+            #        maximum_speed = 1
+            #        instant = yes
+            #    }
+            #    super_heavy_railway_gun_equipment = {
+            #        maximum_speed = 1
+            #        instant = yes
+            #    }
+            #}
             super_heavy_artillery = {
                 urban = {
                     attack = 0.2
@@ -611,27 +640,6 @@ siege_artillery = {
                 urban = {
                     attack = 0.2
                 }
-            }
-        }
-        mobile_artillery_command = {
-            category_support_artillery = {
-                max_organisation = 10
-            }
-            self_propelled_super_heavy_artillery = {
-                max_organisation = 10
-                maximum_speed = 0.5
-            }
-
-            equipment_bonus = {
-                railway_gun_equipment = {
-                    maximum_speed = 1
-                    instant = yes
-                }
-                super_heavy_railway_gun_equipment = {
-                    maximum_speed = 1
-                    instant = yes
-                }
-
             }
         }
     }
