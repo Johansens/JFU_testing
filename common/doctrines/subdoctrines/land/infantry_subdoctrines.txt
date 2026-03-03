@@ -95,7 +95,7 @@ defensive_postures = {
     }
 
     #OTHER BASE REWARDS
-    
+    enable_tactic = tactic_guerrilla_tactics
 
     rewards = {
         improvised_fighting_position = {
@@ -157,10 +157,10 @@ large_unit_tactics = {
 
 
     }
-
+    enable_tactic = tactic_overwhelming_fire
     # EFFECTS
     effect = {
-
+        
     }
    
     #OTHER BASE REWARDS
@@ -229,7 +229,7 @@ assault_infantry = {
     # EFFECTS
 
     #OTHER BASE REWARDS
-
+    enable_tactic = tactic_overwhelming_fire
     rewards = {
         low_echelon_fire_support = {
         #1

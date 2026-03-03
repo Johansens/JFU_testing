@@ -350,7 +350,7 @@ tank_destroyer_force = {
         base = 0
 
     }  
-
+    enable_tactic = tactic_blitz
     rewards = {
 
         mechanized_offensive = {
