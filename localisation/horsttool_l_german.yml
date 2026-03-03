@@ -1455,6 +1455,12 @@ deep_battle_tt:0 "Panzer- & Infanteriemix.\nStarke defensive Werte für Infanter
 guerilla_war_tt:0 "Massenmobilisierungs-Infanterie.\nGute defensive Werte für Infanterie. Hervorragende Verstärkungsrate & Organisation.\n§RGute Wahl für defensive Infanterienationen mit stark beweglichen Fronten.§!"
 rapid_domination_tt:0 "Offensive Panzer.\nHoher Angriff und andere offensive Werte.\n§RGute Wahl für jede Panzernation.§!"
 
+fire_concentration_tt:0 "Linienartillerie.\nHervorragende Werte für Linienartillerie.\n§RGute Wahl, wenn ausreichend Artillerie verfügbar ist.§!"
+anti_tank_frontline_tt:0 "Panzerabwehr.\nHervorragende Werte für Panzerabwehr.\n§RIdeal, wenn hauptsächlich gegen Panzer gekämpft wird.§!"
+flying_batteries_tt:0 "Mobile Artillerie.\nGute Werte für mobile Artillerievarianten.\n§RIdeal im Kampf gegen unbewegliche Gegner.§!"
+mobile_recon_and_assault_tt:0 "Artillerie-Unterstützung.\nBesonders effektiv beim Einsatz teurer Unterstützungskompanien. Verbessert die Gefechtswerte von Linienartillerie und Panzern.\n§RAusgezeichnete Wahl bei ausreichender Industrie für hochwertige Unterstützungskompanien.§!"
+siege_artillery_tt:0 "Superschwere Artillerie.\nHervorragende Werte für superschwere Artillerie.\n§RGute Wahl, wenn viel Artillerie verfügbar ist und Zugang zu superschwerer Artillerie besteht.§!"
+
 category_recon_tank_NEED:0 "£unit_light_tank_recon_icon_small §YGepanzerte Aufklärungskompanie§!:\n  §GBenötigt: 2 Leichtes Panzerfahrgestell§!"
 
 plus_5_main_tanks:0 "£unit_category_tanks_icon_small §YMittlere Panzer§!:\n  §RBenötigt: +5 Mittlere Panzer§!"
