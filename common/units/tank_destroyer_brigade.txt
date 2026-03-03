@@ -35,8 +35,9 @@ sub_units = {
 		weight = 1
 		supply_consumption = 0.18
 
-		breakthrough = -0.9
-		hard_attack = 0.3
+		breakthrough = -1
+		soft_attack = -1
+		hard_attack = 0.5
 
 		suppression = 1.0
 
@@ -108,8 +109,9 @@ sub_units = {
 		weight = 1.25
 		supply_consumption = 0.2
 
-		breakthrough = -0.9
-		hard_attack = 0.3		
+		breakthrough = -1
+		soft_attack = -1
+		hard_attack = 0.5		
 		suppression = 1.25
 
 		forest = {
@@ -181,8 +183,9 @@ sub_units = {
 		weight = 1.5
 		supply_consumption = 0.27
 
-		breakthrough = -0.9
-		hard_attack = 0.3
+		breakthrough = -1
+		soft_attack = -1
+		hard_attack = 0.5
 		suppression = 1.25
 		
 		forest = {
@@ -257,8 +260,9 @@ sub_units = {
 		weight = 1.75
 		supply_consumption = 0.36
 
-		breakthrough = -0.9
-		hard_attack = 0.3
+		breakthrough = -1
+		soft_attack = -1
+		hard_attack = 0.5
 		suppression = 1.25
 
 		forest = {
