@@ -448,6 +448,12 @@ mobile_defense = {
             }
             
         }    
+        hide_and_seek = {
+            light_tank_recon = {
+                default_morale = 0.2
+            }
+            
+        }
     }
 }
 

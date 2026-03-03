@@ -1472,6 +1472,10 @@ minus_5_spg_tanks:0 "£unit_medium_sp_artillery_brigade_icon_small §YMittlere P
 plus_5_td_tanks:0 "£unit_medium_tank_destroyer_brigade_icon_small §YMittlere Panzerjäger§!:\n  §RBenötigt: +5 Mittlere Panzerjäger§!"
 minus_5_td_tanks:0 "£unit_medium_tank_destroyer_brigade_icon_small §YMittlere Panzerjäger§!:\n  §GBenötigt: -5 Mittlere Panzerjäger§!"
 
+mobile_defense_hide_and_seek:0 "Suchen & Verstecken"
+
+peoples_war_things_not_people:0 "Menschen, nicht Dinge"
+
 
 
 
