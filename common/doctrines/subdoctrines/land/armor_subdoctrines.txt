@@ -362,7 +362,8 @@ tank_destroyer_force = {
             category_tank_destroyers = {
                 hard_attack = 0.2
                 max_strength = 5
-                max_organisation = 10
+                max_organisation = 20
+                default_morale = 0.2
             }
         }
         attached_support = {
@@ -379,7 +380,6 @@ tank_destroyer_force = {
         }
         tank_on_tank_engagement = {
             category_all_armor = {
-                breakthrough = 0.1
                 maximum_speed = 0.15
             }
         } 
