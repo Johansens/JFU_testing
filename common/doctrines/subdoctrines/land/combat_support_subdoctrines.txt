@@ -89,21 +89,13 @@ anti_tank_frontline = {
     ai_will_do = { base = 0 }
 
      # EFFECTS
-     
-        artillery_brigade = {
-            soft_attack = 0.1
-        }
-
-        anti_tank_brigade = {
-            hard_attack = 0.1
-        }
 
     rewards = {
         pakfront = {
         #1
             anti_tank_brigade = {
                 defense = 0.1
-                soft_attack = 0.2
+                soft_attack = 0.3
             }
         }
         emplacement_rotation = {
@@ -116,7 +108,7 @@ anti_tank_frontline = {
         #3
             anti_tank_brigade = {
                 breakthrough = 0.1
-                hard_attack = 0.1
+                hard_attack = 0.2
             }
         }
         offensive_deployments = {
@@ -127,9 +119,9 @@ anti_tank_frontline = {
         }
         assault_anti_tank = {
         #5
-            mot_anti_tank_brigade = {
-                soft_attack = 0.2
-                hard_attack = 0.2
+            anti_tank_brigade = {
+                default_morale = 0.1
+                hard_attack = 0.1
             }
         }
     }
