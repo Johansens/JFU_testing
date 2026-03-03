@@ -171,22 +171,17 @@ flying_batteries = {
             factor = 0 
             NOT = { has_tech = rocket_artillery } 
         }
-    }
-    mot_artillery_brigade = {
-        soft_attack = 0.1
-        defense = 0.1
     }    
-
 
     rewards = {
         deployment_drills = {
-            category_rocket_artillery = {
+            category_mobile_rocket_artillery = {
                 max_organisation = 5
             }
         }
         counter_battery_tasks = {
 
-            category_rocket_artillery = {
+            category_mobile_rocket_artillery = {
                 soft_attack = 0.1
                 defense = 0.1
             }
@@ -199,19 +194,19 @@ flying_batteries = {
             #        supply_consumption = -0.01
             #    }
             #}
-            category_rocket_artillery = {
+            category_mobile_rocket_artillery = {
                 soft_attack = 0.1
             }
         }
         mobile_barrages = {
-            category_rocket_artillery = {
+            category_mobile_rocket_artillery = {
                 default_morale = 0.05
                 breakthrough = 0.1
             }
 
         }
         wide_dispersal_positions = {
-            category_rocket_artillery = {
+            category_mobile_rocket_artillery = {
                 max_organisation = 5
             }
         }
