@@ -1386,7 +1386,6 @@ leader_traits = {
 			desert = {
 				movement = 0.05
 				attack = 0.1
-				defence = 0.1
 			}
 		}
 		new_commander_weight = {
@@ -1414,7 +1413,6 @@ leader_traits = {
 			marsh = {
 				movement = 0.05
 				attack = 0.1
-				defence = 0.1
 			}
 		}
 		
@@ -1434,8 +1432,6 @@ leader_traits = {
 		modifier = {
 			mountain = {
 				movement = 0.05
-				attack = 0.1
-				defence = 0.1
 			}
 		}
 		
@@ -1456,7 +1452,6 @@ leader_traits = {
 			hills = {
 				movement = 0.05
 				attack = 0.1
-				defence = 0.1
 			}
 		}
 		
@@ -1477,7 +1472,6 @@ leader_traits = {
 			jungle = {
 				movement = 0.05
 				attack = 0.1
-				defence = 0.1
 			}
 		}
 		
@@ -1519,7 +1513,6 @@ leader_traits = {
 			urban = {
 				movement = 0.05
 				attack = 0.1
-				defence = 0.1
 			}
 		}
 		
