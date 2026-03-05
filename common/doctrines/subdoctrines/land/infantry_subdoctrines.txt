@@ -558,7 +558,7 @@ peoples_war = {
         revolutionary_base_area = {
         #1
             
-            category_light_infantry = {
+            infantry = {
                 max_organisation = 10
                 default_morale = 0.1
             }
@@ -566,7 +566,7 @@ peoples_war = {
         }
         destruction_over_land_gains = {
         #2
-            category_light_infantry = {
+            infantry = {
                 max_organisation = 10
                 defense = 0.05
                 maximum_speed = 0.1
@@ -574,7 +574,7 @@ peoples_war = {
         }
         quick_decision_offensive_warfare = {
         #3
-            category_light_infantry = {
+            infantry = {
                max_organisation = 10
                
             }
@@ -589,7 +589,7 @@ peoples_war = {
 
         things_not_people = {
         #4
-            category_light_infantry = {
+            infantry = {
                 initiative = 0.02
             }
         }
