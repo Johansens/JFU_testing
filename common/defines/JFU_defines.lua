@@ -133,7 +133,7 @@ NDefines.NAir.ESCORT_FACTOR = 5.5
 NDefines.NAir.ACCIDENT_CHANCE_BASE = 0
 NDefines.NAir.SUPPLY_NEED_FACTOR = 0.1				-- How much supply planes need
 NDefines.NAir.AIR_WING_FLIGHT_SPEED_MULT = 0.2 --makes redeployement of fighters faster vanilla is 0.02
--- NDefines.NAir.ANTI_AIR_PLANE_DAMAGE_FACTOR = 0.4  -- vanilla 0.8
+NDefines.NAir.ANTI_AIR_PLANE_DAMAGE_FACTOR = 0.4  -- vanilla 0.8
 
 NDefines.NAir.AIRBASE_CAPACITY_MULT = 100  -- vanilla 200
 NDefines.NAir.DETECT_CHANCE_FROM_AIRCRAFTS_EFFECTIVE_COUNT = 1000  -- WAS 3000, halved because plane counts halved | Max amount of aircrafts in region to give full detection bonus.
