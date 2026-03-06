@@ -197,6 +197,7 @@ sub_units = {
 			category_support_battalions
 			category_army
 			category_recon
+			
 		}
 
 		battalion_mult = {
@@ -287,6 +288,7 @@ sub_units = {
 			category_army
 			category_all_armor
 			category_recon
+			category_recon_tank_NEED
 		}
 
 	

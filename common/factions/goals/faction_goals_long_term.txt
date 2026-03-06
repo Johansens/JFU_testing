@@ -549,11 +549,15 @@ faction_goal_rule_the_waves = {
 		add_faction_initiative = 1
 
 		if = {
-			limit = {tag = ITA }
-			ENG = {
-				has_navy_size = {
-					type = capital_ship
-					size < 1
+			limit = {
+				AND = {
+					tag = ITA 
+				}
+				ENG = {
+					has_navy_size = {
+						type = capital_ship
+						size < 1
+					}
 				}
 			}
 			add_timed_idea = {
@@ -562,11 +566,15 @@ faction_goal_rule_the_waves = {
 			}
 		}
 		if = {
-			limit = {tag = ENG }
-			ITA = {
-				has_navy_size = {
-					type = capital_ship
-					size < 1
+			limit = {
+				AND = {
+					tag = ENG
+				}
+				ITA = {
+					has_navy_size = {
+						type = capital_ship
+						size < 1
+					}
 				}
 			}
 			add_timed_idea = {
@@ -575,11 +583,15 @@ faction_goal_rule_the_waves = {
 			}
 		}
 		if = {
-			limit = {tag = USA}
-			JAP = {
-				has_navy_size = {
-					type = capital_ship
-					size < 1
+			limit = {
+				AND = {
+					tag = USA
+				}
+				JAP = {
+					has_navy_size = {
+						type = capital_ship
+						size < 1
+					}
 				}
 			}
 			add_timed_idea = {
@@ -588,11 +600,15 @@ faction_goal_rule_the_waves = {
 			}
 		}
 		if = {
-			limit = {tag = JAP }
-			USA = {
-				has_navy_size = {
-					type = capital_ship
-					size < 1
+			limit = {
+				AND = {
+					tag = JAP
+				}
+				USA = {
+					has_navy_size = {
+						type = capital_ship
+						size < 1
+					}
 				}
 			}
 			add_timed_idea = {

@@ -843,7 +843,7 @@ focus_tree = {
 		x =-1
 		y = 1
 		relative_position_id = GER_wirtschaftswunder
-		cost = 10
+		cost = 5
 		available = {
 			has_war = yes
 		}
@@ -896,7 +896,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = GER_wirtschaftswunder
-		cost = 10
+		cost = 5
 		available = {
 			has_war = yes
 		}
@@ -1528,7 +1528,7 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = GER_kdf_wagen_factories
-		cost = 10
+		cost = 5
 		available = {
 			date > 1940.01.01
 		}
@@ -2453,7 +2453,7 @@ focus_tree = {
 		x = 1
 		y = 2
 		relative_position_id = GER_concentrated_armament_program
-		cost = 10
+		cost = 5
 		available = {
 			has_war_with_major = yes
 		}
@@ -2518,7 +2518,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = GER_zentrale_planung
-		cost = 10
+		cost = 5
 		available = {
 		}
 
@@ -2570,7 +2570,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = GER_zentrale_planung
-		cost = 10
+		cost = 5
 		available = {
 		}
 
@@ -4811,7 +4811,7 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = GER_form_the_jagdwaffe
-		cost = 10
+		cost = 5
 		available = {
 			GER_hermann_goring = {
 				is_air_chief = no
@@ -4849,7 +4849,7 @@ focus_tree = {
 		x = -1
 		y = 2
 		relative_position_id = GER_reorganize_the_luftwaffe
-		cost = 10
+		cost = 5
 		available = {
 			GER_hermann_goring = {
 				is_air_chief = no
@@ -4985,7 +4985,7 @@ focus_tree = {
 		x = 2
 		y = 2
 		relative_position_id = GER_reorganize_the_luftwaffe
-		cost = 10
+		cost = 5
 		available = {
 			has_war_with_major = yes
 		}
@@ -5347,7 +5347,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = GER_aerodynamic_research_institute
-		cost = 10
+		cost = 5
 
 		continue_if_invalid = yes
 		cancel_if_invalid = no
@@ -7594,7 +7594,7 @@ focus_tree = {
 		x = 1
 		y = 2
 		relative_position_id = GER_army_indoctrination
-		cost = 10
+		cost = 5
 		available = {
 			has_war_with = SOV
 			has_tech = advanced_machine_tools
@@ -8217,7 +8217,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = GER_weserubung2
-		cost = 5
+		cost = 2
 
 		available = {
 			GER = { controls_state = 110 }

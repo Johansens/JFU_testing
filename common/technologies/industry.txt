@@ -1215,7 +1215,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 1.75
+		research_cost = 1.5
 		
 		categories = {
 			industry
@@ -1302,7 +1302,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 1.75
+		research_cost = 1.5
 		start_year = 1937
 		
 		categories = {
@@ -1401,7 +1401,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 1.75
+		research_cost = 1.5
 		start_year = 1939
 		
 		categories = {
@@ -1496,7 +1496,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 1.75
+		research_cost = 1.5
 		start_year = 1941
 		
 		categories = {
@@ -1581,7 +1581,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 1.75
+		research_cost = 1.5
 		start_year = 1943
 		
 		categories = {

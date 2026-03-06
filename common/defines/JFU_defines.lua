@@ -66,7 +66,7 @@ NDefines.NMilitary.FIELD_MARSHAL_DIVISIONS_CAP = 72			--vanilla 24 (removed garr
 NDefines.NMilitary.LAND_AIR_COMBAT_MAX_PLANES_PER_ENEMY_WIDTH = 0.5    --vanilla 3 
 NDefines.NMilitary.COMBAT_VALUE_ORG_IMPORTANCE = 0 		-- VANILLA 1 - changed to force tanks into battle first (most of the time) |   Multiplier on TotalOrganisation when determining the combat value of a division
 NDefines.NMilitary.COMBAT_VALUE_STR_IMPORTANCE = 0 		-- VANILLA 1  - changed to force tanks into battle first (most of the time)    |  Multiplier on TotalStrength when determining the combat value of a division
-NDefines.NMilitary.UNIT_DIGIN_CAP = 10                           --   vanilla 10 | "how "deep" you can dig you can dig in until hitting max bonus
+NDefines.NMilitary.UNIT_DIGIN_CAP = 5                           --   vanilla 10 | "how "deep" you can dig you can dig in until hitting max bonus
 NDefines.NMilitary.REINFORCEMENT_REQUEST_MAX_WAITING_DAYS = 7   -- Every X days the equipment will be sent, regardless if still didn't produced all that has been requested.
 NDefines.NMilitary.REINFORCEMENT_REQUEST_DAYS_FREQUENCY = 4	   -- How many days must pass until we may give another reinforcement request
 NDefines.NMilitary.BATALION_CHANGED_EXPERIENCE_DROP = 0.0 
@@ -86,8 +86,8 @@ NDefines.NMilitary.COMBAT_MOVEMENT_SPEED = 0.30 -- VANILLA 0.33
 NDefines.NMilitary.LAND_SPEED_MODIFIER = 0.05	-- VANILLA 0.05
 NDefines.NMilitary.RETREAT_SPEED_FACTOR = 0.4		-- VANILLA 0.25 
 NDefines.NMilitary.WITHDRAWING_SPEED_FACTOR = 0.25	-- VANILLA 0.15
-NDefines.NMilitary.LAND_COMBAT_ORG_DAMAGE_MODIFIER = 0.060 -- VANILLA 0.053
-NDefines.NMilitary.LAND_COMBAT_STR_DAMAGE_MODIFIER = 0.0575	-- VANILLA 0.06
+NDefines.NMilitary.LAND_COMBAT_ORG_DAMAGE_MODIFIER = 0.053 -- VANILLA 0.053
+NDefines.NMilitary.LAND_COMBAT_STR_DAMAGE_MODIFIER = 0.04625	-- VANILLA 0.06
 NDefines.NMilitary.PREFERRED_TACTIC_CHARACTER_SKILL_LEVEL_REQUIRED = 4 -- VANILLA 5(pregrinded change) -- Which level a field marhal or general has to be before they can pick their preferred tactic
 NDefines.NMilitary.MIN_DIVISION_BRIGADE_HEIGHT = 5		-- VANILLA 4 -- Min height of regiments in division designer.
 NDefines.NMilitary.RELIABILTY_RECOVERY = 0.0 -- WAS 0.1 factor affecting how much equipment is returned "from the dead"
@@ -107,7 +107,7 @@ NDefines.NSupply.RAILWAY_CONVERSION_COOLDOWN = 5
 
 NDefines.NAir.FUEL_COST_MULT = 0.2 -- vanilla 0.35 fuel multiplier for all air missions
 NDefines.NAir.AIR_DEPLOYMENT_DAYS = 0
-NDefines.NAir.COMBAT_DAMAGE_SCALE = 0.3 -- Higher value = more shot down planes
+NDefines.NAir.COMBAT_DAMAGE_SCALE = 0.25 -- Higher value = more shot down planes
 NDefines.NAir.MISSION_COMMAND_POWER_COSTS = {  -- command power cost per plane to create a mission
 	0.0, -- AIR_SUPERIORITY
 	0.0, -- CAS
@@ -133,7 +133,7 @@ NDefines.NAir.ESCORT_FACTOR = 5.5
 NDefines.NAir.ACCIDENT_CHANCE_BASE = 0
 NDefines.NAir.SUPPLY_NEED_FACTOR = 0.1				-- How much supply planes need
 NDefines.NAir.AIR_WING_FLIGHT_SPEED_MULT = 0.2 --makes redeployement of fighters faster vanilla is 0.02
--- NDefines.NAir.ANTI_AIR_PLANE_DAMAGE_FACTOR = 0.4  -- vanilla 0.8
+NDefines.NAir.ANTI_AIR_PLANE_DAMAGE_FACTOR = 0.4  -- vanilla 0.8
 
 NDefines.NAir.AIRBASE_CAPACITY_MULT = 100  -- vanilla 200
 NDefines.NAir.DETECT_CHANCE_FROM_AIRCRAFTS_EFFECTIVE_COUNT = 1000  -- WAS 3000, halved because plane counts halved | Max amount of aircrafts in region to give full detection bonus.

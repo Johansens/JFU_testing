@@ -61,7 +61,7 @@ BRA_industrial_decisions = {
 						tooltip = MODIFIER_LOCAL_BUILDING_SLOTS_FACTOR_tt
 					}
 					add_to_variable = {
-						BRA_state_development_state_resources_factor_new = 0.2
+						BRA_state_development_state_resources_factor_new = 0.1
 						tooltip = MODIFIER_STATE_RESOURCES_FACTOR_tt
 					}
 				}
@@ -85,7 +85,7 @@ BRA_industrial_decisions = {
 						tooltip = MODIFIER_LOCAL_BUILDING_SLOTS_FACTOR_tt
 					}
 					add_to_variable = {
-						BRA_state_development_state_resources_factor_new = 0.2
+						BRA_state_development_state_resources_factor_new = 0.1
 						tooltip = MODIFIER_STATE_RESOURCES_FACTOR_tt
 					}
 					remove_dynamic_modifier = {

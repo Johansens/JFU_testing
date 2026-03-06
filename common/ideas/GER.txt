@@ -1225,7 +1225,7 @@ ideas = {
             picture = GER_cold
             modifier = {
                 winter_attrition_factor = 0.1
-                acclimatization_cold_climate_gain_factor = -0.5
+                acclimatization_cold_climate_gain_factor = -0.1
             }
         }
 

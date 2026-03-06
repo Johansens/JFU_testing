@@ -4391,9 +4391,9 @@ FRA_africa_spawn_ins = {
 		modules = {
 			main_armament_slot = tank_high_velocity_cannon_2
 			turret_type_slot = tank_medium_three_man_tank_turret
-			suspension_type_slot = tank_torsion_bar_suspension
+			suspension_type_slot = tank_interleaved_suspension
 			armor_type_slot = tank_riveted_armor
-			engine_type_slot = tank_gasoline_engine
+			engine_type_slot = tank_diesel_engine
 			special_type_slot_1 = tank_radio_2
 			special_type_slot_2 = secondary_turret_small_cannon
 			special_type_slot_3 = secondary_turret_small_cannon 
@@ -4401,7 +4401,7 @@ FRA_africa_spawn_ins = {
 		}
 		upgrades = {
 			tank_nsb_engine_upgrade = 9
-			tank_nsb_armor_upgrade = 0
+			tank_nsb_armor_upgrade = 9
 		}
 		icon = "GFX_GER_basic_medium_tank_medium"
 	}
@@ -4439,7 +4439,7 @@ FRA_africa_spawn_ins = {
 		}
 		upgrades = {
 			tank_nsb_engine_upgrade = 9
-			tank_nsb_armor_upgrade = 0
+			tank_nsb_armor_upgrade = 9
 		}
 		icon = "GFX_GER_basic_medium_tank_medium"
 	}	
@@ -4461,7 +4461,7 @@ FRA_africa_spawn_ins = {
 		}
 		upgrades = {
 			tank_nsb_engine_upgrade = 9
-			tank_nsb_armor_upgrade = 0
+			tank_nsb_armor_upgrade = 9
 		}
 		icon = "GFX_GER_basic_light_tank_light"
 	}

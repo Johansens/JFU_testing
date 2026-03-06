@@ -330,10 +330,6 @@ ideas = {
 					factor = 0
 					NOT = { has_dlc = "No Compromise, No Surrender" }
 				}
-				modifier = {
-					factor = 2
-					has_doctrine = mounted_infantry
-				}
 			}
 		}
 
@@ -348,7 +344,7 @@ ideas = {
 			available = { 
 				OR = {
 					has_doctrine = new_mobile_warfare
-					has_doctrine = armored_cavalry 
+					#has_doctrine = armored_cavalry 
 				}
 			}
 				equipment_bonus = {
@@ -376,10 +372,6 @@ ideas = {
 					factor = 0
 					NOT = { has_dlc = "No Compromise, No Surrender" }
 				}
-				modifier = {
-					factor = 2
-					has_doctrine = armored_cavalry
-				}
 			}
 		}	
 		subsidized_contracts_no_lar_army_spirit = {
@@ -395,7 +387,7 @@ ideas = {
 			available = { 
 				OR = {
 					has_doctrine = new_mobile_warfare 
-					has_doctrine = armored_cavalry 
+					#has_doctrine = armored_cavalry 
 				}
 			}
 			
@@ -417,10 +409,6 @@ ideas = {
 				modifier = {
 					factor = 0
 					NOT = { has_dlc = "No Compromise, No Surrender" }
-				}
-				modifier = {
-					factor = 2
-					has_doctrine = armored_cavalry
 				}
 			}
 		}	
@@ -446,7 +434,7 @@ ideas = {
 			available = { 
 				OR = {
 					has_doctrine = superior_firepower
-					has_doctrine = expeditionary_warfare
+					#has_doctrine = expeditionary_warfare
 				}
 			}
 
@@ -460,10 +448,6 @@ ideas = {
 				modifier = {
 					factor = 0
 					NOT = { has_dlc = "No Compromise, No Surrender" }
-				}
-				modifier = {
-					factor = 2
-					has_doctrine = expeditionary_warfare					
 				}
 			}
 		}			
@@ -654,10 +638,6 @@ ideas = {
 				modifier = {
 					factor = 0
 					NOT = { has_dlc = "No Compromise, No Surrender" }
-				}
-				modifier = {
-					factor = 2
-					has_doctrine = self_propelled_support
 				}
 			}
 		}
