@@ -1191,10 +1191,10 @@ focus_tree = {
 		relative_position_id = FIN_union_of_finnish_brothers_in_arms
 		cost = 10
 		available = {
-			OR = {
-				has_idea = all_adults_serve
-				has_idea = scraping_the_barrel
-			}
+			#OR = {
+			#	has_idea = all_adults_serve
+			#	has_idea = scraping_the_barrel
+			#}
 		}
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
