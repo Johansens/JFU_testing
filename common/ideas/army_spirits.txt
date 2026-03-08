@@ -614,22 +614,31 @@ ideas = {
 			equipment_bonus = {
 				light_tank_artillery_chassis = {
 				instant = yes
-					hard_attack = 0.50
-					ap_attack = 1
+					soft_attack = 0.05
+				}
+				light_tank_destroyer_chassis = {
+				instant = yes
+					hard_attack = 0.05
 				}
 			}
 			equipment_bonus = {
 				medium_tank_artillery_chassis = {
 				instant = yes
-					hard_attack = 0.50
-					ap_attack = 1
+					soft_attack = 0.05
+				}
+				medium_tank_destroyer_chassis = {
+				instant = yes
+					hard_attack = 0.05
 				}
 			}
 			equipment_bonus = {
 				heavy_tank_artillery_chassis = {
 				instant = yes
-					hard_attack = 0.50
-					ap_attack = 1
+					soft_attack = 0.05
+				}
+				heavy_tank_destroyer_chassis = {
+				instant = yes
+					hard_attack = 0.05
 				}
 			} 							    		  			    			    			 			    			 				
 
