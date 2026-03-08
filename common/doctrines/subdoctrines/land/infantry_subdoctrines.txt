@@ -189,14 +189,15 @@ large_unit_tactics = {
         #4
             category_vehicle_infantry = {
                 max_organisation = 10
+                maximum_speed = 0.1
             }
             
         }
         motorization_initiative = {
         #5
            category_vehicle_infantry = {
-                breakthrough = 0.2
-                max_organisation = 10
+                max_organisation = 15
+                default_morale = 0.1
             }
         }
 
