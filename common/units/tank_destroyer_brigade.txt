@@ -93,6 +93,7 @@ sub_units = {
 			category_tank_destroyers
 			plus_5_td_tanks
 			minus_5_td_tanks
+			category_medium_tanks
 		}
 
 

@@ -1849,6 +1849,8 @@
  plus_5_td_tanks:0 "£unit_medium_tank_destroyer_brigade_icon_small §YMedium Armor Tank Destoyer§!:\n  §R+5 Medium Armor Tank Destroyer Requirement§!"
  minus_5_td_tanks:0 "£unit_medium_tank_destroyer_brigade_icon_small §YMedium Armor Tank Destoyer§!:\n  §G-5 Medium Armor Tank Destroyer Requirement§!"
 
+ category_medium_tanks:0 "£GFX_unit_medium_armor_icon_small §YAll Medium Armor & Tank Variants§!"
+
  ITA_modify_navy_modifier_tt: "Modify §Y$ITA_regia_marina_dynamic_modifier$§! by:"
  MODIFIER_NAVAL_STRIKE_AGILITY_FACTOR_tt: " $MODIFIER_NAVAL_STRIKE_AGILITY_FACTOR$: $RIGHT|+=%1$"
 

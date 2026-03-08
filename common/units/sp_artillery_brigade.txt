@@ -91,6 +91,7 @@ sub_units = {
 			category_self_propelled_artillery
 			plus_5_spg_tanks
 			minus_5_spg_tanks
+			category_medium_tanks
 		}		
 		combat_width = 2
 

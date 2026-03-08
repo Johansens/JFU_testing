@@ -50,5 +50,6 @@ sub_unit_categories = {
 	minus_5_main_tanks
 	minus_5_td_tanks
 	minus_5_spg_tanks
+	category_medium_tanks
 }
  
