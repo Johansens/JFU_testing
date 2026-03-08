@@ -121,7 +121,7 @@ defensive_postures = {
         }
         field_construction_training = {
             infantry = {
-                entrenchment = 0.1
+                entrenchment = 0.2
             }
         }
     }
