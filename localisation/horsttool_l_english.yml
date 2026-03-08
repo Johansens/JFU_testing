@@ -1865,6 +1865,7 @@
  streamlined_deployment_tt:0 "Cheap Tanks.\nHigh Organization & Breakthrough, Weak Stats.\n§RGood for Soviet and other defensive tank nations.§!"
  tank_destroyer_force_tt:0 "Tank Destroyer Tanks.\nMedium Organization & Breakthrough, High Hard Attack on Tank Destroyers.\n§RGood for Soviet and other defensive tank nations if you dont run into lots of enemy infantry.§!"
  mobile_defense_tt:0 "Light Tanks.\nGood Stats for Light Tank Recon Support.\n§RBest for every infantry nation.§!"
+ armored_cavalry_tt:0 "Heavy Tanks.\nGood Stats for Heavy Tanks.\n§RBest for every heavy tank nation.§!"
 
  mission_type_tactics_tt:0 "Offensive Infantry.\nGood offensive and defensive stats for Infantry & Special Forces.\n§RGood option for every offensive infantry nation.§!"
  defensive_tactics_tt:0 "Defensive Infantry.\nGood defensive Stats for Infantry. Ideal for static defensive lines.\n§RGood option for defensive infantry nations.§!"

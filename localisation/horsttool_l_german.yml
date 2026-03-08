@@ -1446,6 +1446,7 @@ streamlined_deployment_tt:0 "Günstige Panzer.\nHohe Organisation & Durchbruch, 
 tank_destroyer_force_tt:0 "Panzerjäger-Panzer.\nMittlere Organisation & Durchbruch, hoher Durchschlag gegen Panzer.\n§RGut für die Sowjetunion und andere defensive Nationen, sofern du nicht auf viel feindliche Infanterie triffst.§!"
 mobile_defense_tt:0 "Leichte Panzer.\nGute Werte für leichte Panzer-Aufklärungsunterstützung.\n§RAm besten für infanterielastige Nationen.§!"
 peoples_war_things_not_people:0 "Things not people"
+armored_cavalry_tt:0 "Heavy Tanks.\nGute Werte für schwere Panzer.\n§RBeste Option für schwere Panzer Nationen.§!"
 
 
 mission_type_tactics_tt:0 "Offensive Infanterie.\nGute offensive und defensive Werte für Infanterie & Spezialkräfte.\n§RGute Wahl für offensive Infanterienationen.§!"
