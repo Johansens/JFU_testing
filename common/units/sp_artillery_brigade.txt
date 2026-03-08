@@ -181,7 +181,7 @@ sub_units = {
 		breakthrough = -1
 		hard_attack = -1
 		suppression = 1.5
-		soft_attack = 0.5
+		soft_attack = 0.7
 
 		forest = {
 		    attack = -0.40
