@@ -1432,6 +1432,7 @@ leader_traits = {
 		modifier = {
 			mountain = {
 				movement = 0.05
+				attack = 0.1
 			}
 		}
 		
