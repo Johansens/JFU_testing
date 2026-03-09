@@ -43,27 +43,27 @@ line_of_battle = {
         }
         ordnance_handling_training = {
 			battleship = {
-				hg_attack = 0.1
-				hg_armor_piercing = 0.1
+				hg_attack = 0.2
+				hg_armor_piercing = 0.2
 			}
             battle_cruiser = {
-                hg_attack = 0.1
-				hg_armor_piercing = 0.1  
+                hg_attack = 0.2
+				hg_armor_piercing = 0.2
             }
 			heavy_cruiser = {
-				hg_attack = 0.1
-				hg_armor_piercing = 0.1
+				hg_attack = 0.2
+				hg_armor_piercing = 0.2
 			}
         }
         blue_water_logistics = { #TODO see if these make sense
             battleship = {
-				armor_value = 0.25
+				armor_value = 0.2
 			}
             battle_cruiser = {
-                armor_value = 0.25
+                armor_value = 0.2
             }
 			heavy_cruiser = {
-				armor_value = 0.25
+				armor_value = 0.2
 			}
         }
         bulkhead_drills = {
@@ -130,16 +130,16 @@ battlecruiser_supremacy = {
         }
         coordinated_strike_protocol = {
             battleship = {
-               lg_attack = 0.05
-               lg_armor_piercing = 0.05 
+               lg_attack = 0.2
+               lg_armor_piercing = 0.2
             }
 			battle_cruiser = {
-				lg_attack = 0.05
-                lg_armor_piercing = 0.05 
+				lg_attack = 0.2
+                lg_armor_piercing = 0.2 
 			}
 			heavy_cruiser = {
-				lg_attack = 0.05
-                lg_armor_piercing = 0.05 
+				lg_attack = 0.2
+                lg_armor_piercing = 0.2 
 			}
         }
         open_water_patrolling = {
