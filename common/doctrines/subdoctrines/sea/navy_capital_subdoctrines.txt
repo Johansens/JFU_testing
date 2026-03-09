@@ -26,54 +26,68 @@ line_of_battle = {
     }
 
     # EFFECTS
-	navy_fuel_consumption_factor = -0.05
-	naval_has_potf_in_combat_attack = 0.10
+	naval_has_potf_in_combat_attack = 0.1
 
     rewards = {
         flagships={
             battleship= {
-                max_organisation = 5
+                max_organisation = 10              
+            }
+            battle_cruiser = {
+                max_organisation = 10              
             }
 			heavy_cruiser = {
-				max_organisation = 5
+				max_organisation = 10
+                
 			}
         }
         ordnance_handling_training = {
 			battleship = {
-				hg_attack = 0.05
-				lg_attack = 0.05
-				hg_armor_piercing = 0.05
+				hg_attack = 0.1
+				hg_armor_piercing = 0.1
 			}
+            battle_cruiser = {
+                hg_attack = 0.1
+				hg_armor_piercing = 0.1  
+            }
 			heavy_cruiser = {
-				hg_attack = 0.05
+				hg_attack = 0.1
+				hg_armor_piercing = 0.1
 			}
         }
         blue_water_logistics = { #TODO see if these make sense
             battleship = {
-				supply_consumption = -0.1
+				armor_value = 0.25
 			}
-			battle_cruiser = {
-				supply_consumption = -0.1
+            battle_cruiser = {
+                armor_value = 0.25
+            }
+			heavy_cruiser = {
+				armor_value = 0.25
 			}
         }
         bulkhead_drills = {
             battleship = {
-				naval_torpedo_damage_reduction_factor = 0.1
+				naval_torpedo_damage_reduction_factor = 0.25
 			}
+            battle_cruiser = {
+                naval_torpedo_damage_reduction_factor = 0.25
+            }
 			heavy_cruiser = {
-				naval_torpedo_damage_reduction_factor = 0.1
+				naval_torpedo_damage_reduction_factor = 0.25
 			}
         }
         modernized_line_of_battle={
             battleship = {
 				max_organisation = 10
 			}
-			heavy_cruiser = {
-				max_organisation = 5
-			}
-			battle_cruiser= {
-                max_organisation = 5
+            battle_cruiser = {
+                max_organisation = 10
             }
+			heavy_cruiser = {
+				max_organisation = 10
+			}
+
         }
     }
 }
@@ -100,39 +114,49 @@ battlecruiser_supremacy = {
     }
 
     # EFFECTS
-	naval_supply_consumption_factor = -0.05
-	naval_critical_score_chance_factor = 0.03
+	naval_critical_score_chance_factor = 0.05
 
     rewards = {
         ship_of_the_line={
+            battleship = {
+               max_organisation = 5
+            }
             battle_cruiser= {
-                max_organisation = 10
+                max_organisation = 5
             }
 			heavy_cruiser = {
-				max_organisation = 10
+				max_organisation = 5
 			}
         }
         coordinated_strike_protocol = {
+            battleship = {
+               lg_attack = 0.05
+               lg_armor_piercing = 0.05 
+            }
 			battle_cruiser = {
-				hg_attack = 0.10
 				lg_attack = 0.05
+                lg_armor_piercing = 0.05 
 			}
-			battleship = {
+			heavy_cruiser = {
 				lg_attack = 0.05
+                lg_armor_piercing = 0.05 
 			}
         }
         open_water_patrolling = {
+            battleship = {
+                surface_visibility = -0.05
+            }
             battle_cruiser = {
-				surface_detection = 0.05
+				surface_visibility = -0.05
 			}
 			heavy_cruiser = {
-				surface_detection = 0.10
+				surface_visibility = -0.05
 			}
         }
         planning_at_speed = {
             battleship = {
-				naval_speed = 0.1
-			}
+                naval_speed = 0.05
+            }
 			battle_cruiser = {
 				naval_speed = 0.05
 			}
@@ -145,7 +169,7 @@ battlecruiser_supremacy = {
 				max_organisation = 5
 			}
 			battle_cruiser= {
-                max_organisation = 10
+                max_organisation = 5
             }
 			heavy_cruiser = {
 				max_organisation = 5
@@ -176,25 +200,34 @@ armored_raiders = {
     }
 
     # EFFECTS
-	naval_supply_consumption_factor = -0.10
-	screening_without_screens = 0.10
+	spotting_chance = 0.25
+    
 
     rewards = {
         expert_reconnaissance={
-            battle_cruiser= {
-                surface_detection = 0.1
+            battleship = {
+                surface_detection = 0.25
+                naval_range = 0.5
             }
-			battleship = {
-				surface_detection = 0.1
+            battle_cruiser= {
+                surface_detection = 0.25
+                naval_range = 0.5
+            }
+			heavy_cruiser = {
+				surface_detection = 0.25
+                naval_range = 0.5
 			}
         }
         speed_trials = {
-            equipment_bonus = {
-                capital_ship = {
-                    naval_range = 0.10
-                    instant = yes
-                }
+            battleship = {
+                naval_speed = 0.05
             }
+            battle_cruiser= {
+                naval_speed = 0.05
+            }
+			heavy_cruiser = {
+				naval_speed = 0.05
+			}
         }
         modernized_officer_education = {
             battle_cruiser= {
@@ -203,26 +236,30 @@ armored_raiders = {
 			battleship = {
 				max_organisation = 5
 			}
+            heavy_cruiser = {
+                max_organisation = 5
+            }
         }
         capital_raiders = {
             battleship = {
-				max_organisation = 5
-				convoy_raiding_coordination = 0.25
-				surface_detection = 0.10
+                naval_speed = 0.05
 			}
 			battle_cruiser = {
-				max_organisation = 5
-				convoy_raiding_coordination = 0.15
-				surface_detection = 0.15
+                naval_speed = 0.05
 			}
 			heavy_cruiser = {
-				max_organisation = 5
+				naval_speed = 0.05
 			}
         }
         crisis_management={
-            modifier = {
-				navy_casualty_on_hit = -0.40
-				navy_casualty_on_sink = -0.20
+            battleship = {
+                surface_visibility  = -0.05
+			}
+			battle_cruiser = {
+                surface_visibility  = -0.05
+			}
+			heavy_cruiser = {
+				surface_visibility  = -0.05
 			}
         }
     }
@@ -237,8 +274,13 @@ coastal_defence_fleet = {
     xp_cost = 100
     xp_type = navy
 
+    available = {
+        always = no
+    }
+
     visible = {
         has_dlc = "No Compromise, No Surrender"
+        always = no
     }
 
     ai_will_do = { }
@@ -256,14 +298,14 @@ coastal_defence_fleet = {
 			}
 		}
 	}
-	naval_supply_consumption_factor = -0.15
-	navy_max_range_factor = -0.10
+	navy_max_range_factor = -0.50
     coastal_bunker_effectiveness_factor = 0.05
 
 
     rewards = {
         aging_navy={
             modifier = { refit_speed = 0.15 }
+             modifier = { refit_ic_cost = -0.15 }
         }
         casemate_upgrades = {
             equipment_bonus = {
@@ -275,22 +317,30 @@ coastal_defence_fleet = {
             }
         }
         escort_duties= {
-            heavy_cruiser= {
-                sub_detection = 0.15
-            }
-			light_cruiser= {
-                sub_detection = 0.10
+            equipment_bonus = {
+                ship_hull_cruiser_coastal_defense_ship = {
+                    naval_torpedo_damage_reduction_factor = 0.25
+                    armor_value = 0.1
+                    instant = yes
+                }
             }
         }
         hail_of_fire = {
-            modifier = {
-				naval_light_gun_hit_chance_factor = 0.05
-			}
+             equipment_bonus = {
+                ship_hull_cruiser_coastal_defense_ship = {
+                    hg_attack = 0.15
+                    lg_attack = 0.05
+                    instant = yes
+                }
+            }
         }
         spare_part_logistics={
-            modifier = {
-				refit_ic_cost = -0.15
-			}
+            equipment_bonus = {
+                ship_hull_cruiser_coastal_defense_ship = {
+                    build_cost_ic = -0.1
+                    instant = yes
+                }
+            }
         }
     }
 }
@@ -306,10 +356,12 @@ naval_gunfire_support = {
 
     available = {
         always = yes
+        always = no
     }
 
     visible = {
         has_dlc = "No Compromise, No Surrender"
+        always = no
     }
 
     ai_will_do = { }
@@ -388,55 +440,67 @@ battleship_antiair_screen = {
     	has_dlc = "No Compromise, No Surrender"
     }
 
-    navy_anti_air_attack_factor = 0.1
+    navy_capital_ship_attack_factor = -0.1
 
     rewards = {
 
     	all_seas_anti_aircraft = {
-    		battleship = {
-    			anti_air_attack = 0.1
-    		}
-    		battle_cruiser = {
-    			anti_air_attack = 0.1
-    		}
+    		  battleship = {
+               anti_air_attack = 0.1
+            }
+            battle_cruiser= {
+                anti_air_attack = 0.1
+            }
+			heavy_cruiser = {
+				anti_air_attack = 0.1
+			}
     	}
 
     	efficient_navigation = {
-    		battleship = {
-    			fuel_consumption = -0.1
-    		}
+    		  battleship = {
+               naval_speed = 0.05
+            }
+            battle_cruiser= {
+                naval_speed = 0.05
+            }
+			heavy_cruiser = {
+				naval_speed = 0.05
+			}
     	}
 
     	broad_air_cover = {
-    		battleship = {
-    			max_organisation = 15
-    			surface_detection = 0.05
-    		}
-    		battle_cruiser = {
-    			max_organisation = 15
-    			surface_detection = 0.05
-    		}
+    		  battleship = {
+                anti_air_attack = 0.1
+            }
+            battle_cruiser= {
+                anti_air_attack = 0.1
+            }
+			heavy_cruiser = {
+				anti_air_attack = 0.1
+			}
     	}
     	inaccessible_skies = {
-            battleship = {
-                anti_air_attack = 0.15
-                lg_attack = 0.05
+             battleship = {
+               anti_air_attack = 0.1
             }
-            battle_cruiser = {
-                anti_air_attack = 0.15
-                lg_attack = 0.05
+            battle_cruiser= {
+                anti_air_attack = 0.1
             }
+			heavy_cruiser = {
+				anti_air_attack = 0.1
+			}
         }
 
     	capital_screens = {
-    		equipment_bonus = {
-    			ship_hull_heavy = {
-    				armor_value = 0.15
-    				max_strength = 0.05
-    				lg_attack = 0.05
-    				instant = yes
-    			}
-    		}
+    		  battleship = {
+                surface_visibility = -0.05
+            }
+            battle_cruiser= {
+                surface_visibility = -0.05
+            }
+			heavy_cruiser = {
+				surface_visibility = -0.05
+			}
     	}
     }
 }
