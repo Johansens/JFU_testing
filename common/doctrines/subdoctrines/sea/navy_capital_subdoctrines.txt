@@ -258,6 +258,7 @@ coastal_defence_fleet = {
 	}
 	naval_supply_consumption_factor = -0.15
 	navy_max_range_factor = -0.10
+    coastal_bunker_effectiveness_factor = 0.05
 
 
     rewards = {
