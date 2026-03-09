@@ -451,7 +451,7 @@ patrol_boats = {
     		naval_retreat_speed = 0.20	
     	}
     	small_craft_harassment = {
-    		amphibious_invasion_defence = 0.10
+    		#amphibious_invasion_defence = 0.10
     		destroyer = {
     		    torpedo_attack = 0.20
     		}
