@@ -3162,6 +3162,10 @@ focus = {
 		id = ENG_practice_naval_combat
 		prerequisite = { focus = ENG_battelships_focus }
 
+		available = {
+			date > 1942.01.01
+		}
+
 		bypass = {
 		}
 		
