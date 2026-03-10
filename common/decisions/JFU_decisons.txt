@@ -1077,21 +1077,62 @@ political_actions1 = {
 
 		}
 	}
-	"Annex Bulgaria" = {
+	"Annex Bulgaria into ROM and HUN" = {
 		icon = generic_operation
 		fire_only_once = yes
-		allowed = { tag = ROM }
+		allowed = { tag = ITA }
 		cost = 0
 		visible = { 212 = { is_controlled_by = BUL } }
 		available = { BUL = { is_ai = yes } date > 1938.1.1 212 = { is_controlled_by = BUL } }
 		complete_effect = {
 			hidden_effect = {
-				ROM = { add_state_core = 211 add_state_core = 801 add_state_core = 212 add_state_core = 48}
+				BUL = {
+						every_owned_state = {
+							set_building_level = {
+								type = arms_factory
+								level = 0
+							}
+							set_building_level = {
+								type = industrial_complex
+								level = 0
+							}
+						}
+				}
+				ITA = { add_state_core = 211 add_state_core = 801 add_state_core = 212 add_state_core = 48}
 			}
 			annex_country = { target = BUL transfer_troops = no }
+			HUN = {
+				add_offsite_building = {
+					type = arms_factory
+					level = 2
+				}
+				add_offsite_building = {
+					type = industrial_complex
+					level = 2
+				}
+			}
+			ROM = {
+				add_offsite_building = {
+					type = arms_factory
+					level = 4
+				}
+				add_offsite_building = {
+					type = industrial_complex
+					level = 8
+				}
+				46 = {
+					add_extra_state_shared_building_slots = 6
+				}
+				81 = {
+					add_extra_state_shared_building_slots = 2
+				}
+				971 = {
+					add_extra_state_shared_building_slots = 2
+				}
+			}
 		}
 	}
-	"Annex Bulgaria ITA" = {
+	"Annex Bulgaria into ITA" = {
 		icon = generic_operation
 		fire_only_once = yes
 		allowed = { tag = ITA }
