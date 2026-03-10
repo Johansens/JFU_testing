@@ -1344,8 +1344,200 @@ JFU_decisions = {
 			custom_effect_tooltip = SOV_small_barb_enable_tt
 
 			SOV = {
-				add_ideas = JFU_SOVIET_SMALL
+				#add_ideas = JFU_SOVIET_SMALL
 				219 = {
+					set_building_level = {
+						type = anti_air_building
+						level = 10
+						instant_build = yes
+					}
+					set_building_level = {
+						type = air_base
+						level = 100
+						instant_build = yes
+					}								
+				}
+				195 = {
+					set_building_level = {
+						type = anti_air_building
+						level = 10
+						instant_build = yes
+					}
+					set_building_level = {
+						type = air_base
+						level = 100
+						instant_build = yes
+					}								
+				}
+				217 = {
+					set_building_level = {
+						type = anti_air_building
+						level = 10
+						instant_build = yes
+					}
+					set_building_level = {
+						type = air_base
+						level = 100
+						instant_build = yes
+					}								
+				}
+				252 = {
+					set_building_level = {
+						type = anti_air_building
+						level = 10
+						instant_build = yes
+					}
+					set_building_level = {
+						type = air_base
+						level = 100
+						instant_build = yes
+					}								
+				}
+				257 = {
+					set_building_level = {
+						type = anti_air_building
+						level = 10
+						instant_build = yes
+					}
+					set_building_level = {
+						type = air_base
+						level = 100
+						instant_build = yes
+					}								
+				}
+				218 = {
+					set_building_level = {
+						type = anti_air_building
+						level = 10
+						instant_build = yes
+					}
+					set_building_level = {
+						type = air_base
+						level = 100
+						instant_build = yes
+					}								
+				}
+				221 = {
+					set_building_level = {
+						type = anti_air_building
+						level = 10
+						instant_build = yes
+					}
+					set_building_level = {
+						type = air_base
+						level = 100
+						instant_build = yes
+					}								
+				}
+				222 = {
+					set_building_level = {
+						type = anti_air_building
+						level = 10
+						instant_build = yes
+					}
+					set_building_level = {
+						type = air_base
+						level = 100
+						instant_build = yes
+					}								
+				}
+				242 = {
+					set_building_level = {
+						type = anti_air_building
+						level = 10
+						instant_build = yes
+					}
+					set_building_level = {
+						type = air_base
+						level = 100
+						instant_build = yes
+					}								
+				}
+				209 = {
+					set_building_level = {
+						type = anti_air_building
+						level = 10
+						instant_build = yes
+					}
+					set_building_level = {
+						type = air_base
+						level = 100
+						instant_build = yes
+					}								
+				}
+				260 = {
+					set_building_level = {
+						type = anti_air_building
+						level = 10
+						instant_build = yes
+					}
+					set_building_level = {
+						type = air_base
+						level = 100
+						instant_build = yes
+					}								
+				}
+				248 = {
+					set_building_level = {
+						type = anti_air_building
+						level = 10
+						instant_build = yes
+					}
+					set_building_level = {
+						type = air_base
+						level = 100
+						instant_build = yes
+					}								
+				}
+				249 = {
+					set_building_level = {
+						type = anti_air_building
+						level = 10
+						instant_build = yes
+					}
+					set_building_level = {
+						type = air_base
+						level = 100
+						instant_build = yes
+					}								
+				}
+				815 = {
+					set_building_level = {
+						type = anti_air_building
+						level = 10
+						instant_build = yes
+					}
+					set_building_level = {
+						type = air_base
+						level = 100
+						instant_build = yes
+					}								
+				}
+				198 = {
+					set_building_level = {
+						type = anti_air_building
+						level = 10
+						instant_build = yes
+					}
+					set_building_level = {
+						type = air_base
+						level = 100
+						instant_build = yes
+					}								
+				}
+				206 = {
+					set_building_level = {
+						type = anti_air_building
+						level = 10
+						instant_build = yes
+					}
+					set_building_level = {
+						type = air_base
+						level = 100
+						instant_build = yes
+					}								
+				}
+				202 = {
 					set_building_level = {
 						type = anti_air_building
 						level = 10
@@ -1359,8 +1551,58 @@ JFU_decisions = {
 				}
 			}
 			GER = {
-				add_ideas = JFU_SOVIET_SMALL
+				#add_ideas = JFU_SOVIET_SMALL
 				64 = {
+					set_building_level = {
+						type = anti_air_building
+						level = 10
+						instant_build = yes
+					}
+					set_building_level = {
+						type = air_base
+						level = 100
+						instant_build = yes
+					}								
+				}
+				763 = {
+					set_building_level = {
+						type = anti_air_building
+						level = 10
+						instant_build = yes
+					}
+					set_building_level = {
+						type = air_base
+						level = 100
+						instant_build = yes
+					}								
+				}
+				97 = {
+					set_building_level = {
+						type = anti_air_building
+						level = 10
+						instant_build = yes
+					}
+					set_building_level = {
+						type = air_base
+						level = 100
+						instant_build = yes
+					}								
+				}
+				92 = {
+					set_building_level = {
+						type = anti_air_building
+						level = 10
+						instant_build = yes
+					}
+					set_building_level = {
+						type = air_base
+						level = 100
+						instant_build = yes
+					}								
+				}
+			}
+			ROM = {
+				79 = {
 					set_building_level = {
 						type = anti_air_building
 						level = 10
