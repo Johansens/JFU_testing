@@ -13,7 +13,7 @@ strategic_region={
 			rain_heavy=0.100
 			snow=0.000
 			blizzard=0.000
-			mud=1.0
+			mud=0.0
 			sandstorm=0.000
 			min_snow_level=0.000
 		}
@@ -25,7 +25,7 @@ strategic_region={
 			rain_heavy=0.100
 			snow=0.000
 			blizzard=0.000
-			mud=1.0
+			mud=0.0
 			sandstorm=0.000
 			min_snow_level=0.000
 		}
@@ -37,7 +37,7 @@ strategic_region={
 			rain_heavy=0.100
 			snow=0.000
 			blizzard=0.000
-			mud=1.0
+			mud=0.0
 			sandstorm=0.000
 			min_snow_level=0.000
 		}
@@ -49,7 +49,7 @@ strategic_region={
 			rain_heavy=0.500
 			snow=0.000
 			blizzard=0.000
-			mud=1.000
+			mud=0.000
 			sandstorm=0.000
 			min_snow_level=0.000
 		}
@@ -61,7 +61,7 @@ strategic_region={
 			rain_heavy=0.500
 			snow=0.000
 			blizzard=0.000
-			mud=1.000
+			mud=0.000
 			sandstorm=0.000
 			min_snow_level=0.000
 		}
@@ -73,7 +73,7 @@ strategic_region={
 			rain_heavy=0.500
 			snow=0.000
 			blizzard=0.000
-			mud=1.000
+			mud=0.000
 			sandstorm=0.000
 			min_snow_level=0.000
 		}
@@ -85,7 +85,7 @@ strategic_region={
 			rain_heavy=0.450
 			snow=0.000
 			blizzard=0.000
-			mud=1.000
+			mud=0.000
 			sandstorm=0.000
 			min_snow_level=0.000
 		}
@@ -97,7 +97,7 @@ strategic_region={
 			rain_heavy=0.450
 			snow=0.000
 			blizzard=0.000
-			mud=1.000
+			mud=0.000
 			sandstorm=0.000
 			min_snow_level=0.000
 		}
@@ -109,7 +109,7 @@ strategic_region={
 			rain_heavy=0.450
 			snow=0.000
 			blizzard=0.000
-			mud=1.000
+			mud=0.000
 			sandstorm=0.000
 			min_snow_level=0.000
 		}
@@ -121,7 +121,7 @@ strategic_region={
 			rain_heavy=0.450
 			snow=0.000
 			blizzard=0.000
-			mud=1.050
+			mud=0.050
 			sandstorm=0.000
 			min_snow_level=0.000
 		}
@@ -133,7 +133,7 @@ strategic_region={
 			rain_heavy=0.100
 			snow=0.000
 			blizzard=0.000
-			mud=1.000
+			mud=0.000
 			sandstorm=0.000
 			min_snow_level=0.000
 		}
@@ -145,7 +145,7 @@ strategic_region={
 			rain_heavy=0.100
 			snow=0.000
 			blizzard=0.000
-			mud=1.000
+			mud=0.000
 			sandstorm=0.000
 			min_snow_level=0.000
 		}
