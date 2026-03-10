@@ -202,7 +202,7 @@ categories =  {
 	
 	desert = {
 		color = { 255 127 0 }
-		movement_cost = 2.5
+		movement_cost = 3
 		attrition = 0.05
 		combat_width = 80
 		combat_support_width = 40
