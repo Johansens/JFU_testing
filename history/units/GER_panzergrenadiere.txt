@@ -1,0 +1,71 @@
+division_template = {
+	is_locked = yes
+	name = "Panzergrenadierdivision"
+	regiments = {
+		mechanized = { x = 0 y = 0 }
+		mechanized = { x = 0 y = 1 }
+		mechanized = { x = 0 y = 2 }		
+		mechanized = { x = 0 y = 3}
+		mechanized = { x = 0 y = 4 }
+		mechanized = { x = 1 y = 0 }
+		mechanized = { x = 1 y = 1 }
+		mechanized = { x = 1 y = 2 }
+		mechanized = { x = 1 y = 3 }
+		mechanized = { x = 1 y = 4 }
+		mechanized = { x = 3 y = 0 }
+		mechanized = { x = 3 y = 1 }
+		mechanized = { x = 3 y = 2 }		
+		mechanized = { x = 3 y = 3}
+		mechanized = { x = 3 y = 4 }
+		mechanized = { x = 2 y = 0 }
+		mechanized = { x = 2 y = 1 }
+		mechanized = { x = 2 y = 2 }		
+		mechanized = { x = 2 y = 3}
+		mechanized = { x = 2 y = 4 }
+		
+		
+
+	}
+
+
+	support = {
+	anti_air = { x = 0 y = 0 }
+	engineer = { x = 0 y = 1 }
+	artillery = { x= 0 y = 2 }
+	mot_recon = { x = 0 y =3}
+	field_hospital = { x = 0 y = 4}
+	}
+}
+
+units = {
+
+	division = {	
+		start_equipment_factor = 1 start_experience_factor = 3
+		location = 11506
+		division_template = "Panzergrenadierdivision"
+		name = "3. Panzergrenadier-Division"
+		force_equipment_variants = { infantry_equipment_3 = { owner = "GER" } }
+	}
+	division = {	
+		start_equipment_factor = 1 start_experience_factor = 3
+		location = 6488
+		division_template = "Panzergrenadierdivision"
+		name = "15. Panzergrenadier-Division"
+		force_equipment_variants = { infantry_equipment_3 = { owner = "GER" } }
+	}
+	division = {	
+		start_equipment_factor = 1 start_experience_factor = 3
+		location = 11666
+		division_template = "Panzergrenadierdivision"
+		name = "Panzergrenadier-Division Feldherrnhalle"
+		force_equipment_variants = { infantry_equipment_3 = { owner = "GER" } }
+	}
+	division = {	
+		start_equipment_factor = 1 start_experience_factor = 3
+		location = 3544
+		division_template = "Panzergrenadierdivision"
+		name = "Panzergrenadier-Division Großdeutschland"
+		force_equipment_variants = { infantry_equipment_3 = { owner = "GER" } }
+	}
+
+	
