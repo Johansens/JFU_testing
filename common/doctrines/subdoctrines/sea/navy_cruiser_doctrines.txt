@@ -1,0 +1,253 @@
+anti_aircraft_cruisers = {
+	track = carriers
+    name = SUBDOCTRINE_SCREEN_ANTI_AIRCRAFT_CRUISERS
+    description = SUBDOCTRINE_SCREEN_ANTI_AIRCRAFT_CRUISERS_DESC
+    icon = GFX_doctrine_massed_strikes_medium
+
+    xp_cost = 100
+    xp_type = navy
+
+    available = {
+   		always = yes
+    }
+
+    visible = {
+    	has_dlc = "No Compromise, No Surrender"
+    }
+    navy_anti_air_attack_factor = 0.1
+
+    rewards = {
+    	calibrated_deck_guns = {
+    		light_cruiser = {
+    			anti_air_attack = 0.15
+    		}
+			heavy_cruiser = {
+    			anti_air_attack = 0.15
+    		}
+    	}
+    	priority_air_targets = {
+    		light_cruiser = {
+    			anti_air_attack = 0.15
+    		}
+			heavy_cruiser = {
+    			anti_air_attack = 0.15
+    		}
+    	}
+    	evasion_techniques = {
+    		light_cruiser = {
+    			max_organisation = 20
+    		}
+			heavy_cruiser = {
+    			max_organisation = 20
+    		}
+    	}
+
+    	air_interdiction_screening = {
+    		light_cruiser = {
+    			naval_speed = 0.05
+    		}
+			heavy_cruiser = {
+    			naval_speed = 0.05
+    		}
+    	}
+    	sustained_engagements = {
+    		light_cruiser = {
+    			surface_visibility = -0.05
+    		}
+			heavy_cruiser = {
+    			surface_visibility = -0.05
+    		}
+    	}
+    }
+}
+
+jeune_ecole = {
+	track = carriers
+    name = SUBDOCTRINE_SCREEN_JEUNE_ECOLE
+    description = SUBDOCTRINE_SCREEN_JEUNE_ECOLE_DESC
+    icon = GFX_doctrine_battlefleet_concentration_medium
+    xp_cost = 100
+    xp_type = navy
+
+    available = {
+    	#TODO: special project
+   		always = yes
+    }
+
+
+    rewards = {
+
+    	commerce_raiding_priority = {
+			light_cruiser = {
+    			reliability = 0.05
+    		}
+			heavy_cruiser = {
+    			reliability = 0.05
+    		}
+    	}
+    	large_torpedo_boats = {
+			light_cruiser = {
+    			max_strength = 0.1
+    		}
+			heavy_cruiser = {
+    			max_strength = 0.1
+    		}
+    	}
+    	total_economic_warfare = {
+    		light_cruiser = {
+    			max_organisation = 5
+    		}
+			heavy_cruiser = {
+    			max_organisation = 5
+    		}
+    	}
+    	sea_scabs = {
+    		light_cruiser = {
+    			surface_visibility = -0.05
+    		}
+			heavy_cruiser = {
+    			surface_visibility = -0.05
+    		}
+    	}
+    	autonomous_cruisers = {
+    		light_cruiser = {
+    			naval_speed = 0.05
+    		}
+			heavy_cruiser = {
+    			naval_speed = 0.05
+    		}
+    	}
+    }
+
+}
+
+patrol_boats = {
+    track = carriers
+    name = SUBDOCTRINE_SCREEN_PATROL_BOATS
+    description = SUBDOCTRINE_SCREEN_PATROL_BOATS_DESC
+    icon = GFX_doctrine_patrol_boats_medium
+    xp_cost = 50
+    xp_type = navy
+
+    available = {
+   		always = yes
+    }
+    visible = {
+    	has_dlc = "No Compromise, No Surrender"
+    }
+
+	navy_capital_ship_attack_factor = 0.1
+
+    rewards = {
+
+    	hit_and_run = {
+    		light_cruiser = {
+				max_organisation = 5
+    		}
+			heavy_cruiser = {
+				max_organisation = 5
+    		}
+    	}
+    	small_craft_harassment = {
+			light_cruiser = {
+    			lg_attack = 0.2
+				lg_armor_piercing = 0.2
+    		}
+			heavy_cruiser = {
+    			lg_attack = 0.2
+				lg_armor_piercing = 0.2
+    		}
+    	}	
+    	lie_in_wait = {		
+			light_cruiser = {
+				surface_visibility = -0.05
+    		}
+			heavy_cruiser = {
+				surface_visibility = -0.05
+    		}
+		}
+    	fast_sortie_turnaround = {
+ 			light_cruiser = {
+				naval_speed = 0.05
+    		}
+			heavy_cruiser = {
+				naval_speed = 0.05
+    		}
+    	}
+    	home_waters_defense = {
+			light_cruiser = {
+				naval_light_gun_hit_chance_factor = 0.05
+    		}
+			heavy_cruiser = {
+				naval_light_gun_hit_chance_factor = 0.05
+    		}
+		}
+	}
+}
+
+screen_support_focus = {
+	track = carriers
+    name = SUBDOCTRINE_SCREEN_SUPPORT_FOCUS
+    description = SUBDOCTRINE_SCREEN_SUPPORT_FOCUS_DESC
+    icon = GFX_doctrine_convoy_escorts_medium
+
+    xp_cost = 100
+    xp_type = navy
+
+    available = {
+   		always = yes
+
+    }
+    visible = {
+    	has_dlc = "No Compromise, No Surrender"
+    }
+
+naval_heavy_gun_hit_chance_factor = 0.05
+
+    rewards = {
+    	close_support_integration = {
+			light_cruiser = {
+				naval_torpedo_damage_reduction_factor = 0.15
+				naval_torpedo_enemy_critical_chance_factor = 0.15
+    		}
+			heavy_cruiser = {
+				naval_torpedo_damage_reduction_factor = 0.15
+				naval_torpedo_enemy_critical_chance_factor = 0.15
+    		}
+    	}
+    	sustainable_task_forces = {
+			light_cruiser = {
+				max_organisation = 20
+    		}
+			heavy_cruiser = {
+				max_organisation = 5
+    		}
+    	}
+    	maintenance_routines = {
+			heavy_cruiser = {
+    			hg_attack = 0.2
+				hg_armor_piercing = 0.2
+    		}
+
+
+    	}
+    	protected_naval_expansion = {
+			light_cruiser = {
+				armor_value = 0.2
+    		}
+			heavy_cruiser = {
+				armor_value = 0.2
+    		}
+
+    	}
+    	patrol_pattern_improvements = {
+    		light_cruiser = {
+				reliability = 0.05
+    		}
+			heavy_cruiser = {
+				reliability = 0.05
+    		}
+
+    	}
+    }
+}

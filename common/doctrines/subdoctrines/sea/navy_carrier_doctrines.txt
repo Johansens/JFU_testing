@@ -16,7 +16,10 @@ carrier_battlegroups = {
     }
 
     available = {
-        always = yes
+        always = no
+    }
+    visible = {
+        always = no
     }
 
     ai_will_do = { }
@@ -59,7 +62,10 @@ floating_airfields = {
     xp_type = navy
 
     available = {
-        always = yes
+        always = no
+    }
+    visible = {
+        always = no
     }
 
     ai_will_do = { 
@@ -119,10 +125,10 @@ escort_carrier_support = {
     xp_type = navy
 
     available = {
-        is_special_project_completed = sp:sp_naval_escort_carrier
+        always = no
     }
     visible = {
-        has_dlc = "No Compromise, No Surrender"
+        always = no
     }
     
     convoy_escort_efficiency = 0.5
@@ -189,13 +195,10 @@ broad_naval_support = {
     xp_type = navy
 
     available = {
-        OR = {
-            is_special_project_completed = sp:sp_naval_escort_carrier
-            is_special_project_completed = sp:sp_naval_support_ships
-        }
+        always = no
     }
     visible = {
-        has_dlc = "No Compromise, No Surrender"
+        always = no
     }
 
     critical_receive_chance = -0.1
@@ -254,7 +257,10 @@ massed_carrier_fleet = {
         }
     }
     available = {
-        always = yes
+        always = no
+    }
+    visible = {
+        always = no
     }
 
     naval_morale_factor	= 0.05
@@ -323,10 +329,10 @@ light_task_forces = {
         
     }
     available = {
-        always = yes
+        always = no
     }
     visible = {
-        has_dlc = "No Compromise, No Surrender"
+        always = no
     }
 
 

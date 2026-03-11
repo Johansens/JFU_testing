@@ -36,10 +36,6 @@ line_of_battle = {
             battle_cruiser = {
                 max_organisation = 10              
             }
-			heavy_cruiser = {
-				max_organisation = 10
-                
-			}
         }
         ordnance_handling_training = {
 			battleship = {
@@ -50,10 +46,7 @@ line_of_battle = {
                 hg_attack = 0.2
 				hg_armor_piercing = 0.2
             }
-			heavy_cruiser = {
-				hg_attack = 0.2
-				hg_armor_piercing = 0.2
-			}
+
         }
         blue_water_logistics = { #TODO see if these make sense
             battleship = {
@@ -62,9 +55,7 @@ line_of_battle = {
             battle_cruiser = {
                 armor_value = 0.2
             }
-			heavy_cruiser = {
-				armor_value = 0.2
-			}
+
         }
         bulkhead_drills = {
             battleship = {
@@ -73,9 +64,7 @@ line_of_battle = {
             battle_cruiser = {
                 naval_torpedo_damage_reduction_factor = 0.25
             }
-			heavy_cruiser = {
-				naval_torpedo_damage_reduction_factor = 0.25
-			}
+
         }
         modernized_line_of_battle={
             battleship = {
@@ -84,9 +73,7 @@ line_of_battle = {
             battle_cruiser = {
                 max_organisation = 10
             }
-			heavy_cruiser = {
-				max_organisation = 10
-			}
+
 
         }
     }
@@ -124,9 +111,7 @@ battlecruiser_supremacy = {
             battle_cruiser= {
                 max_organisation = 5
             }
-			heavy_cruiser = {
-				max_organisation = 5
-			}
+
         }
         coordinated_strike_protocol = {
             battleship = {
@@ -137,10 +122,7 @@ battlecruiser_supremacy = {
 				lg_attack = 0.2
                 lg_armor_piercing = 0.2 
 			}
-			heavy_cruiser = {
-				lg_attack = 0.2
-                lg_armor_piercing = 0.2 
-			}
+
         }
         open_water_patrolling = {
             battleship = {
@@ -149,9 +131,7 @@ battlecruiser_supremacy = {
             battle_cruiser = {
 				surface_visibility = -0.05
 			}
-			heavy_cruiser = {
-				surface_visibility = -0.05
-			}
+
         }
         planning_at_speed = {
             battleship = {
@@ -160,9 +140,7 @@ battlecruiser_supremacy = {
 			battle_cruiser = {
 				naval_speed = 0.05
 			}
-			heavy_cruiser = {
-				naval_speed = 0.05
-			}
+
         }
         capital_drills={
             battleship = {
@@ -171,9 +149,7 @@ battlecruiser_supremacy = {
 			battle_cruiser= {
                 max_organisation = 5
             }
-			heavy_cruiser = {
-				max_organisation = 5
-			}
+
         }
     }
 }
@@ -208,15 +184,14 @@ armored_raiders = {
             battleship = {
                 surface_detection = 0.25
                 naval_range = 0.5
+                convoy_raiding_coordination = 0.05
             }
             battle_cruiser= {
                 surface_detection = 0.25
                 naval_range = 0.5
+                convoy_raiding_coordination = 0.05
             }
-			heavy_cruiser = {
-				surface_detection = 0.25
-                naval_range = 0.5
-			}
+
         }
         speed_trials = {
             battleship = {
@@ -225,9 +200,7 @@ armored_raiders = {
             battle_cruiser= {
                 naval_speed = 0.05
             }
-			heavy_cruiser = {
-				naval_speed = 0.05
-			}
+
         }
         modernized_officer_education = {
             battle_cruiser= {
@@ -236,9 +209,7 @@ armored_raiders = {
 			battleship = {
 				max_organisation = 5
 			}
-            heavy_cruiser = {
-                max_organisation = 5
-            }
+
         }
         capital_raiders = {
             battleship = {
@@ -247,9 +218,7 @@ armored_raiders = {
 			battle_cruiser = {
                 naval_speed = 0.05
 			}
-			heavy_cruiser = {
-				naval_speed = 0.05
-			}
+
         }
         crisis_management={
             battleship = {
@@ -258,9 +227,7 @@ armored_raiders = {
 			battle_cruiser = {
                 surface_visibility  = -0.05
 			}
-			heavy_cruiser = {
-				surface_visibility  = -0.05
-			}
+
         }
     }
 }
@@ -378,9 +345,7 @@ naval_gunfire_support = {
         }
 
         inshore_aa_screen = {
-			heavy_cruiser = {
-				anti_air_attack = 0.15
-			}		
+		
 			battleship = {
 				anti_air_attack = 0.15
 			}
@@ -413,9 +378,7 @@ naval_gunfire_support = {
 			battle_cruiser = {
     			surface_visibility = -0.10
 			}
-			heavy_cruiser = {
-    			surface_visibility = -0.10
-			}
+
 			naval_coordination = 0.1
 			refit_speed = 0.2
    		}
@@ -440,7 +403,7 @@ battleship_antiair_screen = {
     	has_dlc = "No Compromise, No Surrender"
     }
 
-    navy_capital_ship_attack_factor = -0.1
+    navy_anti_air_attack_factor = 0.1
 
     rewards = {
 
@@ -451,9 +414,7 @@ battleship_antiair_screen = {
             battle_cruiser= {
                 anti_air_attack = 0.1
             }
-			heavy_cruiser = {
-				anti_air_attack = 0.1
-			}
+
     	}
 
     	efficient_navigation = {
@@ -463,9 +424,7 @@ battleship_antiair_screen = {
             battle_cruiser= {
                 naval_speed = 0.05
             }
-			heavy_cruiser = {
-				naval_speed = 0.05
-			}
+
     	}
 
     	broad_air_cover = {
@@ -475,9 +434,7 @@ battleship_antiair_screen = {
             battle_cruiser= {
                 anti_air_attack = 0.1
             }
-			heavy_cruiser = {
-				anti_air_attack = 0.1
-			}
+
     	}
     	inaccessible_skies = {
              battleship = {
@@ -486,9 +443,7 @@ battleship_antiair_screen = {
             battle_cruiser= {
                 anti_air_attack = 0.1
             }
-			heavy_cruiser = {
-				anti_air_attack = 0.1
-			}
+
         }
 
     	capital_screens = {
@@ -498,9 +453,7 @@ battleship_antiair_screen = {
             battle_cruiser= {
                 surface_visibility = -0.05
             }
-			heavy_cruiser = {
-				surface_visibility = -0.05
-			}
+
     	}
     }
 }
