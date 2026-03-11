@@ -1891,6 +1891,23 @@
  mobile_defense_hide_and_seek:0 "Hide & Seek"
  category_mobile_rocket_artillery:0 "£unit_category_mobile_and_mobile_combat_sup_icon_small All Mobile Artillery Battalion"
 
+#destroyer
+ SUBDOCTRINE_SCREEN_CONVOY_ESCORT_DESC:0 "Destroyer Stats. \nLight Attack and other Offensive Stats against the Screening Line. \n§RGood Option against enemy screening.§! "
+ SUBDOCTRINE_SCREEN_INTEGRATED_OPERATIONS_DESC:0 "Destroyer Stats. \nVisability and other Survivability Stats. \n§RGood Option to make your Screening more Tanky.§!"
+ SUBDOCTRINE_SCREEN_HUNTER_KILLERS_DESC:0 "Destroyer Stats. \nDepth Charges and other Anti-Sub Stats. \n§RGood Option to destroy enemy Submarines.§!"
+ SUBDOCTRINE_SCREEN_TORPEDO_PRIMACY_DESC1:0 "Destroyer Stats. \nTorpedo Stats. \n§RGood Option to improve your Torpedos.§!"
+
+#cruiser
+ SUBDOCTRINE_SCREEN_ANTI_AIRCRAFT_CRUISERS_DESC:0 "Cruiser Stats. \nAnti Air and Survivability Stats \n§R Good Option against enemy bombers.§!" 
+ SUBDOCTRINE_SCREEN_JEUNE_ECOLE_DESC1:0 "Cruiser Stats. \nSurvivability Stats \n§R Good Option in General.§!"
+ SUBDOCTRINE_SCREEN_PATROL_BOATS_DESC1:0 "Cruiser Stats. \nSurvivability Stats and light attack against enemy Screening\n§R Good Option to improve your Light Attack.§!"
+ SUBDOCTRINE_SCREEN_SUPPORT_FOCUS_DESC1:0 "Cruiser Stats. \nSurvivability Stats and heavy Attack against Battle-Line \n§R Good Option to improve your heavy Attack.§!"
+
+#bbs
+ SUBDOCTRINE_LINE_OF_BATTLE_DESC:0 "Batteleship & Battlecruiser Stats. \nHeavy Attack and other Offensive Stats against the Battle-line. \n§R Good option against enemy Battle-line.§!"
+ SUBDOCTRINE_BATTLECRUISER_SUPREMACY_DESC:0 "Battleship & Battlecruiser Stats. \n Survivability Stats and Light attack Stats against enemy Screening. \n§R Good option in General.§! "
+ SUBDOCTRINE_ARMORED_RAIDERS_DESC:0 "Battleship & Battlecruiser Stats. \nSurvivability Stats and Raiding Stats. \n§RGood Option for Panzership Raiders.§!"
+ SUBDOCTRINE_BATTLESHIP_ANTIAIR_SCREEN_DESC:0 "Battleship & Battlecruiser Stats. \nAnti Air and Survivability Stats \n§R Good Option against enemy bombers.§! "
  #Herrscher England #
  
 

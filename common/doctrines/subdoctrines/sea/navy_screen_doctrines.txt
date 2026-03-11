@@ -172,7 +172,7 @@ hunter_killers = {
 torpedo_primacy = {
     track = screens
     name = SUBDOCTRINE_SCREEN_TORPEDO_PRIMACY
-    description = SUBDOCTRINE_SCREEN_TORPEDO_PRIMACY_DESC
+    description = SUBDOCTRINE_SCREEN_TORPEDO_PRIMACY_DESC1
     icon = GFX_doctrine_submarine_offensive_medium
 
     xp_cost = 100
