@@ -40,20 +40,6 @@ ideas = {
 			}
 		}
 
-		GER_tank_research = {
-			name = "Tank Research Program"
-			allowed = {
-				always = no
-			}
-
-			removal_cost = -1
-
-			picture = generic_production_bonus
-			research_bonus = {
-				armor = 0.1
-			}
-		}
-
 		SWE_historical_trade_with_Germany_dummy = {
 			allowed = {
 				always = yes
