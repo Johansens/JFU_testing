@@ -12273,7 +12273,7 @@ focus_tree = {
 		}
 	}
 
-	focus = {
+	focus = { 
 		id = "Panzergrenadiere"
 		icon = GFX_GER_mech_spawnin
 		prerequisite = { focus = "Sd.Kfz. 251/20" }
@@ -12452,7 +12452,7 @@ focus_tree = {
 				name = "German Tank Research"
 				bonus = 1
 				uses = 1
-				technology = main_battle_tank
+				technology = main_battle_tank_chassis
 			}
 		}
 	}
