@@ -48,6 +48,8 @@ NDefines.NDiplomacy.NAVAL_BLOCKADE_BASE_COST = 999 			-- Base PP cost for issuin
 NDefines.NDiplomacy.NAVAL_BLOCKADE_DAILY_COST = 10					-- Daily PP cost for one naval blockade
 NDefines.NDiplomacy.AUTONOMY_LEVEL_CHANGE_PP_ANNEX = 999            -- vanilla 300 Annexation cost
 
+NDefines.NMilitary.UNIT_EXPERIENCE_PER_COMBAT_HOUR = 0.0005
+NDefines.NMilitary.EXPERIENCE_LOSS_FACTOR = 1
 NDefines.NMilitary.BASE_DIVISION_BRIGADE_GROUP_COST = 0
 NDefines.NMilitary.BASE_DIVISION_BRIGADE_CHANGE_COST = 0
 NDefines.NMilitary.BASE_DIVISION_SUPPORT_SLOT_COST = 0
@@ -73,7 +75,7 @@ NDefines.NMilitary.BATALION_CHANGED_EXPERIENCE_DROP = 0.0
 NDefines.NMilitary.BATALION_NOT_CHANGED_EXPERIENCE_DROP = 0.0
 NDefines.NMilitary.COMBAT_MINIMUM_TIME = 2 		-- VANILLA 4
 NDefines.NMilitary.ARMY_FUEL_COST_MULT = 0.3	-- VANILLA 0.5             --fuel cost multiplier for all army related stuff
-NDefines.NMilitary.EXPERIENCE_COMBAT_FACTOR = 0.075 -- VANILLA 0.25
+NDefines.NMilitary.EXPERIENCE_COMBAT_FACTOR = 0.05 -- VANILLA 0.25
 --NDefines.NMilitary.UNIT_EXPERIENCE_PER_TRAINING_DAY = 0  -- VANILLA 0.0015
 NDefines.NMilitary.RIVER_CROSSING_PENALTY = -0.3                 -- small river crossing
 NDefines.NMilitary.RIVER_CROSSING_PENALTY_LARGE = -0.5           -- large river crossing
@@ -82,6 +84,7 @@ NDefines.NMilitary.RIVER_CROSSING_SPEED_PENALTY_LARGE = -0.5     -- large river 
 NDefines.NMilitary.ENCIRCLED_DISBAND_MANPOWER_FACTOR = 0            -- WAS 0.2 | Most rulesets ban deleting encircled troops, but at least this prevents some manpower from returning | Deleting encircled divisions is always banned anyways, so this reduces unfair play | percentage of manpower returned when an encircled unit is disbanded
 NDefines.NNavy.AMPHIBIOUS_LANDING_PENALTY = -0.7				-- VANILLA -0.5 amphibious landing penalty
 
+NDefines.NMilitary.COST_INCREASE_PER_ACTIVE_MEDAL = 0.0
 NDefines.NMilitary.COMBAT_MOVEMENT_SPEED = 0.30 -- VANILLA 0.33
 NDefines.NMilitary.LAND_SPEED_MODIFIER = 0.05	-- VANILLA 0.05
 NDefines.NMilitary.RETREAT_SPEED_FACTOR = 0.4		-- VANILLA 0.25 
