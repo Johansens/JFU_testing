@@ -48,6 +48,11 @@ sub_units = {
 		need = {
 			infantry_equipment = 100
 		}
+
+		mountain = {
+			attack = -0.1
+			defence = -0.1
+		}
 	}
 
 	bicycle_battalion = {
