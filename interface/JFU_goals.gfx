@@ -2036,11 +2036,86 @@ spriteTypes = {
 		name = "GFX_R56_FOCUS_GENERIC_ARMY_MODERNIZATIONS"
 		texturefile = "gfx/interface/goals/generic/r56_focus_generic_army_modernizations.dds"
 	}
-    
+
+	SpriteType = { 
+		name = "GER_extra_tech_slot_ss"
+		texturefile = "gfx/interface/tfu/GER/GER_extra_tech_slot.dds"
+	}	
+			SpriteType = { 
+			name = "GER_extra_tech_slot_ss"
+			texturefile = "gfx/interface/tfu/GER/GER_extra_tech_slot.dds"
+		}
 
     SpriteType = {
 		name = "GFX_R56_GOAL_GENERIC_BASTION_OF_DEMOCRACY"
 		texturefile = "gfx/interface/goals/generic/r56_goal_generic_bastion_of_democracy.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_GER_e50"
+		texturefile = "gfx/interface/tfu/GER/GER_e50.dds"
+	}
+
+		SpriteType = { 
+		name = "GFX_GER_mp43"
+		texturefile = "gfx/interface/tfu/GER/GER_mp43.dds"
+	}
+
+		SpriteType = { 
+		name = "focus_GER_porsche"
+		texturefile = "gfx/interface/tfu/GER/focus_GER_porsche.dds"
+	}
+
+	SpriteType = { 
+		name = "GER_flak88"
+		texturefile = "gfx/interface/tfu/GER/GER_flak88.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_v1"
+		texturefile = "gfx/interface/tfu/GER/GER_v1.dds"
+	}
+
+		SpriteType = { 
+		name = "GFX_wunderwaffe"
+		texturefile = "gfx/interface/tfu/GER/GER_wunderwaffe.dds"
+	}
+		SpriteType = { 
+		name = "focus_GER_krupp"
+		texturefile = "gfx/interface/tfu/GER/focus_GER_krupp.dds"
+	}
+		SpriteType = { 
+		name = "GOAL_german_super_heavy"
+		texturefile = "gfx/interface/tfu/GER/GOAL_german_super_heavy.dds"
+	}
+		SpriteType = { 
+		name = "GFX_GER_panzerfaust"
+		texturefile = "gfx/interface/tfu/GER/GER_panzerfaust.dds"
+	}
+
+		SpriteType = { 
+		name = "GFX_v2"
+		texturefile = "gfx/interface/tfu/GER/GER_v2.dds"
+	}
+
+		SpriteType = { 
+		name = "focus_GER_nbw"
+		texturefile = "gfx/interface/tfu/GER/GER_nbw.dds"
+	}
+
+		SpriteType = { 
+		name = "GFX_GER_mech_spawnin"
+		texturefile = "gfx/interface/tfu/GER/GER_mech_spawnin.dds"
+	}
+
+		SpriteType = { 
+		name = "GER_panzer_expansion"
+		texturefile = "gfx/interface/tfu/GER/GER_panzer_expansion.dds"
+	}
+
+		SpriteType = { 
+		name = "GFX_GER_mech3"
+		texturefile = "gfx/interface/tfu/GER/GER_mech3.dds"
 	}
     
 }

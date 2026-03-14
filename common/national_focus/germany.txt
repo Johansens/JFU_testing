@@ -12034,6 +12034,7 @@ focus_tree = {
 
 		focus = {
 		id = GER_wunderwaffe1
+		text = "Form the TFU"
 		icon = GFX_wunderwaffe
 		prerequisite = { focus = GER_loyalty_to_the_fuhrer  }
 		x = 0
@@ -12441,7 +12442,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		mutually_exclusive = {
+		mutually_exclusive = { 
 			focus = GER_focus_maus
 		}
 
