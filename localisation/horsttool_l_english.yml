@@ -1892,6 +1892,9 @@
  category_mobile_rocket_artillery:0 "£unit_category_mobile_and_mobile_combat_sup_icon_small All Mobile Artillery Battalion"
 
  #Herrscher England #
+
+ france.1000.t:0 "Medium Tank Spawn in decision"
+ france.1000.d:0 "We have capitulated. Now it's our time to decide in what way we want to reclaim our rule & fight off the germans."
  
 
 
