@@ -227,7 +227,7 @@ guerilla_war = {
         }
         galvanize_support = {
         #2
-            conscription = 0.03
+            conscription = 0.02
 
         }
         scorched_earth = {
