@@ -4300,7 +4300,7 @@ JFU_vichy_france_2 = {
 		}
 
 		if = { 
-			limit = { FRA = { check_variable = { FRA_legitimacy 	< 60 } }  }
+			limit = { FRA = { check_variable = { FRA_legitimacy 	< 30 } }  }
 			transfer_state = 557
 			transfer_state = 272
 			transfer_state = 780

@@ -1080,11 +1080,11 @@ focus = {
 
 		available = {
 
-			check_variable = {  FRA_legitimacy > 60  }
+			check_variable = {  FRA_legitimacy > 30  }
 				
 				custom_trigger_tooltip = {
 					tooltip = "Has at least 60 legitimacy"
-					check_variable = { FRA_legitimacy > 60 }
+					check_variable = { FRA_legitimacy > 30 }
 				}
 		}
 		
