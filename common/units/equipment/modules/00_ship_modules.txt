@@ -439,11 +439,11 @@ equipment_modules = {
 			steel = 1
 		}
 
-		forbid_module_categories = {
-		    ship_light_medium_battery
-		    dp_light_battery
-		    ship_light_battery  
-		}
+		# forbid_module_categories = {
+		#     ship_light_medium_battery
+		#     dp_light_battery
+		#     ship_light_battery  
+		# }
 
 		can_convert_from = {
 			module_category = ship_light_battery
@@ -477,11 +477,11 @@ equipment_modules = {
 			steel = 1
 		}
 
-		forbid_module_categories = {
-		    ship_light_medium_battery
-		    dp_light_battery
-		    ship_light_battery  
-		}
+		# forbid_module_categories = {
+		#     ship_light_medium_battery
+		#     dp_light_battery
+		#     ship_light_battery  
+		# }
 
 		can_convert_from = {
 			module_category = ship_medium_battery
@@ -515,11 +515,11 @@ equipment_modules = {
 			steel = 1
 		}
 
-		forbid_module_categories = {
-		    ship_light_medium_battery
-		    dp_light_battery
-		    ship_light_battery  
-		}
+		# forbid_module_categories = {
+		#     ship_light_medium_battery
+		#     dp_light_battery
+		#     ship_light_battery  
+		# }
 
 		can_convert_from = {
 			module_category = ship_medium_battery
@@ -559,11 +559,11 @@ equipment_modules = {
 			steel = 1
 		}
 
-		forbid_module_categories = {
-		    ship_light_medium_battery
-		    dp_light_battery
-		    ship_light_battery 
-		}
+		# forbid_module_categories = {
+		#     ship_light_medium_battery
+		#     dp_light_battery
+		#     ship_light_battery 
+		# }
 
 		can_convert_from = {
 			module_category = ship_medium_battery
@@ -597,9 +597,9 @@ equipment_modules = {
 			max_strength = 20
 		}
 
-		forbid_module_categories = {
-		     ship_medium_battery
-		}
+		# forbid_module_categories = {
+		#      ship_medium_battery
+		# }
 
 		can_convert_from = {
 			module_category = ship_medium_battery
@@ -626,9 +626,9 @@ equipment_modules = {
 			max_strength = 20
 		}
 
-		forbid_module_categories = {
-		     ship_medium_battery
-		}
+		# forbid_module_categories = {
+		#      ship_medium_battery
+		# }
 
 		can_convert_from = {
 			module_category = ship_medium_battery
@@ -666,9 +666,9 @@ equipment_modules = {
 			#steel = 1
 		}
 
-		forbid_module_categories = {
-		     ship_medium_battery
-		}
+		# forbid_module_categories = {
+		#      ship_medium_battery
+		# }
 
 		can_convert_from = {
 			module_category = ship_medium_battery
@@ -706,9 +706,9 @@ equipment_modules = {
 			steel = 1
 		}
 
-		forbid_module_categories = {
-		     ship_medium_battery
-		}
+		# forbid_module_categories = {
+		#      ship_medium_battery
+		# }
 
 		can_convert_from = {
 			module_category = ship_medium_battery
