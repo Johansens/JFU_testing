@@ -91,6 +91,26 @@ country_event = {
 			}
 		}
 		create_equipment_variant = {
+			name = "AFRICA AA HARD"
+			type = medium_tank_aa_chassis_2
+			parent_version = 0
+			modules = {
+				main_armament_slot = tank_anti_air_cannon_2
+				turret_type_slot = tank_medium_fixed_superstructure_turret
+				suspension_type_slot = tank_bogie_suspension
+				armor_type_slot = tank_riveted_armor
+				engine_type_slot = tank_diesel_engine
+				special_type_slot_1 = additional_machine_guns
+				special_type_slot_2 = secondary_turret_small_cannon
+				special_type_slot_3 = secondary_turret_small_cannon
+				special_type_slot_4 = easy_maintenance
+			}
+			upgrades = {
+				tank_nsb_engine_upgrade = 5
+				tank_nsb_armor_upgrade = 0
+			}
+		}
+		create_equipment_variant = {
 			name = "AFRICA FLAME TANKs HARD"
 			type = medium_tank_flame_chassis_1
 			allow_without_tech = yes
@@ -135,6 +155,7 @@ country_event = {
 			add_equipment_to_stockpile = { type = medium_tank_chassis_2 amount = 350 producer = FRA variant_name = "AFRICA TANK HARD" }
 			add_equipment_to_stockpile = { type = medium_tank_destroyer_chassis_2 amount = 300 producer = FRA variant_name = "AFRICA TD HARD" }
 			#add_equipment_to_stockpile = { type = medium_tank_artillery_chassis_2 amount = 150 producer = FRA variant_name = "AFRICA SPG SOFT" }
+			add_equipment_to_stockpile = { type = medium_tank_destroyer_chassis_2 amount = 150 producer = FRA variant_name = "AFRICA AA HARD" }
 			add_equipment_to_stockpile = { type = medium_tank_flame_chassis_1 amount = 200 producer = FRA variant_name = "AFRICA FLAME TANKs HARD" }
 			add_equipment_to_stockpile = { type = light_tank_chassis_1 amount = 300 producer = FRA variant_name = "AFRICA LIGHT TANKs HARD" }
 			add_equipment_to_stockpile = {
@@ -215,6 +236,26 @@ country_event = {
 			}
 		}
 		create_equipment_variant = {
+			name = "AFRICA AA SOFT"
+			type = medium_tank_aa_chassis_2
+			parent_version = 0
+			modules = {
+				main_armament_slot = tank_anti_air_cannon_2
+				turret_type_slot = tank_medium_fixed_superstructure_turret
+				suspension_type_slot = tank_bogie_suspension
+				armor_type_slot = tank_riveted_armor
+				engine_type_slot = tank_diesel_engine
+				special_type_slot_1 = additional_machine_guns
+				special_type_slot_2 = secondary_turret_small_cannon
+				special_type_slot_3 = secondary_turret_small_cannon
+				special_type_slot_4 = easy_maintenance
+			}
+			upgrades = {
+				tank_nsb_engine_upgrade = 5
+				tank_nsb_armor_upgrade = 0
+			}
+		}
+		create_equipment_variant = {
 			name = "AFRICA SPG SOFT"
 			type = medium_tank_artillery_chassis_2
 			parent_version = 0
@@ -281,6 +322,7 @@ country_event = {
 
 			add_equipment_to_stockpile = { type = medium_tank_chassis_2 amount = 350 producer = FRA variant_name = "AFRICA TANK SOFT" }
 			add_equipment_to_stockpile = { type = medium_tank_destroyer_chassis_2 amount = 150 producer = FRA variant_name = "AFRICA TD SOFT" }
+			add_equipment_to_stockpile = { type = medium_tank_destroyer_chassis_2 amount = 150 producer = FRA variant_name = "AFRICA AA SOFT" }
 			add_equipment_to_stockpile = { type = medium_tank_artillery_chassis_2 amount = 150 producer = FRA variant_name = "AFRICA SPG SOFT" }
 			add_equipment_to_stockpile = { type = medium_tank_flame_chassis_1 amount = 200 producer = FRA variant_name = "AFRICA FLAME TANKs SOFT" }
 			add_equipment_to_stockpile = { type = light_tank_chassis_1 amount = 300 producer = FRA variant_name = "AFRICA LIGHT TANKs SOFT" }
