@@ -11,20 +11,20 @@ CHI = {
 			models = {
 				light_armor_entity
 				CHI_light_armor_2_entity
-				CHI_light_armor_0_entity
+				#CHI_light_armor_0_entity
 			}
 		}
 	}
-	light_tank_chassis_1 = {
-		pool = {
-			icons = { 
-				GFX_CHI_basic_light_tank_2_medium
-			}
-			models = {
-				CHI_light_armor_0_entity
-			}
-		}
-	}
+	#light_tank_chassis_1 = {
+	#	pool = {
+	#		icons = { 
+	#			GFX_CHI_basic_light_tank_2_medium
+	#		}
+	#		models = {
+	#			CHI_light_armor_0_entity
+	#		}
+	#	}
+	#}
 	light_tank_chassis_2 = {
 		pool = {
 			icons = {
@@ -152,7 +152,7 @@ CHI = {
 			}
 			models = {
 				medium_armor_entity
-				CHI_medium_armor_1_entity
+				#CHI_medium_armor_1_entity
 			}
 		}
 	}
@@ -162,16 +162,16 @@ CHI = {
 			}
 		}
 	}
-	medium_tank_chassis_1 = {
-		pool = {
-			icons = { 
-				GFX_CHI_improved_medium_tank_2_medium
-			}
-			models = {
-				CHI_medium_armor_1_entity
-			}
-		}
-	}
+	#medium_tank_chassis_1 = {
+	#	pool = {
+	#		icons = { 
+	#			GFX_CHI_improved_medium_tank_2_medium
+	#		}
+	#		models = {
+	#			CHI_medium_armor_1_entity
+	#		}
+	#	}
+	#}
 
 	amphibious_tank_chassis = {
 		pool = {
