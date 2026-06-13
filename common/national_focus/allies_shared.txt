@@ -30,7 +30,7 @@
 	}
 	offset = {
 		x = 15  
-		y = 5
+		y = 6
 		trigger = {	tag = NZL}
 	}
 	offset = {

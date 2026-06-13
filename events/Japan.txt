@@ -538,7 +538,6 @@ country_event = {
 							OR = {
 								original_tag = FRA
 								is_subject_of = FRA
-								is_subject_of = VIC
 							}
 						}
 					}
@@ -552,7 +551,6 @@ country_event = {
 							OR = {
 								original_tag = FRA
 								is_subject_of = FRA
-								is_subject_of = VIC
 							}
 						}
 					}
@@ -566,7 +564,6 @@ country_event = {
 							OR = {
 								original_tag = FRA
 								is_subject_of = FRA
-								is_subject_of = VIC
 							}
 						}
 					}
@@ -580,7 +577,6 @@ country_event = {
 							OR = {
 								original_tag = FRA
 								is_subject_of = FRA
-								is_subject_of = VIC
 							}
 						}
 					}
@@ -594,7 +590,6 @@ country_event = {
 							OR = {
 								original_tag = FRA
 								is_subject_of = FRA
-								is_subject_of = VIC
 							}
 						}
 					}

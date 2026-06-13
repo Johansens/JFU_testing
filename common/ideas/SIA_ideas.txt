@@ -1163,30 +1163,4 @@ ideas = {
 			}
 		}
 	}
-	
-	industrial_concern = {
-	
-		SIA_Royal_Railways = { 
-
-			picture = generic_railroads
-
-			allowed = {
-				original_TAG = SIA
-
-			}
-			
-			available = {
-				has_completed_focus = SIA_Expand_Royal_Railway
-			}
-
-			cost = 75
-
-			research_bonus = {
-				train_tech = 0.1
-			}
-
-			traits = { railway_company }
-		}
-	
-	}
 }

@@ -122,6 +122,21 @@ ideas = {
 
 	# Special ones that can be applied on other countries through focus system.
 	country = {
+
+		PHI_the_great_depression_temp_construction_speed = {
+			picture = ARG_construction_guilds
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			modifier = { production_speed_buildings_factor = 0.25 }
+		}
+		
 		damage_to_naval_base_low = {
 			allowed = {
 				always = no

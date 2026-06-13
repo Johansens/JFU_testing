@@ -36,8 +36,7 @@ NZL_historical = {
 		NZL_technology_sharing_with_britain												
 		NZL_maori_affairs_act										
 		NZL_form_the_rnzn											
-		#1940											
-		NZL_industrial_conscription									
+		#1940																		
 		NZL_domestic_arms_industry									
 		NZL_long_range_patrol										
 		NZL_bob_semple_tank											

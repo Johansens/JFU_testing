@@ -605,7 +605,7 @@ JFU_equipment_on_start_up_effect = {
 		add_equipment_to_stockpile = { type = train_equipment_1 amount = 50 }
 		add_equipment_to_stockpile = { type = motorized_equipment_1 amount = 200 }
 		add_dynamic_modifier = { modifier = pacific_war_allies }
-		add_dynamic_modifier = { modifier = AST_great_depression_modifier }
+		#add_dynamic_modifier = { modifier = AST_great_depression_modifier }
 	}
 	NZL = {
 		add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 1000 }
@@ -2323,11 +2323,12 @@ JFU_pregrinded_effect = {
 		}
 	}
 	SIA = {
-		SIA_Phahon = { add_attack = 4 }
-		SIA_Phahon = { add_defense = 4 }
-		SIA_Phahon = { add_planning = 2 }
-		SIA_Phahon = { add_logistics = 1 }
-		SIA_Phahon = {
+		SIA_phraya_songsuradet = { add_skill_level = 1 }
+		SIA_phraya_songsuradet = { add_attack = 4 }
+		SIA_phraya_songsuradet = { add_defense = 4 }
+		SIA_phraya_songsuradet = { add_planning = 2 }
+		SIA_phraya_songsuradet = { add_logistics = 1 }
+		SIA_phraya_songsuradet = {
 			add_unit_leader_trait = pre_grinded
             add_unit_leader_trait = commando
             add_unit_leader_trait = fortress_buster
@@ -2340,11 +2341,12 @@ JFU_pregrinded_effect = {
             add_unit_leader_trait = panzer_leader
             add_unit_leader_trait = ranger
 		}
-		SIA_Plaek_Phibun = {  add_attack = 4  }
-		SIA_Plaek_Phibun = { add_defense = 2 }
-		SIA_Plaek_Phibun = { add_planning = 2 }
-		SIA_Plaek_Phibun = { add_logistics = 3 }
-        SIA_Plaek_Phibun = {
+		SIA_phin_choonhavan = { add_skill_level = 1 }
+		SIA_phin_choonhavan = {  add_attack = 4  }
+		SIA_phin_choonhavan = { add_defense = 2 }
+		SIA_phin_choonhavan = { add_planning = 2 }
+		SIA_phin_choonhavan = { add_logistics = 3 }
+        SIA_phin_choonhavan = {
         	add_unit_leader_trait = pre_grinded
             add_unit_leader_trait = organizer
             add_unit_leader_trait = infantry_expert
@@ -2357,8 +2359,8 @@ JFU_pregrinded_effect = {
             add_unit_leader_trait = panzer_leader
             add_unit_leader_trait = aggressive_assaulter
         }
-		SIA_Plaek_Phibun = { promote_leader = yes}
-		SIA_Plaek_Phibun = {
+		SIA_phin_choonhavan = { promote_leader = yes}
+		SIA_phin_choonhavan = {
 			add_unit_leader_trait = offensive_doctrine
 			add_unit_leader_trait = logistics_wizard
 			add_unit_leader_trait = thorough_planner
@@ -2750,7 +2752,7 @@ JFU_pregrinded_effect = {
 			add_unit_leader_trait = logistics_wizard
 			add_unit_leader_trait = offensive_doctrine
 		}
-		AST_henry_wynter = {
+		AST_reginald_saunders = {
 			add_unit_leader_trait = trickster
 			add_unit_leader_trait = pre_grinded
 			add_unit_leader_trait = trait_engineer
@@ -3071,11 +3073,11 @@ JFU_update_generals = {
 			add_unit_leader_trait = thorough_planner
 			add_unit_leader_trait = aggressive_assaulter			
 		}
-		AST_henry_wynter = { add_attack = 5 }
-		AST_henry_wynter = { add_defense = 1 }
-		AST_henry_wynter = { add_planning = 2 }
-		AST_henry_wynter = { add_logistics = 2 }	
-		AST_henry_wynter = {
+		AST_reginald_saunders = { add_attack = 5 }
+		AST_reginald_saunders = { add_defense = 1 }
+		AST_reginald_saunders = { add_planning = 2 }
+		AST_reginald_saunders = { add_logistics = 2 }	
+		AST_reginald_saunders = {
 			add_unit_leader_trait = expert_improviser
 			add_unit_leader_trait = fortress_buster	
 			add_unit_leader_trait = trait_mountaineer		

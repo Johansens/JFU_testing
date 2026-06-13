@@ -16296,4 +16296,155 @@ leader_traits = {
 			factor = 1
 		}
 	}
+	AST_naval_engineer = {
+		sprite = 1
+		refit_speed = 0.10
+		repair_speed_factor = 0.10
+		experience_gain_navy = @chief_experience_gain_low
+
+		command_cap_increase = @tier1_cp_cap_increase
+		command_power = @tier1_cp_cost
+
+		ai_will_do = {
+			factor = @navy_chief_factor_1
+			modifier = {
+				factor = 0
+				command_power < @tier1_cp_cost
+			}
+		}
+	}
+
+	########################
+	#######Australia########
+	########################
+
+	### Industrial Traits
+
+	AST_denim_factory = {
+
+		random = no
+
+		stability_factor = 0.05
+		equipment_bonus = {
+			infantry_equipment = {
+				build_cost_ic = -0.05
+				instant = yes
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	AST_denim_factory_upgraded = {
+		random = no
+
+		stability_factor = 0.05
+		equipment_bonus = {
+			infantry_equipment = {
+				build_cost_ic = -0.05
+				instant = yes
+			}
+			support_equipment = {
+				build_cost_ic = -0.05
+				instant = yes
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	AST_the_big_australian = {
+
+		random = no
+
+		local_resources_factor = 0.10
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	AST_steelworks_and_shipyard = {
+
+		random = no
+
+		country_resource_steel = 10
+		industrial_capacity_dockyard = 0.05
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	AST_the_big_australian_upgraded = {
+
+		random = no
+
+		local_resources_factor = 0.20
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	AST_steelworks_and_shipyard_upgraded = {
+
+		random = no
+
+		country_resource_steel = 20
+		industrial_capacity_dockyard = 0.10
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	AST_mount_isa = {
+		random = no
+
+		production_lack_of_resource_penalty_factor = -0.20
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	AST_mount_isa_upgraded = {
+		random = no
+
+		production_lack_of_resource_penalty_factor = -0.25
+		local_resources_factor = 0.05
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	infrastructure_group = {
+		random = no
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	brewery = {
+		random = no
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	food_distributor = {
+		random = no
+
+		ai_will_do = {
+			factor = 1
+		}
+	}	
 }

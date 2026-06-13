@@ -1651,13 +1651,12 @@ focus_tree = {
 	}
 	focus = {
 		id = BRA_army
+		icon = GFX_focus_BRA_army
 		#icon = GFX_goal_panzerwaffe
 
 		dynamic = yes
 		relative_position_id = BRA_coffee_crisis_aftermath
-		icon = {
-			value = GFX_focus_BRA_army
-		}
+
 
 		x = 10
 		y = 0
@@ -1922,9 +1921,7 @@ focus_tree = {
 
 	focus = {
 		id = BRA_domestic_production
-		icon = {
-			value = GFX_focus_BRA_dec
-		}
+		icon = GFX_focus_BRA_dec
 		mutually_exclusive = { focus = BRA_foreign_designs }
 		relative_position_id = BRA_tank_warfare
 		prerequisite = { focus = BRA_tank_warfare focus = BRA_artillery}
@@ -1977,9 +1974,7 @@ focus_tree = {
 
 	focus = {
 		id = BRA_army_academy
-		icon = {
-			value = GFX_focus_BRA_agulhas_negras
-		}
+		icon = GFX_focus_BRA_agulhas_negras
 		relative_position_id = BRA_army
 		prerequisite = { focus = BRA_army }
 		x = 1
@@ -2395,9 +2390,7 @@ focus = {
 
 	focus = {
 		id = BRA_special_forces_option_2
-		icon = {
-			value = GFX_focus_BRA_corpo_navais
-		}
+		icon = GFX_focus_BRA_corpo_navais
 		relative_position_id = BRA_special_forces
 		prerequisite = { focus = BRA_special_forces }
 		mutually_exclusive = { focus = BRA_special_forces_option_1 focus = BRA_special_forces_option_3 }

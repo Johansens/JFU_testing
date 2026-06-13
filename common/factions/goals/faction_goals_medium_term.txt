@@ -1009,23 +1009,6 @@ faction_goal_control_malayan_riches = {
 	}
 	visible = {
 		always = no
-		#FROM = {
-		#	NOT = {
-		#		original_tag = MAL
-		#		is_in_faction_with = MAL
-		#	}
-		#}
-		#any_collection_element = {
-		#	collection = {
-		#		 input = game:scope
-		#		 operators = { faction_members controlled_states }
-		#		 name = FACTION_CONTROLLED_STATES
-		#	}
-		#	distance_to = {
-		#		target = 336
-		#		value < 2000
-		#	}
-		#}
 	}
 	available = {
 		
