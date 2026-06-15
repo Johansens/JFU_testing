@@ -302,18 +302,6 @@ AST_uap_5_time_discount_effect = {
 				focus = AST_equal_training
 				cost = 5
 			}
-			reduce_focus_completion_cost = {
-				focus = AST_a_northern_barrier
-				cost = 5
-			}
-			reduce_focus_completion_cost = {
-				focus = AST_demand_resources
-				cost = 5
-			}
-			reduce_focus_completion_cost = {
-				focus = AST_reclaim_the_lost_territory
-				cost = 5
-			}
 		}
 
 }
@@ -409,18 +397,6 @@ AST_uap_5_time_discount_effect_reverse = {
 			}
 			reduce_focus_completion_cost = {
 				focus = AST_equal_training
-				cost = -5
-			}
-			reduce_focus_completion_cost = {
-				focus = AST_a_northern_barrier
-				cost = -5
-			}
-			reduce_focus_completion_cost = {
-				focus = AST_demand_resources
-				cost = -5
-			}
-			reduce_focus_completion_cost = {
-				focus = AST_reclaim_the_lost_territory
 				cost = -5
 			}
 		}
@@ -522,18 +498,6 @@ AST_alp_5_time_discount_effect = {
 			}
 			reduce_focus_completion_cost = {
 				focus = AST_equal_training
-				cost = 5
-			}
-			reduce_focus_completion_cost = {
-				focus = AST_a_northern_barrier
-				cost = 5
-			}
-			reduce_focus_completion_cost = {
-				focus = AST_demand_resources
-				cost = 5
-			}
-			reduce_focus_completion_cost = {
-				focus = AST_reclaim_the_lost_territory
 				cost = 5
 			}
 		}
@@ -656,18 +620,6 @@ AST_alp_5_time_discount_effect_reverse = {
 			reduce_focus_completion_cost = {
 				focus = AST_equal_training
 				cost = 5
-			}
-			reduce_focus_completion_cost = {
-				focus = AST_a_northern_barrier
-				cost = -5
-			}
-			reduce_focus_completion_cost = {
-				focus = AST_demand_resources
-				cost = -5
-			}
-			reduce_focus_completion_cost = {
-				focus = AST_reclaim_the_lost_territory
-				cost = -5
 			}
 		}
 

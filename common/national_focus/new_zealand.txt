@@ -973,7 +973,7 @@
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			1080 = {
+			983 = {
 				add_resource = {
 					type = steel
 					amount = 6
@@ -999,7 +999,7 @@
 		available = {
 			industrial_complex > 9
 			controls_state = 284
-			controls_state = 1079
+			controls_state = 982
 		}
 
 		bypass = {
@@ -1018,7 +1018,7 @@
 					amount = 10
 				}
 			}
-			1079 = {
+			982 = {
 				add_resource = {
 					type = steel
 					amount = 4
@@ -1270,22 +1270,11 @@
 
 		completion_reward = {
 
-			IF = {
-				limit = {
-					NOT = { has_tech = basic_train }
-				}
-				set_technology = {
-					basic_train = 1
-				}
-				custom_effect_tooltip = NZL_rail_standardization_tt
-			}
-			ELSE = {
-				add_tech_bonus = {
-					name = NZL_rail_standardization
-					bonus = 0.5
-					uses = 1
-					category = train_tech
-				}
+			add_tech_bonus = {
+				name = NZL_rail_standardization
+				bonus = 0.5
+				uses = 1
+				category = train_tech
 			}
 
 			#NZL_train_var is set in history file in order to make the tooltip work while only needing to change the value in one place. Originally set to 40 
@@ -1472,8 +1461,6 @@
 
 		available = {
 			controls_state = 723
-			controls_state = 284
-			controls_state = 1080
 		}
 
 		bypass = {
@@ -1489,19 +1476,7 @@
 			723 = {
 				add_resource = {
 					type = coal 
-					amount = 3
-				}
-			}
-			284 = {
-				add_resource = {
-					type = coal 
-					amount = 3
-				}
-			}
-			1080 = {
-				add_resource = {
-					type = coal 
-					amount = 3
+					amount = 9
 				}
 			}
 		}
@@ -1563,7 +1538,7 @@
 		}
 
 		available = {
-			1079 = { is_owned_and_controlled_by = ROOT }
+			982 = { is_owned_and_controlled_by = ROOT }
 		}
 
 		bypass = {
@@ -1576,7 +1551,7 @@
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			1079 = {
+			982 = {
 				add_building_construction = {
 					type = dam
 					level = 1

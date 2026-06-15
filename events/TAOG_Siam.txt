@@ -2218,11 +2218,6 @@ country_event = {
 				factor = 1.5
 			}
 		}
-
-		 SIA = {  
-		 	set_country_flag = event_adc1_bad_luck_protection 
-		 	country_event = { id = siam_adc.5 hours = 2 }
-		 } 
 	}
 }
 
@@ -2319,29 +2314,6 @@ country_event = {
 		}
 		name = siam_adc.4.a
 		clr_country_flag = demand_release_cooldown
-	}
-}
-
-country_event = {
-	id = siam_adc.5 
-	title = siam_adc.5.t
-	desc = siam_adc.5.desc
-	picture = GFX_report_event_worker_protests
-	is_triggered_only = yes
-	option = {
-		ai_chance = {
-			base = 1
-		}
-
-		name = siam_adc.5.a
-
-		add_war_support = 0.05
-		clr_country_flag = demand_release_cooldown
-		create_wargoal = {
-			type = liberate_wargoal
-			target = FROM
-			generator = { 1068 1069 670 1067 741 671 286 1066 1017 }
-		}
 	}
 }
 

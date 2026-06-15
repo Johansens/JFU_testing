@@ -84,10 +84,6 @@ state_groups = {
         810 # Latgale
         813 # Virumaa
         929 # Oulu
-        1000 # East Azerbaijan
-        1004 # North Khorasan
-        1005 # Qataghan
-        1007 # Maymanah
 
         # Mongolian neighbor states
         612 # Xilingol

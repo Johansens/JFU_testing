@@ -1049,18 +1049,6 @@
 						focus = AST_equal_training
 						cost = -5
 					}
-					reduce_focus_completion_cost = {
-						focus = AST_a_northern_barrier
-						cost = -5
-					}
-					reduce_focus_completion_cost = {
-						focus = AST_demand_resources
-						cost = -5
-					}
-					reduce_focus_completion_cost = {
-						focus = AST_reclaim_the_lost_territory
-						cost = -5
-					}
 					set_country_flag = AST_50_discount_shared_independence_reversed
 				}
 
@@ -1090,18 +1078,6 @@
 					}
 					reduce_focus_completion_cost = {
 						focus = AST_equal_training
-						cost = -5
-					}
-					reduce_focus_completion_cost = {
-						focus = AST_a_northern_barrier
-						cost = -5
-					}
-					reduce_focus_completion_cost = {
-						focus = AST_demand_resources
-						cost = -5
-					}
-					reduce_focus_completion_cost = {
-						focus = AST_reclaim_the_lost_territory
 						cost = -5
 					}
 					set_country_flag = AST_70_discount_shared_independence_reversed

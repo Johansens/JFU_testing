@@ -2730,19 +2730,9 @@
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			every_core_state = {
-				limit = {
-					NOT = {
-						OR = {
-							state = 1076
-							state = 1066
-							state = 671
-						}
-					}
-				}
+			671 = {
 				add_dynamic_modifier = { modifier = idea_SIA_irrigation }
 				add_extra_state_shared_building_slots = 1
-
 			}
 		}
 	}

@@ -122,6 +122,48 @@ ideas = {
 
 	# Special ones that can be applied on other countries through focus system.
 	country = {
+		
+		
+		
+		COG_rich_in_uranium = {
+			picture = generic_research_bonus
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			
+			modifier = {
+				specialization_nuclear_speed_factor = 0.1
+			}
+		}
+
+		AUS_domestic_air_production_small = {
+			allowed = {
+				tag = AUS
+			}
+
+			removal_cost = -1
+
+			picture = man_five_year_plan_air
+
+			equipment_bonus = {
+				small_plane_airframe = {
+					build_cost_ic = -0.1 
+					instant = yes
+				}
+				medium_plane_airframe = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+				large_plane_airframe = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+			}			
+		}
 
 		PHI_the_great_depression_temp_construction_speed = {
 			picture = ARG_construction_guilds

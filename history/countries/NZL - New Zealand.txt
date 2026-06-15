@@ -6,17 +6,14 @@ set_variable = {
 oob = "NZL_1936"
 
 # Starting tech
-set_stability = 0.8
+set_stability = 0.7
 set_war_support = 0.3
 set_research_slots = 3
 set_technology = {
 	infantry_weapons = 1
 	infantry_weapons1 = 1
 
-	special_forces_mountaineers = 1
-	special_forces_marines = 1
-	special_forces_paratroopers = 1
-	special_forces_rangers = 1
+
 	tech_trucks = 1
 	motorised_infantry = 1
 	tech_support = 1
@@ -97,14 +94,30 @@ recruit_character = NZL_w_h_stratton
 recruit_character = NZL_a_e_davy
 recruit_character = NZL_walter_nash
 recruit_character = NZL_w_a_veitch_milne
-recruit_character = NZL_alan_vasey
-recruit_character = NZL_leslie_morshead
+recruit_character = NZL_bob_semple
+recruit_character = NZL_leslie_lefeaux
+recruit_character = NZL_thomas_leech
+recruit_character = NZL_william_polson
+recruit_character = NZL_john_a_lee
+recruit_character = NZL_bernard_ashwin
 
 if = {
 	limit = { has_dlc = "Together for Victory" }
 
 	add_to_tech_sharing_group = commonwealth_research
 }
+
+add_ideas = {
+	NZL_railways_board
+	NZL_great_depression
+	NZL_commonwealth_loyalty
+}
+
+set_variable = { NZL_train_var = 40 }
+set_variable = { NZL_ministry_of_public_works_dynamic_modifier_stability_factor = 0.05 }
+set_variable = { NZL_ministry_of_public_works_dynamic_modifier_consumer_goods_factor = -0.05 }
+set_variable = { NZL_ministry_of_public_works_dynamic_modifier_conscription_factor = 0 }
+
 
 set_politics = {
 	ruling_party = democratic

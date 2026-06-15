@@ -294,7 +294,7 @@ ideas = {
 			cancel = {
 				NOT = {
 					ENG = {
-	  					controls_state = 1021 #Singapore
+	  					controls_state = 757 #Singapore
 					}
 					is_subject_of = ENG
 				}
@@ -302,7 +302,7 @@ ideas = {
 
 			on_remove = { #Edit AST_singapore_strategy_idea_desc if changed
 
-				1021 = {
+				757 = {
 					add_building_construction = { #edit AST_singapore_strategy_tt /AND/ AST_singapore_strategy_idea_desc if changed
 						type = air_base 
 						level = 2 

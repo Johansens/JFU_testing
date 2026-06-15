@@ -566,19 +566,6 @@ default_pp_spend_amount = {
 	}
 }
 
-default_major_SF_marines = {
-	enable = {
-		is_major = yes
-		has_tech = special_forces_marines
-	}
-	abort_when_not_enabled = yes
-	ai_strategy = {
-		type = role_ratio
-		id = marines
-		value = 2
-	}
-}
-
 build_patrol_bombers = {
 	enable = {
 		has_dlc = "By Blood Alone"

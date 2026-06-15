@@ -2476,7 +2476,10 @@ JFU_templates = {
 		fire_only_once = yes
 		allowed = {}
 		available = {
-			has_tech = special_forces_mountaineers
+			OR = {
+				has_doctrine = mountaineers_1
+				has_doctrine = mountaineers_2
+			}
 		}
 		visible = {
 			NOT = {
@@ -2550,6 +2553,10 @@ JFU_templates = {
 		}
 		available = {
 			has_tech = motorized_rocket_unit
+			OR = {
+				has_doctrine = marines_1
+				has_doctrine = marines_2
+			}
 		}
 		cost = 0
 		complete_effect = {
@@ -2596,6 +2603,10 @@ JFU_templates = {
 		fire_only_once = yes
 		allowed = {}
 		available = {
+			OR = {
+				has_doctrine = marines_1
+				has_doctrine = marines_2
+			}
 		}
 		visible = {
 			NOT = {
