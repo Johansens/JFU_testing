@@ -175,22 +175,22 @@ country_event = {
 						infantry = { x = 0 y = 2 }
 					}
 				}
-				delete_units = {
-				    division_template = "División de Infantería"
-				    disband = yes
-				}
-				delete_units = {
-				    division_template = "División de Caballería"
-				    disband = yes
-				}
-				delete_units = {
-				    division_template = "Brigada Montaña"
-				    disband = yes
-				}
-				delete_units = {
-				    division_template = "Brigada de Infantería"
-				    disband = yes
-				}
+				#delete_units = {
+				#    division_template = "División de Infantería"
+				#    disband = yes
+				#}
+				#delete_units = {
+				#    division_template = "División de Caballería"
+				#    disband = yes
+				#}
+				#delete_units = {
+				#    division_template = "Brigada Montaña"
+				#    disband = yes
+				#}
+				#delete_units = {
+				#    division_template = "Brigada de Infantería"
+				#    disband = yes
+				#}
 			}
 			every_owned_state = {
 				limit = {
