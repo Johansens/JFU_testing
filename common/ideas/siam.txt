@@ -374,15 +374,6 @@ ideas = {
 			}
 
 			on_remove = {
-				if = {
-					limit = {
-						ROOT = {
-							has_active_mission = SIA_war_fervor_coup
-						}
-					}
-
-					ROOT = { remove_mission = SIA_war_fervor_coup }
-				}
 
 				if = {
 					limit = { 

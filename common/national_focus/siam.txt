@@ -17,7 +17,7 @@
 
 	inlay_window = {
 		id = sia_khana_ratsadon_inlay_window
-		position = { x = 2200 y = 300 }
+		position = { x = 1300 y = 500 }
 	}
 
 	initial_show_position = {
@@ -842,47 +842,6 @@
 		}
 	}
 
-
-
-	focus = {
-		id = SIA_war_fervor
-		icon = GFX_focus_SIA_war_fervor
-		x = 4
-		y = 1
-		relative_position_id = SIA_the_king_of_the_white_elephant
-		prerequisite = { focus = SIA_drum_up_irredentism }
-		#mutually_exclusive = { focus =  }
-		cost = 5
-		ai_will_do = {
-			factor = 10
-		}
-		available = {
-		}
-		#allow_branch = {
-		#}
-		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
-
-		completion_reward = {
-
-			add_ideas = idea_SIA_war_fervor
-			custom_effect_tooltip = newline_tt
-			custom_effect_tooltip = SIA_war_fervor_tt
-			effect_tooltip = {
-				add_timed_idea = {
-					idea = idea_SIA_bloodlusted_irredentism
-					days = 90
-				}
-			}
-
-			custom_effect_tooltip = newline_tt
-			unlock_decision_tooltip = {
-				decision = SIA_urge_restraint
-				show_effect_tooltip = yes # default is no
-				show_modifiers = yes # default is no
-			}
-		}
-	}
-
 	###############################
 	###		Phibun/Historical   ###
 	###############################
@@ -937,16 +896,6 @@
 	  		custom_effect_tooltip = newline_tt
 	  		SIA_increase_military_approval = yes
 	  		SIA_decrease_civilian_approval = yes
-
-			if = {
-				limit = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-				}
-				mark_focus_tree_layout_dirty = yes
-			}
 		}
 	}
 
@@ -2239,16 +2188,6 @@
 					level = 1
 					instant_build = yes
 				}
-			}
-
-			if = {
-				limit = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-				}
-				mark_focus_tree_layout_dirty = yes
 			}
 		}
 	}
@@ -4626,15 +4565,6 @@
 			has_war_support > 0.03
 		}
         offset = {
-            x = -6
-            y = 0
-            trigger = {
-                has_game_rule = {
-                    rule = obsolete_focus_branches_visibility
-                    option = HIDE
-                }
-                has_completed_focus = SIA_reluctant_submission
-            }
         }
 
         offset = {

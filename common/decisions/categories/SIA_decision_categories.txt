@@ -1,16 +1,3 @@
-SIA_war_fervor_cat = {
-	allowed = {
-		original_tag = SIA
-	}
-
-	priority = 50
-	visible = {
-		has_completed_focus = SIA_war_fervor
-		has_idea = idea_SIA_war_fervor
-	}
-}
-
-
 SIA_thai_cultural_mandates = {
 	allowed = {
 		original_tag = SIA
