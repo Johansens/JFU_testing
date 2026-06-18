@@ -874,8 +874,10 @@ on_actions = {
 				if = {
 					limit = {
 						NOT = {
-							tag = SOV
-							has_operation_token = E_token_civilian
+							has_operation_token = {
+								tag = SOV
+								token = E_token_civilian
+							}
 						}
 					}
 					JFU_apply_intel = yes
