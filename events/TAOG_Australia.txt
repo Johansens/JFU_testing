@@ -104,7 +104,7 @@ country_event = { #Initial Democratic Election event
 		custom_effect_tooltip = AST_final_reforms_effect_tt
 
 		reduce_focus_completion_cost = {
-			focus = { AST_the_pacific_pact AST_advance_pacific_initiatives AST_domestic_industry AST_a_collapsing_league_of_nations AST_department_of_munitions AST_a_democratic_bulwark AST_call_for_a_referendum AST_rural_concessions }
+			focus = { AST_domestic_industry AST_a_collapsing_league_of_nations AST_department_of_munitions AST_a_democratic_bulwark AST_call_for_a_referendum AST_rural_concessions }
 			cost = 5
 		}
 	}

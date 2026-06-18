@@ -71,7 +71,7 @@ AST_election_approaching_cat = {
 		days_mission_timeout = 180 #Edit AST_final_reforms_effect_tt if changed
 		timeout_effect = {
 			reduce_focus_completion_cost = {
-				focus = { AST_the_pacific_pact AST_advance_pacific_initiatives AST_domestic_industry AST_a_collapsing_league_of_nations AST_department_of_munitions AST_a_democratic_bulwark AST_call_for_a_referendum AST_rural_concessions }
+				focus = { AST_domestic_industry AST_a_collapsing_league_of_nations AST_department_of_munitions AST_a_democratic_bulwark AST_call_for_a_referendum AST_rural_concessions }
 				cost = -14
 			}
 		}
@@ -801,56 +801,6 @@ AST_cabinet_trust_cat = {
 				}
 				factor = 0.5
 			}
-			modifier = {
-				is_historical_focus_on = yes
-				factor = 0
-			}
-		}
-	}
-
-	AST_make_a_common_enemy = {
-		desc = AST_make_a_common_enemy_desc
-		icon = GFX_decision_generic_civil_support
-
-		visible = {
-			OR = {
-				has_completed_focus = AST_war_is_coming
-			}
-		}
-
-		available = {
-			OR = {
-				has_idea = AST_cabinet_trust_state_3_idea
-				has_idea = AST_cabinet_trust_state_4_idea
-				has_idea = AST_cabinet_trust_state_5_idea
-			}
-		}
-
-		cost = 50
-
-		fire_only_once = yes
-
-		complete_effect = {
-			custom_effect_tooltip = AST_castle_crumbling_mission_complete_tt
-			custom_effect_tooltip = AST_cabinet_trust_remove_tt
-			custom_effect_tooltip = generic_skip_one_line_tt
-			JAP = { country_event = { id = AST_canberra_air_disaster_events.5 hours = 3 } }
-			custom_effect_tooltip = AST_make_a_common_enemy_tt
-			effect_tooltip = {
-				JAP = {
-					create_wargoal = {
-						type = topple_government
-						target = AST
-					}
-				}
-			}
-			set_country_flag = AST_cabinet_trust_complete_1_flag #This completes Castle Crumbling mission
-			AST_cabinet_trust_change = yes #Calls to function removing Cabinet Trust state
-			clr_country_flag = AST_canberra_air_disaster_flag
-		}
-
-		ai_will_do = {
-			factor = 2.5
 			modifier = {
 				is_historical_focus_on = yes
 				factor = 0

@@ -292,7 +292,16 @@ focus_tree = {
 				name = AST_a_democratic_bulwark
 				bonus = 1
 				uses = 2
-				category = industry
+				technology = advanced_machine_tools
+				technology = flexible_line
+				technology = assembly_line_production
+				technology = streamlined_line
+				technology = concentrated_industry3
+				technology = concentrated_industry4
+				technology = concentrated_industry5
+				technology = dispersed_industry3 
+				technology = dispersed_industry4 
+				technology = dispersed_industry5
 			}
 		}
 
@@ -944,7 +953,7 @@ focus_tree = {
 		x = 0
 		y = 5
 	
-		cost = 10
+		cost = 5
 
 		allow_branch = {
 		}
@@ -964,8 +973,6 @@ focus_tree = {
 
 			has_country_leader = { ruling_only = yes character = AST_robert_menzies }
 			has_dynamic_modifier = { modifier = AST_british_war_cabinet_spirit }
-			ENG = { has_government = democratic }
-			is_subject_of = ENG
 		}
 
 		bypass = {
@@ -1021,7 +1028,7 @@ focus_tree = {
 			}
 
 			has_country_leader = { ruling_only = yes character = AST_john_curtin }
-			is_subject_of = ENG
+
 		}
 
 		bypass = {
@@ -1138,7 +1145,7 @@ focus_tree = {
 		x = -1
 		y = 2
 	
-		cost = 10
+		cost = 5
 
 		available = {
 			OR = {
@@ -1156,16 +1163,6 @@ focus_tree = {
 		available_if_capitulated = no
 	
 		completion_reward = {
-			effect_tooltip = {
-				ENG = {
-					activate_mission = AST_japanese_war_mission
-				}
-			}
-			custom_effect_tooltip = AST_eastern_focus_tt
-
-			hidden_effect = {
-				ENG = { country_event = { id = AST_diplomatic_events.68 hours = 3 } }
-			}
 		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -1183,7 +1180,7 @@ focus_tree = {
 		x = 1
 		y = 1
 	
-		cost = 10
+		cost = 5
 
 		available = {
 			ENG = {
@@ -1214,8 +1211,6 @@ focus_tree = {
 			hidden_effect = {
 				AST_conscription_level_scripted_effect = yes
 			}
-			custom_effect_tooltip = generic_skip_one_line_tt
-			custom_effect_tooltip = AST_holding_the_battlefield_tt 
 
 		}
 
@@ -1595,40 +1590,17 @@ focus_tree = {
 		x = -5
 		y = 1
 	
-		cost = 10
+		cost = 5
 
 		available = {
-			ENG = {
-				has_war = yes
-			}	
-			634 = { #Solomons
-					is_owned_and_controlled_by = ENG
-			}
 		}
 
 		bypass = {
-			634 = { #Solomons
-				NOT = { is_owned_and_controlled_by = ENG }
-			}
 		}
 
 		available_if_capitulated = no
 	
 		completion_reward = {
-			ENG = { country_event = { id = AST_diplomatic_events.25 days = 14 } }
-			custom_effect_tooltip = if_they_accept_tt
-			effect_tooltip = {
-				IF = {	
-					limit = { 
-						634 = {
-							is_owned_and_controlled_by = ENG
-						}
-					}
-					634 = { #Solomons
-						transfer_state_to = AST 
-					} 
-				}
-			}
 		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION }
@@ -1644,7 +1616,7 @@ focus_tree = {
 		x = 0
 		y = 1
 	
-		cost = 10
+		cost = 5
 
 		available = {
 			any_core_state = {
@@ -1808,7 +1780,7 @@ focus_tree = {
 		x = 0
 		y = 2
 	
-		cost = 10
+		cost = 5
 
 		available = {
 		}
@@ -1829,18 +1801,6 @@ focus_tree = {
 					modifier = AST_standing_with_canberra_state_modifier
 				} 
 			}
-
-			IF = {
-				limit = {
-					has_dlc = "No Compromise, No Surrender"
-				}
-				custom_effect_tooltip = generic_skip_one_line_tt
-				set_faction_leader = yes
-				add_faction_influence_ratio = 0.30
-			}
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-			set_major = yes
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 			random_owned_controlled_state = {
@@ -2465,7 +2425,7 @@ focus_tree = {
 		x = -4
 		y = 5
 	
-		cost = 10
+		cost = 5
 
 		allow_branch = {
 		}
@@ -2496,10 +2456,6 @@ focus_tree = {
 			}
 
 			has_country_leader = { ruling_only = yes character = AST_robert_menzies }
-
-			NOT = {
-				is_subject_of = ENG
-			}
 
 		}
 
@@ -2540,7 +2496,7 @@ focus_tree = {
 		x = 0
 		y = 5
 	
-		cost = 10
+		cost = 5
 
 		allow_branch = {
 		}
@@ -2559,10 +2515,6 @@ focus_tree = {
 			}
 
 			has_country_leader = { ruling_only = yes character = AST_john_curtin }
-
-			NOT = {
-				is_subject_of = ENG
-			}
 
 		}
 
@@ -2596,7 +2548,6 @@ focus_tree = {
 
 		available = {
 			is_in_faction_with = ENG
-			is_subject = no
 		}
 
 		bypass = {
@@ -2615,7 +2566,6 @@ focus_tree = {
 					has_dlc = "No Compromise, No Surrender"
 				}
 				add_faction_initiative = 1
-				add_faction_influence_ratio = 0.15
 			}
 			ELSE = {
 				IF = {
@@ -2683,13 +2633,13 @@ focus_tree = {
 			add_tech_bonus = {
 				name = AST_the_pacific_resistance
 				bonus = 1
-				uses = 2
+				uses = 1
 				category = infantry_weapons
 			}
 			add_tech_bonus = {
 				name = AST_the_pacific_resistance
 				bonus = 1
-				uses = 2
+				uses = 1
 				category = artillery
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt
@@ -2748,6 +2698,82 @@ focus_tree = {
 		}
 
 		search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_NAVY_XP FOCUS_FILTER_AIR_XP }
+	}
+
+	focus = {
+		id = AST_a_northern_barrier
+		icon = GFX_focus_INS_the_declaration_of_independence
+
+		prerequisite = { focus = AST_equal_training  }
+		relative_position_id = 	AST_equal_training
+		x = -1
+		y = 1
+	
+		cost = 5
+
+		available = {
+		}
+
+		bypass = {
+		}
+
+		available_if_capitulated = no
+	
+		completion_reward = {
+		}
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+	}
+
+	focus = {
+		id = AST_demand_resources
+		icon = GFX_focus_GER_south_east_asian_natural_wealth
+
+		prerequisite = { focus = AST_equal_training }
+		relative_position_id = 	AST_equal_training
+		x = 1
+		y = 1
+	
+		cost = 5
+
+		available = {
+			threat > 0.8
+		}
+
+		bypass = {
+		}
+
+		available_if_capitulated = no
+	
+		completion_reward = {
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+	focus = {
+		id = AST_reclaim_the_lost_territory
+		icon = GFX_focus_generic_new_zealand
+
+		prerequisite = { focus = AST_equal_training }
+		relative_position_id = AST_equal_training 
+		x = 0
+		y = 2
+	
+		cost = 5
+
+		available = {
+		}
+
+		bypass = {
+		}
+
+		available_if_capitulated = no
+	
+		completion_reward = {
+		}
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
 	}
 
 	focus = {
@@ -2999,17 +3025,7 @@ focus_tree = {
 			add_to_variable = { AST_forging_australias_future_spirit_production_speed_buildings_factor = 0.05 tooltip = production_speed_buildings_factor_tt }
 
 			custom_effect_tooltip = generic_skip_one_line_tt
-			random_owned_controlled_state = {
-				limit = {
-					impassable = no
-					is_core_of = AST
-					is_fully_controlled_by = AST
-					free_building_slots = {
-						building = industrial_complex
-						size > 1
-						include_locked = yes
-					}
-				}
+			517 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
@@ -3105,17 +3121,7 @@ focus_tree = {
 			add_to_variable = { AST_forging_australias_future_spirit_political_power_cost = -0.05 tooltip = political_power_cost_tt }
 
 			custom_effect_tooltip = generic_skip_one_line_tt
-			random_owned_controlled_state = {
-				limit = {
-					impassable = no
-					is_core_of = AST
-					is_fully_controlled_by = AST
-					free_building_slots = {
-						building = industrial_complex
-						size > 1
-						include_locked = yes
-					}
-				}
+			285 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
@@ -3138,7 +3144,7 @@ focus_tree = {
 		x = 0
 		y = 1
 	
-		cost = 10
+		cost = 5
 
 		available = {
 		}
@@ -3315,39 +3321,13 @@ focus_tree = {
 		available_if_capitulated = no
 	
 		completion_reward = {
-			IF = {
-				limit = {
-					NOT = {
-						has_country_flag = AST_1939_start
-					}
-				}
-				add_timed_idea = {
-					idea = PHI_the_great_depression_temp_construction_speed
-					days = 365
-				}
-
-				ELSE = {
-					effect_tooltip = {
-						add_timed_idea = {
-						idea = PHI_the_great_depression_temp_construction_speed
-						days = 365
-						}
-					}
-				}
+			add_timed_idea = {
+				idea = PHI_the_great_depression_temp_construction_speed
+				days = 365
 			}
 
 			custom_effect_tooltip = generic_skip_one_line_tt
-			random_owned_controlled_state = {
-				limit = {
-					impassable = no
-					is_core_of = AST
-					is_fully_controlled_by = AST
-					free_building_slots = {
-						building = industrial_complex
-						size > 1
-						include_locked = yes
-					}
-				}
+			521 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
@@ -3388,16 +3368,7 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			random_owned_controlled_state = {
-				limit = {
-					impassable = no
-					free_building_slots = {
-						building = arms_factory
-						size > 0
-						include_locked = yes
-					}
-				}
-				prioritize = { 285 } 
+			285 = {
 				add_extra_state_shared_building_slots = 2
 			}
 		}
@@ -3462,7 +3433,7 @@ focus = {
 		x = -1
 		y = 1
 	
-		cost = 10
+		cost = 5
 
 		available = {
 		}
@@ -3490,7 +3461,7 @@ focus = {
 		x = 0
 		y = 1
 	
-		cost = 10
+		cost = 5
 
 		available = {
 		}
@@ -3512,16 +3483,7 @@ focus = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			random_owned_controlled_state = {
-				limit = {
-					impassable = no
-					free_building_slots = {
-						building = arms_factory
-						size > 0
-						include_locked = yes
-					}
-				}
-				prioritize = { 517 } 
+			517 = {
 				add_extra_state_shared_building_slots = 2
 			}	
 
@@ -3598,7 +3560,7 @@ focus = {
 		x = -1
 		y = 1
 	
-		cost = 10
+		cost = 5
 
 		available = {
 		}
@@ -3740,9 +3702,7 @@ focus = {
 	focus = {
 		id = AST_populate_or_perish
 		icon = GFX_focus_generic_immigration
-
-
-#		relative_position_id = 
+		
 		x = 35
 		y = 0
 	
@@ -4491,8 +4451,7 @@ focus = {
 		completion_reward = {	
 			add_tech_bonus = {
 				name = AST_lee_enfield_no1_mark3
-			    bonus = 0.5
-			    ahead_reduction = 1
+			    bonus = 1
 			    uses = 1
 				category = infantry_weapons
 			}
@@ -4702,12 +4661,16 @@ focus = {
 		completion_reward = {
 			add_tech_bonus = {
 				name = AST_owen_gun
-			    bonus = 0.75
-			    ahead_reduction = 2
+			    bonus = 1
 			    uses = 1
 				category = infantry_weapons
 			}
-
+			add_tech_bonus = {
+				name = AST_the_pacific_resistance
+				bonus = 1
+				uses = 1
+				category = artillery
+			}
 			custom_effect_tooltip = generic_skip_one_line_tt
 			IF = {
 				limit = { has_dlc = "Arms Against Tyranny"}
@@ -4812,8 +4775,7 @@ focus = {
 		completion_reward = {
 			add_tech_bonus = {
 				name = AST_sentinel_tank_development
-			    bonus = 0.75
-			    ahead_reduction = 2
+			    bonus = 1
 			    uses = 1
 				category = cat_medium_armor
 			}
@@ -4990,7 +4952,7 @@ focus = {
 		x = 0
 		y = 1
 	
-		cost = 10
+		cost = 5
 
 		available = {
 		}
@@ -5018,24 +4980,17 @@ focus = {
 			}	
 
 			custom_effect_tooltip = generic_skip_one_line_tt
-			
 			add_tech_bonus = {
 				name = AST_army_inventions_directorate_taog 
-				bonus = 0.25
-				uses = 1
-				category = air_equipment 
-			}
-			add_tech_bonus = {
-				name = AST_army_inventions_directorate_taog 
-				bonus = 0.25
+				bonus = 1
 				uses = 1
 				category = armor 
 			}
 			add_tech_bonus = {
-				name = AST_army_inventions_directorate_taog 
-				bonus = 0.25
+				name = AST_the_pacific_resistance
+				bonus = 1
 				uses = 1
-				category = naval_equipment 
+				category = artillery
 			}
 		}
 
