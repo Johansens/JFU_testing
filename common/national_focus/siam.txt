@@ -17,7 +17,7 @@
 
 	inlay_window = {
 		id = sia_khana_ratsadon_inlay_window
-		position = { x = 1300 y = 500 }
+		position = { x = 900 y = 550 }
 	}
 
 	initial_show_position = {
@@ -59,7 +59,7 @@
 		id = SIA_shuffle_pridi_to_the_minister_of_interior
 		icon = GFX_focus_SIA_shuffle_pridi_to_the_minister_of_interior
 		prerequisite = { focus = SIA_the_khana_ratsadon }
-		x = -11
+		x = -6
 		y = 1
 		relative_position_id = SIA_the_khana_ratsadon
 		#mutually_exclusive = { focus =  focus =  }
@@ -71,7 +71,7 @@
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL_CHARACTER }
 
-		allow_branch = { always = no }
+		allow_branch = { }
 
 		completion_reward = {
 			SIA_increase_civilian_approval = yes
@@ -186,6 +186,7 @@
 			factor = 10
 		}
 		available = {
+			amount_research_slots < 5
 		}
 		#allow_branch = {
 		#}
@@ -291,7 +292,7 @@
 		completion_reward = {
 			add_tech_bonus = {
 				name = SIA_spread_democratic_sentiment_in_universities
-				bonus = 0.33
+				bonus = 0.75
 				uses = 1
 				category = industry
 			}
@@ -548,7 +549,7 @@
 		id = SIA_for_the_preservation_of_siamese_independence 
 		icon = GFX_focus_SIA_for_the_preservation_of_siamese_independence
 		prerequisite = { focus = SIA_the_khana_ratsadon }
-		x = 0
+		x = 6
 		y = 1
 		relative_position_id = SIA_the_khana_ratsadon
 		#mutually_exclusive = { focus =  focus =  }
@@ -1650,7 +1651,7 @@
 		focus = {
 		id = SIA_industrialization_drive
 		icon = GFX_focus_generic_industry_1
-		x = 15
+		x = 22
 		y = 0
 		relative_position_id = SIA_the_khana_ratsadon	
 		#prerequisite = { focus = SIA_for_the_preservation_of_siamese_independence }
@@ -2799,12 +2800,12 @@
 		prerequisite = { focus = SIA_irrigation  }
 		prerequisite = {focus = SIA_mechanization_of_agriculture }
 		#mutually_exclusive = { focus =  }
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 20
 		}
 		available = {
-			1076 = {
+			289 = {
 				is_controlled_by = ROOT
 			}
 		}
@@ -2813,38 +2814,28 @@
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_MANPOWER }
 
 		completion_reward = {
-			1076 = {
+			289 = {
 				add_dynamic_modifier = {
 					modifier = idea_SIA_farmers_moving_to_bangkok_good
 				}
 				increase_state_category = yes
-				if = {
-					limit = {
-						is_owned_and_controlled_by = ROOT
-						free_building_slots = {
-							building = industrial_complex
-							size > 0
-							include_locked = yes
-						}
-					}
-					add_extra_state_shared_building_slots = 3
-					add_building_construction = {
-						type = industrial_complex
-						level = 1
-						instant_build = yes
-					}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
 
-					add_building_construction = {
-						type = arms_factory
-						level = 1
-						instant_build = yes
-					}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
 
-					add_building_construction = {
-						type = dockyard
-						level = 1
-						instant_build = yes
-					}
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
 				}
 			}
 
@@ -2988,7 +2979,7 @@
 		prerequisite = { focus = SIA_public_credit }
 		prerequisite = { focus = SIA_textile_mills }
 		#mutually_exclusive = { focus =  }
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			factor = 40
 		}
@@ -3491,7 +3482,7 @@
 		relative_position_id = SIA_railway_and_port_extensions	
 		prerequisite = { focus = SIA_railway_and_port_extensions focus = SIA_prepare_for_the_next_blockade }
 		#mutually_exclusive = { focus =  }
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			factor = 40
 		}
@@ -3514,11 +3505,12 @@
 		relative_position_id = SIA_kasetsart_university	
 		prerequisite = { focus = SIA_kasetsart_university }
 		#mutually_exclusive = { focus =  }
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			factor = 40
 		}
 		available = {
+			amount_research_slots < 5
 		}
 		#allow_branch = {
 		#}
@@ -3795,8 +3787,12 @@
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
+			custom_effect_tooltip = idea_SIA_the_army_of_siam_tt
+			add_to_variable = { SIA_army_of_siam_industrial_capacity_factory = 0.05 tooltip = industrial_capacity_factory_tt }
+			add_to_variable = { SIA_army_of_siam_production_speed_industrial_complex_factor = 0.05 tooltip = production_speed_industrial_complex_factor_tt }
+			add_to_variable = { SIA_army_of_siam_production_speed_arms_factory_factor = 0.05 tooltip = production_speed_arms_factory_factor_tt }
+			
 			add_offsite_building = { type = arms_factory level = 1 }
-			add_ideas = idea_SIA_intermediate_war
 		}
 	}
 
@@ -3819,7 +3815,11 @@
 		search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-			add_ideas = idea_SIA_long_war
+			custom_effect_tooltip = idea_SIA_the_army_of_siam_tt
+			add_to_variable = { SIA_army_of_siam_line_change_production_efficiency_factor = 0.10 tooltip = line_change_production_efficiency_factor_tt }
+			add_to_variable = { SIA_army_of_siam_production_factory_max_efficiency_factor = 0.05 tooltip = production_factory_max_efficiency_factor_tt }
+			add_to_variable = { SIA_army_of_siam_research_speed_factor = 0.06 tooltip = research_speed_factor_tt }
+			add_to_variable = { SIA_army_of_siam_land_mastery_gain_factor = 0.10 tooltip = land_mastery_gain_factor_tt }
 		}
 	}
 
@@ -3842,8 +3842,9 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			add_ideas = idea_SIA_specialized_warfare
-			add_potential_special_forces_tree = yes
+			custom_effect_tooltip = idea_SIA_the_army_of_siam_tt
+			add_to_variable = { SIA_army_of_siam_supply_consumption_factor = -0.05 tooltip = supply_consumption_factor_tt }
+			add_to_variable = { SIA_army_of_siam_no_supply_grace = 48 tooltip = SIA_no_supply_grace_tt }
 		}
 	}
 
@@ -4081,10 +4082,10 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			swap_ideas = {
-				remove_idea = idea_SIA_specialized_warfare
-				add_idea = idea_SIA_nighttime_training
-			}
+			custom_effect_tooltip = idea_SIA_the_army_of_siam_tt
+			add_to_variable = { SIA_army_of_siam_supply_consumption_factor = -0.03 tooltip = supply_consumption_factor_tt }
+			add_to_variable = { SIA_army_of_siam_no_supply_grace = 30 tooltip = SIA_no_supply_grace_tt }
+			add_to_variable = { SIA_army_of_siam_land_night_attack = 0.10 tooltip = land_night_attack_tt }
 		}
 	}
 
@@ -4107,8 +4108,10 @@
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			add_ideas = idea_SIA_steel_arteries
-
+			custom_effect_tooltip = idea_SIA_the_army_of_siam_tt
+			add_to_variable = { SIA_production_speed_supply_node_factor = 0.2 tooltip = production_speed_supply_node_factor_tt }
+			add_to_variable = { SIA_army_of_siam_production_speed_infrastructure_factor = 0.2 tooltip = production_speed_infrastructure_factor_tt }
+			add_to_variable = { SIA_army_of_siam_supply_consumption_factor = -0.05 tooltip = supply_consumption_factor_tt }
 			SIA_increase_civilian_approval = yes
 		}
 	}

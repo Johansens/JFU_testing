@@ -2762,7 +2762,7 @@ JFU_pregrinded_effect = {
 			add_unit_leader_trait = guerilla_fighter	
 			add_unit_leader_trait = commando	
 		}
-		#AST_alan_vasey = { add_skill_level = 1 }
+		AST_alan_vasey = { add_skill_level = 1 }
 		AST_alan_vasey = { add_attack = 2 }
 		AST_alan_vasey = {
 			add_unit_leader_trait = trickster
@@ -4636,6 +4636,7 @@ SPR_NO_CW = {
 	if = { limit = { country_exists = SAF } SAF = { add_war_support = 0.1} }
 	if = { limit = { country_exists = NZL } NZL = { add_war_support = 0.1} }
 	RAJ = { add_war_support = 0.1 }
+	AST = { add_war_support = 0.1 }
 	SOV = { add_war_support = 0.1 }	
 	NOR = { add_war_support = 0.1 }
 }
