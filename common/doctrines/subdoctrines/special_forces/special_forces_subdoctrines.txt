@@ -44,7 +44,7 @@ mountaineers_1 = {
     rewards = {
 		reward_1 = {
 			mastery = 60
-			category_mountaineers = {
+			mountaineers = {
 				Mountain = {
 					attack = 0.05
 					movement = 0.05
@@ -57,7 +57,7 @@ mountaineers_1 = {
 		}
 		reward_2 = {
 			mastery = 60
-			category_mountaineers = {
+			mountaineers = {
 				Mountain = {
 					attack = 0.05
 					movement = 0.05
@@ -70,7 +70,7 @@ mountaineers_1 = {
 		}
 		reward_3 = {
 			mastery = 60
-			category_mountaineers = {
+			mountaineers = {
 				Mountain = {
 					attack = 0.05
 					movement = 0.05
@@ -177,7 +177,7 @@ mountaineers_2 = {
 		reward_1 = {
 			mastery = 60
 			acclimatization_cold_climate_gain_factor = 0.25
-			category_mountaineers = {
+			mountaineers = {
 				forest = {
 					attack = 0.10
 					movement = 0.05
@@ -187,7 +187,7 @@ mountaineers_2 = {
 		reward_2 = {
 			mastery = 60
 			acclimatization_hot_climate_gain_factor = 0.25
-			category_mountaineers = {
+			mountaineers = {
 				desert = {
 					attack = 0.10
 					movement = 0.05
@@ -196,7 +196,7 @@ mountaineers_2 = {
 		}
 		reward_3 = {
 			mastery = 60
-			category_mountaineers = {
+			mountaineers = {
 				Mountain = {
 					attack = 0.05
 					movement = 0.05
@@ -209,7 +209,7 @@ mountaineers_2 = {
 		}
 		reward_4 = {
 			mastery = 60
-			category_mountaineers = {
+			mountaineers = {
 				Urban = {
 					attack = 0.10
 					movement = 0.05
@@ -219,7 +219,7 @@ mountaineers_2 = {
 		}
 		reward_5 = {
 			mastery = 60
-			category_mountaineers = {
+			mountaineers = {
 				jungle = {
 					attack = 0.10
 					movement = 0.05
@@ -237,7 +237,7 @@ marines_1 = {
     icon = GFX_marines_commandoes_medium
 
     xp_cost = 60
-    xp_type = navy
+    xp_type = army
 
     xor = { marines_2 }
 
@@ -386,7 +386,7 @@ marines_2 = {
     icon = GFX_marines_expeditionary_medium
 
     xp_cost = 60
-    xp_type = navy
+    xp_type = army
 
     xor = { marines_1 }
 
