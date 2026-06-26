@@ -1684,7 +1684,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = ITA_italian_highways_bba
-		cost = 10
+		cost = 5
 		available = {
 		}
 
@@ -1715,7 +1715,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = ITA_italian_highways_bba
-		cost = 10
+		cost = 5
 		available = {
 		}
 
@@ -1774,7 +1774,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = ITA_industria_della_gomma_sintetica
 		mutually_exclusive = { focus = ITA_modernize_the_mezzogiorno }
-		cost = 5
+		cost = 10
 		available = {
 		}
 
@@ -1818,7 +1818,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = ITA_industria_della_gomma_sintetica
 		mutually_exclusive = { focus = ITA_strengthen_northern_industry }
-		cost = 5
+		cost = 10
 		available = {
 		}
 
