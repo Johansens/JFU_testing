@@ -487,7 +487,25 @@ characters={
 					factor = 1.000
 				}
 			}
-	
+			corps_commander={
+				traits={ logistics_wizard organisational_leader expert_delegator }
+				skill=3
+				attack_skill=3
+				defense_skill=2
+				planning_skill=3
+				logistics_skill=2
+				legacy_id=1108
+				visible = {
+					OR = {
+						NOT = { has_global_flag = spanish_civil_war }
+						AND = {
+							tag = SPR
+							has_global_flag = spanish_civil_war
+							NOT = { has_global_flag = SPR_sin_paquito }
+						}
+					}
+				}
+			}	
 			country_leader={
 				ideology=fascism_ideology
 				expire="1965.1.1.1"
