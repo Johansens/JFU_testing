@@ -3579,26 +3579,6 @@ focus_tree = {
 		}
 
 		available = {
-			JAP_naval_faction_is_not_subdued = yes
-			OR = {
-				NOT = {
-					has_completed_focus = JAP_hokushin_ron
-				}
-				AND = {
-					has_country_flag = {
-					 	flag = JAP_hokushin_ron_started_flag
-					 	days > 180
-					} 
-					custom_trigger_tooltip = {
-						tooltip = JAG_hokushin_ron_focus_days_tt
-						has_country_flag = {
-							flag = JAP_hokushin_ron_started_flag
-							days > 180
-						}
-					}
-				}
-			}
-			
 		}
 
 		bypass = {
@@ -3640,11 +3620,6 @@ focus_tree = {
 			#custom_effect_tooltip = generic_skip_one_line_tt
 
 			JAP_small_naval_faction_gain = yes
-
-			hidden_effect = {
-				set_country_flag = JAP_nanshin_ron_started_flag # Used to temporarily block the Hokushin-ron focuses
-			}	
-			
 		}
 	}
 
@@ -4324,7 +4299,10 @@ focus_tree = {
 		cost = 5
 
 		available = {
-			always = no
+			has_game_rule = { 
+				rule = CASUAL_STUFF 
+				option = CASUAL_STUFF_ON 
+			} 
 		}
 
 		ai_will_do = {
@@ -4332,25 +4310,6 @@ focus_tree = {
 		}
 
 		available = {
-			JAP_army_faction_is_not_subdued = yes
-			OR = {
-				NOT = {
-					has_completed_focus = JAP_nanshin_ron
-				}
-				AND = {
-					has_country_flag = {
-					 	flag = JAP_nanshin_ron_started_flag
-					 	days > 180
-					} 
-					custom_trigger_tooltip = {
-						tooltip = JAG_nanshin_ron_focus_days_tt
-						has_country_flag = {
-							flag = JAP_nanshin_ron_started_flag
-							days > 180
-						}
-					}
-				}
-			}
 		}
 
 		bypass = {
@@ -4377,10 +4336,6 @@ focus_tree = {
 				cost_reduction = 0.25
 				uses = 1
 				category = land_doctrine	
-			}
-
-			hidden_effect = {
-				set_country_flag = JAP_hokushin_ron_started_flag # Used to temporarily block the Nanshin-ron focuses
 			}	
 			
 		}
@@ -4396,7 +4351,7 @@ focus_tree = {
 
 		prerequisite = { focus = JAP_hokushin_ron }
 
-		cost = 10
+		cost = 2
 
 		ai_will_do = {
 			factor = 1
@@ -4405,7 +4360,6 @@ focus_tree = {
 		available = {
 			MAN = {
 				exists = yes
-				is_ally_with = ROOT
 			}
 		}
 
@@ -4422,33 +4376,19 @@ focus_tree = {
 
 			MAN = {
 				army_experience = 50
-				add_manpower = 20000
+				add_manpower = 100000
 				custom_effect_tooltip = generic_skip_one_line_tt
 				add_equipment_to_stockpile = { 
 					type = infantry_equipment
-					amount = 500
+					amount = 5000
 					producer = JAP
 				}
 				add_equipment_to_stockpile = { 
 					type = support_equipment
-					amount = 150
+					amount = 500
 					producer = JAP
 				}	
-				custom_effect_tooltip = generic_skip_one_line_tt
-				add_doctrine_cost_reduction = {
-					name = JAP_build_up_the_manchurian_army
-					cost_reduction = 0.5
-					uses = 2
-					category = land_doctrine	
-				}
-				custom_effect_tooltip = generic_skip_one_line_tt
-				add_autonomy_ratio = {
-					value = -0.08333
-					localization = JAP_build_up_the_manchurian_army
-				}
 			}
-				
-			
 		}
 	}
 
@@ -4462,7 +4402,7 @@ focus_tree = {
 
 		prerequisite = { focus = JAP_hokushin_ron }
 
-		cost = 5
+		cost = 2
 
 		ai_will_do = {
 			factor = 1
@@ -4538,7 +4478,7 @@ focus_tree = {
 
 		prerequisite = { focus = JAP_utilize_ainu_expertise }
 
-		cost = 10
+		cost = 2
 
 		ai_will_do = {
 			factor = 1
@@ -4633,16 +4573,44 @@ focus_tree = {
 
 		prerequisite = { focus = JAP_kantokuen }
 
-		cost = 10
+		will_lead_to_war_with = SOV
+
+		cost = 2
 
 		ai_will_do = {
 			factor = 1
 		}
 
 		available = {
-			JAP_army_faction_is_at_least_influential = yes
-			has_completed_focus = JAP_imperial_rule_assistance_association
-			always = no
+			custom_trigger_tooltip = {
+				tooltip = jap_sov_war1_tt
+				OR = {
+					JAP = { 
+						has_full_control_of_state = 335
+					}
+					any_allied_country = { 	
+						has_full_control_of_state = 335
+					}
+				}
+				
+				OR = {
+					JAP = {
+						has_full_control_of_state = 327
+					}
+					any_allied_country = { 	
+						has_full_control_of_state = 327 
+					}
+				}
+				OR = {
+					JAP = {
+						has_full_control_of_state = 439
+					}
+					any_allied_country = { 	
+						has_full_control_of_state = 439 
+					}
+				}
+			}
+
 		}
 
 		bypass = {
@@ -4657,7 +4625,17 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 
 		completion_reward = {
-			
+			declare_war_on = {
+				target = SOV
+    			type = annex_everything
+			}
+			hidden_effect = {
+				if = { limit = { country_exists = MAN }	MAN = { add_to_war = { targeted_alliance = JAP enemy = SOV } } }
+				if = { limit = { country_exists = SIA }	SIA = { add_to_war = { targeted_alliance = JAP enemy = SOV } } }
+			}
+			add_timed_idea = {
+				idea = jap_sov1 days = 120
+			}			
 		}
 	}
 
@@ -4671,44 +4649,70 @@ focus_tree = {
 
 		prerequisite = { focus = JAP_kantokuen }
 
-		cost = 5
+		will_lead_to_war_with = SOV
+
+		cost = 2
 
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				is_historical_focus_on = yes
-				OR = {
-					has_war_with = ENG
-					has_war_with = USA
-				}
-				NOT = {
-					controls_state = 422
-					controls_state = 629
-					controls_state = 285
-				}
-			}
 		}
 
 		available = {
-			JAP_army_faction_is_at_least_influential = yes
-			has_completed_focus = JAP_imperial_rule_assistance_association
-			SOV = {
-				has_war = yes
-				surrender_progress > 0.5
+			custom_trigger_tooltip = {
+				tooltip = jap_sov_war2_tt
+				OR = {
+					JAP = { 
+						has_full_control_of_state = 335
+					}
+					any_allied_country = { 	
+						has_full_control_of_state = 335
+					}
+				}
+				
+				OR = {
+					JAP = {
+						has_full_control_of_state = 285
+					}
+					any_allied_country = { 	
+						has_full_control_of_state = 285 
+					}
+				}
+				OR = {
+					JAP = {
+						has_full_control_of_state = 439
+					}
+					any_allied_country = { 	
+						has_full_control_of_state = 439 
+					}
+				}
+				OR = {
+					JAP = {
+						has_full_control_of_state = 629
+					}
+					any_allied_country = { 	
+						has_full_control_of_state = 629 
+					}
+				}
+				OR = {
+					JAP = {
+						has_full_control_of_state = 284
+					}
+					any_allied_country = { 	
+						has_full_control_of_state = 284 
+					}
+				OR = {
+					JAP = {
+						has_full_control_of_state = 327
+					}
+					any_allied_country = { 	
+						has_full_control_of_state = 327 
+					}
+				}
+				}
 			}
-			always = no
+
 		}
 
 		bypass = {
-			OR = {				
-				has_war_with = SOV
-				has_wargoal_against = SOV
-				has_subject = SOV
-				SOV = {
-					exists = no
-				}
-			}
 		}
 
 		will_lead_to_war_with = SOV
@@ -4720,7 +4724,14 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 
 		completion_reward = {
-			
+			declare_war_on = {
+				target = SOV
+    			type = annex_everything
+			}
+			hidden_effect = {
+				if = { limit = { country_exists = MAN }	MAN = { add_to_war = { targeted_alliance = JAP enemy = SOV } } }
+				if = { limit = { country_exists = SIA }	SIA = { add_to_war = { targeted_alliance = JAP enemy = SOV } } }
+			}			
 		}
 	}
 

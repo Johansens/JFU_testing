@@ -1094,6 +1094,11 @@
  JAP_plunder_territories3_tt:0 "§YJava§!, §YSulawesi§! and §YPapua§! are fully controlled by §YJapan§!"
  JAP_CHI_WAR_TT:0 "§RThis focus will reduce the days till the china war starts to zero§!"
  JAP_INDOCHINA_tt:0 "We will occupy §YFrench Indochina§!"
+ jap_sov_war1_tt:0 "Japan or any allied Nation has full control over §YIndia§!, §YThe Dutch East Indies§! and §YThe Philippines§!"
+ jap_sov_war2_tt:0 "Japan or any allied nation has full control over §YIndia§!, §YThe Dutch East Indies§!, §YThe Philippines§!, §YAustralia§!, §YNew Zealand§! and §YHawaii§!."
+
+
+
 
  MLL_dynamic_modifer_tt:0 "Modify §YLow Legitimacy§! by\nStabilty §G+10.00%§!\nWar Support §G+10.00%§!"
  MLL_remove_tt:0 "Remove §YLow Legitmiacy§! which granted \nStabilty §R-20.00%§!\nWar Support §R-20.00%§!"
@@ -1226,6 +1231,8 @@
 
 
  JAP_strike_on_the_northern_resource_area:0 "Strike on the Northern Resource Area"
+ jap_sov1:0 "Overstretched Empire"
+
 
  italian_defense:0 "Italian Defensive Doctrine"
  italian_corporatism:0 "Italian Corporatism"
