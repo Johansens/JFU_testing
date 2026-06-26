@@ -9,6 +9,11 @@ technologies = {
 			artillery_equipment_1
 		}
 
+
+		enable_subunits = {
+			field_guns
+		}
+
 		path = {
 			leads_to_tech = interwar_artillery
 			research_cost_coeff = 1
@@ -507,6 +512,10 @@ technologies = {
 			breakthrough = 0.15
 		}
 
+		rocket_battery = {
+			soft_attack = 0.15
+		}
+
 		path = {
 			leads_to_tech = rocket_artillery3
 			research_cost_coeff = 1
@@ -552,6 +561,10 @@ technologies = {
 		motorized_rocket_brigade = {
 			soft_attack = 0.15
 			breakthrough = 0.15
+		}
+
+		rocket_battery = {
+			soft_attack = 0.15
 		}
 
 		path = {
@@ -629,6 +642,10 @@ technologies = {
 			anti_air_equipment_1
 		}
 
+		armored_car = {
+			hard_attack = 0.1
+		}
+
 		enable_equipment_modules = {
 			ship_anti_air_2
 			tank_auto_cannon
@@ -640,6 +657,10 @@ technologies = {
 		enable_building = {
 			building = anti_air_building
 			level = 5
+		}
+
+		enable_subunits = {
+			anti_air_battery
 		}
 
 		path = {
@@ -688,6 +709,9 @@ technologies = {
 			air_attack = 0.1
 		}
 		anti_air_brigade = {
+			air_attack = 0.1
+		}
+		anti_air_battery = {
 			air_attack = 0.1
 		}
 		mot_anti_air_brigade = {
@@ -805,6 +829,9 @@ technologies = {
 		anti_air_brigade = {
 			air_attack = 0.1
 		}
+		anti_air_battery = {
+			air_attack = 0.1
+		}
 		mot_anti_air_brigade = {
 			air_attack = 0.1
 		}
@@ -863,6 +890,9 @@ technologies = {
 			air_attack = 0.1
 		}
 		anti_air_brigade = {
+			air_attack = 0.1
+		}
+		anti_air_battery = {
 			air_attack = 0.1
 		}
 		mot_anti_air_brigade = {
@@ -974,6 +1004,10 @@ technologies = {
 			tank_heavy_cannon
 			tank_buster_1
 			#lc_high_velocity_cannon_turret #Module for Land Cruiser
+		}
+
+		enable_subunits = {
+			anti_tank_battery
 		}
 
 		path = {

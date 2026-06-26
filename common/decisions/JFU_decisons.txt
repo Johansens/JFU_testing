@@ -1135,7 +1135,7 @@ political_actions1 = {
 	"Annex Bulgaria into ITA" = {
 		icon = generic_operation
 		fire_only_once = yes
-		allowed = { tag = ITA }
+		allowed = { tag = ITA always = no }
 		cost = 0
 		visible = { 212 = { is_controlled_by = BUL } }
 		available = { BUL = { is_ai = yes } date > 1938.1.1 }
