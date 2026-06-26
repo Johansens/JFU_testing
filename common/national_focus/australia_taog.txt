@@ -927,8 +927,8 @@ focus_tree = {
 	
 		completion_reward = {
 			AST_add_or_modify_AST_australian_military_forces_spirit = yes
-			add_to_variable = { AST_australian_military_forces_spirit_army_non_core_attack_factor = 0.05 tooltip = army_non_core_attack_factor_tt }
-			add_to_variable = { AST_australian_military_forces_spirit_army_non_core_defence_factor = 0.10 tooltip = army_non_core_defence_factor_tt }
+			add_to_variable = { AST_australian_military_forces_spirit_army_non_core_attack_factor = 0.025 tooltip = army_non_core_attack_factor_tt }
+			add_to_variable = { AST_australian_military_forces_spirit_army_non_core_defence_factor = 0.05 tooltip = army_non_core_defence_factor_tt }
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 			show_unit_leaders_tooltip = AST_horace_robertson
@@ -1203,8 +1203,8 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 			AST_add_or_modify_AST_australian_military_forces_spirit = yes
-			add_to_variable = { AST_australian_military_forces_spirit_army_non_core_attack_factor = 0.05 tooltip = army_non_core_attack_factor_tt }
-			add_to_variable = { AST_australian_military_forces_spirit_army_non_core_defence_factor = 0.05 tooltip = army_non_core_defence_factor_tt }
+			add_to_variable = { AST_australian_military_forces_spirit_army_non_core_attack_factor = 0.025 tooltip = army_non_core_attack_factor_tt }
+			add_to_variable = { AST_australian_military_forces_spirit_army_non_core_defence_factor = 0.025 tooltip = army_non_core_defence_factor_tt }
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 			custom_effect_tooltip = AST_conscription_law_so_far
@@ -1350,8 +1350,8 @@ focus_tree = {
 			
 			custom_effect_tooltip = generic_skip_one_line_tt
 			AST_add_or_modify_AST_australian_military_forces_spirit = yes
-			add_to_variable = { AST_australian_military_forces_spirit_army_non_core_attack_factor = -0.05 tooltip = army_non_core_attack_factor_tt }
-			add_to_variable = { AST_australian_military_forces_spirit_army_non_core_defence_factor = -0.05 tooltip = army_non_core_defence_factor_tt }
+			add_to_variable = { AST_australian_military_forces_spirit_army_non_core_attack_factor = -0.025 tooltip = army_non_core_attack_factor_tt }
+			add_to_variable = { AST_australian_military_forces_spirit_army_non_core_defence_factor = -0.025 tooltip = army_non_core_defence_factor_tt }
 			add_to_variable = { AST_australian_military_forces_spirit_army_core_attack_factor = 0.10 tooltip = army_core_attack_factor_tt }
 			add_to_variable = { AST_australian_military_forces_spirit_army_core_defence_factor = 0.10 tooltip = army_core_defence_factor_tt }
 
@@ -1492,8 +1492,8 @@ focus_tree = {
 				}
 				custom_effect_tooltip = AST_seven_million_britishers_conscription_tt
 				AST_add_or_modify_AST_australian_military_forces_spirit = yes
-				add_to_variable = { AST_australian_military_forces_spirit_army_non_core_attack_factor = 0.05 tooltip = army_non_core_attack_factor_tt }
-				add_to_variable = { AST_australian_military_forces_spirit_army_non_core_defence_factor = 0.05 tooltip = army_non_core_defence_factor_tt }
+				add_to_variable = { AST_australian_military_forces_spirit_army_non_core_attack_factor = 0.025 tooltip = army_non_core_attack_factor_tt }
+				add_to_variable = { AST_australian_military_forces_spirit_army_non_core_defence_factor = 0.025 tooltip = army_non_core_defence_factor_tt }
 				}
 
 			IF = {
@@ -2470,8 +2470,8 @@ focus_tree = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 
 			AST_add_or_modify_AST_australian_military_forces_spirit = yes
-			add_to_variable = { AST_australian_military_forces_spirit_army_non_core_attack_factor = -0.05 tooltip = army_non_core_attack_factor_tt }
-			add_to_variable = { AST_australian_military_forces_spirit_army_non_core_defence_factor = -0.05 tooltip = army_non_core_defence_factor_tt }
+			add_to_variable = { AST_australian_military_forces_spirit_army_non_core_attack_factor = -0.025 tooltip = army_non_core_attack_factor_tt }
+			add_to_variable = { AST_australian_military_forces_spirit_army_non_core_defence_factor = -0.025 tooltip = army_non_core_defence_factor_tt }
 			add_to_variable = { AST_australian_military_forces_spirit_army_core_attack_factor = 0.10 tooltip = army_core_attack_factor_tt }
 			add_to_variable = { AST_australian_military_forces_spirit_army_core_defence_factor = 0.10 tooltip = army_core_defence_factor_tt }
 
@@ -2607,21 +2607,7 @@ focus_tree = {
 		cost = 5
 
 		available = {
-
-			USA = {
-				OR = {
-					is_in_faction = no
-					is_faction_leader = yes
-				}
-			}
-
-			NOT = {
-				is_in_faction_with = USA
-				is_faction_leader = yes
-			}
-
-			is_subject = no
-
+			is_in_faction_with = USA
 		}
 
 		bypass = {
@@ -2958,7 +2944,6 @@ focus_tree = {
 			AST_add_or_modify_forging_australias_future = yes
 			add_to_variable = { AST_forging_australias_future_spirit_local_resources_factor = 0.10 tooltip = local_resources_factor_tt }
 			add_to_variable = { AST_forging_australias_future_spirit_local_resource_gain_efficiency_per_infrastructure = 0.05 tooltip = local_resource_gain_efficiency_per_infrastructure_tt }
-			add_to_variable = { AST_forging_australias_future_spirit_trade_opinion_factor = 0.10 tooltip = trade_opinion_factor_tt }
 			add_to_variable = { AST_forging_australias_future_spirit_trade_laws_cost_factor = 1.00 tooltip = trade_laws_cost_factor_tt }
 
 			custom_effect_tooltip = generic_skip_one_line_tt
@@ -3026,7 +3011,7 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 			517 = {
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = industrial_complex
 					level = 2
@@ -3122,7 +3107,7 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 			285 = {
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = industrial_complex
 					level = 2
@@ -3352,7 +3337,7 @@ focus_tree = {
 		x = 2
 		y = 1
 	
-		cost = 10
+		cost = 5
 
 		available = {
 		}
@@ -3365,12 +3350,6 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = AST_great_depression_taog_spirit_tt
 			add_to_variable = { AST_great_depression_consumer_goods_factor = -0.10 tooltip = consumer_goods_factor_tt }
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			285 = {
-				add_extra_state_shared_building_slots = 2
-			}
 		}
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -3479,13 +3458,7 @@ focus = {
 
 			AST_add_or_modify_forging_australias_future = yes
 			
-			add_to_variable = { AST_forging_australias_future_spirit_production_factory_start_efficiency_factor = 0.05 tooltip = production_factory_start_efficiency_factor_tt }
-
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			517 = {
-				add_extra_state_shared_building_slots = 2
-			}	
+			add_to_variable = { AST_forging_australias_future_spirit_production_factory_start_efficiency_factor = 0.05 tooltip = production_factory_start_efficiency_factor_tt }	
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 			AST_democratic_votes_increase_5_effect = yes
@@ -3573,8 +3546,7 @@ focus = {
 		completion_reward = {
 			AST_add_or_modify_forging_australias_future = yes
 
-			add_to_variable = { AST_forging_australias_future_spirit_cic_construction_boost_factor = 0.10 tooltip = cic_construction_boost_factor_tt }
-			add_to_variable = { AST_forging_australias_future_spirit_trade_opinion_factor = 0.10 tooltip = trade_opinion_factor_tt }
+			add_to_variable = { AST_forging_australias_future_spirit_production_speed_buildings_factor = 0.10 tooltip = production_speed_buildings_factor_tt }
 			add_to_variable = { AST_forging_australias_future_spirit_extra_trade_to_overlord_factor = -0.20 tooltip = extra_trade_to_overlord_factor_tt }
 		}
 
@@ -3611,21 +3583,11 @@ focus = {
 			}
 
 			custom_effect_tooltip = generic_skip_one_line_tt
-			random_owned_controlled_state = {
-				limit = {
-					impassable = no
-					is_core_of = AST
-					is_fully_controlled_by = AST
-					free_building_slots = {
-						building = industrial_complex
-						size > 1
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 2
+			519 = {
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
-					type = industrial_complex
-					level = 2
+					type = arms_factory
+					level = 3
 					instant_build = yes
 				}	
 			}
@@ -3656,12 +3618,10 @@ focus = {
 	
 		completion_reward = {
 			custom_effect_tooltip = AST_forging_australias_future_spirit_tt
-			add_to_variable = { AST_forging_australias_future_spirit_research_speed_factor = 0.05 tooltip = research_speed_factor_tt }
-			add_to_variable = { AST_forging_australias_future_spirit_trade_opinion_factor = 0.10 tooltip = trade_opinion_factor_tt }
-			add_to_variable = { AST_forging_australias_future_spirit_convoy_retreat_speed = 0.10 tooltip = convoy_retreat_speed_tt }
+			add_to_variable = { AST_forging_australias_future_spirit_research_speed_factor = 0.1 tooltip = research_speed_factor_tt }
 
 			custom_effect_tooltip = generic_skip_one_line_tt
-			add_offsite_building = { type = industrial_complex level = 2 }
+			add_offsite_building = { type = arms_factory level = 3 }
 		}
 
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH FOCUS_FILTER_INTERNATIONAL_TRADE }
@@ -4564,7 +4524,7 @@ focus = {
 			#add_to_variable = { AST_australian_military_forces_spirit_army_non_core_defence_factor = 0.10 tooltip = army_non_core_defence_factor_tt }
 
 			custom_effect_tooltip = generic_skip_one_line_tt
-			show_unit_leaders_tooltip = AST_alan_vasey
+			#show_unit_leaders_tooltip = AST_alan_vasey
 			show_unit_leaders_tooltip = AST_george_wootten
 
 			custom_effect_tooltip = generic_skip_one_line_tt

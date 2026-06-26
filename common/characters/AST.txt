@@ -375,12 +375,11 @@ characters={
 			}
 
 			corps_commander={
-				traits = { inflexible_strategist infantry_leader }
 				skill=4
-				attack_skill=3
-				defense_skill=4
-				planning_skill=3
-				logistics_skill=3
+				attack_skill=4
+				defense_skill=2
+				planning_skill=5
+				logistics_skill=2
 				legacy_id=-1
 			}
 		}
@@ -424,36 +423,30 @@ characters={
 				}
 			}
 
-			field_marshal={
-				visible = {
-					NOT = {
-						has_character_flag = AST_army_chief_dead
-					}
-				}
-				traits = { organizer defensive_doctrine }
-				skill=3
+			corps_commander={
+				skill=4
 				attack_skill=1
 				defense_skill=3
-				planning_skill=2
-				logistics_skill=4
+				planning_skill=3
+				logistics_skill=3
 				legacy_id=-1
 			}
 
-			advisor = {
-				slot = army_chief
-				cost = 100
-				idea_token = AST_thomas_blamey
-				allowed = {
-					original_tag = AST
-				}
-				traits = {
-					army_chief_defensive_2
-				}
-			
-				ai_will_do = {
-					factor = 1
-				}				
-			}
+			#advisor = {
+			#	slot = army_chief
+			#	cost = 100
+			#	idea_token = AST_thomas_blamey
+			#	allowed = {
+			#		original_tag = AST
+			#	}
+			#	traits = {
+			#		army_chief_defensive_2
+			#	}
+			#
+			#	ai_will_do = {
+			#		factor = 1
+			#	}				
+			#}
 
 		}
 
@@ -592,16 +585,16 @@ characters={
 			}
 
 			corps_commander={
-				visible = { 
-					has_completed_focus = AST_second_australian_imperial_force
-				}
+				#visible = { 
+				#	has_completed_focus = AST_second_australian_imperial_force
+				#}
 
-				traits={ infantry_leader expeditionary_leader_trait }
+				traits={ hill_fighter }
 				skill=3
-				attack_skill=3
-				defense_skill=2
+				attack_skill=2
+				defense_skill=1
 				planning_skill=3
-				logistics_skill=2
+				logistics_skill=1
 				legacy_id=-1
 			}
 
@@ -1407,21 +1400,13 @@ characters={
 					small=GFX_portrait_AST_henry_wynter_small
 				}
 			}
-
-			advisor={
-				cost = 100
-				slot = theorist
-				idea_token = AST_henry_winter
-				ledger = army
-				allowed = {
-					original_tag = AST
-				}
-				traits = {
-					military_theorist
-				}
-				ai_will_do = {
-					factor = 1
-				}
+			corps_commander={
+				skill=4
+				attack_skill=3
+				defense_skill=4
+				planning_skill=3
+				logistics_skill=3
+				legacy_id=-1
 			}
 		}
 
