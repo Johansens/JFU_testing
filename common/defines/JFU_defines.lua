@@ -95,8 +95,12 @@ NDefines.NMilitary.PREFERRED_TACTIC_CHARACTER_SKILL_LEVEL_REQUIRED = 4 -- VANILL
 NDefines.NMilitary.MIN_DIVISION_BRIGADE_HEIGHT = 5		-- VANILLA 4 -- Min height of regiments in division designer.
 NDefines.NMilitary.RELIABILTY_RECOVERY = 0.0 -- WAS 0.1 factor affecting how much equipment is returned "from the dead"
 NDefines.NMilitary.COHESION_IMMOBILE_PLANNING_SPEED_MULTIPLIER = 1	-- VANILLA 0.5-- If using the 'immobile' cohesion setting, factor ALL planning speed growth by this
+NDefines.NMilitary.REGIMENTAL_SUPPORT_REQUIRED_BATTALIONS = { 4 } -- VANILLA 3 -- For each regimental support row, how many battalions are required in the regiment to be able to place a support in that row.
 
-
+NDefines.NMilitary.PLANNING_CAP_COMMS_SCALING = { 1.0, 1.0, 1.0, 1.0, 1.0 }		-- VANILLA 1.0, 0.95, 0.9, 0.85, 0.8	-- Value at index J is the scaling applied to planning cap when HQ is J provinces behind the frontline
+NDefines.NMilitary.PLANNING_CAP_NO_HQ_SCALING = 1.0								-- VANILLA 0.8							-- Scaling applied to planning cap when there's no HQ (no leader or leader not deployed or not the same root order)
+NDefines.NMilitary.PLANNING_SPEED_COMMS_SCALING = { 1.0, 1.0, 1.0, 1.0, 1.0 }	-- VANILLA 0.8							-- Same as PLANNING_CAP_COMMS_SCALING but for planning speed
+NDefines.NMilitary.PLANNING_SPEED_NO_HQ_SCALING = 1.0							-- VANILLA 1.0, 0.95, 0.9, 0.85, 0.8	-- Same as PLANNING_CAP_NO_HQ_SCALING but for planning speed
 
 NDefines.NDoctrines.MIN_MASTERY_GAIN_PER_DAY = 0.45                         -- If we have any mastery gain, it will be boosted to be at least this much per day (lower cap)
 
