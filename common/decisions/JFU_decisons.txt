@@ -492,6 +492,21 @@ political_actions1 = {
 			country_event = { id = ITA.1000 }
 			hidden_effect = {
 				news_event = { id = news.4005 }
+				IF = {
+					limit = { 
+						NOT = { has_faction_goal = faction_goal_secure_north_africa }
+					}
+					IF = {
+						limit = {
+							has_dlc = "No Compromise, No Surrender"
+						} 
+						add_faction_goal_slot = {
+							category  = long_term 
+							value = 1 
+						}
+						add_faction_goal = faction_goal_secure_north_africa
+					}
+				}
 			}
 		}
 	}
@@ -530,6 +545,16 @@ political_actions1 = {
 			country_event = { id = ITA.1000 }
 			hidden_effect = {
 				news_event = { id = news.4005 }
+				IF = {
+					limit = {
+						has_dlc = "No Compromise, No Surrender"
+					} 
+					add_faction_goal_slot = {
+						category  = long_term 
+						value = 1 
+					}
+					add_faction_goal = faction_goal_secure_north_africa
+				}
 			}
 		}
 	}	

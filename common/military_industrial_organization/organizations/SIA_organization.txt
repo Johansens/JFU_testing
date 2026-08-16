@@ -27,20 +27,6 @@ SIA_chaiseri_organization = {
  
 #####################
 
-
-SIA_bangkok_dock_organization = {
-	name = SIA_bangkok_dock_organization
-	include = generic_escort_ship_organization
-	icon = GFX_idea_SIA_bangkok_dock
-	allowed = {
-		original_TAG = SIA
-	}
-
-	available =  {
-		SIA = { NOT = { has_completed_focus = SIA_sell_bangkok_dock_co } }
-	}
-}
-
 ###########################
 
 ###  #    ##  #  # ###  ## 
@@ -50,15 +36,6 @@ SIA_bangkok_dock_organization = {
 #    ### #  # #  # ### ##  
 
 ###########################
-
-SIA_directorate_of_aeronautical_engineering = {
-	name = SIA_directorate_of_aeronautical_engineering
-	include = generic_light_aircraft_organization
-	icon = GFX_idea_SIA_directorate_of_aeronautical_engineering
-	allowed = {
-		original_TAG = SIA
-	}
-}
 
 
 ################################### 

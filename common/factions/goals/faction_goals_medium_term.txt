@@ -65,17 +65,11 @@ faction_goal_develop_iraqi_oil = {
 	visible = {
 	}
 	available = {
-		FROM = {
-			has_tech = excavation1
-			has_tech = excavation2
-		}
-
+		907 = { is_controlled_by_ROOT_or_ally = yes } 
 	}
 	completed = {
-		NOT = {
-			ENG = { controls_state = 291 }
-			ENG = { controls_state = 675 }
-		}
+		291 = { is_controlled_by_ROOT_or_ally = yes } 
+		675 = { is_controlled_by_ROOT_or_ally = yes } 
 	}
 	complete_effect = {
 		add_faction_power_projection = 100
@@ -485,6 +479,44 @@ faction_goal_secure_the_oil_supply = {
 	}
 }
 
+action_goal_industrial_expansion_jap = {
+	name = industrial_expansion_goal_name
+	description = industrial_expansion_goal_desc
+	category = medium_term
+	group = FOCUS_FILTER_INDUSTRY
+	visible = {
+		FROM = { original_tag = JAP }
+	}
+	completed = {
+		count_in_collection = {
+			collection = {
+				input = game:scope
+				operators = { faction_members }
+				name = FACTION_NAME
+			}
+			buildings = { industrial_complex }
+			size > 129
+		}
+	}
+	complete_effect = {
+		add_faction_power_projection = 200
+		custom_effect_tooltip = generic_skip_one_line_tt
+
+		every_faction_member = {
+			tooltip = AT_LEAST_50_CIVS
+			visible_when_empty = yes 
+			limit = {
+				num_of_civilian_factories > 54
+			}
+			add_tech_bonus = {
+				name = industrial_expansion_tech_bonus
+				bonus = 0.5
+				uses = 2
+				category = industry
+			}
+		}
+	}
+}
 
  ##  ##  #   # ### ### ###     #  # #  # ###  ##  #  # 
 #   #  # #   #  #  #    #      #  # ## #  #  #  # ## # 
@@ -790,6 +822,7 @@ faction_goal_industrial_expansion = {
 	visible = {
 		NOT = {
 			FROM = { original_tag = SOV }
+			FROM = { original_tag = JAP }
 		}
 	}
 	completed = {

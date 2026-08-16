@@ -753,7 +753,7 @@ generic_medium_tank_organization = {
 	icon = GFX_idea_generic_tank_manufacturer_2
 
 	allowed = {
-		NOT = { OR = { tag = GER tag = CHI tag = CAN tag = SOV tag = FRA tag = ENG tag = SAF tag = USA } }
+		NOT = { OR = { tag = HUN tag = JAP tag = AST tag = GER tag = CHI tag = CAN tag = SOV tag = FRA tag = ENG tag = SAF tag = USA } }
 	}
 
 	equipment_type = { mio_cat_eq_all_medium_tank }
@@ -6512,7 +6512,7 @@ generic_artillery_organization = {
 	icon = GFX_idea_generic_artillery_manufacturer_2
 
 	allowed = {
-		NOT = { OR = { tag = BUL tag = SPR tag = RAJ tag = HOL tag = GER tag = ENG tag = SOV tag = FRA tag = RAJ tag = ITA tag = USA tag = JAP tag = BEL tag = CZE tag = ROM tag = MEX tag = RAJ } }
+		NOT = { OR = { tag = AST tag = SIA tag = BUL tag = SPR tag = RAJ tag = HOL tag = GER tag = ENG tag = SOV tag = FRA tag = RAJ tag = ITA tag = USA tag = JAP tag = BEL tag = CZE tag = ROM tag = MEX tag = RAJ } }
 		NOT = {
 			AND = {
 				OR = { tag = FIN tag = NOR tag = DEN tag = SWE }
@@ -6829,7 +6829,7 @@ generic_infantry_equipment_organization = {
 	icon = GFX_idea_generic_infantry_equipment_manufacturer_2
 
 	allowed = {
-		NOT = { OR = { tag = GER tag = ENG tag = SOV tag = FRA tag = ITA tag = JAP tag = USA tag = BEL tag = CZE tag = HUN tag = YUG tag = ROM tag = MEX tag = RAJ } }
+		NOT = { OR = { tag = AST tag = SIA tag = GER tag = ENG tag = SOV tag = FRA tag = ITA tag = JAP tag = USA tag = BEL tag = CZE tag = HUN tag = YUG tag = ROM tag = MEX tag = RAJ } }
 		NOT = {
 			AND = {
 				OR = { tag = AST tag = CAN tag = RAJ }
@@ -7407,7 +7407,7 @@ generic_motorized_mechanized_organization = {
 	icon = GFX_idea_generic_motorized_equipment_manufacturer_3
 
 	allowed = {
-		NOT = { OR = { tag = GER tag = ENG tag = SOV tag = FRA tag = ITA tag = JAP tag = USA tag = CZE tag = POL tag = ROM tag = MEX tag = CHI tag = HOL tag = SPR tag = GRE tag = RAJ } }
+		NOT = { OR = { tag = MAN tag = NZL tag = AST tag = SIA tag = GER tag = ENG tag = SOV tag = FRA tag = ITA tag = JAP tag = USA tag = CZE tag = POL tag = ROM tag = MEX tag = CHI tag = HOL tag = SPR tag = GRE tag = RAJ } }
 		NOT = {
 			AND = {
 				OR = { tag = FIN tag = NOR tag = DEN tag = SWE }

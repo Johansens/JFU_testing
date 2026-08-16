@@ -1,0 +1,5 @@
+# AI plane designs for Italy - fighters only
+# Regia Aeronautica fighter line mapped onto the airframe tiers:
+# CR.32 -> C.200 -> C.202 -> C.205 -> G.55 -> (G.80 jet)
+# Each design's priority drops to 0 once its successor is actually buildable (airframe + engine tech),
+# so the AI steps through them without ever being left without a valid fighter design.

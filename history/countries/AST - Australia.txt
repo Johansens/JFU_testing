@@ -232,19 +232,19 @@ IF = {
 		mark_older_equipment_obsolete = yes
 	}
 
-	create_equipment_variant = {
-		type = support_equipment_1
-		design_team = mio:AST_lysaght_organization
-		show_position = no
-		mark_older_equipment_obsolete = yes
-	}
+	#create_equipment_variant = {
+	#	type = support_equipment_1
+	#	design_team = mio:AST_lysaght_organization
+	#	show_position = no
+	#	mark_older_equipment_obsolete = yes
+	#}
 
-	create_equipment_variant = {
-		type = support_equipment_1
-		design_team = mio:AST_lysaght_organization
-		show_position = no
-		mark_older_equipment_obsolete = yes
-	}
+	#create_equipment_variant = {
+	#	type = support_equipment_1
+	#	design_team = mio:AST_lysaght_organization
+	#	show_position = no
+	#	mark_older_equipment_obsolete = yes
+	#}
 
 	create_equipment_variant = {
 		type = motorized_equipment_1
@@ -267,12 +267,12 @@ IF = {
 		mark_older_equipment_obsolete = yes
 	}
 
-	create_equipment_variant = {
-		type = transport_plane_equipment_1
-		design_team = mio:AST_de_havilland_australia_organization
-		show_position = no
-		mark_older_equipment_obsolete = yes
-	}
+	#create_equipment_variant = {
+	#	type = transport_plane_equipment_1
+	#	design_team = mio:AST_de_havilland_australia_organization
+	#	show_position = no
+	#	mark_older_equipment_obsolete = yes
+	#}
 }
 
 set_politics = {

@@ -111,7 +111,7 @@ characters = {
 				}
 			}
 			available = {
-				has_completed_focus = SOV_positive_heroism
+				has_completed_focus = SOV_war_heroes
 
 			}
 			traits = {
@@ -220,7 +220,7 @@ characters = {
 				original_tag = SOV
 			}
 			available = {
-				has_completed_focus = SOV_positive_heroism
+				has_completed_focus = SOV_war_heroes
 			}
 			traits = {
 				army_chief_offensive_2
@@ -458,7 +458,7 @@ characters = {
 				original_tag = SOV
 			}
 			available = {
-				has_completed_focus = SOV_positive_heroism
+				has_completed_focus = SOV_war_heroes
 			}
 			traits = {
 				army_CombinedArms_2

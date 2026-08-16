@@ -1302,20 +1302,6 @@ focus_tree = {
 		relative_position_id = GER_kdf_wagen_factories
 		cost = 5
 		available = {
-			OR = {
-				53 = { #Niederbayern
-					state_is_fully_controlled_by_ROOT_or_subject = yes
-				}
-				52 = { #Oberbayern
-					state_is_fully_controlled_by_ROOT_or_subject = yes
-				}
-				152 = { #Upper Austria
-					state_is_fully_controlled_by_ROOT_or_subject = yes
-				}
-				4 = { #Lower Austria
-					state_is_fully_controlled_by_ROOT_or_subject = yes
-				}
-			}
 		}
 		bypass = {
 		}
@@ -1416,20 +1402,6 @@ focus_tree = {
 		relative_position_id = GER_kdf_wagen_factories
 		cost = 5
 		available = {
-			OR = {
-				68 = { #Ostmark
-					state_is_fully_controlled_by_ROOT_or_subject = yes
-				}
-				63 = { #Hinterpommern
-					state_is_fully_controlled_by_ROOT_or_subject = yes
-				}
-				807 = { #Gdynia
-					state_is_fully_controlled_by_ROOT_or_subject = yes
-				}
-				85 = { #Danzig
-					state_is_fully_controlled_by_ROOT_or_subject = yes
-				}
-			}
 		}
 		bypass = {
 		}

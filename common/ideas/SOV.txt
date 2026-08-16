@@ -1150,7 +1150,7 @@ ideas = {
 				stability_factor = 0.1
 				conscription_factor = 0.15
 				non_core_manpower = 0.05
-				army_morale_factor = 0.05
+				#army_morale_factor = 0.05
 			}
 		}
 
@@ -1170,9 +1170,10 @@ ideas = {
 			}
 
 			modifier = {
-				production_factory_max_efficiency_factor = 0.02
+				#production_factory_max_efficiency_factor = 0.02
 				research_speed_factor = 0.05
 				consumer_goods_factor = -0.05
+				production_speed_buildings_factor = 0.05
 			}
 		}
 
@@ -1192,9 +1193,10 @@ ideas = {
 			}
 
 			modifier = {
-				production_factory_max_efficiency_factor = 0.05
+				#production_factory_max_efficiency_factor = 0.05
 				research_speed_factor = 0.10
 				consumer_goods_factor = -0.10
+				production_speed_buildings_factor = 0.1
 			}
 		}
 

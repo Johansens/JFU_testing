@@ -456,7 +456,7 @@ add_namespace = ITA
 
 country_event = {
 	id = ITA.1000
-	title = "Italy joins THe War"
+	title = "Italy joins the War"
 	desc = "Italy joins the War against the Allies"
 	picture = GFX_news_event_italian_tank_desert
 

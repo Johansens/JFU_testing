@@ -4117,7 +4117,7 @@ leader_traits = {
 
 	il_duce_providence = { #Focus The Man of Providence
 		random = no
-		political_power_factor = 0.15
+		political_power_factor = 0.1
 		max_command_power_mult = -0.1
 		custom_modifier_tooltip = il_duce_laws_cost_tt
 		hidden_modifier = {
@@ -4130,7 +4130,7 @@ leader_traits = {
 
 	il_duce_strengthen = { #Focus Strengthen the Regime
 		random = no
-		political_power_factor = 0.15
+		political_power_factor = 0.1
 		max_command_power_mult = -0.1
 		custom_modifier_tooltip = il_duce_laws_cost_tt
 		hidden_modifier = {
@@ -4145,7 +4145,7 @@ leader_traits = {
 
 	il_duce_providence_strengthen = { #Focus The Man of Providence + Strengthen the Regime
 		random = no
-		political_power_factor = 0.15
+		political_power_factor = 0.1
 		max_command_power_mult = -0.1
 		custom_modifier_tooltip = il_duce_laws_cost_tt
 		hidden_modifier = {
@@ -4161,7 +4161,7 @@ leader_traits = {
 
 	il_duce_devotion = { #Focus Heroes of the Nation
 		random = no
-		political_power_factor = 0.15
+		political_power_factor = 0.1
 		max_command_power_mult = -0.1
 		custom_modifier_tooltip = il_duce_laws_cost_tt
 		hidden_modifier = {
@@ -4177,7 +4177,7 @@ leader_traits = {
 
 	il_duce_heroes = { #Focus Heroes of the Nation
 		random = no
-		political_power_factor = 0.15
+		political_power_factor = 0.1
 		custom_modifier_tooltip = il_duce_laws_cost_tt
 		hidden_modifier = {
 			mobilization_laws_cost_factor = -0.15

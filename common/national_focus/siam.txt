@@ -568,16 +568,7 @@
 
 			SIA_decrease_civilian_approval = yes
 			
-			random_core_state = {
-				limit = {
-					is_owned_and_controlled_by = ROOT
-					free_building_slots = {
-						building = arms_factory
-						size > 0
-						include_locked = yes
-					}
-				}
-				prioritize = { 1076 } #optional: to pick those states first if they fulfill the limit
+			289 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = arms_factory
@@ -671,19 +662,6 @@
 					#add_random_stat_to_general = yes
 				}
 			}
-			custom_effect_tooltip = newline_tt
-			every_unit_leader = {
-				limit = {
-					NOT = {
-						is_character = SIA_plaek_phibunsongkhram
-					}
-				}
-
-				random_select_amount = 2
-				#add_random_stat_to_general = yes
-				add_unit_leader_trait = media_personality
-			}
-
 			custom_effect_tooltip = newline_tt
 			SIA_increase_military_approval = yes
 			SIA_decrease_civilian_approval = yes
@@ -1003,7 +981,7 @@
 			}
 
 			random_owned_controlled_state = {
-				prioritize = { 1076 289 1078 } 
+				prioritize = { 289 } 
 
 				create_unit = {
 					division = "name = \"52nd Yuwachon Thahan Training Unit\" division_template = \"Yuwachon Thahan\" start_experience_factor = 0.1 start_equipment_factor = 1 start_manpower_factor = 1"
@@ -1048,17 +1026,9 @@
 		#}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
+
 		completion_reward = {
-			random_core_state = {
-				limit = {
-					is_owned_and_controlled_by = ROOT
-					free_building_slots = {
-						building = arms_factory
-						size > 1
-						include_locked = yes
-					}
-				}
-				prioritize = { 1076 } #optional: to pick those states first if they fulfill the limit
+			289 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
@@ -1173,16 +1143,7 @@
 				}
 			}
 
-			random_core_state = {
-				limit = {
-					is_controlled_by = ROOT
-					free_building_slots = {
-						building = industrial_complex
-						size > 0
-						include_locked = yes
-					}
-				}
-				prioritize = { 1076 }
+			289 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = industrial_complex
@@ -1399,104 +1360,16 @@
 				province = 10398
 				value = 20
 			}
-			set_capital = {
-				state = 1077
-				remember_old_capital = yes
-			}
 
 			set_major = yes
 			hidden_effect = {
-
-				#Move arms factories
-				for_loop_effect = {
-					end = 3
-					break = b
-
-					if = {
-						limit = {
-							1076 = { 
-								check_variable = { building_level@arms_factory > 0 } 
-							}
-
-							1077 = {
-								free_building_slots = {
-									building = arms_factory
-									size > 0
-									include_locked = yes
-								}
-							}	
-						}
-
-						1076 = {
-							remove_building = {
-								type = arms_factory 
-								level = 1
-							}
-						}
-
-						1077 = {
-							add_extra_state_shared_building_slots = 1
-							add_building_construction = {
-								type = arms_factory
-								level = 1 
-								instant_build = yes
-							}
-						}
-
-					}
-					else = {
-						set_variable = { b = 1 }
-					}
-				}
-
-				#Move Civs
-				for_loop_effect = {
-					end = 3
-					break = b
-
-					if = {
-						limit = {
-							1076 = { 
-								check_variable = { building_level@industrial_complex > 0 } 
-							}
-
-							1077 = {
-								free_building_slots = {
-									building = industrial_complex
-									size > 0
-									include_locked = yes
-								}
-							}	
-						}
-
-						1076 = {
-							remove_building = {
-								type = industrial_complex 
-								level = 1
-							}
-						}
-
-						1077 = {
-							add_extra_state_shared_building_slots = 1
-							add_building_construction = {
-								type = industrial_complex
-								level = 1 
-								instant_build = yes
-							}
-						}
-
-					}
-					else = {
-						set_variable = { b = 1 }
-					}
-				}
 
 				#Build Bunkers
 
 				if = {
 					limit = {
 						controls_province = 10398
-						1077 = {
+						10398 = {
 							free_building_slots = {
 								building = bunker
 								size > 2
@@ -1505,7 +1378,7 @@
 						}
 					}
 
-					1077 = {
+					10398 = {
 						add_building_construction = {
 							type = bunker
 							level = 3
@@ -1518,7 +1391,7 @@
 				if = {
 					limit = {
 						controls_province = 12345
-						1077 = {
+						289 = {
 							free_building_slots = {
 								building = bunker
 								size > 2
@@ -1527,7 +1400,7 @@
 						}
 					}
 
-					1077 = { 
+					289 = { 
 						add_building_construction = {
 							type = bunker
 							level = 3
@@ -1540,7 +1413,7 @@
 				if = {
 					limit = {
 						controls_province = 10411
-						1077 = {
+						289 = {
 							free_building_slots = {
 								building = bunker
 								size > 2
@@ -1549,7 +1422,7 @@
 						}
 					}
 
-					1077 = {
+					289 = {
 						add_building_construction = {
 							type = bunker
 							level = 3
@@ -1692,7 +1565,6 @@
 						include_locked = yes
 					}
 				}
-				prioritize = { 1076 } #optional: to pick those states first if they fulfill the limit
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = industrial_complex
@@ -2009,7 +1881,7 @@
 					is_fully_controlled_by = ROOT
 					infrastructure < 5
 				}
-				prioritize = { 1076 868 1077 } #optional: to pick those states first if they fulfill the limit
+				prioritize = { 868 } #optional: to pick those states first if they fulfill the limit
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = infrastructure
@@ -2024,7 +1896,7 @@
 					is_fully_controlled_by = ROOT
 					infrastructure < 5
 				}
-				prioritize = { 1076 868 1077 } #optional: to pick those states first if they fulfill the limit
+				prioritize = { 868 } #optional: to pick those states first if they fulfill the limit
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = infrastructure
@@ -2306,7 +2178,6 @@
 						include_locked = yes
 					}
 				}
-				prioritize = { 1076 } #optional: to pick those states first if they fulfill the limit
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = industrial_complex
@@ -2349,7 +2220,6 @@
 						include_locked = yes
 					}
 				}
-				prioritize = { 1076 } 
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = industrial_complex
@@ -2515,7 +2385,6 @@
 						include_locked = yes
 					}
 				}
-				prioritize = { 1076 }
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = industrial_complex
@@ -2547,7 +2416,7 @@
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			1076 = {
+			289 = {
 				add_building_construction = {
 					type = naval_base
 					level = 2
@@ -2562,7 +2431,6 @@
 					is_controlled_by = ROOT
 					infrastructure < 5
 				}
-				prioritize = { 1076 }
 				add_building_construction = {
 					type = infrastructure
 					level = 1
@@ -2846,9 +2714,6 @@
 						array = ROOT.core_states_at_game_start
 						value = THIS
 					}
-					NOT = {
-						state = 1076
-					}
 				}
 
 				add_dynamic_modifier = {
@@ -2891,7 +2756,6 @@
 						include_locked = yes
 					}
 				}
-				prioritize = { 1076 } #optional: to pick those states first if they fulfill the limit
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = industrial_complex
@@ -2909,7 +2773,6 @@
 						include_locked = yes
 					}
 				}
-				prioritize = { 1076 } #optional: to pick those states first if they fulfill the limit
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = industrial_complex
@@ -2948,7 +2811,6 @@
 					}
 					is_controlled_by = ROOT
 				}
-				prioritize = { 1076 } 
 				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = industrial_complex
@@ -3982,23 +3844,6 @@
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			if = {
-				limit = {
-					has_dlc = "Arms Against Tyranny"
-				}
-
-				mio:SIA_directorate_of_aeronautical_engineering = {
-					add_mio_size = 2
-				}
-			}
-			else = {
-				add_tech_bonus = {
-					name = SIA_directorate_of_aeronautical_engineering #Usually the name of the focus decision or event that grants the bonus
-					bonus = 1
-					uses = 1
-					category = light_air 
-				}
-			}
 
 			add_tech_bonus = {
 				name = SIA_directorate_of_aeronautical_engineering #Usually the name of the focus decision or event that grants the bonus
@@ -4732,7 +4577,7 @@
 			factor = 10
 		}
 		available = {
-			1076 = {
+			289 = {
 				is_owned_by = ROOT
 				is_fully_controlled_by = ROOT
 			}
@@ -4752,7 +4597,7 @@
 						include_locked = yes
 					}
 				}
-				prioritize = { 1076 }
+				prioritize = { 289 }
 				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = dockyard
@@ -4779,7 +4624,7 @@
 			factor = 10
 		}
 		available = {
-			1076 = {
+			289 = {
 				is_owned_by = ROOT
 				is_fully_controlled_by = ROOT
 			}
@@ -4799,7 +4644,7 @@
 						include_locked = yes
 					}
 				}
-				prioritize = { 1076 }
+				prioritize = { 289 }
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = dockyard
@@ -4826,7 +4671,7 @@
 			factor = 10
 		}
 		available = {
-			1076 = {
+			289 = {
 				is_owned_by = ROOT
 				is_fully_controlled_by = ROOT
 			}
@@ -4846,7 +4691,6 @@
 						include_locked = yes
 					}
 				}
-				prioritize = { 1076 }
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = dockyard
@@ -4873,7 +4717,7 @@
 			factor = 10
 		}
 		available = {
-			1076 = {
+			289 = {
 				is_owned_by = ROOT
 				is_fully_controlled_by = ROOT
 			}
@@ -4893,7 +4737,6 @@
 						include_locked = yes
 					}
 				}
-				prioritize = { 1076 }
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = dockyard
@@ -4927,7 +4770,7 @@
 			factor = 10
 		}
 		available = {
-			1076 = {
+			289 = {
 				is_owned_by = ROOT
 				is_fully_controlled_by = ROOT
 			}
@@ -4947,7 +4790,6 @@
 						include_locked = yes
 					}
 				}
-				prioritize = { 1076 }
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = dockyard
@@ -5002,9 +4844,9 @@
 			}
 			if = {
 				limit = {
-					1076 = { naval_facility < 1 }
+					289 = { naval_facility < 1 }
 				}
-				1076 = {
+				289 = {
 					add_building_construction = {
 						type = naval_facility
 						level = 1
@@ -5046,7 +4888,7 @@
 			factor = 10
 		}
 		available = {
-			1076 = {
+			289 = {
 				is_owned_by = ROOT
 				is_fully_controlled_by = ROOT
 			}
@@ -5066,7 +4908,6 @@
 						include_locked = yes
 					}
 				}
-				prioritize = { 1076 }
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex

@@ -307,13 +307,9 @@ focus_tree = {
 
 		completion_reward = {
 			hidden_effect = {
-				add_to_variable = { SOV_fyp_production_factory_efficiency_gain_factor = 0.05 }
+				add_to_variable = { SOV_fyp_production_factory_efficiency_gain_factor = 0.1 }
 				add_to_variable = { SOV_fyp_consumer_goods_factor = 0.10 }
 			}
-			if = {
-				limit = {
-					has_government = communism
-				}
 				hidden_effect = {
 					#Swap dynamic modifier to change icon
 					remove_dynamic_modifier = { modifier = SOV_second_five_year_plan_dynamic_modifier }
@@ -327,22 +323,6 @@ focus_tree = {
 					uses = 2
 					category = construction_tech
 				}
-			}
-			else = {
-				custom_effect_tooltip = SOV_third_five_year_plan_ns_alt_tt
-				hidden_effect = {
-					#Swap dynamic modifier to change icon
-					remove_dynamic_modifier = { modifier = SOV_second_five_year_plan_dynamic_modifier }
-					add_dynamic_modifier = { modifier = SOV_third_five_year_plan_dynamic_modifier_alt }
-				}
-
-				add_tech_bonus = {
-					name = SOV_third_five_year_plan_alt
-					bonus = 0.75
-					uses = 2
-					category = construction_tech
-				}
-			}
 		}
 	}
 
@@ -383,7 +363,16 @@ focus_tree = {
 				name = SOV_reorganize_the_pc_of_heavy_industry_name_default
 				bonus = 1.0
 				uses = 2
-				category = industry
+				technology = advanced_machine_tools
+				technology = flexible_line
+				technology = assembly_line_production
+				technology = streamlined_line
+				technology = concentrated_industry3
+				technology = concentrated_industry4
+				technology = concentrated_industry5
+				technology = dispersed_industry3 
+				technology = dispersed_industry4 
+				technology = dispersed_industry5 
 			}
 		}
 	}
@@ -409,16 +398,30 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
 
 		completion_reward = {
-			add_to_variable = { SOV_fyp_production_factory_max_efficiency_factor = 0.02 }
-			add_to_variable = { SOV_fyp_line_change_production_efficiency_factor = 0.1 }
-			custom_effect_tooltip = SOV_industrial_modernization_ns_tt
+			custom_effect_tooltip = SOV_change_five_year_plan_tt
+
+	add_to_variable = { SOV_fyp_line_change_production_efficiency_factor = 0.1 tooltip = line_change_production_efficiency_factor_tt}
+			
+			add_to_variable = { SOV_fyp_production_factory_start_efficiency_factor = 0.1 tooltip = production_factory_start_efficiency_factor_tt } #Add efficiency start
+			add_to_variable = { SOV_fyp_industrial_capacity_factory = 0.05 tooltip = industrial_capacity_factory_tt } #Add small output bonus		
+
+			custom_effect_tooltip = generic_skip_one_line_tt
 
 			add_tech_bonus = {
 				name = SOV_industrial_modernization
-				ahead_reduction = 2
+				ahead_reduction = 1
 				bonus = 1.0
 				uses = 1
-				category = industry
+				technology = advanced_machine_tools
+				technology = flexible_line
+				technology = assembly_line_production
+				technology = streamlined_line
+				technology = concentrated_industry3
+				technology = concentrated_industry4
+				technology = concentrated_industry5
+				technology = dispersed_industry3 
+				technology = dispersed_industry4 
+				technology = dispersed_industry5 
 			}
 		}
 	}
@@ -488,7 +491,10 @@ focus_tree = {
 				name = SOV_shift_to_armaments_production
 				bonus = 1.0
 				uses = 2
-				category = cat_production
+				technology = advanced_machine_tools
+				technology = flexible_line
+				technology = assembly_line_production
+				technology = streamlined_line
 			}
 		}
 	}
@@ -514,10 +520,10 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
 
 		completion_reward = {
-			add_to_variable = { SOV_fyp_production_factory_efficiency_gain_factor = 0.1 } #Add efficiency gain
-			add_to_variable = { SOV_fyp_production_factory_start_efficiency_factor = 0.1 } #Add efficiency start
-			add_to_variable = { SOV_fyp_industrial_capacity_factory = 0.05 } #Add small output bonus
-			custom_effect_tooltip = SOV_optimize_production_lines_ns_tt
+			custom_effect_tooltip = SOV_change_five_year_plan_tt
+			add_to_variable = { SOV_fyp_production_factory_max_efficiency_factor = 0.05 tooltip = production_factory_max_efficiency_factor_tt }		
+
+			custom_effect_tooltip = generic_skip_one_line_tt
 
 			add_tech_bonus = {
 				name = SOV_optimize_production_lines
@@ -1771,19 +1777,6 @@ focus_tree = {
 		mutually_exclusive = { focus = SOV_improve_the_stalin_line }
 
 		available = {
-			OR = {
-				has_full_control_of_state = 188
-				has_full_control_of_state = 189
-				has_full_control_of_state = 814
-				has_full_control_of_state = 97
-				has_full_control_of_state = 94
-				has_full_control_of_state = 93
-				has_full_control_of_state = 91
-				has_full_control_of_state = 89
-				has_full_control_of_state = 80
-				has_full_control_of_state = 78
-				has_full_control_of_state = 766
-			}
 		}
 		
 		search_filters = {}
@@ -2012,16 +2005,6 @@ focus_tree = {
 		mutually_exclusive = { focus = SOV_the_molotov_line }
 
 		available = {
-			OR = {
-				has_full_control_of_state = 209
-				has_full_control_of_state = 210
-				has_full_control_of_state = 207
-				has_full_control_of_state = 206
-				has_full_control_of_state = 202
-				has_full_control_of_state = 203
-				has_full_control_of_state = 834
-				has_full_control_of_state = 192
-			}
 		}
 		
 		search_filters = {}
@@ -2265,9 +2248,10 @@ focus_tree = {
 		search_filters = {}
 
 		completion_reward = {
-			add_to_variable = { SOV_the_red_army_army_org_factor = 0.05 }
-			add_to_variable = { SOV_the_red_army_training_time_factor = 0.1 }
-			custom_effect_tooltip = SOV_cohesion_first_ns_tt
+			custom_effect_tooltip = SOV_change_red_army_modifier_tt
+			add_to_variable = { SOV_the_red_army_army_org_factor = 0.1 tooltip = army_org_factor_tt  }
+			#add_to_variable = { SOV_the_red_army_training_time_factor = 0.1 }
+			#custom_effect_tooltip = SOV_cohesion_first_ns_tt
 		}
 	}
 
@@ -2285,8 +2269,8 @@ focus_tree = {
 		search_filters = {}
 
 		completion_reward = {
-			add_to_variable = { SOV_the_red_army_army_org_factor = 0.05 }
-			custom_effect_tooltip = SOV_rehabilitated_military_ns_tt
+			#add_to_variable = { SOV_the_red_army_army_org_factor = 0.05 }
+			#custom_effect_tooltip = SOV_rehabilitated_military_ns_tt
 
 			add_ideas = SOV_rehabilitated_military_ns
 		}
@@ -2324,10 +2308,6 @@ focus_tree = {
 				remove_ideas = SOV_military_reorganization_ns
 			}
 
-			add_to_variable = { SOV_the_red_army_unit_infantry_design_cost_factor = -0.1 }
-			add_to_variable = { SOV_the_red_army_unit_artillery_brigade_design_cost_factor = -0.1 }
-			custom_effect_tooltip = SOV_military_reorganization_ns_tt
-
 			army_experience = 50
 			add_command_power = 25
 		}
@@ -2349,7 +2329,7 @@ focus_tree = {
 		relative_position_id = SOV_strengthen_the_mobilization_plan
 		available_if_capitulated = yes
 
-		search_filters = { FOCUS_FILTER_RESEARCH }
+		search_filters = { FOCUS_FILTER_HISTORICAL FOCUS_FILTER_WAR_SUPPORT }
 		completion_reward = {
 			add_ideas = tot_economic_mobilisation
 			hidden_effect = {
@@ -3143,7 +3123,7 @@ focus_tree = {
 		x = 0
 		y = 3
 		relative_position_id = SOV_socialism_in_one_country
-		cost = 10
+		cost = 5
 
 		available = {
 
@@ -3774,8 +3754,8 @@ focus_tree = {
 
 		available = {
 			custom_trigger_tooltip = {
-				tooltip = SOV_propaganda_campaigns_taken_20_or_greater_tt
-				check_variable = { SOV_propaganda_campaigns_taken = 20 compare = greater_than_or_equals }
+				tooltip = SOV_propaganda_campaigns_taken_15_or_greater_tt
+				check_variable = { SOV_propaganda_campaigns_taken = 15 compare = greater_than_or_equals }
 			}
 		}
 		
@@ -3939,13 +3919,15 @@ focus_tree = {
 
 		completion_reward = {
 			add_political_power = 25
-			custom_effect_tooltip = available_military_high_command
-			show_ideas_tooltip = konstantin_rokossovsky 
-			show_ideas_tooltip = leonid_govorov
-			show_ideas_tooltip = nikolay_vatutin
-
+			custom_effect_tooltip = SOV_change_red_army_modifier_tt
+			add_to_variable = { SOV_the_red_army_army_org_factor = 0.05 tooltip = army_org_factor_tt }
+			
 			custom_effect_tooltip = unlock_propaganda_campaign_tt
 			unlock_decision_tooltip = SOV_propaganda_heroes_forward
+			unlock_decision_tooltip = SOV_propaganda_for_the_motherland
+			
+			custom_effect_tooltip = generic_skip_one_line_tt
+
 			custom_effect_tooltip = unlock_propaganda_campaign_slot_tt
 			SOV_unlock_propaganda_campaign_slot_effect = yes
 		}
@@ -3987,7 +3969,12 @@ focus_tree = {
 		search_filters = {}
 
 		completion_reward = {
-			add_ideas = SOV_war_heroes_ns
+			custom_effect_tooltip = available_military_high_command
+			show_ideas_tooltip = konstantin_rokossovsky 
+			show_ideas_tooltip = leonid_govorov
+			show_ideas_tooltip = nikolay_vatutin
+
+			#add_ideas = SOV_war_heroes_ns
 		}
 	}
 
@@ -4006,16 +3993,21 @@ focus_tree = {
 
 		}
 		
-		search_filters = {FOCUS_FILTER_MANPOWER FOCUS_FILTER_PROPAGANDA}
+		search_filters = {FOCUS_FILTER_RESEARCH FOCUS_FILTER_PROPAGANDA}
 
 		completion_reward = {
 			add_political_power = 25
-			add_ideas = SOV_collectivist_propaganda_ns
+			add_stability = 0.1
+			#add_ideas = SOV_collectivist_propaganda_ns
 
-			custom_effect_tooltip = unlock_propaganda_campaign_tt
-			unlock_decision_tooltip = SOV_propaganda_for_the_motherland
+			custom_effect_tooltip = generic_skip_one_line_tt
+
 			custom_effect_tooltip = unlock_propaganda_campaign_slot_tt
 			SOV_unlock_propaganda_campaign_slot_effect = yes
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+			
+			add_ideas = SOV_socialist_emulation_1_ns
 		}
 	}
 
@@ -4035,7 +4027,10 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
 
 		completion_reward = {
-			add_ideas = SOV_socialist_emulation_1_ns
+			swap_ideas = {
+				remove_idea = SOV_socialist_emulation_1_ns
+				add_idea = SOV_socialist_emulation_2_ns
+			}			
 		}
 	}
 
@@ -4052,12 +4047,16 @@ focus_tree = {
 
 		}
 		
-		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL}
+		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH FOCUS_FILTER_POLITICAL}
 
 		completion_reward = {
-			swap_ideas = {
-				remove_idea = SOV_socialist_emulation_1_ns
-				add_idea = SOV_socialist_emulation_2_ns
+
+
+			if = {
+				limit = {
+					amount_research_slots < 5
+				}
+				add_research_slot = 1
 			}
 		}
 	}
@@ -4109,14 +4108,6 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = SOV_patriarch_sergy
-
-			if = {
-				limit = {
-					amount_research_slots < 5
-				}
-				add_research_slot = 1
-			}
-
 		}
 	}
 

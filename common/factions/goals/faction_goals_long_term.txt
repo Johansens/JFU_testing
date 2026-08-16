@@ -294,6 +294,7 @@ faction_goal_secure_north_africa = {
 				original_tag = GER 
 			}
 		}
+		always = no
 	}
 	available = {
 	}
