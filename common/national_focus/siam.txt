@@ -1572,6 +1572,7 @@
 					instant_build = yes
 				}
 			}
+			JAP = { add_ideas = SIA_importjap }
 		}
 	}
 

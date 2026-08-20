@@ -405,7 +405,6 @@
 
 		completion_reward = {
 			division_template = {
-				is_locked = yes
 				name = "Maori Volunteers"
 				division_names_group = NZL_INF_01
 				regiments = {
@@ -960,7 +959,7 @@
 		}
 
 		available = {
-			controls_state = 1080
+			controls_state = 983
 		}
 
 		bypass = {

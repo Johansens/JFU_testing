@@ -906,13 +906,13 @@ technologies = {
 
 		maintenance_company = {
 			reliability_factor = 0.05
-			equipment_capture_factor = 0.05
+			#equipment_capture_factor = 0.05
 		}
 
 		armored_maintenance = {
 			reliability_factor = 0.02
 			recovery = 0.03
-			equipment_capture_factor = 0.1
+			#equipment_capture_factor = 0.1
 		}
 
 		enable_equipment_modules = {
@@ -962,12 +962,12 @@ technologies = {
 		maintenance_company = {
 			reliability_factor = 0.05
 			
-			battalion_mult = {
-				category = category_all_armor
-				equipment_capture_factor = 0.01
-				add = yes
-				display_as_percentage = yes
-			}
+			#battalion_mult = {
+			#	category = category_all_armor
+			#	equipment_capture_factor = 0.01
+			#	add = yes
+			#	display_as_percentage = yes
+			#}
 			
 		}
 
@@ -975,12 +975,12 @@ technologies = {
 			reliability_factor = 0.02
 			recovery = 0.3
 			
-			battalion_mult = {
-				category = category_all_armor
-				equipment_capture_factor = 0.02
-				add = yes
-				display_as_percentage = yes
-			}
+			#battalion_mult = {
+			#	category = category_all_armor
+			#	equipment_capture_factor = 0.02
+			#	add = yes
+			#	display_as_percentage = yes
+			#}
 			
 		}
 
@@ -1024,13 +1024,13 @@ technologies = {
 
 		maintenance_company = {
 			reliability_factor = 0.05
-			equipment_capture_factor = 0.05
+			equipment_capture_factor = 0.02
 		}
 
 		armored_maintenance = {
 			reliability_factor = 0.02
 			recovery = 0.03
-			equipment_capture_factor = 0.1
+			equipment_capture_factor = 0.02
 		}
 
 		research_cost = 1.5
@@ -1740,7 +1740,7 @@ technologies = {
 			train_equipment_1
 		}
 
-		research_cost = 1.5
+		research_cost = 0.75
 		start_year = 1910
 		folder = {
 			name = support_folder
@@ -1800,7 +1800,7 @@ technologies = {
 			}
 		}
 
-		research_cost = 1.5
+		research_cost = 0.75
 		start_year = 1936
 		folder = {
 			name = support_folder
@@ -1840,7 +1840,7 @@ technologies = {
 			train_equipment_2
 		}
 
-		research_cost = 1.5
+		research_cost = 0.75
 		start_year = 1939
 		folder = {
 			name = support_folder
@@ -1889,7 +1889,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 				
-		research_cost = 1.5
+		research_cost = 0.75
 		start_year = 1936
 		folder = {
 			name = support_folder
