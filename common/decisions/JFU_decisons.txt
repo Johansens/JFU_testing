@@ -1279,9 +1279,9 @@ political_actions1 = {
 				}
 			}
 			annex_country = { target = MAN transfer_troops = yes }
-			FRA = {
-				add_ideas = { FRA_no_manchu }
-			}
+			#FRA = {
+			#	add_ideas = { FRA_no_manchu }
+			#}
 		}
 	}
 }

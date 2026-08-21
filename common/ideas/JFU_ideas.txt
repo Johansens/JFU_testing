@@ -1,6 +1,13 @@
 ideas = {
 
 	hidden_ideas = {
+
+        railway_10 = { equipment_bonus = { railway_gun_equipment = { build_cost_ic = 0.08 instant = yes } } }
+        railway_20 = { equipment_bonus = { railway_gun_equipment = { build_cost_ic = 0.16 instant = yes } } }
+        railway_30 = { equipment_bonus = { railway_gun_equipment = { build_cost_ic = 0.24 instant = yes } } }
+        railway_40 = { equipment_bonus = { railway_gun_equipment = { build_cost_ic = 0.32 instant = yes } } }
+        railway_50 = { equipment_bonus = { railway_gun_equipment = { build_cost_ic = 0.4 instant = yes } } } 
+
 		NO_AIR_MINORS = {
 			picture = generic_infantry_bonus   
 			

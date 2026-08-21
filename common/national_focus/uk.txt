@@ -3197,10 +3197,10 @@ focus = {
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {		
-			ENG_andrew_cunningham = {
+			ENG_james_fownes_somerville = {
 				add_trait = {  trait = spotter }
 			}
-			ENG_james_fownes_somerville = {
+			ENG_andrew_cunningham = {
 				add_trait = {  trait = blockade_runner }
 			}
 		}

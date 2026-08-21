@@ -60,8 +60,11 @@ ability = {
 			is_border_war = no
 			OWNER = {
 				OR = {
-					#has_completed_focus = JAP_indoctrination_in_the_military_academy
 					has_completed_focus = JAP_issue_the_senjinkun_military_code
+					AND = {
+						tag = MAN
+						JAP = { has_completed_focus = JAP_issue_the_senjinkun_military_code }
+					}
 				}
 			}
 		}

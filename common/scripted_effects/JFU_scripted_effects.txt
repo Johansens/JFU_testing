@@ -478,6 +478,9 @@ JFU_other_stuff_on_start_up_effect = {
 			add_ideas = ai_limiter
 		}
 	}
+	FRA = {
+		add_ideas = { FRA_no_manchu }
+	}
 }
 JFU_equipment_on_start_up_effect = {
 	ENG = {

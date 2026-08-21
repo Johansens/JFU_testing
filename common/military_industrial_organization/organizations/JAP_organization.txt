@@ -1858,6 +1858,11 @@ JAP_yokosuka_organization = {
 		position = { x=4 y=1 }
 		relative_position_id = generic_mio_trait_navigation_equipment
 
+		visible = {
+			#FROM = { original_tag = JAP }
+			always = no
+		}
+
 		available = {
 			FROM = {
 				has_completed_focus = JAP_sea_sturdy_aircraft
@@ -1879,6 +1884,11 @@ JAP_yokosuka_organization = {
 		
 		position = { x=4 y=2 }
 		relative_position_id = generic_mio_trait_navigation_equipment
+
+		visible = {
+			#FROM = { original_tag = JAP }
+			always = no
+		}
 
 		available = {
 			FROM = {

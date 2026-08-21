@@ -7,6 +7,10 @@ add_relation_modifier = {
 	target = SOV
 	modifier = trade_soviet
 }
+add_relation_modifier = {
+	target = NOR
+	modifier = trade_halfed
+}
 oob = "USA_1936"
 
 #create_faction_from_template = faction_template_usa_commonwealth

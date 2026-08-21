@@ -10,6 +10,10 @@ add_relation_modifier = {
 	target = SOV
 	modifier = trade_soviet
 }
+add_relation_modifier = {
+	target = NOR
+	modifier = trade_halfed
+}
 set_country_flag=fuel_system_enabled
 if = {
 	limit = {

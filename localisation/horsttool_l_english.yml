@@ -1089,7 +1089,7 @@
  MIO_range_trait:0 "Unlocks a special Range trait for the Light Aircraft and Naval Aircraft Designer"
  MIO_agility_trait:0 "Unlocks a special Agility trait for the Light Aircraft and Naval Aircraft Designer"
  jap_china_tt:0 "§RMay declare war on China via decision§!"
- JAP_declare_tt:0 "§RWe will declare war on all allied nations. \nTora Tora Tora will be active for 180 days. We will also reduced the Entrenchment of all east asian states by 8 for 180 days§!"
+ JAP_declare_tt:0 "§RWe will declare war on all allied nations. \nTora Tora Tora will be active for 120 days. We will also reduced the Entrenchment of all east asian states by 8 for 120 days§!"
  JAP_suprise_attack_dynamic:0 "Japanese suprise attack"
  oceanic_collaborators_tt:0 "§0+30% compliance in each occupied state in Malaya, Borneo, Sumatra, Java, Philippines, Sulawesi, and Papua.§!"
  JAP_plunder_territories_tt:0 "§YGuam§!, §YLuzon§!, §YHong Kong§! and the §YPhilipinies§! are fully  controlled by §YJapan§!"
