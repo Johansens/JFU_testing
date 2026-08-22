@@ -404,6 +404,7 @@ scripted_gui = {
 			peacetimetrain_remove_click = {
 				owner = {
 					remove_ideas = peace_training
+					set_country_flag = peacetimetrain_removed
 				}
 			}
 			pingtool_click = {
