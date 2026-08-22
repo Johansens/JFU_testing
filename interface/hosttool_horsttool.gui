@@ -344,6 +344,13 @@ guiTypes = {
 			scale = 0.5
 			pdx_tooltip = "XPAIR_TT"
 		}
+		buttonType = { 
+			name = "peacetimetrain_remove"	
+			position = {x=325 y=254}
+			spriteType = "GFX_goal_continuous_reduce_training_time"
+			scale = 0.5
+			pdx_tooltip = "XTRAINTIME_TT"
+		}
 
 
 	 	buttonType = {

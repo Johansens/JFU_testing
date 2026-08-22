@@ -46,6 +46,8 @@
  ADDPP:0 "§HAdd 50 Political Power§!\nClicking this button will add pp to the selected state's owner.\n\n"
  XPAIR_TT:0 "§HAdd 50 Air XP§!\nClicking this button will add Air xp to the selected state's owner.\n\n"
  XPARMY_TT:0 "§HAdd 50 Army XP§!\nClicking this button will add Army xp to the selected state's owner.\n\n"
+ XTRAINTIME_TT:0 "§HRemove Peace Time Training spirit§!\nClicking this button will remove the Peace Time Training spirit from the selected state's owner.\n\n"
+
 
  PROD_RESET:0 "§HReset the Prod Line Fixer§!\nClicking this button will revert all prod line fixer settings to default.\n\n"
  PROD_CREATE:0 "§HCreate Prod Line§!\nClicking this button will create a prod line on the selected state's owner.\n§RTHIS WONT WORK FOR TANKS/SELF DESIGNED EQUIP§!\n"

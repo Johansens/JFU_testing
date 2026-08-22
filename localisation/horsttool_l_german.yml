@@ -45,6 +45,7 @@
  ADDPP:0 "§HFüge 50 Politische Macht hinzu§!\nEin Klick auf diesen Knopf fügt dem Besitzer des ausgewählten Staates PP hinzu.\n\n"
  XPAIR_TT:0 "§HFüge 50 Luft-XP hinzu§!\nEin Klick auf diesen Knopf fügt dem Besitzer des ausgewählten Staates Luft-XP hinzu.\n\n"
  XPARMY_TT:0 "§HFüge 50 Armee-XP hinzu§!\nEin Klick auf diesen Knopf fügt dem Besitzer des ausgewählten Staates Armee-XP hinzu.\n\n"
+ XTRAINTIME_TT:0 "§HEntferne Friedenszeit-Training-Spirit§!\nEin Klick auf diesen Knopf entfernt den Friedenszeit-Training-Spirit vom Besitzer des ausgewählten Staates.\n\n"
 
  PROD_RESET:0 "§HSetze den Produktionslinien-Fixer zurück§!\nEin Klick auf diesen Knopf setzt alle Einstellungen des Produktionslinien-Fixers auf die Standardwerte zurück.\n\n"
  PROD_CREATE:0 "§HErstelle Produktionslinie§!\nEin Klick auf diesen Knopf erstellt eine Produktionslinie beim Besitzer des ausgewählten Staates.\n§RDas funktioniert NICHT für Panzer/selbst gestaltete Ausrüstung.§!\n"

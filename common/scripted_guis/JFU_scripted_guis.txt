@@ -401,6 +401,11 @@ scripted_gui = {
 					}
 				}
 			}
+			peacetimetrain_remove_click = {
+				owner = {
+					remove_ideas = peace_training
+				}
+			}
 			pingtool_click = {
 				every_state = {
 					limit = { non_damaged_building_level  = { building = anti_air_building  level > 5 } }
