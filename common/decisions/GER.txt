@@ -2294,6 +2294,7 @@ GER_fortify_the_vaterland_cat = {
 		available = {
 			EFR = { has_country_flag = vichy_france_established }
 			has_completed_focus = GER_fortify_the_vaterland
+			any_country = { axis = yes controls_state = 456 }
 		}
 
 		days_remove = 90
