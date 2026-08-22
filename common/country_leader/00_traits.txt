@@ -164,7 +164,7 @@ leader_traits = {
 
 	lion_of_verdun = {
 		random = no
-		training_time_army_factor = -0.5
+		#training_time_army_factor = -0.5
 		mobilization_speed = 1
 		#min_export = -1
 	}
