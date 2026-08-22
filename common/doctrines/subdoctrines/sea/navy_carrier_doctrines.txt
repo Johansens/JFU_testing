@@ -343,25 +343,28 @@ light_task_forces = {
     		carrier = {
                 surface_visibility = -0.10
 			}
-			destroyer = {
-                surface_visibility = -0.05
-			}
+			#destroyer = {
+            #    surface_visibility = -0.05
+			#}
     	}
     	screen_raiders = {
-    		destroyer = {
-    			lg_attack = 0.2
-    			lg_armor_piercing = 0.2
-    			max_organisation = 20
+    		#destroyer = {
+    		#	lg_attack = 0.2
+    		#	lg_armor_piercing = 0.2
+    		#	max_organisation = 20
+    		#}
+            carrier = {
+    			anti_air_attack = 0.2
     		}
     	}
     	evasive_engagements_focus = {
     		carrier = {
     			max_organisation = 30
     		}
-    		destroyer = {
-    			naval_speed = 0.2
-    			surface_detection = 0.2
-    		}
+    		#destroyer = {
+    		#	naval_speed = 0.2
+    		#	surface_detection = 0.2
+    		#}
     	}
     	localized_sea_power = {
     		strike_force_movement_org_loss = -0.3

@@ -274,15 +274,21 @@ coastal_minelaying = {
 
 
     	minefield_patrols = {
-    		destroyer = {
-    			mines_planting = 0.25
-    			lg_attack = 0.1
+    		#destroyer = {
+    		#	mines_planting = 0.25
+    		#	lg_attack = 0.1
+    		#}
+            submarine = {
+    			surface_detection = 0.2
     		}
 
     	}
     	overhead_protection = {
-    		destroyer = {
-    			anti_air_attack = 0.1
+    		#destroyer = {
+    		#	anti_air_attack = 0.1
+    		#}
+            submarine = {
+    			torpedo_attack = 0.05
     		}
 
     	}
@@ -290,9 +296,9 @@ coastal_minelaying = {
     		submarine = {
     			mines_sweeping = 0.2
     		}
-    		destroyer = {
-    			mines_sweeping = 0.2
-    		}
+    		#destroyer = {
+    		#	mines_sweeping = 0.2
+    		#}
     	}
     }
 }
