@@ -69,7 +69,7 @@ mission_type_tactics = {
                 default_morale = 0.4
             }
             category_tanks = {
-                default_morale = 0.4
+                default_morale = 0.3
             }
 
         }
