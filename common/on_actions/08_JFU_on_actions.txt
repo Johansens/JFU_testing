@@ -457,6 +457,14 @@ on_actions = {
 					add_to_variable = { var = FRA_legitimacy value = AXIScasualtiesk }
 					add_to_variable = { var = FRA_legitimacy value = DAYSFRANCEHELD }
 				}
+				every_state = {
+					limit = {
+						owner = { tag = FRA }
+					}
+					teleport_armies = { 
+						to_state = 126
+					}
+				}
 
 				JFU_vichy_france = yes
 				
