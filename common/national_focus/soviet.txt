@@ -4521,7 +4521,7 @@ focus_tree = {
 				has_completed_focus = SOV_the_anti_soviet_trotskyist_center 
 			}
 			
-			has_completed_focus = SOV_the_workers_dictatorship
+			#has_completed_focus = SOV_the_workers_dictatorship
 			
 			date < 1938.1.1
 			

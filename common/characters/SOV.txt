@@ -2634,6 +2634,41 @@ characters = {
 				left_trade_unionist
 			}
 		}
+	}
+
+	SOV_grigory_sokolnikov = {
+		name = SOV_grigory_sokolnikov
+		portraits = {
+			army = {
+				small = "GFX_idea_SOV_grigory_sokolnikov"
+			}
+		}
+
+		advisor = {
+			slot = political_advisor
+			ledger = civilian
+			idea_token = SOV_grigory_sokolnikov
+			allowed = {
+				original_tag = SOV
+			}
+			visible = {
+				NOT = {
+					has_character_flag = SOV_character_purged_flag 
+				}
+			}
+			available = {
+			always = no
+				if = {
+					limit = {
+						has_character_flag = SOV_exiled_flag
+					}
+					NOT = { has_character_flag = SOV_exiled_flag }
+				}
+			}
+			traits = {
+				peoples_commissar_of_finance 
+			}
+		}
 	}	
  #######                                         #     #                                                     #                                                       
  #        #    #  #  #       ######   ####       ##   ##  #  #       #  #####    ##    #####   #   #        # #    #####   #    #  #   ####    ####   #####    ####  
