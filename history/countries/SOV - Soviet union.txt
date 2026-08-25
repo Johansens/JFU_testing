@@ -122,8 +122,11 @@ recruit_character = SOV_karl_radek
 recruit_character = SOV_aleksey_rykov
 recruit_character = SOV_mikhail_tomsky
 recruit_character = SOV_martemyan_ryutin
-
-
+recruit_character = SOV_grigory_zinovyev
+recruit_character = SOV_ivan_smirnov
+recruit_character = SOV_lev_kamenev
+recruit_character = SOV_grigory_sokolnikov
+recruit_character = SOV_aleksandr_shlyapnikov
 
 #Initialize character flags Part I (aka who's safe)
 SOV_mikhail_kalinin = {

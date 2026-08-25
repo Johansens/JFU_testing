@@ -2594,7 +2594,47 @@ characters = {
 		}
 	}
 
+	SOV_aleksandr_shlyapnikov = {
+		name = SOV_aleksandr_shlyapnikov
+		portraits = {
+			army = {
+				small = "GFX_idea_SOV_aleksandr_shlyapnikov_imprisoned"
+			}
+		}
 	
+
+		advisor = {
+			slot = political_advisor
+			ledger = civilian
+			idea_token = SOV_aleksandr_shlyapnikov
+			allowed = {
+				original_tag = SOV
+			}
+			visible = {
+				NOT = {
+					has_character_flag = SOV_character_purged_flag 
+				}
+			}
+			available = {
+				always = no
+				if = {
+					limit = {
+						has_character_flag = SOV_imprisoned_flag
+					}
+					NOT = { has_character_flag = SOV_imprisoned_flag } #For flavor purposes only -> Removed in the appropriate focus/event/dec
+				}
+				if = {
+					limit = {
+						has_character_flag = SOV_exiled_flag
+					}
+					NOT = { has_character_flag = SOV_exiled_flag }
+				}
+			}
+			traits = {
+				left_trade_unionist
+			}
+		}
+	}	
  #######                                         #     #                                                     #                                                       
  #        #    #  #  #       ######   ####       ##   ##  #  #       #  #####    ##    #####   #   #        # #    #####   #    #  #   ####    ####   #####    ####  
  #         #  #   #  #       #       #           # # # #  #  #       #    #     #  #   #    #   # #        #   #   #    #  #    #  #  #       #    #  #    #  #      
