@@ -167,7 +167,7 @@ NDefines.NNavy.NAVAL_SUPPLY_HUB_REDUCTION_FACTOR = 0.5
 NDefines.NNavy.MIN_SPOTTING_PROGRESS = 1								-- Minimum spotting progress (in percent) per hourly tick
 NDefines.NNavy.LEADER_EXPERIENCE_SCALE = 0
 NDefines.NNavy.FUEL_COST_MULT = 0.05									 -- vanilla 0.1 fuel multiplier for all naval missions
-
+NDefines.NNavy.SHORE_BOMBARDMENT_CAP = 0.25								-- vanilla 0.33
 
 
 NDefines.NProduction.MIN_LICENSE_ACTIVE_DAYS = 1                 -- License can be cancelled at any time now, down from 30 | 
