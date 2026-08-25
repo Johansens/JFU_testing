@@ -31,6 +31,104 @@ characters = {
 		}
 	}
 
+	SOV_supreme_soviet = { #Country Leader role added via focus
+		name = SOV_supreme_soviet
+
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SOV/portrait_SOV_supreme_soviet.dds"
+			}
+		}
+	}
+	
+	SOV_nikolay_bukharin = {
+		name = SOV_nikolay_bukharin
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_SOV_nikolay_bukharin"
+			}
+			army = {
+				small = "GFX_idea_SOV_nikolay_bukharin"
+			}
+		}
+
+		
+		advisor = {
+			slot = political_advisor
+			ledger = civilian
+			idea_token = SOV_nikolay_bukharin
+			allowed = {
+				original_tag = SOV
+			}
+			visible = {
+				NOT = {
+					has_character_flag = SOV_character_purged_flag 
+				}
+			}
+			available = {
+				has_completed_focus = SOV_release_innocents
+				has_completed_focus = SOV_back_to_the_nep
+				has_completed_focus = SOV_incorporate_local_organizations #BUKHARIN RIGHT OPPOSITION
+				if = {
+					limit = {
+						has_character_flag = SOV_exiled_flag
+					}
+					NOT = { has_character_flag = SOV_exiled_flag }
+				}
+			}
+			traits = {
+				economy_reformer 
+			}
+		}
+	}	
+
+
+	SOV_lev_trotsky = {
+		name = SOV_lev_trotsky
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SOV/Portrait_Leon_Trotsky.dds"
+			}
+			army = {
+				small = "GFX_idea_SOV_lev_trotsky"
+			}
+		}
+		
+
+		advisor = {
+			slot = political_advisor
+			idea_token = SOV_lev_trotsky
+			ledger = civilian
+			allowed = {
+				original_tag = SOV
+			}
+		
+			visible = {
+				NOT = {
+					has_character_flag = SOV_character_purged_flag 
+				}
+				NOT = {
+					has_global_flag = trotsky_dead
+				}
+			}
+			available = {
+				has_completed_focus = SOV_the_permanent_revolution
+				has_completed_focus = SOV_the_builder_of_the_red_army
+				if = {
+					limit = {
+						has_character_flag = SOV_exiled_flag
+					}
+					NOT = { has_character_flag = SOV_exiled_flag }
+				}
+				
+			}
+			traits = {
+				pc_military_naval_affairs
+			}
+		}
+	}
+
+
 
    # #    #####   #    #  #   #      #        ######    ##    #####   ######  #####    ####  
   #   #   #    #  ##  ##   # #       #        #        #  #   #    #  #       #    #  #      
@@ -2110,10 +2208,393 @@ characters = {
 			traits = {
 				ataman_transbaikal_host
 			}
-		}		
+		}
+
+
+
+
 	}
 
 
+	#horst stuff
+	SOV_ivar_smilga = {
+		name = SOV_ivar_smilga
+		portraits = {
+			army = {
+				small = "GFX_idea_SOV_ivar_smilga_imprisoned"
+			}
+		}
+	
+
+		advisor = {
+			slot = political_advisor
+			ledger = civilian
+			idea_token = SOV_ivar_smilga
+			allowed = {
+				original_tag = SOV
+			}
+			visible = {
+				NOT = {
+					has_character_flag = SOV_character_purged_flag 
+				}
+			}
+			available = {
+				has_completed_focus = SOV_release_innocents #TROTSKYIST 
+				has_completed_focus = SOV_the_permanent_revolution
+				if = {
+					limit = {
+						has_character_flag = SOV_imprisoned_flag
+					}
+					NOT = { has_character_flag = SOV_imprisoned_flag } #For flavor purposes only -> Removed in the appropriate focus/event/dec
+				}
+				if = {
+					limit = {
+						has_character_flag = SOV_exiled_flag
+					}
+					NOT = { has_character_flag = SOV_exiled_flag }
+				}
+			}
+			traits = {
+				soviet_economist
+			}
+		}
+	}
+
+
+	SOV_karl_radek = {
+		name = SOV_karl_radek
+
+		portraits = {
+			army = {
+				small = "GFX_idea_SOV_karl_radek"
+			}
+		}
+
+		
+		advisor = {
+			slot = political_advisor
+			ledger = civilian
+			idea_token = SOV_karl_radek
+			allowed = {
+				original_tag = SOV
+			}
+			visible = {
+				NOT = {
+					has_character_flag = SOV_character_purged_flag 
+				}
+			}
+			available = {
+				has_completed_focus = SOV_release_innocents
+				has_completed_focus = SOV_the_permanent_revolution #TROTSKYIST
+				if = {
+					limit = {
+						has_character_flag = SOV_exiled_flag
+					}
+					NOT = { has_character_flag = SOV_exiled_flag }
+				}
+			}
+			traits = {
+				international_revolutionary 
+			}
+		}
+	}
+
+	SOV_yevgeny_preobrazhensky = {
+		name = SOV_yevgeny_preobrazhensky
+		portraits = {
+			army = {
+				small = "GFX_idea_SOV_yevgeny_preobrazhensky"
+			}
+		}
+
+		advisor = {
+			slot = political_advisor
+			ledger = civilian
+			idea_token = SOV_yevgeny_preobrazhensky
+			allowed = {
+				original_tag = SOV
+			}
+			visible = {
+				NOT = {
+					has_character_flag = SOV_character_purged_flag 
+				}
+			}
+			available = {
+				has_completed_focus = SOV_release_innocents
+				has_completed_focus = SOV_the_permanent_revolution #TROTSKYIST
+				if = {
+					limit = {
+						has_character_flag = SOV_exiled_flag
+					}
+					NOT = { has_character_flag = SOV_exiled_flag }
+				}
+			}
+			traits = {
+				ecomonist_publicist 
+			}
+		}
+	}
+	SOV_aleksey_rykov = {
+		name = SOV_aleksey_rykov
+
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_SOV_aleksey_rykov"
+			}
+			army = {
+				small = "GFX_idea_SOV_aleksey_rykov"
+			}
+		}
+
+
+		advisor = {
+			slot = political_advisor
+			ledger = civilian
+			idea_token = SOV_aleksey_rykov
+			allowed = {
+				original_tag = SOV
+			}
+			visible = {
+				NOT = {
+					has_character_flag = SOV_character_purged_flag 
+				}
+			}
+			available = {
+				has_completed_focus = SOV_release_innocents
+				has_completed_focus = SOV_back_to_the_nep
+				has_completed_focus = SOV_incorporate_local_organizations #BUKHARIN RIGHT OPPOSITION
+				if = {
+					limit = {
+						has_character_flag = SOV_exiled_flag
+					}
+					NOT = { has_character_flag = SOV_exiled_flag }
+				}
+			}
+			
+			traits = {
+				peoples_commissar_for_posts_and_telegraphs 
+			}
+		}
+	}
+
+	SOV_mikhail_tomsky = {
+		name = SOV_mikhail_tomsky
+		portraits = {
+			army = {
+				small = "GFX_idea_SOV_mikhail_tomsky"
+			}
+		}
+		
+		advisor = {
+			slot = political_advisor
+			ledger = civilian
+			idea_token = SOV_mikhail_tomsky
+			allowed = {
+				original_tag = SOV
+			}
+			visible = {
+				NOT = {
+					has_character_flag = SOV_character_purged_flag 
+				}
+			}
+			available = {
+				has_completed_focus = SOV_release_innocents
+								has_completed_focus = SOV_socialist_humanism
+				has_completed_focus = SOV_incorporate_local_organizations #BUKHARIN RIGHT OPPOSITION
+				if = {
+					limit = {
+						has_character_flag = SOV_exiled_flag
+					}
+					NOT = { has_character_flag = SOV_exiled_flag }
+				}
+			}
+			traits = {
+				right_trade_unionist 
+			}
+		}
+	}
+	SOV_martemyan_ryutin = {
+		name = SOV_martemyan_ryutin
+		portraits = {
+			army = {
+				small = "GFX_idea_SOV_martemyan_ryutin_imprisoned"
+			}
+		}
+
+	
+
+
+		advisor = {
+			slot = political_advisor
+			ledger = civilian
+			idea_token = SOV_martemyan_ryutin
+			allowed = {
+				original_tag = SOV
+			}
+			visible = {
+				NOT = {
+					has_character_flag = SOV_character_purged_flag 
+				}
+			}
+			available = {
+				has_completed_focus = SOV_release_innocents
+				has_completed_focus = SOV_socialist_humanism
+				has_completed_focus = SOV_incorporate_local_organizations #BUKHARIN RIGHT OPPOSITION
+				if = {
+					limit = {
+						has_character_flag = SOV_imprisoned_flag
+					}
+					NOT = { has_character_flag = SOV_imprisoned_flag } #For flavor purposes only -> Removed in the appropriate focus/event/dec
+				}
+				if = {
+					limit = {
+						has_character_flag = SOV_exiled_flag
+					}
+					NOT = { has_character_flag = SOV_exiled_flag }
+				}
+			}
+			traits = {
+				anti_stalinist_propagandist 
+			}
+		}
+	}
+
+	SOV_grigory_zinovyev = {
+		name = SOV_grigory_zinovyev
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_SOV_grigory_zinovyev"
+			}
+			army = {
+				small = "GFX_idea_SOV_grigory_zinovyev_imprisoned"
+			}
+		}
+	
+
+		advisor = {
+			slot = political_advisor
+			ledger = civilian
+			idea_token = SOV_grigory_zinovyev
+			allowed = {
+				original_tag = SOV
+			}
+			visible = {
+				NOT = {
+					has_character_flag = SOV_character_purged_flag 
+				}
+			}
+			available = {
+			always = no
+				if = {
+					limit = {
+						has_character_flag = SOV_imprisoned_flag
+					}
+					NOT = { has_character_flag = SOV_imprisoned_flag } #For flavor purposes only -> Removed in the appropriate focus/event/dec
+				}
+				if = {
+					limit = {
+						has_character_flag = SOV_exiled_flag
+					}
+					NOT = { has_character_flag = SOV_exiled_flag }
+				}
+			}
+			traits = {
+				communist_theorist
+			}
+		}		
+	}
+	
+	SOV_lev_kamenev = {
+		name = SOV_lev_kamenev
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_SOV_lev_kamenev"
+			}
+			army = {
+				small = "GFX_idea_SOV_lev_kamenev_imprisoned"
+			}
+		}
+	
+
+		advisor = {
+			slot = political_advisor
+			ledger = civilian
+			idea_token = SOV_lev_kamenev
+			allowed = {
+				original_tag = SOV
+			}
+			visible = {
+				NOT = {
+					has_character_flag = SOV_character_purged_flag 
+				}
+			}
+			available = {
+				always= no
+				if = {
+					limit = {
+						has_character_flag = SOV_imprisoned_flag
+					}
+					NOT = { has_character_flag = SOV_imprisoned_flag } #For flavor purposes only -> Removed in the appropriate focus/event/dec
+				}
+				if = {
+					limit = {
+						has_character_flag = SOV_exiled_flag
+					}
+					NOT = { has_character_flag = SOV_exiled_flag }
+				}
+			}
+			traits = {
+				appeasing_technocrat 
+			}
+		}
+	}
+
+	SOV_ivan_smirnov = {
+		name = SOV_ivan_smirnov
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_SOV_ivan_smirnov"
+			}
+			army = {
+				small = "GFX_idea_SOV_ivan_smirnov_imprisoned"
+			}
+		}
+	
+
+		advisor = {
+			slot = political_advisor
+			ledger = civilian
+			idea_token = SOV_ivan_smirnov
+			allowed = {
+				original_tag = SOV
+			}
+			visible = {
+				NOT = { has_character_flag = SOV_character_purged_flag }
+				
+			}
+			available = {
+				
+				always = no
+				if = {
+					limit = {
+						has_character_flag = SOV_imprisoned_flag
+					}
+					NOT = { has_character_flag = SOV_imprisoned_flag } #For flavor purposes only -> Removed in the appropriate focus/event/dec
+				}
+				if = {
+					limit = {
+						has_character_flag = SOV_exiled_flag
+					}
+					NOT = { has_character_flag = SOV_exiled_flag }
+				}
+			}
+			traits = {
+				head_directorate_of_new_buildings 
+			}
+		}
+	}
+
+	
  #######                                         #     #                                                     #                                                       
  #        #    #  #  #       ######   ####       ##   ##  #  #       #  #####    ##    #####   #   #        # #    #####   #    #  #   ####    ####   #####    ####  
  #         #  #   #  #       #       #           # # # #  #  #       #    #     #  #   #    #   # #        #   #   #    #  #    #  #  #       #    #  #    #  #      
