@@ -1781,6 +1781,7 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 
 		completion_reward = {
+			custom_effect_tooltip = ITA_strengthen_northern_industry_buildings_tt
 			158 = { #PIEDMONT (Torino, Genoa)
 				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
@@ -1825,6 +1826,7 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 
 		completion_reward = {
+			custom_effect_tooltip = ITA_modernize_the_mezzogiorno_buildings_tt
 			if = {
 				limit = {
 					has_full_control_of_state = 117

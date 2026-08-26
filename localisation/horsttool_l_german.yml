@@ -1918,11 +1918,9 @@ vp_alies_owns:0 "[ENG.GetFlag] §CAlliierte§!"
 wartime_industry_focus_eng:0 "Kriegsindustrie"
 wartime_minister_of_labour:0 "Kriegsarbeitsminister"
 
-
-
-
-
-
+ITA_modernize_the_mezzogiorno_buildings_tt:0 "Militärische Industrieorganisationen für Werften erhalten §G+10%§! §YSchiffsproduktion!§! \n "
+ 
+ITA_strengthen_northern_industry_buildings_tt:0 "Militärische Industrieorganisationen für Militärfabriken erhalten §G+10%§! Fabrikproduktion!§! \n"
 
 
 
