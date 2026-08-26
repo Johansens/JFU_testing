@@ -239,6 +239,7 @@
  FRA_strike_first:0 "Zuerst zuschlagen!"
  FRA_operation_dragoon:0 "Operation Dragoon"
  FRA_operation_dragoon_desc:0 "Eine amphibische Landung in Südfrankreich kann deutsche Einheiten vom Atlantikwall ablenken und eine ernsthaftere Invasion in Nordfrankreich möglich machen."
+ FRA_no_manchu:0 "Kein Mandschukuo"
 
  ROM_nationalize_oil_industry:0 "Ölindustrie nationalisieren"
 
