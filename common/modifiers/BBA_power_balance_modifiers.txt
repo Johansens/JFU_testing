@@ -78,8 +78,8 @@ ITA_power_balance_lost_core_5 = {
 }
 
 ITA_JFU_BOP_change_1 = {
-	power_balance_weekly = -0.005
+	power_balance_weekly = -0.3
 }
 ITA_JFU_BOP_change_2 = {
-	power_balance_weekly = -0.01
+	power_balance_weekly = -0.5
 }
