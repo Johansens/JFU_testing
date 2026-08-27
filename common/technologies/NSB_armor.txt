@@ -499,11 +499,74 @@ technologies = {
 		}
 
 		on_research_complete_limit = {
-			NOT = {	has_template_containing_unit = light_armor }
-			NOT = {	has_template_containing_unit = heavy_armor }
-			NOT = {	has_template_containing_unit = medium_armor }
+			#NOT = {	has_template_containing_unit = light_armor }
+			#NOT = {	has_template_containing_unit = heavy_armor }
+			#NOT = {	has_template_containing_unit = medium_armor }
 		}
 		on_research_complete = {
+			create_equipment_variant = {
+				name = "Basic Medium Tank"
+				type = medium_tank_chassis_1
+				parent_version = 0
+				modules = {
+					main_armament_slot = tank_medium_cannon
+					turret_type_slot = tank_medium_three_man_tank_turret
+					suspension_type_slot = tank_bogie_suspension
+					armor_type_slot = tank_riveted_armor
+					engine_type_slot = tank_diesel_engine
+					special_type_slot_1 = secondary_turret_small_cannon
+					special_type_slot_2 = secondary_turret_small_cannon
+					special_type_slot_3 = tank_radio_1
+					special_type_slot_4 = wet_ammo_storage
+				}
+				upgrades = {
+					tank_nsb_engine_upgrade = 4
+					tank_nsb_armor_upgrade = 0
+				}
+			}
+			create_equipment_variant = {
+				name = "Basic Medium Anti Air Tank"
+				type = medium_tank_aa_chassis_1
+				parent_version = 0
+				modules = {
+					main_armament_slot = tank_anti_air_cannon_2
+					turret_type_slot = tank_medium_three_man_tank_turret
+					suspension_type_slot = tank_bogie_suspension
+					armor_type_slot = tank_riveted_armor
+					engine_type_slot = tank_diesel_engine
+					special_type_slot_1 = secondary_turret_small_cannon
+					special_type_slot_2 = secondary_turret_small_cannon
+					special_type_slot_3 = tank_radio_1
+					special_type_slot_4 = wet_ammo_storage
+				}
+				upgrades = {
+					tank_nsb_engine_upgrade = 4
+					tank_nsb_armor_upgrade = 0
+				}
+			}
+			if = {
+				limit = { is_special_project_completed = sp:sp_land_flamethrower_tank }
+				create_equipment_variant = {
+					name = "Basic Medium Flame Tank"
+					type = medium_tank_flame_chassis_1
+					parent_version = 0
+					modules = {
+						main_armament_slot = flamethrower
+						turret_type_slot = tank_medium_three_man_tank_turret
+						suspension_type_slot = tank_bogie_suspension
+						armor_type_slot = tank_riveted_armor
+						engine_type_slot = tank_diesel_engine
+						special_type_slot_1 = secondary_turret_small_cannon
+						special_type_slot_2 = secondary_turret_small_cannon
+						special_type_slot_3 = tank_radio_1
+						special_type_slot_4 = wet_ammo_storage
+					}
+					upgrades = {
+						tank_nsb_engine_upgrade = 4
+						tank_nsb_armor_upgrade = 0
+					}
+				}
+			}
 		}
 
 		path = {
@@ -680,6 +743,109 @@ technologies = {
 						tank_nsb_armor_upgrade = 2
 					}
 					#icon = "GFX_ITA_advanced_medium_spaa_medium"
+				}
+			}
+
+			create_equipment_variant = {
+				name = "Improved Medium Tank"
+				type = medium_tank_chassis_2
+				parent_version = 0
+				modules = {
+					main_armament_slot = tank_high_velocity_cannon_2
+					turret_type_slot = tank_medium_three_man_tank_turret
+					suspension_type_slot = tank_bogie_suspension
+					armor_type_slot = tank_riveted_armor
+					engine_type_slot = tank_diesel_engine
+					special_type_slot_1 = secondary_turret_small_cannon
+					special_type_slot_2 = secondary_turret_small_cannon
+					special_type_slot_3 = tank_radio_1
+					special_type_slot_4 = wet_ammo_storage
+				}
+				upgrades = {
+					tank_nsb_engine_upgrade = 4
+					tank_nsb_armor_upgrade = 0
+				}
+			}
+			create_equipment_variant = {
+				name = "Improved Medium Anti Air Tank"
+				type = medium_tank_aa_chassis_2
+				parent_version = 0
+				modules = {
+					main_armament_slot = tank_anti_air_cannon_2
+					turret_type_slot = tank_medium_three_man_tank_turret
+					suspension_type_slot = tank_bogie_suspension
+					armor_type_slot = tank_riveted_armor
+					engine_type_slot = tank_diesel_engine
+					special_type_slot_1 = secondary_turret_small_cannon
+					special_type_slot_2 = secondary_turret_small_cannon
+					special_type_slot_3 = tank_radio_1
+					special_type_slot_4 = wet_ammo_storage
+				}
+				upgrades = {
+					tank_nsb_engine_upgrade = 4
+					tank_nsb_armor_upgrade = 0
+				}
+			}
+			create_equipment_variant = {
+				name = "Improved Medium Tank Destroyer"
+				type = medium_tank_destroyer_chassis_2
+				parent_version = 0
+				modules = {
+					main_armament_slot = tank_high_velocity_cannon_2
+					turret_type_slot = tank_medium_fixed_superstructure_turret
+					suspension_type_slot = tank_bogie_suspension
+					armor_type_slot = tank_riveted_armor
+					engine_type_slot = tank_gasoline_engine
+					special_type_slot_1 = secondary_turret_small_cannon
+					special_type_slot_2 = secondary_turret_small_cannon
+					special_type_slot_4 = wet_ammo_storage
+				}
+				upgrades = {
+					tank_nsb_engine_upgrade = 2
+					tank_nsb_armor_upgrade = 0
+				}
+			}
+			create_equipment_variant = {
+				name = "Improved Medium Artillery Tank"
+				type = medium_tank_artillery_chassis_2
+				parent_version = 0
+				modules = {
+					main_armament_slot = tank_medium_howitzer_2
+					turret_type_slot = tank_medium_fixed_superstructure_turret
+					suspension_type_slot = tank_bogie_suspension
+					armor_type_slot = tank_riveted_armor
+					engine_type_slot = tank_gasoline_engine
+					special_type_slot_1 = secondary_turret_small_cannon
+					special_type_slot_2 = secondary_turret_small_cannon
+					special_type_slot_3 = additional_machine_guns
+					special_type_slot_4 = wet_ammo_storage
+				}
+				upgrades = {
+					tank_nsb_engine_upgrade = 2
+					tank_nsb_armor_upgrade = 0
+				}
+			}
+			if = {
+				limit = { is_special_project_completed = sp:sp_land_flamethrower_tank }
+				create_equipment_variant = {
+					name = "Improved Medium Flame Tank"
+					type = medium_tank_flame_chassis_2
+					parent_version = 0
+					modules = {
+						main_armament_slot = flamethrower
+						turret_type_slot = tank_medium_three_man_tank_turret
+						suspension_type_slot = tank_bogie_suspension
+						armor_type_slot = tank_riveted_armor
+						engine_type_slot = tank_diesel_engine
+						special_type_slot_1 = secondary_turret_small_cannon
+						special_type_slot_2 = secondary_turret_small_cannon
+						special_type_slot_3 = tank_radio_1
+						special_type_slot_4 = wet_ammo_storage
+					}
+					upgrades = {
+						tank_nsb_engine_upgrade = 4
+						tank_nsb_armor_upgrade = 0
+					}
 				}
 			}
 		}

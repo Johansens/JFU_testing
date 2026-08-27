@@ -286,6 +286,73 @@ technologies = {
 				localization_key = SP_UNLOCK_PROJECT
 				PROJECT = sp_air_jet_engine	
 			}
+			if = {
+				limit = { OR = { tag = GER tag = ITA tag = ENG } }
+				if = {
+					limit = { has_tech = aa_hmg }
+					create_equipment_variant = {
+						name = "F 2"
+						type = small_plane_airframe_2
+						parent_version = 0
+						modules = {
+							fixed_main_weapon_slot = heavy_mg_4x
+							fixed_auxiliary_weapon_slot_1 = heavy_mg_4x
+							fixed_auxiliary_weapon_slot_2 = heavy_mg_4x 
+							engine_type_slot = engine_3_1x
+							special_type_slot_1 = drop_tanks
+							special_type_slot_2 = armor_plate_small
+							special_type_slot_3 = self_sealing_fuel_tanks_small
+						}
+					}
+				}
+				create_equipment_variant = {
+					name = "CAS 2"
+					type = small_plane_cas_airframe_2
+					parent_version = 0
+					modules = {
+						fixed_main_weapon_slot = small_bomb_bay
+						fixed_auxiliary_weapon_slot_1 = small_bomb_bay
+						fixed_auxiliary_weapon_slot_2 = bomb_locks
+						engine_type_slot = engine_3_1x
+						special_type_slot_1 = drop_tanks
+						special_type_slot_2 = self_sealing_fuel_tanks_small
+						special_type_slot_3 = dive_brakes_small
+					}
+				}
+			}
+			else = {
+				if = {
+					limit = { has_tech = aa_hmg }
+					create_equipment_variant = {
+						name = "F 2"
+						type = small_plane_airframe_2
+						parent_version = 0
+						modules = {
+							fixed_main_weapon_slot = heavy_mg_4x
+							fixed_auxiliary_weapon_slot_1 = heavy_mg_4x
+							fixed_auxiliary_weapon_slot_2 = heavy_mg_4x 
+							engine_type_slot = engine_3_1x
+							special_type_slot_1 = drop_tanks
+							special_type_slot_2 = armor_plate_small
+							special_type_slot_3 = armor_plate_small
+						}
+					}
+				}
+				create_equipment_variant = {
+					name = "CAS 2"
+					type = small_plane_cas_airframe_2
+					parent_version = 0
+					modules = {
+						fixed_main_weapon_slot = small_bomb_bay
+						fixed_auxiliary_weapon_slot_1 = small_bomb_bay
+						engine_type_slot = engine_3_1x
+						special_type_slot_1 = drop_tanks
+						special_type_slot_2 = armor_plate_small
+						special_type_slot_3 = dive_brakes_small
+					}
+				}
+				
+			}
 		}				
 
 		research_cost = 2
@@ -372,6 +439,76 @@ technologies = {
 			custom_effect_tooltip = {
 				localization_key = SP_UNLOCK_PROJECT
 				PROJECT = sp_air_axial_jet_engine	
+			}
+			if = {
+				limit = { OR = { tag = GER tag = ITA tag = ENG } }
+				if = {
+					limit = { has_tech = aa_hmg }
+					create_equipment_variant = {
+						name = "F 3"
+						type = small_plane_airframe_3
+						parent_version = 0
+						modules = {
+							fixed_main_weapon_slot = heavy_mg_4x
+							fixed_auxiliary_weapon_slot_1 = heavy_mg_4x
+							fixed_auxiliary_weapon_slot_2 = heavy_mg_4x 
+							engine_type_slot = engine_4_1x
+							special_type_slot_1 = drop_tanks
+							special_type_slot_2 = armor_plate_small
+							special_type_slot_3 = self_sealing_fuel_tanks_small
+							special_type_slot_4 = hmg_defense_turret
+						}
+					}
+				}
+				create_equipment_variant = {
+					name = "CAS 3"
+					type = small_plane_cas_airframe_3
+					parent_version = 0
+					modules = {
+						fixed_main_weapon_slot = small_bomb_bay
+						fixed_auxiliary_weapon_slot_1 = small_bomb_bay
+						fixed_auxiliary_weapon_slot_2 = bomb_locks
+						engine_type_slot = engine_4_1x
+						special_type_slot_1 = drop_tanks
+						special_type_slot_2 = armor_plate_small
+						special_type_slot_3 = dive_brakes_small
+						special_type_slot_4 = self_sealing_fuel_tanks_small
+					}
+				}
+			}
+			else = {
+				if = {
+					limit = { has_tech = aa_hmg }
+					create_equipment_variant = {
+						name = "F 3"
+						type = small_plane_airframe_3
+						parent_version = 0
+						modules = {
+							fixed_main_weapon_slot = heavy_mg_4x
+							fixed_auxiliary_weapon_slot_1 = heavy_mg_4x
+							fixed_auxiliary_weapon_slot_2 = heavy_mg_4x 
+							engine_type_slot = engine_4_1x
+							special_type_slot_1 = drop_tanks
+							special_type_slot_2 = armor_plate_small
+							special_type_slot_3 = armor_plate_small
+							special_type_slot_4 = hmg_defense_turret
+						}
+					}
+				}
+				create_equipment_variant = {
+					name = "CAS 3"
+					type = small_plane_cas_airframe_3
+					parent_version = 0
+					modules = {
+						fixed_main_weapon_slot = small_bomb_bay
+						fixed_auxiliary_weapon_slot_1 = small_bomb_bay
+						engine_type_slot = engine_4_1x
+						special_type_slot_1 = drop_tanks
+						special_type_slot_2 = armor_plate_small
+						special_type_slot_3 = dive_brakes_small
+						special_type_slot_4 = armor_plate_small
+					}
+				}
 			}
 		}		
 		research_cost = 2
