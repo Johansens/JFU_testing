@@ -2511,7 +2511,7 @@ SOV_propaganda_campaigns = {
 
 		visible = {
 			OR = {
-				has_completed_focus = SOV_collectivist_propaganda
+				has_completed_focus = SOV_positive_heroism
 				has_country_flag = SOV_debug_unlock_propaganda_campaigns_flag #debug
 			}
 		}

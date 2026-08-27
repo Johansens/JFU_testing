@@ -705,7 +705,8 @@ political_actions = {
 SIA_army_navy_reform_cat = {
 	SIA_divert_army_funds_to_navy_toggle = {
 		visible = {
-			has_completed_focus = SIA_direct_army_fundings_towards_the_navy
+			#has_completed_focus = SIA_direct_army_fundings_towards_the_navy
+			always = no
 		}
 		available = {
 		}
