@@ -3078,71 +3078,7 @@ focus_tree = {
 			add_political_power = 25
 
 			SOV_paranoia_high_increase_effect = yes
-
-			#HISTORICAL
-			#Zinovyev
-			if = {
-				limit = {
-					has_character = SOV_grigory_zinovyev
-				}
-				SOV_grigory_zinovyev = {
-					set_character_flag = SOV_targeted_for_purge_flag
-				}
-			}
-			else = {
-				SOV_add_random_character_to_purge_targets_effect = yes
-			}
-			#Kamenev
-			if = {
-				limit = {
-					has_character = SOV_lev_kamenev
-				}
-				SOV_lev_kamenev = {
-					set_character_flag = SOV_targeted_for_purge_flag
-				}
-			}
-			else = {
-				SOV_add_random_character_to_purge_targets_effect = yes
-			}
-			#Smirnov
-			if = {
-				limit = {
-					has_character = SOV_ivan_smirnov
-				}
-				SOV_ivan_smirnov = {
-					set_character_flag = SOV_targeted_for_purge_flag
-				}
-			}
-			else = {
-				SOV_add_random_character_to_purge_targets_effect = yes
-			}
-
-			#NOT-SO-HISTORICAL
-			#Sokolnikov
-			if = {
-				limit = {
-					has_character = SOV_grigory_sokolnikov
-				}
-				SOV_grigory_sokolnikov = {
-					set_character_flag = SOV_targeted_for_purge_flag
-				}
-			}
-			else = {
-				SOV_add_random_character_to_purge_targets_effect = yes
-			}
-			#Shlyapnikov
-			if = {
-				limit = {
-					has_character = SOV_aleksandr_shlyapnikov
-				}
-				SOV_aleksandr_shlyapnikov = {
-					set_character_flag = SOV_targeted_for_purge_flag
-				}
-			}
-			else = {
-				SOV_add_random_character_to_purge_targets_effect = yes
-			}
-
+			
 			custom_effect_tooltip = SOV_will_trigger_a_great_purge_tt
 			hidden_effect = {
 				set_country_flag = SOV_purge_event_unavoidable_flag #No way to avoid this purge. This people are about to be purged and there's nothing you can do for them.
@@ -3226,9 +3162,6 @@ focus_tree = {
 		cost = 5
 
 		available = {
-			NOT = {
-				has_completed_focus = SOV_the_permanent_revolution 
-			}
 			has_country_flag = {
 				flag = SOV_first_moscow_trial_flag
 				days > 175
@@ -3256,80 +3189,6 @@ focus_tree = {
 			add_political_power = 25
 
 			SOV_paranoia_high_increase_effect = yes
-
-			#Radek
-			if = {
-				limit = {
-					has_character = SOV_karl_radek
-				}
-				SOV_karl_radek = {
-					set_character_flag = SOV_targeted_for_purge_flag
-				}
-			}
-			else = {
-				SOV_add_random_character_to_purge_targets_effect = yes
-			}
-			#NOT-SO-HISTORICAL
-			#Smilga
-			if = {
-				limit = {
-					has_character = SOV_ivar_smilga
-				}
-				SOV_ivar_smilga = {
-					set_character_flag = SOV_targeted_for_purge_flag
-				}
-			}
-			else = {
-				SOV_add_random_character_to_purge_targets_effect = yes
-			}
-			#Preobrazhensky
-			if = {
-				limit = {
-					has_character = SOV_yevgeny_preobrazhensky
-				}
-				SOV_yevgeny_preobrazhensky = {
-					set_character_flag = SOV_targeted_for_purge_flag
-				}
-			}
-			else = {
-				SOV_add_random_character_to_purge_targets_effect = yes
-			}
-			#Ryutin
-			if = {
-				limit = {
-					NOT = { has_completed_focus = SOV_incorporate_local_organizations }
-					has_character = SOV_martemyan_ryutin
-				}
-				SOV_martemyan_ryutin = {
-					set_character_flag = SOV_targeted_for_purge_flag
-				}
-			}
-			#else_if = { 
-			#	limit = {
-			#		has_completed_focus = SOV_incorporate_local_organizations 
-			#		has_character = SOV_vyacheslav_molotov
-			#	}			
-			#	SOV_vyacheslav_molotov = {
-			#		set_character_flag = SOV_targeted_for_purge_flag
-			#	}
-			#}
-			else = {
-				SOV_add_random_character_to_purge_targets_effect = yes
-			}
-			#Ustryalov
-			#if = {
-			#	limit = {
-			#		has_character = SOV_nikolay_ustryalov
-			#	}
-			#	SOV_nikolay_ustryalov = {
-			#		set_character_flag = SOV_targeted_for_purge_flag
-			#	}
-			#}
-			#else = {
-			#	SOV_add_random_character_to_purge_targets_effect = yes
-			#}
-
-
 
 			custom_effect_tooltip = SOV_will_trigger_a_great_purge_tt
 			hidden_effect = {
@@ -3523,13 +3382,7 @@ focus_tree = {
 				set_country_flag = SOV_purge_event_unavoidable_flag #No way to avoid this purge. This people are about to be purged and there's nothing you can do for them.
 				SOV_great_purge_army_trial_of_the_generals_effect = yes #TRIAL OF THE GENERALS -> Tukhachevsky
 			}
-			if = { 
-				limit = { 
-					has_completed_focus = SOV_incorporate_local_organizations
-				}
-				SOV_remove_paranoia_effect = yes
-				set_country_flag = SOV_third_moscow_trial_flag
-			}
+
 			set_country_flag = SOV_stalinist_military_flag #New Generals have more chances of being Stalinists after this
 		}
 	}
@@ -3542,7 +3395,6 @@ focus_tree = {
 		y = 1
 		relative_position_id = SOV_the_military_conspiracy
 		cost = 5
-		bypass = { has_completed_focus = SOV_incorporate_local_organizations }
 
 		available = {
 			has_country_flag = {
@@ -3572,43 +3424,6 @@ focus_tree = {
 			add_political_power = 25
 
 			#HISTORICAL
-			#Bukharin
-			if = {
-				limit = {
-					has_character = SOV_nikolay_bukharin
-				}
-				SOV_nikolay_bukharin = {
-					set_character_flag = SOV_targeted_for_purge_flag
-				}
-			}
-			else = {
-				SOV_add_random_character_to_purge_targets_effect = yes
-			}
-			#Rykov
-			if = {
-				limit = {
-					has_character = SOV_aleksey_rykov
-				}
-				SOV_aleksey_rykov = {
-					set_character_flag = SOV_targeted_for_purge_flag
-				}
-			}
-			else = {
-				SOV_add_random_character_to_purge_targets_effect = yes
-			}
-			#NOT-SO-HISTORICAL
-			#Tomsky
-			if = {
-				limit = {
-					has_character = SOV_mikhail_tomsky
-				}
-				SOV_mikhail_tomsky = {
-					set_character_flag = SOV_targeted_for_purge_flag
-				}
-			}
-			else = {
-				SOV_add_random_character_to_purge_targets_effect = yes
-			}
 
 			custom_effect_tooltip = SOV_will_trigger_a_great_purge_tt
 			hidden_effect = {
@@ -3652,7 +3467,6 @@ focus_tree = {
 			hidden_effect = {
 				ROOT = { news_event = { id = news.37 days = 100 } }
 			}
-			hidden_effect = { retire_character = SOV_lev_trotsky 	}
 			SOV_paranoia_high_decrease_effect = yes
 		}
 	}
@@ -3667,10 +3481,6 @@ focus_tree = {
 		cost = 5
 
 		available = {
-			OR = {
-				has_completed_focus = SOV_positive_heroism
-				has_completed_focus = SOV_collectivist_propaganda
-			}
 			has_country_flag = {
 				flag = SOV_third_moscow_trial_flag
 				days > 175
@@ -3998,7 +3808,7 @@ focus_tree = {
 		id = SOV_addressing_internal_affairs
 		icon = GFX_focus_generic_self_management
 		prerequisite = { focus = SOV_the_path_of_marxism_leninism }
-		x = 3
+		x = 1
 		y = 1
 
 		relative_position_id = SOV_the_path_of_marxism_leninism
@@ -4099,7 +3909,7 @@ focus_tree = {
 		relative_position_id = SOV_expand_the_agitprop
 		cost = 5
 
-		mutually_exclusive = { focus = SOV_incorporate_local_organizations focus = SOV_the_permanent_revolution focus = SOV_collectivist_propaganda }
+		mutually_exclusive = { focus = SOV_collectivist_propaganda }
 
 		available = {
 
@@ -4109,8 +3919,8 @@ focus_tree = {
 
 		completion_reward = {
 			add_political_power = 25
-			#custom_effect_tooltip = SOV_change_red_army_modifier_tt
-			#add_to_variable = { SOV_the_red_army_army_org_factor = 0.05 tooltip = army_org_factor_tt }
+			custom_effect_tooltip = SOV_change_red_army_modifier_tt
+			add_to_variable = { SOV_the_red_army_army_org_factor = 0.05 tooltip = army_org_factor_tt }
 			
 			custom_effect_tooltip = unlock_propaganda_campaign_tt
 			unlock_decision_tooltip = SOV_propaganda_heroes_forward
@@ -4139,10 +3949,7 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 
 		completion_reward = {
-			custom_effect_tooltip = available_military_high_command
-			show_ideas_tooltip = konstantin_rokossovsky 
-			show_ideas_tooltip = leonid_govorov
-			show_ideas_tooltip = nikolay_vatutin
+			add_ideas = SOV_stakhanovite_movement
 		}
 	}
 
@@ -4162,9 +3969,12 @@ focus_tree = {
 		search_filters = {}
 
 		completion_reward = {
+			custom_effect_tooltip = available_military_high_command
+			show_ideas_tooltip = konstantin_rokossovsky 
+			show_ideas_tooltip = leonid_govorov
+			show_ideas_tooltip = nikolay_vatutin
 
-
-			add_ideas = SOV_war_heroes_ns
+			#add_ideas = SOV_war_heroes_ns
 		}
 	}
 
@@ -4177,7 +3987,7 @@ focus_tree = {
 		relative_position_id = SOV_expand_the_agitprop
 		cost = 5
 
-		mutually_exclusive = { focus = SOV_incorporate_local_organizations focus = SOV_the_permanent_revolution focus = SOV_positive_heroism }
+		mutually_exclusive = { focus = SOV_positive_heroism }
 
 		available = {
 
@@ -4196,8 +4006,8 @@ focus_tree = {
 			SOV_unlock_propaganda_campaign_slot_effect = yes
 
 			custom_effect_tooltip = generic_skip_one_line_tt
-			add_ideas = aviation_cult
-			#add_ideas = SOV_stakhanovite_movement
+			
+			add_ideas = SOV_socialist_emulation_1_ns
 		}
 	}
 
@@ -4217,9 +4027,10 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
 
 		completion_reward = {
-			
-			add_ideas = SOV_socialist_emulation_1_ns
-			
+			swap_ideas = {
+				remove_idea = SOV_socialist_emulation_1_ns
+				add_idea = SOV_socialist_emulation_2_ns
+			}			
 		}
 	}
 
@@ -4239,17 +4050,14 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH FOCUS_FILTER_POLITICAL}
 
 		completion_reward = {
-			swap_ideas = {
-				remove_idea = SOV_socialist_emulation_1_ns
-				add_idea = SOV_socialist_emulation_2_ns
-			}
 
-			#if = {
-			#	limit = {
-			#		amount_research_slots < 5
-			#	}
-			#	add_research_slot = 1
-			#}
+
+			if = {
+				limit = {
+					amount_research_slots < 5
+				}
+				add_research_slot = 1
+			}
 		}
 	}
 
@@ -4257,7 +4065,7 @@ focus_tree = {
 		id = SOV_the_komsomol
 		icon = GFX_focus_generic_join_comintern
 		prerequisite = { focus = SOV_expand_the_agitprop }
-		x = -4
+		x = 2
 		y = 1
 		relative_position_id = SOV_expand_the_agitprop
 		cost = 5
@@ -4303,601 +4111,7 @@ focus_tree = {
 		}
 	}
 
-	focus = {
-		id = SOV_incorporate_local_organizations
-		icon = GFX_focus_SOV_the_supreme_soviet
-		prerequisite = { focus = SOV_expand_the_agitprop  }
-		mutually_exclusive = { focus = SOV_the_permanent_revolution  focus = SOV_collectivist_propaganda focus = SOV_positive_heroism }
-		x = 3
-		y = 1
-		relative_position_id = SOV_expand_the_agitprop
-		cost = 5
 
-		search_filters = {FOCUS_FILTER_POLITICAL}
-
-		completion_reward = {
-			kill_country_leader = yes
-			hidden_effect = {
-				subtract_from_variable = { SOV_paranoia_weekly_modifiers_amount = 1 }
-				SOV_paranoia_modifier_update_gui_tooltip = yes
-				retire_character = SOV_iosif_stalin
-				SOV_supreme_soviet = {
-					add_country_leader_role = {
-						country_leader = {
-							ideology=marxism
-							traits = {   }
-							expire="1965.1.1"
-						}
-						promote_leader = yes
-					}			
-				}
-			}
-			custom_effect_tooltip = generic_skip_one_line_tt
-			add_ideas = SOV_local_organizations_idea
-			custom_effect_tooltip = generic_skip_one_line_tt
-			add_ideas = SOV_strong_trade_unions_idea
-		}
-	}
-	
-	focus = {
-		id = SOV_back_to_the_nep
-		icon = GFX_focus_SOV_bukharinists
-		prerequisite = { focus = SOV_incorporate_local_organizations }
-		x = 1
-		y = 1
-		relative_position_id = SOV_incorporate_local_organizations
-		cost = 5
-		           mutually_exclusive = { focus = SOV_socialist_humanism }     
-		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY}
-
-		completion_reward = {
-			hidden_effect = { kill_country_leader = yes }
-			SOV_nikolay_bukharin = {
-				add_country_leader_role = {
-					country_leader = {
-					 	ideology=marxism
-					  	traits = {   }
-					 	expire="1965.1.1"
-					}
-					promote_leader = yes
-				}			
-			}
-			custom_effect_tooltip = generic_skip_one_line_tt
-			add_stability = 0.05
-			custom_effect_tooltip = generic_skip_one_line_tt
-			add_ideas = new_economic_policy
-			custom_effect_tooltip = generic_skip_one_line_tt
-			custom_effect_tooltip = unlock_propaganda_campaign_slot_tt
-			SOV_unlock_propaganda_campaign_slot_effect = yes
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-
-			# Stalingrad
-			set_province_name = {
-				id = 3529
-				name = SOV_Bukharino
-			}
-			hidden_effect = { 217 = { set_state_name = SOV_Bukharino } }
-			# Stalino / Donetsk / Yuzovka / Trotsk 
-			set_province_name = {
-				id = 6474
-				name = SOV_Donetsk
-			}
-			hidden_effect = { 227 = { set_state_name = SOV_Donetsk }}
-			# Stalinabad / Dushanbe
-			set_province_name = {
-				id = 1384
-				name = SOV_Dushanbe
-			}
-			hidden_effect = { 405 = { set_state_name = SOV_Dushanbe set_state_flag = dushanbe_flag } }
-			# Kalinin / Tver
-				set_province_name = {
-					id = 6245
-					name = SOV_Rykovgrad
-				}
-				hidden_effect = { 247 = { set_state_name = SOV_Rykovgrad } }
-			# Kirov / Vyatka
-			set_province_name = {
-				id = 6124
-				name = SOV_Vyatka
-			}
-			hidden_effect = { 400 = { set_state_name = SOV_Vyatka } }		
-
-			# Gorky / Nizhny Novgorod
-			set_province_name = {
-				id = 11375
-				name = SOV_Nizhny_Novgorod
-			}
-			hidden_effect = { 252 = { set_state_name = SOV_Nizhny_Novgorod } }	
-						
-		}
-	}
-	focus = {
-		id = SOV_a_new_theory_of_revolution
-		icon = GFX_goal_generic_war_with_comintern
-		prerequisite = { focus = SOV_back_to_the_nep }
-		x = 0
-		y = 1
-		relative_position_id = SOV_back_to_the_nep
-		cost = 5
-		                
-		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_RESEARCH}
-
-		completion_reward = {
-			add_political_power = 75
-			add_country_leader_trait = hero_of_the_peasantry
-		}
-	}
-	
-	focus = {
-		id = SOV_socialist_humanism
-		icon = GFX_focus_generic_socialist_science #GFX_focus_generic_socialist_science
-		prerequisite = { focus = SOV_incorporate_local_organizations }
-		x = -1
-		y = 1
-		relative_position_id = SOV_incorporate_local_organizations
-		cost = 5
-		mutually_exclusive = { focus = SOV_back_to_the_nep }               
-		completion_reward = {
-			add_war_support = -0.25
-			custom_effect_tooltip = generic_skip_one_line_tt
-			add_research_slot = 1
-			custom_effect_tooltip = generic_skip_one_line_tt
-				# Stalingrad
-			set_province_name = {
-				id = 3529
-				name = SOV_Volgograd
-			}
-			hidden_effect = { 217 = { set_state_name = SOV_Volgograd } }
-			# Stalino / Donetsk / Yuzovka / Trotsk 
-			set_province_name = {
-				id = 6474
-				name = SOV_Donetsk
-			}
-			hidden_effect = { 227 = { set_state_name = SOV_Donetsk } }
-			# Stalinabad / Dushanbe
-			set_province_name = {
-				id = 1384 
-				name = SOV_Dushanbe
-			}
-			hidden_effect = { 405 = { set_state_name = SOV_Dushanbe set_state_flag = dushanbe_flag } }
-			# Kirov / Vyatka
-			set_province_name = {
-				id = 6124
-				name = SOV_Vyatka
-			}
-			hidden_effect = { 400 = { set_state_name = SOV_Vyatka } }
-
-			# Gorky / Nizhny Novgorod
-			set_province_name = {
-				id = 11375
-				name = SOV_Nizhny_Novgorod
-			}
-			hidden_effect = { 252 = { set_state_name = SOV_Nizhny_Novgorod } }
-
-
-			set_province_name = {
-				id = 12583
-				name = SOV_Bishkek
-			}
-	
-		}
-	}
-	
-
-	focus = {
-		id = SOV_the_peoples_revolution
-		icon = GFX_focus_por_workers_of_iberia
-		prerequisite = { focus = SOV_socialist_humanism }
-		x = 0
-		y = 1
-		relative_position_id = SOV_socialist_humanism
-		cost = 5
-		                
-		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_MANPOWER}
-
-		completion_reward = {
-			remove_ideas = SOV_politicized_military
-			custom_effect_tooltip = generic_skip_one_line_tt
-			add_ideas = SOV_the_peoples_revolution_idea
-		}
-	}
-
-	focus = {
-		id = SOV_the_permanent_revolution
-		icon = GFX_focus_fra_loyalty_trotzky
-		prerequisite = { focus = SOV_expand_the_agitprop }
-		x = 6
-		y = 1
-		relative_position_id = SOV_expand_the_agitprop
-		mutually_exclusive = { focus = SOV_incorporate_local_organizations  focus = SOV_positive_heroism focus = SOV_collectivist_propaganda }
-		cost = 5
-		available = { 
-			NOT = { 
-				has_completed_focus = SOV_socialism_in_one_country 
-			}
-
-			NOT = { 
-				has_completed_focus = SOV_the_anti_soviet_trotskyist_center 
-			}
-			
-			#has_completed_focus = SOV_the_workers_dictatorship
-			
-			date < 1938.1.1
-			
-			has_country_flag = {
-				flag = SOV_first_moscow_trial_flag
-				days > 280
-			}
-			
-			custom_trigger_tooltip = {
-				tooltip = SOV_last_purge_focus_days_tt
-				has_country_flag = {
-					flag = SOV_first_moscow_trial_flag
-					days > 280
-				}
-			}
-		}
-      	cancel_if_invalid = no
-	  	continue_if_invalid = yes
-		completion_reward = {
-
-			add_stability = -0.5
-			custom_effect_tooltip = generic_skip_one_line_tt
-			kill_country_leader = yes 
-			custom_effect_tooltip = generic_skip_one_line_tt
-			remove_ideas = trotskyite_plot_nsb
-			custom_effect_tooltip = generic_skip_one_line_tt
-			hidden_effect = {
-				retire_character = SOV_iosif_stalin
-				SOV_lev_trotsky = {
-					clr_character_flag  = SOV_exiled_flag
-					add_country_leader_role = {
-						country_leader = {
-							ideology=marxism
-							traits = {   }
-							expire="1965.1.1"
-						}
-						promote_leader = yes
-					}			
-					add_country_leader_trait =  triumphant_revolutionary
-				}
-			}
-			custom_effect_tooltip = generic_skip_one_line_tt
-			SOV_remove_paranoia_effect = yes
-			custom_effect_tooltip = permanent_revolution_tt
-			custom_effect_tooltip = generic_skip_one_line_tt
-			add_ideas = disorganized_military_industry_1
-			custom_effect_tooltip = generic_skip_one_line_tt
-			set_province_name = {
-				id = 3529
-				name = SOV_Trotskygrad
-			}
-			hidden_effect = { 217 = { set_state_name = SOV_Trotskygrad } }
-			
-			# Stalino / Donetsk / Yuzovka / Trotsk 
-			set_province_name = {
-				id = 6474
-				name = SOV_Trotsk
-			}
-			hidden_effect = { 227 = { set_state_name = SOV_Trotsk } }
-			# Stalinabad / Dushanbe
-			set_province_name = {
-				id = 1384
-				name = SOV_Smirnovabad
-			}
-			hidden_effect = { 405 = { set_state_name = SOV_Smirnovabad } }
-					set_province_name = {
-						id = 6245
-						name = SOV_zinovyev
-					}
-					hidden_effect = { 247 = { set_state_name = SOV_zinovyev } }
-			# Kirov / Vyatka
-			set_province_name = {
-				id = 6124
-				name = SOV_Vyatka
-			}
-			hidden_effect = { 400 = { set_state_name = SOV_Vyatka } }
-
-			# Gorky / Nizhny Novgorod
-			set_province_name = {
-				id = 11375
-				name = SOV_Nizhny_Novgorod
-			}
-			hidden_effect = { 252 = { set_state_name = SOV_Nizhny_Novgorod } }
-			}
-	}
-
-	focus = {
-		id = SOV_the_builder_of_the_red_army
-		icon = GFX_focus_SOV_builder_of_the_red_army
-		prerequisite = { focus = SOV_the_permanent_revolution }
-		x = 0
-		y = 1
-		relative_position_id = SOV_the_permanent_revolution
-		cost = 5
-
-		available = {
-			SOV_lev_trotsky = {	is_country_leader = yes }
-		}
-		
-		completion_reward = {
-			add_timed_idea ={ idea=  trotsky_military_industry  days = 1460 } 
-			custom_effect_tooltip = generic_skip_one_line_tt
-			random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = arms_factory
-						size > 1
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
-				}
-			}
-			custom_effect_tooltip = generic_skip_one_line_tt
-			army_experience = 50
-			custom_effect_tooltip = generic_skip_one_line_tt
-			add_field_marshal_role = {
-				character = SOV_lev_trotsky
-				traits = { organizer inspirational_leader organisational_leader logistics_wizard thorough_planner  }
-				skill=8
-				attack_skill=8
-				defense_skill=5
-				planning_skill=5
-				logistics_skill=7
-			}
-		}
-	}
-	focus = {
-		id = SOV_strengthen_heavy_industry 
-		icon = GFX_goal_generic_soviet_construction
-		prerequisite = { focus = SOV_the_builder_of_the_red_army  }
-		x = 0
-		y = 1
-		relative_position_id = SOV_the_builder_of_the_red_army
-		
-		cost = 5
-
-		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
-
-		completion_reward = {
-			add_tech_bonus = {
-				name = SOV_strengthen_heavy_industry
-				ahead_reduction = 1
-				uses = 2
-				category = industry
-			}
-			custom_effect_tooltip = generic_skip_one_line_tt
-			random_owned_controlled_state = {
-				prioritize = { 252 254 }
-				limit = {
-					free_building_slots = {
-						building = arms_factory
-						size > 1
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 3
-				add_building_construction = {
-					type = synthetic_refinery
-					level = 1
-					instant_build = yes
-				}			
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
-				}
-			}
-			random_owned_controlled_state = {
-				prioritize = { 252 254 }
-				limit = {
-					free_building_slots = {
-						building = arms_factory
-						size > 1
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 3
-				add_building_construction = {
-					type = synthetic_refinery
-					level = 1
-					instant_build = yes
-				}			
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
-				}
-			}
-			random_owned_controlled_state = {
-				prioritize = { 252 254 }
-				limit = {
-					free_building_slots = {
-						building = arms_factory
-						size > 1
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 3
-				add_building_construction = {
-					type = synthetic_refinery
-					level = 1
-					instant_build = yes
-				}			
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
-				}
-			}
-			random_owned_controlled_state = {
-				prioritize = { 256 239 260 }
-				limit = {
-					free_building_slots = {
-						building = industrial_complex 
-						size > 1
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 3
-				add_building_construction = {
-					type = synthetic_refinery
-					level = 1
-					instant_build = yes
-				}			
-				add_building_construction = {
-					type = industrial_complex 
-					level = 2
-					instant_build = yes
-				}
-			}
-			random_owned_controlled_state = {
-				prioritize = { 256 239 260 }
-				limit = {
-					free_building_slots = {
-						building = industrial_complex 
-						size > 1
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 3
-				add_building_construction = {
-					type = synthetic_refinery
-					level = 1
-					instant_build = yes
-				}			
-				add_building_construction = {
-					type = industrial_complex 
-					level = 2
-					instant_build = yes
-				}
-			}
-			random_owned_controlled_state = {
-				prioritize = { 195 214 213 408 137 }
-				limit = {
-					free_building_slots = {
-						building = dockyard  
-						size > 1
-						include_locked = yes
-					}
-					is_coastal = yes 
-				}
-				add_extra_state_shared_building_slots = 3
-				add_building_construction = {
-					type = synthetic_refinery
-					level = 1
-					instant_build = yes
-				}			
-				add_building_construction = {
-					type = dockyard  
-					level = 2
-					instant_build = yes 
-				}
-			}
-		}
-	}
-	
-	focus = {
-		id = SOV_release_innocents
-		icon = GFX_focus_mex_arrest_general_cedillo
-		prerequisite = { focus = SOV_a_new_theory_of_revolution focus = SOV_the_peoples_revolution  focus = SOV_strengthen_heavy_industry }
-		x = -2
-		y = 1
-		relative_position_id = SOV_strengthen_heavy_industry
-		cost = 5
-
-		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_PROPAGANDA}
-
-		completion_reward = {
-			if = { 
-				limit = { 
-					has_completed_focus = SOV_the_permanent_revolution 
-				}
-				custom_effect_tooltip = available_political_advisor
-				show_ideas_tooltip = SOV_ivar_smilga
-				SOV_ivar_smilga = {
-					clr_character_flag = SOV_imprisoned_flag
-					set_portraits = {
-						army = {
-							small = "GFX_idea_SOV_ivar_smilga"
-						}
-					}
-				}
-				custom_effect_tooltip = available_political_advisor
-				show_ideas_tooltip = SOV_karl_radek
-				custom_effect_tooltip = available_political_advisor
-				show_ideas_tooltip = SOV_yevgeny_preobrazhensky
-			}
-			else_if = {
-				limit = {  
-					has_completed_focus = SOV_incorporate_local_organizations
-				}
-				if = {
-					limit = { 
-						has_completed_focus = SOV_back_to_the_nep 
-					}
-					custom_effect_tooltip = available_political_advisor
-					show_ideas_tooltip  = SOV_nikolay_bukharin
-					custom_effect_tooltip = available_political_advisor
-					show_ideas_tooltip  = SOV_aleksey_rykov
-				}
-				else_if = { 
-					limit = { 
-						has_completed_focus = SOV_socialist_humanism 
-					}
-					custom_effect_tooltip = available_political_advisor
-					show_ideas_tooltip  = SOV_mikhail_tomsky
-					custom_effect_tooltip = available_political_advisor
-					show_ideas_tooltip  = SOV_martemyan_ryutin
-					SOV_martemyan_ryutin=  {
-						set_portraits = {
-							army = {
-								small = "GFX_idea_SOV_martemyan_ryutin"
-							}
-						}
-						clr_character_flag = SOV_imprisoned_flag
-					}
-				}
-				else ={ 
-					custom_effect_tooltip = pick_soviet2_tt
-					custom_effect_tooltip = available_political_advisor
-					show_ideas_tooltip  = SOV_nikolay_bukharin
-					custom_effect_tooltip = available_political_advisor
-					show_ideas_tooltip  = SOV_aleksey_rykov
-					custom_effect_tooltip = pick_soviet_tt
-					custom_effect_tooltip = available_political_advisor
-					show_ideas_tooltip  = SOV_mikhail_tomsky
-					custom_effect_tooltip = available_political_advisor
-					show_ideas_tooltip  = SOV_martemyan_ryutin
-				}
-			}
-			else = {
-				custom_effect_tooltip = pick_trotsky_tt
-				custom_effect_tooltip = available_political_advisor
-				show_ideas_tooltip = SOV_ivar_smilga
-				custom_effect_tooltip = available_political_advisor
-				show_ideas_tooltip = SOV_karl_radek
-				custom_effect_tooltip = available_political_advisor
-				show_ideas_tooltip = SOV_yevgeny_preobrazhensky
-				custom_effect_tooltip = pick_soviet2_tt
-				custom_effect_tooltip = available_political_advisor
-				show_ideas_tooltip  = SOV_nikolay_bukharin
-				custom_effect_tooltip = available_political_advisor
-				show_ideas_tooltip  = SOV_aleksey_rykov
-				custom_effect_tooltip = pick_soviet_tt
-				custom_effect_tooltip = available_political_advisor
-				show_ideas_tooltip  = SOV_mikhail_tomsky
-				custom_effect_tooltip = available_political_advisor
-				show_ideas_tooltip  = SOV_martemyan_ryutin
-			}
-		}	
-	}
 
 ########  #######  ########  ######## ####  ######   ##    ##     ######   #######  ##     ## ##     ## #### ######## 
 ##       ##     ## ##     ## ##        ##  ##    ##  ###   ##    ##    ## ##     ## ###   ### ###   ###  ##  ##       
@@ -4913,7 +4127,7 @@ focus_tree = {
 		id = SOV_the_comintern
 		icon = GFX_goal_support_communism
 		prerequisite = { focus = SOV_the_path_of_marxism_leninism }
-		x = 8
+		x = 4
 		y = 0
 		relative_position_id = SOV_addressing_internal_affairs
 		cost = 5

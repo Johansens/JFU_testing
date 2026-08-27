@@ -1125,7 +1125,8 @@ ideas = {
 			}
 
 			modifier = {
-				air_ace_bonuses_factor = 0.10
+				military_leader_cost_factor = -0.2
+				promote_cost_factor	 = -0.15
 				army_org_factor = 0.05
 			}
 		}
@@ -1193,8 +1194,8 @@ ideas = {
 
 			modifier = {
 				#production_factory_max_efficiency_factor = 0.05
-				research_speed_factor = 0.05
-				consumer_goods_factor = -0.15
+				research_speed_factor = 0.10
+				consumer_goods_factor = -0.10
 				production_speed_buildings_factor = 0.1
 			}
 		}
@@ -2604,6 +2605,29 @@ ideas = {
 				max_surrender_limit_offset = 0.15
 			}
 		}
+
+		SOV_strong_trade_unions_idea = {
+
+			picture = FRA_matignon_agreements
+			removal_cost = -1
+
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+
+			}
+			available = {
+
+			}
+
+			modifier = {
+				political_power_factor = -0.05
+				production_factory_efficiency_gain_factor = 0.05
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.05
+			}
+		}
 		SOV_the_peoples_revolution_idea = {
 
 			picture = generic_volunteer_expedition_bonus
@@ -2620,8 +2644,8 @@ ideas = {
 			}
 
 			modifier = {
-				max_command_power = 50
-				research_speed_factor = 0.25
+				max_command_power = 20
+				recruitable_population = 0.02
 			}
 		}
 
@@ -2663,6 +2687,25 @@ ideas = {
 
 			modifier = {
 				consumer_goods_factor = -0.15
+			}
+		}
+		SOV_local_organizations_idea = {
+
+			picture = generic_local_self_management
+			removal_cost = -1
+
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+
+			}
+			available = {
+
+			}
+
+			modifier = {
+				political_advisor_cost_factor = -0.75
 			}
 		}
 		SOV_enemies_of_the_people_idea = {
@@ -2961,85 +3004,7 @@ ideas = {
 				consumer_goods_factor = -0.10
 			}
 		}
-
-		#horst stuff
-
-		SOV_local_organizations_idea = {
-
-			picture = generic_local_self_management
-			removal_cost = -1
-
-			allowed = {
-				always = no
-			}
-			modifier = {
-				political_advisor_cost_factor = -0.75
-			}
-		}
-
-		SOV_strong_trade_unions_idea = {
-
-			picture = FRA_matignon_agreements
-			removal_cost = -1
-
-			allowed = {
-				always = no
-			}
-			allowed_civil_war = {
-
-			}
-			available = {
-
-			}
-
-			modifier = {
-				production_factory_start_efficiency_factor = 0.1
-				line_change_production_efficiency_factor = 0.05
-			}
-		}
-
-		disorganized_military_industry_1 = {
-			allowed = {	always = no	}
-
-			allowed_civil_war = { always = yes }
-
-			picture = jap_duplicate_research
-
-			removal_cost = -1
-
-			research_bonus = {
-				armor = -0.9
-				artillery = -0.9
-				motorized_equipment = -0.9
-				infantry_weapons = -0.9
-				air_equipment = -0.9
-			}
-			modifier = { license_production_speed = -1.25 }
-		}
-
-		trotsky_military_industry = {
-			allowed = {	always = no	}
-
-			allowed_civil_war = { always = yes }
-
-			picture = ger_the_great_red_menace
-
-			removal_cost = -1
-			
-			modifier = { 
-				production_speed_arms_factory_factor = 0.30
-				production_factory_efficiency_gain_factor = 0.35
-			}
-		}
-		aviation_cult = {
-			picture = NORDIC_airforce_communist 
-			modifier = { 
-				air_range_factor = 0.05 
-				air_agility_factor = 0.05 
-			}
-		}
 	}
-
 
 
 
