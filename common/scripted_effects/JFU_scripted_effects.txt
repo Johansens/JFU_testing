@@ -460,7 +460,7 @@ JFU_game_rules_effect = {
 }
 JFU_other_stuff_on_start_up_effect = {
 	if = { limit = { ai_country_allies = yes } country_lock_all_division_template = yes }
-	every_country = { limit = { OR = { axis = yes allies = yes } } add_ideas = peace_training set_rule = { can_be_spymaster = no } army_experience = 10 navy_experience = 10 air_experience = 10 }
+	every_country = { limit = { OR = { axis = yes allies = yes } } add_ideas = peace_training army_experience = 10 navy_experience = 10 air_experience = 10 }
 	every_country = { limit = { axis = yes } anti_cross_faction_trade_allies = yes }
 	every_country = { limit = { allies = yes } anti_cross_faction_trade_axis = yes }
 	every_country = { limit = { OR = { axis = yes allies = yes } }  add_timed_idea = { idea = qol_start_eff days = 1 } } #adds starting eff
