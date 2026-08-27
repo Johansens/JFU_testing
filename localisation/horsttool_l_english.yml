@@ -106,6 +106,8 @@
  SOV_arctic_lend_lease:0 "Arctic lend lease"
  SOV_persian_lend_lease:0 "Persian lend lease"
  SOV_Bessarabia:0 "Demand Besserabia"
+ SOV_release_innocents:0 "Release the Innocent"
+ SOV_release_innocents_desc:0 "Too many of our comrades have been exiled or imprisoned by Stalin. We must release them and welcome them back to the motherland."
 
  ALLIES_continue_the_fight:0 "Continue the Fight"
  ALLIES_continue_the_fight_desc:0 "We shall fight on the beaches, we shall fight on the landing grounds, we shall fight in the fields and in the streets, we shall fight in the hills; we shall never surrender!"
@@ -992,7 +994,10 @@
  SOV_propaganda_campaigns_taken_25_or_greater_tt:0 "Has carried out at least §Y25§! Propaganda Campaigns. (Currently $SOV_propaganda_campaigns_taken_current_25$ propaganda campaigns have been taken)"
  SOV_change_red_army_modifier_tt: "Modify §YThe Red Army§! by"
  SOV_change_five_year_plan_tt: "Modify §YFive Year Plan§! by"
-
+ pick_trotsky_tt:0 "If we complete the focus §HThe Permanent Revolution§! we will release the following political advisors:"
+ pick_soviet_tt:0 "\nIf we complete the focus §HEmpower the Soviets§! and §HSocialist Humanism§! we will release the following political advisors:"
+ pick_soviet2_tt:0 "\nIf we complete the focus §HEmpower the Soviets§! and §HBack to the NEP§! we will release the following political advisors:"
+ permanent_revolution_tt:0 "\n§RWe will break off diplomatic relations with all non-communist states, preventing us from licensing foreign technology and receiving Allied lend-lease!§!"
 
  UK_imperial_conference_tt:0 " Add §YImperial Conference Economy Agreements§!, which grants (Factory Output §G+15.00%§!, Dockyard Output §G+15.00%§!).\n Add §YImperial Conference Economy Agreements§! which grants (§YCivilian Factory§! construction Speed §G+15.00%§!, §YMilitary Factory§! construction speed §G+15.00%§!, §!Dockyard§! construction Speed §G+15.00%§!)\n Gain Base War Support §G+10.00%§!\n(@AST§YAustralia, @CANDominion of Canada, @RAJBritish Raj,\n @NZLNew Zealand and @SAFSouth Africa§!):\n    Add §YImperial Conference Defense Agreements§! which grants (Factory Output §G+10.00%§!, Dockyard Output §G+10.00%§!).\n    Add §YImperial Conference Economy Agreements§! which grants (§YCivilian Factory§! construction Speed §G+10.00%§!, §YMilitary Factory§! construction speed §G+10.00%§!, §!Dockyard§! construction Speed §G+10.00%§!)\n   Gain Base War Support §G+10.00%§! "
  ENG_fortify_the_empire_big_tt:0 "Modify §YFortify the Empire§! by\n §YLand Fort§! construction speed §G+10.00%§!\n §YCoastal Fort§! construction speed §G+10.00%§!"
@@ -1277,6 +1282,10 @@
  soviet_winter_offensive2:0 "1942 Winter offensive"
  soviet_winter_offensive3:0 "1943 Winter offensive"
  JFU_soviet_synthetics:0 "Emergency Rubber Programm"
+ modifier_production_cost_industrial_complex_factor:0 "§YCivilian Factory§! construction cost"
+ modifier_production_cost_industrial_complex_factor_desc:0 "Modifies the cost of Civilian Factory construction."
+ disorganized_military_industry_1:0 "Disorganized Military Industry"
+ trotsky_military_industry:0 "Builder of the Red Army"
 
  ENG_ireland_rebalance:0 "Ireland Rebalance"
  ENG_operation_compass:0 "Operation Compass"
