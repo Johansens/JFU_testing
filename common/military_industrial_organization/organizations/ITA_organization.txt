@@ -83,7 +83,7 @@ ITA_crda_organization = {
 		available = {
 			FROM = {
 				has_completed_focus = ITA_new_industrialization_program
-				has_completed_focus = ITA_strengthen_northern_industry
+				has_completed_focus = ITA_modernize_ansaldo_facilities
 			}
 		}
 
@@ -123,7 +123,7 @@ ITA_cantiere_oto_organization = {
 		available = {
 			FROM = {
 				has_completed_focus = ITA_new_industrialization_program
-				has_completed_focus = ITA_strengthen_northern_industry
+				has_completed_focus = ITA_modernize_the_mezzogiorno
 			}
 		}
 
@@ -621,7 +621,7 @@ ITA_crda_cant_organization = {
 		available = {
 			FROM = {
 				has_completed_focus = ITA_new_industrialization_program
-				has_completed_focus = ITA_strengthen_northern_industry
+				has_completed_focus = ITA_modernize_the_mezzogiorno
 			}
 		}
 

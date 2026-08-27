@@ -1917,7 +1917,10 @@
 
  france.1000.t:0 "Medium Tank Spawn in decision"
  france.1000.d:0 "We have capitulated. Now it's our time to decide in what way we want to reclaim our rule & fight off the germans."
+
+ ITA_modernize_the_mezzogiorno_buildings_tt:0 "Militarty Industrial Organizations for dockyards get §G+10%§! §Ynaval production output!§! \n "
  
+ ITA_strengthen_northern_industry_buildings_tt:0 "Militarty Industrial Organizations for military factories get §G+10%§! §Yproduction output!§! \n "
 
 
 

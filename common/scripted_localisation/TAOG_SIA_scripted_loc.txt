@@ -278,6 +278,7 @@ defined_text = {
 		trigger = {
 			OR = {
 				has_idea = idea_SIA_diverting_army_funds_to_navy
+				#NOT = { has_completed_focus = SIA_direct_army_fundings_towards_the_navy }
 			}
 		}
 		localization_key = SIA_divert_army_funds_to_navy_toggle_undo
@@ -293,6 +294,7 @@ defined_text = {
 		trigger = {
 			OR = {
 				has_idea = idea_SIA_diverting_army_funds_to_navy
+				#NOT = { has_completed_focus = SIA_direct_army_fundings_towards_the_navy }
 			}
 		}
 		localization_key = SIA_divert_army_funds_to_navy_toggle_undo_tt

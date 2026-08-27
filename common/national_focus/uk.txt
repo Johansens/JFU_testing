@@ -1429,6 +1429,14 @@ focus = {
 					instant_build = yes
 				}								
 			}
+			883 = {
+				set_building_level = {
+					type = naval_base
+					level = 10
+					province = 12725
+					instant_build = yes
+				}
+			}
 			hidden_effect = {
 				IF = {
 					limit = { 

@@ -51,8 +51,8 @@ sp_naval_cruiser_submarine = {
 
 	resource_cost = {
 		resources = { 
-			steel = 8
-		 }
+			#steel = 8
+		}
 	}
 	
 	project_output = {
@@ -215,8 +215,8 @@ sp_naval_fleet_submarine = {
 	}
 	resource_cost = {
 		resources = { 
-			steel = 12
-			chromium = 4
+			#steel = 12
+			#chromium = 4
 		}
 	}
 
@@ -395,9 +395,9 @@ sp_naval_nuclear_submarine = {
 
 	resource_cost = {
 		resources = { 
-			steel = 20
-			chromium = 8
-			tungsten = 8
+			#steel = 20
+			#chromium = 8
+			#tungsten = 8
 		}
 	}
 
@@ -563,9 +563,9 @@ sp_naval_rocket_launching_submarine = {
 	
 	resource_cost = {
 		resources = { 
-			steel = 12
-			chromium = 4
-			tungsten = 12
+			#steel = 12
+			#chromium = 4
+			#tungsten = 12
 		}
 	}	
 	complexity = sp_complexity.medium 
@@ -759,8 +759,8 @@ sp_naval_nuclear_missile_submarine = {
 	
 	resource_cost = {
 		resources = { 
-			steel = 16
-			chromium = 16
+			#steel = 16
+			#chromium = 16
 		}
 	}	
 	complexity = sp_complexity.large 
@@ -937,9 +937,9 @@ sp_naval_nuclear_torpedo = {
 	
 	resource_cost = {
 		resources = { 
-			steel = 8
-			chromium = 12
-			tungsten = 12
+			#steel = 8
+			#chromium = 12
+			#tungsten = 12
 		}
 	}
 	
@@ -1094,7 +1094,7 @@ sp_naval_midget_submarine = {
 
 	resource_cost = {
 		resources = {
-			steel = 6
+			#steel = 6
 		}
 	}
 
@@ -1326,8 +1326,8 @@ sp_naval_aip_engine = {
 
 	resource_cost = {
 		resources = { 
-			steel = 8
-			chromium = 8
+			#steel = 8
+			#chromium = 8
 		}
 	}
 
@@ -1548,8 +1548,8 @@ sp_naval_anechoic_tiles = {
 
 	resource_cost = {
 		resources = {
-			rubber = 12
-			steel = 8
+			#rubber = 12
+			#steel = 8
 		}
 	}
 
@@ -1712,8 +1712,8 @@ specialization = specialization_naval
 
 	resource_cost = {
 		resources = { 
-			steel = 12
-			chromium = 6
+			#steel = 12
+			#chromium = 6
 		}
 	}
 
@@ -1880,9 +1880,9 @@ sp_naval_torpedo_cruiser = {
 	
 	resource_cost = {
 		resources = { 
-			steel = 8
-			tungsten = 2
-			chromium = 2
+			#steel = 8
+			#tungsten = 2
+			#chromium = 2
 		}
 	}
 
@@ -2095,10 +2095,10 @@ sp_naval_super_heavy_battleship = {
 
 	resource_cost = {
 		resources = { 
-			steel = 12
-			chromium = 6
-			tungsten = 6
-		 }
+			#steel = 12
+			#chromium = 6
+			#tungsten = 6
+		}
 	}
 
 	breakthrough_cost = {
@@ -2446,10 +2446,10 @@ sp_naval_modern_battleship = {
 	
 	resource_cost = {
 		resources = { 
-			steel = 24
-			chromium = 18
-			tungsten = 12
-		 }
+			#steel = 24
+			#chromium = 18
+			#tungsten = 12
+		}
 	}
 
 	breakthrough_cost = {
@@ -2790,8 +2790,8 @@ sp_naval_modern_carrier = {
 
 	resource_cost = {
 		resources = { 
-			steel = 24
-			chromium = 16
+			#steel = 24
+			#chromium = 16
 		}
 	}
 
@@ -3120,7 +3120,7 @@ sp_naval_ice_carrier = {
 
 	resource_cost = {
 		resources = { 
-			steel = 32
+			#steel = 32
 		}
 	}	
 
@@ -3320,7 +3320,7 @@ sp_naval_underway_replenishment = {
 
 	resource_cost = {
 		resources = { 
-			steel = 8
+			#steel = 8
 		}
 	}
 
@@ -3453,9 +3453,9 @@ sp_naval_proximity_fuze = {
 	
 	resource_cost = {
 		resources = { 
-			steel = 12
-			chromium = 4
-			tungsten = 12
+			#steel = 12
+			#chromium = 4
+			#tungsten = 12
 		}
 	}
 
@@ -3580,7 +3580,7 @@ sp_naval_support_ships = {
 
 	resource_cost = {
 		resources = { 
-			steel = 6
+			#steel = 6
 		}
 	}
 
@@ -3779,7 +3779,7 @@ specialization = specialization_naval
 
 	resource_cost = {
 		resources = { 
-			steel = 9
+			#steel = 9
 		}
 	}
 

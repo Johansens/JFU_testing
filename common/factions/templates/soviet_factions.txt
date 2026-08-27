@@ -1,7 +1,7 @@
 faction_template_sov = {
 	name = Comintern
 	icon = GFX_faction_logo_comintern
-	manifest = faction_manifest_spread_of_communism
+	manifest = faction_manifest_security_through_expansion
 
 
 	goals = {
@@ -16,7 +16,11 @@ faction_template_sov = {
 	}
 
 	default_rules = {
-		joining_rule_puppets_only
+		joining_rule_communist_only
+		change_leader_rule_manpower
+		change_leader_rule_industry
+		war_declaration_rule_major_only
+
 		#war_declaration_generated_tension_25
 		#war_declaration_threat_75
 		#change_leader_rule_industry
