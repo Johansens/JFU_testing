@@ -2258,7 +2258,7 @@ ideas = {
 			}
 
 			available = {
-				NOT = { has_completed_focus = SIA_focus_on_commercial_civilian_ships }
+				#NOT = { has_completed_focus = SIA_focus_on_commercial_civilian_ships }
 			}
 
 			research_bonus = {

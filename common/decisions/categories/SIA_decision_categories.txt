@@ -43,7 +43,7 @@ SIA_army_navy_reform_cat = {
 	priority = 50
 	visible = {
 		OR = {
-			has_completed_focus = SIA_royal_thai_navy
+			#has_completed_focus = SIA_royal_thai_navy
 			has_completed_focus = SIA_the_army_of_siam
 			has_completed_focus = SIA_reluctant_submission
 		}
