@@ -21,6 +21,12 @@ set_party_name = {
 #COUNTRY LEADERS
 recruit_character = SOV_iosif_stalin
 
+#horst stuff
+recruit_character = SOV_supreme_soviet
+recruit_character = SOV_nikolay_bukharin
+recruit_character = SOV_lev_trotsky
+
+
 #POLITICAL ADVISORS
 recruit_character = SOV_mikhail_kalinin
 recruit_character = SOV_nikita_khrushchyov
@@ -108,6 +114,19 @@ recruit_character = SOV_boris_stechkin
 recruit_character = SOV_arkady_nazarov
 recruit_character = SOV_vladimir_kotelnikov
 
+#horst stuff
+
+recruit_character = SOV_ivar_smilga
+recruit_character = SOV_yevgeny_preobrazhensky
+recruit_character = SOV_karl_radek
+recruit_character = SOV_aleksey_rykov
+recruit_character = SOV_mikhail_tomsky
+recruit_character = SOV_martemyan_ryutin
+recruit_character = SOV_grigory_zinovyev
+recruit_character = SOV_ivan_smirnov
+recruit_character = SOV_lev_kamenev
+recruit_character = SOV_grigory_sokolnikov
+recruit_character = SOV_aleksandr_shlyapnikov
 
 #Initialize character flags Part I (aka who's safe)
 SOV_mikhail_kalinin = {
@@ -161,7 +180,9 @@ SOV_leonid_govorov = { #Priests are not political enemies at this point
 SOV_semyon_timoshenko = { #Priests are not political enemies at this point
 	set_character_flag = SOV_safe_from_purge_flag
 }
-
+SOV_lev_trotsky = { #Not in the country
+	set_character_flag = SOV_exiled_flag
+}
 
 ### PROPAGANDA ###
 set_variable = { SOV_new_propaganda_campaign = 0 } #Used to pick a poster slot
