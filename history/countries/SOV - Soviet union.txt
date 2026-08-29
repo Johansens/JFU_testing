@@ -671,6 +671,7 @@ add_ideas = {
 	SOV_politicized_military
 
 	SOV_genrikh_yagoda #NKVD Chief (political advisor)
+	SOV_military_reorganization_ns
 }
 
 
