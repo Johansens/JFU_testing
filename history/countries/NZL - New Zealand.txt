@@ -102,6 +102,10 @@ recruit_character = NZL_john_a_lee
 recruit_character = NZL_bernard_ashwin
 recruit_character = NZL_alan_vasey
 recruit_character = NZL_leslie_morshead
+
+recruit_character = NZL_brandon_tully
+recruit_character = NZL_eddard_tully
+
 if = {
 	limit = { has_dlc = "Together for Victory" }
 

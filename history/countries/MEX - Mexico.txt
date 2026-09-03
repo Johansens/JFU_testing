@@ -116,6 +116,9 @@ recruit_character = MEX_jesus_degollado_guizar
 recruit_character = MEX_valentin_campa
 recruit_character = MEX_luis_maria_martinez
 
+recruit_character = MEX_theon_sand
+recruit_character = MEX_balon_carlo
+
 
 
 set_convoys = 45

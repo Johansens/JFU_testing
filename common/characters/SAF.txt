@@ -232,7 +232,7 @@ characters={
 		name=SAF_robert_palmer
 		portraits={
 			army={
-				small="GFX_idea_generic_army_europe_1"
+				small="GFX_idea_generic_navy_europe_2"
 			}
 		}
 		advisor={
@@ -244,6 +244,102 @@ characters={
 			}
 			traits = {
 				army_regrouping_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}		
+	}
+
+	SAF_jon_sand={
+		name="Jon Sand"
+		portraits={
+			army={
+				small="GFX_idea_generic_navy_europe_1"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = SAF_jon_sand
+			ledger = army
+			allowed = {
+				original_tag = SAF
+			}
+			traits = {
+				army_CombinedArms_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}		
+	}
+
+	SAF_dickon_tarly={
+		name="Dickon Tarly"
+		portraits={
+			army={
+				small="GFX_idea_generic_army_europe_3"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = SAF_dickon_tarly
+			ledger = army
+			allowed = {
+				original_tag = SAF
+			}
+			traits = {
+				army_infantry_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}		
+	}
+
+	SAF_ser_randyll_tarly={
+		name="Ser Randyll Tarly"
+		portraits={
+			army={
+				small="GFX_idea_generic_army_europe_2"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = SAF_ser_randyll_tarly
+			ledger = army
+			allowed = {
+				original_tag = SAF
+			}
+			traits = {
+				army_commando_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}		
+	}
+
+	SAF_ormund_umber={
+		name="Ormund Umber"
+		portraits={
+			army={
+				small="GFX_idea_generic_army_europe_1"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = SAF_ormund_umber
+			ledger = army
+			allowed = {
+				original_tag = SAF
+			}
+			traits = {
+				army_artillery_2
 			}
 			cost = 100
 			ai_will_do = {

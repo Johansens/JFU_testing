@@ -143,7 +143,7 @@ characters={
 				original_tag = ENG
 			}
 			traits = {
-				army_logistics_2
+				army_artillery_2
 			}
 			cost = 100
 			ai_will_do = {
