@@ -250,6 +250,7 @@ technologies = {
 			light_tank_aa_chassis_2
 		}
 		enable_equipment_modules = {
+			tank_radio_1
 			tank_high_velocity_cannon
 			tank_medium_cannon
 			tank_heavy_cannon
@@ -377,6 +378,7 @@ technologies = {
 			light_tank_aa_chassis_3
 		}
 		enable_equipment_modules = {
+			tank_radio_2
 			auto_loader
 			stabilizer
 			tank_anti_air_cannon_2
@@ -486,6 +488,7 @@ technologies = {
 			medium_tank_aa_chassis_1
 		}
 		enable_equipment_modules = {
+			tank_radio_1
 			tank_high_velocity_cannon
 			tank_medium_cannon
 			tank_heavy_cannon
@@ -663,6 +666,7 @@ technologies = {
 			medium_tank_aa_chassis_2
 		}
 		enable_equipment_modules = {
+			tank_radio_2
 			stabilizer
 			tank_anti_air_cannon_2
 			tank_medium_howitzer_2
@@ -967,6 +971,7 @@ technologies = {
 			medium_tank_aa_chassis_3
 		}
 		enable_equipment_modules = {
+			tank_radio_3
 			tank_anti_air_cannon_3
 			tank_high_velocity_cannon_3
 			tank_heavy_cannon_3
@@ -1146,6 +1151,7 @@ technologies = {
 			heavy_tank_aa_chassis_1
 		}
 		enable_equipment_modules = {
+			tank_radio_1
 			tank_high_velocity_cannon
 			tank_medium_cannon
 			tank_heavy_cannon
@@ -1245,6 +1251,7 @@ technologies = {
 			heavy_tank_aa_chassis_2
 		}
 		enable_equipment_modules = {
+			tank_radio_2
 			stabilizer
 			tank_anti_air_cannon_2
 			tank_medium_howitzer_2
@@ -1334,6 +1341,7 @@ technologies = {
 			heavy_tank_aa_chassis_3
 		}
 		enable_equipment_modules = {
+			tank_radio_3
 			tank_anti_air_cannon_3
 			tank_high_velocity_cannon_3
 			tank_heavy_cannon_3

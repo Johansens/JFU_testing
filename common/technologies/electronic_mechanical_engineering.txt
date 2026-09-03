@@ -94,7 +94,7 @@ technologies = {
 		}
 		
 		enable_equipment_modules = { 
-			tank_radio_1
+			#tank_radio_1
 			radio_navigation_1
 			#lc_radio_1 #Module for Land Cruiser
 		}
@@ -143,7 +143,7 @@ technologies = {
 		
 		enable_equipment_modules = { 
 			radio_navigation_2
-			tank_radio_2
+			#tank_radio_2
 			#lc_radio_2 #Module for Land Cruiser
 		}
 
@@ -187,7 +187,7 @@ technologies = {
 		}
 		
 		enable_equipment_modules = { 
-			tank_radio_3
+			#tank_radio_3
 			#lc_radio_3 #Module for Land Cruiser
 		}
 		
