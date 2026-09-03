@@ -377,6 +377,8 @@ technologies = {
 			light_tank_aa_chassis_3
 		}
 		enable_equipment_modules = {
+			auto_loader
+			stabilizer
 			tank_anti_air_cannon_2
 			tank_medium_howitzer_2
 			tank_rocket_launcher
@@ -661,7 +663,7 @@ technologies = {
 			medium_tank_aa_chassis_2
 		}
 		enable_equipment_modules = {
-
+			stabilizer
 			tank_anti_air_cannon_2
 			tank_medium_howitzer_2
 			tank_rocket_launcher
@@ -1243,7 +1245,7 @@ technologies = {
 			heavy_tank_aa_chassis_2
 		}
 		enable_equipment_modules = {
-
+			stabilizer
 			tank_anti_air_cannon_2
 			tank_medium_howitzer_2
 			tank_rocket_launcher
