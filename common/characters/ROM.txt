@@ -419,7 +419,101 @@ characters={
 			}
 		}
 	}	
+	ROM_legolas_zhuko={
+		name="Legolas Zhuko"
+		portraits={
+			army={
+				small="GFX_idea_generic_army_europe_1"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = ROM_legolas_zhuko
+			ledger = army
+			allowed = {
+				original_tag = ROM
+			}
+			traits = {
+				army_artillery_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}	
+	ROM_periclo={
+		name="Periclo"
+		portraits={
+			army={
+				small="GFX_idea_generic_army_europe_2"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = ROM_periclo
+			ledger = army
+			allowed = {
+				original_tag = ROM
+			}
+			traits = {
+				army_armored_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}		
 	
+	ROM_mihael_pobertii={
+		name="Mihael Pobertii"
+		portraits={
+			army={
+				small="GFX_idea_generic_army_europe_3"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = ROM_mihael_pobertii
+			ledger = army
+			allowed = {
+				original_tag = ROM
+			}
+			traits = {
+				army_CombinedArms_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}	
+
+	ROM_aurel_aldea={
+		name="Aurel ALdea"
+		portraits={
+			army={
+				small="GFX_idea_generic_army_europe_4"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = ROM_aurel_aldea
+			ledger = army
+			allowed = {
+				original_tag = ROM
+			}
+			traits = {
+				army_regrouping_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}	
+
 	ROM_paul_teodorescu={
 		name=ROM_paul_teodorescu
 		portraits={

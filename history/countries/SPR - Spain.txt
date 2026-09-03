@@ -136,6 +136,7 @@ if = {
 	recruit_character = SPA_diego_hidalgo_y_duran
 	recruit_character = SPA_ramon_serrano_suner
 	recruit_character = SPA_luis_hernando_de_larramendi
+	recruit_character = SPA_oberyn_martell
 	165 = {
 		add_dynamic_modifier = { modifier = autonomous_state }
 	}

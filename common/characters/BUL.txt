@@ -657,7 +657,7 @@ characters = {
 				has_dlc = "Battle for the Bosporus"
 			}
 			advisor = {
-				slot = army_chief
+				slot = high_command
 				idea_token = BUL_vasil_boydev
 				allowed = {
 					has_dlc = "Battle for the Bosporus"
@@ -669,7 +669,7 @@ characters = {
 					}
 				}
 				traits = {
-					army_chief_maneuver_2
+					army_regrouping_2
 				}
 				cost = 100
 				ai_will_do = {
@@ -702,7 +702,7 @@ characters = {
 				NOT = { has_dlc = "Battle for the Bosporus" }
 			}
 			advisor = {
-				slot = air_chief
+				slot = high_command
 				idea_token = BUL_vasil_boydev
 				allowed = {
 					NOT = {
@@ -711,7 +711,7 @@ characters = {
 					original_tag = BUL
 				}
 				traits = {
-					air_chief_ground_support_2
+					army_regrouping_2
 				}
 				cost = 100
 				ai_will_do = {
@@ -926,9 +926,9 @@ characters = {
 				available = {
 				}
 				traits = {
-					army_cavalry_3
+					army_CombinedArms_2
 				}
-				cost = 200
+				cost = 100
 			}
 			name = BUL_atanas_pavlov_zhilkov_bftb
 			portraits = {
@@ -983,7 +983,7 @@ characters = {
 				}
 			}
 			traits = {
-				army_logistics_2
+				army_commando_2
 			}
 			cost = 100
 			ai_will_do = {
