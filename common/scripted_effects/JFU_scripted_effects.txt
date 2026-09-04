@@ -3613,14 +3613,14 @@ SOV_allied_ll_tanks = {
 			suspension_type_slot = tank_torsion_bar_suspension
 			armor_type_slot = tank_riveted_armor
 			engine_type_slot = tank_diesel_engine
-			special_type_slot_1 = tank_radio_1
+			special_type_slot_1 = tank_radio_2
 			special_type_slot_2 = secondary_turret_small_cannon
 			special_type_slot_3 = secondary_turret_small_cannon 
 			special_type_slot_4 = easy_maintenance 
 		}
 		upgrades = {
 			tank_nsb_engine_upgrade = 9
-			tank_nsb_armor_upgrade = 4
+			tank_nsb_armor_upgrade = 9
 		}
 		icon = "GFX_GER_basic_medium_tank_medium"
 	}
