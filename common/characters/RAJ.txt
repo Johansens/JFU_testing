@@ -918,7 +918,7 @@ characters={
 				original_tag = RAJ
 			}
 			traits = {
-				army_artillery_2
+				army_entrenchment_3
 			}
 			cost = 200
 			ai_will_do = {
@@ -1390,7 +1390,7 @@ characters={
 				original_tag = RAJ
 			}
 			traits = {
-				army_commando_2
+				air_air_combat_training_3
 			}
 			cost = 200
 			ai_will_do = {
@@ -1414,7 +1414,7 @@ characters={
 				original_tag = RAJ
 			}
 			traits = {
-				army_armored_2
+				air_naval_strike_2
 			}
 			cost = 100
 			ai_will_do = {
@@ -1462,7 +1462,7 @@ characters={
 				original_tag = RAJ
 			}
 			traits = {
-				army_regrouping_2
+				navy_anti_submarine_2
 			}
 			cost = 100
 			ai_will_do = {

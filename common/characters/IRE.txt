@@ -109,7 +109,7 @@ characters={
 					original_tag = IRE
 				}
 				traits = {
-					army_infantry_2
+					navy_fleet_logistics_2
 				}
 				cost = 100
 				ai_will_do = {
@@ -257,7 +257,7 @@ characters={
 					original_tag = IRE
 				}
 				traits = {
-					army_artillery_2
+					army_regrouping_2
 				}
 				cost = 100
 				ai_will_do = {
