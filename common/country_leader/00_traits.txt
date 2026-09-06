@@ -2154,20 +2154,6 @@ leader_traits = {
 		}
 	}
 
-	triumphant_revolutionary = {
-		random = no
-		justify_war_goal_time = 0.15
-		subversive_activites_upkeep = -0.5
-		max_command_power = 50
-
-		drift_defence_factor = 0.15
-		command_power_gain_mult = 0.15
-
-		ai_will_do = {
-			factor = 1
-		}
-	}
-
 	exiled_revolutionary = {
 		random = no
 		subversive_activites_upkeep = -0.5
@@ -7477,12 +7463,10 @@ leader_traits = {
 	#BUKHARIN -> Improved
 	hero_of_the_peasantry = {
 		random = no
-		political_power_factor = 0.15
-		stability_factor = 0.1
+		stability_factor = 0.2
+		civilian_intel_to_others = 20
 		research_speed_factor = 0.05
-		democratic_acceptance = 50
-		civilian_intel_to_others = 15
-		industrial_capacity_factory = -0.02
+		local_resources_factor = 0.10
 	}
 
 	#RYKOV
@@ -7723,40 +7707,42 @@ leader_traits = {
 		compliance_growth_on_our_occupied_states = -0.15
 	}
 
-	#Smirnov
 	head_directorate_of_new_buildings = {
 		random = no
 		sprite = 13
-		production_speed_buildings_factor = 0.1
+		production_speed_buildings_factor = 0.1 
 		industrial_capacity_factory = 0.05
 		industrial_capacity_dockyard = 0.05
 	}
-
+	the_director = {
+		random = no
+		planning_speed = -0.1
+		max_planning = 0.05
+	}
 	#Smilga
 	soviet_economist = {
 		random = no
 		sprite = 13
-		consumer_goods_factor = -0.10
+		consumer_goods_factor = -0.1
 		war_support_factor = 0.05
 		production_speed_synthetic_refinery_factor = 0.15
-		subversive_activites_upkeep = -0.05
 	}
 
 	#Radek
 	international_revolutionary = {
 		random = no
 		sprite = 13
-		subversive_activites_upkeep = -0.1
-		intel_network_gain_factor = 0.1
-		boost_ideology_mission_factor = 0.1
-		diplomatic_pressure_mission_factor = 0.1
+		pocket_penalty = -0.10
+		land_reinforce_rate = 0.1
+		weekly_manpower = 25000
+		party_popularity_stability_factor = 0.1
 	}
 
 	#Preobrazhensky
 	ecomonist_publicist = {
 		random = no
 		sprite = 13
-		production_factory_max_efficiency_factor = 0.05
+		production_factory_max_efficiency_factor = 0.1
 		political_power_factor = 0.05
 		party_popularity_stability_factor = 0.1
 	}
@@ -7775,30 +7761,25 @@ leader_traits = {
 	pc_military_naval_affairs = {
 		random = no
 		sprite = 13
-		resistance_growth = -0.1
 		army_org_factor = 0.1
 		experience_gain_army_factor = 0.1
-		experience_gain_navy_factor = 0.1
-		party_popularity_stability_factor = -0.1
+		party_popularity_stability_factor = -0.25
 	}
 
 	#Bukharin
 	economy_reformer = {
 		random = no
 		sprite = 13
-		research_speed_factor = 0.05
-		stability_factor = 0.05
-		political_power_factor = 0.05
+		research_speed_factor = 0.1
+		political_power_factor = 0.1
+		production_speed_buildings_factor = 0.1
 	}
 
 	#Tomsky Default
 	right_trade_unionist = {
 		random = no
 		sprite = 13
-		industrial_capacity_factory = 0.1
-		production_factory_max_efficiency_factor = 0.1
-		line_change_production_efficiency_factor = 0.1
-		production_factory_efficiency_gain_factor = -0.05
+		line_change_production_efficiency_factor = 0.2
 	}
 
 	#Tomsky Improved
@@ -7809,13 +7790,20 @@ leader_traits = {
 		production_factory_max_efficiency_factor = 0.15
 		line_change_production_efficiency_factor = 0.1
 	}
-
+	#TROTSKY
+	triumphant_revolutionary = {
+		random = no
+		subversive_activites_upkeep = -0.5
+		max_command_power = 50
+		drift_defence_factor = 0.15
+		command_power_gain_mult = 0.15
+	}
 	#Rykov
 	peoples_commissar_for_posts_and_telegraphs = {
 		random = no
 		sprite = 13
-		political_power_factor = 0.05
-		land_reinforce_rate = 0.02
+		political_power_factor = 0.1
+		land_reinforce_rate = 0.1
 	}
 
 	#Zinovyev
@@ -7833,7 +7821,6 @@ leader_traits = {
 		drift_defence_factor = -0.1
 		political_power_factor = 0.15
 		stability_factor = 0.1
-		compliance_gain = 0.02
 	}
 
 	#Ryutin
@@ -7841,9 +7828,9 @@ leader_traits = {
 		random = no
 		sprite = 13
 		subversive_activites_upkeep = -0.15
-		boost_resistance_factor = 0.1
-		resistance_decay_on_our_occupied_states = -0.1
 		intel_from_operatives_factor = 0.1
+		agency_upgrade_time = -0.3
+		operative_slot = 2
 	}
 
 	#Sokolnikov
@@ -7852,8 +7839,8 @@ leader_traits = {
 		sprite = 13
 		industrial_capacity_factory = 0.15
 		industrial_capacity_dockyard = 0.15
-		production_speed_buildings_factor = -0.05
-		industry_repair_factor = -0.05
+		production_speed_buildings_factor = -0.15
+		industry_repair_factor = -0.15
 	}
 
 	#Semyonov
