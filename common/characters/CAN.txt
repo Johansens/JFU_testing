@@ -536,6 +536,78 @@ characters={
 			}
 		}
 	}
+
+	CAN_ser_arthur_dayne={
+		name="Ser Arthur Dayne"
+		portraits={
+			army={
+				small="GFX_idea_generic_army_europe_2" #small="GFX_idea_CAN_john_murchie" 
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = CAN_ser_arthur_dayne
+			ledger = army
+			allowed = {
+				original_tag = CAN
+			}
+			traits = {
+				army_CombinedArms_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	CAN_podrick_payne={
+		name="Podrick Payne"
+		portraits={
+			army={
+				small="GFX_idea_generic_army_europe_1" #small="GFX_idea_CAN_john_murchie" 
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = CAN_podrick_payne
+			ledger = army
+			allowed = {
+				original_tag = CAN
+			}
+			traits = {
+				army_infantry_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	CAN_gregor_clegane={
+		name="Gregor Clegane"
+		portraits={
+			army={
+				small="GFX_idea_generic_army_europe_3" #small="GFX_idea_CAN_john_murchie" 
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = CAN_gregor_clegane
+			ledger = army
+			allowed = {
+				original_tag = CAN
+			}
+			traits = {
+				army_regrouping_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
 	
 	CAN_frederick_m_w_harvey={
 		name=CAN_frederick_m_w_harvey

@@ -1402,6 +1402,16 @@ ideas = {
 				tag = JAP
 				attack_bonus_against = -0.3
 				defense_bonus_against = -0.1
+			}
+			targeted_modifier = {
+				tag = MAN
+				attack_bonus_against = -0.3
+				defense_bonus_against = -0.1
+			}
+			targeted_modifier = {
+				tag = SIA
+				attack_bonus_against = -0.3
+				defense_bonus_against = -0.1
 			}			
 		}	
 		MEFO_bills_axis_minor = {

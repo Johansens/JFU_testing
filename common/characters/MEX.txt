@@ -555,7 +555,7 @@ characters={
 				original_tag = MEX
 			}
 			traits = {
-				air_strategic_bombing_2
+				army_regrouping_2
 			}
 			cost = 100
 			ai_will_do = {
@@ -579,7 +579,55 @@ characters={
 				original_tag = MEX
 			}
 			traits = {
-				army_regrouping_2
+				army_armored_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	MEX_theon_sand={
+		name="Theon Sand"
+		portraits={
+			army={
+				small= GFX_idea_generic_army_south_america_1
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = MEX_theon_sand
+			ledger = army
+			allowed = {
+				original_tag = MEX
+			}
+			traits = {
+				army_commando_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+
+	MEX_balon_carlo={
+		name="Balon Carlo"
+		portraits={
+			army={
+				small= GFX_idea_generic_army_south_america_2
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = MEX_balon_carlo
+			ledger = army
+			allowed = {
+				original_tag = MEX
+			}
+			traits = {
+				army_artillery_2
 			}
 			cost = 100
 			ai_will_do = {
@@ -604,11 +652,8 @@ characters={
 				original_tag = MEX
 				has_dlc = "Man the Guns"
 			}
-			available = {
-				has_completed_focus = MEX_focus_purge_the_bureaucracy
-			}
 			traits = {
-				army_cavalry_3
+				army_CombinedArms_2
 			}
 			cost = 200
 			ai_will_do = {

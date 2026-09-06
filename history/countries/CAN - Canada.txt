@@ -68,6 +68,10 @@ recruit_character = CAN_leo_richer_lafleche
 recruit_character = CAN_r_b_bennett
 recruit_character = CAN_louis_st_laurent
 
+recruit_character = CAN_ser_arthur_dayne
+recruit_character = CAN_podrick_payne
+recruit_character = CAN_gregor_clegane
+
 
 # Starting tech
 set_technology = {

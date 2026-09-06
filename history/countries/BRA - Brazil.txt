@@ -259,6 +259,11 @@ recruit_character = BRA_newton_cavalcanti
 #recruit_character = BRA_washington_luis_pereira
 #recruit_character = BRA_osvaldo_aranha
 
+recruit_character = BRA_oberyn_dayne
+recruit_character = BRA_doran_fowler
+recruit_character = BRA_quentyn_allyrion
+recruit_character = BRA_lewyn_uller
+
 
 set_convoys = 40
 if = {

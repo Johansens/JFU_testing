@@ -68,6 +68,11 @@ recruit_character = ROM_gheorghe_argeseanu
 recruit_character = ROM_octavian_goga
 recruit_character = ROM_nikola_mihov
 recruit_character = ROM_georgi_popov
+
+recruit_character = ROM_legolas_zhuko
+recruit_character = ROM_periclo
+recruit_character = ROM_mihael_pobertii
+recruit_character = ROM_aurel_aldea
 # Starting tech
 set_technology = {
 	tech_trucks = 1

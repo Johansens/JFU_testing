@@ -399,7 +399,7 @@ characters = {
 				}
 			}
 			traits = {
-				army_logistics_2
+				army_CombinedArms_2
 			}
 			cost = 100
 			ai_will_do = {
@@ -1579,9 +1579,9 @@ characters = {
 				has_government = fascism
 			}
 			traits = {
-				army_chief_drill_2
+				army_chief_offensive_2
 			}
-			cost = 100
+			cost = 50
 			ai_will_do = {
 				factor = 1.000
 			}

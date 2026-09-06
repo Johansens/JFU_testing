@@ -466,7 +466,7 @@ characters={
 				original_tag = NZL
 			}
 			traits = {
-				army_cavalry_2
+				army_CombinedArms_2
 			}
 			cost = 100
 			ai_will_do = {
@@ -490,7 +490,55 @@ characters={
 				original_tag = NZL
 			}
 			traits = {
-				air_airborne_2
+				army_infantry_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}		
+	}
+
+	NZL_brandon_tully={
+		name="Brandon Tully"
+		portraits={
+			army={
+				small="GFX_idea_generic_air_europe_3"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = NZL_brandon_tully
+			ledger = air
+			allowed = {
+				original_tag = NZL
+			}
+			traits = {
+				army_commando_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}		
+	}
+
+	NZL_eddard_tully={
+		name="Eddard Tully"
+		portraits={
+			army={
+				small="GFX_idea_generic_air_europe_3"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = NZL_eddard_tully
+			ledger = air
+			allowed = {
+				original_tag = NZL
+			}
+			traits = {
+				army_artillery_2
 			}
 			cost = 100
 			ai_will_do = {
@@ -514,7 +562,7 @@ characters={
 				original_tag = NZL
 			}
 			traits = {
-				navy_naval_air_defense_2
+				army_armored_2
 			}
 			cost = 100
 			ai_will_do = {

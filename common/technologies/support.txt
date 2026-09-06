@@ -190,7 +190,7 @@ technologies = {
 		}
 
 		enable_equipment_modules = {
-			dozer_blade
+			#dozer_blade
 			#flamethrower #MM: Moved to Special Project sp_land_flamethrower_tank
 		}
 
@@ -916,7 +916,7 @@ technologies = {
 		}
 
 		enable_equipment_modules = {
-			easy_maintenance
+			#easy_maintenance
 		}
 		
 		
