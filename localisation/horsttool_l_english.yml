@@ -1225,6 +1225,8 @@
  ALLIES_usa_patron_idea:0 "Learn from Americans"
  ALLIES_eng_patron_idea:0 "Seek British Expertise"
 
+ air_war_plans_division_focus_upgraded:0 "Air War Plans Division"
+
  ENG_con_int_dynamic:0 "Continental Intervention"
  wartime_industry_focus_eng:0 "Wartime Industry"
 
