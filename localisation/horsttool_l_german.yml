@@ -822,6 +822,10 @@ ALLIES_eng_operations_idea:0 "Ausgebildet von der britischen Armee"
 ALLIES_usa_dock_idea:0 "Ausgebildet vom US Marine Corps"
 ALLIES_usa_patron_idea:0 "Von Amerikanern lernen"
 ALLIES_eng_patron_idea:0 "Britische Expertise suchen"
+
+air_war_plans_division_focus_upgraded:0 "\"Air War Plans Division\"-Schwerpunkt"
+
+
 ENG_con_int_dynamic:0 "Kontinentale Intervention"
 
 GER_apointalbertspeer:0 "Albert Speers Reformen"
