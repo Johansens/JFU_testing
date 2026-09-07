@@ -271,6 +271,9 @@ technologies = {
 			leads_to_tech = amphibious_tank_chassis
 			research_cost_coeff = 1
 		}
+		sub_technologies = {
+			amphibious_tank_chassis
+		}
 
 		research_cost = 2
 		start_year = 1936
@@ -479,9 +482,7 @@ technologies = {
 	}
 	basic_medium_tank_chassis = { #Panzer III
 
-		sub_technologies = {
-			amphibious_tank_chassis
-		}
+		
 
 		enable_equipments = {
 			medium_tank_chassis_1
