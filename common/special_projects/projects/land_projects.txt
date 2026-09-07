@@ -10,10 +10,9 @@ sp_amphibious_drive = {
 	available = {
 		FROM = {
 			OR = {
-				has_tech = improved_medium_tank_chassis
-				has_tech = advanced_light_tank_chassis
-				has_tech = amphibious_tank_chassis
-				has_tech = improved_heavy_tank_chassis
+				has_tech = basic_medium_tank_chassis
+				has_tech = basic_light_tank_chassis
+				has_tech = basic_heavy_tank_chassis
 			}
 		}
 	}
