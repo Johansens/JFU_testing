@@ -114,20 +114,23 @@ anti_tank_frontline = {
         #1
             anti_tank_brigade = {
                 defense = 0.1
-                soft_attack = 0.3
+                soft_attack = 0.2
             }
         }
         emplacement_rotation = {
         #2
             anti_tank_brigade = {
-                max_organisation = 10
+                max_organisation = 5
+            }
+            mot_anti_tank_brigade = {
+                max_organisation = 5
             }
         }
         weakpoint_studies = {
         #3
             anti_tank_brigade = {
                 breakthrough = 0.1
-                hard_attack = 0.2
+                hard_attack = 0.1
             }
         }
         offensive_deployments = {
