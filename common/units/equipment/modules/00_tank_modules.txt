@@ -1398,8 +1398,8 @@ equipment_modules = {
 		dismantle_cost_ic = 1
 		xp_cost = 0
 		multiply_stats = {
-			breakthrough = 0.2
-			defense = 0.2
+			breakthrough = 0.1
+			defense = 0.1
 			build_cost_ic = 0.1
 			maximum_speed = -0.1
 		}
@@ -1411,14 +1411,14 @@ equipment_modules = {
 		sfx = sfx_ui_sd_module_turret
 
 		add_stats = {
-			build_cost_ic = 1.5
+			build_cost_ic = 2
 			breakthrough = 4
 			reliability = -0.05
 		}
 		xp_cost = 0
 		multiply_stats = {
-			soft_attack = 0.05
-			hard_attack = 0.05
+			soft_attack = 0.075
+			hard_attack = 0.075
 		}
 	}
 
@@ -1513,7 +1513,7 @@ equipment_modules = {
 		sfx = sfx_ui_sd_module_turret
 
 		add_stats = {
-			build_cost_ic = 1
+			build_cost_ic = 0.5
 			initiative = 0.025
 			reliability = 0.1
 		}
@@ -1527,12 +1527,12 @@ equipment_modules = {
 		sfx = sfx_ui_sd_module_turret
 
 		add_stats = {
-			reliability = 0.05
+			reliability = 0.1
 		}
 		dismantle_cost_ic = 1
 		xp_cost = 0
 		multiply_stats = {
-			build_cost_ic = -0.05
+			build_cost_ic = -0.025
 		}
 	}
 
