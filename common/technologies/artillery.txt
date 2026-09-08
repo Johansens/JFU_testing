@@ -47,7 +47,7 @@ technologies = {
 			#}
 		}
 
-		research_cost = 1.5
+		research_cost = 1.25
 
 		folder = {
 			name = artillery_folder
@@ -104,7 +104,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1.5
+		research_cost = 0.75
 
 		start_year = 1936
 
@@ -179,7 +179,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1
+		research_cost = 1.25
 
 		start_year = 1939
 
@@ -237,7 +237,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1
+		research_cost = 0.75
 
 		start_year = 1940
 
@@ -293,7 +293,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1
+		research_cost = 0.75
 
 		start_year = 1941
 
@@ -338,7 +338,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 2
+		research_cost = 1.25
 
 		start_year = 1942
 
@@ -391,7 +391,7 @@ technologies = {
 			tank_heavy_howitzer
 		}
 
-		research_cost = 1
+		research_cost = 0.75
 
 		start_year = 1943
 
@@ -429,7 +429,7 @@ technologies = {
 
 	mountain_gun = {
 
-		research_cost = 1
+		research_cost = 0.75
 
 		# only from focus!!! #####
 		allow = {
@@ -470,7 +470,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 2
+		research_cost = 0.75
 
 		start_year = 1940
 
@@ -521,7 +521,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1
+		research_cost = 0.75
 
 		start_year = 1941
 
@@ -572,7 +572,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1
+		research_cost = 0.75
 
 		start_year = 1942
 
@@ -610,7 +610,7 @@ technologies = {
 		enable_equipment_modules = {
 			tank_rocket_launcher_2
 		}
-		research_cost = 1
+		research_cost = 1.25
 
 		start_year = 1943
 
@@ -668,7 +668,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1.5
+		research_cost = 1.25
 
 		start_year = 1936
 
@@ -728,7 +728,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1
+		research_cost = 0.75
 
 		start_year = 1939
 
@@ -787,7 +787,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1
+		research_cost = 1.25
 
 		start_year = 1940
 
@@ -850,7 +850,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1
+		research_cost = 0.75
 
 		start_year = 1941
 
@@ -909,7 +909,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1
+		research_cost = 0.75
 
 		start_year = 1942
 
@@ -959,7 +959,7 @@ technologies = {
 			#lc_heavy_anti_air_platform #Module for Land Cruiser
 		}
 
-		research_cost = 1
+		research_cost = 1.25
 
 		start_year = 1943
 
@@ -1015,7 +1015,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1.5
+		research_cost = 1.25
 
 		start_year = 1936
 
@@ -1103,7 +1103,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1
+		research_cost = 0.75
 
 		start_year = 1939
 
@@ -1173,7 +1173,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1
+		research_cost = 1.25
 
 		start_year = 1940
 
@@ -1258,7 +1258,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1
+		research_cost = 0.75
 
 		start_year = 1941
 
@@ -1340,7 +1340,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1
+		research_cost = 0.75
 
 		start_year = 1942
 
@@ -1404,7 +1404,7 @@ technologies = {
 			#lc_heavy_high_velocity_cannons #Module for Land Cruiser
 		}
 
-		research_cost = 1
+		research_cost = 1.25
 
 		start_year = 1943
 
@@ -1462,7 +1462,7 @@ technologies = {
 
 	SWE_bofors_antitank_gun = {
 
-		research_cost = 1
+		research_cost = 0.75
 
 		# only from focus!!! Bofors anti tank gun ##### 
 		allow = {
@@ -1535,7 +1535,7 @@ technologies = {
 			soft_attack = 0.1
 		}
 
-		research_cost = 1.5
+		research_cost = 1.25
 
 		start_year = 1940 #TODO_Manu: Adjust if necessary
 
@@ -1589,7 +1589,7 @@ technologies = {
 			supply_consumption = -0.1
 		}
 
-		research_cost = 1.5
+		research_cost = 1.25
 
 		start_year = 1940 #TODO_Manu: Adjust if necessary
 
@@ -1640,7 +1640,7 @@ technologies = {
         
         force_use_small_tech_layout = yes		
 		is_special_project_tech = yes	
-		research_cost = 1.5
+		research_cost = 1.25
 		start_year = 1941
 		folder = {
 			name = artillery_folder
@@ -1678,7 +1678,7 @@ technologies = {
 		}
 
 		force_use_small_tech_layout = yes
-		research_cost = 1.5
+		research_cost = 1.25
 		start_year = 1942
 		is_special_project_tech = yes
 			
