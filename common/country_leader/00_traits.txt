@@ -1328,20 +1328,20 @@ leader_traits = {
 		random = no
 		sprite = 13
 		
-		political_power_factor = -0.1
+		political_power_factor = -0.05
 
 		equipment_bonus = {
 			small_plane_airframe = {
-				build_cost_ic = -0.15 instant = yes
+				build_cost_ic = -0.10 instant = yes
 			}
 			cv_small_plane_airframe = {
-				build_cost_ic = -0.15 instant = yes
+				build_cost_ic = -0.10 instant = yes
 			}
 			medium_plane_airframe = {
-				build_cost_ic = -0.15 instant = yes
+				build_cost_ic = -0.10 instant = yes
 			}
 			large_plane_airframe = {
-				build_cost_ic = -0.15 instant = yes
+				build_cost_ic = -0.10 instant = yes
 			}
 		}
 
