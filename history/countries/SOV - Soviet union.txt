@@ -393,7 +393,7 @@ set_variable = { SOV_red_fleet_special_forces_cap = 0 } #-> Marines
 
 #DEFENSE INDUSTRY NATIONAL SPIRIT VARS
 set_variable = { SOV_defense_industry_conversion_cost_civ_to_mil_factor = -0.2 }
-set_variable = { SOV_defense_industry_production_factory_max_efficiency_factor = 0.03 }
+set_variable = { SOV_defense_industry_production_factory_max_efficiency_factor = 0.05 }
 set_variable = { SOV_defense_industry_production_factory_efficiency_gain_factor = -0.05 }
 set_variable = { SOV_defense_industry_line_change_production_efficiency_factor = -0.1 }
 
