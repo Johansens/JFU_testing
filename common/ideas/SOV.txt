@@ -1125,7 +1125,7 @@ ideas = {
 			}
 
 			modifier = {
-				air_ace_bonuses_factor = 0.10
+				#air_ace_bonuses_factor = 0.10
 				army_org_factor = 0.05
 			}
 		}
@@ -3008,11 +3008,11 @@ ideas = {
 			removal_cost = -1
 
 			research_bonus = {
-				armor = -0.9
-				artillery = -0.9
-				motorized_equipment = -0.9
-				infantry_weapons = -0.9
-				air_equipment = -0.9
+				armor = -1.0
+				artillery = -1.0
+				motorized_equipment = -1.0
+				infantry_weapons = -1.0
+				air_equipment = -1.0
 			}
 			modifier = { license_production_speed = -1.25 }
 		}
@@ -3034,8 +3034,9 @@ ideas = {
 		aviation_cult = {
 			picture = NORDIC_airforce_communist 
 			modifier = { 
-				air_range_factor = 0.05 
-				air_agility_factor = 0.05 
+				air_range_factor = 0.1 
+				air_agility_factor = 0.1 
+				air_ace_bonuses_factor = 0.1
 			}
 		}
 	}
