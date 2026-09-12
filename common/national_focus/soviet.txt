@@ -164,7 +164,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = SOV_infrastructure_effort_nsb
-		cost = 10
+		cost = 5
 
 		available = {
 			custom_trigger_tooltip = {
@@ -293,7 +293,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = SOV_finish_the_five_year_plan
-		cost = 10
+		cost = 5
 
 		available = {
 			SOV_third_five_year_plan_available = yes
@@ -334,7 +334,7 @@ focus_tree = {
 		x = -2
 		y = 2
 		relative_position_id = SOV_third_five_year_plan
-		cost = 10
+		cost = 5
 
 		mutually_exclusive = { focus = SOV_shift_to_armaments_production }
 
@@ -385,7 +385,7 @@ focus_tree = {
 		x = 0
 		y = 3
 		relative_position_id = SOV_reorganize_the_pc_of_heavy_industry
-		cost = 10
+		cost = 5
 
 		available = {
 			SOV_third_five_year_plan_available = yes
@@ -462,7 +462,7 @@ focus_tree = {
 		x = 2
 		y = 2
 		relative_position_id = SOV_third_five_year_plan
-		cost = 10
+		cost = 5
 
 		mutually_exclusive = { focus = SOV_reorganize_the_pc_of_heavy_industry}
 
@@ -507,7 +507,7 @@ focus_tree = {
 		x = 0
 		y = 3
 		relative_position_id = SOV_shift_to_armaments_production
-		cost = 10
+		cost = 5
 
 		available = {
 			SOV_third_five_year_plan_available = yes
@@ -547,7 +547,7 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = SOV_reorganize_the_pc_of_heavy_industry
-		cost = 10
+		cost = 5
 
 		available = {
 		}
@@ -852,7 +852,6 @@ focus_tree = {
 		}
 
 		available = {
-			date > 1936.11.01
 		}
 		
 		search_filters = {FOCUS_FILTER_AIR_XP}
@@ -1429,7 +1428,7 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = SOV_found_the_pcdi
-		cost = 10
+		cost = 5
 
 		available = {
 		}
@@ -1497,7 +1496,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = SOV_pc_of_mechanical_engineering
-		cost = 10
+		cost = 5
 
 		available = {
 
@@ -1601,7 +1600,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = SOV_the_means_to_wage_war
-		cost = 10
+		cost = 5
 
 		available = {
 			custom_trigger_tooltip = {
@@ -2283,7 +2282,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = SOV_rehabilitated_military
-		cost = 10
+		cost = 5
 
 		select_effect = {
 			add_ideas = SOV_military_reorganization_ns
@@ -3031,7 +3030,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = SOV_the_centre
-		cost = 10
+		cost = 5
 
 		available = {
 
@@ -3744,7 +3743,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = SOV_inheritor_of_the_mantle_of_lenin
-		cost = 10
+		cost = 5
 		
 		available = {
 			custom_trigger_tooltip = {
@@ -3807,7 +3806,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = SOV_the_faithful_servant_of_lenin
-		cost = 10
+		cost = 5
 
 		available = {
 			custom_trigger_tooltip = {
@@ -5071,7 +5070,7 @@ focus_tree = {
 #		x = 15
 #		y = 0
 #		relative_position_id = SOV_article_124
-#		cost = 10
+#		cost = 5
 #		ai_will_do = {
 #			factor = 1
 #		}
@@ -5090,7 +5089,7 @@ focus_tree = {
 #		x = -5
 #		y = 1
 #		relative_position_id = SOV_consolidate_power
-#		cost = 10
+#		cost = 5
 #		ai_will_do = {
 #			factor = 1
 #		}
@@ -5172,7 +5171,7 @@ focus_tree = {
 #		x = 0
 #		y = 1
 #		relative_position_id = SOV_consolidate_power
-#		cost = 10
+#		cost = 5
 #		ai_will_do = {
 #			factor = 1
 #		}
@@ -5300,7 +5299,7 @@ focus_tree = {
 #		x = 4
 #		y = 1
 #		relative_position_id = SOV_consolidate_power
-#		cost = 10
+#		cost = 5
 #		ai_will_do = {
 #			factor = 1
 #		}
@@ -5403,7 +5402,7 @@ focus_tree = {
 #		x = -2
 #		y = 1
 #		relative_position_id = SOV_consolidate_the_caucasus
-#		cost = 10
+#		cost = 5
 #		ai_will_do = {
 #			factor = 1
 #		}
@@ -5423,7 +5422,7 @@ focus_tree = {
 #		x = 0
 #		y = 1
 #		relative_position_id = SOV_consolidate_the_caucasus
-#		cost = 10
+#		cost = 5
 #		ai_will_do = {
 #			factor = 1
 #		}
@@ -5443,7 +5442,7 @@ focus_tree = {
 #		x = 2
 #		y = 3
 #		relative_position_id = SOV_consolidate_the_caucasus
-#		cost = 10
+#		cost = 5
 #		ai_will_do = {
 #			factor = 1
 #		}
@@ -5507,7 +5506,7 @@ focus_tree = {
 #		x = 0
 #		y = 1
 #		relative_position_id = SOV_independent_synod
-#		cost = 10
+#		cost = 5
 #		ai_will_do = {
 #			factor = 1
 #		}
@@ -5528,7 +5527,7 @@ focus_tree = {
 #		x = -1
 #		y = 1
 #		relative_position_id = SOV_consolidate_the_west
-#		cost = 10
+#		cost = 5
 #		ai_will_do = {
 #			factor = 1
 #		}
@@ -5548,7 +5547,7 @@ focus_tree = {
 #		x = 1
 #		y = 3
 #		relative_position_id = SOV_consolidate_the_west
-#		cost = 10
+#		cost = 5
 #		ai_will_do = {
 #			factor = 1
 #		}
@@ -5646,7 +5645,7 @@ focus_tree = {
 #		x = 0
 #		y = 1
 #		relative_position_id = SOV_independent_synod_west
-#		cost = 10
+#		cost = 5
 #		ai_will_do = {
 #			factor = 1
 #		}
@@ -5669,7 +5668,7 @@ focus_tree = {
 #		x = 0
 #		y = 4
 #		relative_position_id = SOV_educate_the_masses_west
-#		cost = 10
+#		cost = 5
 #		ai_will_do = {
 #			factor = 1
 #		}
@@ -5691,7 +5690,7 @@ focus_tree = {
 #		x = -1
 #		y = 1
 #		relative_position_id = SOV_consolidate_the_east
-#		cost = 10
+#		cost = 5
 #		ai_will_do = {
 #			factor = 1
 #		}
@@ -5712,7 +5711,7 @@ focus_tree = {
 #		x = 1
 #		y = 3
 #		relative_position_id = SOV_consolidate_the_east
-#		cost = 10
+#		cost = 5
 #		ai_will_do = {
 #			factor = 1
 #		}
@@ -5791,7 +5790,7 @@ focus_tree = {
 #		x = 0
 #		y = 1
 #		relative_position_id = SOV_independent_koranic_school
-#		cost = 10
+#		cost = 5
 #		ai_will_do = {
 #			factor = 1
 #		}
