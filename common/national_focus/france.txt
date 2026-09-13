@@ -18,12 +18,12 @@
 	focus = {
 		id = FRA_devalue_the_franc
 		icon = GFX_focus_fra_devalue_the_franc
-		x = 0
+		x = 2
 		y = 0
 
 		prerequisite = {}
 		mutually_exclusive = { }
-		cost = 10
+		cost = 5
 			ai_will_do = {
 			factor = 1
 		}
@@ -45,6 +45,22 @@
 			}
 		}
 	}
+
+	focus = {
+		id = FRA_extra_research_slot_2
+		icon = GFX_focus_research
+		prerequisite = { focus = FRA_devalue_the_franc }
+		x = -3
+		y = 1
+		relative_position_id = FRA_devalue_the_franc
+		cost = 5
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
 	focus = {
 			id = FRA_invest_in_the_metropole
 			icon = GFX_FRA_METROPOLITAN_FRANCE
@@ -54,7 +70,7 @@
 			prerequisite = { focus = FRA_devalue_the_franc }
 			mutually_exclusive = { }
 			relative_position_id = FRA_devalue_the_franc
-			cost = 10
+			cost = 5
 	
 			cancel_if_invalid = yes
 			continue_if_invalid = no
@@ -67,15 +83,32 @@
 	}	
 
 	focus = {
+		id = FRA_new_trade_routes
+		text = "Raise Import Taxes"
+		icon = GFX_focus_generic_industry_1
+		prerequisite = { focus = FRA_invest_in_the_metropole }
+		x = -2
+		y = 1
+		relative_position_id = FRA_invest_in_the_metropole
+		cost = 5
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_ideas = FRA_consumer_goods
+		}
+	}
+
+	focus = {
 		id = FRA_military_factories
 		icon = GFX_GENERIC_FACTORY_COMPLEX
 		available = {
 		}
 		prerequisite = {focus =  FRA_colonial_infrastructure1 }
-		x = 0
+		x = -1
 		y = 2
 		relative_position_id = FRA_invest_in_the_metropole
-		cost = 10
+		cost = 5
 
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
@@ -89,6 +122,92 @@
 			}				
 		}
 	}	
+
+	focus = {
+		id = FRA_africa_mines
+		text = "Develop Cobalt Mines"
+		icon = GFX_focus_generic_mining_industry
+		available = {
+		}
+		prerequisite = {focus =  FRA_colonial_infrastructure1 focus = FRA_colonial_infrastructure2 }
+		x = 1
+		y = 2
+		relative_position_id = FRA_invest_in_the_metropole
+		cost = 5
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			539 = {	
+				add_extra_state_shared_building_slots = 4
+				add_resource = {
+					type = steel
+					amount = 34
+				}
+				add_resource = {
+					type = tungsten
+					amount = 46
+				}
+				add_resource = {
+					type = chromium
+					amount = 22
+				}
+			}				
+			
+		}
+	}	
+
+	focus = {
+		id = FRA_military_factories2
+		text = "Congolese Worker Rights"
+		icon = GFX_focus_generic_industry_investment
+		available = {
+		}
+		prerequisite = {focus =  FRA_colonial_infrastructure1 }
+		x = -3
+		y = 2
+		relative_position_id = FRA_invest_in_the_metropole
+		cost = 5
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			772 = {	
+				add_extra_state_shared_building_slots = 5
+				add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+				}
+				add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+				}
+			}
+			add_ideas = FRA_congo_worker				
+		}
+	}
+
+	focus = {
+		id = FRA_military_factories3
+		text = "Invite Foreign Investors"
+		icon = GFX_goal_generic_intelligence_exchange
+		available = {
+		}
+		prerequisite = {focus =  FRA_military_factories }
+		prerequisite = {focus =  FRA_military_factories2 }
+		x = -2
+		y = 3
+		relative_position_id = FRA_invest_in_the_metropole
+		cost = 5
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_timed_idea = {
+				idea = FRA_move_eco_to_africa
+				days = 300
+			} 				
+		}
+	}
 	focus = {
 		id = FRA_invest_in_the_colonies
 		icon = GFX_R56_GOAL_FRA_AFRICA
@@ -97,23 +216,35 @@
 
 		prerequisite = { focus = FRA_devalue_the_franc }
 		relative_position_id = FRA_devalue_the_franc
-		cost = 10
+		cost = 5
 
 
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			539 = {
-					add_building_construction = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
 					type = infrastructure
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 			}
 			772 = {
-					add_building_construction = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
 					type = infrastructure
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -127,17 +258,21 @@ focus = {
 		y = 1
 		prerequisite = { focus = FRA_invest_in_the_metropole }
 		relative_position_id = FRA_invest_in_the_metropole
-		cost = 10
+		cost = 5
 
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			773 = { 
-				add_extra_state_shared_building_slots = 12 
+				add_extra_state_shared_building_slots = 4 
 				add_building_construction = {
 					type = infrastructure
-					level = 2
+					level = 1
 					instant_build = yes
+				}
+				add_resource = {
+					type = aluminium
+					amount = 20
 				}
 				add_resource = {
 					type = coal
@@ -147,6 +282,71 @@ focus = {
 		}
 	}
 
+	focus = {
+		id = FRA_colonies2
+		text = "Libreville Agrar Reforms"
+		icon = GFX_focus_generic_agricultural_subsidies
+		x = 2
+		y = 1
+
+		prerequisite = { focus = FRA_invest_in_the_colonies }
+		relative_position_id = FRA_invest_in_the_colonies
+		cost = 5
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			539 = { 
+				add_extra_state_shared_building_slots = 6
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_resource = {
+					type = rubber
+					amount = 8
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = FRA_colonies3
+		text = "Libreville Dam Construction"
+		icon = GFX_focus_generic_hydroelectric_energy
+		x = 2
+		y = 3
+
+		prerequisite = { focus = FRA_colonies2 }
+		relative_position_id = FRA_invest_in_the_colonies
+		cost = 5
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			539 = { 
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dam
+					level = 1
+					instant_build = yes
+					province = {
+						id = 5139
+					}
+				}
+			}
+		}
+	}
 
 
 	focus = {
@@ -157,7 +357,7 @@ focus = {
 
 		prerequisite = { focus = FRA_invest_in_the_colonies }
 		relative_position_id = FRA_invest_in_the_colonies
-		cost = 10
+		cost = 5
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -165,10 +365,15 @@ focus = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			660 = { 
-				add_extra_state_shared_building_slots = 12
+				add_extra_state_shared_building_slots = 6
 				add_building_construction = {
 					type = infrastructure
-					level = 3
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
 					instant_build = yes
 				}
 				add_resource = {
@@ -181,21 +386,27 @@ focus = {
 
 	focus = {
 		id = FRA_colonial_industry
-		icon = GFX_focus_generic_africa_factory
+		icon = GFX_focus_generic_military_industry
 		prerequisite = { focus = FRA_colonial_infrastructure2 }
-		x = 0
+		prerequisite = { focus = FRA_colonies2 }
+		x = 1
 		y = 2
 		relative_position_id = FRA_invest_in_the_colonies
-		cost = 10
+		cost = 5
 
 		available_if_capitulated = yes
 
 		search_filters = {  FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
 			772 = {	
-				add_extra_state_shared_building_slots = 2 
+				add_extra_state_shared_building_slots = 5
 				add_building_construction = {
 				type = industrial_complex
+				level = 1
+				instant_build = yes
+				}
+				add_building_construction = {
+				type = arms_factory
 				level = 2
 				instant_build = yes
 				}
@@ -204,20 +415,24 @@ focus = {
 	}
 	
 	focus = {
-		id = FRA_extra_research_slot_2
-		icon = GFX_focus_research
-		prerequisite = { 
-			focus = FRA_colonial_industry focus = FRA_military_factories
-		}
-		x = -1
-		y = 1
-		relative_position_id = FRA_colonial_industry
-		cost = 10
+		id = FRA_urban_zones
+		text = "Modernized Urban Areas"
+		icon = GFX_focus_generic_africa_factory
+		prerequisite = { focus = FRA_colonial_infrastructure2 }
+		prerequisite = { focus = FRA_colonies2 }
+		x = 0
+		y = 3
+		relative_position_id = FRA_invest_in_the_colonies
+		cost = 5
 
 		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		search_filters = {  FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			add_research_slot = 1
+			539 = {
+				add_manpower = 350000
+				set_state_category = large_city
+			}
 		}
 	}
 
@@ -226,12 +441,12 @@ focus = {
 	focus = {
 		id = FRA_begin_rearmament
 		icon = GFX_R56_GOAL_FRA_INCREASE_MILITARY_SPENDINGS
-		x = 4
+		x = 8
 		y = 0
 		available = { GER = { has_completed_focus = GER_remilitarize_the_rhineland} }
 		prerequisite = {}
 		mutually_exclusive = { }
-		cost = 10
+		cost = 5
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -242,7 +457,7 @@ focus = {
 			539 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
-					type = industrial_complex
+					type = arms_factory
 					level = 2
 					instant_build = yes
 				}
@@ -380,6 +595,26 @@ focus = {
 			}		
 		}
 	}
+
+	focus = {
+		id = FRA_focus_medium_tank_production
+		icon = GFX_goal_generic_production2
+		text = "Tank Production"
+		prerequisite = { focus = FRA_battle_of_maneuver }
+		x = 2
+		y = 1
+		relative_position_id = FRA_battle_of_maneuver
+		cost = 5
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_timed_idea = {
+				idea = FRA_medium_tank_production
+				days = 300
+			}
+		} 
+	}
+
 	focus = {
 		id = FRA_motorized_focus
 		icon = GFX_FRA_MOTORIZED_FOCUS
@@ -392,7 +627,7 @@ focus = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			add_ideas = FRA_motorized_focus
+			add_ideas = FRA_motorized_focus 
 		}
 	}
 	focus = {
@@ -464,7 +699,7 @@ focus = {
 	focus = {
 		id = FRA_form_the_popular_front
 		icon = GFX_FRA_front_de_la_liberte
-		x = 9
+		x = 14
 		y = 0
 
 
@@ -764,7 +999,7 @@ focus = {
 			focus = FRA_review_foreign_policy
 		}
 		relative_position_id = FRA_review_foreign_policy
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -921,7 +1156,7 @@ focus = {
 	focus = {
 		id = FRA_naval_rearmament
 		icon = GFX_goal_generic_construct_naval_dockyard
-		x = 13
+		x = 18
 		y = 0
 		cost = 5
 		available_if_capitulated = yes
@@ -978,7 +1213,7 @@ focus = {
 	focus = {
 		id = FRA_appeal_to_the_french_nation
 		icon = GFX_FOCUS_FRA_DE_GAULLE
-		x = 24
+		x = 30
 		y = 0
 
 		prerequisite = {}
@@ -1511,7 +1746,7 @@ focus = {
 	focus = {
 		id = FRA_refus_absurde
 		icon = GFX_goal_generic_demand_territory
-		x = 17
+		x = 23
 		y = 0
 
 		prerequisite = { 
