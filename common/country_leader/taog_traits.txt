@@ -984,6 +984,7 @@ leader_traits = {
 	AST_industrial_populist = { 
 		random = no
 		sprite = 13
+		conscription = 0.03
 		stability_factor = 0.025
 		production_speed_industrial_complex_factor = 0.15
 	}	
