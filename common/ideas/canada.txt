@@ -21,6 +21,47 @@ ideas = {
 			}
 		}
 
+		CAN_growth = {
+			name = "Overtime Work"
+			picture = generic_foreign_capital
+			allowed = {
+				original_tag = CAN
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.1
+				industrial_capacity_factory = 0.1
+			}
+		}
+
+		CAN_base_eff = {
+			name = "Modern Tools"
+			picture = generic_foreign_capital
+			allowed = {
+				original_tag = CAN
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				production_factory_start_efficiency_factor = 0.05
+				production_speed_arms_factory_factor = 0.05
+				consumer_goods_factor = -0.05
+			}
+		}
+
 		CAN_defence_of_canada_regulations_democratic = {
 
 			allowed = {
