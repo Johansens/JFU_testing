@@ -46,7 +46,28 @@ ideas = {
 				army_core_defence_factor = 0.1
 			}
 		}
-		FRA_inefficient_economy_1 = {
+		FRA_inefficient_economy_4 = {
+			name = "Inefficient Economy"
+			picture = generic_local_self_management
+			allowed = {
+				original_tag = FRA
+				always = no
+			}
+
+			allowed_civil_war = {
+				tag = FRA
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				industrial_capacity_factory = -0.2
+				industrial_capacity_dockyard = -0.2
+				research_speed_factor = 0.1
+			}
+		}
+		FRA_inefficient_economy_3 = {
+			name = "Inefficient Economy"
 			picture = generic_local_self_management
 			allowed = {
 				original_tag = FRA
@@ -64,6 +85,24 @@ ideas = {
 				industrial_capacity_dockyard = -0.1
 			}
 		}
+		FRA_inefficient_economy_1 = {
+			picture = generic_local_self_management
+			allowed = {
+				original_tag = FRA
+				always = no
+			}
+
+			allowed_civil_war = {
+				tag = FRA
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				industrial_capacity_factory = -0.2
+				industrial_capacity_dockyard = -0.2
+			}
+		}
 		FRA_inefficient_economy_2 = {
 			picture = generic_local_self_management
 			name = FRA_inefficient_economy_1
@@ -79,8 +118,8 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				industrial_capacity_factory = -0.2
-				industrial_capacity_dockyard = -0.2
+				industrial_capacity_factory = -0.3
+				industrial_capacity_dockyard = -0.3
 			}
 		}
 		FRA_political_violence = {
@@ -117,8 +156,8 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				production_speed_infrastructure_factor = 0.2
-				production_speed_industrial_complex_factor = 0.2
+				production_speed_infrastructure_factor = 0.1
+				production_speed_industrial_complex_factor = 0.1
 			}
 		}
 
@@ -159,7 +198,28 @@ ideas = {
 			modifier = {
 				consumer_goods_factor = 0.15
 				production_factory_efficiency_gain_factor = 0.2
-				industrial_capacity_factory = 0.1
+				industrial_capacity_factory = 0.05
+			}
+		}
+
+		FRA_tank_stats_idea = {
+			name = "Offensive Doctrine"
+			picture = generic_intel_bonus
+			allowed = {
+				original_tag = FRA
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_armor_attack_factor = 0.1
+				army_armor_defence_factor = 0.1
+				army_armor_speed_factor = 0.1
 			}
 		}
 
@@ -239,10 +299,11 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				production_factory_max_efficiency_factor = 0.1
-				production_factory_efficiency_gain_factor = 0.1
+				production_factory_max_efficiency_factor = 0.025
+				line_change_production_efficiency_factor = 0.025
+				production_factory_efficiency_gain_factor = 0.025
 			}
-			research_bonus = { industry = 0.1}
+			#research_bonus = { industry = 0.1}
 		}
 		FRA_firepower = {
 			picture = generic_artillery_regiments
@@ -733,7 +794,7 @@ ideas = {
 			picture = generic_victors_of_ww1
 			
 			modifier = {
-				conscription = -0.003
+				conscription = -0.02
 				war_support_factor = -0.05
 				land_doctrine_cost_factor = 0.2
 			}
@@ -771,7 +832,7 @@ ideas = {
 			picture = generic_wall_line
 			
 			modifier = {
-				max_planning = 0.25
+				max_planning = 0.1
 				planning_speed = -0.25
 				conversion_cost_civ_to_mil_factor= 2
 				production_speed_naval_base_factor = -1.5
@@ -850,6 +911,9 @@ ideas = {
 			removal_cost = -1
 
 			equipment_bonus = {
+				mechanized_equipment = {
+					build_cost_ic = -0.1 instant = yes
+				}
 				motorized_equipment = {
 					build_cost_ic = -0.1 instant = yes
 				}
