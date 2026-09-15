@@ -439,7 +439,7 @@
 
 	focus = {
 		id = FRA_military_factories4
-		text = "Expand Textile Industry in Congo"
+		text = "Expand Congolese Textile Industry"
 		icon = GFX_focus_CHL_enlarge_the_textile_industries
 		available = {
 			has_tech = excavation1
@@ -654,7 +654,7 @@ focus = {
 
 	focus = {
 		id = FRA_colonies3
-		text = "Libreville Dam Construction"
+		text = "Ogooue Dam Construction"
 		icon = GFX_focus_generic_hydroelectric_energy
 		x = 2
 		y = 3
