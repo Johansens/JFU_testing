@@ -2452,8 +2452,8 @@ JFU_pregrinded_effect = {
 			add_unit_leader_trait = logistics_wizard
 		}
 		#FRA_charles_huntziger = { add_skill_level = 1 }
-		FRA_charles_huntziger = { add_attack = 4 }
-		FRA_charles_huntziger = { add_defense = 3 }
+		FRA_charles_huntziger = { add_attack = 2 }
+		FRA_charles_huntziger = { add_defense = 2 }
 		#FRA_charles_huntziger = { add_planning = 1 }
 		FRA_charles_huntziger = { add_logistics = 1 }
 		FRA_charles_huntziger = {
@@ -4153,7 +4153,7 @@ JFU_vichy_france = {
 	GER = { country_event = { id = germany.107 } }
 	FRA = {
 		remove_ideas = FRA_fortification_focus
-		remove_ideas = FRA_protected_by_the_maginot_line
+		#remove_ideas = FRA_protected_by_the_maginot_line
 		remove_ideas = FRA_victors_of_wwi
 		remove_ideas = FRA_full_employment
 		remove_ideas = FRA_disjointed_government

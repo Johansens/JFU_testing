@@ -23,7 +23,7 @@
 
 		prerequisite = {}
 		mutually_exclusive = { }
-		cost = 10
+		cost = 5
 			ai_will_do = {
 			factor = 1
 		}
@@ -115,7 +115,7 @@
 			focus = FRA_devalue_the_franc
 		}
 		relative_position_id = FRA_devalue_the_franc
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -152,7 +152,7 @@
 			focus = FRA_economic_devolution
 		}
 		relative_position_id = FRA_economic_devolution
-		cost = 10
+		cost = 5
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -174,7 +174,7 @@
 			focus = FRA_promote_entrepeneurship
 		}
 		relative_position_id = FRA_promote_entrepeneurship
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -206,7 +206,7 @@
 			focus = FRA_stimulate_the_dynamic_market
 		}
 		relative_position_id = FRA_stimulate_the_dynamic_market
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
@@ -797,12 +797,12 @@ focus = {
 	focus = {
 		id = FRA_begin_rearmament
 		icon = GFX_R56_GOAL_FRA_INCREASE_MILITARY_SPENDINGS
-		x = 16
+		x = 20
 		y = 0
 		available = {  }
 		prerequisite = {}
 		mutually_exclusive = { }
-		cost = 10
+		cost = 5
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -815,9 +815,84 @@ focus = {
 	}
 
 	focus = {
+		id = FRA_expand_maginot
+		text = "Maginot Question"
+		icon = GFX_focus_SWI_fortify_border_with_france
+		x = -1
+		y = 1
+		cost = 5
+		prerequisite = { focus = FRA_begin_rearmament }
+		available_if_capitulated = yes
+		relative_position_id = FRA_begin_rearmament
+		completion_reward = {
+			add_ideas = FRA_protected_by_the_maginot_line2
+		}
+	}
+
+	focus = {
+		id = FRA_infantry_stats
+		text = "Stick to what worked before"
+		mutually_exclusive = {
+			focus = FRA_tank_stats2
+		}
+		icon = GFX_GOAL_DETERRENCE
+		x = -1
+		y = 1
+		cost = 5
+		prerequisite = { focus = FRA_expand_maginot }
+		available_if_capitulated = yes
+		relative_position_id = FRA_expand_maginot
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = FRA_protected_by_the_maginot_line2
+				add_idea = FRA_protected_by_the_maginot_line3 
+			}
+		}
+	}
+
+	focus = {
+		id = FRA_tank_stats2
+		text = "Dismantle the Maginot Line"
+		mutually_exclusive = {
+			focus = FRA_infantry_stats
+		}
+		icon = GFX_GOAL_WAR_ECONOMY
+		x = 1
+		y = 1
+		cost = 5
+		prerequisite = { focus = FRA_expand_maginot }
+		available_if_capitulated = yes
+		relative_position_id = FRA_expand_maginot
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = FRA_protected_by_the_maginot_line2
+				add_idea = FRA_protected_by_the_maginot_line4
+			}
+		}
+	}
+
+	focus = {
+		id = FRA_tank_stats3
+		text = "Tank Destroyers"
+		icon = GFX_R56_FOCUS_GENERIC_STUDY_FOREIGN_TANKS
+		x = -1
+		y = 1
+		cost = 5
+		prerequisite = { focus = FRA_tank_stats2 }
+		available_if_capitulated = yes
+		relative_position_id = FRA_tank_stats2
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = FRA_protected_by_the_maginot_line4 
+				add_idea = FRA_protected_by_the_maginot_line5
+			}
+		}
+	}
+
+	focus = {
 		id = FRA_defensive_focus
 		icon = GFX_R56_GOAL_FRA_DEFENSE
-		x = -1
+		x = -3
 		y = 1
 		cost = 5
 		prerequisite = { focus = FRA_begin_rearmament }
@@ -831,7 +906,7 @@ focus = {
 	focus = {
 		id = FRA_firepower_kills
 		icon = GFX_FRA_FRENCH_ARTILLERY
-		x = 0
+		x = -3
 		y = 1
 		prerequisite = { focus = FRA_defensive_focus }
 		relative_position_id = FRA_defensive_focus
@@ -851,25 +926,102 @@ focus = {
 			}
 		}
 	}
+
+	focus = {
+		id = FRA_katyusha
+		text = "EA Project"
+		icon = GFX_focus_rocketry
+		x = -2
+		y = 2
+		prerequisite = { focus = FRA_defensive_focus }
+		relative_position_id = FRA_defensive_focus
+		cost = 5
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = FRA_artillery_focus
+				bonus = 1.0
+				uses = 1
+				technology = motorized_rocket_unit
+			}
+		}
+	}
+
+	focus = {
+		id = FRA_infantry_kills
+		text = "Infantry Kills"
+		icon = GFX_FRA_FRENCH_ARTILLERY
+		x = 2
+		y = 2
+		prerequisite = { focus = FRA_infantry_focus }
+		prerequisite = { focus = FRA_firepower_kills focus = FRA_at_bonus focus = FRA_infantry_focus }
+		relative_position_id = FRA_firepower_kills
+		cost = 5
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = { FRA_shock_troops }
+		}
+	}
+
+	focus = {
+		id = FRA_at_bonus
+		text = "Anti Tank Modernization"
+		icon = GFX_focus_generic_anti_tank_guns
+		x = -1
+		y = 1
+		prerequisite = { focus = FRA_defensive_focus }
+		relative_position_id = FRA_defensive_focus
+		cost = 5
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = { FRA_at_firepower }
+			add_tech_bonus = {
+				name = FRA_artillery_focus
+				bonus = 1
+				uses = 2
+				category = cat_anti_tank
+			}
+		}
+	}
 	focus = {
 		id = FRA_infantry_focus
 		icon = GFX_FRA_LEVEE_EN_MASSE
-		prerequisite = { focus = FRA_firepower_kills }
+		prerequisite = { focus = FRA_defensive_focus }
+		prerequisite = { focus = FRA_infantry_stats }
 		x = 0
-		y = 1
-		relative_position_id = FRA_firepower_kills
+		y = 2
+		relative_position_id = FRA_defensive_focus
 		cost = 5
 
 		available_if_capitulated = yes
 
 		completion_reward = {
 			add_ideas = FRA_infantry_focus
+			add_tech_bonus = {
+				name = FRA_gun_bonus
+				bonus = 1.0
+				uses = 2
+				technology = advanced_infantry_weapons
+				technology = improved_infantry_weapons_2
+			}
 		}
 	}
 	focus = {
 		id = FRA_fusiliers_marine
 		icon = GFX_goal_generic_amphibious_assault
-		x = 0
+		x = 1
 		y = 1
 		prerequisite = { focus = FRA_infantry_focus }
 		mutually_exclusive = { }
@@ -887,12 +1039,6 @@ focus = {
 				cost_reduction = 0.5
 				uses = 2
 				category = special_forces_doctrine
-			}
-			add_tech_bonus = {
-				name = FRA_gun_bonus
-				bonus = 1.0
-				uses = 2
-				category = infantry_weapons
 			}
 		}
 	}
@@ -991,6 +1137,7 @@ focus = {
 		icon = GFX_goal_generic_production2
 		text = "Tank Production"
 		prerequisite = { focus = FRA_battle_of_maneuver }
+		prerequisite = { focus = FRA_tank_stats2 }
 		x = -1
 		y = 1
 		relative_position_id = FRA_battle_of_maneuver
@@ -1098,8 +1245,9 @@ focus = {
 			focus = FRA_light_medium_armor 
 			focus = FRA_fusiliers_marine
 			focus = FRA_heavy_3
+			focus = FRA_infantry_kills
 		}
-		x = 1
+		x = -2
 		y = 1
 		relative_position_id = FRA_light_medium_armor
 		cost = 5
