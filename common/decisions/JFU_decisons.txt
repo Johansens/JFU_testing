@@ -2294,16 +2294,16 @@ JFU_templates = {
 					medium_armor = { x = 2 y = 1 }
 					medium_armor = { x = 2 y = 2 }
 					medium_armor = { x = 2 y = 3 }
-					medium_armor = { x = 2 y = 4 }		
 
 					medium_armor = { x = 3 y = 0 }
 					medium_armor = { x = 3 y = 1 }
 					medium_armor = { x = 3 y = 2 }
-					medium_armor = { x = 3 y = 3 }
-					medium_armor = { x = 3 y = 4 }		
+					medium_armor = { x = 3 y = 3 }		
 
 					medium_armor = { x = 4 y = 0 }
 					medium_armor = { x = 4 y = 1 }
+					medium_armor = { x = 4 y = 2 }
+					medium_armor = { x = 4 y = 3 }
 				}
 				support = { 
 					engineer = { x = 0 y = 0 } 
