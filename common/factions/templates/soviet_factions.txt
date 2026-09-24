@@ -19,7 +19,7 @@ faction_template_sov = {
 		joining_rule_communist_only
 		change_leader_rule_manpower
 		change_leader_rule_industry
-		war_declaration_rule_major_only
+		#war_declaration_rule_major_only
 
 		#war_declaration_generated_tension_25
 		#war_declaration_threat_75
