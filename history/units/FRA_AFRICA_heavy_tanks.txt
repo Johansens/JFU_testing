@@ -1,0 +1,143 @@
+﻿division_template = {
+	name = "FRANCE Veterans"
+	regiments = {
+		heavy_armor = { x = 0 y = 0 }
+		heavy_armor = { x = 0 y = 1 }
+		heavy_armor = { x = 0 y = 2 }
+		heavy_armor = { x = 0 y = 3 }
+		heavy_armor = { x = 4 y = 2 }
+		heavy_armor = { x = 1 y = 0 }
+		heavy_armor = { x = 1 y = 1 }
+		heavy_armor = { x = 1 y = 2 }
+		heavy_armor = { x = 1 y = 3 }
+		heavy_armor = { x = 4 y = 3 }
+		heavy_armor = { x = 4 y = 0 }
+		heavy_armor = { x = 4 y = 1 }
+		mechanized = { x = 2 y = 0 }
+		mechanized = { x = 2 y = 1 }
+		mechanized = { x = 2 y = 2 }
+		mechanized = { x = 2 y = 3 }
+		mechanized = { x = 3 y = 0 }
+		mechanized = { x = 3 y = 1 }
+		mechanized = { x = 3 y = 2 }
+		mechanized = { x = 3 y = 3 }
+
+	}
+	support = {
+		light_tank_recon = { x = 0 y = 0 }
+		engineer = { x = 0 y = 1 }
+		logistics_company = { x = 0 y = 2 }
+		anti_air = { x = 0 y = 3 }
+		medium_flame_tank = { x = 0 y = 4 }
+	}
+	regimental_support = {
+		heavy_sp_anti_air_support = {
+			x = 0
+			y = 0
+		}
+		heavy_sp_anti_air_support = {
+			x = 1
+			y = 0
+		}
+		heavy_sp_anti_air_support = {
+			x = 4
+			y = 0
+		}
+		mot_fire_support = {
+			x = 2
+			y = 0
+		}
+		mot_fire_support = {
+			x = 3
+			y = 0
+		}
+	}
+}
+
+units = {
+
+	##### Oberkommando des Heeres #####
+	### 1. Armee (Wehrmacht-Gruppenkommando) ###
+	# II. Armeekorps
+	division= {	
+		division_name = {
+				is_name_ordered = yes
+				name_order = 2
+		}
+		location = 5139
+		division_template = "Mastery Div"
+		start_experience_factor = 0.4
+	}
+	division= {	
+		division_name = {
+				is_name_ordered = yes
+				name_order = 2
+		}
+		location = 5139
+		division_template = "FRANCE Veterans"
+		start_experience_factor = 0.4
+	}
+	division= {	
+		division_name = {
+				is_name_ordered = yes
+				name_order = 2
+		}
+		location = 5139
+		division_template = "FRANCE Veterans"
+		start_experience_factor = 0.4
+	}
+	division= {	
+		division_name = {
+				is_name_ordered = yes
+				name_order = 2
+		}
+		location = 5139
+		division_template = "FRANCE Veterans"
+		start_experience_factor = 0.4
+	}
+	division= {	
+		division_name = {
+				is_name_ordered = yes
+				name_order = 2
+		}
+		location = 5139
+		division_template = "FRANCE Veterans"
+		start_experience_factor = 0.4
+	}
+	division= {	
+		division_name = {
+				is_name_ordered = yes
+				name_order = 2
+		}
+		location = 5139
+		division_template = "FRANCE Veterans"
+		start_experience_factor = 0.4
+	}
+	division= {	
+		division_name = {
+				is_name_ordered = yes
+				name_order = 2
+		}
+		location = 5139
+		division_template = "FRANCE Veterans"
+		start_experience_factor = 0.4
+	}
+	division= {	
+		division_name = {
+				is_name_ordered = yes
+				name_order = 2
+		}
+		location = 5139
+		division_template = "FRANCE Veterans"
+		start_experience_factor = 0.4
+	}
+	division= {	
+		division_name = {
+				is_name_ordered = yes
+				name_order = 2
+		}
+		location = 5139
+		division_template = "FRANCE Veterans"
+		start_experience_factor = 0.4
+	}
+}

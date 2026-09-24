@@ -1239,6 +1239,22 @@ focus = {
 	}
 
 	focus = {
+		id = FRA_heavy_tank_focus
+		text = "Infantry Tank"
+		icon = GFX_R56_FOCUS_GENERIC_STUDY_FOREIGN_TANKS
+		x = 1
+		y = 1
+		cost = 5
+		prerequisite = { focus = FRA_tank_mio }
+		prerequisite = { focus = FRA_heavy_3 }
+		available_if_capitulated = yes
+		relative_position_id = FRA_heavy_3
+		completion_reward = {
+			add_ideas = FRA_heavy_tanks 
+		}
+	}
+
+	focus = {
 		id = FRA_army_reform
 		icon = GFX_R56_GOAL_FRA_ARMY_REFORM
 		prerequisite = { 
@@ -1971,6 +1987,38 @@ focus = {
 
 		available_if_capitulated = yes
 		completion_reward = {
+			if = {
+				limit = {
+					FRA = {
+						has_idea = FRA_inefficient_economy_1
+					}
+				}
+				remove_ideas = FRA_inefficient_economy_1
+			}
+			if = {
+				limit = {
+					FRA = {
+						has_idea = FRA_inefficient_economy_2
+					}
+				}
+				remove_ideas = FRA_inefficient_economy_2
+			}
+			if = {
+				limit = {
+					FRA = {
+						has_idea = FRA_inefficient_economy_3
+					}
+				}
+				remove_ideas = FRA_inefficient_economy_3
+			}
+			if = {
+				limit = {
+					FRA = {
+						has_idea = FRA_inefficient_economy_4
+					}
+				}
+				remove_ideas = FRA_inefficient_economy_4
+			}
 			add_ideas = FRA_egalite_liberte_solidarite
 		}
 	}
