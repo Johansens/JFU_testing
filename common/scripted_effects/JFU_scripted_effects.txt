@@ -4236,14 +4236,14 @@ JFU_vichy_france_2 = {
 		#GER_set_consumer_goods_war_reparations = yes
 	}	
 	539 = { set_building_level = { type = infrastructure level = 5 } }
-	if = {
-		limit = {
-			FRA = {
-				is_ai = yes 
-			}
-		}
-		set_variable = { FRA_legitimacy = 100 }
-	}
+	# if = {
+	# 	limit = {
+	# 		FRA = {
+	# 			is_ai = yes 
+	# 		}
+	# 	}
+	# 	set_variable = { FRA_legitimacy = 100 }
+	# }
 	EFR ={ 
 		set_country_flag = vichy_france_established
 		###SOUTHERN FRANCE###
@@ -4278,8 +4278,8 @@ JFU_vichy_france_2 = {
 		transfer_state = 461
 		461 = { set_demilitarized_zone = yes }
 
-		if = { 
-			limit = { FRA = { check_variable = { FRA_legitimacy 	< 100 } }  }
+		# if = { 
+		# 	limit = { FRA = { check_variable = { FRA_legitimacy 	< 100 } }  }
 			transfer_state = 554
 			transfer_state = 680
 			transfer_state = 677
@@ -4290,10 +4290,10 @@ JFU_vichy_france_2 = {
 			add_state_core = 677
 			add_state_core = 799
 			add_state_core = 553
-		}
+		# }
 
-		if = { 
-			limit = { FRA = { check_variable = { FRA_legitimacy 	< 80 } }  }
+		# if = { 
+		# 	limit = { FRA = { check_variable = { FRA_legitimacy 	< 80 } }  }
 			transfer_state = 543
 			transfer_state = 706
 			transfer_state = 708
@@ -4302,10 +4302,10 @@ JFU_vichy_france_2 = {
 			add_state_core = 706
 			add_state_core = 708
 			add_state_core = 713
-		}
+		# }
 
-		if = { 
-			limit = { FRA = { check_variable = { FRA_legitimacy 	< 30 } }  }
+		# if = { 
+		# 	limit = { FRA = { check_variable = { FRA_legitimacy 	< 30 } }  }
 			transfer_state = 557
 			transfer_state = 272
 			transfer_state = 780
@@ -4338,12 +4338,12 @@ JFU_vichy_france_2 = {
 			#add_state_core = 514
 			add_state_core = 899
 			add_state_core = 898
-		}
+		# }
 		#if = { 
 		#	limit = { FRA = { check_variable = { FRA_legitimacy 	< 40 } }  }
-		#	transfer_state = 774
-		#	transfer_state = 773
-		#	transfer_state = 660
+			# transfer_state = 774
+			# transfer_state = 773
+			# transfer_state = 660
 			
 		#}
 		#if = { 
@@ -4356,17 +4356,17 @@ JFU_vichy_france_2 = {
 		add_ideas = VIC_produce_aircraft_parts
 	}
 	FRA = {
-		if = { 
-			limit = { FRA = { check_variable = { FRA_legitimacy 	> 40 } }  }
-			transfer_state = 295
-			transfer_state = 538
-			transfer_state = 718
-			transfer_state = 768
-			transfer_state = 769
-			transfer_state = 890
-			transfer_state = 889
-			transfer_state = 888
-		}
+		# if = { 
+		# 	limit = { FRA = { check_variable = { FRA_legitimacy 	> 40 } }  }
+			# transfer_state = 295
+			# transfer_state = 538
+			# transfer_state = 718
+			# transfer_state = 768
+			# transfer_state = 769
+			# transfer_state = 890
+			# transfer_state = 889
+			# transfer_state = 888
+		# }
 		#FRA_africa_spawn_ins = yes 
 		# add_equipment_to_stockpile = { type = medium_tank_chassis_2 amount = 350 producer = FRA variant_name = "AFRICA TANKs" }
 		# add_equipment_to_stockpile = { type = medium_tank_chassis_2 amount = 150 producer = FRA variant_name = "AFRICA TD" }

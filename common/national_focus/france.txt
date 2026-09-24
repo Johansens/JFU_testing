@@ -1724,16 +1724,16 @@ focus = {
 
 		available = {
 
-			check_variable = {  FRA_legitimacy > 30  }
+			# check_variable = {  FRA_legitimacy > 30  }
 				
-				custom_trigger_tooltip = {
-					tooltip = "Has at least 30 legitimacy"
-					check_variable = { FRA_legitimacy > 30 }
-				}
+			# 	custom_trigger_tooltip = {
+			# 		tooltip = "Has at least 30 legitimacy"
+			# 		check_variable = { FRA_legitimacy > 30 }
+			# 	}
 		}
 		
 		bypass = {
-			FRA = { controls_state = 557 }
+			# FRA = { controls_state = 557 }
 		}
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -1794,20 +1794,20 @@ focus = {
 		}
 		available = {
 			EFR = { controls_state = 554 }
-			check_variable = {  FRA_legitimacy > 100  }
+			# check_variable = {  FRA_legitimacy > 100  }
 				
 
-			custom_trigger_tooltip = {
-				tooltip = "Has at least 100 legitimacy"
-				check_variable = { FRA_legitimacy > 100 }
-			}
+			# custom_trigger_tooltip = {
+			# 	tooltip = "Has at least 100 legitimacy"
+			# 	check_variable = { FRA_legitimacy > 100 }
+			# }
 		}
 		
 		bypass = {
-			FRA = { 
-				controls_state = 554
-				}
-			}	
+			# FRA = { 
+			# 	controls_state = 554
+			# 	}
+		}	
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -1849,19 +1849,19 @@ focus = {
 		}		
 		available = {
 
-			check_variable = {  FRA_legitimacy > 40  }
+			# check_variable = {  FRA_legitimacy > 40  }
 
-			custom_trigger_tooltip = {
-				tooltip = "Has at least 40 legitimacy"
-				check_variable = { FRA_legitimacy > 40 }
-			}
+			# custom_trigger_tooltip = {
+			# 	tooltip = "Has at least 40 legitimacy"
+			# 	check_variable = { FRA_legitimacy > 40 }
+			# }
 		}
 		
 		bypass = {
-			FRA = { 
-				controls_state = 295 
-				}
-			}	
+			# FRA = { 
+			# 	controls_state = 295 
+			# 	}
+		}	
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -1908,16 +1908,16 @@ focus = {
 		}
 		available = {
 
-			check_variable = {  FRA_legitimacy > 80  }
+			# check_variable = {  FRA_legitimacy > 80  }
 				
-				custom_trigger_tooltip = {
-					tooltip = "Has at least 80 legitimacy"
-					check_variable = { FRA_legitimacy > 80 }
-				}
+			# 	custom_trigger_tooltip = {
+			# 		tooltip = "Has at least 80 legitimacy"
+			# 		check_variable = { FRA_legitimacy > 80 }
+			# 	}
 		}
 		
 		bypass = {
-			FRA = { controls_state = 543 }
+			# FRA = { controls_state = 543 }
 		}
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -1958,12 +1958,12 @@ focus = {
 			factor = 1
 		}
 		available = {
-			check_variable = {  FRA_legitimacy > 100  }
+			# check_variable = {  FRA_legitimacy > 100  }
 
-			custom_trigger_tooltip = {
-				tooltip = "Has at least 100 legitimacy"
-				check_variable = { FRA_legitimacy > 100 }
-			}
+			# custom_trigger_tooltip = {
+			# 	tooltip = "Has at least 100 legitimacy"
+			# 	check_variable = { FRA_legitimacy > 100 }
+			# }
 		}
 		
 		bypass = {
@@ -1992,11 +1992,11 @@ focus = {
 
 		available = {
 			has_global_flag = EFR_torch_declared
-			check_variable = {  FRA_legitimacy > 99  }
-				custom_trigger_tooltip = {
-				tooltip = "Has 100 legitimacy"
-				check_variable = { FRA_legitimacy > 99 }
-			}
+			# check_variable = {  FRA_legitimacy > 99  }
+			# 	custom_trigger_tooltip = {
+			# 	tooltip = "Has 100 legitimacy"
+			# 	check_variable = { FRA_legitimacy > 99 }
+			# }
 		}
 		
 
@@ -2199,12 +2199,12 @@ focus = {
 			factor = 1
 		}
 		available = {
-			check_variable = {  FRA_legitimacy > 60  }
+			# check_variable = {  FRA_legitimacy > 60  }
 
-			custom_trigger_tooltip = {
-				tooltip = "Has at least 60 legitimacy"
-				check_variable = { FRA_legitimacy > 60 }
-			}
+			# custom_trigger_tooltip = {
+			# 	tooltip = "Has at least 60 legitimacy"
+			# 	check_variable = { FRA_legitimacy > 60 }
+			# }
 		}
 		cancel_if_invalid = yes
 		continue_if_invalid = no
