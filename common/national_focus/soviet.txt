@@ -3242,6 +3242,10 @@ focus_tree = {
 			}
 		}
 		
+		bypass = {
+			has_completed_focus = SOV_the_permanent_revolution
+		}
+
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_SOV_POLITICAL_PARANOIA}
 
 		select_effect = {
@@ -3295,15 +3299,15 @@ focus_tree = {
 				SOV_add_random_character_to_purge_targets_effect = yes
 			}
 			#Ryutin
-			if = {
-				limit = {
-					NOT = { has_completed_focus = SOV_incorporate_local_organizations }
-					has_character = SOV_martemyan_ryutin
-				}
-				SOV_martemyan_ryutin = {
-					set_character_flag = SOV_targeted_for_purge_flag
-				}
-			}
+			#if = {
+			#	limit = {
+			#		NOT = { has_completed_focus = SOV_incorporate_local_organizations }
+			#		has_character = SOV_martemyan_ryutin
+			#	}
+			#	SOV_martemyan_ryutin = {
+			#		set_character_flag = SOV_targeted_for_purge_flag
+			#	}
+			#}
 			#else_if = { 
 			#	limit = {
 			#		has_completed_focus = SOV_incorporate_local_organizations 
@@ -3313,9 +3317,9 @@ focus_tree = {
 			#		set_character_flag = SOV_targeted_for_purge_flag
 			#	}
 			#}
-			else = {
-				SOV_add_random_character_to_purge_targets_effect = yes
-			}
+			#else = {
+			#	SOV_add_random_character_to_purge_targets_effect = yes
+			#}
 			#Ustryalov
 			#if = {
 			#	limit = {
@@ -3362,7 +3366,11 @@ focus_tree = {
 		available = {
 
 		}
-		
+
+		bypass = {
+			has_completed_focus = SOV_the_permanent_revolution
+		}
+
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_SOV_POLITICAL_PARANOIA}
 
 		completion_reward = {
@@ -3438,6 +3446,10 @@ focus_tree = {
 		y = 2
 		relative_position_id = SOV_the_anti_soviet_trotskyist_center
 		cost = 5
+
+		bypass = {
+			has_completed_focus = SOV_the_permanent_revolution
+		}
 
 		available = {
 			has_country_flag = {
@@ -3542,7 +3554,10 @@ focus_tree = {
 		y = 1
 		relative_position_id = SOV_the_military_conspiracy
 		cost = 5
-		bypass = { has_completed_focus = SOV_incorporate_local_organizations }
+		bypass = { 
+			has_completed_focus = SOV_the_permanent_revolution
+			has_completed_focus = SOV_incorporate_local_organizations
+		}
 
 		available = {
 			has_country_flag = {
@@ -3667,10 +3682,6 @@ focus_tree = {
 		cost = 5
 
 		available = {
-			OR = {
-				has_completed_focus = SOV_positive_heroism
-				has_completed_focus = SOV_collectivist_propaganda
-			}
 			has_country_flag = {
 				flag = SOV_third_moscow_trial_flag
 				days > 175
@@ -4313,6 +4324,10 @@ focus_tree = {
 		relative_position_id = SOV_expand_the_agitprop
 		cost = 5
 
+		#available = {
+		#	always = no
+		#}
+
 		search_filters = {FOCUS_FILTER_POLITICAL}
 
 		completion_reward = {
@@ -4366,9 +4381,9 @@ focus_tree = {
 			add_stability = 0.05
 			custom_effect_tooltip = generic_skip_one_line_tt
 			add_ideas = new_economic_policy
-			custom_effect_tooltip = generic_skip_one_line_tt
-			custom_effect_tooltip = unlock_propaganda_campaign_slot_tt
-			SOV_unlock_propaganda_campaign_slot_effect = yes
+			#custom_effect_tooltip = generic_skip_one_line_tt
+			#custom_effect_tooltip = unlock_propaganda_campaign_slot_tt
+			#SOV_unlock_propaganda_campaign_slot_effect = yes
 			custom_effect_tooltip = generic_skip_one_line_tt
 
 			hidden_effect = {
@@ -4517,6 +4532,7 @@ focus_tree = {
 		mutually_exclusive = { focus = SOV_incorporate_local_organizations  focus = SOV_positive_heroism focus = SOV_collectivist_propaganda }
 		cost = 5
 		available = { 
+			#always = no
 			NOT = { 
 				has_completed_focus = SOV_socialism_in_one_country 
 			}
