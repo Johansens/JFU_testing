@@ -584,6 +584,8 @@ on_actions = {
 					add_compliance = 50 
 				}
 				NOR = {
+					complete_national_focus = NOR_FINAL_FOCUS
+					complete_national_focus = NOR_ARREST
 					complete_national_focus = NOR_ALLIANCE
 					set_country_flag = GER_has_capitulated_to_germany
 				}

@@ -34,31 +34,27 @@ sub_units = {
 		max_organisation = 10
 		default_morale = 0.3
 		training_time = 180
-		max_strength = 2
+		max_strength = 6
 		weight = 1
 		supply_consumption = 0.18
 
 		breakthrough = 0.15	
 
 		forest = {
-			attack = -0.2
-			movement = -0.4
+		    attack = -0.2
+			movement = -0.3
 		}
 		mountain = 	{
-			defence = -0.45
-		    attack = -0.35
-		}
-		plains = {
-			attack = -0.1
-			movement = -0.1
+			defence = -0.75
+		    attack = -0.65
 		}
 		jungle = {
-		    attack = -0.25
-			defence = -0.3
-			movement = -0.25
+		    attack = -0.3
+			defence = -0.4
+			movement = -0.3
 		}
 		urban = {
-			attack = -0.4
+			attack = -0.3
 			defence = -0.1
 		}
 		marsh = {
@@ -106,7 +102,7 @@ sub_units = {
 		max_organisation = 10
 		default_morale = 0.3
 		training_time = 180
-		max_strength = 2
+		max_strength = 6
 		weight = 1
 		supply_consumption = 0.18
 
@@ -176,28 +172,27 @@ sub_units = {
 		max_organisation = 10
 		default_morale = 0.3
 		training_time = 180
-		max_strength = 2
+		max_strength = 6
 		weight = 1
 		supply_consumption = 0.18
 
 		breakthrough = 0.15	
 
 		forest = {
-		    attack = -0.2
+		    attack = -0.3
 			movement = -0.4
 		}
-		mountain = 	{
-			defence = -0.35
-		    attack = -0.25
+		hills = 	{
+		    attack = -0.1
 		}
-		plains = {
-			attack = -0.1
-			movement = -0.1
+		mountain = 	{
+			defence = -0.85
+		    attack = -0.75
 		}
 		jungle = {
-		    attack = -0.25
-			defence = -0.3
-			movement = -0.25
+		    attack = -0.5
+			defence = -0.6
+			movement = -0.5
 		}
 		urban = {
 			attack = -0.4
@@ -248,30 +243,31 @@ sub_units = {
 		max_organisation = 10
 		default_morale = 0.3
 		training_time = 180
-		max_strength = 2
+		max_strength = 6
 		weight = 1
 		supply_consumption = 0.18
 
 		breakthrough = 0.15	
 
 		forest = {
-		    attack = -0.2
-			movement = -0.4
+		    attack = -0.40
+			movement = -0.40
+		}
+		hills = {
+		    attack = -0.20
 		}
 		mountain = 	{
-		    attack = -0.1
-		}
-		plains = {
-			attack = -0.1
-			movement = -0.1
+			attack = -0.9
+		    defence = -0.8
 		}
 		jungle = {
-		    attack = -0.3
+		    attack = -0.65
+			defence = -0.8
 			movement = -0.4
 		}
 		urban = {
-			attack = -0.4
-			defence = -0.1
+			attack = -0.5
+			defence = -0.2
 		}
 		marsh = {
 			attack = 0.3

@@ -1,6 +1,6 @@
 NDefines.NGame.LAG_DAYS_FOR_LOWER_SPEED = 480			
 NDefines.NGame.LAG_DAYS_FOR_PAUSE = 20
-NDefines.NGame.GAME_SPEED_SECONDS = { 600.0, 0.13, 0.25, 0.09, 0.0 }
+NDefines.NGame.GAME_SPEED_SECONDS = { 600.0, 0.13, 0.25, 0.10, 0.0 }
 NDefines.NGame.DIPLOMACY_ACCEPT_ATTACHE_BASE = 200
 NDefines.NGame.DIPLOMACY_ACCEPT_ATTACHE_OPINION_TRASHHOLD = 10
 NDefines.NGame.COMBAT_LOG_MAX_MONTHS = 14 							    -- WAS 48 | drastically cuts down on save file sizes after WW2 starts and well into barbarossa
