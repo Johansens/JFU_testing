@@ -1035,6 +1035,13 @@ political_actions1 = {
 					transfer_state = 418 
 					transfer_state = 419
 				}
+				ITA = {
+					transfer_state = 554
+					transfer_state = 553
+					transfer_state = 677
+					transfer_state = 799
+					transfer_state = 680
+				}
 				news_event = { id = news.5002 }
 				if = {
 					limit = {
