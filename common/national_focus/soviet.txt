@@ -3553,9 +3553,11 @@ focus_tree = {
 		y = 1
 		relative_position_id = SOV_the_military_conspiracy
 		cost = 5
-		bypass = { 
-			has_completed_focus = SOV_the_permanent_revolution
-			has_completed_focus = SOV_incorporate_local_organizations
+		bypass = {
+			OR = {
+				has_completed_focus = SOV_the_permanent_revolution
+				has_completed_focus = SOV_incorporate_local_organizations	
+			}
 		}
 
 		available = {
