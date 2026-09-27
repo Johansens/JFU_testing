@@ -747,6 +747,8 @@ ideas = {
 			
 			modifier = {
 				global_building_slots_factor = 0.2  
+				production_speed_rail_way_factor = 0.2
+				production_speed_supply_node_factor = 0.2
 			}
 		}
 		FRA_communist_cooperation = {
@@ -807,6 +809,24 @@ ideas = {
 				consumer_goods_factor = -0.1
 			}
 		}
+		FRA_intervention_cost = {
+			name = "Campaign in Africa"
+			picture = man_five_year_plan_industry
+			allowed = {
+				original_tag = FRA 
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = democratic
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.1
+			}
+		}
 		FRA_civil_and_military_organization = {
 			picture = FRA_scw_intervention_nationalists_focus
 			allowed = {
@@ -839,8 +859,8 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				industrial_factory_donations = 2	
-				military_factory_donations = 2
+				consumer_goods_factor = -0.1	
+				war_support_factor = 0.10
 				war_support_factor = 0.10
 				stability_factor = 0.10
 			}

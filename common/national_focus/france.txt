@@ -447,7 +447,7 @@
 				uses = 3
 				bonus = 0.5
 				category = electronics
-			}			
+			}		
 		}
 	}
 
@@ -494,7 +494,20 @@
 					level = 1
 					instant_build = yes
 				}
-			}				
+			}
+			774 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_resource = {
+					type = steel
+					amount = 20
+					state = THIS
+				}
+			}						
 		}
 	}
 
@@ -1114,17 +1127,20 @@ focus = {
 		available_if_capitulated = yes
 		prerequisite = { focus = FRA_begin_rearmament }
 		completion_reward = {
-			add_tech_bonus = {
-				name = FRA_mechanized_focus
-				bonus = 1.0
-				uses = 1
-				category = cat_mechanized_equipment
-			}	
+				
 			add_tech_bonus = {
 				name = FRA_light_medium_armor
 				bonus = 1.0
 				uses = 1
 				technology = improved_medium_tank_chassis
+				#technology = advanced_light_tank_chassis
+				#technology = improved_heavy_tank_chassis
+			}	
+			add_tech_bonus = {
+				name = FRA_light_medium_armor
+				bonus = 1.0
+				uses = 1
+				#technology = improved_medium_tank_chassis
 				technology = advanced_light_tank_chassis
 				#technology = improved_heavy_tank_chassis
 			}	
@@ -1135,6 +1151,13 @@ focus = {
 				#technology = improved_medium_tank_chassis
 				#technology = advanced_light_tank_chassis
 				technology = improved_heavy_tank_chassis
+			}
+			add_tech_bonus = {
+				name = FRA_mechanized_focus
+				ahead_reduction = 1
+				bonus = 1.0
+				uses = 1
+				category = cat_mechanized_equipment
 			}
 		}
 	}
@@ -1173,15 +1196,7 @@ focus = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			custom_effect_tooltip = available_theorist
-			show_ideas_tooltip = charles_de_gaulle
-
-			add_doctrine_cost_reduction = {
-				name = FRA_army_reform
-				cost_reduction = 0.5
-				uses = 2
-				category = land_doctrine
-			}	
+			add_ideas = charles_de_gaulle
 		}
 	}
 
@@ -1827,7 +1842,10 @@ focus = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 		completion_reward = {
-			
+			add_timed_idea = {
+				idea = FRA_intervention_cost
+				days = 25
+			}
 			FRA = { 
 				transfer_state = 557
 				transfer_state = 272
@@ -1901,7 +1919,11 @@ focus = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 
-		completion_reward = {			
+		completion_reward = {
+			add_timed_idea = {
+				idea = FRA_intervention_cost
+				days = 25
+			}			
 			FRA = { 
 				transfer_state = 554
 				transfer_state = 680
@@ -1955,7 +1977,11 @@ focus = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 
-		completion_reward = {			
+		completion_reward = {	
+			add_timed_idea = {
+				idea = FRA_intervention_cost
+				days = 25
+			}		
 			FRA = { 
 			transfer_state = 295
 			transfer_state = 538
@@ -2011,7 +2037,10 @@ focus = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 		completion_reward = {
-			
+			add_timed_idea = {
+				idea = FRA_intervention_cost
+				days = 25
+			}
 			FRA = { 
 				transfer_state = 543
 				transfer_state = 706
@@ -2063,6 +2092,46 @@ focus = {
 		completion_reward = {
 			add_war_support = 0.1
 			add_stability = 0.1
+		}
+	}
+
+	focus = {
+		id = FRA_core_africa
+		text = "Our new Home"
+		icon = GFX_R56_GOAL_FRA_AFRICA
+		x = -2
+		y = 3
+
+		prerequisite = { 
+			focus = FRA_form_the_national_committee
+		}
+		relative_position_id = FRA_appeal_to_overseas_territories
+		
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT }
+		completion_reward = {
+			772 = {
+				add_core_of = FRA
+			}
+			773 = {
+				add_core_of = FRA
+			}
+			660 = {
+				add_core_of = FRA
+			}
+			774 = {
+				add_core_of = FRA
+			}
 		}
 	}
 	focus = {
@@ -2561,24 +2630,19 @@ focus = {
 			swap_ideas = {
 				remove_idea = FRA_civil_and_military_organization
 				add_idea = FRA_national_council_of_the_resistance
-			}
-			IF = {
-				limit = { 
-					539 = {
-						is_fully_controlled_by = ROOT
-						air_facility < 1
-						land_facility < 1
-						naval_facility < 1
-						nuclear_facility < 1
-					}
+			}	
+			539 = {
+				add_building_construction = {
+					type = land_facility
+					level = 1
+					instant_build = yes
+					province = 6710 
 				}
-				539 = {
-					add_building_construction = {
-						type = land_facility
-						level = 1
-						instant_build = yes
-						province = 6710 
-					}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes 
 				}
 			}
 		}
