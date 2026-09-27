@@ -4163,8 +4163,9 @@ JFU_vichy_france = {
 			character = FRA_charles_de_gaulle
 			ideology = conservatism
 		}
-		add_ideas = FRA_defeatism
+		#add_ideas = FRA_defeatism
 		set_equipment_fraction = 0.0
+		complete_national_focus = FRA_appeal_to_the_french_nation
 	}
 	JFU_vichy_france_2 = yes
 	ENG = {

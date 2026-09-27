@@ -1161,7 +1161,7 @@ characters={
 			}
 			cost  = 150.000
 			traits  = {
-				technocrat 
+				industrial_concern 
 			}
 			do_effect  = {
 			}
@@ -1341,7 +1341,7 @@ characters={
 				original_tag  = FRA
 			}
 			traits  = {
-				quartermaster_general 
+				right_trade_unionist
 			}
 			on_add  = {
 			}
