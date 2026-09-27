@@ -1928,7 +1928,7 @@ ITA_strengthen_northern_industry_buildings_tt:0 "Militärische Industrieorganisa
 
 
  france_cap_tt:0 "§RDieser Fokus wird bei unserer Kapitulation automatisch abgeschlossen!§!"
-
+ france_infra_tt:0 "\n§G========================================§!\n\nEs wird empfohlen, die folgenden Stufen an §YInfrastruktur§! in den Staaten auszubauen:\n§YGabun§!: Stufe 1\n§YMittelkongo§!: Stufe 2\n§YTschad§!: Stufe 2\n§YKamerun§!: Stufe 2\n§YÄquatorialafrika§!: Stufe 3"
 
 
 

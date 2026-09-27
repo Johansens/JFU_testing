@@ -1931,6 +1931,7 @@
  FRA_mio_trait_automitrailleuses2:0 "Automitrailleuses Tank Trait"
 
  france_cap_tt:0 "§RThis focus will be automatically completed upon our capitulation!§!"
+ france_infra_tt:0 "\n§G========================================§!\n\nIt's recommended to build the following levels of §YInfrastructure§! in States:\n§YGabon§!: Level 1\n§YMiddle Congo§!: Level 2\n§YChad§!: Level 2\n§YCameroon§!: Level 2\n§YEquatorial Africa§!: Level 3"
 
 
 
