@@ -2153,6 +2153,7 @@ focus_tree = {
 				uses = 1
 				category = infantry_weapons
 			}
+			add_ideas = ITA_arms_discount
 		}
 	}
 
