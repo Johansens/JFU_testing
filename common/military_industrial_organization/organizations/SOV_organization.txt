@@ -296,6 +296,20 @@ SOV_astrov_design_bureau_organization = {
 			soft_attack = @tank_soft_attack
 		}
 	}
+		add_trait = { 
+		token = USA_mio_trait_mass_production_of_armor
+		name = USA_mio_trait_mass_production_of_armor
+		icon = GFX_generic_mio_department_icon_tank_medium_tank_line_efficiency
+		special_trait_background = yes
+
+		position = { x=2 y=0 }
+		relative_position_id = generic_mio_trait_simplified_turret_design
+		all_parents = { generic_mio_trait_all_round_cupola generic_mio_trait_armor_steel_working }
+		production_bonus = {
+			production_efficiency_cap_factor = 0.05
+			production_efficiency_gain_factor = 0.05
+		}
+	}
 }
 
 SOV_okmo_organization = {
