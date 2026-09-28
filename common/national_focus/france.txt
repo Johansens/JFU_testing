@@ -311,7 +311,6 @@
 	
 			search_filters = { FOCUS_FILTER_STABILITY }
 			completion_reward = {
-				add_stability = 0.1
 				774 = {
 				add_extra_state_shared_building_slots = 10
 				add_building_construction = {
@@ -359,7 +358,7 @@
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
 			772 = {	
-				add_extra_state_shared_building_slots = 6
+				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 				type = arms_factory
 				level = 2
@@ -512,6 +511,25 @@
 	}
 
 	focus = {
+		id = FRA_military_factories6
+		text = "Rapid Industrialization"
+		icon = GFX_focus_generic_modernize_industry
+		available = {
+			
+		}
+		prerequisite = {focus =  FRA_military_factories5 }
+		x = -2
+		y = 2
+		relative_position_id = FRA_military_factories2
+		cost = 5
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_ideas = FRA_rapid_industrialization	
+		}
+	}
+
+	focus = {
 		id = FRA_military_factories3
 		text = "Invite Foreign Investors"
 		icon = GFX_goal_generic_intelligence_exchange
@@ -605,7 +623,7 @@ focus = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			773 = { 
-				add_extra_state_shared_building_slots = 6 
+				add_extra_state_shared_building_slots = 4 
 				add_building_construction = {
 					type = infrastructure
 					level = 1
@@ -668,7 +686,7 @@ focus = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			539 = { 
-				add_extra_state_shared_building_slots = 6
+				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = infrastructure
 					level = 1
@@ -748,7 +766,7 @@ focus = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 			660 = { 
-				add_extra_state_shared_building_slots = 6
+				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = infrastructure
 					level = 1
@@ -957,8 +975,7 @@ focus = {
 		available_if_capitulated = yes
 		relative_position_id = FRA_begin_rearmament
 		completion_reward = {
-			custom_effect_tooltip = available_chief_of_army
-			show_ideas_tooltip = maxime_weygand
+			add_ideas = maxime_weygand
 		}
 	}
 	focus = {
@@ -1111,8 +1128,7 @@ focus = {
 		available_if_capitulated = yes
 		prerequisite = { focus = FRA_begin_rearmament }
 		completion_reward = {
-			custom_effect_tooltip = available_chief_of_army
-			show_ideas_tooltip = maurice_gamelin
+			add_ideas = maurice_gamelin
 		}
 	}
 
@@ -1319,7 +1335,7 @@ focus = {
 		x = 5
 		y = 1
 		cost = 5
-		prerequisite = { focus = FRA_aggressive_focus }
+		prerequisite = { focus = FRA_tank_focus1 }
 		available_if_capitulated = yes
 		relative_position_id = FRA_aggressive_focus
 		completion_reward = {
@@ -1400,8 +1416,6 @@ focus = {
 					reluctant_interventionist
 				}
 			}
-			add_stability = 0.05
-			add_political_power = 50
 		}
 	}	
 	
@@ -1503,8 +1517,7 @@ focus = {
 			has_equipment = {
 				infantry_equipment_0 > 4999
 			}
-			SPR_scw_in_progress = yes
-			is_subject = no
+			date > 1936.9.1
 		}
 		
 		bypass = {
@@ -1558,47 +1571,11 @@ focus = {
 		search_filters = { FOCUS_FILTER_STABILITY }
 		completion_reward = {
 			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = FRA_pierre_pucheu
+			#custom_effect_tooltip = linie_tt
+			custom_effect_tooltip = space_tt
+			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = georges_bonnet
-			if = {
-				limit = {
-					YUG = { is_guaranteed_by = ROOT }
-				}
-				ROOT = {
-					diplomatic_relation = {
-   						country = YUG
-   						relation = guarantee
-   						active = no
-  					}
-  					add_ai_strategy = {
-						type = ignore
-						id = "YUG"
-						value = 100
-					}
-				}
-				YUG = {
-					add_opinion_modifier = { target = ROOT modifier = western_betrayal }
-				}
-			}
-			if = {
-				limit = {
-					CZE = { is_guaranteed_by = ROOT }
-				}
-				ROOT = {
-					diplomatic_relation = {
-   						country = CZE
-   						relation = guarantee
-   						active = no
-  					}
-  					add_ai_strategy = {
-						type = ignore
-						id = "CZE"
-						value = 100
-					}
-				}
-				CZE = {
-					add_opinion_modifier = { target = ROOT modifier = western_betrayal }
-				}
-			}
 		}
 	}
 	focus = {

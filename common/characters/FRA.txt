@@ -812,7 +812,7 @@ characters={
 				original_tag = FRA
 			}
 			traits = {
-				army_chief_offensive_2
+				army_chief_offensive_1
 			}
 			cost =  50
 			ai_will_do = {
@@ -835,7 +835,7 @@ characters={
 				original_tag = FRA
 			}
 			traits = {
-				army_chief_defensive_2
+				army_chief_defensive_1
 			}
 			cost =  50
 			ai_will_do = {
@@ -1127,7 +1127,6 @@ characters={
 			}
 			available  = {
 				has_completed_focus  = FRA_buy_time 
-				has_government  = democratic 
 			}
 			cost  = 75.000
 			traits  = {
@@ -1155,13 +1154,14 @@ characters={
 				original_tag  = FRA
 			}
 			available  = {
-				not  = {
-					has_government  = communism 
-				}
+				has_completed_focus  = FRA_buy_time 
 			}
 			cost  = 150.000
 			traits  = {
-				industrial_concern 
+				the_statist
+			}
+			modifier = {
+				political_power_gain = 0.5
 			}
 			do_effect  = {
 			}

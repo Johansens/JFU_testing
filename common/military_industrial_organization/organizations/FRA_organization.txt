@@ -51,7 +51,7 @@ FRA_renault_organization = {
 			}
 		}
 
-		position = { x=8 y=0 }  
+		position = { x=9 y=0 }  
 		limit_to_equipment_type = { heavy_tank_chassis }
 		equipment_bonus = {
 			soft_attack = 0.02

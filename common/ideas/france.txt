@@ -122,6 +122,26 @@ ideas = {
 				industrial_capacity_dockyard = -0.3
 			}
 		}
+
+		FRA_rapid_industrialization = {
+			name = "Rapid Industrialization"
+			picture = generic_local_self_management
+			allowed = {
+				original_tag = FRA
+				always = no
+			}
+
+			allowed_civil_war = {
+				tag = FRA
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				production_factory_start_efficiency_factor = 0.1
+				industrial_capacity_factory = 0.025
+			}
+		}
 		FRA_political_violence = {
 
 			allowed = {
@@ -322,9 +342,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				production_factory_max_efficiency_factor = 0.025
-				line_change_production_efficiency_factor = 0.025
-				production_factory_efficiency_gain_factor = 0.025
+				production_factory_max_efficiency_factor = 0.05
 			}
 			#research_bonus = { industry = 0.1}
 		}
@@ -963,7 +981,7 @@ ideas = {
 			picture = generic_disjointed_gov
 			
 			modifier = {
-				political_power_cost = 0.8
+				political_power_cost = 0.6
 				stability_factor = -0.30
 			}
 		}
@@ -1164,7 +1182,7 @@ ideas = {
 				}
 
 				modifier = {
-					stability_weekly = 0.002					
+					stability_weekly = 0.001
 				}
 		}		
 		
