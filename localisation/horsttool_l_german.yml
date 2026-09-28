@@ -1930,8 +1930,8 @@ ITA_arms_discount_tt:0 "Small Arms Company"
 SOV_propaganda_defend_Stalingrad: "Wir werden Stalingrad verteidigen!"
 SOV_propaganda_defend_Leningrad: "Wir werden Leningrad verteidigen!"
 
-
-
+SOV_no_air:0 "Ungeschützt von Oben"
+SOV_no_air_desc:0 "Sobald der verbesserte Jäger erforscht und gebaut wurde ist die Luftwaffe der Roten Armee in der Lage, die Luftüberlegenheit zu erlangen. Wir müssen unsere Luftwaffe aufbauen, um unsere Städte und Industrie zu schützen."
 
 
 

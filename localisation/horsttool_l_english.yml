@@ -1931,7 +1931,8 @@
 SOV_propaganda_defend_Stalingrad: "We Shall Defend Stalingrad!"
 SOV_propaganda_defend_Leningrad: "We Shall Defend Leningrad!"
 
-
+SOV_no_air:0 "Vulnerable from Above"
+SOV_no_air_desc:0 "After researching and producing the improved small fighter we will be able to defend our cities from the air. Until then we are vulnerable to enemy air attacks."
 
 
 

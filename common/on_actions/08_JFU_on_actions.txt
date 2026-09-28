@@ -729,6 +729,21 @@ on_actions = {
 			}
 		}
 	}
+	on_monthly_SOV = {
+		effect = {
+			if = { 
+				limit = { 
+					has_completed_focus = SOV_transpolar_flights
+					has_tech = improved_small_airframe
+					has_deployed_air_force_size = {
+						size > 4999
+						type = fighter
+					}
+				}
+				remove_ideas = SOV_no_air
+			}
+		}
+	}
 	on_weekly_SOV = {
 		effect = {
 			if = {

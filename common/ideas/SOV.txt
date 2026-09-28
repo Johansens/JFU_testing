@@ -10,6 +10,19 @@ ideas = {
 
 
 	country= {
+		SOV_no_air = {
+			name = SOV_no_air
+			picture = air_support_focus
+			
+			removal_cost = -1
+			allowed = {
+				original_tag = SOV
+			}
+			modifier = {
+				cas_damage_reduction = -10
+				enemy_army_bonus_air_superiority_factor = 10
+			}
+		}
 
 		SOV_second_five_year_plan_fake_1936_ns = { #Only used for 1936 bookmark (dynamic modifiers don't show up there)
 			name = SOV_second_five_year_plan_dynamic_modifier
