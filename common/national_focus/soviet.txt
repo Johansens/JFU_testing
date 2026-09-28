@@ -2284,10 +2284,6 @@ focus_tree = {
 		relative_position_id = SOV_rehabilitated_military
 		cost = 5
 
-		select_effect = {
-			add_ideas = SOV_military_reorganization_ns
-		}
-
 		available = {
 
 		}
@@ -2295,17 +2291,7 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_ARMY_XP}
 
 		completion_reward = {
-			#Tooltip purposes (Select Effect)
-			custom_effect_tooltip = SOV_focus_select_effect_tt
-			effect_tooltip = {
-				add_ideas = SOV_military_reorganization_ns
-			}
-
-			#(Complete Effect)
-			custom_effect_tooltip = SOV_focus_complete_effect_tt
-			hidden_effect = {
-				remove_ideas = SOV_military_reorganization_ns
-			}
+			remove_ideas = SOV_military_reorganization_ns
 
 			army_experience = 50
 			add_command_power = 25

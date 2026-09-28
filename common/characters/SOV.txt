@@ -209,7 +209,7 @@ characters = {
 				}
 			}
 			available = {
-				has_completed_focus = SOV_war_heroes
+				has_completed_focus = SOV_revive_the_stakhanovite_movement
 
 			}
 			traits = {
@@ -318,7 +318,7 @@ characters = {
 				original_tag = SOV
 			}
 			available = {
-				has_completed_focus = SOV_war_heroes
+				has_completed_focus = SOV_revive_the_stakhanovite_movement
 			}
 			traits = {
 				army_chief_offensive_2
@@ -556,7 +556,7 @@ characters = {
 				original_tag = SOV
 			}
 			available = {
-				has_completed_focus = SOV_war_heroes
+				has_completed_focus = SOV_revive_the_stakhanovite_movement
 			}
 			traits = {
 				army_CombinedArms_2

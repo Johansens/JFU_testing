@@ -220,6 +220,9 @@ NDefines.NOperatives.OPERATIVE_CAPTURE_DURATION_IN_DAYS = 1
 NDefines.NOperatives.AGENCY_CREATION_FACTORIES = 0
 
 NDefines.NIntel.ARMY_INTEL_COMBAT_BONUS_MAX_BONUS = 0
+NDefines.NIntel.ARMY_STOCKPILE_COUNT_INTEL_MIN = 0.1
+NDefines.NIntel.ARMY_STOCKPILE_COUNT_INTEL_MAX = 0.3
+NDefines.NIntel.ARMY_MIN_INTEL_TO_SHOW_EQUIPMENT_DESIGN_DETAILS = 0.3
 
 NDefines.NIndustrialOrganisation.DESIGN_TEAM_CHANGE_XP_COST = 0	-- Flat cost added to the XP cost of a new equipment design. If 0, cost is entirely disabled.
 
