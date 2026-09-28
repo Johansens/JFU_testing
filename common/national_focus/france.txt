@@ -1465,7 +1465,9 @@ focus = {
 		icon = GFX_R56_GOAL_FRA_STATUS_QUO
 		x = 0
 		y = 1
-
+		available = {
+			has_war_support > 0.25
+		}
 		prerequisite = {
 			focus = FRA_protect_the_rights_of_man
 		}
@@ -1491,13 +1493,16 @@ focus = {
 		}
 		
 		relative_position_id = FRA_form_the_popular_front
-		cost = 1
+		cost = 5
 
 		ai_will_do = {
 			factor = 1
 		}
 
 		available = {
+			has_equipment = {
+				infantry_equipment_0 > 4999
+			}
 			SPR_scw_in_progress = yes
 			is_subject = no
 		}
@@ -1511,8 +1516,17 @@ focus = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			unlock_decision_category_tooltip = FRA_spanish_intervention_category
-			set_country_flag = FRA_non_intervention
+			add_war_support = 0.05
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_0
+				amount = -5000
+			}
+			hidden_effect = {
+				load_oob = FRA_spain_vets
+			}
+			custom_effect_tooltip = FRA_veterans 
+			# unlock_decision_category_tooltip = FRA_spanish_intervention_category
+			# set_country_flag = FRA_non_intervention
 		}
 	}
 	focus = {
@@ -1841,11 +1855,20 @@ focus = {
 		continue_if_invalid = no
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_ANNEXATION }
+		select_effect = {
+			add_ideas = FRA_intervention_cost
+		}
 		completion_reward = {
-			add_timed_idea = {
-				idea = FRA_intervention_cost
-				days = 25
+			custom_effect_tooltip = SOV_focus_select_effect_tt
+			effect_tooltip = {
+				add_ideas = FRA_intervention_cost
+			}	
+			
+			custom_effect_tooltip = FRA_focus_complete
+			hidden_effect = {
+				remove_ideas = FRA_intervention_cost
 			}
+			custom_effect_tooltip = linie_tt
 			FRA = { 
 				transfer_state = 557
 				transfer_state = 272
@@ -1918,12 +1941,20 @@ focus = {
 		continue_if_invalid = no
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_ANNEXATION }
-
-		completion_reward = {
-			add_timed_idea = {
-				idea = FRA_intervention_cost
-				days = 25
-			}			
+		select_effect = {
+			add_ideas = FRA_intervention_cost
+		}
+		completion_reward = {	
+			custom_effect_tooltip = SOV_focus_select_effect_tt
+			effect_tooltip = {
+				add_ideas = FRA_intervention_cost
+			}	
+			
+			custom_effect_tooltip = FRA_focus_complete
+			hidden_effect = {
+				remove_ideas = FRA_intervention_cost
+			}
+			custom_effect_tooltip = linie_tt
 			FRA = { 
 				transfer_state = 554
 				transfer_state = 680
@@ -1976,12 +2007,20 @@ focus = {
 		continue_if_invalid = no
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_ANNEXATION }
-
-		completion_reward = {	
-			add_timed_idea = {
-				idea = FRA_intervention_cost
-				days = 25
-			}		
+		select_effect = {
+			add_ideas = FRA_intervention_cost
+		}
+		completion_reward = {
+			custom_effect_tooltip = SOV_focus_select_effect_tt
+			effect_tooltip = {
+				add_ideas = FRA_intervention_cost
+			}	
+			
+			custom_effect_tooltip = FRA_focus_complete
+			hidden_effect = {
+				remove_ideas = FRA_intervention_cost
+			}
+			custom_effect_tooltip = linie_tt	
 			FRA = { 
 			transfer_state = 295
 			transfer_state = 538
@@ -2036,11 +2075,20 @@ focus = {
 		continue_if_invalid = no
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_ANNEXATION }
+		select_effect = {
+			add_ideas = FRA_intervention_cost
+		}
 		completion_reward = {
-			add_timed_idea = {
-				idea = FRA_intervention_cost
-				days = 25
+			custom_effect_tooltip = SOV_focus_select_effect_tt
+			effect_tooltip = {
+				add_ideas = FRA_intervention_cost
+			}	
+			
+			custom_effect_tooltip = FRA_focus_complete
+			hidden_effect = {
+				remove_ideas = FRA_intervention_cost
 			}
+			custom_effect_tooltip = linie_tt
 			FRA = { 
 				transfer_state = 543
 				transfer_state = 706
