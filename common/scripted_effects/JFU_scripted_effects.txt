@@ -2556,7 +2556,7 @@ JFU_pregrinded_effect = {
 		ENG_bernard_montgomery = {
 			add_unit_leader_trait = pre_grinded
 			add_unit_leader_trait = panzer_leader
-			add_unit_leader_trait = panzer_expert
+			add_unit_leader_trait = combined_arms_expert
 			add_unit_leader_trait = desert_fox
 			add_unit_leader_trait = trickster
 		}

@@ -179,6 +179,21 @@ characters={
 			logistics_skill=3
 			legacy_id=0
 		}
+		advisor={
+			slot = high_command
+			idea_token = ENG_neil_ritchie
+			ledger = army
+			allowed = {
+				original_tag =ENG
+			}
+			traits = {
+				army_CombinedArms_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
 	}
 
 	ENG_alan_cunningham={
@@ -560,6 +575,21 @@ characters={
 			logistics_skill=3
 			legacy_id=0
 		}
+		advisor={	
+			slot = high_command
+			idea_token = ENG_brian_horrocks
+			ledger = army
+			allowed = {
+				original_tag = ENG
+			}
+			traits = {
+				army_armored_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}		
 	}
 
 	ENG_archibald_wavell={
