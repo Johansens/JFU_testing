@@ -207,7 +207,7 @@ operation_infiltrate_civilian = { ### 1 1/35
 
 	days = 90
 	network_strength = 35
-	operatives = 2
+	operatives = 1
 
 	visible = {
 		network_national_coverage = {
@@ -639,7 +639,7 @@ operation_infiltrate_armed_forces_army = { ### 4 1/55
 	
 	days = 75
 	network_strength = 50
-	operatives = 2
+	operatives = 1
 
 	visible = {
 		network_national_coverage = {
@@ -788,7 +788,7 @@ operation_infiltrate_armed_forces_navy = { ### 5 1/55
 	
 	days = 75
 	network_strength = 50
-	operatives = 2
+	operatives = 1
 
 	visible = {
 		network_national_coverage = {
@@ -946,7 +946,7 @@ operation_infiltrate_armed_forces_airforce = { ### 6 1/55
 
 	days = 75
 	network_strength = 50
-	operatives = 2
+	operatives = 1
 
 	visible = {
 		network_national_coverage = {
