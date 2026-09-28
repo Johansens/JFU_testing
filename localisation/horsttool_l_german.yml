@@ -1931,7 +1931,7 @@ SOV_propaganda_defend_Stalingrad: "Wir werden Stalingrad verteidigen!"
 SOV_propaganda_defend_Leningrad: "Wir werden Leningrad verteidigen!"
 
 SOV_no_air:0 "Ungeschützt von Oben"
-SOV_no_air_desc:0 "Sobald der verbesserte Jäger erforscht und gebaut wurde ist die Luftwaffe der Roten Armee in der Lage, die Luftüberlegenheit zu erlangen. Wir müssen unsere Luftwaffe aufbauen, um unsere Städte und Industrie zu schützen."
+SOV_no_air_desc:0 "Sobald der verbesserte Jäger erforscht und gebaut wurde ist die Luftwaffe der Roten Armee in der Lage, die Luftüberlegenheit zu erlangen. Wir müssen unsere Luftwaffe aufbauen, um unsere Städte und Industrie zu schützen.  \n §YDiese Idee wird entfernt, wenn alle folgenden Bedingungen erfüllt sind:§!\n  £trigger_yes Fokus abschließen §YTranspolar Flights§!\n  £trigger_yes Forschung §YImproved Small Airframe§!\n  £trigger_yes Habe mindestens §Y5,000 Fighters§! im Feld"
 
 
 
