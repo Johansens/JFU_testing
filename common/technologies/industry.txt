@@ -335,7 +335,7 @@ technologies = {
 
 		industrial_capacity_factory = 0.15
 		industrial_capacity_dockyard = 0.1
-		global_building_slots_factor = 0.20
+		global_building_slots_factor = 0.250
 		
 		path = {
 			leads_to_tech = concentrated_industry2 
@@ -406,7 +406,7 @@ technologies = {
 
 		industrial_capacity_factory = 0.15
 		industrial_capacity_dockyard = 0.1
-		global_building_slots_factor = 0.20
+		global_building_slots_factor = 0.250
 		
 		path = {
 			leads_to_tech = concentrated_industry3 
@@ -445,7 +445,7 @@ technologies = {
 
 		industrial_capacity_factory = 0.15
 		industrial_capacity_dockyard = 0.1
-		global_building_slots_factor = 0.20
+		global_building_slots_factor = 0.250
 		
 		path = {
 			leads_to_tech = concentrated_industry4 
@@ -483,7 +483,7 @@ technologies = {
 
 		industrial_capacity_factory = 0.15
 		industrial_capacity_dockyard = 0.1
-		global_building_slots_factor = 0.20
+		global_building_slots_factor = 0.250
 		
 		path = {
 			leads_to_tech = concentrated_industry5
@@ -521,7 +521,7 @@ technologies = {
 
 		industrial_capacity_factory = 0.15
 		industrial_capacity_dockyard = 0.1
-		global_building_slots_factor = 0.20
+		global_building_slots_factor = 0.250
 		
 		research_cost = 2
 		start_year = 1943
@@ -562,7 +562,7 @@ technologies = {
 		line_change_production_efficiency_factor = 0.1
 		production_factory_start_efficiency_factor = 0.05
 		industry_air_damage_factor = -0.15
-		global_building_slots_factor = 0.2
+		global_building_slots_factor = 0.25
 		
 		path = {
 			leads_to_tech = dispersed_industry2 
@@ -638,7 +638,7 @@ technologies = {
 		line_change_production_efficiency_factor = 0.1
 		production_factory_start_efficiency_factor = 0.05
 		industry_air_damage_factor = -0.10
-		global_building_slots_factor = 0.2
+		global_building_slots_factor = 0.25
 		on_research_complete = { 
 			hidden_effect ={ swap_ideas = { remove_idea = railway_10 add_idea = railway_20 } }
 		}
@@ -681,7 +681,7 @@ technologies = {
 		line_change_production_efficiency_factor = 0.1
 		production_factory_start_efficiency_factor = 0.05
 		industry_air_damage_factor = -0.10
-		global_building_slots_factor = 0.2
+		global_building_slots_factor = 0.25
 		on_research_complete = { 
 			hidden_effect ={ swap_ideas = { remove_idea = railway_20 add_idea = railway_30 } }
 		}
@@ -724,7 +724,7 @@ technologies = {
 		line_change_production_efficiency_factor = 0.1
 		production_factory_start_efficiency_factor = 0.05
 		industry_air_damage_factor = -0.10
-		global_building_slots_factor = 0.2
+		global_building_slots_factor = 0.25
 		on_research_complete = { 
 			hidden_effect ={ swap_ideas = { remove_idea = railway_30 add_idea = railway_40 } }
 		}
@@ -767,7 +767,7 @@ technologies = {
 		line_change_production_efficiency_factor = 0.1
 		production_factory_start_efficiency_factor = 0.05
 		industry_air_damage_factor = -0.10
-		global_building_slots_factor = 0.2
+		global_building_slots_factor = 0.25
 		on_research_complete = { 
 			hidden_effect ={ swap_ideas = { remove_idea = railway_40 add_idea = railway_50 } }
 		}
