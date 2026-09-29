@@ -1073,7 +1073,7 @@
  #GER_amerikabomber:0 "The Amerikabomber"
  #GER_amerikabomber_desc:0 "By bombing out the industrial heartland of the USA we can divert American civilian and military industry towards the heartland, isolating Britain for a second aerial battle."
  endsieg_states:0 "We lost controll of at least 1 state in @POL§YPoland§!, @FRA§YFrance§! or god forbid in the Reich itself"
- atlantikwall_modifier_tt:0 "If we control §YAswan§! before constructing the Atlantikwall we will also add §YAtlantik Wall§! which grants: \nMax Entrechment §G+10.0§! \nInvasion Penalty §R+50%§! \nto all previously mentioned states."   
+ atlantikwall_modifier_tt:0 "If we control §YAswan§! before constructing the Atlantikwall we will also add §YAtlantik Wall§! which grants: \nMax Entrechment §G+10.0§! \nInvasion Penalty §R+500%§! \nto all previously mentioned states."   
  endsieg_allies_tt:0 "Add '§YBattle of the Buldge§!' which grants (§YAll Allied Nations§!) Attack bonus against countries §G+15%§!, (§YAll Allied Nations§!) Defense bonus against countries §G+10%§!, (§Y@SOVSoviet Union§!) Attack bonus against countries §R-20%§!, (§Y@SOVSoviet Union§!) Defense bonus against countries §R-15%§!) for 180 day(s)."
  endsieg_comintern_tt:0 "Add '§YSteiners Counterattack§!' which grants (§Y@SOVSoviet Union§!) Attack bonus against countries §G+15%§!, (§Y@SOVSoviet Union§!) Defense bonus against countries §G+10%§!, (§YAll Allied Nations§!) Attack bonus against countries §R-20%§!, (§YAll Allied Nations§!) Defense bonus against countries §R-15%§!) for 180 day(s)." 
  mefo_reduction_large_tt:0 "We will use aquired funds to reduce the MEFO Bills payments by §G-0.20§! Political Power"
