@@ -574,6 +574,7 @@ ideas = {
 				army_attack_factor = 0.1
 				army_defence_factor = 0.1
 				no_supply_grace = 72
+				acclimatization_cold_climate_gain_factor = 1
 			}
 		}
 		soviet_winter_offensive2= {
@@ -588,6 +589,7 @@ ideas = {
 				army_attack_factor = 0.1
 				army_defence_factor = 0.1
 				supply_consumption_factor = -0.10
+				acclimatization_cold_climate_gain_factor = 1
 			}
 		}
 
@@ -603,6 +605,7 @@ ideas = {
 				army_attack_factor = 0.15
 				army_defence_factor = 0.1
 				supply_consumption_factor = -0.10
+				acclimatization_cold_climate_gain_factor = 1
 			}
 		}	
 			Anti_Allies = {
