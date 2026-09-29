@@ -25,7 +25,7 @@
 	}
 	offset = {
 		x = 10  
-		y = 6
+		y = 7
 		trigger = {	tag = BUL}
 	}
 	offset = {

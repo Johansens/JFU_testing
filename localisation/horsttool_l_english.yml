@@ -1927,7 +1927,7 @@
  ITA_modernize_the_mezzogiorno_buildings_tt:0 "Militarty Industrial Organizations for dockyards get §G+10%§! §Ynaval production output!§! \n "
  
  ITA_strengthen_northern_industry_buildings_tt:0 "Militarty Industrial Organizations for military factories get §G+10%§! §Yproduction output!§! \n "
- ITA_arms_discount_tt:0 "Small Arms Company"
+ ITA_arms_discount:0 "Small Arms Company"
 
 SOV_propaganda_defend_Stalingrad: "We Shall Defend Stalingrad!"
 SOV_propaganda_defend_Leningrad: "We Shall Defend Leningrad!"
@@ -1935,5 +1935,7 @@ SOV_propaganda_defend_Leningrad: "We Shall Defend Leningrad!"
 SOV_no_air:0 "Vulnerable from Above"
 SOV_no_air_desc:0 "After researching and producing the improved small fighter we will be able to defend our cities from the air. Until then we are vulnerable to enemy air attacks. \n §YThis National Spirit will be removed when all of the following conditions are met:§!\n  £trigger_yes Complete focus §YTranspolar Flights§!\n  £trigger_yes Research §YImproved Small Airframe§!\n  £trigger_yes Have at least §Y5,000 Fighters§! deployed"
 
+Anti_Allies: "Concentrate on the Allied Threat"
+Anti_Soviet: "Concentrate on the Soviet Threat"
 
 
