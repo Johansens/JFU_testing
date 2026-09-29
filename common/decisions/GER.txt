@@ -2357,6 +2357,14 @@ GER_fortify_the_vaterland_cat = {
 						add_dynamic_modifier = {
 							modifier = Atlantikwall_modifier
 						}
+					}
+					every_state = {
+						limit = {
+							medwall_states = yes
+						}
+						add_dynamic_modifier = {
+							modifier = Medwall_modifier
+						}
 					}			
 				}
 			}

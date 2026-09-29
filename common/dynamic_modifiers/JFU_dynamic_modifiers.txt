@@ -85,6 +85,14 @@ Atlantikwall_modifier = {
 	max_dig_in = GER.Atlantikwall_dig_in_modifier
 	naval_invasion_penalty = GER.Atlantikwall_invasion_penalty_modifier
 }
+Medwall_modifier = {
+	enable = { always = yes }
+
+	icon = GFX_modifiers_sabotaged_resource	
+
+	max_dig_in = GER.Medwall_dig_in_modifier
+	naval_invasion_penalty = GER.Medwall_invasion_penalty_modifier
+}
 ITA_subdue_the_sentinels_dynamic_modifier = {
 	enable = { always = yes  }
 	icon = GFX_idea_ITA_italian_irredentism

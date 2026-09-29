@@ -1,6 +1,8 @@
 ﻿capital = 64 # Berlin/Brandeburg
 set_variable = { var = Atlantikwall_dig_in_modifier value = 10 }
-set_variable = { var = Atlantikwall_invasion_penalty_modifier value = 0.5 }
+set_variable = { var = Atlantikwall_invasion_penalty_modifier value = 5 }
+set_variable = { var = Medwall_dig_in_modifier value = 10 }
+set_variable = { var = Medwall_invasion_penalty_modifier value = 5 }
 set_variable = { germany_war_war_support_weekly_factor = -0.002 }
 set_variable = { germany_war_stability_weekly_factor = -0.002 }
 set_variable = { germany_war_consumer_goods_factor = -0.4 }
