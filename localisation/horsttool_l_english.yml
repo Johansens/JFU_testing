@@ -1073,7 +1073,7 @@
  #GER_amerikabomber:0 "The Amerikabomber"
  #GER_amerikabomber_desc:0 "By bombing out the industrial heartland of the USA we can divert American civilian and military industry towards the heartland, isolating Britain for a second aerial battle."
  endsieg_states:0 "We lost controll of at least 1 state in @POL§YPoland§!, @FRA§YFrance§! or god forbid in the Reich itself"
- atlantikwall_modifier_tt:0 "If we control §YAswan§! before constructing the Atlantikwall we will also add §YAtlantik Wall§! which grants: \nMax Entrechment §G+10.0§! \nInvasion Penalty §R+50%§! \nto all previously mentioned states."   
+ atlantikwall_modifier_tt:0 "If we control §YAswan§! before constructing the Atlantikwall we will also add §YAtlantik Wall§! which grants: \nMax Entrechment §G+10.0§! \nInvasion Penalty §R+500%§! \nto all previously mentioned states.\n It also adds §YMediterranean Bastion§! which grants: \nMax Entrechment §G+10.0§! \nInvasion Penalty §R+500%§! \nto all European Mediterranean costal states"   
  endsieg_allies_tt:0 "Add '§YBattle of the Buldge§!' which grants (§YAll Allied Nations§!) Attack bonus against countries §G+15%§!, (§YAll Allied Nations§!) Defense bonus against countries §G+10%§!, (§Y@SOVSoviet Union§!) Attack bonus against countries §R-20%§!, (§Y@SOVSoviet Union§!) Defense bonus against countries §R-15%§!) for 180 day(s)."
  endsieg_comintern_tt:0 "Add '§YSteiners Counterattack§!' which grants (§Y@SOVSoviet Union§!) Attack bonus against countries §G+15%§!, (§Y@SOVSoviet Union§!) Defense bonus against countries §G+10%§!, (§YAll Allied Nations§!) Attack bonus against countries §R-20%§!, (§YAll Allied Nations§!) Defense bonus against countries §R-15%§!) for 180 day(s)." 
  mefo_reduction_large_tt:0 "We will use aquired funds to reduce the MEFO Bills payments by §G-0.20§! Political Power"
@@ -1603,6 +1603,7 @@
  decision_cost_CP_50_pp_100_blocked:0 "£command_power  §R50§! £pol_power  §R100§!"
  decision_cost_CP_50_pp_100_tooltip:0 "It costs £command_power  §Y50§! £pol_power  §Y100§! to take the decision"
  Atlantikwall_modifier:0 "Atlantik Wall"
+ Medwall_modifier:0 "Mediterranean Bastion"
  ITA_subdue_the_sentinels_dynamic_modifier:0 "Subdue the Sentinels"
  by_blood_alone:0 "By Blood Alone"
 
@@ -1926,7 +1927,26 @@
  ITA_modernize_the_mezzogiorno_buildings_tt:0 "Militarty Industrial Organizations for dockyards get §G+10%§! §Ynaval production output!§! \n "
  
  ITA_strengthen_northern_industry_buildings_tt:0 "Militarty Industrial Organizations for military factories get §G+10%§! §Yproduction output!§! \n "
+ ITA_arms_discount:0 "Small Arms Company"
 
+SOV_propaganda_defend_Stalingrad: "We Shall Defend Stalingrad!"
+SOV_propaganda_defend_Leningrad: "We Shall Defend Leningrad!"
+
+SOV_no_air:0 "Vulnerable from Above"
+SOV_no_air_desc:0 "After researching and producing the improved small fighter we will be able to defend our cities from the air. Until then we are vulnerable to enemy air attacks. \n §YThis National Spirit will be removed when all of the following conditions are met:§!\n  £trigger_yes Complete focus §YTranspolar Flights§!\n  £trigger_yes Research §YImproved Small Airframe§!\n  £trigger_yes Have at least §Y5,000 Fighters§! deployed"
+
+Anti_Allies: "Concentrate on the Allied Threat"
+Anti_Soviet: "Concentrate on the Soviet Threat"
+
+ FRA_mio_trait_french_tiger:0 "French Tiger Tank Trait"
+ FRA_mio_trait_automitrailleuses2:0 "Automitrailleuses Tank Trait"
+
+ france_cap_tt:0 "§RThis focus will be automatically completed upon our capitulation!§!"
+ france_infra_tt:0 "\n§G========================================§!\n\nIt's recommended to build the following levels of §YInfrastructure§! in States:\n§YGabon§!: Level 1\n§YMiddle Congo§!: Level 2\n§YChad§!: Level 2\n§YCameroon§!: Level 2\n§YEquatorial Africa§!: Level 3"
+ FRA_focus_complete:0 "This §YNational Spirit§! will be removed upon completion of this Focus."
+ FRA_veterans:0 "Spawns §Y2 Veteran Divisions§! in our homeland."
+ linie_tt:0 "\n§G========================================§!\n "
+ space_tt:0 " \n"
 
 
 

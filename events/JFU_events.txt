@@ -832,6 +832,7 @@ country_event = {
 			SPR = { set_technology = { Blitzkrieg_OFF = 1 popup = no } }
 			ITA = { set_technology = { Blitzkrieg_OFF = 1 popup = no } }
 			ROM = { set_technology = { Blitzkrieg_OFF = 1 popup = no } }
+			BUL = { set_technology = { Blitzkrieg_OFF = 1 popup = no } }
 			ENG = { set_technology = { Blitzkrieg_OFF = 1 popup = no } }
 			FRA = { set_technology = { Blitzkrieg_OFF = 1 popup = no } }
 			CAN = { set_technology = { Blitzkrieg_OFF = 1 popup = no } }

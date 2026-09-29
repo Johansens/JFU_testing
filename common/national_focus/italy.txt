@@ -1702,7 +1702,7 @@ focus_tree = {
 				}
 				add_resource = {
 					type = steel
-					amount = 8
+					amount = 24
 				}
 			}
 		}
@@ -2153,6 +2153,7 @@ focus_tree = {
 				uses = 1
 				category = infantry_weapons
 			}
+			add_ideas = ITA_arms_discount
 		}
 	}
 

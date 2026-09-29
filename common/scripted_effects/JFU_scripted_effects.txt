@@ -459,7 +459,7 @@ JFU_game_rules_effect = {
 	}
 }
 JFU_other_stuff_on_start_up_effect = {
-	if = { limit = { ai_country_allies = yes } country_lock_all_division_template = yes }
+	every_country = { limit = { ai_country_allies = yes } country_lock_all_division_template = yes }
 	every_country = { limit = { OR = { axis = yes allies = yes } } add_ideas = peace_training army_experience = 10 navy_experience = 10 air_experience = 10 }
 	every_country = { limit = { axis = yes } anti_cross_faction_trade_allies = yes }
 	every_country = { limit = { allies = yes } anti_cross_faction_trade_axis = yes }
@@ -1967,7 +1967,6 @@ JFU_pregrinded_effect = {
             add_unit_leader_trait = commando
 			add_unit_leader_trait = trickster
 			add_unit_leader_trait = expert_improviser
-			add_unit_leader_trait = ranger
 			add_unit_leader_trait = hill_fighter
 			add_unit_leader_trait = fortress_buster
         }
@@ -2004,7 +2003,6 @@ JFU_pregrinded_effect = {
             add_unit_leader_trait = panzer_expert
             add_unit_leader_trait = trickster
             add_unit_leader_trait = expert_improviser
-            add_unit_leader_trait = ranger
 			add_unit_leader_trait = hill_fighter
 			add_unit_leader_trait = trait_engineer
 		}
@@ -2452,8 +2450,8 @@ JFU_pregrinded_effect = {
 			add_unit_leader_trait = logistics_wizard
 		}
 		#FRA_charles_huntziger = { add_skill_level = 1 }
-		FRA_charles_huntziger = { add_attack = 4 }
-		FRA_charles_huntziger = { add_defense = 3 }
+		FRA_charles_huntziger = { add_attack = 2 }
+		FRA_charles_huntziger = { add_defense = 2 }
 		#FRA_charles_huntziger = { add_planning = 1 }
 		FRA_charles_huntziger = { add_logistics = 1 }
 		FRA_charles_huntziger = {
@@ -2556,7 +2554,7 @@ JFU_pregrinded_effect = {
 		ENG_bernard_montgomery = {
 			add_unit_leader_trait = pre_grinded
 			add_unit_leader_trait = panzer_leader
-			add_unit_leader_trait = panzer_expert
+			add_unit_leader_trait = combined_arms_expert
 			add_unit_leader_trait = desert_fox
 			add_unit_leader_trait = trickster
 		}
@@ -4153,7 +4151,7 @@ JFU_vichy_france = {
 	GER = { country_event = { id = germany.107 } }
 	FRA = {
 		remove_ideas = FRA_fortification_focus
-		remove_ideas = FRA_protected_by_the_maginot_line
+		#remove_ideas = FRA_protected_by_the_maginot_line
 		remove_ideas = FRA_victors_of_wwi
 		remove_ideas = FRA_full_employment
 		remove_ideas = FRA_disjointed_government
@@ -4163,8 +4161,9 @@ JFU_vichy_france = {
 			character = FRA_charles_de_gaulle
 			ideology = conservatism
 		}
-		add_ideas = FRA_defeatism
+		#add_ideas = FRA_defeatism
 		set_equipment_fraction = 0.0
+		complete_national_focus = FRA_appeal_to_the_french_nation
 	}
 	JFU_vichy_france_2 = yes
 	ENG = {
@@ -4236,14 +4235,14 @@ JFU_vichy_france_2 = {
 		#GER_set_consumer_goods_war_reparations = yes
 	}	
 	539 = { set_building_level = { type = infrastructure level = 5 } }
-	if = {
-		limit = {
-			FRA = {
-				is_ai = yes 
-			}
-		}
-		set_variable = { FRA_legitimacy = 100 }
-	}
+	# if = {
+	# 	limit = {
+	# 		FRA = {
+	# 			is_ai = yes 
+	# 		}
+	# 	}
+	# 	set_variable = { FRA_legitimacy = 100 }
+	# }
 	EFR ={ 
 		set_country_flag = vichy_france_established
 		###SOUTHERN FRANCE###
@@ -4277,9 +4276,13 @@ JFU_vichy_france_2 = {
 		459 = { set_demilitarized_zone = yes }
 		transfer_state = 461
 		461 = { set_demilitarized_zone = yes }
+		give_resource_rights = {
+		receiver = ITA
+		state = 22
+		}
 
-		if = { 
-			limit = { FRA = { check_variable = { FRA_legitimacy 	< 100 } }  }
+		# if = { 
+		# 	limit = { FRA = { check_variable = { FRA_legitimacy 	< 100 } }  }
 			transfer_state = 554
 			transfer_state = 680
 			transfer_state = 677
@@ -4290,10 +4293,10 @@ JFU_vichy_france_2 = {
 			add_state_core = 677
 			add_state_core = 799
 			add_state_core = 553
-		}
+		# }
 
-		if = { 
-			limit = { FRA = { check_variable = { FRA_legitimacy 	< 80 } }  }
+		# if = { 
+		# 	limit = { FRA = { check_variable = { FRA_legitimacy 	< 80 } }  }
 			transfer_state = 543
 			transfer_state = 706
 			transfer_state = 708
@@ -4302,10 +4305,10 @@ JFU_vichy_france_2 = {
 			add_state_core = 706
 			add_state_core = 708
 			add_state_core = 713
-		}
+		# }
 
-		if = { 
-			limit = { FRA = { check_variable = { FRA_legitimacy 	< 30 } }  }
+		# if = { 
+		# 	limit = { FRA = { check_variable = { FRA_legitimacy 	< 30 } }  }
 			transfer_state = 557
 			transfer_state = 272
 			transfer_state = 780
@@ -4338,12 +4341,12 @@ JFU_vichy_france_2 = {
 			#add_state_core = 514
 			add_state_core = 899
 			add_state_core = 898
-		}
+		# }
 		#if = { 
 		#	limit = { FRA = { check_variable = { FRA_legitimacy 	< 40 } }  }
-		#	transfer_state = 774
-		#	transfer_state = 773
-		#	transfer_state = 660
+			# transfer_state = 774
+			# transfer_state = 773
+			# transfer_state = 660
 			
 		#}
 		#if = { 
@@ -4356,17 +4359,17 @@ JFU_vichy_france_2 = {
 		add_ideas = VIC_produce_aircraft_parts
 	}
 	FRA = {
-		if = { 
-			limit = { FRA = { check_variable = { FRA_legitimacy 	> 40 } }  }
-			transfer_state = 295
-			transfer_state = 538
-			transfer_state = 718
-			transfer_state = 768
-			transfer_state = 769
-			transfer_state = 890
-			transfer_state = 889
-			transfer_state = 888
-		}
+		# if = { 
+		# 	limit = { FRA = { check_variable = { FRA_legitimacy 	> 40 } }  }
+			# transfer_state = 295
+			# transfer_state = 538
+			# transfer_state = 718
+			# transfer_state = 768
+			# transfer_state = 769
+			# transfer_state = 890
+			# transfer_state = 889
+			# transfer_state = 888
+		# }
 		#FRA_africa_spawn_ins = yes 
 		# add_equipment_to_stockpile = { type = medium_tank_chassis_2 amount = 350 producer = FRA variant_name = "AFRICA TANKs" }
 		# add_equipment_to_stockpile = { type = medium_tank_chassis_2 amount = 150 producer = FRA variant_name = "AFRICA TD" }
@@ -4772,39 +4775,43 @@ Endsieg_Tanks_spawn_ins = {
 
 Atlantikwall_modifier_effect = {
 	set_variable = { GER.Atlantikwall_dig_in_modifier = 10 }
-	set_variable = { GER.Atlantikwall_invasion_penalty_modifier = 0.5 }
-	if = { limit = { any_country = { allies = yes controls_state = 456 } } add_to_variable = { var = GER.Atlantikwall_dig_in_modifier value = -0.5 } add_to_variable = { var = GER.Atlantikwall_invasion_penalty_modifier value = -0.025 } }
-	if = { limit = { any_country = { allies = yes controls_state = 907 } } add_to_variable = { var = GER.Atlantikwall_dig_in_modifier value = -0.5 } add_to_variable = { var = GER.Atlantikwall_invasion_penalty_modifier value = -0.025 } }
-	if = { limit = { any_country = { allies = yes controls_state = 291 } } add_to_variable = { var = GER.Atlantikwall_dig_in_modifier value = -0.5 } add_to_variable = { var = GER.Atlantikwall_invasion_penalty_modifier value = -0.025 } }
-	if = { limit = { any_country = { allies = yes controls_state = 461 } } add_to_variable = { var = GER.Atlantikwall_dig_in_modifier value = -0.5 } add_to_variable = { var = GER.Atlantikwall_invasion_penalty_modifier value = -0.025 } }
-	if = { limit = { any_country = { allies = yes controls_state = 458 } } add_to_variable = { var = GER.Atlantikwall_dig_in_modifier value = -0.5 } add_to_variable = { var = GER.Atlantikwall_invasion_penalty_modifier value = -0.025 } }
-	if = { limit = { any_country = { allies = yes controls_state = 448 } } add_to_variable = { var = GER.Atlantikwall_dig_in_modifier value = -0.5 } add_to_variable = { var = GER.Atlantikwall_invasion_penalty_modifier value = -0.025 } }
-	if = { limit = { any_country = { allies = yes controls_state = 450 } } add_to_variable = { var = GER.Atlantikwall_dig_in_modifier value = -0.5 } add_to_variable = { var = GER.Atlantikwall_invasion_penalty_modifier value = -0.025 } }
-	if = { limit = { any_country = { allies = yes controls_state = 451 } } add_to_variable = { var = GER.Atlantikwall_dig_in_modifier value = -0.5 } add_to_variable = { var = GER.Atlantikwall_invasion_penalty_modifier value = -0.025 } }
-	if = { limit = { any_country = { allies = yes controls_state = 447 } } add_to_variable = { var = GER.Atlantikwall_dig_in_modifier value = -0.5 } add_to_variable = { var = GER.Atlantikwall_invasion_penalty_modifier value = -0.025 } }
-	if = { limit = { any_country = { allies = yes controls_state = 454 } } add_to_variable = { var = GER.Atlantikwall_dig_in_modifier value = -0.5 } add_to_variable = { var = GER.Atlantikwall_invasion_penalty_modifier value = -0.025 } }
-	if = { limit = { any_country = { axis = yes controls_state = 808 } } add_to_variable = { var = GER.Atlantikwall_dig_in_modifier value = -0.5 } add_to_variable = { var = GER.Atlantikwall_invasion_penalty_modifier value = -0.025 } }
-	if = { limit = { any_country = { axis = yes controls_state = 195 } } add_to_variable = { var = GER.Atlantikwall_dig_in_modifier value = -0.5 } add_to_variable = { var = GER.Atlantikwall_invasion_penalty_modifier value = -0.025 } }
-	if = { limit = { any_country = { axis = yes controls_state = 242 } } add_to_variable = { var = GER.Atlantikwall_dig_in_modifier value = -0.5 } add_to_variable = { var = GER.Atlantikwall_invasion_penalty_modifier value = -0.025 } }
-	if = { limit = { any_country = { axis = yes controls_state = 209 } } add_to_variable = { var = GER.Atlantikwall_dig_in_modifier value = -0.5 } add_to_variable = { var = GER.Atlantikwall_invasion_penalty_modifier value = -0.025 } }
-	if = { limit = { any_country = { axis = yes controls_state = 219 } } add_to_variable = { var = GER.Atlantikwall_dig_in_modifier value = -0.5 } add_to_variable = { var = GER.Atlantikwall_invasion_penalty_modifier value = -0.025 } }
-	if = { limit = { any_country = { axis = yes controls_state = 202 } } add_to_variable = { var = GER.Atlantikwall_dig_in_modifier value = -0.5 } add_to_variable = { var = GER.Atlantikwall_invasion_penalty_modifier value = -0.025 } }
-	if = { limit = { any_country = { axis = yes controls_state = 220 } } add_to_variable = { var = GER.Atlantikwall_dig_in_modifier value = -0.5 } add_to_variable = { var = GER.Atlantikwall_invasion_penalty_modifier value = -0.025 } }
-	if = { limit = { any_country = { axis = yes controls_state = 221 } } add_to_variable = { var = GER.Atlantikwall_dig_in_modifier value = -0.5 } add_to_variable = { var = GER.Atlantikwall_invasion_penalty_modifier value = -0.025 } }
-	if = { limit = { any_country = { axis = yes controls_state = 218 } } add_to_variable = { var = GER.Atlantikwall_dig_in_modifier value = -0.5 } add_to_variable = { var = GER.Atlantikwall_invasion_penalty_modifier value = -0.025 } }
-	if = { limit = { any_country = { axis = yes controls_state = 217 } } add_to_variable = { var = GER.Atlantikwall_dig_in_modifier value = -0.5 } add_to_variable = { var = GER.Atlantikwall_invasion_penalty_modifier value = -0.025 } }
-	if = { limit = { date > 1942.02.01 } add_to_variable = { var = GER.Atlantikwall_dig_in_modifier value = -1 } add_to_variable = { var = GER.Atlantikwall_invasion_penalty_modifier value = -0.05 } }
-	if = { limit = { date > 1942.03.01 } add_to_variable = { var = GER.Atlantikwall_dig_in_modifier value = -1 } add_to_variable = { var = GER.Atlantikwall_invasion_penalty_modifier value = -0.05 } }	
-	if = { limit = { date > 1942.04.01 } add_to_variable = { var = GER.Atlantikwall_dig_in_modifier value = -1 } add_to_variable = { var = GER.Atlantikwall_invasion_penalty_modifier value = -0.05 } }
-	if = { limit = { date > 1942.05.01 } add_to_variable = { var = GER.Atlantikwall_dig_in_modifier value = -1 } add_to_variable = { var = GER.Atlantikwall_invasion_penalty_modifier value = -0.05 } }
-	if = { limit = { date > 1942.06.01 } add_to_variable = { var = GER.Atlantikwall_dig_in_modifier value = -1 } add_to_variable = { var = GER.Atlantikwall_invasion_penalty_modifier value = -0.05 } }
-	if = { limit = { date > 1942.07.01 } add_to_variable = { var = GER.Atlantikwall_dig_in_modifier value = -1 } add_to_variable = { var = GER.Atlantikwall_invasion_penalty_modifier value = -0.05 } }
-	if = { limit = { date > 1942.08.01 } add_to_variable = { var = GER.Atlantikwall_dig_in_modifier value = -1 } add_to_variable = { var = GER.Atlantikwall_invasion_penalty_modifier value = -0.05 } }
-	if = { limit = { date > 1942.09.01 } add_to_variable = { var = GER.Atlantikwall_dig_in_modifier value = -1 } add_to_variable = { var = GER.Atlantikwall_invasion_penalty_modifier value = -0.05 } }
-	if = { limit = { date > 1942.10.01 } add_to_variable = { var = GER.Atlantikwall_dig_in_modifier value = -1 } add_to_variable = { var = GER.Atlantikwall_invasion_penalty_modifier value = -0.05 } }
+	set_variable = { GER.Atlantikwall_invasion_penalty_modifier = 5 }
+	if = { limit = { any_country = { allies = yes controls_state = 456 } } add_to_variable = { var = GER.Atlantikwall_dig_in_modifier value = -0.5 } add_to_variable = { var = GER.Atlantikwall_invasion_penalty_modifier value = -0.25 } }
+	if = { limit = { any_country = { allies = yes controls_state = 907 } } add_to_variable = { var = GER.Atlantikwall_dig_in_modifier value = -0.5 } add_to_variable = { var = GER.Atlantikwall_invasion_penalty_modifier value = -0.25 } }
+	if = { limit = { any_country = { allies = yes controls_state = 291 } } add_to_variable = { var = GER.Atlantikwall_dig_in_modifier value = -0.5 } add_to_variable = { var = GER.Atlantikwall_invasion_penalty_modifier value = -0.25 } }
+	if = { limit = { any_country = { allies = yes controls_state = 461 } } add_to_variable = { var = GER.Atlantikwall_dig_in_modifier value = -0.5 } add_to_variable = { var = GER.Atlantikwall_invasion_penalty_modifier value = -0.25 } }
+	if = { limit = { any_country = { allies = yes controls_state = 458 } } add_to_variable = { var = GER.Atlantikwall_dig_in_modifier value = -0.5 } add_to_variable = { var = GER.Atlantikwall_invasion_penalty_modifier value = -0.25 } }
+	if = { limit = { any_country = { allies = yes controls_state = 448 } } add_to_variable = { var = GER.Atlantikwall_dig_in_modifier value = -0.5 } add_to_variable = { var = GER.Atlantikwall_invasion_penalty_modifier value = -0.25 } }
+	if = { limit = { any_country = { allies = yes controls_state = 450 } } add_to_variable = { var = GER.Atlantikwall_dig_in_modifier value = -0.5 } add_to_variable = { var = GER.Atlantikwall_invasion_penalty_modifier value = -0.25 } }
+	if = { limit = { any_country = { allies = yes controls_state = 451 } } add_to_variable = { var = GER.Atlantikwall_dig_in_modifier value = -0.5 } add_to_variable = { var = GER.Atlantikwall_invasion_penalty_modifier value = -0.25 } }
+	if = { limit = { any_country = { allies = yes controls_state = 447 } } add_to_variable = { var = GER.Atlantikwall_dig_in_modifier value = -0.5 } add_to_variable = { var = GER.Atlantikwall_invasion_penalty_modifier value = -0.25 } }
+	if = { limit = { any_country = { allies = yes controls_state = 454 } } add_to_variable = { var = GER.Atlantikwall_dig_in_modifier value = -0.5 } add_to_variable = { var = GER.Atlantikwall_invasion_penalty_modifier value = -0.25 } }
+	if = { limit = { any_country = { axis = yes controls_state = 808 } } add_to_variable = { var = GER.Atlantikwall_dig_in_modifier value = -0.5 } add_to_variable = { var = GER.Atlantikwall_invasion_penalty_modifier value = -0.25 } }
+	if = { limit = { any_country = { axis = yes controls_state = 195 } } add_to_variable = { var = GER.Atlantikwall_dig_in_modifier value = -0.5 } add_to_variable = { var = GER.Atlantikwall_invasion_penalty_modifier value = -0.25 } }
+	if = { limit = { any_country = { axis = yes controls_state = 242 } } add_to_variable = { var = GER.Atlantikwall_dig_in_modifier value = -0.5 } add_to_variable = { var = GER.Atlantikwall_invasion_penalty_modifier value = -0.25 } }
+	if = { limit = { any_country = { axis = yes controls_state = 209 } } add_to_variable = { var = GER.Atlantikwall_dig_in_modifier value = -0.5 } add_to_variable = { var = GER.Atlantikwall_invasion_penalty_modifier value = -0.25 } }
+	if = { limit = { any_country = { axis = yes controls_state = 219 } } add_to_variable = { var = GER.Atlantikwall_dig_in_modifier value = -0.5 } add_to_variable = { var = GER.Atlantikwall_invasion_penalty_modifier value = -0.25 } }
+	if = { limit = { any_country = { axis = yes controls_state = 202 } } add_to_variable = { var = GER.Atlantikwall_dig_in_modifier value = -0.5 } add_to_variable = { var = GER.Atlantikwall_invasion_penalty_modifier value = -0.25 } }
+	if = { limit = { any_country = { axis = yes controls_state = 220 } } add_to_variable = { var = GER.Atlantikwall_dig_in_modifier value = -0.5 } add_to_variable = { var = GER.Atlantikwall_invasion_penalty_modifier value = -0.25 } }
+	if = { limit = { any_country = { axis = yes controls_state = 221 } } add_to_variable = { var = GER.Atlantikwall_dig_in_modifier value = -0.5 } add_to_variable = { var = GER.Atlantikwall_invasion_penalty_modifier value = -0.25 } }
+	if = { limit = { any_country = { axis = yes controls_state = 218 } } add_to_variable = { var = GER.Atlantikwall_dig_in_modifier value = -0.5 } add_to_variable = { var = GER.Atlantikwall_invasion_penalty_modifier value = -0.25 } }
+	if = { limit = { any_country = { axis = yes controls_state = 217 } } add_to_variable = { var = GER.Atlantikwall_dig_in_modifier value = -0.5 } add_to_variable = { var = GER.Atlantikwall_invasion_penalty_modifier value = -0.25 } }
+	if = { limit = { date > 1942.02.01 } add_to_variable = { var = GER.Atlantikwall_dig_in_modifier value = -1 } add_to_variable = { var = GER.Atlantikwall_invasion_penalty_modifier value = -0.5 } }
+	if = { limit = { date > 1942.03.01 } add_to_variable = { var = GER.Atlantikwall_dig_in_modifier value = -1 } add_to_variable = { var = GER.Atlantikwall_invasion_penalty_modifier value = -0.5 } }	
+	if = { limit = { date > 1942.04.01 } add_to_variable = { var = GER.Atlantikwall_dig_in_modifier value = -1 } add_to_variable = { var = GER.Atlantikwall_invasion_penalty_modifier value = -0.5 } }
+	if = { limit = { date > 1942.05.01 } add_to_variable = { var = GER.Atlantikwall_dig_in_modifier value = -1 } add_to_variable = { var = GER.Atlantikwall_invasion_penalty_modifier value = -0.5 } }
+	if = { limit = { date > 1942.06.01 } add_to_variable = { var = GER.Atlantikwall_dig_in_modifier value = -1 } add_to_variable = { var = GER.Atlantikwall_invasion_penalty_modifier value = -0.5 } }
+	if = { limit = { date > 1942.07.01 } add_to_variable = { var = GER.Atlantikwall_dig_in_modifier value = -1 } add_to_variable = { var = GER.Atlantikwall_invasion_penalty_modifier value = -0.5 } }
+	if = { limit = { date > 1942.08.01 } add_to_variable = { var = GER.Atlantikwall_dig_in_modifier value = -1 } add_to_variable = { var = GER.Atlantikwall_invasion_penalty_modifier value = -0.5 } }
+	if = { limit = { date > 1942.09.01 } add_to_variable = { var = GER.Atlantikwall_dig_in_modifier value = -1 } add_to_variable = { var = GER.Atlantikwall_invasion_penalty_modifier value = -0.5 } }
+	if = { limit = { date > 1942.10.01 } add_to_variable = { var = GER.Atlantikwall_dig_in_modifier value = -1 } add_to_variable = { var = GER.Atlantikwall_invasion_penalty_modifier value = -0.5 } }
 	if = { limit = { check_variable = { GER.Atlantikwall_dig_in_modifier < 0 } } every_state = { remove_dynamic_modifier = { modifier = Atlantikwall_modifier } } }
 }
-
+Medwall_modifier_effect = {
+	if = { limit = { any_country = { allies = yes controls_state = 450 } } add_to_variable = { var = GER.Medwall_dig_in_modifier value = -1 } add_to_variable = { var = GER.Medwall_invasion_penalty_modifier value = -0.5 } }
+	if = { limit = { any_country = { allies = yes controls_state = 448 } } add_to_variable = { var = GER.Medwall_dig_in_modifier value = -1 } add_to_variable = { var = GER.Medwall_invasion_penalty_modifier value = -0.5 } }
+	if = { limit = { check_variable = { GER.Medwall_dig_in_modifier < 0 } } every_state = { remove_dynamic_modifier = { modifier = Medwall_modifier } } }
+}
 #fuel system
 
 HFU_fuel_startup_effect = { 

@@ -443,10 +443,9 @@ SOV_defend_moscow = { #STATE MODIFIER
 
 	icon = GFX_modifiers_SOV_defend_moscow
 	
-	recruitable_population_factor = 0.25
-	army_core_defence_factor = 0.1
-	local_factories = -1
-	supply_factor = 0.15
+	army_core_defence_factor = 0.15
+	army_core_attack_factor = 0.1
+	supply_combat_penalties_on_core_factor = -1
 }
 
 SOV_increased_metals_production = { #STATE MODIFIER

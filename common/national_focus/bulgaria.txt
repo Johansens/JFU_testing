@@ -22,7 +22,7 @@ focus_tree = {
 	
 	default = no
 
-	continuous_focus_position = { x = 50 y = 1500 }
+	continuous_focus_position = { x = 50 y = 1700 }
 
 
 #### ##    ## ########  ##     ##  ######  ######## ########  ####    ###    ##          ########  ########     ###    ##    ##  ######  ##     ## 
@@ -760,6 +760,90 @@ focus_tree = {
 			BUL_replace_national_aircraft_designer = yes
 		}
 	}
+
+	focus = {
+		id = BUL_focus_forest
+		text = "Unternehmen Barbarossa"
+		icon = GFX_goal_generic_special_forces
+		prerequisite = { focus = BUL_prussia_of_the_balkans }
+		mutually_exclusive = {
+			focus = BUL_focus_desert
+		}
+		x = 1
+		y = 1
+		relative_position_id = BUL_prussia_of_the_balkans
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_MANPOWER }
+		completion_reward = {
+			BUL_nikola_mihov = {
+            	add_unit_leader_trait = ranger
+			}
+			BUL_ivan_markov = {
+            	add_unit_leader_trait = ranger
+			}
+			add_ideas = {Anti_Soviet}
+		}
+	}
+	focus = {
+		id = BUL_focus_desert
+		text = "Africa Campaign"
+		icon = GFX_goal_generic_special_forces
+		prerequisite = { focus = BUL_prussia_of_the_balkans }
+		mutually_exclusive = {
+			focus = BUL_focus_forest
+		}
+		x = -1
+		y = 1
+		relative_position_id = BUL_prussia_of_the_balkans
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_MANPOWER }
+		completion_reward = {
+			BUL_nikola_mihov = {
+				add_unit_leader_trait = desert_fox
+			}
+			BUL_ivan_markov = {
+				add_unit_leader_trait = desert_fox
+			}
+			add_ideas = {Anti_Allies}
+		}
+	}
+	
 
 	focus = {
 		id = BUL_national_military_academy

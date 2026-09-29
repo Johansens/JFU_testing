@@ -114,6 +114,38 @@ atlantikwall_states = {
 		state = 912
 	}
 }
+medwall_states = {
+	OR = {
+		state = 31
+		state = 22
+		state = 21
+		state = 851
+		state = 735
+		state = 158
+		state = 162
+		state = 2
+		state = 117
+		state = 156
+		state = 115
+		state = 849
+		state = 157
+		state = 161
+		state = 160
+		state = 736
+		state = 852
+		state = 103
+		state = 163
+		state = 105
+		state = 934
+		state = 44
+		state = 805
+		state = 185
+		state = 186
+		state = 47
+		state = 731
+		state = 184
+	}
+}
 ITA_africa_states = { 
 	OR = { 
 		state = 448 

@@ -703,7 +703,7 @@ GER_jet_focus:0 "Messerschmitts Projekt"
 #GER_amerikabomber:0 "Der Amerikabomber"
 #GER_amerikabomber_desc:0 "Indem wir das industrielle Herzland der USA bombardieren, können wir die amerikanische zivile und militärische Industrie ins Herzland umleiten und Großbritannien für eine zweite Luftschlacht isolieren."
 endsieg_states:0 "Wir haben die Kontrolle über mindestens 1 Staat in @POL§YPolen§!, @FRA§YFrankreich§! oder Gott bewahre im Reich selbst verloren."
-atlantikwall_modifier_tt:0 "Wenn wir §YAswan§! vor Abschluss dieses Fokus kontrollieren, fügen wir auch §YAtlantikwall§! hinzu, der gewährt: \nMaximaler Graben §G+10.0§! \nInvasionsstrafe §R+50%§! \nfür alle zuvor genannten Staaten."   
+atlantikwall_modifier_tt:0 "Wenn wir §YAswan§! vor Abschluss dieses Fokus kontrollieren, fügen wir auch §YAtlantikwall§! hinzu, der gewährt: \nMaximaler Graben §G+10.0§! \nInvasionsstrafe §R+500%§! \nfür alle zuvor genannten Staaten. \nEs fügt außerdem §YMediterrane Bastion§! hinzu, was Folgendes gewährt: \nMaximale Verschanzung §G+10,0§! \nInvasionsmalus §R+500 %§! \nfür alle europäischen Mittelmeer-Küstenstaaten."   
 endsieg_allies_tt:0 "Füge '§YSchlacht der Bulge§!' hinzu, die (§YAlle alliierten Nationen§!) Angriffsbonus gegen Länder §G+15%§!, (§YAlle alliierten Nationen§!) Verteidigungsbonus gegen Länder §G+10%§!, (§Y@SOVSowjetunion§!) Angriffsbonus gegen Länder §R-20%§!, (§Y@SOVSowjetunion§!) Verteidigungsbonus gegen Länder §R-15%§!) für 180 Tag(e)."
 endsieg_comintern_tt:0 "Füge '§YSteiners Gegenangriff§!' hinzu, die (§Y@SOVSowjetunion§!) Angriffsbonus gegen Länder §G+15%§!, (§Y@SOVSowjetunion§!) Verteidigungsbonus gegen Länder §G+10%§!, (§YAlle alliierten Nationen§!) Angriffsbonus gegen Länder §R-20%§!, (§YAlle alliierten Nationen§!) Verteidigungsbonus gegen Länder §R-15%§!) für 180 Tag(e)." 
 mefo_reduction_large_tt:0 "Wir werden die erworbenen Mittel nutzen, um die Zahlungen der MEFO-Rechnungen um §G-0.20§! Politische Macht zu reduzieren."
@@ -1093,6 +1093,7 @@ decision_cost_CP_50_pp_100:0 "£command_power  §Y50§! £pol_power  §Y100§!"
 decision_cost_CP_50_pp_100_blocked:0 "£command_power  §R50§! £pol_power  §R100§!"
 decision_cost_CP_50_pp_100_tooltip:0 "It costs £command_power  §Y50§! £pol_power  §Y100§! to take the decision"
 Atlantikwall_modifier:0 "Atlantikwall"
+Medwall_modifier:0 "Mediterrane Bastion"
 ITA_subdue_the_sentinels_dynamic_modifier:0 "Die Sentinels unterdrücken"
 by_blood_alone:0 "Nur durch Blut"
 
@@ -1925,7 +1926,20 @@ wartime_minister_of_labour:0 "Kriegsarbeitsminister"
 ITA_modernize_the_mezzogiorno_buildings_tt:0 "Militärische Industrieorganisationen für Werften erhalten §G+10%§! §YSchiffsproduktion!§! \n "
  
 ITA_strengthen_northern_industry_buildings_tt:0 "Militärische Industrieorganisationen für Militärfabriken erhalten §G+10%§! Fabrikproduktion!§! \n"
+ITA_arms_discount_tt:0 "Small Arms Company"
 
+SOV_propaganda_defend_Stalingrad: "Wir werden Stalingrad verteidigen!"
+SOV_propaganda_defend_Leningrad: "Wir werden Leningrad verteidigen!"
+
+SOV_no_air:0 "Ungeschützt von Oben"
+SOV_no_air_desc:0 "Sobald der verbesserte Jäger erforscht und gebaut wurde ist die Luftwaffe der Roten Armee in der Lage, die Luftüberlegenheit zu erlangen. Wir müssen unsere Luftwaffe aufbauen, um unsere Städte und Industrie zu schützen.  \n §YDiese Idee wird entfernt, wenn alle folgenden Bedingungen erfüllt sind:§!\n  £trigger_yes Fokus abschließen §YTranspolar Flights§!\n  £trigger_yes Forschung §YImproved Small Airframe§!\n  £trigger_yes Habe mindestens §Y5,000 Fighters§! im Feld"
+
+Anti_Allies: "Konzentrierung auf die allierte Bedrohung"
+Anti_Soviet: "Konzentrierung auf die sowjetische Bedrohung"
+
+
+ france_cap_tt:0 "§RDieser Fokus wird bei unserer Kapitulation automatisch abgeschlossen!§!"
+ france_infra_tt:0 "\n§G========================================§!\n\nEs wird empfohlen, die folgenden Stufen an §YInfrastruktur§! in den Staaten auszubauen:\n§YGabun§!: Stufe 1\n§YMittelkongo§!: Stufe 2\n§YTschad§!: Stufe 2\n§YKamerun§!: Stufe 2\n§YÄquatorialafrika§!: Stufe 3"
 
 
 

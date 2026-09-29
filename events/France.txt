@@ -42,6 +42,152 @@ country_event = {
 	
 	is_triggered_only = yes
 
+	option = { # heavy tank
+		name = "Heavy Tanks"
+		hidden_effect = {
+			FRA = {
+				set_technology = { mechanised_infantry = 1 }
+			}
+		create_equipment_variant = {
+			name = "AFRICA HEAVY TANK"
+			type = heavy_tank_chassis_2
+			allow_without_tech = yes
+			parent_version = 0
+			modules = {
+				main_armament_slot = tank_heavy_cannon_2
+				turret_type_slot = tank_heavy_three_man_tank_turret
+				suspension_type_slot = tank_interleaved_suspension
+				armor_type_slot = tank_cast_armor
+				engine_type_slot = tank_diesel_engine
+				special_type_slot_1 = tank_radio_2
+				special_type_slot_2 = secondary_turret_small_cannon
+				special_type_slot_3 = secondary_turret_small_cannon 
+				special_type_slot_4 = easy_maintenance 
+			}
+			upgrades = {
+				tank_nsb_engine_upgrade = 9
+				tank_nsb_armor_upgrade = 4
+			}
+			icon = "GFX_GER_basic_heavy_tank_medium"
+		}
+		create_equipment_variant = {
+			name = "AFRICA HEAVY TD"
+			type = heavy_tank_destroyer_chassis_2
+			parent_version = 0
+			modules = {
+				main_armament_slot = tank_high_velocity_cannon_2
+				turret_type_slot = tank_heavy_fixed_superstructure_turret
+				suspension_type_slot = tank_bogie_suspension
+				armor_type_slot = tank_cast_armor
+				engine_type_slot = tank_diesel_engine
+				special_type_slot_1 = secondary_turret_small_cannon
+				special_type_slot_2 = secondary_turret_small_cannon
+				special_type_slot_3 = secondary_turret_small_cannon
+				special_type_slot_4 = secondary_turret_small_cannon
+			}
+			upgrades = {
+				tank_nsb_engine_upgrade = 8
+				tank_nsb_armor_upgrade = 0
+			}
+		}
+		create_equipment_variant = {
+			name = "AFRICA AA HARD"
+			type = heavy_tank_aa_chassis_2
+			parent_version = 0
+			modules = {
+				main_armament_slot = tank_anti_air_cannon_2
+				turret_type_slot = tank_heavy_three_man_tank_turret
+				suspension_type_slot = tank_bogie_suspension
+				armor_type_slot = tank_riveted_armor
+				engine_type_slot = tank_diesel_engine
+				special_type_slot_1 = additional_machine_guns
+				special_type_slot_2 = secondary_turret_small_cannon
+				special_type_slot_3 = secondary_turret_small_cannon
+				special_type_slot_4 = easy_maintenance
+			}
+			upgrades = {
+				tank_nsb_engine_upgrade = 8
+				tank_nsb_armor_upgrade = 0
+			}
+		}
+		create_equipment_variant = {
+			name = "AFRICA FLAME TANKs HARD"
+			type = medium_tank_flame_chassis_1
+			allow_without_tech = yes
+			parent_version = 0
+			modules = {
+				main_armament_slot = flamethrower
+				turret_type_slot = tank_medium_three_man_tank_turret
+				suspension_type_slot = tank_interleaved_suspension
+				armor_type_slot = tank_riveted_armor
+				engine_type_slot = tank_diesel_engine
+				special_type_slot_1 = tank_radio_2
+				special_type_slot_4 = easy_maintenance 
+			}
+			upgrades = {
+				tank_nsb_engine_upgrade = 9
+				tank_nsb_armor_upgrade = 0
+			}
+			icon = "GFX_GER_basic_medium_tank_medium"
+		}	
+		create_equipment_variant = {
+			name = "AFRICA LIGHT TANKs HARD"
+			type = light_tank_chassis_1
+			allow_without_tech = yes
+			parent_version = 0
+			modules = {
+				main_armament_slot = tank_small_cannon_2
+				turret_type_slot = tank_light_three_man_tank_turret
+				suspension_type_slot = tank_interleaved_suspension
+				armor_type_slot = tank_riveted_armor
+				engine_type_slot = tank_diesel_engine
+				special_type_slot_1 = tank_radio_2
+				special_type_slot_2 = secondary_turret_small_cannon
+				special_type_slot_3 = additional_machine_guns
+				special_type_slot_4 = easy_maintenance 
+			}
+			upgrades = {
+				tank_nsb_engine_upgrade = 9
+				tank_nsb_armor_upgrade = 0
+			}
+			icon = "GFX_GER_basic_light_tank_light"
+		}
+			add_equipment_to_stockpile = { type = heavy_tank_chassis_2 amount = 350 producer = FRA variant_name = "AFRICA HEAVY TANK" }
+			#add_equipment_to_stockpile = { type = heavy_tank_destroyer_chassis_2 amount = 300 producer = FRA variant_name = "AFRICA HEAVY TD" }
+			#add_equipment_to_stockpile = { type = medium_tank_artillery_chassis_2 amount = 150 producer = FRA variant_name = "AFRICA SPG SOFT" }
+			add_equipment_to_stockpile = { type = heavy_tank_aa_chassis_2 amount = 150 producer = FRA variant_name = "AFRICA AA HARD" }
+			add_equipment_to_stockpile = { type = medium_tank_flame_chassis_1 amount = 200 producer = FRA variant_name = "AFRICA FLAME TANKs HARD" }
+			add_equipment_to_stockpile = { type = light_tank_chassis_1 amount = 300 producer = FRA variant_name = "AFRICA LIGHT TANKs HARD" }
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_0
+				amount = 2000
+			}
+			add_equipment_to_stockpile = {
+				type = motorized_equipment_1
+				amount = 1000
+			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment_1
+				amount = 200
+			}
+			add_equipment_to_stockpile = {
+				type = anti_air_equipment_1
+				amount = 300
+			}
+			add_equipment_to_stockpile = {
+				type = train_equipment_1
+				amount = 100
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment_1
+				amount = 500
+			}
+
+		load_oob = "FRA_AFRICA_heavy_tanks"
+		}
+		#horstorical_multiplayer_vichy_france = yes 
+	}
+
 	option = { # hard attack tanks
 		name = "Hard Attack focused Medium Tanks"
 		hidden_effect = {

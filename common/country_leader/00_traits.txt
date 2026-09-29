@@ -3093,9 +3093,8 @@ leader_traits = {
 	the_statist = { #Peker
 		random = no
 		consumer_goods_factor = -0.10
-		political_power_factor = 0.1
-		production_speed_arms_factory_factor = 0.05
-		production_speed_industrial_complex_factor = 0.05
+		production_speed_arms_factory_factor = 0.025
+		production_speed_industrial_complex_factor = 0.025
 	}
 
 	the_academic = { #Aydemir
@@ -3481,7 +3480,7 @@ leader_traits = {
 		conscription_factor = 0.05
 		army_core_defence_factor = 0.05
 		dig_in_speed_factor = 0.05
-		max_dig_in = 5
+		max_dig_in = 2.5
 	}
 
 	incompetent_leader = { #Georgi Kyoseivanov
@@ -3554,7 +3553,7 @@ leader_traits = {
 		conscription_factor = 0.05
 		army_core_defence_factor = 0.05
 		dig_in_speed_factor = 0.05
-		max_dig_in = 5
+		max_dig_in = 2.5
 	}
 
 	political_manipulator_regency_council = { #Regency Council (led by Bogdan Filov)
@@ -8243,10 +8242,10 @@ leader_traits = {
 	}
 	reluctant_interventionist = {
 		random = yes
-		stability_factor = 0.05
-		lend_lease_tension = -0.2
-		request_lease_tension = -0.2
-
+		stability_factor = 0.075
+		army_core_attack_factor = 0.025
+		army_core_defence_factor = 0.025
+		political_power_gain = 0.1
 		ai_will_do = {
 			factor = 2
 		}

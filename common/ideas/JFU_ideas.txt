@@ -574,6 +574,7 @@ ideas = {
 				army_attack_factor = 0.1
 				army_defence_factor = 0.1
 				no_supply_grace = 72
+				acclimatization_cold_climate_gain_factor = 1
 			}
 		}
 		soviet_winter_offensive2= {
@@ -588,6 +589,7 @@ ideas = {
 				army_attack_factor = 0.1
 				army_defence_factor = 0.1
 				supply_consumption_factor = -0.10
+				acclimatization_cold_climate_gain_factor = 1
 			}
 		}
 
@@ -603,8 +605,134 @@ ideas = {
 				army_attack_factor = 0.15
 				army_defence_factor = 0.1
 				supply_consumption_factor = -0.10
+				acclimatization_cold_climate_gain_factor = 1
 			}
 		}	
+			Anti_Allies = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			picture = generic_acquire_tanks
+			targeted_modifier = {
+				tag = ENG
+				attack_bonus_against = 0.05
+				defense_bonus_against = 0.05
+			}
+			targeted_modifier = {
+				tag = USA
+				attack_bonus_against = 0.05
+				defense_bonus_against = 0.05
+			}
+			targeted_modifier = {
+				tag = CAN
+				attack_bonus_against = 0.05
+				defense_bonus_against = 0.05
+			}
+			targeted_modifier = {
+				tag = SAF
+				attack_bonus_against = 0.05
+				defense_bonus_against = 0.05
+			}
+			targeted_modifier = {
+				tag = FRA
+				attack_bonus_against = 0.05
+				defense_bonus_against = 0.05
+			}
+			targeted_modifier = {
+				tag = AST
+				attack_bonus_against = 0.05
+				defense_bonus_against = 0.05
+			}
+			targeted_modifier = {
+				tag = RAJ
+				attack_bonus_against = 0.05
+				defense_bonus_against = 0.05
+			}
+			targeted_modifier = {
+				tag = NZL
+				attack_bonus_against = 0.05
+				defense_bonus_against = 0.05
+			}
+			targeted_modifier = {
+				tag = BRA
+				attack_bonus_against = 0.05
+				defense_bonus_against = 0.05
+			}
+			targeted_modifier = {
+				tag = MEX
+				attack_bonus_against = 0.05
+				defense_bonus_against = 0.05
+			}
+			targeted_modifier = {
+				tag = SOV
+				attack_bonus_against = -0.15
+				defense_bonus_against = -0.15
+			}			
+		}
+
+	Anti_Soviet = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			picture = generic_acquire_tanks
+			targeted_modifier = {
+				tag = ENG
+				attack_bonus_against = -0.10
+				defense_bonus_against = -0.10
+			}
+			targeted_modifier = {
+				tag = USA
+				attack_bonus_against = -0.10
+				defense_bonus_against = -0.10
+			}
+			targeted_modifier = {
+				tag = CAN
+				attack_bonus_against = -0.10
+				defense_bonus_against = -0.10
+			}
+			targeted_modifier = {
+				tag = SAF
+				attack_bonus_against = -0.10
+				defense_bonus_against = -0.10
+			}
+			targeted_modifier = {
+				tag = FRA
+				attack_bonus_against = -0.10
+				defense_bonus_against = -0.10
+			}
+			targeted_modifier = {
+				tag = AST
+				attack_bonus_against = -0.10
+				defense_bonus_against = -0.10
+			}
+			targeted_modifier = {
+				tag = RAJ
+				attack_bonus_against = -0.10
+				defense_bonus_against = -0.10
+			}
+			targeted_modifier = {
+				tag = NZL
+				attack_bonus_against = -0.10
+				defense_bonus_against = -0.10
+			}
+			targeted_modifier = {
+				tag = BRA
+				attack_bonus_against = -0.10
+				defense_bonus_against = -0.10
+			}
+			targeted_modifier = {
+				tag = MEX
+				attack_bonus_against = -0.10
+				defense_bonus_against = -0.10
+			}
+			targeted_modifier = {
+				tag = SOV
+				attack_bonus_against = 0.05
+				defense_bonus_against = 0.05
+			}
+		}
 		free_trade_idea = {
 			allowed = {
 				always = no
@@ -1947,5 +2075,8 @@ ideas = {
 			army_core_attack_factor = 0.1
 		}
 	}
+
 	}
+	
+	
 }

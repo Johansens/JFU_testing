@@ -176,7 +176,6 @@ mountaineers_2 = {
     rewards = {
 		reward_1 = {
 			mastery = 60
-			acclimatization_cold_climate_gain_factor = 0.25
 			mountaineers = {
 				forest = {
 					attack = 0.10
@@ -186,7 +185,6 @@ mountaineers_2 = {
 		}
 		reward_2 = {
 			mastery = 60
-			acclimatization_hot_climate_gain_factor = 0.25
 			mountaineers = {
 				desert = {
 					attack = 0.10

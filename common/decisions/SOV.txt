@@ -1870,90 +1870,7 @@ SOV_propaganda_campaigns = {
 		}
 	}
 
-	SOV_propaganda_defend_moscow = { # ID = 5
-		priority = 4
-
-		icon = eng_propaganda_campaigns
-
-		ai_will_do = {
-			base = 500
-			modifier = {
-				factor = 0.1
-				check_variable = { SOV_propaganda_defend_moscow_cost > 30 } #Less likely to do it a third time
-			}
-			modifier = {
-				factor = 0.1
-				check_variable = { SOV_propaganda_defend_moscow_cost > 45 } #Even less likely to do it a fourth time
-			}
-			modifier = {
-				factor = 0
-				check_variable = { SOV_propaganda_defend_moscow_cost > 90 } #Shouldn't even consider doing it a fifth time
-			}
-		}
-
-		allowed = {
-			original_tag = SOV
-		}
-
-		available = {
-			SOV_propaganda_poster_slot_available = yes
-
-			controls_state = 219 #Moscow
-			219 = {
-				any_neighbor_state = {
-					controller = {
-						has_war_with = ROOT
-					}
-				}
-			}
-		}
-
-		visible = {
-			OR = {
-				has_completed_focus = SOV_expand_the_agitprop
-				has_country_flag = SOV_debug_unlock_propaganda_campaigns_flag #debug
-			}
-		}
-
-		days_remove = SOV_default_propaganda_campaign_duration
-
-		days_re_enable = SOV_default_propaganda_campaign_cooldown
-
-		cost = SOV_propaganda_defend_moscow_cost
-
-		complete_effect = {
-			set_variable = { SOV_new_propaganda_campaign = 5 }
-			SOV_pick_propaganda_campaign_slot_effect = yes
-			SOV_achievement_propaganda_counter_effect = yes
-
-			219 = { #Moscow
-				add_dynamic_modifier = { modifier = SOV_defend_moscow scope = SOV }
-				every_neighbor_state = {
-					add_dynamic_modifier = { modifier = SOV_defend_moscow scope = SOV }
-				}
-			}
-			custom_effect_tooltip = SOV_propaganda_defend_moscow_state_modifier_tt
-		}
-
-		remove_effect = {
-			219 = { #Moscow
-				remove_dynamic_modifier = { modifier = SOV_defend_moscow }
-				every_neighbor_state = {
-					remove_dynamic_modifier = { modifier = SOV_defend_moscow }
-				}
-			}
-
-			set_variable = { SOV_propaganda_campaign_to_remove = 5 }
-			SOV_reset_propaganda_campaign_slot_effect = yes
-
-			set_variable = { SOV_propaganda_cost = SOV_propaganda_defend_moscow_cost }
-			SOV_increase_propaganda_campaign_cost_effect = yes
-			set_variable = { SOV_propaganda_defend_moscow_cost = SOV_propaganda_cost }
-			clear_variable = SOV_propaganda_cost
-
-			custom_effect_tooltip = SOV_propaganda_campaign_cooldown_tt
-		}
-	}
+	
 
 	SOV_propaganda_fight_to_the_last = { # ID = 6
 		priority = 5
@@ -4550,7 +4467,250 @@ SOV_great_patriotic_war = {
 		}
 
 	}
+	SOV_propaganda_defend_moscow = { # ID = 5
+		priority = 4
 
+		icon = generic_army_support
+
+
+		allowed = {
+			original_tag = SOV
+		}
+
+		available = {
+
+			controls_state = 219 #Moscow
+			219 = {
+				any_neighbor_state = {
+					controller = {
+						has_war_with = ROOT
+					}
+				}
+			}
+		}
+
+		visible = {
+			
+		}
+
+		days_remove = 60
+
+
+		cost = 0
+
+		complete_effect = {
+
+			219 = { #Moscow
+				add_dynamic_modifier = { modifier = SOV_defend_moscow scope = SOV }
+				every_neighbor_state = {
+					add_dynamic_modifier = { modifier = SOV_defend_moscow scope = SOV }
+				}
+			}
+				division_template = {
+					name = "Shtrafnaya Chast"
+					division_names_group = SOV_PEN_01
+					is_locked = yes
+					force_allow_recruiting = no
+
+					regiments = {
+						penal_battalion = { x = 0 y = 0 }
+						penal_battalion = { x = 0 y = 1 }
+						penal_battalion = { x = 0 y = 2 }
+						penal_battalion = { x = 1 y = 0 }
+						penal_battalion = { x = 1 y = 1 }
+						penal_battalion = { x = 1 y = 2 }
+						penal_battalion = { x = 2 y = 0 }
+						penal_battalion = { x = 2 y = 1 }
+						penal_battalion = { x = 2 y = 2 }
+						penal_battalion = { x = 2 y = 3 }
+					}
+					support = {
+						anti_air = { x = 0 y = 0 }
+						engineer = { x = 0 y = 1 }
+					}
+				}
+				219 = {
+					create_unit = {
+						division = "division_template = \"Shtrafnaya Chast\" start_experience_factor = 1 start_equipment_factor = 1.0"
+						owner = ROOT
+						count = 20
+					}
+				}
+		}
+
+		remove_effect = {
+			219 = { #Moscow
+				remove_dynamic_modifier = { modifier = SOV_defend_moscow }
+				every_neighbor_state = {
+					remove_dynamic_modifier = { modifier = SOV_defend_moscow }
+				}
+			}
+		}
+	}
+
+	SOV_propaganda_defend_Stalingrad = { # ID = 5
+		priority = 4
+
+		icon = generic_army_support
+
+	
+
+		allowed = {
+			original_tag = SOV
+		}
+
+		available = {
+
+			controls_state = 217 #Stalingrad
+			217 = {
+				any_neighbor_state = {
+					controller = {
+						has_war_with = ROOT
+					}
+				}
+			}
+		}
+
+		visible = {
+			
+		}
+
+		days_remove = 60
+
+
+		cost = 0
+
+		complete_effect = {
+
+			217 = { #Stalingrad
+				add_dynamic_modifier = { modifier = SOV_defend_moscow scope = SOV }
+				every_neighbor_state = {
+					add_dynamic_modifier = { modifier = SOV_defend_moscow scope = SOV }
+				}
+			}
+				division_template = {
+					name = "Shtrafnaya Chast"
+					division_names_group = SOV_PEN_01
+					is_locked = yes
+					force_allow_recruiting = no
+
+					regiments = {
+						penal_battalion = { x = 0 y = 0 }
+						penal_battalion = { x = 0 y = 1 }
+						penal_battalion = { x = 0 y = 2 }
+						penal_battalion = { x = 1 y = 0 }
+						penal_battalion = { x = 1 y = 1 }
+						penal_battalion = { x = 1 y = 2 }
+						penal_battalion = { x = 2 y = 0 }
+						penal_battalion = { x = 2 y = 1 }
+						penal_battalion = { x = 2 y = 2 }
+						penal_battalion = { x = 2 y = 3 }
+					}
+					support = {
+						anti_air = { x = 0 y = 0 }
+						engineer = { x = 0 y = 1 }
+					}
+				}
+				217 = {
+					create_unit = {
+						division = "division_template = \"Shtrafnaya Chast\" start_experience_factor = 1 start_equipment_factor = 1.0"
+						owner = ROOT
+						count = 20
+					}
+				}
+		}
+
+		remove_effect = {
+			217 = { #Stalingrad
+				remove_dynamic_modifier = { modifier = SOV_defend_moscow }
+				every_neighbor_state = {
+					remove_dynamic_modifier = { modifier = SOV_defend_moscow }
+				}
+			}
+		}
+	}
+	SOV_propaganda_defend_Leningrad = { # ID = 5
+		priority = 4
+
+		icon = generic_army_support
+
+		
+
+		allowed = {
+			original_tag = SOV
+		}
+
+		available = {
+
+			controls_state = 195 #Leningrad 
+			195 = {
+				any_neighbor_state = {
+					controller = {
+						has_war_with = ROOT
+					}
+				}
+			}
+			
+		}
+
+		visible = {
+			
+		}
+
+		days_remove = 60
+
+
+		cost = 0
+
+		complete_effect = {
+
+			195 = { #Leningrad 
+				add_dynamic_modifier = { modifier = SOV_defend_moscow scope = SOV }
+				every_neighbor_state = {
+					add_dynamic_modifier = { modifier = SOV_defend_moscow scope = SOV }
+				}
+			}
+				division_template = {
+					name = "Shtrafnaya Chast"
+					division_names_group = SOV_PEN_01
+					is_locked = yes
+					force_allow_recruiting = no
+
+					regiments = {
+						penal_battalion = { x = 0 y = 0 }
+						penal_battalion = { x = 0 y = 1 }
+						penal_battalion = { x = 0 y = 2 }
+						penal_battalion = { x = 1 y = 0 }
+						penal_battalion = { x = 1 y = 1 }
+						penal_battalion = { x = 1 y = 2 }
+						penal_battalion = { x = 2 y = 0 }
+						penal_battalion = { x = 2 y = 1 }
+						penal_battalion = { x = 2 y = 2 }
+						penal_battalion = { x = 2 y = 3 }
+					}
+					support = {
+						anti_air = { x = 0 y = 0 }
+						engineer = { x = 0 y = 1 }
+					}
+				}
+				195 = {
+					create_unit = {
+						division = "division_template = \"Shtrafnaya Chast\" start_experience_factor = 1 start_equipment_factor = 1.0"
+						owner = ROOT
+						count = 20
+					}
+				}
+		}
+
+		remove_effect = {
+			195 = { #Leningrad 
+				remove_dynamic_modifier = { modifier = SOV_defend_moscow }
+				every_neighbor_state = {
+					remove_dynamic_modifier = { modifier = SOV_defend_moscow }
+				}
+			}
+		}
+	}
 	SOV_order_227 = {
 		priority = 101
 
