@@ -4277,6 +4277,10 @@ JFU_vichy_france_2 = {
 		459 = { set_demilitarized_zone = yes }
 		transfer_state = 461
 		461 = { set_demilitarized_zone = yes }
+		give_resource_rights = {
+		receiver = ITA
+		state = 22
+		}
 
 		if = { 
 			limit = { FRA = { check_variable = { FRA_legitimacy 	< 100 } }  }
