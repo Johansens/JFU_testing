@@ -997,6 +997,19 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+			every_military_industrial_organization = {
+					limit = {
+						OR = {
+							is_military_industrial_organization = SOV_tupolev_design_bureau_organization
+							is_military_industrial_organization = SOV_yakovlev_design_bureau_organization
+							is_military_industrial_organization = SOV_ilyushin_design_bureau_organization
+							is_military_industrial_organization = SOV_mig_design_bureau_organization
+						}
+					}
+					complete_mio_trait = SOV_mio_trait_merge_plant_no_28
+					complete_mio_trait = SOV_mio_trait_merge_plant_no_150
+					complete_mio_trait = SOV_mio_trait_merge_vef_plant
+				}
 		}
 	}
 
@@ -1669,19 +1682,6 @@ focus_tree = {
 				}
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt
-			if = {
-				limit = {
-					has_dlc = "Arms Against Tyranny"
-				}
-				mio:SOV_okmo_organization = {
-					add_mio_funds = 2000
-					add_mio_funds_gain_factor = 0.10
-					add_mio_research_bonus = 0.05
-
-				
-					#unlock_mio_trait_tooltip = 
-				}
-			}
 		}
 	}
 
@@ -1704,6 +1704,19 @@ focus_tree = {
 
 		completion_reward = {
 			custom_effect_tooltip = SOV_merge_tank_and_materiel_plants_tt
+			every_military_industrial_organization = {
+					limit = {
+						OR = {
+							is_military_industrial_organization = SOV_okmo_organization
+							is_military_industrial_organization = SOV_astrov_design_bureau_organization
+							is_military_industrial_organization = SOV_morozov_design_bureau_organization
+							is_military_industrial_organization = SOV_kirov_organization
+						}
+					}
+					complete_mio_trait = SOV_mio_trait_merge_plant_no_174
+					complete_mio_trait = SOV_mio_trait_merge_plant_no_112
+					complete_mio_trait = SOV_mio_trait_merge_ural_heavy_machine_building_plant
+				}
 		}
 	}
 
