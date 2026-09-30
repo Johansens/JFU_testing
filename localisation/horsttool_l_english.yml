@@ -1948,6 +1948,8 @@ Anti_Soviet: "Concentrate on the Soviet Threat"
  linie_tt:0 "\n§G========================================§!\n "
  space_tt:0 " \n"
 
+collect_barb_tt:0 "The §YSocialist Emulation§! National Spirit will be §Rremoved§! at war. You will gain a new National Spirit that gives: \n §R-10%§! §YFactory Output§! \n §R+40%§! §YConsumer Goods Factor§! \n "
+
 
 
 
