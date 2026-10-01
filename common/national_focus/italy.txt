@@ -1924,7 +1924,7 @@ focus_tree = {
 				162 = {
 					add_resource = {
 						type = steel
-						amount = 12
+						amount = 36
 					}
 				}
 			}
@@ -2012,21 +2012,6 @@ focus_tree = {
 					level = 1
 					instant_build = yes
 				}
-			}
-
-			#Roma - La Spezia
-			build_railway = {
-				path = { 9904 11751 6862 6875 11833 6946 6973 }
-			}
-
-			#Roma - Bologna
-			build_railway = {
-				path = { 11751 6862 9750 9879 9907 1616 6985 6606 }
-			}
-
-			#Roma - Napoli
-			build_railway = {
-				path = { 9904 11846 923 9826 819 }
 			}
 		}
 	}

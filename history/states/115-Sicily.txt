@@ -5,6 +5,9 @@ state = {
 
 	history = {
 		owner = ITA
+		resources = {
+			tungsten = 40
+		} 
 		victory_points = {
 			10074 20 
 		}
