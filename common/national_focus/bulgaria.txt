@@ -82,7 +82,7 @@ focus_tree = {
 		relative_position_id = BUL_acquire_modern_tools
 		x = -6
 		y = 1
-		cost = 10
+		cost = 5
 
 		available = {
 
@@ -132,7 +132,7 @@ focus_tree = {
 			add_ideas = MEFO_bills_axis_minor
 			custom_effect_tooltip = ROM_NDI_focus_tt
 			48 = {
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = arms_factory
 					level = 2
@@ -146,7 +146,7 @@ focus_tree = {
 				set_variable = { BFI_SEF = 0 }
 				add_dynamic_modifier = { modifier = BUL_foreign_industry }
 			}
-			custom_effect_tooltip = "Enables decision to invite foreign inverstors giving us signivicant industrial buffs" 
+			custom_effect_tooltip = BUL_foreign_contracts_tt 
 		}
 	}
 
@@ -168,7 +168,7 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
 			212 = {
-				add_extra_state_shared_building_slots = 6
+				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = industrial_complex
 					level = 1
@@ -179,11 +179,6 @@ focus_tree = {
 				remove_idea = BUL_national_industry_01
 				add_idea = BUL_national_industry_02
 			}
-			custom_effect_tooltip = available_designer
-			show_ideas_tooltip = BUL_petrol_ad
-			show_ideas_tooltip = BUL_ira
-			show_ideas_tooltip = BUL_pirin
-			show_ideas_tooltip = BUL_vulkan_cement
 
 			add_ai_strategy = {
 				type = building_target
@@ -231,7 +226,7 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
 			212 = {
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = arms_factory
 					level = 2
@@ -281,7 +276,7 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
 			48 = {
-				add_extra_state_shared_building_slots = 6
+				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = industrial_complex
 					level = 1
@@ -344,42 +339,6 @@ focus_tree = {
 					}
 				}
 				add_extra_state_shared_building_slots = 2
-			}
-			if = {
-				limit = {
-					controls_state = 801
-					controls_state = 211
-				}
-				build_railway = {
-					path = { 949 3971 3952 3819 6842 9769 649 9783}
-				}
-			}
-			if = {
-				limit = {
-					controls_state = 212
-				}
-				build_railway = { 
-					path = { 949 3908 3937 6923 }
-				}
-			}
-			if = {
-				limit = {
-					controls_state = 212
-					controls_state = 211
-				}
-				build_railway = { 
-					path = { 6923 9862 9888 9902 }
-				}
-			}
-			if = {
-				limit = { 
-					has_full_control_of_state = 803 
-					has_full_control_of_state = 106
-				}
-				build_railway = {
-					level = 2
-					path = { 949 935 907 3882 }
-				}
 			}				
 		}
 	}
@@ -399,17 +358,10 @@ focus_tree = {
 		
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
 		completion_reward = {
-			add_tech_bonus = {
-				name = BUL_mineral_extraction_in_the_rhodopes
-				ahead_reduction = 1
-			    bonus = 1.0
-			    uses = 1
-			    category = industry
-			}
 			48 = {
 				add_resource = {
 					type = steel
-					amount = 16
+					amount = 36
 				}
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
@@ -418,6 +370,24 @@ focus_tree = {
 					instant_build = yes
 				}	
 			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_tech_bonus = {
+				name = BUL_mineral_extraction_in_the_rhodopes
+			    bonus = 1.0
+			    uses = 1
+				technology = advanced_machine_tools
+				technology = flexible_line
+				technology = assembly_line_production
+				technology = streamlined_line
+				technology = concentrated_industry3
+				technology = concentrated_industry4
+				technology = concentrated_industry5
+				technology = dispersed_industry3 
+				technology = dispersed_industry4 
+				technology = dispersed_industry5
+			}
+
+
 		}
 	}
 
@@ -436,18 +406,31 @@ focus_tree = {
 		
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
 		completion_reward = {
-			add_tech_bonus = {
-				name = BUL_mineral_extraction_in_the_rhodopes
-			    bonus = 1.0
-			    uses = 1
-			    category = industry
-			}
+
 			212 = {
 				add_resource = {
 					type = chromium
-					amount = 10
+					amount = 24
 				}
 			}
+			custom_effect_tooltip = generic_skip_one_line_tt
+			add_tech_bonus = {
+				name = BUL_mineral_extraction_in_the_rhodopes
+				ahead_reduction = 1
+			    bonus = 1.0
+			    uses = 1
+				technology = advanced_machine_tools
+				technology = flexible_line
+				technology = assembly_line_production
+				technology = streamlined_line
+				technology = concentrated_industry3
+				technology = concentrated_industry4
+				technology = concentrated_industry5
+				technology = dispersed_industry3 
+				technology = dispersed_industry4 
+				technology = dispersed_industry5
+			}
+
 		}
 	}
 
@@ -533,6 +516,12 @@ focus_tree = {
 			    uses = 1
 			    category = infantry_weapons
 				category = artillery
+			}
+			add_tech_bonus = {
+				name = BUL_reorganize_the_military_industry
+				bonus = 1
+				uses = 1
+				category = armor
 			}
 		}
 	}
@@ -710,12 +699,11 @@ focus_tree = {
 		
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
-			army_experience = 15
-			add_doctrine_cost_reduction = {
+			add_tech_bonus = {
 				name = BUL_vasil_levsky_national_military_university
-			    cost_reduction = 0.5
-			    uses = 2
-				category = land_doctrine
+				bonus = 1
+				uses = 1
+				category = armor
 			}
 			add_research_slot = 1
 		}
@@ -892,7 +880,7 @@ focus_tree = {
 		relative_position_id = BUL_negotiate_bulgarian_rearmament
 		x = -2
 		y = 1
-		cost = 10
+		cost = 5
 
 		available = {
 
@@ -1031,15 +1019,6 @@ focus_tree = {
 			BUL_bzns_low_loyalty_increase_effect = yes
 			BUL_nsm_low_loyalty_decrease_effect = yes
 			custom_effect_tooltip = BUL_condemn_macedonian_organizations_tt
-			every_country = {
-				limit = {
-					BUL_country_seeks_macedonian_stability = yes
-				}
-				add_opinion_modifier = { 
-					target = BUL
-					modifier = BUL_condemned_imro
-				}
-			}
 
 			if = {
 				limit = {
@@ -1162,7 +1141,7 @@ focus_tree = {
 		relative_position_id = BUL_appoint_right_wing_ministers
 		x = -2
 		y = 1
-		cost = 10
+		cost = 5
 
 		available = {
 
@@ -1351,7 +1330,7 @@ focus_tree = {
 		relative_position_id = BUL_depose_the_tsar
 		x = -1
 		y = 1
-		cost = 10
+		cost = 5
 
 		available = {
 
@@ -1385,7 +1364,7 @@ focus_tree = {
 		relative_position_id = BUL_appoint_right_wing_ministers
 		x = 1
 		y = 2
-		cost = 10
+		cost = 5
 
 		available = {
 			NOT = { has_country_flag = BUL_nsm_media_banned_flag }
@@ -1422,7 +1401,7 @@ focus_tree = {
 		relative_position_id = BUL_allow_far_right_organizations
 		x = 0
 		y = 2
-		cost = 10
+		cost = 5
 
 		available = {
 
@@ -1445,9 +1424,8 @@ focus_tree = {
 		relative_position_id = BUL_appoint_right_wing_ministers
 		x = 3
 		y = 1
-		cost = 10
+		cost = 5
 		available = {
-			BUL = { is_ai = no }
 		}	
 		
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_INTERNAL_AFFAIRS}
@@ -1466,7 +1444,7 @@ focus_tree = {
 		relative_position_id = BUL_economic_protectionism
 		x = 0
 		y = 1
-		cost = 10
+		cost = 5
 
 		available = {
 			num_of_factories > 20
@@ -1500,15 +1478,7 @@ focus_tree = {
 		
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_INTERNAL_AFFAIRS}
 		completion_reward = {
-			random_owned_state = {
-				limit = {
-					free_building_slots = {
-						building = industrial_complex
-						size > 2
-						include_locked = yes
-					}
-				}
-				set_state_flag = BUL_corporatism_flag
+			48 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
@@ -1516,30 +1486,7 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			random_owned_state = {
-				limit = {
-					NOT = { has_state_flag = BUL_corporatism_flag }
-					free_building_slots = {
-						building = industrial_complex
-						size > 2
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
-			}
-			hidden_effect = {
-				random_owned_state = {
-					limit = {
-						has_state_flag = BUL_corporatism_flag
-					}
-					clr_state_flag = BUL_corporatism_flag
-				}
-			}
+			custom_effect_tooltip = generic_skip_one_line_tt
 			swap_ideas = {
 				remove_idea = BUL_government_reforms_fascists_02
 				add_idea = BUL_government_reforms_fascists_03
@@ -1649,42 +1596,6 @@ focus_tree = {
 		
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
-			random_owned_state = {
-				prioritize = { 48 212 }
-				limit = {
-					free_building_slots = {
-						building = arms_factory
-						size > 1
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
-				}
-				if = {
-					limit = {
-						infrastructure < 3
-					}
-					add_building_construction = {
-						type = infrastructure
-						level = 2
-						instant_build = yes
-					}
-				}
-				else_if = {
-					limit = {
-						infrastructure < 5
-					}
-					add_building_construction = {
-						type = infrastructure
-						level = 1
-						instant_build = yes
-					}
-				}
-			}
 
 			if = {
 				limit = {
