@@ -129,8 +129,6 @@ GER_mefo_bills_category = {
 				limit = {
 					has_country_flag = ger_has_cancelled_mefo
 				}
-				#GER_remove_mefo_bills = yes
-				#1
 				GER_pay_back_mefo_bills = yes
 			}
 			else = {
@@ -140,7 +138,6 @@ GER_mefo_bills_category = {
 					set_variable = { GER_extend_mefo_bills_days = days_mission_timeout@GER_mefo_bills_mission }
 					set_country_flag = paid_for_mefo
 				}
-				#GER_mefo_bills_level_up = yes
 				if = {
 					limit = {
 						check_variable = { var = GER_mefo_bill_counter value = 15 compare = less_than }
@@ -203,49 +200,6 @@ GER_mefo_bills_category = {
 			GER_stop_rearmament = yes
 		}
 	}
-
-	#GER_renew_mefos = {
-#
-	#	icon = ger_mefo_bills
-#
-	#	available = {
-	#		hidden_trigger = {
-	#			has_country_flag = ger_has_cancelled_mefo
-	#			NOT = {
-	#				OR = {
-	#					NOT = { GER_has_mefo_bills = yes }
-	#					has_idea = GER_mefo_bills_ended
-	#				}
-	#			}
-	#		}
-	#	}
-#
-	#	cost = 0
-#
-	#	fire_only_once = no
-#
-	#	visible = {
-	#		hidden_trigger = {
-	#			has_country_flag = ger_has_cancelled_mefo
-	#			NOT = {
-	#				OR = {
-	#					NOT = { GER_has_mefo_bills = yes }
-	#					has_idea = GER_mefo_bills_ended
-	#				}
-	#			}
-	#		}
-	#	}
-#
-	#	cancel_if_not_visible = yes
-#
-	#	remove_effect = {
-	#		clr_country_flag = ger_has_cancelled_mefo
-	#	}
-#
-	#	ai_will_do = {
-	#		factor = 200
-	#	}
-	#}
 }
 
 GER_seize_gold_reserves_cat = {
@@ -255,36 +209,6 @@ GER_seize_gold_reserves_cat = {
 
 		ai_will_do = {
 			base = 10
-			modifier = {
-				factor = 2.5
-				check_variable = { GER_industrial_consumer_goods_factor > 0.25 }
-			}
-			modifier = {
-				factor = 2
-				check_variable = { GER_industrial_consumer_goods_factor > 0.5 }
-			}
-			modifier = {
-				factor = 2
-				check_variable = { GER_industrial_consumer_goods_factor > 0.75 }
-			}
-			modifier = {
-				factor = 5
-				check_variable = { GER_industrial_consumer_goods_factor > 0.99 }
-			}
-			modifier = {
-				factor = 1.5
-				has_war_with_major = yes
-			}
-			modifier = {
-				factor = 1.5
-				FROM = {
-					is_major = yes
-				}
-			}
-			modifier = {
-				factor = 0
-				check_variable = { GER_industrial_consumer_goods_factor < 0.15 }
-			}
 		}
 
 		target_non_existing = yes #This is required for the Decision to even show up. TODO_Danne fix a better solution
@@ -310,6 +234,7 @@ GER_seize_gold_reserves_cat = {
 		}
 
 		available = {
+			always = no
 			FROM = {
 				has_country_flag = GER_has_capitulated_to_germany
 			}
@@ -373,6 +298,192 @@ GER_seize_gold_reserves_cat = {
 			}
 		}
 	}
+	GER_seize_gold_reserves_POL = {
+		priority = 1
+		icon = GFX_decision_generic_confiscation
+
+		ai_will_do = {
+			base = 10
+		}
+		available = {
+			POL = has_capitulated = yes
+			NOT = { has_country_flag = GER_seized_polish_gold_reserves_flag }
+		}
+		complete_effect = {
+			POL = { set_country_flag = GER_seized_polish_gold_reserves_flag }
+			every_state = {
+				limit = {
+					is_on_continent = europe
+					is_fully_controlled_by = ROOT
+					is_core_of = POL
+				}
+				add_compliance = -5
+				add_resistance = 10
+				add_dynamic_modifier = { modifier = GER_overburdened_state_modifier days = 90 }
+			}
+			custom_effect_tooltip = GER_modify_economy_of_conquest_modifier_tt
+			add_to_variable = {
+				GER_industrial_consumer_goods_factor = -0.20
+				tooltip = consumer_goods_factor_tt
+			}
+			GER_reduce_mefo_bills_penalty = yes
+		}
+	}
+	GER_seize_gold_reserves_DEN = {
+		priority = 1
+		icon = GFX_decision_generic_confiscation
+
+		ai_will_do = {
+			base = 10
+		}
+		available = {
+			DEN = has_capitulated = yes
+			NOT = { has_country_flag = GER_seized_danish_gold_reserves_flag }
+		}
+		complete_effect = {
+			DEN = { set_country_flag = GER_seized_danish_gold_reserves_flag }
+			every_state = {
+				limit = {
+					is_on_continent = europe
+					is_fully_controlled_by = ROOT
+					is_core_of = DEN
+				}
+				add_compliance = -5
+				add_resistance = 10
+				add_dynamic_modifier = { modifier = GER_overburdened_state_modifier days = 90 }
+			}
+			custom_effect_tooltip = GER_modify_economy_of_conquest_modifier_tt
+			add_to_variable = {
+				GER_industrial_consumer_goods_factor = -0.10
+				tooltip = consumer_goods_factor_tt
+			}
+			GER_reduce_mefo_bills_penalty = yes
+		}
+	}
+	GER_seize_gold_reserves_NOR = {
+		priority = 1
+		icon = GFX_decision_generic_confiscation
+
+		ai_will_do = {
+			base = 10
+		}
+		available = {
+			NOR = has_capitulated = yes
+			NOT = { has_country_flag = GER_seized_norwegian_gold_reserves_flag }
+		}
+		complete_effect = {
+			NOR = { set_country_flag = GER_seized_norwegian_gold_reserves_flag }
+			every_state = {
+				limit = {
+					is_on_continent = europe
+					is_fully_controlled_by = ROOT
+					is_core_of = NOR
+				}
+				add_compliance = -5
+				add_resistance = 10
+				add_dynamic_modifier = { modifier = GER_overburdened_state_modifier days = 90 }
+			}
+			custom_effect_tooltip = GER_modify_economy_of_conquest_modifier_tt
+			add_to_variable = {
+				GER_industrial_consumer_goods_factor = -0.15
+				tooltip = consumer_goods_factor_tt
+			}
+			GER_reduce_mefo_bills_penalty = yes
+		}
+	}
+	GER_seize_gold_reserves_HOL = {
+		priority = 1
+		icon = GFX_decision_generic_confiscation
+
+		ai_will_do = {
+			base = 10
+		}
+		available = {
+			HOL = has_capitulated = yes
+			NOT = { has_country_flag = GER_seized_dutch_gold_reserves_flag }
+		}
+		complete_effect = {
+			HOL = { set_country_flag = GER_seized_dutch_gold_reserves_flag }
+			every_state = {
+				limit = {
+					is_on_continent = europe
+					is_fully_controlled_by = ROOT
+					is_core_of = HOL
+				}
+				add_compliance = -5
+				add_resistance = 10
+				add_dynamic_modifier = { modifier = GER_overburdened_state_modifier days = 90 }
+			}
+			custom_effect_tooltip = GER_modify_economy_of_conquest_modifier_tt
+			add_to_variable = {
+				GER_industrial_consumer_goods_factor = -0.15
+				tooltip = consumer_goods_factor_tt
+			}
+			GER_reduce_mefo_bills_penalty = yes
+		}
+	}
+	GER_seize_gold_reserves_BEL = {
+		priority = 1
+		icon = GFX_decision_generic_confiscation
+
+		ai_will_do = {
+			base = 10
+		}
+		available = {
+			BEL = has_capitulated = yes
+			NOT = { has_country_flag = GER_seized_belgian_gold_reserves_flag }
+		}
+		complete_effect = {
+			BEL = { set_country_flag = GER_seized_belgian_gold_reserves_flag }
+			every_state = {
+				limit = {
+					is_on_continent = europe
+					is_fully_controlled_by = ROOT
+					is_core_of = BEL
+				}
+				add_compliance = -5
+				add_resistance = 10
+				add_dynamic_modifier = { modifier = GER_overburdened_state_modifier days = 90 }
+			}
+			custom_effect_tooltip = GER_modify_economy_of_conquest_modifier_tt
+			add_to_variable = {
+				GER_industrial_consumer_goods_factor = -0.15
+				tooltip = consumer_goods_factor_tt
+			}
+			GER_reduce_mefo_bills_penalty = yes
+		}
+	}
+	GER_seize_gold_reserves_FRA = {
+		priority = 1
+		icon = GFX_decision_generic_confiscation
+
+		ai_will_do = {
+			base = 10
+		}
+		available = {
+			FRA = has_capitulated = yes
+			NOT = { has_country_flag = GER_seized_french_gold_reserves_flag }
+		}
+		complete_effect = {
+			FRA = { set_country_flag = GER_seized_french_gold_reserves_flag }
+			every_state = {
+				limit = {
+					is_on_continent = europe
+					is_fully_controlled_by = ROOT
+					is_core_of = FRA
+				}
+				add_compliance = -5
+				add_resistance = 10
+				add_dynamic_modifier = { modifier = GER_overburdened_state_modifier days = 90 }
+			}
+			custom_effect_tooltip = GER_modify_economy_of_conquest_modifier_tt
+			add_to_variable = {
+				GER_industrial_consumer_goods_factor = -0.25
+				tooltip = consumer_goods_factor_tt
+			}
+			GER_reduce_mefo_bills_penalty = yes
+		}
+	}	
 }
 
 # Operational Planning
