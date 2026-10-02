@@ -101,14 +101,14 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			48 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
+			#48 = {
+			#	add_extra_state_shared_building_slots = 1
+			#	add_building_construction = {
+			#		type = industrial_complex
+			#		level = 1
+			#		instant_build = yes
+			#	}
+			#}
 		}
 	}
 
@@ -302,7 +302,7 @@ focus_tree = {
 
 		available = {
 			NOT = { has_idea = BUL_second_national_catastrophe }
-			num_of_factories > 29
+			num_of_civilian_factories > 24
 		}
 		
 		search_filters = {FOCUS_FILTER_INDUSTRY}
@@ -311,7 +311,7 @@ focus_tree = {
 				remove_idea = BUL_national_industry_03
 				add_idea = BUL_national_industry_04
 			}
-			BUL_replace_national_industrial_designer = yes	
+			#BUL_replace_national_industrial_designer = yes	
 		}
 	}
 
@@ -1447,7 +1447,7 @@ focus_tree = {
 		cost = 5
 
 		available = {
-			num_of_factories > 20
+			num_of_factories > 15
 		}
 		
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_INTERNAL_AFFAIRS}
@@ -1473,7 +1473,7 @@ focus_tree = {
 		cost = 10
 
 		available = {
-			num_of_factories > 30
+			num_of_factories > 20
 		}
 		
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_INTERNAL_AFFAIRS}

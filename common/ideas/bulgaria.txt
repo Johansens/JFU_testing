@@ -1781,7 +1781,7 @@ ideas = {
 			
 			modifier = {
 				economy_cost_factor = -0.5
-				production_speed_industrial_complex_factor = 0.1
+				production_speed_industrial_complex_factor = 0.05
 			} 
 		}
 
@@ -1805,7 +1805,7 @@ ideas = {
 			
 			modifier = {
 				economy_cost_factor = -0.5
-				production_speed_industrial_complex_factor = 0.15
+				production_speed_industrial_complex_factor = 0.10
 				consumer_goods_factor = -0.15
 				trade_laws_cost_factor = 0.5
 				min_export = -0.15
@@ -3042,7 +3042,7 @@ ideas = {
 			modifier = {
 				production_speed_radar_station_factor = 0.25
 				land_reinforce_rate = 0.05
-				production_factory_max_efficiency_factor = 0.05
+				#production_factory_max_efficiency_factor = 0.05
 			}
 		}
 
