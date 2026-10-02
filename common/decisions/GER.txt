@@ -306,7 +306,7 @@ GER_seize_gold_reserves_cat = {
 			base = 10
 		}
 		available = {
-			POL = has_capitulated = yes
+			POL = { has_capitulated = yes }
 			NOT = { has_country_flag = GER_seized_polish_gold_reserves_flag }
 		}
 		complete_effect = {
@@ -337,7 +337,7 @@ GER_seize_gold_reserves_cat = {
 			base = 10
 		}
 		available = {
-			DEN = has_capitulated = yes
+			DEN = { has_capitulated = yes }
 			NOT = { has_country_flag = GER_seized_danish_gold_reserves_flag }
 		}
 		complete_effect = {
@@ -368,7 +368,7 @@ GER_seize_gold_reserves_cat = {
 			base = 10
 		}
 		available = {
-			NOR = has_capitulated = yes
+			NOR = { has_capitulated = yes }
 			NOT = { has_country_flag = GER_seized_norwegian_gold_reserves_flag }
 		}
 		complete_effect = {
@@ -399,7 +399,7 @@ GER_seize_gold_reserves_cat = {
 			base = 10
 		}
 		available = {
-			HOL = has_capitulated = yes
+			HOL = { has_capitulated = yes }
 			NOT = { has_country_flag = GER_seized_dutch_gold_reserves_flag }
 		}
 		complete_effect = {
@@ -430,7 +430,7 @@ GER_seize_gold_reserves_cat = {
 			base = 10
 		}
 		available = {
-			BEL = has_capitulated = yes
+			BEL = { has_capitulated = yes }
 			NOT = { has_country_flag = GER_seized_belgian_gold_reserves_flag }
 		}
 		complete_effect = {
@@ -461,7 +461,7 @@ GER_seize_gold_reserves_cat = {
 			base = 10
 		}
 		available = {
-			FRA = has_capitulated = yes
+			FRA = { has_capitulated = yes }
 			NOT = { has_country_flag = GER_seized_french_gold_reserves_flag }
 		}
 		complete_effect = {
