@@ -651,7 +651,7 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				research_speed_factor = 0.05
+				research_speed_factor = 0.1
 			}
 
 			on_remove = {
@@ -746,8 +746,7 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				production_speed_industrial_complex_factor = 0.05
-				production_factory_max_efficiency_factor = 0.05
+				production_speed_infrastructure_factor = 0.2
 				industrial_concern_cost_factor = -0.25
 
 			}
@@ -1078,8 +1077,7 @@ ideas = {
 				always = yes
 			}
 			modifier = {
-				production_speed_industrial_complex_factor = 0.10
-				production_speed_infrastructure_factor = 0.15
+				production_speed_industrial_complex_factor = 0.2
 
 			}
 		}
@@ -1222,6 +1220,41 @@ ideas = {
 				weekly_manpower = 500
 				consumer_goods_factor = -0.25
 				
+			}
+		}
+
+		RAJ_payment_to_uk_idea = {
+			name = "Payments"
+			allowed = {
+				original_tag = RAJ
+			}
+			picture = man_five_year_plan_industry
+			modifier = {
+				consumer_goods_factor = 0.5
+			}
+		}
+
+		RAJ_cheap_workers = {
+			name = "Cheap Labour Force"
+			allowed = {
+				original_tag = RAJ
+			}
+			picture = man_five_year_plan_industry
+			modifier = {
+				production_cost_arms_factory_factor = -0.1
+			}
+		}
+
+		RAJ_british_industrialists = {
+			name = "British Industrialists"
+			allowed = {
+				original_tag = RAJ
+			}
+			picture = man_five_year_plan_industry
+			modifier = {
+				consumer_goods_factor = 0.05
+				industrial_capacity_factory = 0.1
+				production_factory_start_efficiency_factor = 0.1
 			}
 		}
 

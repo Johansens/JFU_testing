@@ -1947,6 +1947,7 @@ Anti_Soviet: "Concentrate on the Soviet Threat"
  FRA_veterans:0 "Spawns §Y2 Veteran Divisions§! in our homeland."
  linie_tt:0 "\n§G========================================§!\n "
  space_tt:0 " \n"
+ RAJ_agricultural_neu_tt:0 "This focus will add §Y1 Military Factory§!, §Y1 Infrastructure§! & §Y3 Buildslots§! in every core state with atleast: \n§Y3 Civilian Factories§! & §Y3 Levels of Infrastructure§!."
 
 
 
