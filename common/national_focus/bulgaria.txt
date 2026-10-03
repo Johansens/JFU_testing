@@ -311,7 +311,7 @@ focus_tree = {
 				remove_idea = BUL_national_industry_03
 				add_idea = BUL_national_industry_04
 			}
-			#BUL_replace_national_industrial_designer = yes	
+			BUL_replace_national_industrial_designer = yes	
 		}
 	}
 
@@ -483,6 +483,12 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_MANPOWER}
 		completion_reward = {
 			unlock_decision_category_tooltip = BUL_rearmament
+			add_tech_bonus = {
+				name = BUL_reorganize_the_military_industry
+				bonus = 1
+				uses = 1
+				category = armor
+			}
 		}
 	}
 
@@ -517,12 +523,7 @@ focus_tree = {
 			    category = infantry_weapons
 				category = artillery
 			}
-			add_tech_bonus = {
-				name = BUL_reorganize_the_military_industry
-				bonus = 1
-				uses = 1
-				category = armor
-			}
+
 		}
 	}
 
@@ -637,6 +638,12 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
 			add_ideas = JUNO_license_idea
+			add_tech_bonus = {
+				name = BUL_vasil_levsky_national_military_university
+				bonus = 1
+				uses = 1
+				category = armor
+			}
 		}
 	}
 
@@ -699,12 +706,6 @@ focus_tree = {
 		
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
-			add_tech_bonus = {
-				name = BUL_vasil_levsky_national_military_university
-				bonus = 1
-				uses = 1
-				category = armor
-			}
 			add_research_slot = 1
 		}
 	}

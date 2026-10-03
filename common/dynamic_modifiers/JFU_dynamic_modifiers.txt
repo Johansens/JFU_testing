@@ -182,6 +182,18 @@ SPR_economy_modifier = {
 	production_speed_infrastructure_factor = SPR_eco_ics
 }
 
+BUL_economy_modifier = {
+	enable = { always = yes }
+	icon = GFX_idea_SOV_fourth_five_year_plan
+
+	consumer_goods_factor = BULeco_cgf
+	production_factory_efficiency_gain_factor = RAJeco_peg
+	production_speed_buildings_factor = BULeco_cs 
+	production_speed_industrial_complex_factor = BULeco_csc
+	local_building_slots_factor = BULeco_lbsf
+	min_export = BULeco_me
+}
+
 FIN_economy_modifier = {
 	enable = { always = yes }
 	icon = GFX_idea_SOV_fourth_five_year_plan
