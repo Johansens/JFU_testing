@@ -1947,7 +1947,8 @@ Anti_Soviet: "Concentrate on the Soviet Threat"
  FRA_veterans:0 "Spawns §Y2 Veteran Divisions§! in our homeland."
  linie_tt:0 "\n§G========================================§!\n "
  space_tt:0 " \n"
-
+ rom_anti_soviet_tt:0 "£offence_modifier_texticon Attack Bonus against [SOV.GetFlag] §YSoviet Union§!: §G+5%§!\n£defence_modifier_texticon Attack Bonus against [SOV.GetFlag] §YSoviet Union§!: §G+5%§!\n£offence_modifier_texticon Attack Bonus against [ENG.GetFlag] §YAllied Countries§!: §R-10%§!\n£defence_modifier_texticon Defense Bonus against [ENG.GetFlag] §YAllied Countries§!: §R-10%§!\n"
+ rom_allies_tt:0 "£offence_modifier_texticon Attack Bonus against [ENG.GetFlag] §YAllied Countries§!: §G+5%§!\n£defence_modifier_texticon Defense Bonus against [ENG.GetFlag] §YAllied Countries§!: §G+5%§!\n£offence_modifier_texticon Attack Bonus against [SOV.GetFlag] §YSoviet Union§!: §R-15%§!\n£defence_modifier_texticon Attack Bonus against [SOV.GetFlag] §YSoviet Union§!: §R-15%§!\n"
 
 
 

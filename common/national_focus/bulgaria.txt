@@ -788,7 +788,13 @@ focus_tree = {
 			BUL_ivan_markov = {
             	add_unit_leader_trait = ranger
 			}
-			add_ideas = {Anti_Soviet}
+			custom_effect_tooltip = space_tt
+			custom_effect_tooltip = rom_anti_soviet_tt
+
+			hidden_effect = {
+				add_ideas = {Anti_Soviet}
+			}
+			
 		}
 	}
 	focus = {
@@ -829,7 +835,12 @@ focus_tree = {
 			BUL_ivan_markov = {
 				add_unit_leader_trait = desert_fox
 			}
-			add_ideas = {Anti_Allies}
+			custom_effect_tooltip = space_tt
+			custom_effect_tooltip = rom_allies_tt
+
+			hidden_effect = {
+				add_ideas = {Anti_Allies}
+			}
 		}
 	}
 	
