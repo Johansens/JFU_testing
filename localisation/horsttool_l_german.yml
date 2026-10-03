@@ -1941,6 +1941,9 @@ Anti_Soviet: "Konzentrierung auf die sowjetische Bedrohung"
  france_cap_tt:0 "§RDieser Fokus wird bei unserer Kapitulation automatisch abgeschlossen!§!"
  france_infra_tt:0 "\n§G========================================§!\n\nEs wird empfohlen, die folgenden Stufen an §YInfrastruktur§! in den Staaten auszubauen:\n§YGabun§!: Stufe 1\n§YMittelkongo§!: Stufe 2\n§YTschad§!: Stufe 2\n§YKamerun§!: Stufe 2\n§YÄquatorialafrika§!: Stufe 3"
 
+ rom_anti_soviet_tt:0 "£offence_modifier_texticon Angriffsbonus gegen [SOV.GetFlag] §YSowjetunion§!: §G+5%§!\n£defence_modifier_texticon Verteidigungsbonus gegen [SOV.GetFlag] §YSowjetunion§!: §G+5%§!\n£offence_modifier_texticon Angriffsbonus gegen [ENG.GetFlag] §YAlliierte Staaten§!: §R-10%§!\n£defence_modifier_texticon Verteidigungsbonus gegen [ENG.GetFlag] §YAlliierte Staaten§!: §R-10%§!\n"
+ rom_allies_tt:0 "£offence_modifier_texticon Angriffsbonus gegen [ENG.GetFlag] §YAlliierte Staaten§!: §G+5%§!\n£defence_modifier_texticon Verteidigungsbonus gegen [ENG.GetFlag] §YAlliierte Staaten§!: §G+5%§!\n£offence_modifier_texticon Angriffsbonus gegen [SOV.GetFlag] §YSowjetunion§!: §R-15%§!\n£defence_modifier_texticon Angriffsbonus gegen [SOV.GetFlag] §YSowjetunion§!: §R-15%§!\n"
+
 
 
 
