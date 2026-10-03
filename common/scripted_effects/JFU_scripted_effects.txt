@@ -1437,6 +1437,16 @@ dynamic_modifier_start_up = {
 		set_variable = { var = SPReco_mfcs value = 0 }
 		set_variable = { var = SPR_eco_ics value = 0 }
 	}
+	BUL = {
+		set_variable = { var = BULeco_cgf value = 0 }
+		set_variable = { var = BULeco_peg value = 0 }
+		set_variable = { var = BULeco_cs value = 0 }
+		set_variable = { var = BULeco_csc value = 0 }
+		set_variable = { var = BULeco_lbsf value = 0 }
+		set_variable = { var = BULeco_FO value = 0 }
+		set_variable = { var = BULeco_me value = 0 }
+		set_variable = { var = BULeco_lrf value = 0 }
+	}
 	28 = {
 		add_dynamic_modifier = { modifier = FRA_maginot_defence_modifier } 
 	}

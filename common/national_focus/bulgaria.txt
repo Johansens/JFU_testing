@@ -24,7 +24,6 @@ focus_tree = {
 
 	continuous_focus_position = { x = 50 y = 1700 }
 
-
 #### ##    ## ########  ##     ##  ######  ######## ########  ####    ###    ##          ########  ########     ###    ##    ##  ######  ##     ## 
  ##  ###   ## ##     ## ##     ## ##    ##    ##    ##     ##  ##    ## ##   ##          ##     ## ##     ##   ## ##   ###   ## ##    ## ##     ## 
  ##  ####  ## ##     ## ##     ## ##          ##    ##     ##  ##   ##   ##  ##          ##     ## ##     ##  ##   ##  ####  ## ##       ##     ## 
@@ -54,7 +53,10 @@ focus_tree = {
 		
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
 		completion_reward = {
-			add_ideas = BUL_national_industry_01
+			custom_effect_tooltip = BUL_modify_eco_modifier_tt
+			add_to_variable = { BULeco_csc = 0.05 tooltip = production_speed_industrial_complex_factor_tt }
+			
+
 
 			add_tech_bonus = {
 				name = BUL_acquire_modern_tools
@@ -175,16 +177,11 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			swap_ideas = {
-				remove_idea = BUL_national_industry_01
-				add_idea = BUL_national_industry_02
-			}
+			custom_effect_tooltip = BUL_modify_eco_modifier_tt
+			add_to_variable = { BULeco_cgf = 0.1 tooltip = consumer_goods_factor_tt }
+			add_to_variable = { BULeco_cs = 0.03 tooltip = production_speed_buildings_factor_tt }
+			add_to_variable = { BULeco_peg = 0.02 tooltip = production_factory_efficiency_gain_factor_tt }
 
-			add_ai_strategy = {
-				type = building_target
-				id = industrial_complex
-				value = 17
-			}
 		}
 	}
 
@@ -233,7 +230,8 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			add_ideas = BUL_tobacco_exports
+			custom_effect_tooltip = BUL_modify_eco_modifier_tt
+			add_to_variable = { BULeco_peg = -0.1 tooltip = consumer_goods_factor_tt }
 		}
 	}
 
@@ -253,7 +251,8 @@ focus_tree = {
 
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
-			add_ideas = BUL_nationalized_industry
+			custom_effect_tooltip = BUL_modify_eco_modifier_tt
+			add_to_variable = { BULeco_FO = 0.1 tooltip = industrial_capacity_factory_tt }
 		}
 	}
 
@@ -283,10 +282,10 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			swap_ideas = {
-				remove_idea = BUL_national_industry_02
-				add_idea = BUL_national_industry_03
-			}
+			custom_effect_tooltip = BUL_modify_eco_modifier_tt
+			add_to_variable = { BULeco_cgf = 0.05 tooltip = consumer_goods_factor_tt }
+			add_to_variable = { BULeco_cs = 0.04 tooltip = production_speed_buildings_factor_tt }
+			add_to_variable = { BULeco_peg = 0.02 tooltip = production_factory_efficiency_gain_factor_tt }
 		}
 	}
 
@@ -307,10 +306,11 @@ focus_tree = {
 		
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
-			swap_ideas = {
-				remove_idea = BUL_national_industry_03
-				add_idea = BUL_national_industry_04
-			}
+			custom_effect_tooltip = BUL_modify_eco_modifier_tt
+			add_to_variable = { BULeco_cgf = -0.15 tooltip = consumer_goods_factor_tt }
+			add_to_variable = { BULeco_cs = 0.03 tooltip = production_speed_buildings_factor_tt }
+			add_to_variable = { BULeco_peg = 0.05 tooltip = production_factory_efficiency_gain_factor_tt }
+			add_to_variable = { BULeco_lbsf = 0.2 tooltip = local_building_slots_factor_tt }
 			BUL_replace_national_industrial_designer = yes	
 		}
 	}
@@ -1442,7 +1442,9 @@ focus_tree = {
 		
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_INTERNAL_AFFAIRS}
 		completion_reward = {
-			add_ideas = BUL_government_reforms_fascists_01
+			custom_effect_tooltip = BUL_modify_eco_modifier_tt
+			add_to_variable = { BULeco_csc = 0.05 tooltip = production_speed_industrial_complex_factor_tt }
+
 			BUL_zveno_low_loyalty_increase_effect = yes
 			BUL_nsm_low_loyalty_increase_effect = yes
 		}
@@ -1464,10 +1466,10 @@ focus_tree = {
 		
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_INTERNAL_AFFAIRS}
 		completion_reward = {
-			swap_ideas = {
-				remove_idea = BUL_government_reforms_fascists_01
-				add_idea = BUL_government_reforms_fascists_02
-			}
+			custom_effect_tooltip = BUL_modify_eco_modifier_tt
+			add_to_variable = { BULeco_csc = 0.05 tooltip = production_speed_industrial_complex_factor_tt }
+			add_to_variable = { BULeco_cgf = -0.15 tooltip = consumer_goods_factor_tt}
+			add_to_variable = { BULeco_ = -0.15 tooltip = min_exports_tt}
 			BUL_zveno_low_loyalty_increase_effect = yes
 			BUL_bzns_low_loyalty_decrease_effect = yes
 			BUL_nsm_low_loyalty_increase_effect = yes
@@ -1499,10 +1501,9 @@ focus_tree = {
 				}
 			}
 			custom_effect_tooltip = generic_skip_one_line_tt
-			swap_ideas = {
-				remove_idea = BUL_government_reforms_fascists_02
-				add_idea = BUL_government_reforms_fascists_03
-			}
+			custom_effect_tooltip = BUL_modify_eco_modifier_tt
+			add_to_variable = { BULeco_csc = 0.1 tooltip = production_speed_industrial_complex_factor_tt }
+			add_to_variable = { BULeco_lrf = -0.15 tooltip = local_resource_factor_tt}
 			BUL_nsm_low_loyalty_increase_effect = yes
 		}
 	}

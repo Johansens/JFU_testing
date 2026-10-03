@@ -190,8 +190,10 @@ BUL_economy_modifier = {
 	production_factory_efficiency_gain_factor = RAJeco_peg
 	production_speed_buildings_factor = BULeco_cs 
 	production_speed_industrial_complex_factor = BULeco_csc
+	industrial_capacity_factory = BULeco_FO
 	local_building_slots_factor = BULeco_lbsf
 	min_export = BULeco_me
+	local_resources_factor = BULeco_lrf
 }
 
 FIN_economy_modifier = {

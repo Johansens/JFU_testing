@@ -1136,6 +1136,7 @@
  BUL_foreign_investor_germany_tt:0 "Modify §YForeign Investors§! by \nProduction Efficiency Retention: §G+10%§! \n§YMilitary Factory§! construction Speed: §G+10%§!"
  BUL_foreign_industry:0 "Invited Foreign Investors"
  BUL_foreign_contracts_tt:0 "Enables decision to invite foreign inverstors giving us ether §YForeign Investors§! Efficiency Base, Growth or Retention."
+ BUL_modify_eco_modifier_tt: "Modify §Y$BUL_economy_modifier$§! by:"
 
  ALLIES_army_eng:0 "§HFourteen§! §Rveteran§! ranger divisions will be assembled in §HLondon§! under our command."
  ALLIES_marines_eng:0 "§HEight§! §Rveteran§! marine divisions will be assembled in §HLondon§! under our command."
