@@ -599,8 +599,8 @@ ideas = {
 			modifier = {
 				consumer_goods_expected_value = 0.15
              	global_building_slots_factor =1
-				production_cost_industrial_complex_factor = -0.1
-				production_speed_arms_factory_factor = -0.25
+				production_speed_infrastructure_factor = 0.2
+				production_speed_industrial_complex_factor = 0.1
 				industrial_capacity_factory = -0.10
 				industrial_capacity_dockyard = -0.10
 			}
@@ -633,10 +633,12 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				consumer_goods_expected_value = 0.10
-				production_speed_buildings_factor = -0.2
-				global_building_slots_factor = 0.1
-				factory_energy_consumption = 0.35
+				consumer_goods_expected_value = 0.15
+             	global_building_slots_factor =1
+				production_speed_infrastructure_factor = 0.2
+				production_speed_industrial_complex_factor = 0.1
+				#roduction_cost_industrial_complex_factor = -0.1
+				production_speed_arms_factory_factor = 0.3
 			}
 
 			cancel_if_invalid = no
