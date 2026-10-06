@@ -1514,10 +1514,15 @@ focus = {
 		}
 
 		available = {
+			AND = {
 			has_equipment = {
 				infantry_equipment_0 > 4999
 			}
-			date > 1936.9.1
+			
+				date > 1936.9.1
+				date < 1939.8.1
+			}
+			
 		}
 		
 		bypass = {
