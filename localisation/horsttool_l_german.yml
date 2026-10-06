@@ -1937,11 +1937,40 @@ SOV_no_air_desc:0 "Sobald der verbesserte Jäger erforscht und gebaut wurde ist 
 Anti_Allies: "Konzentrierung auf die allierte Bedrohung"
 Anti_Soviet: "Konzentrierung auf die sowjetische Bedrohung"
 
+ FRA_mio_trait_french_tiger:0 "Französischer Tiger-Panzer-Merkmal"
+ FRA_mio_trait_automitrailleuses2:0 "Panzerwagen-Merkmal"
 
  france_cap_tt:0 "§RDieser Fokus wird bei unserer Kapitulation automatisch abgeschlossen!§!"
- france_infra_tt:0 "\n§G========================================§!\n\nEs wird empfohlen, die folgenden Stufen an §YInfrastruktur§! in den Staaten auszubauen:\n§YGabun§!: Stufe 1\n§YMittelkongo§!: Stufe 2\n§YTschad§!: Stufe 2\n§YKamerun§!: Stufe 2\n§YÄquatorialafrika§!: Stufe 3"
+ france_infra_tt:0 "\n§G========================================§!\n\nEs wird empfohlen, die folgenden Stufen an §YInfrastruktur§! in den Staaten zu bauen:\n§YGabun§!: Stufe 1\n§YMittelkongo§!: Stufe 2\n§YTschad§!: Stufe 2\n§YKamerun§!: Stufe 2\n§YÄquatorialafrika§!: Stufe 3"
+ FRA_focus_complete:0 "Dieser §YNationale Geist§! wird nach Abschluss dieses Fokus entfernt."
+ FRA_veterans:0 "Lässt §Y2 Veteranen-Divisionen§! in unserem Heimatland erscheinen."
+ linie_tt:0 "\n§G========================================§!\n "
+ space_tt:0 " \n"
+ RAJ_agricultural_neu_tt:0 "Dieser Fokus fügt in jedem Kernstaat §Y1 Militärfabrik§!, §Y1 Infrastruktur§! & §Y3 Bauplätze§! hinzu, der mindestens Folgendes besitzt:\n§Y3 Zivile Fabriken§! & §Y3 Stufen Infrastruktur§!."
+ RAJ_gun_cap_mio:0 "Effiziente Gewehre"
+ RAJ_soft_attack_gun_mio:0 "Offensiv-Gewehre"
+ RAJ_defense_gun_mio:0 "Defensiv-Gewehre"
+ RAJ_at_ic_reduction_mio:0 "Günstige Panzerabwehr"
+ RAJ_at_bkt_mio:0 "Durchbruch-Panzerabwehr"
+ RAJ_at_ha_mio:0 "Harter Angriff-Panzerabwehr"
+ RAJ_mech_ic_mio:0 "Mechanisierung der Kavallerie"
 
+ RAJ_infra_left_side:0 "Indische Eisenbahnen"
+ RAJ_eng_path:0 "Großbritannien besänftigen"
+ RAJ_partial:0 "Der Krieg naht"
+ RAJ_cheap_labour:0 "Billige Arbeitskräfte"
+ RAJ_keep_british_generals:0 "Britische Generäle behalten"
+ RAJ_purchase_british_supply_equipment:0 "Britisches Nachschubmaterial kaufen"
+ RAJ_right_side_civs1:0 "Zivile Bemühungen"
+ RAJ_buy_back_british_steel_miness:0 "Britische Stahlminen zurückkaufen"
+ RAJ_expand_chromium_mines:0 "Chromminen erweitern"
+ RAJ_mountain_tanks:0 "Allgelände-Panzer"
 
+ mountain_tanks_neu_tt:0 "Schaltet §YGebirgspanzer§! frei\n§YAlle Panzerdivisionen (Dschungel, Wälder, Hügel)§!:\nAngriff: §G+2.5%§!\nBewegung: §G+10%§!"
+
+ raj_left_side_tt:0 "§YHohes Late-Game-Scaling§!\n§G+ Starke Wirtschaft im späten Spiel§!\n\n§R- Verringert die Forschungsgeschwindigkeit erheblich\n- Schwächt die Kampfbereitschaft im frühen Spiel\n- Schwer effizient zu managen (Macro)§!\n\n§YBitte informiere den UK-Spieler, dass du diesen Fokusbaum-Pfad wählst.§!"
+
+ raj_right_side_tt:0 "§YStarke Dynamik im frühen Spiel§!\n§G+ Gewährt verbesserte Kampfbereitschaft im frühen Spiel\n+ Erhöht die Forschungsgeschwindigkeit\n+ Unkompliziert und leicht zu managen (Macro)§!\n\n§R- Bietet keine langfristigen Scaling-Vorteile für das späte Spiel.§!"
 
 
 

@@ -220,7 +220,6 @@ focus_tree = {
 
     focus = {
         id = RAJ_mountain_tanks
-        text = "All-Terrain Tanks"
         icon = GFX_focus_generic_army_tanks2
         prerequisite = { focus = RAJ_automating_the_army }
         x = 5
@@ -249,7 +248,7 @@ focus_tree = {
 
         completion_reward = {
 
-            custom_effect_tooltip = mountain_tanks_tt
+            custom_effect_tooltip = mountain_tanks_neu_tt
            # hidden_effect = {
                 set_technology = {
                     mountain_tanks = 1
@@ -695,8 +694,8 @@ focus_tree = {
                 }
             }
 
-            custom_effect_tooltip = linie_tt
-            custom_effect_tooltip = raj_left_side_tt #scaling,hard to macro,less research
+            custom_effect_tooltip = linie_tt 
+            custom_effect_tooltip = raj_left_side_tt
         }
     }
 
@@ -903,8 +902,7 @@ focus_tree = {
 
     focus = {
         id = RAJ_infra_left_side
-        text = "Indian Railroads"
-        icon = GFX_focus_SOV_breadbasket_of_the_union
+        icon = GFX_focus_generic_railroad
 
         prerequisite = { focus = RAJ_local_resistance_to_land_taxes }
         x = -2
@@ -998,7 +996,6 @@ focus_tree = {
 
      focus = {
         id = RAJ_eng_path
-        text = "Appease Britain"
         icon = GFX_focus_chi_british_cooperation
         prerequisite = { focus = RAJ_provincial_autonomy }
         mutually_exclusive = {
@@ -1060,7 +1057,6 @@ focus_tree = {
 
     focus = {
         id = RAJ_partial
-        text = "War Is Coming"
         icon = GFX_focus_generic_reorient_production
         prerequisite = { focus = RAJ_eng_path }
         x = -2
@@ -1133,7 +1129,6 @@ focus_tree = {
 
     focus = {
         id = RAJ_cheap_labour
-        text = "Cheap Labour"
         icon = GFX_focus_generic_military_industry
         prerequisite = { focus = RAJ_join_the_shadow_scheme }
 
@@ -1325,7 +1320,6 @@ focus_tree = {
 
     focus = {
         id = RAJ_keep_british_generals
-        text = "Keep British Industrialists"
         icon = GFX_focus_RAJ_british_investors
         x = 0
         y = 1
@@ -1360,7 +1354,6 @@ focus_tree = {
 
     focus = {
         id = RAJ_right_side_civs1
-        text = "Civilian Effort"
         icon = GFX_goal_generic_construct_civ_factory
         x = -3
         y = 1
@@ -1406,8 +1399,7 @@ focus_tree = {
     }
 
     focus = {
-        id = RAJ_buy_back_british_steel_mines
-        text = "Buy Back British Steel Mines"
+        id = RAJ_buy_back_british_steel_miness
         icon = GFX_focus_generic_steel
         x = -1
         y = 1
@@ -1453,7 +1445,6 @@ focus_tree = {
 
     focus = {
         id = RAJ_expand_chromium_mines
-        text = "Chromium Mines"
         icon = GFX_focus_generic_chromium
         x = 1
         y = 1
@@ -3800,7 +3791,6 @@ focus_tree = {
 
     focus = {
         id = RAJ_purchase_british_supply_equipment
-        text = "Purchase British Factory Equipment"
         icon = GFX_focus_generic_british_trade
         prerequisite = { focus = RAJ_learn_from_the_crown }
 

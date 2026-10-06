@@ -1956,9 +1956,19 @@ Anti_Soviet: "Concentrate on the Soviet Threat"
  RAJ_at_ha_mio:0 "Hard Attack Anti-Tank"
  RAJ_mech_ic_mio:0 "Mechanization of the Cavalry"
 
+ RAJ_infra_left_side:0 "Indian Railroads"
+ RAJ_eng_path:0 "Appease Britain"
+ RAJ_partial:0 "War is Coming"
+ RAJ_cheap_labour:0 "Cheap Labour"
+ RAJ_keep_british_generals:0 "Keep british Generals"
+ RAJ_purchase_british_supply_equipment:0 "Purchase British Supply Equipment"
+ RAJ_right_side_civs1:0 "Civilian Effort"
+ RAJ_buy_back_british_steel_miness:0 "Buy Back British Steel Mines"
+ RAJ_expand_chromium_mines:0 "Expand Chromium Mines"
+ RAJ_mountain_tanks:0 "All-Terrain Tanks"
 
+ mountain_tanks_neu_tt: "Enables §YMountain Tanks§!\n§YAll Tank Divisions (Jungle, Forests, Hills)§!:\nAttack §G+2.5%§!\nMovement: §G+10%§!"
 
+ raj_left_side_tt:0 "§YHigh Late-Game Scaling§!\n§G+ Strong late-game Economy\n\n§R- Severely reduces Research Speed\n- Weakens early-game combat readiness\n- Difficult to macro efficiently§!\n\n§YPlease inform the UK player that you're going down this focus tree path.§!"
 
-
-
-
+ raj_right_side_tt:0 "§YStrong Early-Game Momentum§!\n§G+ Grants enhanced early game readiness\n+ Boosts Research Speed\n+ Straightforward and easy to macro§!\n\n§R- Lacks long-term scaling benefits for the late-game.§!"
