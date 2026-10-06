@@ -59,68 +59,55 @@ RAJ_ammunition_factory_khadki_organization = {
 
 	trait = {
 		token = RAJ_mio_trait_gun_and_shell_facatory_cassiopore
-		name = RAJ_gun_and_shell_factory_cossipore
+		name = RAJ_gun_cap_mio
 		icon = GFX_generic_mio_trait_icon_efficiency_gain
 		relative_position_id = generic_mio_trait_drum_pattern_sights
 		
 		special_trait_background  = yes
 		position = { x=-1 y=0 }
 		available = { 
-			RAJ = { has_completed_focus = RAJ_gun_and_shell_factory_cossipore } 
+			RAJ = { has_completed_focus = RAJ_rifle_factory_ishapore_west_bengal } 
 		}
 		production_bonus = {
 			production_efficiency_cap_factor = 0.05
 		}
 
-		organization_modifier = {
-			military_industrial_organization_research_bonus = 0.02
-		
-		}
 	}
 
 	trait = {
 		token = RAJ_mio_trait_ordnance_factory_khamaria_jabalpur
-		name = RAJ_ordnance_factory_khamaria_jabalpur
+		name = RAJ_soft_attack_gun_mio
 		icon = GFX_generic_mio_trait_icon_soft_attack
 		relative_position_id = RAJ_mio_trait_gun_and_shell_facatory_cassiopore
 		
 		special_trait_background  = yes
 		position = { x=0 y=1 }
 		available = { 
-			RAJ = { has_completed_focus = RAJ_ordnance_factory_khamaria_jabalpur } 
+			RAJ = { has_completed_focus = RAJ_the_ordnance_factories_board } 
 		}
 		equipment_bonus = {
-			soft_attack = 0.05
-			breakthrough = 0.05
+			soft_attack = 0.1
+			breakthrough = 0.1
 		}
 
-		organization_modifier = {
-			military_industrial_organization_research_bonus = 0.02
-		}
 	}
 
 	trait = { 
 		token = RAJ_mio_trait_rifle_factory_ishapore
-		name = RAJ_rifle_factory_ishapore_west_bengal
+		name = RAJ_defense_gun_mio
 		icon = GFX_generic_mio_department_icon_infantry_quality
 		relative_position_id = RAJ_mio_trait_ordnance_factory_khamaria_jabalpur
 		
 		special_trait_background  = yes
 		position = { x=0 y=1 }
 		available = { 
-			RAJ = { has_completed_focus = RAJ_rifle_factory_ishapore_west_bengal } 
+			RAJ = { has_completed_focus = RAJ_ordnance_factory_kanpur_uttar_pradesh } 
 		}
 
 		equipment_bonus = {
-			defense = 0.06
-			ap_attack = 0.25
-
+			defense = 0.1
 		}
 
-		organization_modifier = {
-			military_industrial_organization_research_bonus = 0.02
-		
-		}
 	}
 
 	
@@ -142,24 +129,49 @@ RAJ_ordnance_factory_kanpur_organization = {
 
 	trait = {
 		token = RAJ_mio_trait_cordite_factory_aruvankadu_tamil_nadu
-		name = RAJ_cordite_factory_aruvankadu_tamil_nadu
+		name = RAJ_at_ic_reduction_mio
 		icon = GFX_generic_mio_department_icon_artillery
 		relative_position_id = generic_mio_trait_big_guns
-		all_parents = {
-			generic_mio_trait_big_guns
-		}
 		special_trait_background  = yes
+		limit_to_equipment_type = { anti_tank_equipment }
 		position = { x=1 y=1 }
+		available = { 
+			RAJ = { has_completed_focus = RAJ_gun_and_shell_factory_cossipore } 
+		}
+		equipment_bonus = {
+			build_cost_ic = -0.05
+		}
+
+	}
+	trait = {
+		token = RAJ_mio_trait_cordite_factory_aruvankadu_tamil_nadu2
+		name = RAJ_at_bkt_mio
+		icon = GFX_generic_mio_department_icon_artillery
+		relative_position_id = generic_mio_trait_big_guns
+		special_trait_background  = yes
+		limit_to_equipment_type = { anti_tank_equipment }
+		position = { x=1 y=2 }
 		available = { 
 			RAJ = { has_completed_focus = RAJ_cordite_factory_aruvankadu_tamil_nadu } 
 		}
-		production_bonus = {
-			production_cost_factor = 0.03
+		equipment_bonus = {
+			breakthrough = 0.25
 		}
 
+	}
+	trait = {
+		token = RAJ_mio_trait_cordite_factory_aruvankadu_tamil_nadu3
+		name = RAJ_at_ha_mio
+		icon = GFX_generic_mio_department_icon_artillery
+		relative_position_id = generic_mio_trait_big_guns
+		special_trait_background  = yes
+		limit_to_equipment_type = { anti_tank_equipment }
+		position = { x=1 y=3 }
+		available = { 
+			RAJ = { has_completed_focus = RAJ_ordnance_factory_khamaria_jabalpur } 
+		}
 		equipment_bonus = {
-			soft_attack = 0.06
-			ap_attack = 0.06
+			hard_attack = 0.05
 		}
 
 	}
@@ -190,8 +202,24 @@ RAJ_ordnance_factory_medak_organization = {
 		}
 
 		equipment_bonus = {
-			breakthrough = 0.06
-			armor_value = 0.08
+			breakthrough = 0.25
+			hardness = 0.05
+		}
+	}
+
+	trait = {
+		token = RAJ_mio_trait_chariot_of_victory2
+		name = RAJ_mech_ic_mio
+		icon = GFX_generic_mio_department_icon_mechanized_hull
+		limit_to_equipment_type = { mechanized_equipment }
+		special_trait_background  = yes
+		position = { x=9 y=1 }	
+		available = { 
+			RAJ = { has_completed_focus = RAJ_mechanization_of_the_cavalry } 
+		}
+
+		equipment_bonus = {
+			build_cost_ic = -0.1
 		}
 	}
 	

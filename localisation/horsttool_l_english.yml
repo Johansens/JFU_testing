@@ -1948,6 +1948,13 @@ Anti_Soviet: "Concentrate on the Soviet Threat"
  linie_tt:0 "\n§G========================================§!\n "
  space_tt:0 " \n"
  RAJ_agricultural_neu_tt:0 "This focus will add §Y1 Military Factory§!, §Y1 Infrastructure§! & §Y3 Buildslots§! in every core state with atleast: \n§Y3 Civilian Factories§! & §Y3 Levels of Infrastructure§!."
+ RAJ_gun_cap_mio:0 "Efficient Guns"
+ RAJ_soft_attack_gun_mio:0 "Offensive Guns"
+ RAJ_defense_gun_mio:0 "Defensive Guns"
+ RAJ_at_ic_reduction_mio:0 "Cheap Anti-Tank"
+ RAJ_at_bkt_mio:0 "Breakthrough Anti-Tank"
+ RAJ_at_ha_mio:0 "Hard Attack Anti-Tank"
+ RAJ_mech_ic_mio:0 "Mechanization of the Cavalry"
 
 
 

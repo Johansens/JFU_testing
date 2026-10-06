@@ -52,6 +52,23 @@ ideas = {
 			}
 		}
 
+		RAJ_haripura = {
+			name = "Haripura" 
+			picture = generic_production_bonus
+			allowed = {
+				original_tag = RAJ
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			modifier = {
+				stability_weekly_factor = 0.005
+			}
+		}
+
 		idea_RAJ_reviving_the_workshop_of_the_world = {
 
 			picture = SOV_third_five_year_plan_civilian
@@ -727,9 +744,8 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				production_speed_dockyard_factor = 0.1
-				production_speed_arms_factory_factor = 0.1
 				war_support_weekly = 0.001
+				experience_gain_army = 0.1
 			}
 		}
 
@@ -748,6 +764,7 @@ ideas = {
 			modifier = {
 				production_speed_infrastructure_factor = 0.2
 				industrial_concern_cost_factor = -0.25
+				global_building_slots_factor = 0.25
 
 			}
 		}
