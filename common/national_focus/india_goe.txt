@@ -341,11 +341,6 @@ focus_tree = {
         search_filters = {FOCUS_FILTER_POLITICAL}
 
         completion_reward = {
-            add_popularity = {
-                ideology = fascism
-                popularity = 0.05
-            }
-            custom_effect_tooltip = generic_skip_one_line_tt
             add_ideas = { idea_RAJ_indian_army_doctrine_ger }
         }
     }
@@ -376,11 +371,6 @@ focus_tree = {
         search_filters = {FOCUS_FILTER_POLITICAL}
 
         completion_reward = {
-            add_popularity = {
-                ideology = democratic
-                popularity = 0.05
-            }
-            custom_effect_tooltip = generic_skip_one_line_tt
             add_ideas = { idea_RAJ_indian_army_doctrine_usa }
         }
     }
@@ -411,11 +401,6 @@ focus_tree = {
         search_filters = {FOCUS_FILTER_POLITICAL}
 
         completion_reward = {
-            add_popularity = {
-                ideology = communism
-                popularity = 0.05
-            }
-            custom_effect_tooltip = generic_skip_one_line_tt
             add_ideas = { idea_RAJ_indian_army_doctrine_sov }
         }
     }

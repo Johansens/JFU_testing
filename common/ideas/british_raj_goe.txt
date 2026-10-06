@@ -1020,9 +1020,8 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				stability_factor = 0.05
 				army_org_regain = 0.1
-				army_org_factor = 0.04
+				army_org_factor = 0.05
 			}
 		}
 
@@ -2135,9 +2134,8 @@ ideas = {
 			}
 
 			modifier = {
-				fascism_drift = 0.03
 				army_armor_attack_factor = 0.05
-				army_armor_defence_factor = 0.1
+				army_armor_defence_factor = 0.05
 				army_armor_speed_factor = 0.05
 			}
 		}
@@ -2150,9 +2148,8 @@ ideas = {
 			}
 
 			modifier = {
-				democratic_drift = 0.03
-				planning_speed = 0.15
-				max_planning_factor = 0.1
+				planning_speed = 0.5
+				max_planning = 0.1
 				command_power_gain = 0.15
 			}
 		}
@@ -2165,10 +2162,10 @@ ideas = {
 			}
 
 			modifier = {
-				communism_drift = 0.03
 				army_infantry_attack_factor = 0.05
+				army_infantry_defence_factor = 0.05
 				army_strength_factor = 0.05
-				army_defence_factor = 0.05
+				army_org_factor = 0.05
 			}
 		}
 
