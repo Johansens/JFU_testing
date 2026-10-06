@@ -2582,17 +2582,20 @@ ideas = {
 				original_tag = RAJ
 			}
 			available = {
-				always = no
+				RAJ = {
+					has_completed_focus = RAJ_eng_path
+				}
 			}
 			visible = {
 				
 			}
-			cost = 100
+			cost = 200
 			removal_cost = 10
 			research_bonus = {
 			}
 			traits = {  } 
 			modifier = {
+				political_power_gain = -0.25
 				production_speed_arms_factory_factor = 0.1
 				war_support_factor = 0.05	
 			}
@@ -2609,17 +2612,20 @@ ideas = {
 				original_tag = RAJ
 			}
 			available = {
-				#has_completed_focus = RAJ_establish_the_reserve_bank_of_india 
+				RAJ = {
+					has_completed_focus = RAJ_swadeshi_movement
+				}
 			}
 			visible = {
 				
 			}
-			cost = 150
+			cost = 200
 			removal_cost = -1
 			research_bonus = {
 			}
 			traits = { central_bank } 
 			modifier = {
+				political_power_gain = -0.25
 				production_speed_industrial_complex_factor = 0.05
 				consumer_goods_factor = -0.05		
 			}

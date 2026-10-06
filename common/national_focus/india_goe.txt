@@ -84,8 +84,8 @@ focus_tree = {
         completion_reward = {
             add_tech_bonus = {
                 name = RAJ_engineering_revolution
-                bonus = 1
-                uses = 1
+                bonus = 0.5
+                uses = 2
                 category = engineers_tech # optional 
                 # technology  = technology_id # optional
             }
@@ -125,8 +125,8 @@ focus_tree = {
 
             add_tech_bonus = {
                 name = RAJ_indian_army_corps_of_engineers
-                bonus = 0.75
-                uses = 2
+                bonus = 1
+                uses = 1
                 category = engineers_tech # optional 
                 # technology  = technology_id # optional
             }
@@ -678,7 +678,9 @@ focus_tree = {
                     level = 1
                 }
             }
-
+            custom_effect_tooltip = generic_skip_one_line_tt
+            custom_effect_tooltip = available_industrial_concern
+			show_ideas_tooltip = idea_RAJ_the_reserve_bank_of_india
             custom_effect_tooltip = linie_tt 
             custom_effect_tooltip = raj_left_side_tt
         }
@@ -1035,6 +1037,9 @@ focus_tree = {
                     level = 2
                 }
             }
+            custom_effect_tooltip = generic_skip_one_line_tt
+            custom_effect_tooltip = available_industrial_concern
+			show_ideas_tooltip = idea_RAJ_azad_hind_bank
             custom_effect_tooltip = linie_tt
             custom_effect_tooltip = raj_right_side_tt #easy to play, railroaded ic, more research
         }
@@ -4437,7 +4442,7 @@ focus_tree = {
 
     focus = {
         id = RAJ_ammunition_factory_khadki
-        icon = GFX_goal_generic_construct_mil_factory
+        icon = GFX_focus_PRC_develop_the_army
         prerequisite = { focus = RAJ_for_the_people_by_the_people }
         relative_position_id = RAJ_for_the_people_by_the_people
         x = -6
@@ -4468,6 +4473,12 @@ focus_tree = {
             add_mastery = {
                 amount = 100
             }
+            custom_effect_tooltip = linie_tt
+            show_mio_tooltip = RAJ_ammunition_factory_khadki_organization
+			mio:RAJ_ammunition_factory_khadki_organization = {
+				add_mio_funds = 1500
+				add_mio_research_bonus = 0.05
+			}
         }
     }
 
