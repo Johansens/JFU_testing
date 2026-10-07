@@ -1555,6 +1555,8 @@
  
  CAN_great_depression_modifier:0 "Canadian Economy"
  
+ BUL_economy_modifier:0 "Bulgarian Economy"
+
  SPR_economy_modifier:0 "Spanish Economy"
  SPR_economy_modifier_desc:0 "We may not build §Yairbases, ports, airports, ships and railway guns§!" 
  
