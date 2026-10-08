@@ -1750,7 +1750,7 @@ focus = {
 		relative_position_id = FRA_appeal_to_the_french_nation
 		mutually_exclusive = { }
 		
-		cost = 1
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -1763,8 +1763,19 @@ focus = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = yes
-		completion_reward = {
+		select_effect = {
 			add_ideas = FRA_defeatism
+		}
+		completion_reward = {
+			custom_effect_tooltip = SOV_focus_select_effect_tt
+			effect_tooltip = {
+				add_ideas = FRA_defeatism
+			}	
+			
+			custom_effect_tooltip = FRA_focus_complete
+			hidden_effect = {
+				remove_ideas = FRA_defeatism
+			}
 			# add_timed_idea = {
 			# 	idea = FRA_defeatism
 			# 	days = 30
@@ -1787,7 +1798,7 @@ focus = {
 			factor = 1
 		}
 		available = {
-			has_completed_focus = FRA_refus_absurde
+			#has_completed_focus = FRA_refus_absurde
 		}
 		
 		bypass = {
@@ -2260,7 +2271,7 @@ focus = {
 			factor = 1
 		}
 		available = {
-			has_completed_focus = FRA_refus_absurde
+			#has_completed_focus = FRA_refus_absurde
 		}
 		
 		bypass = {
@@ -2309,7 +2320,7 @@ focus = {
 			factor = 1
 		}
 		available = {
-			has_completed_focus = FRA_refus_absurde
+			#has_completed_focus = FRA_refus_absurde
 		}
 		
 		bypass = {
@@ -2407,7 +2418,7 @@ focus = {
 			factor = 1
 		}
 		available = {
-			has_completed_focus = FRA_refus_absurde
+			#has_completed_focus = FRA_refus_absurde
 		}
 		
 		bypass = {
@@ -2449,11 +2460,7 @@ focus = {
 		continue_if_invalid = no
 		available_if_capitulated = yes
 		completion_reward = {
-			swap_ideas = {
-				remove_idea = FRA_defeatism
-				add_idea = FRA_defeatism2 
-			}
-			#remove_ideas =  FRA_defeatism  
+			add_ideas = FRA_defeatism2   
 		}
 	}
 	focus = {
