@@ -1953,7 +1953,8 @@ Anti_Soviet: "Concentrate on the Soviet Threat"
  rom_anti_soviet_tt:0 "£offence_modifier_texticon Attack Bonus against [SOV.GetFlag] §YSoviet Union§!: §G+5%§!\n£defence_modifier_texticon Attack Bonus against [SOV.GetFlag] §YSoviet Union§!: §G+5%§!\n£offence_modifier_texticon Attack Bonus against [ENG.GetFlag] §YAllied Countries§!: §R-10%§!\n£defence_modifier_texticon Defense Bonus against [ENG.GetFlag] §YAllied Countries§!: §R-10%§!\n"
  rom_allies_tt:0 "£offence_modifier_texticon Attack Bonus against [ENG.GetFlag] §YAllied Countries§!: §G+5%§!\n£defence_modifier_texticon Defense Bonus against [ENG.GetFlag] §YAllied Countries§!: §G+5%§!\n£offence_modifier_texticon Attack Bonus against [SOV.GetFlag] §YSoviet Union§!: §R-15%§!\n£defence_modifier_texticon Attack Bonus against [SOV.GetFlag] §YSoviet Union§!: §R-15%§!\n"
 
-
+SOV_propaganda_death_to_invaders_state_modifier_tt: "\n§Y$SOV_invaders_must_die$§! state modifier:\n   $MODIFIER_RESISTANCE_TARGET$: §R+15%§! \n   $MODIFIER_RESISTANCE_DECAY$: §R-30%§! \n   $MODIFIER_RESISTANCE_GROWTH$: §R+5%§! \n   $MODIFIER_COMPLIANCE_GROWTH$: §R-5%§!\n   $MODIFIER_STATE_RESOURCES_FACTOR$: §R-25%§!\n"
+ 
 
 
 
