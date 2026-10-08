@@ -1701,7 +1701,7 @@ focus = {
 		available_if_capitulated = yes
 		completion_reward = {
 			custom_effect_tooltip = france_cap_tt
-			add_ideas = tot_economic_mobilisation
+			add_ideas = war_economy
 			#add_ideas = FRA_defeatism
 			hidden_effect = {
 				remove_ideas = FRA_protected_by_the_maginot_line
@@ -2127,8 +2127,7 @@ focus = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT }
 		completion_reward = {
-			add_war_support = 0.1
-			add_stability = 0.1
+			add_ideas = tot_economic_mobilisation
 		}
 	}
 
