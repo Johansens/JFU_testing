@@ -1724,8 +1724,13 @@ focus = {
 				add_equipment_to_stockpile = { type = motorized_equipment_1 amount = 300 }
 				add_equipment_to_stockpile = { type = convoy amount = 400 }
 			}
-			
-			
+
+			every_state = {
+				limit = {
+					has_state_flag = FRA_africa_state
+				}
+				add_core_of = FRA
+			}
 			
 			# add_offsite_building = {
 			# 	type = industrial_complex
@@ -2090,11 +2095,13 @@ focus = {
 		icon = GFX_goal_generic_intelligence_exchange
 		x = 0
 		y = 2
-
 		prerequisite = { 
 			focus = FRA_intervention_in_madagascar
-			focus = FRA_intervention_in_syria
+		}
+		prerequisite = { 
 			focus = FRA_intervention_in_west_africa
+		}
+		prerequisite = { 
 			focus = FRA_intervention_in_central_africa
 		}
 		relative_position_id = FRA_appeal_to_overseas_territories
@@ -2150,17 +2157,16 @@ focus = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT }
 		completion_reward = {
-			772 = {
-				add_core_of = FRA
-			}
-			773 = {
-				add_core_of = FRA
-			}
-			660 = {
-				add_core_of = FRA
-			}
-			774 = {
-				add_core_of = FRA
+			every_state = {
+				limit = {
+					has_state_flag = FRA_africa_state
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
 			}
 		}
 	}
@@ -2627,7 +2633,7 @@ focus = {
 	focus = {
 		id = FRA_national_council_of_the_resistance
 		icon = GFX_focus_focus_fra_national_resistance_council
-		x = 2
+		x = -1
 		y = 1
 
 		prerequisite = { 
@@ -2635,9 +2641,6 @@ focus = {
 		}
 		prerequisite = {
 			focus = FRA_cooperation_with_the_communists
-		}
-		prerequisite = {
-			focus = FRA_form_the_national_committee
 		}
 		relative_position_id = FRA_the_civil_and_military_organization
 		
