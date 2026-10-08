@@ -2173,16 +2173,11 @@ focus_tree = {
 				category = motorized_equipment
 				category = light_air
 			}
-			if = {
-				limit = {
-					BUL = { is_ai = yes }
-				}
-				add_tech_bonus = {
-					name = ITA_brescia_small_arms_industry2
-					bonus = 1
-					uses = 2
-					category = infantry_weapons
-				}				
+			add_tech_bonus = {
+				name = ITA_brescia_small_arms_industry2
+				bonus = 1
+				uses = 2
+				category = infantry_weapons
 			}
 		}
 	}
