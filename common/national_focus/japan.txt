@@ -3457,6 +3457,7 @@ focus_tree = {
 
 		available = {
 			date > 1938.01.01
+			has_completed_focus = JAP_imperial_rule_assistance_association
 		}
 
 		bypass = {
