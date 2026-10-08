@@ -2202,7 +2202,9 @@ JFU_decisions = {
 		cost = 0
 		complete_effect = {
 			set_global_flag = JFU_no_asia
-
+			SWE = {
+				transfer_state = 985
+			}
 			ENG = {
 				annex_country = { target = IRE transfer_troops = no }
 				113 =   { add_core_of = ENG }
