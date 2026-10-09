@@ -163,8 +163,10 @@ ITA_africa_states = {
 		state = 453 
 		state = 454 
 		state = 455 
-		state = 554 
+		state = 909 
+		state = 552 
 		state = 553 
+		state = 554 
 		state = 677 
 		state = 799 
 		state = 680 
@@ -178,9 +180,10 @@ ITA_africa_states = {
 		state = 412 
 		state = 414 
 		state = 410 
-		state = 909 
-		state = 910 
-		state = 911 
+		state = 985
+		state = 911
+		state = 676
+		state = 273 
 	}
 }
 ALLIED_asia_states = {
