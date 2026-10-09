@@ -506,7 +506,7 @@ action_goal_industrial_expansion_jap = {
 			tooltip = AT_LEAST_50_CIVS
 			visible_when_empty = yes 
 			limit = {
-				num_of_civilian_factories > 54
+				num_of_civilian_factories > 49
 			}
 			add_tech_bonus = {
 				name = industrial_expansion_tech_bonus
@@ -843,7 +843,7 @@ faction_goal_industrial_expansion = {
 			tooltip = AT_LEAST_50_CIVS
 			visible_when_empty = yes 
 			limit = {
-				num_of_civilian_factories > 54
+				num_of_civilian_factories > 49
 			}
 			add_tech_bonus = {
 				name = industrial_expansion_tech_bonus
