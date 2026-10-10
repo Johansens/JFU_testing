@@ -108,6 +108,15 @@ on_actions = {
 			set_variable = {
 				global.allies_score = 0
 			}
+			every_country = {
+				limit = {
+					has_game_rule = { 
+						rule = JFU_FREE_INTEL 
+						option = FREE_INTEL_ON 
+					}
+				}
+				add_ideas = JFU_FREE_INTEL_IDEA
+			}
 		#	every_country = {
 		#		limit = {
 		#			NOT = { ai_country = yes }
@@ -166,6 +175,15 @@ on_actions = {
 					}
 				}
 				add_ideas = peace_training
+			}
+			every_country = {
+				limit = {
+					has_game_rule = { 
+						rule = JFU_FREE_INTEL 
+						option = FREE_INTEL_ON 
+					}
+				}
+				add_ideas = JFU_FREE_INTEL_IDEA
 			}
 		}
 	}
