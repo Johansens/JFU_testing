@@ -19,6 +19,7 @@ NDefines.NCountry.WAR_SUPPORT_DEFENSIVE_WAR = 0.2				--vanilla 0.2 Impact of bei
 NDefines.NCountry.MIN_FOCUSES_FOR_CONTINUOUS = 0   				 --vanilla 10
 NDefines.NCountry.NUM_DAYS_TO_FULLY_DELETE_STOCKPILED_EQUIPMENT = 999 
 NDefines.NCountry.GIE_ESCAPING_DIVISIONS_TRANSFER_DAYS = 1 			--  WAS 30 | days to transfer escaping divisions to host nation
+NDefines.NCountry.DEFAULT_COASTAL_PROTECTION_STABILITY = 0		-- Default stability when the coastal states are fully protected
 
 NDefines.NPolitics.LEADER_TRAITS_XP_SHOW = 0.01
 
