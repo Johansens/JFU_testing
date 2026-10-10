@@ -2249,6 +2249,7 @@ JFU_decisions = {
 					}
 				}
 				add_ideas = ai_limiter
+				country_lock_all_division_template = yes
 			}
 			AST = {
 				add_ideas = AST_manpower_noasia
