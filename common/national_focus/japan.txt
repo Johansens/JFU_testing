@@ -3029,9 +3029,9 @@ focus_tree = {
 			524 = {
 				is_controlled_by_ROOT_or_ally = yes
 			}
-			629 = {
-				is_controlled_by_ROOT_or_ally = yes
-			}
+			#629 = {
+			#	is_controlled_by_ROOT_or_ally = yes
+			#}
 			328 = {
 				is_controlled_by_ROOT_or_ally = yes
 			}
@@ -3115,7 +3115,7 @@ focus_tree = {
 						state = 684
 						state = 633
 						state = 638
-						state = 629
+						#state = 629
 						state = 631
 						state = 632
 						state = 630
