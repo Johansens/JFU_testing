@@ -28,7 +28,7 @@ categories =  {
 	
 	forest = {
 		color = { 89 199 85 }
-		movement_cost = 2.5
+		movement_cost = 3.5
 		#combat_width = -0.20
 		combat_width = 80
 		combat_support_width = 40
@@ -55,7 +55,7 @@ categories =  {
 
 	hills = {
 		color = { 248 255 153 }
-		movement_cost = 1.8
+		movement_cost = 3.5
 		#combat_width = -0.33
 		combat_width = 80
 		combat_support_width = 40
@@ -80,7 +80,7 @@ categories =  {
 	
 	mountain = {
 		color = { 157 192 208 }
-		movement_cost = 2.5
+		movement_cost = 3.5
 		attrition = 0.3
 		#combat_width = -0.66
 		combat_width = 80
@@ -107,7 +107,7 @@ categories =  {
 	
 	plains = {
 		color = { 255 129 66 }
-		movement_cost = 1.7
+		movement_cost = 2.5
 		ai_terrain_importance_factor = 0.1
 		combat_width = 80
 		combat_support_width = 40
@@ -121,7 +121,7 @@ categories =  {
 	
 	urban = {
 		color = { 120 120 120 }
-		movement_cost = 2
+		movement_cost = 4
 		ai_terrain_importance_factor = 4.0
 		combat_width = 80
 		combat_support_width = 40
@@ -174,7 +174,7 @@ categories =  {
 	
 	marsh = {
 		color = { 76 96 35 }
-		movement_cost = 2.5
+		movement_cost = 3.5
 		attrition = 0.35
 		# combat_width = -0.25
 		combat_width = 80
@@ -202,7 +202,7 @@ categories =  {
 	
 	desert = {
 		color = { 255 127 0 }
-		movement_cost = 3
+		movement_cost = 3.5
 		attrition = 0.05
 		combat_width = 80
 		combat_support_width = 40
