@@ -49,6 +49,7 @@ NDefines.NDiplomacy.NAVAL_BLOCKADE_BASE_COST = 999 			-- Base PP cost for issuin
 NDefines.NDiplomacy.NAVAL_BLOCKADE_DAILY_COST = 10					-- Daily PP cost for one naval blockade
 NDefines.NDiplomacy.AUTONOMY_LEVEL_CHANGE_PP_ANNEX = 999            -- vanilla 300 Annexation cost
 
+NDefines.NMilitary.PLANNING_MAX = 0.2
 NDefines.NMilitary.UNIT_EXPERIENCE_PER_COMBAT_HOUR = 0.0005
 NDefines.NMilitary.EXPERIENCE_LOSS_FACTOR = 1
 NDefines.NMilitary.BASE_DIVISION_BRIGADE_GROUP_COST = 0

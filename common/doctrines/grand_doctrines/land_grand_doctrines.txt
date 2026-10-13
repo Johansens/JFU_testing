@@ -285,7 +285,7 @@ grand_battleplan = {
     # EFFECTS
     enable_tactic = tactic_planned_attack
     
-    max_planning = 0.05
+    max_planning = 0.075
     command_power_gain = 0.25
 
     milestones = {

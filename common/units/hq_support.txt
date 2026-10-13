@@ -408,7 +408,7 @@ sub_units = {
 		}
 
 		deployed_leader_modifiers = {
-			max_planning = 0.03
+			max_planning = 0.02
 			recon_factor_while_entrenched = 0.1
 			enemy_operative_capture_chance_factor = 0.1 #maybe this is useless
 		}
