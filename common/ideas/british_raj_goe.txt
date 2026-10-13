@@ -65,7 +65,7 @@ ideas = {
 
 			removal_cost = -1
 			modifier = {
-				stability_weekly_factor = 0.005
+				stability_weekly = 0.005
 			}
 		}
 
@@ -634,6 +634,45 @@ ideas = {
 				mobilization_laws_cost_factor = 1
 				economy_cost_factor = 1
 				production_speed_arms_factory_factor = -0.2
+				autonomy_gain = 0.1
+			}
+		}
+
+		RAJ_road_of_independence = {
+			name = "Road of Independence"
+			allowed = {
+				original_tag = RAJ
+			}
+			picture = chi_hyper_inflation
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				political_power_gain = 0.25
+				autonomy_gain = 1
+				defensive_war_stability_factor = 0.1
+			}
+		}
+
+		RAJ_road_of_independence2 = {
+			name = "Road of Independence"
+			allowed = {
+				original_tag = RAJ
+			}
+			picture = chi_hyper_inflation
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				political_power_gain = 0.35
+				autonomy_gain = 1.5
+				defensive_war_stability_factor = 0.1
 			}
 		}
 
@@ -2604,7 +2643,6 @@ ideas = {
 				industry = 0.15
 			}
 		}
-
 		idea_RAJ_the_reserve_bank_of_india = { 
 			picture = raj_reserve_bank_of_india
 			allowed = {
@@ -2626,8 +2664,15 @@ ideas = {
 			traits = { central_bank } 
 			modifier = {
 				political_power_gain = -0.25
-				production_speed_industrial_complex_factor = 0.05
-				consumer_goods_factor = -0.05		
+				production_speed_industrial_complex_factor = 0.1
+				production_speed_infrastructure_factor = 0.1
+				consumer_goods_factor = -0.10
+				production_factory_efficiency_gain_factor = -0.1
+				production_factory_max_efficiency_factor = 0.05
+			}
+
+			research_bonus = {
+				industry = 0.15
 			}
 		}
 	}

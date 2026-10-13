@@ -434,25 +434,26 @@ focus_tree = {
         search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_TFV_AUTONOMY }
 
         completion_reward = {
-            add_dynamic_modifier = {
-                modifier = idea_RAJ_independence_movement
-            }
-            add_political_power = 50
-            hidden_effect = {
-                country_event = { id = GOE_RAJ.29 days = 38 }  #April 18ish
-            }
+            add_ideas = RAJ_road_of_independence
+            # add_dynamic_modifier = {
+            #     modifier = idea_RAJ_independence_movement
+            # }
+            # add_political_power = 50
+            # hidden_effect = {
+            #     country_event = { id = GOE_RAJ.29 days = 38 }  #April 18ish
+            # }
 
-            hidden_effect = {
-                if = {
-                    limit = {
-                        has_game_rule = {
-                            rule = obsolete_focus_branches_visibility
-                            option = HIDE
-                        }
-                    }
-                    mark_focus_tree_layout_dirty = yes
-                }
-            }
+            # hidden_effect = {
+            #     if = {
+            #         limit = {
+            #             has_game_rule = {
+            #                 rule = obsolete_focus_branches_visibility
+            #                 option = HIDE
+            #             }
+            #         }
+            #         mark_focus_tree_layout_dirty = yes
+            #     }
+            # }
         }
     }
 
@@ -664,10 +665,14 @@ focus_tree = {
         search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY FOCUS_FILTER_TFV_AUTONOMY}
 
         completion_reward = {
-            custom_effect_tooltip = idea_RAJ_independence_movement_tt
-            add_to_variable = { RAJ_autonomy_gain_independence_movement = 0.03 tooltip = autonomy_gain_tt }
-            add_to_variable = { RAJ_resistance_activity_independence_movement = 0.1 tooltip =  resistance_activity_tt }
-            add_to_variable = { RAJ_resistance_target_independence_movement = 0.1 tooltip =  resistance_target_tt }
+            swap_ideas = {
+                remove_idea = RAJ_road_of_independence
+                add_idea = RAJ_road_of_independence2
+            }
+            # custom_effect_tooltip = idea_RAJ_independence_movement_tt
+            # add_to_variable = { RAJ_autonomy_gain = 0.1 tooltip = autonomy_gain_tt }
+            # add_to_variable = { RAJ_resistance_activity_independence_movement = 0.1 tooltip =  resistance_activity_tt }
+            # add_to_variable = { RAJ_resistance_target_independence_movement = 0.1 tooltip =  resistance_target_tt }
             add_stability = -0.2
             custom_effect_tooltip = generic_skip_one_line_tt
             
@@ -2724,8 +2729,8 @@ focus_tree = {
         }
 
         completion_reward = {
-            custom_effect_tooltip = idea_RAJ_independence_movement_tt
-            add_to_variable = { RAJ_autonomy_gain_independence_movement = 0.05 tooltip = autonomy_gain_tt }
+            # custom_effect_tooltip = idea_RAJ_independence_movement_tt
+            # add_to_variable = { RAJ_autonomy_gain_independence_movement = 0.05 tooltip = autonomy_gain_tt }
 
             if  = {
                 limit = { has_idea = RAJ_princely_states }

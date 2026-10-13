@@ -36,7 +36,7 @@ idea_RAJ_independence_movement = { #STATE MODIFIER
 	icon = GFX_idea_RAJ_independence_movement
 	resistance_activity = RAJ_resistance_activity_independence_movement
 	resistance_target  = RAJ_resistance_target_independence_movement
-	autonomy_gain = RAJ_autonomy_gain_independence_movement
+	autonomy_gain = RAJ_autonomy_gain
 
 }
 
