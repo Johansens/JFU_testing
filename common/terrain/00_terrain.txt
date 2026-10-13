@@ -152,7 +152,7 @@ categories =  {
 	
 	jungle = {
 		color = { 127 191 0 }
-		movement_cost = 1.8
+		movement_cost = 3.5
 		attrition = 0.2
 		# combat_width = -0.25
 		combat_width = 80
