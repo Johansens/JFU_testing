@@ -553,6 +553,7 @@ JFU_equipment_on_start_up_effect = {
 		add_equipment_to_stockpile = { type = convoy_1 amount = 100 producer = BUL }
 		set_country_flag = GER_puppet_exploited_flag
 		set_country_flag = GER_puppet_development_flag
+		add_dynamic_modifier = { modifier = BUL_economy_modifier }
 	}
 	SOV = {
 		add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 120000 }
@@ -1435,6 +1436,16 @@ dynamic_modifier_start_up = {
 		set_variable = { var = SPReco_DO value = -0.1 }
 		set_variable = { var = SPReco_mfcs value = 0 }
 		set_variable = { var = SPR_eco_ics value = 0 }
+	}
+	BUL = {
+		set_variable = { var = BULeco_cgf value = 0 }
+		set_variable = { var = BULeco_peg value = 0 }
+		set_variable = { var = BULeco_cs value = 0 }
+		set_variable = { var = BULeco_csc value = 0 }
+		set_variable = { var = BULeco_lbsf value = 0 }
+		set_variable = { var = BULeco_FO value = 0 }
+		set_variable = { var = BULeco_me value = 0 }
+		set_variable = { var = BULeco_lrf value = 0 }
 	}
 	28 = {
 		add_dynamic_modifier = { modifier = FRA_maginot_defence_modifier } 

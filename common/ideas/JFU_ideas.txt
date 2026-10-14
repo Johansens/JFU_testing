@@ -2075,8 +2075,23 @@ ideas = {
 			army_core_attack_factor = 0.1
 		}
 	}
+	JFU_FREE_INTEL_IDEA = {
+		name = "Free Intel"
 
+		removal_cost = -1
+
+		allowed = {
+			always = no
+		}	
+
+		picture = gengeneric_artillery_regimentseric
+
+		modifier = {
+			civilian_intel_to_others = 100.0
+			army_intel_to_others = 100.0
+			navy_intel_to_others = 100.0
+			airforce_intel_to_others = 100.0
+		}
 	}
-	
-	
+	}		
 }

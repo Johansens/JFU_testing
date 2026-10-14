@@ -33,16 +33,16 @@ new_mobile_warfare = {
 	enable_tactic = tactic_unexpected_thrust
 
     category_vehicle_infantry = {
-        max_organisation = 5
-        maximum_speed = 0.05
+        max_organisation = 20
+        maximum_speed = 0.1
+        defense = 0.1
+        default_morale = 0.1
     }
     category_all_armor = {
-        max_organisation = 10
+        max_organisation = 20
         default_morale = 0.05
         breakthrough = 0.1
     }
-
-	
 
     milestones = {
         {
@@ -285,7 +285,7 @@ grand_battleplan = {
     # EFFECTS
     enable_tactic = tactic_planned_attack
     
-    max_planning = 0.05
+    max_planning = 0.075
     command_power_gain = 0.25
 
     milestones = {
@@ -467,7 +467,7 @@ mass_assault = {
             weekly_casualties_war_support = 0.001
             minimum_training_level = -0.05
 
-            supply_consumption_factor = 0.1
+            supply_consumption_factor = -0.1
             effect = {
                 if = {
                     limit = {

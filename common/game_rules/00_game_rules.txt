@@ -201,6 +201,21 @@ JFU_CHINA_WAR = {
 		desc = "Normal China war"
 	}	
 }
+JFU_FREE_INTEL = {
+	name = "Free 100% Intel On Every Country"
+	group = "HORST_GROUPKEY"
+	icon = "RULE_GROUP_GENERAL_UI"	
+	option = {
+		name = "FREE_INTEL_ON"
+		text = "Free 100% Intel On Every Country"
+		desc = "Free 100% Intel On Every Country"
+	}
+	default = {
+		name = "FREE_INTEL_OFF"
+		text = "Classic Intel from agency"
+		desc = "Classic Intel from agency"
+	}	
+}
 FIN_WAR = {
 	name = "Finnland War"
 	group = "HORST_GROUPKEY"

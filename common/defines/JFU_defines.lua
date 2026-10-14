@@ -1,6 +1,6 @@
 NDefines.NGame.LAG_DAYS_FOR_LOWER_SPEED = 480			
 NDefines.NGame.LAG_DAYS_FOR_PAUSE = 20
-NDefines.NGame.GAME_SPEED_SECONDS = { 600.0, 0.13, 0.25, 0.10, 0.0 }
+NDefines.NGame.GAME_SPEED_SECONDS = { 600.0, 0.13, 0.25, 0.1, 0.0 }
 NDefines.NGame.DIPLOMACY_ACCEPT_ATTACHE_BASE = 200
 NDefines.NGame.DIPLOMACY_ACCEPT_ATTACHE_OPINION_TRASHHOLD = 10
 NDefines.NGame.COMBAT_LOG_MAX_MONTHS = 14 							    -- WAS 48 | drastically cuts down on save file sizes after WW2 starts and well into barbarossa
@@ -19,6 +19,7 @@ NDefines.NCountry.WAR_SUPPORT_DEFENSIVE_WAR = 0.2				--vanilla 0.2 Impact of bei
 NDefines.NCountry.MIN_FOCUSES_FOR_CONTINUOUS = 0   				 --vanilla 10
 NDefines.NCountry.NUM_DAYS_TO_FULLY_DELETE_STOCKPILED_EQUIPMENT = 999 
 NDefines.NCountry.GIE_ESCAPING_DIVISIONS_TRANSFER_DAYS = 1 			--  WAS 30 | days to transfer escaping divisions to host nation
+NDefines.NCountry.DEFAULT_COASTAL_PROTECTION_STABILITY = 0		-- Default stability when the coastal states are fully protected
 
 NDefines.NPolitics.LEADER_TRAITS_XP_SHOW = 0.01
 
@@ -48,6 +49,7 @@ NDefines.NDiplomacy.NAVAL_BLOCKADE_BASE_COST = 999 			-- Base PP cost for issuin
 NDefines.NDiplomacy.NAVAL_BLOCKADE_DAILY_COST = 10					-- Daily PP cost for one naval blockade
 NDefines.NDiplomacy.AUTONOMY_LEVEL_CHANGE_PP_ANNEX = 999            -- vanilla 300 Annexation cost
 
+NDefines.NMilitary.PLANNING_MAX = 0.2
 NDefines.NMilitary.UNIT_EXPERIENCE_PER_COMBAT_HOUR = 0.0005
 NDefines.NMilitary.EXPERIENCE_LOSS_FACTOR = 1
 NDefines.NMilitary.BASE_DIVISION_BRIGADE_GROUP_COST = 0
@@ -186,6 +188,7 @@ NDefines.NProduction.DEFAULT_MAX_NAV_FACTORIES_PER_LINE = 200
 NDefines.NProduction.ANNEX_FIELD_EQUIPMENT_RATIO = 1	-- WAS 0.25 | Annex decisions should give all troops, but incase I screwed up here is this -Thrasymachus | How much equipment from deployed divisions will be transferred on annexation
 NDefines.NProduction.LICENSE_EQUIPMENT_SPEED_NOT_FACTION = 0     --VANILLA -0.10		-- MIC speed modifier for licensed equipment for not being in faction
 NDefines.NProduction.MINIMUM_NUMBER_OF_FACTORIES_TAKEN_BY_CONSUMER_GOODS_PERCENT = 0.1	-- The minimum number of factories we have to put on consumer goods, in percent.
+NDefines.NProduction.POWERED_FACTORY_SPEED_MIL = 3.6			  --Powered factory speed multiplier.
 
 NDefines.NAI.GIVE_STATE_CONTROL_MIN_CONTROLLED = 0     
 NDefines.NAI.GIVE_STATE_CONTROL_MIN_CONTROLLED = 0     
@@ -240,6 +243,5 @@ NDefines.NFactions.FACTION_THEATER_COMMANDER_NAVY_SUPPLY_USAGE_MODIFIER_BASE = 0
 NDefines.NFactions.FACTION_THEATER_COMMANDER_NAVY_SUPPLY_USAGE_MODIFIER_SKILL_FACTOR = 0	-- was -0.01 | Value per skill level (percentage, negative = good)
 NDefines.NFactions.FACTION_THEATER_COMMANDER_SECONDARY_BONUS = 0							-- was 0.5 | A value that scales the supply usage modifiers if a Land commander is giving the supply bonus to Navy and vice versa
 NDefines.NFactions.MAX_FACTION_THEATERS = 2							-- was 4 |  The maximum number of faction theaters that can be created
-NDefines.NProject.SUPPORTIVE_SCIENTISTS_SHARING_BONUS = 0.03		   -- was 0.05 | Research sharing % per supportive scientist. Global per faction.
-
+NDefines.NProject.SUPPORTIVE_SCIENTISTS_SHARING_BONUS = 0.02		   -- was 0.05 | Research sharing % per supportive scientist. Global per faction.
 

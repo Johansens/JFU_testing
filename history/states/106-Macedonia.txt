@@ -2,8 +2,9 @@ state = {
 	id = 106
 	name = "STATE_106"
 	resources = {
-		tungsten = 70
-		aluminium = 15	} 
+		tungsten = 40
+		aluminium = 15	
+	} 
 
 	history = {
 		owner = YUG

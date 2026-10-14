@@ -1135,7 +1135,8 @@
  BUL_foreign_investor_britain_tt:0 "Modify §YForeign Investors§! by \n£prod_eff Production Efficiency Growth: §G+10%§! \n§YMilitary Factory§! construction Speed: §G+10%§!"
  BUL_foreign_investor_germany_tt:0 "Modify §YForeign Investors§! by \nProduction Efficiency Retention: §G+10%§! \n§YMilitary Factory§! construction Speed: §G+10%§!"
  BUL_foreign_industry:0 "Invited Foreign Investors"
-
+ BUL_foreign_contracts_tt:0 "Enables decision to invite foreign inverstors giving us ether §YForeign Investors§! Efficiency Base, Growth or Retention."
+ BUL_modify_eco_modifier_tt: "Modify §Y$BUL_economy_modifier$§! by:"
 
  ALLIES_army_eng:0 "§HFourteen§! §Rveteran§! ranger divisions will be assembled in §HLondon§! under our command."
  ALLIES_marines_eng:0 "§HEight§! §Rveteran§! marine divisions will be assembled in §HLondon§! under our command."
@@ -1554,6 +1555,8 @@
  
  CAN_great_depression_modifier:0 "Canadian Economy"
  
+ BUL_economy_modifier:0 "Bulgarian Economy"
+
  SPR_economy_modifier:0 "Spanish Economy"
  SPR_economy_modifier_desc:0 "We may not build §Yairbases, ports, airports, ships and railway guns§!" 
  
@@ -1947,9 +1950,11 @@ Anti_Soviet: "Concentrate on the Soviet Threat"
  FRA_veterans:0 "Spawns §Y2 Veteran Divisions§! in our homeland."
  linie_tt:0 "\n§G========================================§!\n "
  space_tt:0 " \n"
+ rom_anti_soviet_tt:0 "£offence_modifier_texticon Attack Bonus against [SOV.GetFlag] §YSoviet Union§!: §G+5%§!\n£defence_modifier_texticon Attack Bonus against [SOV.GetFlag] §YSoviet Union§!: §G+5%§!\n£offence_modifier_texticon Attack Bonus against [ENG.GetFlag] §YAllied Countries§!: §R-10%§!\n£defence_modifier_texticon Defense Bonus against [ENG.GetFlag] §YAllied Countries§!: §R-10%§!\n"
+ rom_allies_tt:0 "£offence_modifier_texticon Attack Bonus against [ENG.GetFlag] §YAllied Countries§!: §G+5%§!\n£defence_modifier_texticon Defense Bonus against [ENG.GetFlag] §YAllied Countries§!: §G+5%§!\n£offence_modifier_texticon Attack Bonus against [SOV.GetFlag] §YSoviet Union§!: §R-15%§!\n£defence_modifier_texticon Attack Bonus against [SOV.GetFlag] §YSoviet Union§!: §R-15%§!\n"
 
-
-
+SOV_propaganda_death_to_invaders_state_modifier_tt: "\n§Y$SOV_invaders_must_die$§! state modifier:\n   $MODIFIER_RESISTANCE_TARGET$: §R+15%§! \n   $MODIFIER_RESISTANCE_DECAY$: §R-30%§! \n   $MODIFIER_RESISTANCE_GROWTH$: §R+5%§! \n   $MODIFIER_COMPLIANCE_GROWTH$: §R-5%§!\n   $MODIFIER_STATE_RESOURCES_FACTOR$: §R-25%§!\n"
+ 
 
 
 

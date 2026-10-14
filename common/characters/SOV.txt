@@ -682,6 +682,18 @@ characters = {
 				small= "GFX_idea_SOV_yakov_cherevichenko"
 			}
 		}
+		advisor = {
+			cost = 50
+			slot = army_chief
+			idea_token = nikolay_vatutin
+			ledger = army
+			allowed = {
+				original_tag = SOV
+			}
+			traits = {
+				army_chief_offensive_1
+			}
+		}
 		corps_commander = {
 			traits = { cavalry_officer }
 			skill = 3
