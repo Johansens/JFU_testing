@@ -368,7 +368,7 @@ GER_seize_gold_reserves_cat = {
 			base = 10
 		}
 		available = {
-			NOR = { has_capitulated = yes }
+			144 = { is_controled_by = GER }
 			NOT = { has_country_flag = GER_seized_norwegian_gold_reserves_flag }
 		}
 		complete_effect = {
@@ -461,7 +461,7 @@ GER_seize_gold_reserves_cat = {
 			base = 10
 		}
 		available = {
-			FRA = { has_capitulated = yes }
+			20 = { is_controled_by = EFR }
 			NOT = { has_country_flag = GER_seized_french_gold_reserves_flag }
 		}
 		complete_effect = {

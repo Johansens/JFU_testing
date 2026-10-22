@@ -1365,6 +1365,13 @@
  GER_construct_the_atlantik_wall:0 "Construct the Atlantik Wall"
  GER_maginot_line_dynamic_modifier: "Westwall"
  GER_construct_westwall_tt: "Build a defensive line in §Y[42.GetName]§! and §Y[978.GetName]§! along the western borders. Add §G5§! §Y$bunkers$§!.\n"
+ GER_seize_gold_reserves_POL:0 "Seize Gold Reserves in §YPoland§!"
+ GER_seize_gold_reserves_FRA:0 "Seize Gold Reserves in §YFrance§!"
+ GER_seize_gold_reserves_BEL:0 "Seize Gold Reserves in §Belgium§!"
+ GER_seize_gold_reserves_NED:0 "Seize Gold Reserves in §YNetherlands§!"
+ GER_seize_gold_reserves_DEN:0 "Seize Gold Reserves in §YDenmark§!"
+ GER_seize_gold_reserves_NOR:0 "Seize Gold Reserves in §YNorway§!"
+
 
 
 
