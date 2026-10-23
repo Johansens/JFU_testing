@@ -310,7 +310,7 @@ GER_seize_gold_reserves_cat = {
 			NOT = { has_country_flag = GER_seized_polish_gold_reserves_flag }
 		}
 		complete_effect = {
-			POL = { set_country_flag = GER_seized_polish_gold_reserves_flag }
+			GER = { set_country_flag = GER_seized_polish_gold_reserves_flag }
 			every_state = {
 				limit = {
 					is_on_continent = europe
@@ -341,7 +341,7 @@ GER_seize_gold_reserves_cat = {
 			NOT = { has_country_flag = GER_seized_danish_gold_reserves_flag }
 		}
 		complete_effect = {
-			DEN = { set_country_flag = GER_seized_danish_gold_reserves_flag }
+			GER = { set_country_flag = GER_seized_danish_gold_reserves_flag }
 			every_state = {
 				limit = {
 					is_on_continent = europe
@@ -368,11 +368,11 @@ GER_seize_gold_reserves_cat = {
 			base = 10
 		}
 		available = {
-			144 = { is_controled_by = GER }
+			144 = { is_controlled_by = GER }
 			NOT = { has_country_flag = GER_seized_norwegian_gold_reserves_flag }
 		}
 		complete_effect = {
-			NOR = { set_country_flag = GER_seized_norwegian_gold_reserves_flag }
+			GER = { set_country_flag = GER_seized_norwegian_gold_reserves_flag }
 			every_state = {
 				limit = {
 					is_on_continent = europe
@@ -403,7 +403,7 @@ GER_seize_gold_reserves_cat = {
 			NOT = { has_country_flag = GER_seized_dutch_gold_reserves_flag }
 		}
 		complete_effect = {
-			HOL = { set_country_flag = GER_seized_dutch_gold_reserves_flag }
+			GER = { set_country_flag = GER_seized_dutch_gold_reserves_flag }
 			every_state = {
 				limit = {
 					is_on_continent = europe
@@ -434,7 +434,7 @@ GER_seize_gold_reserves_cat = {
 			NOT = { has_country_flag = GER_seized_belgian_gold_reserves_flag }
 		}
 		complete_effect = {
-			BEL = { set_country_flag = GER_seized_belgian_gold_reserves_flag }
+			GER = { set_country_flag = GER_seized_belgian_gold_reserves_flag }
 			every_state = {
 				limit = {
 					is_on_continent = europe
@@ -461,11 +461,11 @@ GER_seize_gold_reserves_cat = {
 			base = 10
 		}
 		available = {
-			20 = { is_controled_by = EFR }
+			20 = { is_controlled_by = EFR }
 			NOT = { has_country_flag = GER_seized_french_gold_reserves_flag }
 		}
 		complete_effect = {
-			FRA = { set_country_flag = GER_seized_french_gold_reserves_flag }
+			GER = { set_country_flag = GER_seized_french_gold_reserves_flag }
 			every_state = {
 				limit = {
 					is_on_continent = europe
