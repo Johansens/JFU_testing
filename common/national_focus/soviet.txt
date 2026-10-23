@@ -2514,23 +2514,7 @@ focus_tree = {
 		completion_reward = {
 			add_offsite_building = { type = arms_factory level = 15 }
 			add_ideas = sov_state_defense_committee
-			custom_effect_tooltip = generic_skip_one_line_tt
-
-			if = {
-				limit = {
-					NOT = { has_completed_focus = SOV_mil26 }
-				}
-				custom_effect_tooltip = available_mio_tt
-				show_mio_tooltip = SOV_okmo_organization
-			}
-
-			if = {
-				limit = {
-					NOT = { has_completed_focus = SOV_mil27 }
-				}
-				custom_effect_tooltip = available_mio_tt
-				show_mio_tooltip = SOV_kirov_organization
-			}			
+			custom_effect_tooltip = generic_skip_one_line_tt			
 		}
 	}	
 
@@ -3148,16 +3132,6 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			every_other_country = {
-				limit = {
-					OR = {
-						has_government = democratic
-						has_government = communism
-					}
-					NOT = { has_war_with = ROOT }
-				}
-				add_opinion_modifier = { target = SOV modifier = SOV_anti_fascist_policies_good } 
-			}
 			SOV = {
 				add_equipment_to_stockpile = {
 					type = convoy

@@ -108,6 +108,7 @@
  SOV_Bessarabia:0 "Demand Besserabia"
  SOV_release_innocents:0 "Release the Innocent"
  SOV_release_innocents_desc:0 "Too many of our comrades have been exiled or imprisoned by Stalin. We must release them and welcome them back to the motherland."
+ sov_state_defense_committee:0 "State Defense Committee"
 
  ALLIES_continue_the_fight:0 "Continue the Fight"
  ALLIES_continue_the_fight_desc:0 "We shall fight on the beaches, we shall fight on the landing grounds, we shall fight in the fields and in the streets, we shall fight in the hills; we shall never surrender!"
@@ -998,6 +999,20 @@
  pick_soviet_tt:0 "\nIf we complete the focus §HEmpower the Soviets§! and §HSocialist Humanism§! we will release the following political advisors:"
  pick_soviet2_tt:0 "\nIf we complete the focus §HEmpower the Soviets§! and §HBack to the NEP§! we will release the following political advisors:"
  permanent_revolution_tt:0 "\n§RWe will break off diplomatic relations with all non-communist states, preventing us from licensing foreign technology and receiving Allied lend-lease!§!"
+ SOV_focus_will_auto_start_at_surrender_level_tt: "This focus will be automatically started after having more than §Y$PROGRESS$§!."
+ SOV_focus_will_auto_start_on_approach2_tt: "This focus will be automatically start after losing a state adjacent to §Y$STATE1$§!, §Y$STATE2$§!, §Y$STATE3$§!, §Y$STATE4$§!, or §Y$STATE5$§!."
+ SOV_focus_will_auto_start_on_approach_tt: "This focus will be automatically start after losing a state adjacent to §Y$STATECORE$§! (§Y$STATE1$§!, §Y$STATE2$§!, §Y$STATE3$§!, or §Y$STATE4$§!) while still controlling §Y$STATECORE$§!."
+ SOV_focus_in_progress_tt: "The Politburo is working on this focus. \nProgress: §Y$FLAG_DAYS$§!/[?temp_focus_days] days"
+ SOV_focus_will_auto_start_on_barb_tt:0 "This focus will be automatically started after going to §Ywar with a Major Nation.§!"
+ SOV_focus_will_auto_start_on_war_mob_finish_tt:0 "This focus will be automatically started after §YGreat Patriotic War Mobilisation§! is completed."
+ SOV_focus_will_auto_start_on_defense_committee_finish_tt:0 "This focus will be automatically started after §YGForm the GKO§! is completed."
+ SOV_focus_will_auto_start_at_surrender_level_tech_tt: "This focus will be automatically started after §YThe United States§! is at war with a Major Power."
+ SOV_focus_will_auto_start_at_surrender_level_or_date_tt:0 "This focus will be automatically started after having more than §Y$PROGRESS$§! OR its after §Y$DATE$§!."
+ SOV_focus_will_auto_start_on_reorganize_finish_tt:0 "This focus will be automatically started after §YThe Great Reorganization§! is completed."
+ SOV_lend_lease_port_mechanic_tt:0 "The §Rhigher the level of the port§W in the required states, the §Gmore lend lease§W we will recieve."
+
+
+
 
  UK_imperial_conference_tt:0 " Add §YImperial Conference Economy Agreements§!, which grants (Factory Output §G+15.00%§!, Dockyard Output §G+15.00%§!).\n Add §YImperial Conference Economy Agreements§! which grants (§YCivilian Factory§! construction Speed §G+15.00%§!, §YMilitary Factory§! construction speed §G+15.00%§!, §!Dockyard§! construction Speed §G+15.00%§!)\n Gain Base War Support §G+10.00%§!\n(@AST§YAustralia, @CANDominion of Canada, @RAJBritish Raj,\n @NZLNew Zealand and @SAFSouth Africa§!):\n    Add §YImperial Conference Defense Agreements§! which grants (Factory Output §G+10.00%§!, Dockyard Output §G+10.00%§!).\n    Add §YImperial Conference Economy Agreements§! which grants (§YCivilian Factory§! construction Speed §G+10.00%§!, §YMilitary Factory§! construction speed §G+10.00%§!, §!Dockyard§! construction Speed §G+10.00%§!)\n   Gain Base War Support §G+10.00%§! "
  ENG_fortify_the_empire_big_tt:0 "Modify §YFortify the Empire§! by\n §YLand Fort§! construction speed §G+10.00%§!\n §YCoastal Fort§! construction speed §G+10.00%§!"
