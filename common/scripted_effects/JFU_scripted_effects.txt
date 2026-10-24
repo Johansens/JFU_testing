@@ -493,7 +493,7 @@ JFU_equipment_on_start_up_effect = {
 		add_dynamic_modifier = { modifier = ENG_fortify_the_empire_modifier }
 	}
 	GER = {
-		add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 24900 }
+		add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 50000 }
 		add_equipment_to_stockpile = { type = support_equipment_1 amount = 891 }
 		add_equipment_to_stockpile = { type = motorized_equipment_1 amount = 607 }
 		add_equipment_to_stockpile = { type = artillery_equipment_1 amount = 349 }
@@ -557,7 +557,7 @@ JFU_equipment_on_start_up_effect = {
 	}
 	SOV = {
 		add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 120000 }
-		add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 40000 }
+		add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 70000 }
 		add_equipment_to_stockpile = { type = support_equipment_1 amount = 443 }
 		add_equipment_to_stockpile = { type = motorized_equipment_1 amount = 1600 }
 		add_equipment_to_stockpile = { type = artillery_equipment_1 amount = 814 }
