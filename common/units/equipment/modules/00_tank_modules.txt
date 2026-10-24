@@ -202,8 +202,9 @@ equipment_modules = {
 		dismantle_cost_ic  = 0.5
 
 		multiply_stats =  {
-			build_cost_ic = -0.1
 			hardness = -0.4
+			soft_attack = -0.1
+			hard_attack = -0.1
 		}
 	}
 
@@ -218,8 +219,9 @@ equipment_modules = {
 		dismantle_cost_ic  = 0.5
 
 		multiply_stats =  {
-			build_cost_ic = -0.05
 			hardness = -0.3
+			soft_attack = -0.1
+			hard_attack = -0.1
 		}
 
 		can_convert_from = {
