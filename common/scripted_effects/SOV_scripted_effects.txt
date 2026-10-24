@@ -1737,6 +1737,7 @@ SOV_regular_purge_general_accuses_general_effect = {
 			limit ={
 				any_army_leader = {
 					SOV_character_can_be_purged = yes
+					NOT = { has_character_flag = SOV_purge_accuser_flag }
 					OR = {
 						has_character_flag = SOV_potential_target_flag
 						AND = {
@@ -1750,6 +1751,7 @@ SOV_regular_purge_general_accuses_general_effect = {
 			random_army_leader = {
 				limit = {
 					SOV_character_can_be_purged = yes
+					NOT = { has_character_flag = SOV_purge_accuser_flag } 
 					OR = {
 						has_character_flag = SOV_potential_target_flag
 						AND = {
@@ -1770,6 +1772,10 @@ SOV_regular_purge_general_accuses_general_effect = {
 		}
 		else = {
 			random_army_leader = {
+				limit = {
+					SOV_character_can_be_purged = yes
+					NOT = { has_character_flag = SOV_purge_accuser_flag }
+				}
 				set_character_flag = SOV_purge_accused_flag
 				SOV = {
 					set_variable = { SOV_accused_unit_leader_level = PREV.skill_level }

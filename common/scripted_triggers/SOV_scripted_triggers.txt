@@ -52,6 +52,17 @@ SOV_character_can_be_purged = {
 	NOT = { has_character_flag = SOV_safe_from_purge_flag }
 	NOT = { has_character_flag = SOV_exiled_flag }
 	NOT = { has_character_flag = SOV_character_purged_flag }
+
+	NOT = { is_character = SOV_georgy_zhukov }
+	NOT = { is_character = SOV_konstantin_rokossovsky  }
+	NOT = { is_character = SOV_aleksandr_vasilevsky }
+	NOT = { is_character = SOV_leonid_govorov }
+	NOT = { is_character = SOV_yakov_cherevichenko }
+	NOT = { is_character = SOV_dmitry_lelyushenko }
+	NOT = { is_character = SOV_vasily_chuykov }
+	NOT = { is_character = SOV_kirill_moskalenko }
+	NOT = { is_character = SOV_aleksandr_gorbatov }
+	NOT = { is_character = SOV_andrey_grechko }
 }
 
 SOV_unit_leader_can_be_purged = { #Unused for now
