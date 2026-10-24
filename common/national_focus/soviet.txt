@@ -1004,6 +1004,7 @@ focus_tree = {
 							is_military_industrial_organization = SOV_yakovlev_design_bureau_organization
 							is_military_industrial_organization = SOV_ilyushin_design_bureau_organization
 							is_military_industrial_organization = SOV_mig_design_bureau_organization
+							is_military_industrial_organization = SOV_CAS_organization
 						}
 					}
 					complete_mio_trait = SOV_mio_trait_merge_plant_no_28
