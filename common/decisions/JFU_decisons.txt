@@ -195,6 +195,7 @@ political_actions1 = {
 		}	
 		cost = 0		
 		complete_effect = {
+			
 			declare_war_on = {
 				target = SOV 
 				type = annex_everything
@@ -207,6 +208,7 @@ political_actions1 = {
 			}
 			custom_effect_tooltip = GER_barbarossa_others_text
 			hidden_effect = {
+				JFU_update_generals = yes
 				complete_national_focus = GER_war_with_the_ussr
 				GER = { country_event = { id = JFU_events.11 days = 120 }}
 				if = { limit = { country_exists = HUN }	HUN = { add_to_war = { targeted_alliance = GER enemy = SOV } } }
@@ -1011,9 +1013,10 @@ political_actions1 = {
 		fire_only_once = yes
 		allowed = { tag = ENG }
 		available = {
-			GER = {
-				has_war_with = SOV
-			}
+			date > 1942.1.1
+			# GER = {
+			# 	has_war_with = SOV
+			# }
 		}
 		cost = 0
 		complete_effect = {
@@ -1051,7 +1054,7 @@ political_actions1 = {
 							option = COMPETITIVE_JFU
 						}	
 					}	
-					JFU_update_generals = yes											
+					#JFU_update_generals = yes											
 				}
 			}
 		}
