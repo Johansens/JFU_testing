@@ -2372,7 +2372,32 @@ focus_tree = {
 		relative_position_id = SOV_Great_Patriotic_War
 		cost = 5
 		overlay = GFX_focus_fast_overlay_generic_clock
+
 		available = {
+			if = { #ADVISOR WORKING ON THE FOCUS (Show progress)
+				limit = {
+					has_country_flag = SOV_desperate_measures_in_progress_flag
+				}
+				set_temp_variable = { temp_focus_days = 5 } #For tooltip purposes
+				multiply_temp_variable = { temp_focus_days = 35 } #The constant uses focus cost which is in weeks, so convert to days
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = SOV_focus_in_progress_tt
+						FLAG_DAYS = [?SOV_desperate_measures_in_progress_flag:days]
+					}
+					always = no 
+				}
+			}
+			else = { #NOT BEEN WORKED ON (Just Explain)
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = SOV_focus_will_auto_start_at_surrender_level_or_date_tt
+						PROGRESS = "5% Surrender Progress"
+						DATE = "1:00, 1 Jan, 1942"
+					}
+					always = no
+				}
+			}
 		}
 		
 		search_filters = {}
@@ -2694,39 +2719,6 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			if = {
-				limit = {
-					has_full_control_of_state = 137 #CRIMEA
-				}
-				137 = { #CRIMEA
-					add_building_construction = {
-						type = anti_air_building
-						level = 1
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = bunker
-						level = 3
-						province = 3686
-						instant_build = yes
-					}
-					add_building_construction = {
-						type = coastal_bunker
-						level = 3
-						province = 3686
-						instant_build = yes
-					}
-				}
-			}
-			if = {
-				limit = {
-					controls_state = 137 #CRIMEA
-				}
-				137 = {
-					add_dynamic_modifier = { modifier = SOV_armored_battery_35 scope = SOV }
-					add_dynamic_modifier = { modifier = SOV_defend_city }
-				}
-			}
 		}
 	}
 
@@ -2869,11 +2861,11 @@ focus_tree = {
 		id = SOV_order_270_focus
 		icon = GFX_SOV_GEORGY_ZHUKOV_HERO
 		prerequisite = { focus = SOV_desperate_measures }
-		x = 0
+		x = -1
 		y = 1
 		relative_position_id = SOV_desperate_measures
 		cost = 1
-		overlay = GFX_focus_fast_overlay_generic_clock
+		#overlay = GFX_focus_fast_overlay_generic_clock
 		ai_will_do = {
 			factor = 1
 		}
@@ -2923,20 +2915,44 @@ focus_tree = {
 
 		prerequisite = { focus = SOV_desperate_measures }
 		prerequisite = { focus = SOV_empower_stavka }
-		x = -3
+		x = -4
 		y = 1
 		relative_position_id = SOV_empower_stavka
 		cost = 5
 		overlay = GFX_focus_fast_overlay_generic_clock
 
 		available = {
-			OR = {
-				GER = {
-					has_global_flag = GER_fall_blau
+			if = { #ADVISOR WORKING ON THE FOCUS (Show progress)
+				limit = {
+					has_country_flag = SOV_reorganize_red_army_in_progress_flag
 				}
-				date > 1942.08.01
-				surrender_progress > 0.6
+				set_temp_variable = { temp_focus_days = 5 } #For tooltip purposes
+				multiply_temp_variable = { temp_focus_days = 7 } #The constant uses focus cost which is in weeks, so convert to days
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = SOV_focus_in_progress_tt
+						FLAG_DAYS = [?SOV_reorganize_red_army_in_progress_flag:days]
+					}
+					always = no 
+				}
 			}
+			else = { #NOT BEEN WORKED ON (Just Explain)
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = SOV_focus_will_auto_start_at_surrender_level_or_date_tt
+						PROGRESS = "60% Surrender Progress"
+						DATE = "1:00, 1 Jul, 1942"
+					}
+					always = no
+				}
+			}
+			#OR = {
+			#	GER = {
+			#		has_global_flag = GER_fall_blau
+			#	}
+			#	date > 1942.08.01
+			#	surrender_progress > 0.6
+			#}
 		}
 		
 		search_filters = {FOCUS_FILTER_ARMY_XP}
@@ -3032,7 +3048,7 @@ focus_tree = {
 		available = {
 			always = no
 		}
-		overlay = GFX_focus_fast_overlay_generic_clock
+		#overlay = GFX_focus_fast_overlay_generic_clock
 		available_if_capitulated = yes
 
 		completion_reward = {
@@ -3238,7 +3254,7 @@ focus_tree = {
 		relative_position_id = SOV_allied_lend_lease
 		x = -1
 		y = 1
-		overlay = GFX_focus_fast_overlay_generic_clock
+		#overlay = GFX_focus_fast_overlay_generic_clock
 		available = {
 		}
 
