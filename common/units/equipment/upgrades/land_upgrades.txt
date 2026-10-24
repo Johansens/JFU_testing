@@ -113,7 +113,7 @@ upgrades = {
 		max_level = 5
 		cost = land
 		maximum_speed = 0.04
-		build_cost_ic = 0.05
+		build_cost_ic = 0.1
 	}	
 	ac_engine_upgrade = {
 		max_level = 5
