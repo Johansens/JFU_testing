@@ -169,6 +169,11 @@ characters = {
 			traits = {
 				military_theorist
 			}
+			visible = {
+				NOT = {
+					has_character_flag = SOV_safe_from_purge_flag 
+				}
+			}
 		}		
 	}
 
@@ -322,6 +327,11 @@ characters = {
 			}
 			traits = {
 				army_chief_offensive_2
+			}
+			visible = {
+				NOT = {
+					has_character_flag = SOV_safe_from_purge_flag 
+				}
 			}
 		}
 		corps_commander = {
@@ -943,6 +953,11 @@ characters = {
 				army_CombinedArms_1
 			}
 			cost = 50
+			visible = {
+				NOT = {
+					has_character_flag = SOV_safe_from_purge_flag 
+				}
+			}
 		}
 		corps_commander = {
 			traits = { trait_reckless armor_officer }
@@ -1015,6 +1030,11 @@ characters = {
 				army_armored_1
 			}
 			cost = 50
+			visible = {
+				NOT = {
+					has_character_flag = SOV_safe_from_purge_flag 
+				}
+			}
 		}
 		corps_commander = {
 			traits = { brilliant_strategist career_officer }
