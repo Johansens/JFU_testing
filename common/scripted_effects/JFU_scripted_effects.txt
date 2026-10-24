@@ -2506,7 +2506,7 @@ JFU_pregrinded_effect = {
 			add_unit_leader_trait = trickster	
 			add_unit_leader_trait = organizer		
 		}
-		SOV_dmitry_lelyushenko = { add_skill_level = 2 }
+		SOV_dmitry_lelyushenko = { add_skill_level = 3 }
 		SOV_dmitry_lelyushenko = { add_attack = 3 }
 		SOV_dmitry_lelyushenko = { add_defense = 3 }
 		SOV_dmitry_lelyushenko = { add_planning = 2 }
@@ -2537,7 +2537,7 @@ JFU_pregrinded_effect = {
 			add_unit_leader_trait = cavalry_leader	
 			add_unit_leader_trait = cavalry_expert				
 		}
-		SOV_vasily_chuykov = { add_skill_level = 2 }
+		SOV_vasily_chuykov = { add_skill_level = 3 }
 		SOV_vasily_chuykov = { add_attack = 1 }
 		SOV_vasily_chuykov = { add_defense = 1 }
 		SOV_vasily_chuykov = { add_planning = 1 }
