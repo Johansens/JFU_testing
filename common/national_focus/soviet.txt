@@ -5556,6 +5556,27 @@ focus_tree = {
 			hidden_effect = {
 				news_event = { id = news.199 days = 1}
 				annex_country = { target = LIT  }
+				813 = {
+					add_core_of = SOV
+				}
+				812 = {
+					add_core_of = SOV
+				}
+				13 = {
+					add_core_of = SOV
+				}
+				191 = {
+					add_core_of = SOV
+				}
+				810 = {
+					add_core_of = SOV
+				}
+				12 = {
+					add_core_of = SOV
+				}
+				808 = {
+					add_core_of = SOV
+				}
 				add_named_threat = { threat = 1 name = SOV_claims_in_baltic }
 				add_political_power = -75
 				add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 60000 }
