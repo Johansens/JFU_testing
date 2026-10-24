@@ -227,7 +227,7 @@ equipments = {
 		armor_value = 20
 		soft_attack = 6
 		hard_attack = 2
-		breakthrough = 5
+		breakthrough = 4
 		resources = {
 			steel = 1
 		}
