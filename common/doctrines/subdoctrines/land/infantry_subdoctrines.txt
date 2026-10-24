@@ -171,9 +171,7 @@ large_unit_tactics = {
    
     #OTHER BASE REWARDS
     
-    category_light_infantry = {
-        supply_consumption = -0.01
-    }
+    army_morale_factor = 0.025
 
     rewards = {
         wide_trench_networks = {
@@ -196,7 +194,7 @@ large_unit_tactics = {
             category_light_infantry = {
                 soft_attack = 0.05
             }
-            army_morale = 0.2
+            
             
         }
         motorization_initiative = {
