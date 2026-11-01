@@ -2456,8 +2456,8 @@ focus_tree = {
 
 		completion_reward = {
 			custom_effect_tooltip = SOV_generic_modify_red_army_tt
-			add_to_variable = { SOV_red_army_max_planning_factor_var = 0.05 tooltip = max_planning_factor_tt }
-			add_to_variable = { SOV_red_army_planning_speed_var = 0.05 tooltip = planning_speed_factor_tt }
+			#add_to_variable = { SOV_red_army_max_planning_factor_var = 0.05 tooltip = max_planning_factor_tt }
+			#add_to_variable = { SOV_red_army_planning_speed_var = 0.05 tooltip = planning_speed_factor_tt }
 		}
 	}
 
@@ -2505,7 +2505,7 @@ focus_tree = {
 		id = SOV_found_state_defense_committee
 		icon = GFX_SOV_rework272
 		prerequisite = { focus = SOV_Great_Patriotic_War }
-		x = 5
+		x = 4
 		y = 1
 		overlay = GFX_focus_fast_overlay_generic_clock
 
@@ -2916,7 +2916,7 @@ focus_tree = {
 
 		prerequisite = { focus = SOV_desperate_measures }
 		prerequisite = { focus = SOV_empower_stavka }
-		x = -4
+		x = -3
 		y = 1
 		relative_position_id = SOV_empower_stavka
 		cost = 5
