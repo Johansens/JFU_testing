@@ -211,8 +211,8 @@ country_event = { #Charlie Brown and Franz Stigler incident (GER)
 		date > 1943.12.20
 		original_tag = GER
 		has_government = fascism
-		any_country = {
-			original_tag = USA
+		any_country_with_original_tag = {
+			original_tag_to_check = USA
 			has_government = democratic
 			has_war_with = ROOT
 			has_deployed_air_force_size = {
