@@ -2503,6 +2503,7 @@ focus_tree = {
 			add_to_variable = { SOV_red_army_planning_speed_var = 0.05 tooltip = planning_speed_factor_tt }
 		}
 	}
+	
 	focus = {
 		id = SOV_form_penal_battalions
 		icon = GFX_focus_SOV_penal_battalions
@@ -2544,7 +2545,7 @@ focus_tree = {
 			add_to_variable = { SOV_red_army_acclimatization_cold_climate_gain_factor_var = 0.1 tooltip = acclimatization_cold_climate_gain_factor_tt }
 		}
 	}
-	
+
 	focus = {
 		id = SOV_defend_stalingrad
 		icon = GFX_FOCUS_SOV_DEFENSE_OF_MOSCOW
@@ -2646,11 +2647,6 @@ focus_tree = {
 					type = bunker
 					level = 5
 					province = 3529
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = air_base
-					level = 5
 					instant_build = yes
 				}
 			}
@@ -2780,21 +2776,6 @@ focus_tree = {
 				limit = { controls_state = 202 }
 				202 = {
 					add_dynamic_modifier = { modifier = SOV_defend_city }
-					add_building_construction = {
-						type = air_base
-						level = 2
-						instant_build = yes
-					}
-				}
-			}
-			if = { 
-				limit = { has_full_control_of_state = 220 }
-				220 = {	
-					add_building_construction = {
-						type = air_base
-						level = 5
-						instant_build = yes
-					}
 				}
 			}
 		}
@@ -2873,8 +2854,8 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_ARMY_XP}
 
 		completion_reward = {
-			army_experience = 15
 			219 = {
+				add_dynamic_modifier = { modifier = SOV_defend_city }
 				custom_effect_tooltip = SOV_defense_of_moscow_forts
 				hidden_effect = {
 					if = {
@@ -3111,7 +3092,7 @@ focus_tree = {
 		id = SOV_the_road_of_life
 		icon = GFX_focus_SOV_the_road_of_life
 		prerequisite = {  focus = SOV_Great_Patriotic_War }
-		x = -1
+		x = 1
 		y = 1
 		relative_position_id = SOV_Great_Patriotic_War
 		cost = 5
@@ -3498,7 +3479,7 @@ focus_tree = {
 		id = SOV_organization_of_the_partisans
 		icon = GFX_focus_CHI_guerrilla_warfare
 		prerequisite = { focus = SOV_Great_Patriotic_War }
-		x = 1
+		x = -1
 		y = 1
 		relative_position_id = SOV_Great_Patriotic_War
 		cost = 5
