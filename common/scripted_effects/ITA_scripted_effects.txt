@@ -23,15 +23,12 @@ ITA_end_the_italo_ethiopian_war = {
 	# check if Italian victory
 	IF = {
 		limit = {
-			OR = {
-				any_country_with_original_tag = {
-					original_tag_to_check = ITA
-					controls_state = 271
-				}
-				any_country = {
+			any_country = {
+				OR = {
+					original_tag = ITA
 					is_subject_of = ITA
-					controls_state = 271
 				}
+				controls_state = 271
 			}
 		}
 		ITA = {
