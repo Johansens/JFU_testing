@@ -1028,7 +1028,7 @@
  SOV_focus_will_auto_start_at_surrender_level_or_date_tt:0 "This focus will be automatically started after having more than §Y$PROGRESS$§! OR its after §Y$DATE$§!."
  SOV_focus_will_auto_start_on_reorganize_finish_tt:0 "This focus will be automatically started after §YThe Great Reorganization§! is completed."
  SOV_lend_lease_port_mechanic_tt:0 "The §Rhigher the level of the port§W in the required states, the §Gmore lend lease§W we will recieve."
-
+ SOV_generic_modify_red_army_tt:0 "Modify §YRed Army§W by"
 
 
 
@@ -1560,6 +1560,7 @@
  modifier_production_cost_arms_factory_factor:0 "§YMilitary Factory§! construction cost"
  modifier_production_cost_arms_factory_factor_desc:0 "Modifies the cost of Military Factory construction."
 
+ SOV_defend_city:0 "Fortified City"
  
  GER_endsieg:0 "Total War"
  GER_endsieg_desc:0 "Wollt ihr den totalen Krieg? - Ja"

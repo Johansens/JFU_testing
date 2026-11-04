@@ -2366,7 +2366,7 @@ focus_tree = {
 
 	focus = {
 		id = SOV_desperate_measures
-		icon = GFX_SOV_STALIN_WRITING
+		icon = GFX_SOV_REWORK126
 		prerequisite = { focus = SOV_Great_Patriotic_War }
 		x = 0
 		y = 3
@@ -2379,7 +2379,7 @@ focus_tree = {
 				limit = {
 					has_country_flag = SOV_desperate_measures_in_progress_flag
 				}
-				set_temp_variable = { temp_focus_days = 5 } #For tooltip purposes
+				set_temp_variable = { temp_focus_days = 1 } #For tooltip purposes
 				multiply_temp_variable = { temp_focus_days = 35 } #The constant uses focus cost which is in weeks, so convert to days
 				custom_override_tooltip = {
 					tooltip = {
@@ -2414,9 +2414,52 @@ focus_tree = {
 	}
 
 	focus = {
+		id = SOV_found_state_defense_committee
+		icon = GFX_SOV_REWORK272
+		prerequisite = { focus = SOV_Great_Patriotic_War }
+		x = 4
+		y = 1
+		overlay = GFX_focus_fast_overlay_generic_clock
+
+		relative_position_id = SOV_Great_Patriotic_War
+		cost = 5
+
+		available = {
+			if = { #ADVISOR WORKING ON THE FOCUS (Show progress)
+				limit = {
+					has_country_flag = SOV_found_state_defense_committee_in_progress_flag
+				}
+				set_temp_variable = { temp_focus_days = 5 } #For tooltip purposes
+				multiply_temp_variable = { temp_focus_days = 7 } #The constant uses focus cost which is in weeks, so convert to days
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = SOV_focus_in_progress_tt
+						FLAG_DAYS = [?SOV_found_state_defense_committee_in_progress_flag:days]
+					}
+					always = no 
+				}
+			}
+			else = { #NOT BEEN WORKED ON (Just Explain)
+				custom_override_tooltip = {
+					tooltip = {
+						localization_key = SOV_focus_will_auto_start_on_war_mob_finish_tt
+					}
+					always = no
+				}
+			}
+		}
+
+		completion_reward = {
+			#add_offsite_building = { type = arms_factory level = 15 }
+			add_ideas = sov_state_defense_committee
+			custom_effect_tooltip = generic_skip_one_line_tt			
+		}
+	}
+
+	focus = {
 		id = SOV_empower_stavka
 
-		icon = GFX_sov_stalin_writing
+		icon = GFX_SOV_STALIN_WRITING
 
 		prerequisite = { focus = SOV_found_state_defense_committee }
 		relative_position_id = SOV_found_state_defense_committee
@@ -2456,11 +2499,10 @@ focus_tree = {
 
 		completion_reward = {
 			custom_effect_tooltip = SOV_generic_modify_red_army_tt
-			#add_to_variable = { SOV_red_army_max_planning_factor_var = 0.05 tooltip = max_planning_factor_tt }
-			#add_to_variable = { SOV_red_army_planning_speed_var = 0.05 tooltip = planning_speed_factor_tt }
+			add_to_variable = { SOV_red_army_max_planning_factor_var = 0.05 tooltip = max_planning_factor_tt }
+			add_to_variable = { SOV_red_army_planning_speed_var = 0.05 tooltip = planning_speed_factor_tt }
 		}
 	}
-
 	focus = {
 		id = SOV_form_penal_battalions
 		icon = GFX_focus_SOV_penal_battalions
@@ -2482,7 +2524,7 @@ focus_tree = {
 	focus = {
 		id = SOV_winter_training
 
-		icon = GFX_SOV_rework88
+		icon = GFX_SOV_REWORK88
 
 		prerequisite = { focus = SOV_empower_stavka }
 		relative_position_id = SOV_empower_stavka
@@ -2498,52 +2540,11 @@ focus_tree = {
 
 		completion_reward = {
 			custom_effect_tooltip = SOV_generic_modify_red_army_tt
+			add_to_variable = { SOV_red_army_winter_attrition_factor_var = -0.1 tooltip = winter_attrition_factor_tt }
+			add_to_variable = { SOV_red_army_acclimatization_cold_climate_gain_factor_var = 0.1 tooltip = acclimatization_cold_climate_gain_factor_tt }
 		}
 	}
-
-	focus = {
-		id = SOV_found_state_defense_committee
-		icon = GFX_SOV_rework272
-		prerequisite = { focus = SOV_Great_Patriotic_War }
-		x = 4
-		y = 1
-		overlay = GFX_focus_fast_overlay_generic_clock
-
-		relative_position_id = SOV_Great_Patriotic_War
-		cost = 5
-
-		available = {
-			if = { #ADVISOR WORKING ON THE FOCUS (Show progress)
-				limit = {
-					has_country_flag = SOV_found_state_defense_committee_in_progress_flag
-				}
-				set_temp_variable = { temp_focus_days = 5 } #For tooltip purposes
-				multiply_temp_variable = { temp_focus_days = 7 } #The constant uses focus cost which is in weeks, so convert to days
-				custom_override_tooltip = {
-					tooltip = {
-						localization_key = SOV_focus_in_progress_tt
-						FLAG_DAYS = [?SOV_found_state_defense_committee_in_progress_flag:days]
-					}
-					always = no 
-				}
-			}
-			else = { #NOT BEEN WORKED ON (Just Explain)
-				custom_override_tooltip = {
-					tooltip = {
-						localization_key = SOV_focus_will_auto_start_on_war_mob_finish_tt
-					}
-					always = no
-				}
-			}
-		}
-
-		completion_reward = {
-			add_offsite_building = { type = arms_factory level = 15 }
-			add_ideas = sov_state_defense_committee
-			custom_effect_tooltip = generic_skip_one_line_tt			
-		}
-	}	
-
+	
 	focus = {
 		id = SOV_defend_stalingrad
 		icon = GFX_FOCUS_SOV_DEFENSE_OF_MOSCOW
@@ -2585,6 +2586,74 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			217 = {
+				add_dynamic_modifier = { modifier = SOV_defend_city }
+				add_building_construction = {
+					type = bunker
+					level = 5
+					province = 9504
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 5
+					province = 6527
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 5
+					province = 498
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 5
+					province = 11474
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 5
+					province = 11484
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 5
+					province = 3555
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 8
+					province = 3259
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 5
+					province = 6503
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 5
+					province = 9474
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 5
+					province = 3529
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = air_base
+					level = 5
+					instant_build = yes
+				}
+			}
 		}
 	}
 	focus = {
@@ -2630,6 +2699,39 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			195 = {
+				add_dynamic_modifier = { modifier = SOV_defend_city }
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 6174
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 79
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 11068
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 149
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 4
+					province = 3151
+					instant_build = yes
+				}
+			}
 		}
 	}
 
@@ -2674,6 +2776,27 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			if = { 
+				limit = { controls_state = 202 }
+				202 = {
+					add_dynamic_modifier = { modifier = SOV_defend_city }
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+			if = { 
+				limit = { has_full_control_of_state = 220 }
+				220 = {	
+					add_building_construction = {
+						type = air_base
+						level = 5
+						instant_build = yes
+					}
+				}
+			}
 		}
 	}
 
@@ -3108,7 +3231,7 @@ focus_tree = {
 
 	focus = {
 		id = SOV_allied_lend_lease
-		icon = GFX_SOV_production_targets
+		icon = GFX_SOV_PRODUCTION_TARGETS
 		prerequisite = { focus = SOV_Great_Patriotic_War }
 		relative_position_id = SOV_Great_Patriotic_War
 		x = -3
