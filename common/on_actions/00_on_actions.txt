@@ -389,12 +389,15 @@ on_actions = {
 				limit = {
 					NOT = { has_dlc = "Arms Against Tyranny"} # AAT uses separate system
 					original_tag = DEN
-					any_country = {
-						OR = {
-							tag = ROOT
-							is_in_faction_with = ROOT
+					OR = {
+						any_country_with_orignial_tag_of = {
+							target = { ROOT }
+							100 = { is_controlled_by = PREV }
 						}
-						100 = { is_controlled_by = PREV }
+						any_country = {
+							is_in_faction_with = ROOT
+							100 = { is_controlled_by = PREV }
+						}
 					}
 
 				}

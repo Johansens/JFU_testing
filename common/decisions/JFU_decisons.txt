@@ -195,6 +195,7 @@ political_actions1 = {
 		}	
 		cost = 0		
 		complete_effect = {
+			
 			declare_war_on = {
 				target = SOV 
 				type = annex_everything
@@ -207,6 +208,7 @@ political_actions1 = {
 			}
 			custom_effect_tooltip = GER_barbarossa_others_text
 			hidden_effect = {
+				JFU_update_generals = yes
 				complete_national_focus = GER_war_with_the_ussr
 				GER = { country_event = { id = JFU_events.11 days = 120 }}
 				if = { limit = { country_exists = HUN }	HUN = { add_to_war = { targeted_alliance = GER enemy = SOV } } }
@@ -980,7 +982,7 @@ political_actions1 = {
         cost = 0 
         fire_only_once = yes 
 		available = {
-			date > 1942.1.1
+			date > 1942.6.1
 		}
 		complete_effect = { 
 			hidden_effect = {
@@ -1011,9 +1013,10 @@ political_actions1 = {
 		fire_only_once = yes
 		allowed = { tag = ENG }
 		available = {
-			GER = {
-				has_war_with = SOV
-			}
+			date > 1942.1.1
+			# GER = {
+			# 	has_war_with = SOV
+			# }
 		}
 		cost = 0
 		complete_effect = {
@@ -1051,7 +1054,7 @@ political_actions1 = {
 							option = COMPETITIVE_JFU
 						}	
 					}	
-					JFU_update_generals = yes											
+					#JFU_update_generals = yes											
 				}
 			}
 		}
@@ -2400,6 +2403,57 @@ JFU_templates = {
 					cavalry = { x = 1 y = 2 }
 					cavalry = { x = 1 y = 3 }
 					cavalry = { x = 1 y = 4 }		
+				}
+			}
+		}
+	}
+	"MP Cavalery 50W" = {
+		icon = generic_cavalry
+		fire_only_once = yes
+		allowed = {}
+		visible = {
+			NOT = {
+				has_country_flag = JFU_templates_hide
+			}
+			has_country_flag = JFU_open_inf_templates
+		}
+		cost = 0
+		complete_effect = {
+			division_template = {
+				name = "MP.50"
+				regiments = {
+					cavalry = { x = 0 y = 0 }
+					cavalry = { x = 0 y = 1 }
+					cavalry = { x = 0 y = 2 }
+					cavalry = { x = 0 y = 3 }
+					cavalry = { x = 0 y = 4 }
+
+					cavalry = { x = 1 y = 0 }
+					cavalry = { x = 1 y = 1 }
+					cavalry = { x = 1 y = 2 }
+					cavalry = { x = 1 y = 3 }
+					cavalry = { x = 1 y = 4 }		
+					
+					cavalry = { x = 2 y = 0 }
+					cavalry = { x = 2 y = 1 }
+					cavalry = { x = 2 y = 2 }
+					cavalry = { x = 2 y = 3 }
+					cavalry = { x = 2 y = 4 }
+					
+					cavalry = { x = 3 y = 0 }
+					cavalry = { x = 3 y = 1 }
+					cavalry = { x = 3 y = 2 }
+					cavalry = { x = 3 y = 3 }
+					cavalry = { x = 3 y = 4 }
+					
+					cavalry = { x = 4 y = 0 }
+					cavalry = { x = 4 y = 1 }
+					cavalry = { x = 4 y = 2 }
+					cavalry = { x = 4 y = 3 }
+					cavalry = { x = 4 y = 4 }
+				}
+				support = { 
+					military_police = { x = 0 y = 0 }
 				}
 			}
 		}

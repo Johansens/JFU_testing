@@ -893,6 +893,18 @@ characters = {
 				small=GFX_portrait_SOV_aleksandr_gorbatov_small
 			}
 		}
+		advisor = {
+			slot = high_command
+			idea_token = aleksandr_gorbatov
+			ledger = army
+			allowed = {
+				original_tag = SOV
+			}
+			traits = {
+				army_armored_1
+			}
+			cost = 50
+		}
 		corps_commander = {
 			traits = { career_officer cavalry_officer }
 			skill = 3
@@ -913,6 +925,18 @@ characters = {
 				small=GFX_portrait_SOV_kirill_moskalenko_small
 			}
 		}
+		advisor = {
+			slot = high_command
+			idea_token = kirill_moskalenko
+			ledger = army
+			allowed = {
+				original_tag = SOV
+			}
+			traits = {
+				army_CombinedArms_1
+			}
+			cost = 50
+		}
 		corps_commander = {
 			skill = 3
 			attack_skill = 2
@@ -931,18 +955,6 @@ characters = {
 				large = GFX_portrait_SOV_dmitry_lelyushenko
 				small=GFX_portrait_SOV_dmitry_lelyushenko_small
 			}
-		}
-		advisor = {
-			slot = high_command
-			idea_token = dmitry_lelyushenko
-			ledger = army
-			allowed = {
-				original_tag = SOV
-			}
-			traits = {
-				army_CombinedArms_1
-			}
-			cost = 50
 		}
 		corps_commander = {
 			traits = { trait_reckless armor_officer }
@@ -1003,18 +1015,6 @@ characters = {
 				large = GFX_portrait_SOV_vasily_chuykov
 				small=GFX_portrait_SOV_vasily_chuykov_small
 			}
-		}
-		advisor = {
-			slot = high_command
-			idea_token = vasily_chuykov
-			ledger = army
-			allowed = {
-				original_tag = SOV
-			}
-			traits = {
-				army_armored_1
-			}
-			cost = 50
 		}
 		corps_commander = {
 			traits = { brilliant_strategist career_officer }

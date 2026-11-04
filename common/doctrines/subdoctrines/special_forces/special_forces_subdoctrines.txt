@@ -38,7 +38,7 @@ mountaineers_1 = {
 
     # EFFECTS
 	effect = {
-		unlock_subunit = mountaineers
+		#unlock_subunit = mountaineers
 	}
     
     rewards = {
@@ -170,7 +170,7 @@ mountaineers_2 = {
 
     # EFFECTS
 	effect = {
-		unlock_subunit = mountaineers
+		#unlock_subunit = mountaineers
 	}
     
     rewards = {
@@ -270,7 +270,7 @@ marines_1 = {
     # EFFECTS
 
 	effect = {
-		unlock_subunit = marine
+		#unlock_subunit = marine
 	}
 	naval_invasion_division_cap = 3
 	naval_invasion_planning_bonus_speed = 2	
@@ -416,7 +416,7 @@ marines_2 = {
     # EFFECTS
 	
 	effect = {
-		unlock_subunit = marine
+		#unlock_subunit = marine
 	}
    
     rewards = {
@@ -522,7 +522,7 @@ rangers_1 = {
 
     # EFFECTS
 	effect = {
-		unlock_subunit = ranger_battalion
+		#unlock_subunit = ranger_battalion
 	}
 
     rewards = {
@@ -611,7 +611,7 @@ rangers_2 = {
 
     # EFFECTS   
 	effect = {
-		unlock_subunit = ranger_battalion
+		#unlock_subunit = ranger_battalion
 	}		
 
     rewards = {

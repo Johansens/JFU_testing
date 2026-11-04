@@ -6,6 +6,7 @@ state={
 		chromium=12
 		tungsten=30
 		aluminium=10
+		coal = 60
 	}
 
 	history={

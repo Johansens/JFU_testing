@@ -2206,6 +2206,21 @@ ideas = {
 			 	training_time_factor = -0.2
 			}
 		}
+		GER_johannes_supply_fix_idea = {
+		 	name = "Geilenberg-Programm"
+		 	picture = SWE_let_fly_all_guns 
+		 
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+			 	supply_consumption_factor = -0.05
+			}
+		}
 
 		GER_knickebein = {
 		 	picture = generic_air_bonus
