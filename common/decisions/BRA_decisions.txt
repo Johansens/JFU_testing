@@ -239,8 +239,8 @@ improving_our_army_category = {
 	
 		available = {
 			has_completed_focus = BRA_foreign_advisors
-			any_country_with_original_tag = {
-				original_tag_to_check = JAP
+			any_country = {
+				original_tag = JAP
 				exists = yes
 				NOT = {
 					has_war_with = ROOT
@@ -356,8 +356,8 @@ improving_our_army_category = {
 	
 		available = {
 			has_completed_focus = BRA_foreign_advisors
-			any_country_with_original_tag = {
-				original_tag_to_check = USA
+			any_country = {
+				original_tag = USA
 				exists = yes
 				NOT = {
 					has_war_with = ROOT
@@ -471,8 +471,8 @@ improving_our_army_category = {
 	
 		available = {
 			has_completed_focus = BRA_foreign_advisors
-			any_country_with_original_tag = {
-				original_tag_to_check = SOV
+			any_country = {
+				original_tag = SOV
 				exists = yes
 				NOT = {
 					has_war_with = ROOT
@@ -590,8 +590,8 @@ improving_our_army_category = {
 	
 		available = {
 			has_completed_focus = BRA_foreign_advisors
-			any_country_with_original_tag = {
-				original_tag_to_check = GER
+			any_country = {
+				original_tag = GER
 				exists = yes
 				NOT = {
 					has_war_with = ROOT
@@ -707,8 +707,8 @@ improving_our_army_category = {
 	
 		available = {
 			has_completed_focus = BRA_foreign_advisors
-			any_country_with_original_tag = {
-				original_tag_to_check = ITA
+			any_country = {
+				original_tag = ITA
 				exists = yes
 				NOT = {
 					has_war_with = ROOT
@@ -822,8 +822,8 @@ improving_our_army_category = {
 	
 		available = {
 			has_completed_focus = BRA_foreign_advisors
-			any_country_with_original_tag = {
-				original_tag_to_check = ENG
+			any_country = {
+				original_tag = ENG
 				exists = yes
 				NOT = {
 					has_war_with = ROOT
@@ -940,8 +940,8 @@ improving_our_army_category = {
 	
 		available = {
 			has_completed_focus = BRA_foreign_advisors
-			any_country_with_original_tag = {
-				original_tag_to_check = FRA
+			any_country = {
+				original_tag = FRA
 				exists = yes
 				NOT = {
 					has_war_with = ROOT

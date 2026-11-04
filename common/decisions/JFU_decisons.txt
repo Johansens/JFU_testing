@@ -243,7 +243,7 @@ political_actions1 = {
 				}
 				country_event = { id = super.5 hours = 0 }
 				SOV = {
-					complete_national_focus = SOV_Great_Patriotic_War
+					#complete_national_focus = SOV_Great_Patriotic_War
 					#add_ideas = { SOV_Barb_eco } 
 				}
 				551 = {
@@ -797,7 +797,7 @@ political_actions1 = {
 					}	 
 				} 
 				SOV = {
-					complete_national_focus = SOV_Great_Patriotic_War
+					#complete_national_focus = SOV_Great_Patriotic_War
 				}
 				GER = {
 					complete_national_focus = GER_war_with_the_ussr
