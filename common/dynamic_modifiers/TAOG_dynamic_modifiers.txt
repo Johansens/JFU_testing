@@ -225,7 +225,7 @@ idea_SIA_the_army_of_siam = {
 	land_night_attack = SIA_army_of_siam_land_night_attack
 
 	air_range_factor = SIA_army_of_siam_air_range_factor
-	air_agility_factor = SIA_army_of_siam_air_agility_factor
+	air_agility_factor = SIA_army_of_siam_air_agility_factor 
 }
 ###################
 #### AUSTRALIA ####

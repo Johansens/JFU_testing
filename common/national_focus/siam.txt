@@ -1324,14 +1324,15 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-			custom_effect_tooltip = SIA_thai_cultural_mandates_tt
+			add_stability = 0.07
+			# custom_effect_tooltip = SIA_thai_cultural_mandates_tt
 
-			custom_effect_tooltip = newline_tt
-			unlock_decision_tooltip = {
-				decision = SIA_mandate_1
-				show_effect_tooltip = yes # default is no
-				show_modifiers = yes # default is no
-			}
+			# custom_effect_tooltip = newline_tt
+			# unlock_decision_tooltip = {
+			# 	decision = SIA_mandate_1
+			# 	show_effect_tooltip = yes # default is no
+			# 	show_modifiers = yes # default is no
+			# }
 
 		}
 	}
@@ -3599,7 +3600,10 @@
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			add_ideas = idea_SIA_army_of_siam
+			#add_ideas = idea_SIA_army_of_siam
+			add_dynamic_modifier = {
+				modifier = idea_SIA_the_army_of_siam
+			}
 			SIA_increase_military_approval = yes
 		}
 	}
@@ -3850,12 +3854,9 @@
 				name = SIA_directorate_of_aeronautical_engineering #Usually the name of the focus decision or event that grants the bonus
 				bonus = 0.33
 				uses = 3
-				category = air_equipment
+				category = air_equipment		 	
 			}
-			swap_ideas = {
-				remove_idea = idea_SIA_army_of_siam
-				add_idea = idea_SIA_army_of_siam_2
-			}
+			add_ideas = idea_SIA_army_of_siam_2
 		}
 	}
 
