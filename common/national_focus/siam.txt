@@ -1085,32 +1085,7 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
-
-			if = {
-				limit = {
-					has_completed_focus = SIA_support_songsuradets_military_clique
-				}
-
-				country_event = {
-					id = siam.6
-					hours = 2 
-				}
-
-				custom_effect_tooltip = SIA_the_songsuradet_rebellion_alt_tt
-			}
-			else = {
-				country_event = {
-					id = siam.3
-					hours = 2 
-				}
-
-				custom_effect_tooltip = SIA_the_songsuradet_rebellion_historical_tt
-				show_ideas_tooltip = idea_SIA_purged_senior_military
-				custom_effect_tooltip = SIA_the_songsuradet_rebellion_historical_tt3
-				custom_effect_tooltip = newline_tt
-				custom_effect_tooltip = SIA_the_songsuradet_rebellion_historical_tt2
-				show_ideas_tooltip = idea_SIA_cemented_control
-			}
+			add_ideas = idea_SIA_cemented_control
 		}
 	}
 
