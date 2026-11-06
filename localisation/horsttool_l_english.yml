@@ -127,6 +127,9 @@
  SOV_allied_lend_lease_desc:0 "The Allies have agreed to lend lease us war materials in order to continue the fight against the fascist invaders."
  SOV_northwest_passage:0 "The Murmansk Corridor"
  SOV_northwest_passage_desc:0 "The port of Murmansk is our lifeline to the British Empire. We must expand the dockyards and rail links in the Arctic circle to handle the massive influx of British heavy equipment arriving via the treacherous North Sea route."
+ SOV_winter_training:0 "Winter Training"
+ SOV_winter_training_desc:0 "Our army must be masters of General Winter. We will begin intensive training in arctic conditions to harden our troops, reducing the toll of winter attrition and helping them acclimatize to the cold faster."
+
 
  ALLIES_continue_the_fight:0 "Continue the Fight"
  ALLIES_continue_the_fight_desc:0 "We shall fight on the beaches, we shall fight on the landing grounds, we shall fight in the fields and in the streets, we shall fight in the hills; we shall never surrender!"
