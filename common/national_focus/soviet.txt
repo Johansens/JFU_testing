@@ -2379,8 +2379,8 @@ focus_tree = {
 				limit = {
 					has_country_flag = SOV_desperate_measures_in_progress_flag
 				}
-				set_temp_variable = { temp_focus_days = 1 } #For tooltip purposes
-				multiply_temp_variable = { temp_focus_days = 35 } #The constant uses focus cost which is in weeks, so convert to days
+				set_temp_variable = { temp_focus_days = 5 } #For tooltip purposes
+				multiply_temp_variable = { temp_focus_days = 7 } #The constant uses focus cost which is in weeks, so convert to days
 				custom_override_tooltip = {
 					tooltip = {
 						localization_key = SOV_focus_in_progress_tt
