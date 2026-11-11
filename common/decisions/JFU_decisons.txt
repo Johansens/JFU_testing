@@ -1027,9 +1027,6 @@ political_actions1 = {
 					transfer_state = 412 
 					transfer_state = 414 
 					transfer_state = 411
-					transfer_state = 421
-					transfer_state = 413 
-					transfer_state = 417 
 					transfer_state = 515 
 				}
 				SOV = {
@@ -1045,6 +1042,9 @@ political_actions1 = {
 					transfer_state = 677
 					transfer_state = 799
 					transfer_state = 680
+					transfer_state = 413
+					transfer_state = 417  
+					transfer_state = 421
 				}
 				news_event = { id = news.5002 }
 				if = {
