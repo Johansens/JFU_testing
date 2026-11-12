@@ -548,6 +548,8 @@ IF = {
 		basic_small_airframe = 1
 		air_torpedoe_1 = 1
 		bba_early_transport_plane = 1
+		iw_large_airframe = 1
+		basic_medium_airframe = 1
 	}
 	ELSE = {
 		set_air_oob = "JAP_1936_air_legacy"
